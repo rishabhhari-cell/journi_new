@@ -1,0 +1,288 @@
+// Core type definitions for Journi Platform
+
+// ============================================================================
+// Project & Task Management
+// ============================================================================
+
+export type TaskStatus = 'completed' | 'progress' | 'pending' | 'delayed' | 'upcoming';
+
+export interface Task {
+  id: string;
+  name: string;
+  startDate: Date;
+  endDate: Date;
+  status: TaskStatus;
+  assignedTo?: string[];
+  description?: string;
+  dependencies?: string[];
+}
+
+export type CollaboratorRole = 'lead_author' | 'co_author' | 'supervisor' | 'contributor';
+
+export interface Collaborator {
+  id: string;
+  name: string;
+  email: string;
+  role: CollaboratorRole;
+  initials: string;
+  avatarColor?: string;
+  online?: boolean;
+}
+
+export type ProjectStatus = 'active' | 'completed' | 'archived';
+
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  status: ProjectStatus;
+  createdAt: Date;
+  updatedAt: Date;
+  tasks: Task[];
+  collaborators: Collaborator[];
+  dueDate?: Date;
+}
+
+// ============================================================================
+// Manuscript & Collaboration
+// ============================================================================
+
+export type SectionStatus = 'complete' | 'active' | 'draft' | 'pending';
+
+export interface DocumentSection {
+  id: string;
+  title: string;
+  content: string; // TipTap JSON or HTML
+  status: SectionStatus;
+  order: number;
+  lastEditedBy?: string;
+  lastEditedAt?: Date;
+}
+
+export interface Comment {
+  id: string;
+  userId: string;
+  userName: string;
+  userInitials: string;
+  content: string;
+  timestamp: Date;
+  sectionId?: string;
+  parentId?: string; // For threaded replies
+  resolved?: boolean;
+}
+
+export type CitationType = 'article' | 'book' | 'website' | 'conference';
+
+export interface Citation {
+  id: string;
+  authors: string[];
+  title: string;
+  year: number;
+  journal?: string;
+  doi?: string;
+  url?: string;
+  type: CitationType;
+  volume?: string;
+  issue?: string;
+  pages?: string;
+  publisher?: string;
+}
+
+export interface Manuscript {
+  id: string;
+  projectId: string;
+  title: string;
+  sections: DocumentSection[];
+  comments: Comment[];
+  citations: Citation[];
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+// ============================================================================
+// Journal Discovery
+// ============================================================================
+
+export type ReferenceStyle = 'vancouver' | 'apa' | 'harvard' | 'nlm' | 'ama' | 'ieee';
+export type AbstractStructure = 'structured' | 'unstructured';
+
+export interface JournalFormattingRequirements {
+  sectionOrder: string[];
+  wordLimits?: {
+    total?: number;
+    abstract?: number;
+    title?: number;
+  };
+  abstractStructure: AbstractStructure;
+  referenceStyle: ReferenceStyle;
+  titleFormat?: {
+    maxCharacters?: number;
+    allowSubtitle?: boolean;
+  };
+  requiresKeywords?: boolean;
+  maxKeywords?: number;
+  requiresCoverLetter?: boolean;
+  figureLimit?: number;
+  tableLimit?: number;
+  requiresConflictOfInterest?: boolean;
+  requiresFundingStatement?: boolean;
+  additionalSections?: string[];
+}
+
+export interface Journal {
+  id: string;
+  name: string;
+  coverColor: string; // Tailwind gradient class
+  coverInitial: string;
+  impactFactor: number;
+  matchScore?: number;
+  matchLabel?: 'Top' | 'High' | 'Good' | 'Fair';
+  avgDecisionDays: number; // Time to publication
+  acceptanceRate: number; // Percentage
+  openAccess: boolean;
+  subjectAreas: string[];
+  geographicLocation: string;
+  publisher: string;
+  issn?: string;
+  website?: string;
+  formattingRequirements?: JournalFormattingRequirements;
+  scoreInsights?: {
+    topicRelevance: number;
+    timelineFit: number;
+    openAccess: boolean;
+  };
+}
+
+// ============================================================================
+// Acceptance Likelihood Score
+// ============================================================================
+
+export interface AcceptanceLikelihood {
+  overall: number;
+  label: 'Very High' | 'High' | 'Moderate' | 'Low' | 'Very Low';
+  breakdown: {
+    acceptanceRate: { score: number; detail: string };
+    topicRelevance: { score: number; detail: string; matchedAreas: string[] };
+    wordCountAlignment: { score: number; detail: string };
+    openAccessFit: { score: number; detail: string };
+    competitiveness: { score: number; detail: string };
+  };
+}
+
+export interface JournalFilters {
+  search?: string;
+  impactFactorMin?: number;
+  impactFactorMax?: number;
+  openAccess?: boolean;
+  subjectAreas?: string[];
+  geographicLocations?: string[];
+  timeToPublicationMin?: number; // days
+  timeToPublicationMax?: number; // days
+}
+
+// ============================================================================
+// Publication Management
+// ============================================================================
+
+export type SubmissionStatus = 'draft' | 'under_review' | 'revision' | 'accepted' | 'rejected';
+
+export interface TimelineStep {
+  step: string;
+  date: string;
+  done: boolean;
+  current: boolean;
+}
+
+export interface Submission {
+  id: string;
+  manuscriptId: string;
+  journalId: string;
+  journalName?: string;
+  title: string;
+  status: SubmissionStatus;
+  submittedDate?: Date;
+  estimatedDecisionDate?: Date;
+  actualDecisionDate?: Date;
+  timeline: TimelineStep[];
+  progress: number; // 0-100
+  coverLetter?: string;
+  keywords?: string[];
+  suggestedReviewers?: string[];
+}
+
+export interface SubmissionStats {
+  total: number;
+  underReview: number;
+  accepted: number;
+  avgReviewTime: number; // in days
+}
+
+// ============================================================================
+// Activity Feed
+// ============================================================================
+
+export type ActivityType = 'edit' | 'reference' | 'approval' | 'comment' | 'milestone' | 'upload' | 'task' | 'status';
+
+export interface Activity {
+  id: string;
+  userId: string;
+  userName: string;
+  userInitials?: string;
+  action: string;
+  type: ActivityType;
+  timestamp: Date;
+  metadata?: Record<string, any>;
+}
+
+// ============================================================================
+// UI State Types
+// ============================================================================
+
+export type ViewMode = 'list' | 'gantt';
+
+export interface DateRange {
+  start: Date;
+  end: Date;
+}
+
+// ============================================================================
+// Form Types
+// ============================================================================
+
+export interface TaskFormData {
+  name: string;
+  startDate: Date;
+  endDate: Date;
+  status: TaskStatus;
+  assignedTo?: string[];
+  description?: string;
+}
+
+export interface CollaboratorFormData {
+  name: string;
+  email: string;
+  role: CollaboratorRole;
+}
+
+export interface CitationFormData {
+  authors: string[];
+  title: string;
+  year: number;
+  journal?: string;
+  doi?: string;
+  url?: string;
+  type: CitationType;
+}
+
+export interface SubmissionFormData {
+  manuscriptId: string;
+  journalId: string;
+  coverLetter?: string;
+  keywords?: string[];
+}
+
+export interface CommentFormData {
+  content: string;
+  sectionId?: string;
+  parentId?: string;
+}
