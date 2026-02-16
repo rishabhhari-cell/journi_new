@@ -184,6 +184,7 @@ export function generateSampleManuscript(projectId: string, collaborators: Colla
     id: nanoid(),
     projectId,
     title: 'Research Manuscript Title',
+    type: 'full_paper' as const,
     sections,
     comments,
     citations,

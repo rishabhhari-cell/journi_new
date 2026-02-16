@@ -115,28 +115,37 @@
   margin: 1em 0;
   table-layout: fixed;
   overflow: hidden;
+  border: 2px solid #000;
+  border-radius: 0.375em;
 }
 
 .ProseMirror td,
 .ProseMirror th {
-  border: 1px solid hsl(var(--border));
-  padding: 0.5em 0.75em;
+  border: 1.5px solid #000;
+  padding: 0.6em 0.85em;
   vertical-align: top;
   position: relative;
   min-width: 80px;
+  transition: background-color 0.15s;
+}
+
+.ProseMirror td:focus-within,
+.ProseMirror th:focus-within {
+  background-color: hsl(var(--journi-green) / 0.04);
 }
 
 .ProseMirror th {
   background-color: hsl(var(--muted));
   font-weight: 600;
   text-align: left;
+  border-bottom: 2px solid #000;
 }
 
 .ProseMirror .selectedCell::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: hsl(var(--journi-green) / 0.1);
+  background: hsl(var(--journi-green) / 0.12);
   pointer-events: none;
   z-index: 2;
 }

@@ -2,7 +2,7 @@
  * Journi Discovery Portal — Fully Functional
  * Real medical journal database with search, filters, acceptance scoring, and pagination
  */
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { useLocation } from 'wouter';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -15,11 +15,12 @@ import { useManuscript } from '@/contexts/ManuscriptContext';
 import {
   calculateAcceptanceLikelihood,
   extractManuscriptKeywords,
+  extractManuscriptKeywordsWeighted,
   countWordsFromHtml,
 } from '@/lib/acceptance-score';
 import type { ManuscriptProfile } from '@/lib/acceptance-score';
-import { motion } from 'framer-motion';
-import { CheckCircle2, Clock, FileText } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { CheckCircle2, Clock, FileText, Sparkles, X } from 'lucide-react';
 
 const DISCOVERY_BG =
   'https://private-us-east-1.manuscdn.com/sessionFile/26L77Mx18FIvYFxOwaY7CL/sandbox/x4psCbR5WAhHiPiXSrPmLs-img-4_1770760354000_na1fn_am91cm5pLWRpc2NvdmVyeS1oZXJv.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvMjZMNzdNeDE4Rkl2WUZ4T3dhWTdDTC9zYW5kYm94L3g0cHNDYlI1V0FoSGlQaVhTclBtTHMtaW1nLTRfMTc3MDc2MDM1NDAwMF9uYTFmbl9hbTkxY201cExXUnBjMk52ZG1WeWVTMW9aWEp2LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=UZmBQAoocAg~sfm9d2M~Gppt~4pucIfesw1vFCSn01lVfBMogc0LB8rsGAOJ7JTrPA~~HjsniBF723gLbvFFyPN91BtndWd3~9AWtRCP25GWSPINSlqh1D3CNONlScfTWU~VdzbZh6g76Z5sXDQvHHdEjCQK4GVXz4aKmNsKky9RfNWGhnz1yb55sPs4Yt60fobCJsjyA0MgC9XfdF0PortIN1KwmisT2sI4V7xpxrmFjQGzFmLYQ2NhoPcIJ76W0YmDAj2PwNTLr8wKj~CTIq3Edll8psqcTi~m8wUVKgxFahNDxU3XV120e7Jjw2aPeOV1Ah8dPQ8H8IoCtoFG1g__';
@@ -74,19 +75,63 @@ export default function Discovery() {
 
   const { manuscript } = useManuscript();
   const [, navigate] = useLocation();
+  const [autoMatchMode, setAutoMatchMode] = useState(false);
 
-  // Build manuscript profile once for scoring all journals
+  // Build manuscript profile once for scoring all journals — deep semantic analysis
   const manuscriptProfile: ManuscriptProfile = useMemo(
-    () => ({
-      subjectKeywords: extractManuscriptKeywords(manuscript),
-      totalWordCount: manuscript.sections.reduce(
-        (sum, s) => sum + countWordsFromHtml(s.content),
-        0
-      ),
-      prefersOpenAccess: true,
-    }),
+    () => {
+      const keywordWeights = extractManuscriptKeywordsWeighted(manuscript);
+      const subjectKeywords = Array.from(keywordWeights.entries())
+        .sort((a, b) => b[1] - a[1])
+        .map(([area]) => area);
+      return {
+        subjectKeywords,
+        keywordWeights,
+        totalWordCount: manuscript.sections.reduce(
+          (sum, s) => sum + countWordsFromHtml(s.content),
+          0
+        ),
+        prefersOpenAccess: true,
+      };
+    },
     [manuscript]
   );
+
+  // When in auto-match mode, score and sort ALL journals by acceptance likelihood (descending)
+  const scoredJournals = useMemo(() => {
+    const source = autoMatchMode ? filteredJournals : paginatedJournals;
+    return source.map((journal) => ({
+      journal,
+      likelihood: calculateAcceptanceLikelihood(journal, manuscriptProfile),
+    }));
+  }, [autoMatchMode, filteredJournals, paginatedJournals, manuscriptProfile]);
+
+  const sortedScoredJournals = useMemo(() => {
+    if (!autoMatchMode) return scoredJournals;
+    return [...scoredJournals].sort((a, b) => b.likelihood.overall - a.likelihood.overall);
+  }, [autoMatchMode, scoredJournals]);
+
+  // In auto-match mode, paginate manually after scoring
+  const displayJournals = useMemo(() => {
+    if (!autoMatchMode) return sortedScoredJournals;
+    const start = (currentPage - 1) * resultsPerPage;
+    return sortedScoredJournals.slice(start, start + resultsPerPage);
+  }, [autoMatchMode, sortedScoredJournals, currentPage, resultsPerPage]);
+
+  const effectiveTotalPages = autoMatchMode
+    ? Math.ceil(sortedScoredJournals.length / resultsPerPage)
+    : totalPages;
+
+  // Handle "Find My Journal" click
+  const handleFindMyJournal = () => {
+    setSearchQuery('');
+    setAutoMatchMode(true);
+    setCurrentPage(1);
+  };
+
+  const handleExitAutoMatch = () => {
+    setAutoMatchMode(false);
+  };
 
   // Get initials from journal name
   const getInitials = (name: string) => {
@@ -125,8 +170,23 @@ export default function Discovery() {
               journals
             </p>
 
-            {/* Search Bar */}
-            <SearchBar onSearch={setSearchQuery} />
+            {/* Search Bar + Find My Journal */}
+            <div className="flex gap-3 items-start">
+              <div className="flex-1">
+                <SearchBar onSearch={(q) => { setAutoMatchMode(false); setSearchQuery(q); }} />
+              </div>
+              <button
+                onClick={handleFindMyJournal}
+                className={`shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                  autoMatchMode
+                    ? 'bg-journi-green text-journi-slate shadow-lg shadow-journi-green/20'
+                    : 'bg-journi-green/10 text-journi-green hover:bg-journi-green/20 border border-journi-green/30'
+                }`}
+              >
+                <Sparkles size={16} />
+                Find My Journal
+              </button>
+            </div>
 
             {/* Filters */}
             <div className="mt-5">
@@ -139,12 +199,42 @@ export default function Discovery() {
       {/* Results */}
       <section className="pb-20">
         <div className="container">
+          {/* Auto-match banner */}
+          <AnimatePresence>
+            {autoMatchMode && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                className="mb-6 overflow-hidden"
+              >
+                <div className="flex items-center gap-3 px-4 py-3 rounded-lg bg-journi-green/10 border border-journi-green/20">
+                  <Sparkles size={16} className="text-journi-green shrink-0" />
+                  <p className="text-sm text-foreground flex-1">
+                    Showing journals matched to your manuscript:{' '}
+                    <span className="font-semibold">{manuscript.title || 'Untitled'}</span>.
+                    Sorted by acceptance likelihood.
+                  </p>
+                  <button
+                    onClick={handleExitAutoMatch}
+                    className="p-1 rounded hover:bg-journi-green/20 text-muted-foreground hover:text-foreground transition-colors shrink-0"
+                  >
+                    <X size={16} />
+                  </button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
           <p className="text-sm text-muted-foreground mb-6">
-            Showing <span className="font-medium text-foreground">{filteredJournals.length}</span>{' '}
-            results sorted by acceptance likelihood
+            Showing{' '}
+            <span className="font-medium text-foreground">
+              {autoMatchMode ? sortedScoredJournals.length : filteredJournals.length}
+            </span>{' '}
+            results{autoMatchMode ? ' sorted by acceptance likelihood' : ''}
           </p>
 
-          {paginatedJournals.length === 0 ? (
+          {displayJournals.length === 0 ? (
             <div className="text-center py-20">
               <div className="w-16 h-16 rounded-full bg-muted mx-auto mb-4 flex items-center justify-center">
                 <CheckCircle2 size={24} className="text-muted-foreground" />
@@ -157,8 +247,7 @@ export default function Discovery() {
           ) : (
             <>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-                {paginatedJournals.map((journal, i) => {
-                  const likelihood = calculateAcceptanceLikelihood(journal, manuscriptProfile);
+                {displayJournals.map(({ journal, likelihood }, i) => {
                   const coverColor = COVER_COLORS[i % COVER_COLORS.length];
                   const initials = getInitials(journal.name);
 
@@ -270,9 +359,9 @@ export default function Discovery() {
               {/* Pagination */}
               <Pagination
                 currentPage={currentPage}
-                totalPages={totalPages}
+                totalPages={effectiveTotalPages}
                 resultsPerPage={resultsPerPage}
-                totalResults={filteredJournals.length}
+                totalResults={autoMatchMode ? sortedScoredJournals.length : filteredJournals.length}
                 onPageChange={setCurrentPage}
                 onResultsPerPageChange={setResultsPerPage}
               />

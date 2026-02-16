@@ -121,6 +121,13 @@ export default function CommentThread({
             )}
           </div>
 
+          {/* Quoted Text */}
+          {comment.quotedText && (
+            <div className="mb-2 px-3 py-1.5 bg-journi-green/5 border-l-2 border-journi-green/40 rounded-r text-xs text-muted-foreground italic">
+              &ldquo;{comment.quotedText}&rdquo;
+            </div>
+          )}
+
           {/* Comment Content */}
           <p className="text-sm text-foreground leading-relaxed">{comment.content}</p>
 

@@ -69,6 +69,7 @@ export interface Comment {
   sectionId?: string;
   parentId?: string; // For threaded replies
   resolved?: boolean;
+  quotedText?: string; // Highlighted text this comment refers to
 }
 
 export type CitationType = 'article' | 'book' | 'website' | 'conference';
@@ -88,10 +89,13 @@ export interface Citation {
   publisher?: string;
 }
 
+export type ManuscriptType = 'full_paper' | 'abstract' | 'cover_letter' | 'response_letter' | 'supplementary' | 'other';
+
 export interface Manuscript {
   id: string;
   projectId: string;
   title: string;
+  type: ManuscriptType;
   sections: DocumentSection[];
   comments: Comment[];
   citations: Citation[];
@@ -285,4 +289,5 @@ export interface CommentFormData {
   content: string;
   sectionId?: string;
   parentId?: string;
+  quotedText?: string;
 }

@@ -2,9 +2,11 @@
 
 import type { Journal, Manuscript, AcceptanceLikelihood } from '@/types';
 import { ALL_SUBJECT_AREAS } from '@/data/journals-database';
+import { MEDICAL_SYNONYMS } from '@/lib/medical-synonyms';
 
 export interface ManuscriptProfile {
-  subjectKeywords: string[];
+  subjectKeywords: string[];       // Subject areas matched
+  keywordWeights: Map<string, number>; // Subject area → weight (0-1)
   totalWordCount: number;
   prefersOpenAccess: boolean;
 }
@@ -20,19 +22,29 @@ export function calculateAcceptanceLikelihood(
   // Factor 1: Acceptance Rate (0-30 points)
   const acceptanceScore = Math.round((journal.acceptanceRate / 100) * 30);
 
-  // Factor 2: Topic Relevance (0-30 points)
-  const matchedAreas = journal.subjectAreas.filter((area) =>
-    profile.subjectKeywords.some(
-      (kw) =>
-        area.toLowerCase().includes(kw.toLowerCase()) ||
-        kw.toLowerCase().includes(area.toLowerCase())
-    )
-  );
-  const relevanceRatio =
-    profile.subjectKeywords.length > 0
-      ? matchedAreas.length / Math.max(journal.subjectAreas.length, 1)
-      : 0;
-  const topicScore = Math.min(30, Math.round(relevanceRatio * 30));
+  // Factor 2: Topic Relevance (0-30 points) — weighted matching
+  const matchedAreas: string[] = [];
+  let totalWeight = 0;
+  for (const area of journal.subjectAreas) {
+    const areaLower = area.toLowerCase();
+    // Check if any manuscript keyword matches this journal subject area
+    for (const kw of profile.subjectKeywords) {
+      const kwLower = kw.toLowerCase();
+      if (areaLower.includes(kwLower) || kwLower.includes(areaLower) || areaLower === kwLower) {
+        matchedAreas.push(area);
+        // Use the weight from the profile if available
+        const weight = profile.keywordWeights?.get(kwLower) ?? profile.keywordWeights?.get(kw) ?? 0.5;
+        totalWeight += weight;
+        break;
+      }
+    }
+  }
+  // Score based on both coverage and weight strength
+  const coverageRatio = profile.subjectKeywords.length > 0
+    ? matchedAreas.length / Math.max(journal.subjectAreas.length, 1)
+    : 0;
+  const weightBonus = Math.min(1, totalWeight / Math.max(journal.subjectAreas.length, 1));
+  const topicScore = Math.min(30, Math.round((coverageRatio * 0.5 + weightBonus * 0.5) * 30 * 2));
 
   // Factor 3: Word Count Alignment (0-15 points)
   const typicalMin = 3000;
@@ -123,30 +135,102 @@ export function calculateAcceptanceLikelihood(
 }
 
 /**
- * Extract subject keywords from a manuscript by scanning title and section content
- * against known medical subject areas.
+ * Extract subject keywords from a manuscript using deep semantic analysis.
+ * Scans the manuscript title, abstract, and body against the medical synonym
+ * dictionary to identify core themes, then maps them to journal subject areas.
+ * Returns subject areas sorted by relevance weight (strongest first).
  */
 export function extractManuscriptKeywords(manuscript: Manuscript): string[] {
+  const result = extractManuscriptKeywordsWeighted(manuscript);
+  // Return subject areas sorted by weight descending
+  return Array.from(result.entries())
+    .sort((a, b) => b[1] - a[1])
+    .map(([area]) => area);
+}
+
+/**
+ * Returns a Map of subject area → weight (0-1) based on how strongly
+ * the manuscript content relates to each area.
+ */
+export function extractManuscriptKeywordsWeighted(manuscript: Manuscript): Map<string, number> {
   const titleLower = manuscript.title.toLowerCase();
 
-  // Strip HTML from all sections and combine
-  const contentText = manuscript.sections
+  // Separate abstract from body for weighted analysis
+  const abstractSection = manuscript.sections.find(
+    (s) => s.title.toLowerCase().includes('abstract')
+  );
+  const abstractText = abstractSection
+    ? abstractSection.content.replace(/<[^>]*>/g, ' ').toLowerCase()
+    : '';
+
+  const bodyText = manuscript.sections
+    .filter((s) => !s.title.toLowerCase().includes('abstract'))
     .map((s) => s.content.replace(/<[^>]*>/g, ' '))
     .join(' ')
     .toLowerCase();
 
-  const allText = titleLower + ' ' + contentText;
+  // Count occurrences of each synonym term in title, abstract, and body
+  // Weight: title = 5x, abstract = 3x, body = 1x
+  const areaScores = new Map<string, number>();
 
-  // Match against known subject areas from the journal database
-  return ALL_SUBJECT_AREAS.filter((area) => {
+  const countOccurrences = (text: string, term: string): number => {
+    if (!text || !term) return 0;
+    const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Use word boundary matching for short terms, substring for longer ones
+    const pattern = term.length <= 3
+      ? new RegExp(`\\b${escaped}\\b`, 'gi')
+      : new RegExp(escaped, 'gi');
+    const matches = text.match(pattern);
+    return matches ? matches.length : 0;
+  };
+
+  // Scan all synonym terms against the manuscript
+  for (const [term, areas] of Object.entries(MEDICAL_SYNONYMS)) {
+    const titleCount = countOccurrences(titleLower, term);
+    const abstractCount = countOccurrences(abstractText, term);
+    const bodyCount = countOccurrences(bodyText, term);
+
+    const weightedCount = titleCount * 5 + abstractCount * 3 + bodyCount;
+
+    if (weightedCount > 0) {
+      for (const area of areas) {
+        const current = areaScores.get(area) ?? 0;
+        areaScores.set(area, current + weightedCount);
+      }
+    }
+  }
+
+  // Also check direct subject area name matches (e.g., "Cardiology" in text)
+  for (const area of ALL_SUBJECT_AREAS) {
     const areaLower = area.toLowerCase();
-    // Check title first (strong signal)
-    if (titleLower.includes(areaLower)) return true;
-    // Check content (need multiple mentions for weaker signal)
-    const regex = new RegExp(areaLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-    const matches = allText.match(regex);
-    return matches && matches.length >= 2;
-  });
+    const titleCount = countOccurrences(titleLower, areaLower);
+    const abstractCount = countOccurrences(abstractText, areaLower);
+    const bodyCount = countOccurrences(bodyText, areaLower);
+    const weightedCount = titleCount * 5 + abstractCount * 3 + bodyCount;
+    if (weightedCount > 0) {
+      const current = areaScores.get(area) ?? 0;
+      areaScores.set(area, current + weightedCount);
+    }
+  }
+
+  if (areaScores.size === 0) return new Map();
+
+  // Normalize scores to 0-1 range
+  const maxScore = Math.max(...areaScores.values());
+  const normalized = new Map<string, number>();
+  for (const [area, score] of areaScores) {
+    normalized.set(area, score / maxScore);
+  }
+
+  // Filter out very low-signal areas (< 5% of max) to reduce noise
+  const filtered = new Map<string, number>();
+  for (const [area, weight] of normalized) {
+    if (weight >= 0.05) {
+      filtered.set(area, weight);
+    }
+  }
+
+  return filtered;
 }
 
 /**
