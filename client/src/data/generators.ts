@@ -198,16 +198,20 @@ export function generateSampleManuscript(projectId: string, collaborators: Colla
 // ============================================================================
 
 export function generateSampleSubmissions(manuscriptId: string, journals: Journal[]): Submission[] {
+  if (journals.length === 0) return [];
+
   const statuses = ['under_review', 'accepted', 'revision'] as const;
 
-  return Array.from({ length: 3 }, (_, i) => {
+  return Array.from({ length: Math.min(3, journals.length) }, (_, i) => {
     const journal = journals[i % journals.length];
     const status = statuses[i % statuses.length];
     const submittedDate = new Date();
     submittedDate.setDate(submittedDate.getDate() - randomNumber(10, 90));
 
     const estimatedDecisionDate = new Date(submittedDate);
-    estimatedDecisionDate.setDate(estimatedDecisionDate.getDate() + journal.avgDecisionDays);
+    estimatedDecisionDate.setDate(
+      estimatedDecisionDate.getDate() + (journal.avgDecisionDays ?? 60)
+    );
 
     const progress = status === 'under_review' ? 50 : status === 'accepted' ? 100 : 75;
 

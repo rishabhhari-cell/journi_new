@@ -3,9 +3,10 @@
  * Form for adding citations with auto-formatting and smart lookup
  */
 import { useState, useEffect } from 'react';
-import { X, BookOpen, Search, Loader2, Sparkles, ChevronRight, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { X, BookOpen, Search, Loader2, Sparkles, ChevronRight, AlertCircle, CheckCircle2, FileText } from 'lucide-react';
 import type { CitationFormData, CitationType } from '@/types';
 import { smartLookup, type LookupResult } from '@/lib/citation-lookup';
+import { getFreePdf } from '@/lib/unpaywall-api';
 
 interface CitationDialogProps {
   isOpen: boolean;
@@ -44,6 +45,8 @@ export default function CitationDialog({ isOpen, onClose, onSubmit }: CitationDi
   const [lookupError, setLookupError] = useState('');
   const [searchResults, setSearchResults] = useState<LookupResult[]>([]);
   const [selectedResult, setSelectedResult] = useState<LookupResult | null>(null);
+  const [freePdfUrl, setFreePdfUrl] = useState<string | null>(null);
+  const [oaStatus, setOaStatus] = useState<string | null>(null);
 
   // Reset form when dialog closes
   useEffect(() => {
@@ -55,6 +58,8 @@ export default function CitationDialog({ isOpen, onClose, onSubmit }: CitationDi
       setLookupError('');
       setSearchResults([]);
       setSelectedResult(null);
+      setFreePdfUrl(null);
+      setOaStatus(null);
       setTab('smart');
     }
   }, [isOpen]);
@@ -91,6 +96,8 @@ export default function CitationDialog({ isOpen, onClose, onSubmit }: CitationDi
   const applyResult = (result: LookupResult) => {
     setSelectedResult(result);
     setSearchResults([]);
+    setFreePdfUrl(null);
+    setOaStatus(null);
     setFormData({
       authors: result.authors,
       title: result.title,
@@ -104,6 +111,16 @@ export default function CitationDialog({ isOpen, onClose, onSubmit }: CitationDi
       issue: result.issue || '',
       publisher: result.publisher || '',
     });
+
+    // Fire-and-forget Unpaywall lookup for the free PDF
+    if (result.doi) {
+      getFreePdf(result.doi).then((unpaywall) => {
+        if (unpaywall) {
+          setFreePdfUrl(unpaywall.pdfUrl);
+          setOaStatus(unpaywall.oaStatus);
+        }
+      }).catch(() => {});
+    }
   };
 
   const handleSmartKeyDown = (e: React.KeyboardEvent) => {
@@ -325,6 +342,17 @@ export default function CitationDialog({ isOpen, onClose, onSubmit }: CitationDi
                       {selectedResult.doi && (
                         <p className="text-xs text-journi-green/70 mt-1">DOI: {selectedResult.doi}</p>
                       )}
+                      {freePdfUrl && (
+                        <a
+                          href={freePdfUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 mt-1.5 px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-600 border border-emerald-500/30 text-[10px] font-semibold hover:opacity-80 transition-opacity"
+                        >
+                          <FileText size={10} />
+                          Free PDF available
+                        </a>
+                      )}
                     </div>
                     <button
                       type="button"
@@ -357,7 +385,11 @@ export default function CitationDialog({ isOpen, onClose, onSubmit }: CitationDi
                     <button
                       type="button"
                       onClick={() => {
-                        onSubmit(formData);
+                        onSubmit({
+                          ...formData,
+                          freePdfUrl: freePdfUrl ?? undefined,
+                          oaStatus: (oaStatus as any) ?? undefined,
+                        });
                         onClose();
                       }}
                       className="flex-1 px-4 py-2 bg-journi-green text-journi-slate rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"

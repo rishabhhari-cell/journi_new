@@ -19,8 +19,13 @@ export function calculateAcceptanceLikelihood(
   journal: Journal,
   profile: ManuscriptProfile
 ): AcceptanceLikelihood {
+  const hasAcceptanceRate = typeof journal.acceptanceRate === 'number';
+  const hasImpactFactor = typeof journal.impactFactor === 'number';
+  const hasOpenAccess = typeof journal.openAccess === 'boolean';
+  const acceptanceRate = hasAcceptanceRate ? journal.acceptanceRate! : 50;
+
   // Factor 1: Acceptance Rate (0-30 points)
-  const acceptanceScore = Math.round((journal.acceptanceRate / 100) * 30);
+  const acceptanceScore = Math.round((acceptanceRate / 100) * 30);
 
   // Factor 2: Topic Relevance (0-30 points) — weighted matching
   const matchedAreas: string[] = [];
@@ -60,30 +65,42 @@ export function calculateAcceptanceLikelihood(
   }
 
   // Factor 4: Open Access Fit (0-10 points)
-  const openAccessScore = journal.openAccess === profile.prefersOpenAccess ? 10 : 3;
+  // DOAJ Seal bonus: +2 for verified high-quality OA. High APC penalty: -2 if APC > $3000.
+  let openAccessScore = hasOpenAccess
+    ? journal.openAccess === profile.prefersOpenAccess
+      ? 10
+      : 3
+    : 6;
+  if (journal.doajSeal) openAccessScore = Math.min(10, openAccessScore + 2);
+  if (typeof journal.apcCostUsd === 'number' && journal.apcCostUsd > 3000) {
+    openAccessScore = Math.max(0, openAccessScore - 2);
+  }
 
   // Factor 5: Competitiveness / Impact Factor Tier (0-15 points)
   // Higher IF = more competitive = lower likelihood
   let competitivenessScore: number;
   let competitivenessDetail: string;
-  if (journal.impactFactor < 2) {
-    competitivenessScore = 15;
-    competitivenessDetail = `Accessible journal (IF ${journal.impactFactor.toFixed(1)})`;
-  } else if (journal.impactFactor < 5) {
-    competitivenessScore = 12;
-    competitivenessDetail = `Moderate journal (IF ${journal.impactFactor.toFixed(1)})`;
-  } else if (journal.impactFactor < 10) {
+  if (!hasImpactFactor) {
     competitivenessScore = 8;
-    competitivenessDetail = `Mid-tier journal (IF ${journal.impactFactor.toFixed(1)}) - moderately competitive`;
-  } else if (journal.impactFactor < 20) {
+    competitivenessDetail = 'Impact factor unavailable from source';
+  } else if (journal.impactFactor! < 2) {
+    competitivenessScore = 15;
+    competitivenessDetail = `Accessible journal (IF ${journal.impactFactor!.toFixed(1)})`;
+  } else if (journal.impactFactor! < 5) {
+    competitivenessScore = 12;
+    competitivenessDetail = `Moderate journal (IF ${journal.impactFactor!.toFixed(1)})`;
+  } else if (journal.impactFactor! < 10) {
+    competitivenessScore = 8;
+    competitivenessDetail = `Mid-tier journal (IF ${journal.impactFactor!.toFixed(1)}) - moderately competitive`;
+  } else if (journal.impactFactor! < 20) {
     competitivenessScore = 5;
-    competitivenessDetail = `High-tier journal (IF ${journal.impactFactor.toFixed(1)}) - competitive`;
-  } else if (journal.impactFactor < 50) {
+    competitivenessDetail = `High-tier journal (IF ${journal.impactFactor!.toFixed(1)}) - competitive`;
+  } else if (journal.impactFactor! < 50) {
     competitivenessScore = 3;
-    competitivenessDetail = `Top-tier journal (IF ${journal.impactFactor.toFixed(1)}) - very competitive`;
+    competitivenessDetail = `Top-tier journal (IF ${journal.impactFactor!.toFixed(1)}) - very competitive`;
   } else {
     competitivenessScore = 1;
-    competitivenessDetail = `Elite journal (IF ${journal.impactFactor.toFixed(1)}) - extremely competitive`;
+    competitivenessDetail = `Elite journal (IF ${journal.impactFactor!.toFixed(1)}) - extremely competitive`;
   }
 
   const overall = Math.min(
@@ -108,7 +125,9 @@ export function calculateAcceptanceLikelihood(
     breakdown: {
       acceptanceRate: {
         score: acceptanceScore,
-        detail: `Journal accepts ${journal.acceptanceRate}% of submissions`,
+        detail: hasAcceptanceRate
+          ? `Journal accepts ${journal.acceptanceRate}% of submissions`
+          : 'Acceptance rate unavailable from source',
       },
       topicRelevance: {
         score: topicScore,
@@ -124,7 +143,15 @@ export function calculateAcceptanceLikelihood(
       },
       openAccessFit: {
         score: openAccessScore,
-        detail: journal.openAccess ? 'Open access journal' : 'Subscription-based journal',
+        detail: hasOpenAccess
+          ? journal.openAccess
+            ? journal.doajSeal
+              ? 'Open access journal — DOAJ Seal quality verified'
+              : 'Open access journal'
+            : typeof journal.apcCostUsd === 'number' && journal.apcCostUsd > 3000
+              ? `Subscription-based journal (APC: $${journal.apcCostUsd.toLocaleString()})`
+              : 'Subscription-based journal'
+          : 'Open access status unavailable from source',
       },
       competitiveness: {
         score: competitivenessScore,

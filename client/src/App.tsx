@@ -4,6 +4,8 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { AuthProvider } from "./contexts/AuthContext";
+import AuthModal from "./components/auth/AuthModal";
 import { ProjectProvider } from "./contexts/ProjectContext";
 import { JournalsProvider } from "./contexts/JournalsContext";
 import { ManuscriptProvider } from "./contexts/ManuscriptContext";
@@ -34,18 +36,21 @@ function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
-        <ProjectProvider>
-          <JournalsProvider>
-            <ManuscriptProvider>
-              <SubmissionsProvider>
-                <TooltipProvider>
-                  <Toaster />
-                  <Router />
-                </TooltipProvider>
-              </SubmissionsProvider>
-            </ManuscriptProvider>
-          </JournalsProvider>
-        </ProjectProvider>
+        <AuthProvider>
+          <ProjectProvider>
+            <JournalsProvider>
+              <ManuscriptProvider>
+                <SubmissionsProvider>
+                  <TooltipProvider>
+                    <Toaster />
+                    <AuthModal />
+                    <Router />
+                  </TooltipProvider>
+                </SubmissionsProvider>
+              </ManuscriptProvider>
+            </JournalsProvider>
+          </ProjectProvider>
+        </AuthProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );

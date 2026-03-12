@@ -27,6 +27,10 @@ export interface Collaborator {
   initials: string;
   avatarColor?: string;
   online?: boolean;
+  orcidId?: string;
+  institution?: string;
+  rorId?: string;
+  institutionCountry?: string;
 }
 
 export type ProjectStatus = 'active' | 'completed' | 'archived';
@@ -87,9 +91,11 @@ export interface Citation {
   issue?: string;
   pages?: string;
   publisher?: string;
+  freePdfUrl?: string;
+  oaStatus?: 'gold' | 'hybrid' | 'bronze' | 'green' | 'closed';
 }
 
-export type ManuscriptType = 'full_paper' | 'abstract' | 'cover_letter' | 'response_letter' | 'supplementary' | 'other';
+export type ManuscriptType = 'full_paper' | 'abstract' | 'cover_letter' | 'response_letter' | 'supplementary' | 'literature_review' | 'grant_application' | 'other';
 
 export interface Manuscript {
   id: string;
@@ -136,18 +142,23 @@ export interface JournalFormattingRequirements {
 export interface Journal {
   id: string;
   name: string;
+  abbreviation?: string;
   coverColor: string; // Tailwind gradient class
   coverInitial: string;
-  impactFactor: number;
+  impactFactor?: number | null;
+  impactFactorYear?: number | null;
   matchScore?: number;
   matchLabel?: 'Top' | 'High' | 'Good' | 'Fair';
-  avgDecisionDays: number; // Time to publication
-  acceptanceRate: number; // Percentage
-  openAccess: boolean;
+  avgDecisionDays?: number | null; // Time to publication
+  acceptanceRate?: number | null; // Percentage
+  openAccess?: boolean | null;
   subjectAreas: string[];
   geographicLocation: string;
   publisher: string;
   issn?: string;
+  issnOnline?: string;
+  isMedlineIndexed?: boolean;
+  indexingScore?: number | null;
   website?: string;
   formattingRequirements?: JournalFormattingRequirements;
   scoreInsights?: {
@@ -155,6 +166,16 @@ export interface Journal {
     timelineFit: number;
     openAccess: boolean;
   };
+  // OpenAlex enrichment
+  openAlexId?: string;
+  apcCostUsd?: number | null;
+  citationsCount?: number | null;
+  worksCount?: number | null;
+  // DOAJ enrichment
+  isDoajListed?: boolean;
+  doajSeal?: boolean;
+  doajId?: string;
+  apcCurrency?: string;
 }
 
 // ============================================================================
@@ -276,6 +297,8 @@ export interface CitationFormData {
   doi?: string;
   url?: string;
   type: CitationType;
+  freePdfUrl?: string;
+  oaStatus?: 'gold' | 'hybrid' | 'bronze' | 'green' | 'closed';
 }
 
 export interface SubmissionFormData {

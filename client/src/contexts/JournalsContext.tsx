@@ -1,11 +1,10 @@
 import React, { createContext, useContext, useState, useEffect, useMemo, useCallback, ReactNode } from 'react';
 import type { Journal, JournalFilters } from '@/types';
-import { MEDICAL_JOURNALS } from '@/data/journals-database';
-import { expandSearchQuery, MEDICAL_SYNONYMS } from '@/lib/medical-synonyms';
-
-// ============================================================================
-// Context Type Definition
-// ============================================================================
+import {
+  listJournals,
+  searchJournals,
+  type JournalSearchResult,
+} from '@/lib/journal-search-api';
 
 export type SortBy = 'relevance' | 'impactFactor' | 'acceptanceRate' | 'name';
 
@@ -26,25 +25,22 @@ interface JournalsContextType {
   totalPages: number;
   totalResults: number;
   getJournalById: (id: string) => Journal | undefined;
+  dataSource: 'openalex' | 'nlm' | 'static';
+  isLoading: boolean;
 }
 
-// ============================================================================
-// Create Context
-// ============================================================================
-
 const JournalsContext = createContext<JournalsContextType | undefined>(undefined);
-
-// ============================================================================
-// Provider Component
-// ============================================================================
 
 interface JournalsProviderProps {
   children: ReactNode;
 }
 
 export function JournalsProvider({ children }: JournalsProviderProps) {
-  // Use the static real medical journal database
-  const [allJournals] = useState<Journal[]>(() => MEDICAL_JOURNALS);
+  const [searchResults, setSearchResults] = useState<Journal[]>([]);
+  const [searchCache, setSearchCache] = useState<Record<string, Journal>>({});
+  const [apiTotalResults, setApiTotalResults] = useState<number>(0);
+  const [dataSource, setDataSource] = useState<'openalex' | 'nlm' | 'static'>('openalex');
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [filters, setFilters] = useState<JournalFilters>({});
@@ -52,190 +48,132 @@ export function JournalsProvider({ children }: JournalsProviderProps) {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [resultsPerPage, setResultsPerPage] = useState<number>(25);
 
-  // ========================================
-  // Search & Filter Logic (Semantic)
-  // ========================================
+  useEffect(() => {
+    let isCancelled = false;
+    setIsLoading(true);
+
+    const query = searchQuery.trim();
+    // For the default (idle) view, fetch a larger batch so the marquee has plenty of journals
+    const isIdle = !query;
+    const limit = isIdle ? 100 : resultsPerPage;
+    const offset = isIdle ? 0 : (currentPage - 1) * resultsPerPage;
+
+    const request: Promise<JournalSearchResult> = query
+      ? searchJournals(query, limit, {
+          offset,
+          isOpenAccess: filters.openAccess,
+          subjectAreas: filters.subjectAreas,
+        })
+      : listJournals(limit, {
+          offset,
+          isOpenAccess: filters.openAccess,
+          subjectAreas: filters.subjectAreas,
+        });
+
+    request
+      .then((result) => {
+        if (isCancelled) return;
+
+        setDataSource(result.source);
+        setSearchResults(result.journals);
+        setApiTotalResults(result.total);
+        setIsLoading(false);
+
+        setSearchCache((previous) => {
+          const next = { ...previous };
+          for (const journal of result.journals) {
+            next[journal.id] = journal;
+          }
+          return next;
+        });
+      })
+      .catch(() => {
+        if (!isCancelled) {
+          setDataSource('static');
+          setSearchResults([]);
+          setApiTotalResults(0);
+          setIsLoading(false);
+        }
+      });
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [searchQuery, filters.openAccess, filters.subjectAreas, currentPage, resultsPerPage]);
+
+  const allJournals = useMemo(() => {
+    const deduped = new Map<string, Journal>();
+    for (const journal of Object.values(searchCache)) {
+      deduped.set(journal.id, journal);
+    }
+    return Array.from(deduped.values());
+  }, [searchCache]);
 
   const filteredJournals = useMemo(() => {
-    let results = [...allJournals];
+    let results = [...searchResults];
 
-    // Apply search query with comprehensive semantic scoring
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase().trim();
-      const expandedTerms = expandSearchQuery(query);
-      const queryWords = query.split(/\s+/).filter(Boolean);
-
-      // Score each journal for relevance and filter out non-matches
-      const scored: { journal: typeof results[0]; score: number }[] = [];
-
-      for (const journal of results) {
-        let score = 0;
-        const nameLower = journal.name.toLowerCase();
-        const publisherLower = journal.publisher.toLowerCase();
-        const journalAreasLower = journal.subjectAreas.map((a) => a.toLowerCase());
-
-        // 1. Exact name match (highest priority)
-        if (nameLower === query) {
-          score += 100;
-        } else if (nameLower.includes(query)) {
-          score += 50;
-        }
-        // Partial word matches in name
-        for (const word of queryWords) {
-          if (word.length >= 3 && nameLower.includes(word)) score += 10;
-        }
-
-        // 2. Publisher match
-        if (publisherLower.includes(query)) {
-          score += 30;
-        }
-        for (const word of queryWords) {
-          if (word.length >= 3 && publisherLower.includes(word)) score += 5;
-        }
-
-        // 3. Direct subject area match
-        for (const area of journalAreasLower) {
-          if (area.includes(query) || query.includes(area)) {
-            score += 40;
-          }
-          for (const word of queryWords) {
-            if (word.length >= 3 && area.includes(word)) score += 8;
-          }
-        }
-
-        // 4. Semantic expansion match — synonym dictionary mapped areas
-        for (const term of expandedTerms) {
-          const termLower = term.toLowerCase();
-          for (const area of journalAreasLower) {
-            if (area === termLower) {
-              score += 25; // Strong semantic match
-            } else if (area.includes(termLower) || termLower.includes(area)) {
-              score += 15; // Partial semantic match
-            }
-          }
-        }
-
-        // 5. Reverse lookup: check if any journal subject area has synonym terms
-        //    that match the query (e.g., journal has "Cardiology", user searches "heart surgery")
-        for (const area of journal.subjectAreas) {
-          // Find all synonym terms that map to this area
-          for (const [term, areas] of Object.entries(MEDICAL_SYNONYMS)) {
-            if (areas.includes(area)) {
-              // Check if query contains this synonym term
-              if (query.includes(term) || term.includes(query)) {
-                score += 20;
-              }
-              for (const word of queryWords) {
-                if (word.length >= 3 && term.includes(word)) score += 3;
-              }
-            }
-          }
-        }
-
-        // 6. ISSN match
-        if (journal.issn && journal.issn.includes(query)) {
-          score += 100;
-        }
-
-        if (score > 0) {
-          scored.push({ journal, score });
-        }
-      }
-
-      // Sort by score descending and extract journals
-      scored.sort((a, b) => b.score - a.score);
-      results = scored.map((s) => s.journal);
-    }
-
-    // Apply Impact Factor filter
+    // Apply client-side-only filters (impact factor, geographic, decision time)
     if (filters.impactFactorMin !== undefined) {
-      results = results.filter((journal) => journal.impactFactor >= filters.impactFactorMin!);
+      results = results.filter(
+        (journal) =>
+          typeof journal.impactFactor === 'number' && journal.impactFactor >= filters.impactFactorMin!,
+      );
     }
     if (filters.impactFactorMax !== undefined) {
-      results = results.filter((journal) => journal.impactFactor <= filters.impactFactorMax!);
-    }
-
-    // Apply Open Access filter
-    if (filters.openAccess !== undefined) {
-      results = results.filter((journal) => journal.openAccess === filters.openAccess);
-    }
-
-    // Apply Subject Areas filter
-    if (filters.subjectAreas && filters.subjectAreas.length > 0) {
-      results = results.filter((journal) =>
-        journal.subjectAreas.some((area) => filters.subjectAreas!.includes(area))
+      results = results.filter(
+        (journal) =>
+          typeof journal.impactFactor === 'number' && journal.impactFactor <= filters.impactFactorMax!,
       );
     }
-
-    // Apply Geographic Locations filter
     if (filters.geographicLocations && filters.geographicLocations.length > 0) {
-      results = results.filter((journal) =>
-        filters.geographicLocations!.includes(journal.geographicLocation)
-      );
+      results = results.filter((journal) => filters.geographicLocations?.includes(journal.geographicLocation));
     }
-
-    // Apply Time to Publication filter
     if (filters.timeToPublicationMin !== undefined) {
-      results = results.filter((journal) => journal.avgDecisionDays >= filters.timeToPublicationMin!);
+      results = results.filter(
+        (journal) =>
+          typeof journal.avgDecisionDays === 'number' &&
+          journal.avgDecisionDays >= filters.timeToPublicationMin!,
+      );
     }
     if (filters.timeToPublicationMax !== undefined) {
-      results = results.filter((journal) => journal.avgDecisionDays <= filters.timeToPublicationMax!);
+      results = results.filter(
+        (journal) =>
+          typeof journal.avgDecisionDays === 'number' &&
+          journal.avgDecisionDays <= filters.timeToPublicationMax!,
+      );
     }
 
-    // Apply sorting (relevance order is already set by search scoring above)
     switch (sortBy) {
       case 'impactFactor':
-        results.sort((a, b) => b.impactFactor - a.impactFactor);
+        results.sort((a, b) => (b.impactFactor ?? -1) - (a.impactFactor ?? -1));
         break;
       case 'acceptanceRate':
-        results.sort((a, b) => b.acceptanceRate - a.acceptanceRate);
+        results.sort((a, b) => (b.acceptanceRate ?? -1) - (a.acceptanceRate ?? -1));
         break;
       case 'name':
         results.sort((a, b) => a.name.localeCompare(b.name));
         break;
       case 'relevance':
       default:
-        // When searching, results are already sorted by relevance score
-        // When not searching, sort by impact factor as a sensible default
-        if (!searchQuery.trim()) {
-          results.sort((a, b) => b.impactFactor - a.impactFactor);
-        }
         break;
     }
 
     return results;
-  }, [allJournals, searchQuery, filters, sortBy]);
+  }, [searchResults, filters, sortBy]);
 
-  // ========================================
-  // Pagination Logic
-  // ========================================
-
-  const totalResults = filteredJournals.length;
+  const totalResults = apiTotalResults;
   const totalPages = Math.ceil(totalResults / resultsPerPage);
 
-  const paginatedJournals = useMemo(() => {
-    const startIndex = (currentPage - 1) * resultsPerPage;
-    const endIndex = startIndex + resultsPerPage;
-    return filteredJournals.slice(startIndex, endIndex);
-  }, [filteredJournals, currentPage, resultsPerPage]);
+  const paginatedJournals = filteredJournals;
 
-  // Reset to page 1 when filters or search changes
   useEffect(() => {
     setCurrentPage(1);
   }, [searchQuery, filters, sortBy]);
 
-  // ========================================
-  // Lookup
-  // ========================================
-
   const getJournalById = useCallback(
-    (id: string) => allJournals.find((j) => j.id === id),
-    [allJournals]
+    (id: string) => allJournals.find((journal) => journal.id === id),
+    [allJournals],
   );
-
-  // ========================================
-  // Context Value
-  // ========================================
 
   const value: JournalsContextType = {
     allJournals,
@@ -254,14 +192,12 @@ export function JournalsProvider({ children }: JournalsProviderProps) {
     totalPages,
     totalResults,
     getJournalById,
+    dataSource,
+    isLoading,
   };
 
   return <JournalsContext.Provider value={value}>{children}</JournalsContext.Provider>;
 }
-
-// ============================================================================
-// Hook to use Journals Context
-// ============================================================================
 
 export function useJournals() {
   const context = useContext(JournalsContext);

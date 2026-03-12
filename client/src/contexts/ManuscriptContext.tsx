@@ -26,7 +26,108 @@ const MANUSCRIPT_SECTIONS: Record<ManuscriptType, string[]> = {
   cover_letter: ['Cover Letter'],
   response_letter: ['Response to Reviewers'],
   supplementary: ['Supplementary Materials'],
+  literature_review: [
+    'Abstract',
+    'Introduction',
+    'Search Strategy',
+    'Inclusion & Exclusion Criteria',
+    'Results & Synthesis',
+    'Discussion',
+    'Limitations',
+    'Conclusions',
+    'References',
+  ],
+  grant_application: [
+    'Specific Aims',
+    'Background & Significance',
+    'Innovation',
+    'Approach',
+    'Timeline & Milestones',
+    'Budget Justification',
+    'Team & Qualifications',
+    'References',
+    'Appendices',
+  ],
   other: ['Content'],
+};
+
+// ============================================================================
+// Built-in subheading templates for structured sections
+// These pre-populate the TipTap editor with a scaffold when a document is created.
+// Only sections that meaningfully benefit from sub-structure are templated.
+// ============================================================================
+
+const h2 = (text: string) => `<h2>${text}</h2><p></p>`;
+const h3 = (text: string) => `<h3>${text}</h3><p></p>`;
+
+const SECTION_TEMPLATES: Partial<Record<ManuscriptType, Partial<Record<string, string>>>> = {
+  full_paper: {
+    'Abstract': [
+      h3('Background'), h3('Methods'), h3('Results'), h3('Conclusions'),
+    ].join(''),
+    'Materials and Methods': [
+      h3('Study Design'), h3('Participants'), h3('Data Collection'), h3('Statistical Analysis'),
+    ].join(''),
+    'Results': [
+      h3('Participant Characteristics'), h3('Primary Outcomes'), h3('Secondary Outcomes'),
+    ].join(''),
+    'Discussion': [
+      h3('Summary of Findings'), h3('Comparison with Existing Literature'),
+      h3('Strengths & Limitations'), h3('Implications'),
+    ].join(''),
+  },
+  abstract: {
+    'Abstract': [
+      h3('Background'), h3('Objectives'), h3('Methods'), h3('Results'), h3('Conclusions'),
+    ].join(''),
+  },
+  literature_review: {
+    'Abstract': [
+      h3('Background'), h3('Objectives'), h3('Data Sources'),
+      h3('Study Selection'), h3('Data Extraction'), h3('Results'), h3('Conclusions'),
+    ].join(''),
+    'Search Strategy': [
+      h3('Search Terms & Keywords'), h3('Database Search Strings'),
+      h3('Date Range'), h3('Language Restrictions'),
+    ].join(''),
+    'Inclusion & Exclusion Criteria': [
+      h3('Inclusion Criteria'), h3('Exclusion Criteria'),
+    ].join(''),
+    'Results & Synthesis': [
+      h3('Study Selection'), h3('Study Characteristics'),
+      h3('Quality Assessment'), h3('Synthesis of Results'),
+    ].join(''),
+    'Discussion': [
+      h3('Summary of Evidence'), h3('Comparison with Existing Literature'),
+      h3('Limitations'), h3('Implications for Practice & Research'),
+    ].join(''),
+  },
+  grant_application: {
+    'Specific Aims': [
+      h3('Background'), h3('Specific Aim 1'), h3('Specific Aim 2'), h3('Innovation & Impact'),
+    ].join(''),
+    'Background & Significance': [
+      h3('Current State of Knowledge'), h3('Gap in Knowledge'), h3('Significance of Proposed Research'),
+    ].join(''),
+    'Innovation': [
+      h3('Conceptual Innovation'), h3('Methodological Innovation'),
+      h3('Improvement Over Existing Approaches'),
+    ].join(''),
+    'Approach': [
+      h3('Overview'), h3('Aim 1: Approach'), h3('Aim 2: Approach'),
+      h3('Statistical Considerations'), h3('Potential Pitfalls & Alternatives'),
+    ].join(''),
+    'Timeline & Milestones': [
+      h3('Year 1'), h3('Year 2'), h3('Year 3'),
+    ].join(''),
+    'Budget Justification': [
+      h3('Personnel'), h3('Equipment'), h3('Materials & Supplies'),
+      h3('Travel'), h3('Indirect Costs'),
+    ].join(''),
+    'Team & Qualifications': [
+      h3('Principal Investigator'), h3('Co-Investigators'), h3('Collaborators & Consultants'),
+    ].join(''),
+  },
 };
 
 const MANUSCRIPT_TYPE_LABELS: Record<ManuscriptType, string> = {
@@ -35,11 +136,14 @@ const MANUSCRIPT_TYPE_LABELS: Record<ManuscriptType, string> = {
   cover_letter: 'Cover Letter',
   response_letter: 'Response to Reviewers',
   supplementary: 'Supplementary Materials',
+  literature_review: 'Literature Review',
+  grant_application: 'Grant Application',
   other: 'Other Document',
 };
 
 function createEmptyManuscript(projectId: string, title: string, type: ManuscriptType): Manuscript {
   const sectionTitles = MANUSCRIPT_SECTIONS[type];
+  const templates = SECTION_TEMPLATES[type] || {};
   return {
     id: nanoid(),
     projectId,
@@ -48,7 +152,7 @@ function createEmptyManuscript(projectId: string, title: string, type: Manuscrip
     sections: sectionTitles.map((t, i) => ({
       id: nanoid(),
       title: t,
-      content: '<p></p>',
+      content: templates[t] || '<p></p>',
       status: 'pending' as const,
       order: i,
     })),

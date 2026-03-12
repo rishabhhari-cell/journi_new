@@ -9,7 +9,8 @@ import { motion } from 'framer-motion';
 import {
   CheckCircle, Circle, BookOpen, MessageSquare, Pencil, Check, FileText,
   Upload, FileDown, Loader2, MessageSquarePlus, Layers, Plus, Trash2,
-  FilePlus2, FileUp, ChevronDown,
+  FilePlus2, FileUp, ChevronDown, DollarSign, AlertTriangle, Minus,
+  BookMarked, Database,
 } from 'lucide-react';
 import { useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
@@ -47,6 +48,19 @@ const sectionStatusConfig: Record<string, { color: string; icon: typeof CheckCir
 };
 
 type ViewTab = 'editor' | 'references' | 'comments';
+
+// Word limits per section for grant applications (words)
+const GRANT_SECTION_LIMITS: Record<string, number> = {
+  'Specific Aims': 500,
+  'Background & Significance': 1500,
+  'Innovation': 600,
+  'Approach': 3000,
+  'Budget Justification': 500,
+  'Team & Qualifications': 600,
+};
+
+// Databases for literature review
+const LIT_DATABASES = ['PubMed/MEDLINE', 'Cochrane Library', 'Embase', 'Web of Science', 'Scopus', 'CINAHL', 'PsycINFO'];
 
 function countWords(html: string): number {
   if (!html || html === '<p></p>') return 0;
@@ -102,6 +116,19 @@ export default function Collaboration() {
   const [newDocTitle, setNewDocTitle] = useState('');
   const [newDocType, setNewDocType] = useState<ManuscriptType>('full_paper');
 
+  // Literature review — search strategy tracker
+  const [litSearchDbs, setLitSearchDbs] = useState<string[]>(['PubMed/MEDLINE']);
+  const [litPrisma, setLitPrisma] = useState({ identified: 0, screened: 0, eligible: 0, included: 0 });
+  const [litDateRange, setLitDateRange] = useState('');
+
+  // Grant application — budget tracker + agency
+  const [grantAgency, setGrantAgency] = useState('');
+  const [grantBudgetItems, setGrantBudgetItems] = useState<{ name: string; amount: number }[]>([
+    { name: 'Personnel', amount: 0 },
+    { name: 'Equipment', amount: 0 },
+    { name: 'Indirect Costs', amount: 0 },
+  ]);
+
   // Sync title draft when manuscript changes
   useEffect(() => {
     setTitleDraft(manuscript.title);
@@ -110,11 +137,11 @@ export default function Collaboration() {
   // "Everything" view
   const isEverythingView = activeSection === '__everything__';
 
-  // Check if the manuscript is "empty" (all sections have no real content)
+  // Check if the manuscript is "empty" — no section has any actual prose.
+  // Template subheadings (h2/h3) count as content so templated documents
+  // bypass the onboarding screen and open directly in the editor.
   const isManuscriptEmpty = useMemo(() => {
-    return manuscript.sections.every(
-      (s) => !s.content || s.content === '<p></p>' || s.content.trim() === ''
-    );
+    return manuscript.sections.every((s) => countWords(s.content) === 0);
   }, [manuscript.sections]);
 
   // Get current section data
@@ -705,7 +732,7 @@ export default function Collaboration() {
   // Main editor view
   // ========================================
   return (
-    <div className="min-h-screen flex flex-col bg-muted/30">
+    <div className="h-screen flex flex-col bg-muted/30">
       <Navbar />
 
       <div className="flex flex-1 pt-16">
@@ -849,10 +876,43 @@ export default function Collaboration() {
                 <Pencil size={12} className="text-muted-foreground opacity-0 group-hover:opacity-100 shrink-0 transition-opacity" />
               </button>
             )}
-            <p className="text-[10px] text-muted-foreground mt-1 flex items-center gap-1">
-              <FileText size={10} />
-              {totalWordCount.toLocaleString()} words total
-            </p>
+            <div className="flex items-center gap-2 mt-1 flex-wrap">
+              <p className="text-[10px] text-muted-foreground flex items-center gap-1">
+                <FileText size={10} />
+                {totalWordCount.toLocaleString()} words
+              </p>
+              {manuscript.type === 'literature_review' && (
+                <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-blue-500/10 text-blue-600 text-[9px] font-bold">
+                  <BookMarked size={8} />
+                  Lit Review
+                </span>
+              )}
+              {manuscript.type === 'grant_application' && (
+                <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-amber-500/10 text-amber-600 text-[9px] font-bold">
+                  <DollarSign size={8} />
+                  Grant
+                </span>
+              )}
+            </div>
+            {/* Show over-limit warning badge for grant in sidebar */}
+            {manuscript.type === 'grant_application' && (() => {
+              const overCount = manuscript.sections.filter(
+                (s) => GRANT_SECTION_LIMITS[s.title] && (sectionWordCounts[s.title] || 0) > GRANT_SECTION_LIMITS[s.title]
+              ).length;
+              return overCount > 0 ? (
+                <p className="text-[10px] text-red-500 flex items-center gap-1 mt-0.5">
+                  <AlertTriangle size={9} />
+                  {overCount} section{overCount > 1 ? 's' : ''} over limit
+                </p>
+              ) : null;
+            })()}
+            {/* Show included study count for lit review */}
+            {manuscript.type === 'literature_review' && litPrisma.included > 0 && (
+              <p className="text-[10px] text-blue-600 flex items-center gap-1 mt-0.5">
+                <Database size={9} />
+                {litPrisma.included} studies included · {litSearchDbs.length} databases
+              </p>
+            )}
           </div>
 
           {/* Section navigation */}
@@ -880,7 +940,10 @@ export default function Collaboration() {
                   >
                     <Icon size={14} className={config.color} />
                     <span className="flex-1 truncate">{sec.title}</span>
-                    <span className="text-[10px] text-muted-foreground tabular-nums">{wc}</span>
+                    {manuscript.type === 'grant_application' && GRANT_SECTION_LIMITS[sec.title] && wc > GRANT_SECTION_LIMITS[sec.title] ? (
+                      <AlertTriangle size={10} className="text-red-500 shrink-0" />
+                    ) : null}
+                    <span className={`text-[10px] tabular-nums ${manuscript.type === 'grant_application' && GRANT_SECTION_LIMITS[sec.title] && wc > GRANT_SECTION_LIMITS[sec.title] ? 'text-red-500' : 'text-muted-foreground'}`}>{wc}</span>
                   </button>
 
                   <button
@@ -930,8 +993,27 @@ export default function Collaboration() {
             </div>
           </nav>
 
+          {/* Team Online */}
+          <div className="px-4 pt-3 border-t border-border pb-2">
+            <h3 className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-2">
+              Team Online ({onlineMembers.length})
+            </h3>
+            <div className="flex -space-x-2">
+              {onlineMembers.map((member) => (
+                <div
+                  key={member.id}
+                  className="relative w-8 h-8 rounded-full bg-journi-green/20 flex items-center justify-center text-[10px] font-bold text-journi-green border-2 border-card"
+                  title={member.name}
+                >
+                  {member.initials}
+                  <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-status-completed border-2 border-card" />
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Export */}
-          <div className="px-3 pt-3 border-t border-border space-y-1.5">
+          <div className="px-3 pt-3 pb-3 border-t border-border space-y-1.5">
             <div className="flex gap-1.5">
               <button
                 onClick={handleExportDocx}
@@ -949,25 +1031,6 @@ export default function Collaboration() {
                 {isExporting === 'pdf' ? <Loader2 size={12} className="animate-spin" /> : <FileDown size={12} />}
                 PDF
               </button>
-            </div>
-          </div>
-
-          {/* Team Online */}
-          <div className="px-4 pt-3 border-t border-border">
-            <h3 className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-2">
-              Team Online ({onlineMembers.length})
-            </h3>
-            <div className="flex -space-x-2">
-              {onlineMembers.map((member) => (
-                <div
-                  key={member.id}
-                  className="relative w-8 h-8 rounded-full bg-journi-green/20 flex items-center justify-center text-[10px] font-bold text-journi-green border-2 border-card"
-                  title={member.name}
-                >
-                  {member.initials}
-                  <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-status-completed border-2 border-card" />
-                </div>
-              ))}
             </div>
           </div>
         </aside>
@@ -1297,10 +1360,211 @@ export default function Collaboration() {
 
             {/* Right Sidebar */}
             <aside className="hidden xl:flex flex-col w-72 bg-card border-l border-border overflow-auto">
-              <div className="p-4 border-b border-border">
+              <div className="p-4 border-b border-border flex items-center gap-2">
                 <h3 className="text-sm font-bold text-foreground">Document Info</h3>
+                {manuscript.type === 'literature_review' && (
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-600 text-[10px] font-bold">
+                    <BookMarked size={10} />
+                    Lit Review
+                  </span>
+                )}
+                {manuscript.type === 'grant_application' && (
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-600 text-[10px] font-bold">
+                    <DollarSign size={10} />
+                    Grant
+                  </span>
+                )}
               </div>
               <div className="p-4 space-y-4">
+
+                {/* ── Literature Review: Search Strategy Panel ── */}
+                {manuscript.type === 'literature_review' && (
+                  <div className="space-y-3">
+                    <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
+                      <Database size={11} />
+                      Search Strategy
+                    </h4>
+
+                    {/* Databases */}
+                    <div>
+                      <p className="text-[10px] text-muted-foreground mb-1.5 font-medium">Databases searched</p>
+                      <div className="space-y-1">
+                        {LIT_DATABASES.map((db) => (
+                          <label key={db} className="flex items-center gap-2 cursor-pointer group">
+                            <input
+                              type="checkbox"
+                              checked={litSearchDbs.includes(db)}
+                              onChange={(e) =>
+                                setLitSearchDbs(
+                                  e.target.checked
+                                    ? [...litSearchDbs, db]
+                                    : litSearchDbs.filter((d) => d !== db)
+                                )
+                              }
+                              className="w-3 h-3 accent-journi-green"
+                            />
+                            <span className="text-[11px] text-foreground group-hover:text-journi-green transition-colors">{db}</span>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Date range */}
+                    <div>
+                      <p className="text-[10px] text-muted-foreground mb-1 font-medium">Date range searched</p>
+                      <input
+                        type="text"
+                        value={litDateRange}
+                        onChange={(e) => setLitDateRange(e.target.value)}
+                        placeholder="e.g. Jan 2015 – Dec 2024"
+                        className="w-full text-xs bg-muted text-foreground placeholder:text-muted-foreground rounded px-2 py-1.5 outline-none focus:ring-1 focus:ring-journi-green"
+                      />
+                    </div>
+
+                    {/* PRISMA flow counts */}
+                    <div>
+                      <p className="text-[10px] text-muted-foreground mb-1.5 font-medium">PRISMA study counts</p>
+                      <div className="space-y-1.5">
+                        {(['identified', 'screened', 'eligible', 'included'] as const).map((key) => (
+                          <div key={key} className="flex items-center gap-2">
+                            <span className="text-[11px] text-muted-foreground capitalize w-20 shrink-0">{key}</span>
+                            <input
+                              type="number"
+                              min={0}
+                              value={litPrisma[key] || ''}
+                              onChange={(e) => setLitPrisma({ ...litPrisma, [key]: Number(e.target.value) })}
+                              className="w-full text-xs bg-muted text-foreground rounded px-2 py-1 outline-none focus:ring-1 focus:ring-journi-green text-right"
+                            />
+                          </div>
+                        ))}
+                        {litPrisma.included > 0 && (
+                          <div className="mt-1.5 p-2 rounded-lg bg-journi-green/5 border border-journi-green/20 text-center">
+                            <span className="text-xs font-bold text-journi-green">{litPrisma.included}</span>
+                            <span className="text-[10px] text-muted-foreground"> studies included</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="border-t border-border" />
+                  </div>
+                )}
+
+                {/* ── Grant Application: Budget & Limits Panel ── */}
+                {manuscript.type === 'grant_application' && (
+                  <div className="space-y-3">
+                    <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
+                      <DollarSign size={11} />
+                      Grant Tools
+                    </h4>
+
+                    {/* Funding agency */}
+                    <div>
+                      <p className="text-[10px] text-muted-foreground mb-1 font-medium">Funding agency</p>
+                      <input
+                        type="text"
+                        value={grantAgency}
+                        onChange={(e) => setGrantAgency(e.target.value)}
+                        placeholder="e.g. NIH, Wellcome Trust..."
+                        className="w-full text-xs bg-muted text-foreground placeholder:text-muted-foreground rounded px-2 py-1.5 outline-none focus:ring-1 focus:ring-journi-green"
+                      />
+                    </div>
+
+                    {/* Section word limits */}
+                    <div>
+                      <p className="text-[10px] text-muted-foreground mb-1.5 font-medium">Section word limits</p>
+                      <div className="space-y-2">
+                        {manuscript.sections
+                          .filter((s) => GRANT_SECTION_LIMITS[s.title] !== undefined)
+                          .map((s) => {
+                            const limit = GRANT_SECTION_LIMITS[s.title];
+                            const used = sectionWordCounts[s.title] || 0;
+                            const pct = Math.min((used / limit) * 100, 100);
+                            const isOver = used > limit;
+                            const isWarning = used > limit * 0.85;
+                            return (
+                              <div key={s.id}>
+                                <div className="flex items-center justify-between text-[11px] mb-0.5">
+                                  <span className="text-muted-foreground truncate mr-1">{s.title}</span>
+                                  <span className={`font-medium tabular-nums shrink-0 ${isOver ? 'text-red-500' : isWarning ? 'text-amber-500' : 'text-foreground'}`}>
+                                    {used}/{limit}
+                                  </span>
+                                </div>
+                                <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+                                  <div
+                                    className={`h-full rounded-full transition-all ${isOver ? 'bg-red-500' : isWarning ? 'bg-amber-500' : 'bg-journi-green/60'}`}
+                                    style={{ width: `${pct}%` }}
+                                  />
+                                </div>
+                                {isOver && (
+                                  <p className="text-[10px] text-red-500 flex items-center gap-0.5 mt-0.5">
+                                    <AlertTriangle size={9} />
+                                    {used - limit} words over limit
+                                  </p>
+                                )}
+                              </div>
+                            );
+                          })}
+                      </div>
+                    </div>
+
+                    {/* Budget tracker */}
+                    <div>
+                      <p className="text-[10px] text-muted-foreground mb-1.5 font-medium">Budget overview (USD)</p>
+                      <div className="space-y-1.5">
+                        {grantBudgetItems.map((item, i) => (
+                          <div key={i} className="flex items-center gap-1.5">
+                            <input
+                              type="text"
+                              value={item.name}
+                              onChange={(e) => {
+                                const updated = [...grantBudgetItems];
+                                updated[i] = { ...updated[i], name: e.target.value };
+                                setGrantBudgetItems(updated);
+                              }}
+                              className="flex-1 min-w-0 text-[11px] bg-muted text-foreground rounded px-1.5 py-1 outline-none focus:ring-1 focus:ring-journi-green"
+                            />
+                            <span className="text-[11px] text-muted-foreground shrink-0">$</span>
+                            <input
+                              type="number"
+                              min={0}
+                              value={item.amount || ''}
+                              onChange={(e) => {
+                                const updated = [...grantBudgetItems];
+                                updated[i] = { ...updated[i], amount: Number(e.target.value) };
+                                setGrantBudgetItems(updated);
+                              }}
+                              className="w-20 text-[11px] bg-muted text-foreground rounded px-1.5 py-1 outline-none focus:ring-1 focus:ring-journi-green text-right"
+                            />
+                            <button
+                              onClick={() => setGrantBudgetItems(grantBudgetItems.filter((_, idx) => idx !== i))}
+                              className="p-1 text-muted-foreground hover:text-red-500 transition-colors"
+                            >
+                              <Minus size={11} />
+                            </button>
+                          </div>
+                        ))}
+                        <button
+                          onClick={() => setGrantBudgetItems([...grantBudgetItems, { name: 'New Item', amount: 0 }])}
+                          className="w-full flex items-center justify-center gap-1 text-[11px] text-journi-green hover:bg-journi-green/5 rounded py-1 transition-colors"
+                        >
+                          <Plus size={11} />
+                          Add Line
+                        </button>
+                      </div>
+                      {grantBudgetItems.length > 0 && (
+                        <div className="mt-2 pt-2 border-t border-border flex items-center justify-between text-xs">
+                          <span className="text-muted-foreground font-medium">Total</span>
+                          <span className="font-bold text-foreground">
+                            ${grantBudgetItems.reduce((s, i) => s + (i.amount || 0), 0).toLocaleString()}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="border-t border-border" />
+                  </div>
+                )}
                 <div className="space-y-2">
                   <div className="flex items-center justify-between text-xs">
                     <span className="text-muted-foreground">Total Words</span>

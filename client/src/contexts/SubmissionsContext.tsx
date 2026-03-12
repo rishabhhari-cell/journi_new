@@ -93,7 +93,7 @@ export function SubmissionsProvider({ children }: SubmissionsProviderProps) {
     const submittedDate = new Date();
     const estimatedDecisionDate = new Date(submittedDate);
     estimatedDecisionDate.setDate(
-      estimatedDecisionDate.getDate() + (journal?.avgDecisionDays || 60)
+      estimatedDecisionDate.getDate() + (journal?.avgDecisionDays ?? 60)
     );
 
     const newSubmission: Submission = {

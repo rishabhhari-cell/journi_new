@@ -2,7 +2,7 @@
  * References Section Component
  * Displays auto-formatted citations in APA style
  */
-import { Trash2, BookOpen } from 'lucide-react';
+import { Trash2, BookOpen, FileText, ExternalLink } from 'lucide-react';
 import type { Citation } from '@/types';
 import { motion } from 'framer-motion';
 
@@ -77,6 +77,28 @@ export default function ReferencesSection({ citations, onRemoveCitation }: Refer
               className="text-sm text-foreground leading-relaxed"
               dangerouslySetInnerHTML={{ __html: formatCitation(citation) }}
             />
+
+            {/* Free PDF / OA links */}
+            {(citation.freePdfUrl || (citation.doi && citation.oaStatus && citation.oaStatus !== 'closed')) && (
+              <div className="flex items-center gap-2 mt-2">
+                {citation.freePdfUrl && (
+                  <a
+                    href={citation.freePdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 text-[10px] font-semibold hover:opacity-80 transition-opacity"
+                  >
+                    <FileText size={10} />
+                    Free PDF
+                  </a>
+                )}
+                {citation.oaStatus && citation.oaStatus !== 'closed' && (
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 text-[10px] font-medium capitalize">
+                    {citation.oaStatus}
+                  </span>
+                )}
+              </div>
+            )}
 
             {/* Remove Button */}
             <button

@@ -1,374 +1,759 @@
 /**
- * Journi Discovery Portal — Fully Functional
- * Real medical journal database with search, filters, acceptance scoring, and pagination
+ * Discovery — Tiered Match Board
+ * Unified discovery: inline filter bar, AI match toggle, and optional guided wizard.
  */
 import { useMemo, useState } from 'react';
-import { useLocation } from 'wouter';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import SearchBar from '@/components/discovery/SearchBar';
-import FilterPanel from '@/components/discovery/FilterPanel';
-import Pagination from '@/components/discovery/Pagination';
-import ScoreBreakdown from '@/components/discovery/ScoreBreakdown';
+import JournalDetailDrawer from '@/components/discovery/JournalDetailDrawer';
+import OAPolicyBadge from '@/components/discovery/OAPolicyBadge';
 import { useJournals } from '@/contexts/JournalsContext';
 import { useManuscript } from '@/contexts/ManuscriptContext';
 import {
   calculateAcceptanceLikelihood,
-  extractManuscriptKeywords,
   extractManuscriptKeywordsWeighted,
   countWordsFromHtml,
 } from '@/lib/acceptance-score';
+import type { Journal, JournalFilters } from '@/types';
 import type { ManuscriptProfile } from '@/lib/acceptance-score';
+import { ALL_SUBJECT_AREAS } from '@/data/journals-database';
+import {
+  Search,
+  Sparkles,
+  X,
+  TrendingUp,
+  ChevronDown,
+  ChevronUp,
+  FileText,
+  ChevronRight,
+  Check,
+  Wand2,
+} from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle2, Clock, FileText, Sparkles, X } from 'lucide-react';
 
-const DISCOVERY_BG =
-  'https://private-us-east-1.manuscdn.com/sessionFile/26L77Mx18FIvYFxOwaY7CL/sandbox/x4psCbR5WAhHiPiXSrPmLs-img-4_1770760354000_na1fn_am91cm5pLWRpc2NvdmVyeS1oZXJv.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvMjZMNzdNeDE4Rkl2WUZ4T3dhWTdDTC9zYW5kYm94L3g0cHNDYlI1V0FoSGlQaVhTclBtTHMtaW1nLTRfMTc3MDc2MDM1NDAwMF9uYTFmbl9hbTkxY201cExXUnBjMk52ZG1WeWVTMW9aWEp2LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=UZmBQAoocAg~sfm9d2M~Gppt~4pucIfesw1vFCSn01lVfBMogc0LB8rsGAOJ7JTrPA~~HjsniBF723gLbvFFyPN91BtndWd3~9AWtRCP25GWSPINSlqh1D3CNONlScfTWU~VdzbZh6g76Z5sXDQvHHdEjCQK4GVXz4aKmNsKky9RfNWGhnz1yb55sPs4Yt60fobCJsjyA0MgC9XfdF0PortIN1KwmisT2sI4V7xpxrmFjQGzFmLYQ2NhoPcIJ76W0YmDAj2PwNTLr8wKj~CTIq3Edll8psqcTi~m8wUVKgxFahNDxU3XV120e7Jjw2aPeOV1Ah8dPQ8H8IoCtoFG1g__';
+// ── Tier config ──────────────────────────────────────────────────────────────
 
-const COVER_COLORS = [
-  'from-blue-800 to-blue-600',
-  'from-emerald-800 to-emerald-600',
-  'from-purple-800 to-purple-600',
-  'from-rose-800 to-rose-600',
-  'from-amber-800 to-amber-600',
-  'from-teal-800 to-teal-600',
-  'from-indigo-800 to-indigo-600',
-  'from-pink-800 to-pink-600',
-  'from-cyan-800 to-cyan-600',
-  'from-orange-800 to-orange-600',
-];
+const TIERS = [
+  {
+    key: 'strong',
+    label: 'Strong Match',
+    sublabel: 'Score 75+',
+    min: 75,
+    max: 101,
+    headerBg: 'bg-gradient-to-r from-emerald-500/15 to-emerald-500/5',
+    headerBorder: 'border-emerald-500/25',
+    pillBg: 'bg-emerald-600 text-white',
+    scoreBg: 'bg-emerald-600',
+  },
+  {
+    key: 'good',
+    label: 'Good Match',
+    sublabel: 'Score 50–74',
+    min: 50,
+    max: 75,
+    headerBg: 'bg-gradient-to-r from-journi-green/15 to-journi-green/5',
+    headerBorder: 'border-journi-green/25',
+    pillBg: 'bg-journi-green text-journi-slate',
+    scoreBg: 'bg-journi-green',
+  },
+  {
+    key: 'other',
+    label: 'Others',
+    sublabel: 'Score < 50',
+    min: 0,
+    max: 50,
+    headerBg: 'bg-gradient-to-r from-muted/50 to-muted/20',
+    headerBorder: 'border-border',
+    pillBg: 'bg-muted-foreground text-white',
+    scoreBg: 'bg-muted-foreground',
+  },
+] as const;
 
-function ScoreBadge({ score, label }: { score: number; label: string }) {
-  const bgColor =
-    score >= 75
-      ? 'bg-status-completed'
-      : score >= 55
-        ? 'bg-journi-green'
-        : score >= 40
-          ? 'bg-status-pending'
-          : 'bg-muted-foreground';
+const CARDS_PER_TIER = 5;
+
+type OAPreference = 'required' | 'preferred' | 'none';
+type ActivePanel = 'oa' | 'specialty' | 'impact' | 'timeline' | null;
+
+// ── FilterPill ───────────────────────────────────────────────────────────────
+
+function FilterPill({
+  label,
+  active,
+  open,
+  onClick,
+}: {
+  label: string;
+  active: boolean;
+  open: boolean;
+  onClick: () => void;
+}) {
   return (
-    <div
-      className={`w-14 h-14 rounded-full ${bgColor} flex flex-col items-center justify-center shrink-0`}
+    <button
+      onClick={onClick}
+      className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border ${
+        active
+          ? 'bg-journi-green/10 text-journi-green border-journi-green/30'
+          : open
+            ? 'bg-accent border-border text-foreground'
+            : 'bg-card border-border text-muted-foreground hover:text-foreground'
+      }`}
     >
-      <span className="text-lg font-extrabold text-white leading-none">{score}</span>
-      <span className="text-[7px] font-semibold text-white/80 uppercase leading-tight">
-        {label}
-      </span>
-    </div>
+      {label}
+      {open ? <ChevronUp size={11} /> : <ChevronDown size={11} />}
+    </button>
   );
 }
 
+// ── Main component ────────────────────────────────────────────────────────────
+
 export default function Discovery() {
   const {
-    filteredJournals,
     paginatedJournals,
-    filters,
-    currentPage,
-    resultsPerPage,
-    totalPages,
+    searchQuery,
+    totalResults,
     setSearchQuery,
     setFilters,
-    setCurrentPage,
-    setResultsPerPage,
+    filters,
+    isLoading,
   } = useJournals();
 
   const { manuscript } = useManuscript();
-  const [, navigate] = useLocation();
-  const [autoMatchMode, setAutoMatchMode] = useState(false);
+  const [selectedJournal, setSelectedJournal] = useState<Journal | null>(null);
+  const [autoMatchMode, setAutoMatchMode] = useState(true);
+  const [expandedTiers, setExpandedTiers] = useState<Record<string, boolean>>({});
+  const [activePanel, setActivePanel] = useState<ActivePanel>(null);
 
-  // Build manuscript profile once for scoring all journals — deep semantic analysis
-  const manuscriptProfile: ManuscriptProfile = useMemo(
-    () => {
-      const keywordWeights = extractManuscriptKeywordsWeighted(manuscript);
-      const subjectKeywords = Array.from(keywordWeights.entries())
-        .sort((a, b) => b[1] - a[1])
-        .map(([area]) => area);
-      return {
-        subjectKeywords,
-        keywordWeights,
-        totalWordCount: manuscript.sections.reduce(
-          (sum, s) => sum + countWordsFromHtml(s.content),
-          0
-        ),
-        prefersOpenAccess: true,
-      };
-    },
-    [manuscript]
-  );
+  // Wizard state
+  const [showWizard, setShowWizard] = useState(false);
+  const [wizardOA, setWizardOA] = useState<OAPreference>('preferred');
+  const [wizardMaxDays, setWizardMaxDays] = useState(300);
 
-  // When in auto-match mode, score and sort ALL journals by acceptance likelihood (descending)
+  const topKeywords = useMemo(() => {
+    const weights = extractManuscriptKeywordsWeighted(manuscript);
+    return Array.from(weights.keys()).slice(0, 8);
+  }, [manuscript]);
+
+  const manuscriptProfile: ManuscriptProfile = useMemo(() => {
+    const keywordWeights = extractManuscriptKeywordsWeighted(manuscript);
+    const subjectKeywords = Array.from(keywordWeights.entries())
+      .sort((a, b) => b[1] - a[1])
+      .map(([area]) => area);
+    return {
+      subjectKeywords,
+      keywordWeights,
+      totalWordCount: manuscript.sections.reduce(
+        (sum, s) => sum + countWordsFromHtml(s.content),
+        0
+      ),
+      prefersOpenAccess: true,
+    };
+  }, [manuscript]);
+
   const scoredJournals = useMemo(() => {
-    const source = autoMatchMode ? filteredJournals : paginatedJournals;
-    return source.map((journal) => ({
-      journal,
-      likelihood: calculateAcceptanceLikelihood(journal, manuscriptProfile),
+    return paginatedJournals
+      .map((journal) => ({
+        journal,
+        likelihood: calculateAcceptanceLikelihood(journal, manuscriptProfile),
+      }))
+      .sort((a, b) => b.likelihood.overall - a.likelihood.overall);
+  }, [paginatedJournals, manuscriptProfile]);
+
+  const tieredData = useMemo(() => {
+    return TIERS.map((tier) => ({
+      ...tier,
+      journals: scoredJournals.filter(
+        ({ likelihood }) =>
+          likelihood.overall >= tier.min && likelihood.overall < tier.max
+      ),
     }));
-  }, [autoMatchMode, filteredJournals, paginatedJournals, manuscriptProfile]);
+  }, [scoredJournals]);
 
-  const sortedScoredJournals = useMemo(() => {
-    if (!autoMatchMode) return scoredJournals;
-    return [...scoredJournals].sort((a, b) => b.likelihood.overall - a.likelihood.overall);
-  }, [autoMatchMode, scoredJournals]);
+  const toggleTierExpand = (key: string) => {
+    setExpandedTiers((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
 
-  // In auto-match mode, paginate manually after scoring
-  const displayJournals = useMemo(() => {
-    if (!autoMatchMode) return sortedScoredJournals;
-    const start = (currentPage - 1) * resultsPerPage;
-    return sortedScoredJournals.slice(start, start + resultsPerPage);
-  }, [autoMatchMode, sortedScoredJournals, currentPage, resultsPerPage]);
+  const togglePanel = (panel: ActivePanel) => {
+    setActivePanel((prev) => (prev === panel ? null : panel));
+  };
 
-  const effectiveTotalPages = autoMatchMode
-    ? Math.ceil(sortedScoredJournals.length / resultsPerPage)
-    : totalPages;
+  const toggleSubjectArea = (area: string) => {
+    const current = filters.subjectAreas || [];
+    const updated = current.includes(area)
+      ? current.filter((a) => a !== area)
+      : [...current, area];
+    setFilters({ ...filters, subjectAreas: updated });
+  };
 
-  // Handle "Find My Journal" click
-  const handleFindMyJournal = () => {
+  const handleWizardRun = () => {
+    const newFilters: JournalFilters = {};
+    if (wizardOA === 'required') newFilters.openAccess = true;
+    if (wizardMaxDays < 300) newFilters.timeToPublicationMax = wizardMaxDays;
+    setFilters(newFilters);
     setSearchQuery('');
     setAutoMatchMode(true);
-    setCurrentPage(1);
+    setShowWizard(false);
   };
 
-  const handleExitAutoMatch = () => {
-    setAutoMatchMode(false);
-  };
+  const hasFilters =
+    !!searchQuery ||
+    filters.openAccess !== undefined ||
+    filters.impactFactorMin !== undefined ||
+    filters.timeToPublicationMax !== undefined ||
+    (filters.subjectAreas && filters.subjectAreas.length > 0);
 
-  // Get initials from journal name
-  const getInitials = (name: string) => {
-    const words = name.split(' ').filter((w) => w.length > 0);
-    if (words.length === 1) return words[0].substring(0, 3).toUpperCase();
-    return words
-      .slice(0, 3)
-      .map((w) => w[0])
-      .join('')
-      .toUpperCase();
+  const clearAll = () => {
+    setFilters({});
+    setSearchQuery('');
+    setActivePanel(null);
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-background">
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative pt-28 pb-12 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url(${DISCOVERY_BG})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/70 to-white" />
-        <div className="container relative z-10">
-          <motion.div
-            className="max-w-2xl mx-auto text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h1 className="text-3xl md:text-4xl font-extrabold text-foreground mb-3">
-              Discovery Portal
-            </h1>
-            <p className="text-muted-foreground text-lg mb-8">
-              Find the perfect journal for your research from our database of indexed medical
-              journals
-            </p>
-
-            {/* Search Bar + Find My Journal */}
-            <div className="flex gap-3 items-start">
-              <div className="flex-1">
-                <SearchBar onSearch={(q) => { setAutoMatchMode(false); setSearchQuery(q); }} />
-              </div>
+      {/* ── Sticky toolbar ── */}
+      <div className="sticky top-16 z-30 bg-background/95 backdrop-blur-sm border-b border-border">
+        {/* Main row */}
+        <div className="container py-3 flex items-center gap-2 flex-wrap">
+          {/* Search */}
+          <div className="relative flex-1 min-w-48 max-w-sm">
+            <Search
+              size={13}
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
+            />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search journals..."
+              className="w-full pl-8 pr-8 py-2 text-sm bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-journi-green"
+            />
+            {searchQuery && (
               <button
-                onClick={handleFindMyJournal}
-                className={`shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
-                  autoMatchMode
-                    ? 'bg-journi-green text-journi-slate shadow-lg shadow-journi-green/20'
-                    : 'bg-journi-green/10 text-journi-green hover:bg-journi-green/20 border border-journi-green/30'
-                }`}
+                onClick={() => setSearchQuery('')}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+              >
+                <X size={12} />
+              </button>
+            )}
+          </div>
+
+          {/* Filter pills */}
+          <div className="flex items-center gap-1.5 flex-wrap">
+            <FilterPill
+              label={
+                filters.openAccess !== undefined
+                  ? filters.openAccess
+                    ? 'OA Only'
+                    : 'Subs. Only'
+                  : 'Open Access'
+              }
+              active={filters.openAccess !== undefined}
+              open={activePanel === 'oa'}
+              onClick={() => togglePanel('oa')}
+            />
+            <FilterPill
+              label={`Specialty${(filters.subjectAreas?.length ?? 0) > 0 ? ` (${filters.subjectAreas!.length})` : ''}`}
+              active={(filters.subjectAreas?.length ?? 0) > 0}
+              open={activePanel === 'specialty'}
+              onClick={() => togglePanel('specialty')}
+            />
+            <FilterPill
+              label={
+                filters.impactFactorMin !== undefined
+                  ? `IF ≥ ${filters.impactFactorMin}`
+                  : 'Impact Factor'
+              }
+              active={filters.impactFactorMin !== undefined}
+              open={activePanel === 'impact'}
+              onClick={() => togglePanel('impact')}
+            />
+            <FilterPill
+              label={
+                filters.timeToPublicationMax !== undefined
+                  ? `≤ ${filters.timeToPublicationMax}d`
+                  : 'Timeline'
+              }
+              active={filters.timeToPublicationMax !== undefined}
+              open={activePanel === 'timeline'}
+              onClick={() => togglePanel('timeline')}
+            />
+            {hasFilters && (
+              <button
+                onClick={clearAll}
+                className="flex items-center gap-1 px-2 py-1.5 rounded-lg text-xs text-muted-foreground hover:text-red-500 transition-colors"
+              >
+                <X size={11} /> Clear
+              </button>
+            )}
+          </div>
+
+          {/* Right actions */}
+          <div className="flex items-center gap-1.5 ml-auto">
+            <button
+              onClick={() => setAutoMatchMode(!autoMatchMode)}
+              className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all ${
+                autoMatchMode
+                  ? 'bg-journi-green text-journi-slate'
+                  : 'bg-journi-green/10 text-journi-green border border-journi-green/30 hover:bg-journi-green/20'
+              }`}
+            >
+              <Sparkles size={12} />
+              {autoMatchMode ? 'Matched' : 'Match My Paper'}
+            </button>
+            <button
+              onClick={() => setShowWizard(true)}
+              className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold bg-card border border-border text-muted-foreground hover:text-foreground hover:border-foreground/20 transition-colors"
+            >
+              <Wand2 size={12} />
+              Wizard
+            </button>
+            <p className="text-xs text-muted-foreground hidden sm:block pl-1">
+              {totalResults.toLocaleString()} journals
+            </p>
+          </div>
+        </div>
+
+        {/* Expandable filter panels */}
+        <AnimatePresence>
+          {activePanel && (
+            <motion.div
+              key={activePanel}
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.18 }}
+              className="overflow-hidden border-t border-border"
+            >
+              <div className="container py-3">
+                {/* Open Access */}
+                {activePanel === 'oa' && (
+                  <div className="flex gap-2 flex-wrap">
+                    {(
+                      [
+                        { label: 'All Journals', val: undefined },
+                        { label: 'OA Only', val: true },
+                        { label: 'Subscription Only', val: false },
+                      ] as const
+                    ).map(({ label, val }) => (
+                      <button
+                        key={label}
+                        onClick={() => {
+                          if (val === undefined) {
+                            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                            const { openAccess: _oa, ...rest } = filters;
+                            setFilters(rest);
+                          } else {
+                            setFilters({ ...filters, openAccess: val });
+                          }
+                          setActivePanel(null);
+                        }}
+                        className={`px-3.5 py-2 rounded-lg text-xs font-medium transition-colors border ${
+                          filters.openAccess === val
+                            ? 'bg-journi-green text-journi-slate border-journi-green'
+                            : 'bg-card border-border text-muted-foreground hover:text-foreground'
+                        }`}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* Specialty */}
+                {activePanel === 'specialty' && (
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-1.5 max-h-44 overflow-y-auto pr-1">
+                    {ALL_SUBJECT_AREAS.slice(0, 30).map((area) => {
+                      const selected = filters.subjectAreas?.includes(area) || false;
+                      return (
+                        <button
+                          key={area}
+                          onClick={() => toggleSubjectArea(area)}
+                          className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs text-left transition-colors border ${
+                            selected
+                              ? 'bg-journi-green/10 text-journi-green font-medium border-journi-green/30'
+                              : 'bg-muted text-foreground hover:bg-accent border-transparent'
+                          }`}
+                        >
+                          {selected && <Check size={10} className="shrink-0" />}
+                          {area}
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+
+                {/* Impact Factor */}
+                {activePanel === 'impact' && (
+                  <div className="flex items-center gap-4 max-w-xs">
+                    <span className="text-xs text-muted-foreground whitespace-nowrap">Min IF:</span>
+                    <input
+                      type="range"
+                      min="0"
+                      max="100"
+                      step="1"
+                      value={filters.impactFactorMin ?? 0}
+                      onChange={(e) => {
+                        const val = parseFloat(e.target.value);
+                        setFilters({ ...filters, impactFactorMin: val > 0 ? val : undefined });
+                      }}
+                      className="w-full accent-journi-green"
+                    />
+                    <span className="text-xs font-semibold text-journi-green w-8 text-right">
+                      {filters.impactFactorMin ?? 0}
+                    </span>
+                  </div>
+                )}
+
+                {/* Timeline */}
+                {activePanel === 'timeline' && (
+                  <div className="flex items-center gap-4 max-w-xs">
+                    <span className="text-xs text-muted-foreground whitespace-nowrap">Max days:</span>
+                    <input
+                      type="range"
+                      min="30"
+                      max="300"
+                      step="10"
+                      value={filters.timeToPublicationMax ?? 300}
+                      onChange={(e) => {
+                        const val = parseInt(e.target.value);
+                        setFilters({
+                          ...filters,
+                          timeToPublicationMax: val < 300 ? val : undefined,
+                        });
+                      }}
+                      className="w-full accent-journi-green"
+                    />
+                    <span className="text-xs font-semibold text-journi-green w-16 text-right">
+                      {filters.timeToPublicationMax
+                        ? `${filters.timeToPublicationMax}d`
+                        : 'Any'}
+                    </span>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* Context banner — normal flow so it scrolls away */}
+      {autoMatchMode && (
+        <div className="bg-journi-green/5 border-b border-journi-green/15">
+          <p className="container text-xs text-muted-foreground py-1.5 flex items-center gap-1.5">
+            <Sparkles size={10} className="text-journi-green" />
+            Tiered by acceptance likelihood for{' '}
+            <span className="font-medium text-foreground">
+              {manuscript.title || 'your manuscript'}
+            </span>
+          </p>
+        </div>
+      )}
+
+      {/* ── Sticky tier header row (desktop) ── */}
+      {!isLoading && (
+        <div className="hidden md:block sticky top-[7.75rem] z-20">
+          <div className="container pt-4 pb-2">
+            <div className="grid grid-cols-3 gap-5">
+              {tieredData.map((tier) => (
+                <div
+                  key={tier.key}
+                  className={`rounded-xl border px-4 py-3 bg-background ${tier.headerBg} ${tier.headerBorder}`}
+                >
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-sm font-bold text-foreground">{tier.label}</p>
+                      <p className="text-xs text-muted-foreground">{tier.sublabel}</p>
+                    </div>
+                    <span className={`px-2.5 py-1 rounded-full text-xs font-bold ${tier.pillBg}`}>
+                      {tier.journals.length}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── Board ── */}
+      <div className="flex-1 container pt-10 pb-6">
+        {isLoading ? (
+          <div className="text-center py-20">
+            <div className="w-10 h-10 rounded-full border-4 border-journi-green/20 border-t-journi-green animate-spin mx-auto mb-3" />
+            <p className="text-sm text-muted-foreground">Loading journals...</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
+            {tieredData.map((tier) => {
+              const isExpanded = expandedTiers[tier.key] ?? false;
+              const visible = isExpanded
+                ? tier.journals
+                : tier.journals.slice(0, CARDS_PER_TIER);
+              const hidden = tier.journals.length - CARDS_PER_TIER;
+
+              return (
+                <div key={tier.key} className="flex flex-col gap-3">
+                  {/* Mobile-only inline tier header */}
+                  <div
+                    className={`md:hidden rounded-xl border px-4 py-3 ${tier.headerBg} ${tier.headerBorder}`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-sm font-bold text-foreground">{tier.label}</p>
+                        <p className="text-xs text-muted-foreground">{tier.sublabel}</p>
+                      </div>
+                      <span className={`px-2.5 py-1 rounded-full text-xs font-bold ${tier.pillBg}`}>
+                        {tier.journals.length}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Cards */}
+                  <div className="space-y-2.5">
+                    {visible.length === 0 ? (
+                      <div className="rounded-xl border border-dashed border-border p-6 text-center">
+                        <p className="text-xs text-muted-foreground">No journals in this tier</p>
+                      </div>
+                    ) : (
+                      visible.map(({ journal, likelihood }, i) => (
+                        <motion.button
+                          key={journal.id}
+                          onClick={() => setSelectedJournal(journal)}
+                          className="w-full text-left bg-card border border-border rounded-xl overflow-hidden hover:border-journi-green/40 hover:shadow-md hover:shadow-journi-green/5 transition-all duration-200 group"
+                          initial={{ opacity: 0, scale: 0.97 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: i * 0.035 }}
+                        >
+                          <div className={`h-1.5 w-full bg-gradient-to-r ${journal.coverColor}`} />
+
+                          <div className="p-3.5">
+                            <div className="flex items-start justify-between gap-2 mb-2.5">
+                              <div
+                                className={`w-9 h-11 rounded-lg bg-gradient-to-br ${journal.coverColor} flex items-center justify-center shrink-0 shadow-sm`}
+                              >
+                                <span className="text-white text-[9px] font-bold">
+                                  {journal.coverInitial}
+                                </span>
+                              </div>
+                              <div
+                                className={`px-2 py-0.5 rounded-full text-xs font-bold shrink-0 ${tier.scoreBg} text-white`}
+                              >
+                                {likelihood.overall}
+                              </div>
+                            </div>
+
+                            <p className="text-xs font-semibold text-foreground group-hover:text-journi-green transition-colors leading-snug line-clamp-2">
+                              {journal.name}
+                            </p>
+                            <p className="text-[11px] text-muted-foreground mt-0.5 truncate">
+                              {journal.publisher}
+                            </p>
+
+                            <div className="mt-2.5 flex items-center justify-between">
+                              <div className="flex items-center gap-1 text-[11px] text-muted-foreground">
+                                <TrendingUp size={10} />
+                                IF {journal.impactFactor?.toFixed(1) ?? 'N/A'}
+                              </div>
+                              <div className="flex items-center gap-1">
+                                <OAPolicyBadge journal={journal} size="sm" />
+                                {journal.isMedlineIndexed && (
+                                  <span className="text-[9px] px-1 py-0.5 rounded bg-emerald-100 text-emerald-700 font-bold">
+                                    M
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+
+                            <div className="mt-2.5 h-1 bg-muted rounded-full overflow-hidden">
+                              <div
+                                className={`h-full ${tier.scoreBg} rounded-full`}
+                                style={{ width: `${likelihood.overall}%` }}
+                              />
+                            </div>
+                          </div>
+                        </motion.button>
+                      ))
+                    )}
+                  </div>
+
+                  {tier.journals.length > CARDS_PER_TIER && (
+                    <button
+                      onClick={() => toggleTierExpand(tier.key)}
+                      className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg border border-border text-xs text-muted-foreground hover:text-foreground hover:border-foreground/20 transition-colors"
+                    >
+                      {isExpanded ? (
+                        <>
+                          <ChevronUp size={13} /> Show less
+                        </>
+                      ) : (
+                        <>
+                          <ChevronDown size={13} /> {hidden} more in this tier
+                        </>
+                      )}
+                    </button>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+
+      {/* ── Wizard Modal ── */}
+      <AnimatePresence>
+        {showWizard && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-start justify-center bg-background/80 backdrop-blur-sm pt-20 pb-8 overflow-y-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={(e) => {
+              if (e.target === e.currentTarget) setShowWizard(false);
+            }}
+          >
+            <motion.div
+              className="w-full max-w-lg mx-4"
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.25 }}
+            >
+              {/* Header */}
+              <div className="text-center mb-6">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-journi-green/10 text-journi-green text-xs font-semibold mb-4">
+                  <Sparkles size={12} /> Guided Matching Wizard
+                </span>
+                <h1 className="text-2xl font-extrabold text-foreground mb-1">
+                  Find Your Perfect Journal
+                </h1>
+                <p className="text-sm text-muted-foreground">
+                  Three questions. Ranked results. No guesswork.
+                </p>
+              </div>
+
+              {/* Step 1 — Research topic */}
+              <div className="bg-card border border-border rounded-2xl p-5 mb-3 shadow-sm">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-6 h-6 rounded-full bg-journi-green/15 text-journi-green text-xs font-bold flex items-center justify-center shrink-0">
+                    1
+                  </div>
+                  <h3 className="text-sm font-bold text-foreground">
+                    What is your manuscript about?
+                  </h3>
+                </div>
+                {topKeywords.length > 0 ? (
+                  <div className="flex flex-wrap gap-1.5">
+                    {topKeywords.map((kw) => (
+                      <span
+                        key={kw}
+                        className="px-2.5 py-1 rounded-full bg-journi-green/10 text-journi-green text-xs font-medium border border-journi-green/20"
+                      >
+                        {kw}
+                      </span>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-sm text-muted-foreground">
+                    No manuscript loaded.{' '}
+                    <a href="/collaboration" className="text-journi-green hover:underline">
+                      Go to Collaboration
+                    </a>{' '}
+                    to start writing.
+                  </p>
+                )}
+                {manuscript.title && (
+                  <p className="mt-2 text-xs text-muted-foreground flex items-center gap-1.5">
+                    <FileText size={11} />
+                    {manuscript.title}
+                  </p>
+                )}
+              </div>
+
+              {/* Step 2 — OA preference */}
+              <div className="bg-card border border-border rounded-2xl p-5 mb-3 shadow-sm">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-6 h-6 rounded-full bg-journi-green/15 text-journi-green text-xs font-bold flex items-center justify-center shrink-0">
+                    2
+                  </div>
+                  <h3 className="text-sm font-bold text-foreground">Open Access preference?</h3>
+                </div>
+                <div className="grid grid-cols-3 gap-2">
+                  {(
+                    [
+                      { val: 'required', label: 'Required', desc: 'OA journals only' },
+                      { val: 'preferred', label: 'Preferred', desc: 'Favour OA, show all' },
+                      { val: 'none', label: 'No Preference', desc: 'Any journal type' },
+                    ] as const
+                  ).map(({ val, label, desc }) => (
+                    <button
+                      key={val}
+                      onClick={() => setWizardOA(val)}
+                      className={`p-3 rounded-xl border-2 text-left transition-all ${
+                        wizardOA === val
+                          ? 'border-journi-green bg-journi-green/5'
+                          : 'border-border hover:border-journi-green/40'
+                      }`}
+                    >
+                      <p className="text-xs font-semibold text-foreground">{label}</p>
+                      <p className="text-[11px] text-muted-foreground mt-0.5">{desc}</p>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Step 3 — Timeline */}
+              <div className="bg-card border border-border rounded-2xl p-5 mb-5 shadow-sm">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-6 h-6 rounded-full bg-journi-green/15 text-journi-green text-xs font-bold flex items-center justify-center shrink-0">
+                    3
+                  </div>
+                  <h3 className="text-sm font-bold text-foreground">
+                    How quickly do you need a decision?
+                  </h3>
+                </div>
+                <input
+                  type="range"
+                  min="30"
+                  max="300"
+                  step="10"
+                  value={wizardMaxDays}
+                  onChange={(e) => setWizardMaxDays(parseInt(e.target.value))}
+                  className="w-full accent-journi-green"
+                />
+                <div className="flex items-center justify-between mt-2">
+                  <span className="text-xs text-muted-foreground">30 days</span>
+                  <span className="text-sm font-semibold text-journi-green">
+                    {wizardMaxDays >= 300 ? 'Any timeline' : `Up to ${wizardMaxDays} days`}
+                  </span>
+                  <span className="text-xs text-muted-foreground">No limit</span>
+                </div>
+              </div>
+
+              {/* CTA */}
+              <button
+                onClick={handleWizardRun}
+                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-journi-green text-journi-slate font-bold text-sm hover:opacity-90 transition-opacity shadow-lg shadow-journi-green/25"
               >
                 <Sparkles size={16} />
-                Find My Journal
+                Find My Journals
+                <ChevronRight size={16} />
               </button>
-            </div>
-
-            {/* Filters */}
-            <div className="mt-5">
-              <FilterPanel filters={filters} onFiltersChange={setFilters} />
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Results */}
-      <section className="pb-20">
-        <div className="container">
-          {/* Auto-match banner */}
-          <AnimatePresence>
-            {autoMatchMode && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                className="mb-6 overflow-hidden"
+              <button
+                onClick={() => setShowWizard(false)}
+                className="w-full mt-2.5 py-2.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
               >
-                <div className="flex items-center gap-3 px-4 py-3 rounded-lg bg-journi-green/10 border border-journi-green/20">
-                  <Sparkles size={16} className="text-journi-green shrink-0" />
-                  <p className="text-sm text-foreground flex-1">
-                    Showing journals matched to your manuscript:{' '}
-                    <span className="font-semibold">{manuscript.title || 'Untitled'}</span>.
-                    Sorted by acceptance likelihood.
-                  </p>
-                  <button
-                    onClick={handleExitAutoMatch}
-                    className="p-1 rounded hover:bg-journi-green/20 text-muted-foreground hover:text-foreground transition-colors shrink-0"
-                  >
-                    <X size={16} />
-                  </button>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+                Cancel
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-          <p className="text-sm text-muted-foreground mb-6">
-            Showing{' '}
-            <span className="font-medium text-foreground">
-              {autoMatchMode ? sortedScoredJournals.length : filteredJournals.length}
-            </span>{' '}
-            results{autoMatchMode ? ' sorted by acceptance likelihood' : ''}
-          </p>
-
-          {displayJournals.length === 0 ? (
-            <div className="text-center py-20">
-              <div className="w-16 h-16 rounded-full bg-muted mx-auto mb-4 flex items-center justify-center">
-                <CheckCircle2 size={24} className="text-muted-foreground" />
-              </div>
-              <p className="text-sm text-muted-foreground mb-2">No journals found</p>
-              <p className="text-xs text-muted-foreground">
-                Try adjusting your search or filters
-              </p>
-            </div>
-          ) : (
-            <>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-                {displayJournals.map(({ journal, likelihood }, i) => {
-                  const coverColor = COVER_COLORS[i % COVER_COLORS.length];
-                  const initials = getInitials(journal.name);
-
-                  return (
-                    <motion.div
-                      key={journal.id}
-                      className="bg-card rounded-xl border border-border p-5 hover:shadow-lg hover:shadow-journi-green/5 transition-all duration-300 group"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.05, duration: 0.4 }}
-                    >
-                      <div className="flex gap-4">
-                        {/* Journal Cover */}
-                        <div
-                          className={`w-16 h-20 rounded-lg bg-gradient-to-br ${coverColor} flex items-center justify-center shrink-0 shadow-md`}
-                        >
-                          <span className="text-white text-xs font-bold">{initials}</span>
-                        </div>
-
-                        {/* Info */}
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-start justify-between gap-3">
-                            <div>
-                              <h3 className="text-sm font-bold text-foreground group-hover:text-journi-green transition-colors">
-                                {journal.name}
-                              </h3>
-                              <p className="text-xs text-muted-foreground mt-0.5">
-                                {journal.publisher} &middot; IF: {journal.impactFactor.toFixed(1)}
-                              </p>
-                            </div>
-                            <ScoreBadge score={likelihood.overall} label={likelihood.label} />
-                          </div>
-
-                          {/* Progress bar */}
-                          <div className="mt-3 h-1.5 bg-muted rounded-full overflow-hidden">
-                            <motion.div
-                              className="h-full bg-journi-green rounded-full"
-                              initial={{ width: 0 }}
-                              animate={{ width: `${likelihood.overall}%` }}
-                              transition={{ delay: 0.3 + i * 0.06, duration: 0.6 }}
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Bottom: Timeline Insight + Score Breakdown */}
-                      <div className="mt-4 pt-4 border-t border-border grid grid-cols-2 gap-4">
-                        {/* Timeline Insight */}
-                        <div>
-                          <h4 className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-2 flex items-center gap-1">
-                            <Clock size={10} />
-                            Journal Metrics
-                          </h4>
-                          <div className="space-y-1.5">
-                            <div className="flex items-center justify-between">
-                              <span className="text-xs text-muted-foreground">Impact Factor</span>
-                              <span className="text-xs font-medium text-foreground">
-                                {journal.impactFactor.toFixed(1)}
-                              </span>
-                            </div>
-                            <div className="flex items-center justify-between">
-                              <span className="text-xs text-muted-foreground">Acceptance Rate</span>
-                              <span className="text-xs font-medium text-foreground">
-                                {journal.acceptanceRate}%
-                              </span>
-                            </div>
-                            <div className="flex items-center justify-between">
-                              <span className="text-xs text-muted-foreground">Avg. Decision</span>
-                              <span className="text-xs font-medium text-foreground">
-                                {journal.avgDecisionDays} days
-                              </span>
-                            </div>
-                            <div className="flex items-center justify-between">
-                              <span className="text-xs text-muted-foreground">Open Access</span>
-                              <span
-                                className={`text-xs font-medium ${journal.openAccess ? 'text-journi-green' : 'text-muted-foreground'}`}
-                              >
-                                {journal.openAccess ? 'Yes' : 'No'}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Score Breakdown */}
-                        <div>
-                          <h4 className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-2 flex items-center gap-1">
-                            <CheckCircle2 size={10} />
-                            Acceptance Likelihood
-                          </h4>
-                          <ScoreBreakdown likelihood={likelihood} />
-                        </div>
-                      </div>
-
-                      {/* Format for Journal button */}
-                      <div className="mt-3 pt-3 border-t border-border">
-                        <button
-                          onClick={() => navigate(`/format/${journal.id}`)}
-                          className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold text-journi-green bg-journi-green/10 hover:bg-journi-green/20 rounded-lg transition-colors"
-                        >
-                          <FileText size={14} />
-                          Format Manuscript for This Journal
-                        </button>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-
-              {/* Pagination */}
-              <Pagination
-                currentPage={currentPage}
-                totalPages={effectiveTotalPages}
-                resultsPerPage={resultsPerPage}
-                totalResults={autoMatchMode ? sortedScoredJournals.length : filteredJournals.length}
-                onPageChange={setCurrentPage}
-                onResultsPerPageChange={setResultsPerPage}
-              />
-            </>
-          )}
-        </div>
-      </section>
+      <JournalDetailDrawer
+        journal={selectedJournal}
+        onClose={() => setSelectedJournal(null)}
+      />
 
       <Footer />
     </div>

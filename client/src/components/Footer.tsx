@@ -1,7 +1,7 @@
 /**
  * Journi Footer — Nordic Academic Design
  */
-const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663338983812/MPxdcgWnrcekBSWX.png";
+const LOGO_URL = "/journi_black_outline.png";
 
 export default function Footer() {
   return (
@@ -11,8 +11,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <img src={LOGO_URL} alt="Journi" className="h-8 w-auto brightness-200" />
-              <span className="text-lg font-bold text-white">Journi</span>
+              <img src={LOGO_URL} alt="Journi" className="h-28 w-auto" />
             </div>
             <p className="text-sm leading-relaxed text-white/60">
               From Start-up to Write-up. Your all-in-one platform for research collaboration, creation, and publication.

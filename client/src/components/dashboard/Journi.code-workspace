@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../patches"
+		},
+		{
+			"path": "../../../../server"
+		},
+		{
+			"path": "../../../../shared"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "client"
+	}
+}
