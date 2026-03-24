@@ -1,10 +1,11 @@
 import { Router } from "express";
 import { z } from "zod";
-import { assertManuscriptAccess, assertProjectEditable, getProjectAccess } from "../lib/access";
+import { assertAnyOrganizationRole, assertManuscriptAccess, assertProjectEditable, getProjectAccess } from "../lib/access";
 import { HttpError } from "../lib/http-error";
 import { supabaseAdmin } from "../lib/supabase";
 import { requireAuth, type AuthedRequest } from "../middleware/auth";
 import { writeAuditEvent } from "../services/audit.service";
+import { parseUploadedDocument } from "../services/manuscript-parse.service";
 
 export const manuscriptsRouter = Router();
 
@@ -47,7 +48,32 @@ const createVersionSchema = z.object({
   snapshotBase64: z.string().min(1),
 });
 
+const parseUploadSchema = z.object({
+  fileName: z.string().min(1),
+  mimeType: z.string().optional(),
+  base64: z.string().min(1),
+});
+
 manuscriptsRouter.use(requireAuth);
+
+manuscriptsRouter.post("/parse", async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    const input = parseUploadSchema.parse(req.body);
+    await assertAnyOrganizationRole(authReq.auth.userId, "viewer");
+
+    const buffer = Buffer.from(input.base64, "base64");
+    const parsed = await parseUploadedDocument({
+      fileName: input.fileName,
+      mimeType: input.mimeType,
+      buffer,
+    });
+
+    res.json({ data: parsed });
+  } catch (error) {
+    next(error);
+  }
+});
 
 manuscriptsRouter.get("/", async (req, res, next) => {
   try {

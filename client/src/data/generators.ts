@@ -146,6 +146,7 @@ export function generateSampleProject2(): Project {
 // ============================================================================
 
 const SECTION_TITLES = [
+  'Title',
   'Abstract',
   'Introduction',
   'Literature Review',

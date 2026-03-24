@@ -40,6 +40,8 @@ import type { CitationFormData, CommentFormData, DocumentSection, ManuscriptType
 import { format } from 'date-fns';
 import { exportToDocx, exportToPdf, importDocx, importPdf } from '@/lib/document-io';
 import { toast } from 'sonner';
+import { countWordsFromHtml } from '@shared/word-count';
+import { OUP_AI_REVIEW_SEED } from '@/data/seeded-ou-paper';
 import '@/components/collaboration/editor-styles.css';
 
 const sectionStatusConfig: Record<string, { color: string; icon: typeof CheckCircle }> = {
@@ -65,10 +67,29 @@ const GRANT_SECTION_LIMITS: Record<string, number> = {
 const LIT_DATABASES = ['PubMed/MEDLINE', 'Cochrane Library', 'Embase', 'Web of Science', 'Scopus', 'CINAHL', 'PsycINFO'];
 
 function countWords(html: string): number {
-  if (!html || html === '<p></p>') return 0;
-  const text = html.replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ');
-  const words = text.trim().split(/\s+/).filter((w) => w.length > 0);
-  return words.length;
+  return countWordsFromHtml(html);
+}
+
+function normalizeImportedText(input: string): string {
+  return input
+    .replace(/â€™/g, '’')
+    .replace(/â€˜/g, '‘')
+    .replace(/â€œ/g, '“')
+    .replace(/â€/g, '”')
+    .replace(/â€“/g, '–')
+    .replace(/â€”/g, '—')
+    .replace(/â€”/g, '—')
+    .replace(/â€˜/g, '‘')
+    .replace(/â€\u009d/g, '”')
+    .replace(/â€\u009c/g, '“')
+    .replace(/Ã³/g, 'ó')
+    .replace(/Ã©/g, 'é')
+    .replace(/Ã¡/g, 'á')
+    .replace(/Ã¼/g, 'ü')
+    .replace(/Ã¶/g, 'ö')
+    .replace(/Ã±/g, 'ñ')
+    .replace(/Å‘/g, 'ő')
+    .replace(/Â/g, '');
 }
 
 export default function Collaboration() {
@@ -85,6 +106,7 @@ export default function Collaboration() {
     updateTitle,
     updateSectionContent,
     addCitation,
+    addCitations,
     removeCitation,
     addComment,
     removeComment,
@@ -101,6 +123,14 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   const [titleDraft, setTitleDraft] = useState(manuscript.title);
   const [isExporting, setIsExporting] = useState<'docx' | 'pdf' | null>(null);
   const [isImporting, setIsImporting] = useState(false);
+  const [isInfoPanelOpen, setIsInfoPanelOpen] = useState<boolean>(() => {
+    try {
+      const raw = window.localStorage.getItem('journi.editor.info-panel.open');
+      return raw === null ? true : raw === '1';
+    } catch {
+      return true;
+    }
+  });
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Text selection comment state
@@ -138,6 +168,14 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   useEffect(() => {
     setTitleDraft(manuscript.title);
   }, [manuscript.title, activeManuscriptId]);
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem('journi.editor.info-panel.open', isInfoPanelOpen ? '1' : '0');
+    } catch {
+      // Ignore storage failures.
+    }
+  }, [isInfoPanelOpen]);
 
   // "Everything" view
   const isEverythingView = activeSection === '__everything__';
@@ -433,7 +471,13 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     setIsImporting(true);
     try {
       const ext = file.name.split('.').pop()?.toLowerCase();
-      let result: { title: string; sections: Partial<DocumentSection>[] };
+      let result: {
+        title: string;
+        sections: Partial<DocumentSection>[];
+        citations: CitationFormData[];
+        diagnostics: Array<{ level: 'info' | 'warning' | 'error'; code: string; message: string }>;
+        totalWordCount: number;
+      };
 
       if (ext === 'docx') {
         result = await importDocx(file);
@@ -449,6 +493,20 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         return;
       }
 
+      if (result.title?.trim()) {
+        updateTitle(result.title.trim());
+      }
+
+      if (result.citations.length > 0) {
+        addCitations(
+          result.citations.map((citation) => ({
+            ...citation,
+            title: normalizeImportedText(citation.title),
+            journal: citation.journal ? normalizeImportedText(citation.journal) : undefined,
+          })),
+        );
+      }
+
       // Merge imported sections into existing sections by matching titles (case-insensitive)
       const existingSections = [...manuscript.sections];
       let matchedCount = 0;
@@ -462,7 +520,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         );
 
         if (match) {
-          updateSectionContent(match.id, imported.content || '<p></p>');
+          updateSectionContent(match.id, normalizeImportedText(imported.content || '<p></p>'));
           matchedCount++;
         } else {
           const genericTitles = ['content', 'untitled section'];
@@ -471,7 +529,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
           if (isGeneric && result.sections.length === 1) {
             const activeS = getSectionByTitle(activeSection);
             if (activeS) {
-              updateSectionContent(activeS.id, imported.content || '<p></p>');
+              updateSectionContent(activeS.id, normalizeImportedText(imported.content || '<p></p>'));
               matchedCount++;
             } else {
               unmatchedImported.push(imported);
@@ -488,7 +546,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
           ...unmatchedImported.map((s, i) => ({
             id: `imported-${Date.now()}-${i}`,
             title: s.title || `Imported Section ${i + 1}`,
-            content: s.content || '<p></p>',
+            content: normalizeImportedText(s.content || '<p></p>'),
             status: 'draft' as const,
             order: existingSections.length + i,
             lastEditedBy: 'Imported',
@@ -502,7 +560,13 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
       const parts: string[] = [];
       if (matchedCount > 0) parts.push(`${matchedCount} section(s) updated`);
       if (addedCount > 0) parts.push(`${addedCount} new section(s) added`);
-      toast.success(`Imported: ${parts.join(', ')}`);
+      if (result.citations.length > 0) parts.push(`${result.citations.length} citation(s) imported`);
+      toast.success(`Imported: ${parts.join(', ') || 'content loaded'}`);
+
+      const warnings = result.diagnostics.filter((d) => d.level !== 'info');
+      if (warnings.length > 0) {
+        toast.warning(warnings[0].message);
+      }
 
       if (matchedCount > 0) {
         const firstMatchTitle = result.sections.find((s) =>
@@ -524,6 +588,45 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
       setIsImporting(false);
       if (fileInputRef.current) fileInputRef.current.value = '';
     }
+  };
+
+  const handleSeedOupPaper = () => {
+    const seedSections = OUP_AI_REVIEW_SEED.sections;
+    const existingSections = [...manuscript.sections].sort((a, b) => a.order - b.order);
+
+    if (existingSections.length < seedSections.length) {
+      toast.error('This manuscript template has fewer sections than required for the seeded paper.');
+      return;
+    }
+
+    const updated = existingSections.map((section, index) => {
+      if (index >= seedSections.length) {
+        return { ...section, order: index };
+      }
+      const seed = seedSections[index];
+      return {
+        ...section,
+        title: seed.title,
+        content: normalizeImportedText(seed.content),
+        status: 'draft' as const,
+        lastEditedBy: 'Seed Import',
+        lastEditedAt: new Date(),
+        order: index,
+      };
+    });
+
+    updateTitle(OUP_AI_REVIEW_SEED.manuscriptTitle);
+    replaceSections(updated);
+    addCitations(
+      OUP_AI_REVIEW_SEED.citations.map((citation) => ({
+        ...citation,
+        title: normalizeImportedText(citation.title),
+        journal: citation.journal ? normalizeImportedText(citation.journal) : undefined,
+      })),
+    );
+    setActiveSection('Title');
+    setActiveTab('editor');
+    toast.success(`Loaded seeded OUP paper (${OUP_AI_REVIEW_SEED.citations.length} references)`);
   };
 
   // Create new document
@@ -1004,6 +1107,24 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
           <div className="px-3 pt-3 pb-3 border-t border-border space-y-1.5">
             <div className="flex gap-1.5">
               <button
+                onClick={() => fileInputRef.current?.click()}
+                disabled={isImporting}
+                className="flex-1 flex items-center justify-center gap-1.5 px-2.5 py-1.5 text-[11px] font-medium text-foreground bg-accent hover:bg-accent/80 rounded-md transition-colors disabled:opacity-50"
+              >
+                {isImporting ? <Loader2 size={12} className="animate-spin" /> : <FileUp size={12} />}
+                Import
+              </button>
+              <button
+                onClick={handleSeedOupPaper}
+                className="flex-1 flex items-center justify-center gap-1.5 px-2.5 py-1.5 text-[11px] font-medium text-foreground bg-accent hover:bg-accent/80 rounded-md transition-colors"
+                title="Load seeded OUP AI paper"
+              >
+                <Upload size={12} />
+                OUP Seed
+              </button>
+            </div>
+            <div className="flex gap-1.5">
+              <button
                 onClick={handleExportDocx}
                 disabled={isExporting !== null}
                 className="flex-1 flex items-center justify-center gap-1.5 px-2.5 py-1.5 text-[11px] font-medium text-foreground bg-accent hover:bg-accent/80 rounded-md transition-colors disabled:opacity-50"
@@ -1038,7 +1159,15 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
             </>
           )}
 
-          <div className="flex flex-1 overflow-hidden">
+          <div className="relative flex flex-1 overflow-hidden">
+            <button
+              type="button"
+              onClick={() => setIsInfoPanelOpen((prev) => !prev)}
+              className="hidden xl:flex items-center justify-center absolute right-3 top-3 z-20 w-7 h-7 rounded-full border border-border bg-card/95 text-xs font-semibold text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+              title={isInfoPanelOpen ? 'Hide document info' : 'Show document info'}
+            >
+              (i)
+            </button>
             {/* Editor/References/Comments Container */}
             <div className="flex-1 overflow-auto">
               <div className="p-8 lg:p-12">
@@ -1347,7 +1476,13 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
             </div>
 
             {/* Right Sidebar */}
-            <aside className="hidden xl:flex flex-col w-72 bg-card border-l border-border overflow-auto">
+            <aside
+              className={`hidden xl:flex flex-col bg-card overflow-auto transition-[width,opacity,border] duration-200 ${
+                isInfoPanelOpen
+                  ? 'w-72 opacity-100 border-l border-border'
+                  : 'w-0 opacity-0 border-l-0 pointer-events-none'
+              }`}
+            >
               <div className="p-4 border-b border-border flex items-center gap-2">
                 <h3 className="text-sm font-bold text-foreground">Document Info</h3>
                 {manuscript.type === 'literature_review' && (

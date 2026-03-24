@@ -5,6 +5,7 @@ import type {
   PaginatedResult,
   PresenceState,
 } from '@shared/backend';
+import type { RawParsedDocument } from '@shared/document-parse';
 import { apiFetch } from './client';
 
 export interface SearchJournalParams {
@@ -119,6 +120,21 @@ export interface ApiComment {
   created_at: string;
   updated_at: string;
   profiles?: ApiCommentProfile | ApiCommentProfile[] | null;
+}
+
+export interface ApiCitation {
+  id: string;
+  manuscript_id: string;
+  citation_type: 'article' | 'book' | 'website' | 'conference';
+  authors: string[];
+  title: string;
+  publication_year: number | null;
+  doi: string | null;
+  url: string | null;
+  metadata: Record<string, unknown> | null;
+  created_by: string | null;
+  created_at: string;
+  updated_at: string;
 }
 
 export async function fetchOrganizations() {
@@ -281,6 +297,17 @@ export async function listManuscriptVersions(manuscriptId: string) {
   });
 }
 
+export async function parseManuscriptUpload(input: {
+  fileName: string;
+  mimeType?: string;
+  base64: string;
+}) {
+  return apiFetch<{ data: RawParsedDocument }>('/manuscripts/parse', {
+    method: 'POST',
+    body: JSON.stringify(input),
+  });
+}
+
 export async function fetchComments(manuscriptId: string) {
   const query = new URLSearchParams({ manuscriptId });
   return apiFetch<{ data: ApiComment[] }>(`/comments?${query.toString()}`, {
@@ -316,6 +343,35 @@ export async function patchComment(
 
 export async function deleteComment(commentId: string) {
   return apiFetch<{ ok: boolean }>(`/comments/${commentId}`, {
+    method: 'DELETE',
+  });
+}
+
+export async function fetchCitations(manuscriptId: string) {
+  const query = new URLSearchParams({ manuscriptId });
+  return apiFetch<{ data: ApiCitation[] }>(`/citations?${query.toString()}`, {
+    method: 'GET',
+  });
+}
+
+export async function createCitation(input: {
+  manuscriptId: string;
+  citationType: 'article' | 'book' | 'website' | 'conference';
+  authors: string[];
+  title: string;
+  publicationYear?: number;
+  doi?: string;
+  url?: string;
+  metadata?: Record<string, unknown>;
+}) {
+  return apiFetch<{ data: ApiCitation }>('/citations', {
+    method: 'POST',
+    body: JSON.stringify(input),
+  });
+}
+
+export async function deleteCitation(citationId: string) {
+  return apiFetch<{ ok: boolean }>(`/citations/${citationId}`, {
     method: 'DELETE',
   });
 }

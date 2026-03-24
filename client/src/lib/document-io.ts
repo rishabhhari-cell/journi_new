@@ -1,17 +1,63 @@
 /**
  * Document Import/Export Utilities
- * Supports DOCX and PDF import/export for the manuscript editor
+ * - Robust DOCX/PDF import with server-assisted parsing + worker normalization
+ * - Deterministic DOCX/PDF export from canonical manuscript HTML
  */
-import type { DocumentSection, Manuscript } from '@/types';
+import type { CitationFormData, DocumentSection, Manuscript } from '@/types';
+import type { ParseDiagnostic, ParsedManuscript, RawParsedDocument } from '@shared/document-parse';
+import { parseManuscriptUpload } from '@/lib/api/backend';
 
-// ============================================================================
-// Export: Combine all sections into a single HTML document
-// ============================================================================
+export interface ImportDocumentResult {
+  title: string;
+  sections: Partial<DocumentSection>[];
+  citations: CitationFormData[];
+  diagnostics: ParseDiagnostic[];
+  totalWordCount: number;
+}
+
+function sanitizeFilename(name: string): string {
+  return name.replace(/[^a-zA-Z0-9\s-_]/g, '').trim() || 'manuscript';
+}
+
+function downloadBlob(blob: Blob, filename: string): void {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function renderReferences(citations: Manuscript['citations']): string {
+  if (citations.length === 0) return '<p></p>';
+  const rows = citations.map((citation, index) => {
+    const authors = citation.authors?.join(', ') || 'Unknown';
+    const year = citation.year || '';
+    const journal = citation.journal ? ` <em>${citation.journal}</em>.` : '';
+    const volume = citation.volume ? ` ${citation.volume}` : '';
+    const issue = citation.issue ? `(${citation.issue})` : '';
+    const pages = citation.pages ? `, ${citation.pages}` : '';
+    const doi = citation.doi ? ` doi:${citation.doi}` : '';
+    const url = citation.url ? ` ${citation.url}` : '';
+    return `<li>${authors} (${year}). ${citation.title}.${journal}${volume}${issue}${pages}.${doi}${url}</li>`;
+  });
+  return `<ol>${rows.join('')}</ol>`;
+}
 
 function buildFullHtml(manuscript: Manuscript): string {
+  const hasReferencesSection = manuscript.sections.some(
+    (section) => section.title.trim().toLowerCase() === 'references',
+  );
   const sectionsHtml = manuscript.sections
-    .map((s) => `<h1>${s.title}</h1>\n${s.content || '<p></p>'}`)
+    .map((section) => `<h1>${section.title}</h1>\n${section.content || '<p></p>'}`)
     .join('\n');
+
+  const referencesBlock =
+    !hasReferencesSection && manuscript.citations.length > 0
+      ? `<h1>References</h1>\n${renderReferences(manuscript.citations)}`
+      : '';
 
   return `
     <html>
@@ -30,21 +76,178 @@ function buildFullHtml(manuscript: Manuscript): string {
           td, th { border: 1px solid #ccc; padding: 6pt 8pt; text-align: left; }
           th { background-color: #f5f5f5; font-weight: bold; }
           img { max-width: 100%; }
-          code { font-family: 'Courier New', monospace; background: #f0f0f0; padding: 2px 4px; border-radius: 3px; }
-          pre { background: #f0f0f0; padding: 12pt; border-radius: 6px; overflow-x: auto; }
         </style>
       </head>
       <body>
         <h1 style="font-size: 24pt; text-align: center; margin-bottom: 24pt;">${manuscript.title}</h1>
         ${sectionsHtml}
+        ${referencesBlock}
       </body>
     </html>
   `.trim();
 }
 
-// ============================================================================
-// Export to DOCX
-// ============================================================================
+async function parseWithWorker(raw: RawParsedDocument): Promise<ParsedManuscript> {
+  return new Promise((resolve, reject) => {
+    const worker = new Worker(new URL('../workers/document-parse.worker.ts', import.meta.url), {
+      type: 'module',
+    });
+
+    worker.onmessage = (event: MessageEvent<{ ok: boolean; data?: ParsedManuscript; error?: string }>) => {
+      if (event.data.ok && event.data.data) {
+        resolve(event.data.data);
+      } else {
+        reject(new Error(event.data.error || 'Failed to parse document in worker'));
+      }
+      worker.terminate();
+    };
+
+    worker.onerror = (error) => {
+      reject(error);
+      worker.terminate();
+    };
+
+    worker.postMessage(raw);
+  });
+}
+
+async function parseViaServer(file: File): Promise<RawParsedDocument | null> {
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  const chunkSize = 0x8000;
+  let binary = '';
+  for (let i = 0; i < bytes.length; i += chunkSize) {
+    const chunk = bytes.subarray(i, i + chunkSize);
+    binary += String.fromCharCode(...chunk);
+  }
+  const base64 = btoa(binary);
+
+  try {
+    const response = await parseManuscriptUpload({
+      fileName: file.name,
+      mimeType: file.type || undefined,
+      base64,
+    });
+    return response.data;
+  } catch {
+    return null;
+  }
+}
+
+function extractReferencesFromOupHtml(html: string): string[] {
+  return Array.from(
+    html.matchAll(/<div id="ref-auto-ref(\d+)"[\s\S]*?<p class="mixed-citation-compatibility">([\s\S]*?)<\/p>/g),
+  )
+    .map((match) => ({
+      index: Number(match[1]),
+      text: match[2]
+        .replace(/<sup[^>]*>[\s\S]*?<\/sup>/gi, '')
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/&nbsp;/gi, ' ')
+        .replace(/&amp;/gi, '&')
+        .replace(/\s+/g, ' ')
+        .replace(/\s+([,.;:!?])/g, '$1')
+        .trim(),
+    }))
+    .sort((a, b) => a.index - b.index)
+    .map((entry) => entry.text);
+}
+
+async function extractPdfTextInBrowser(arrayBuffer: ArrayBuffer): Promise<string> {
+  const pdfjs = await import('pdfjs-dist/legacy/build/pdf.mjs');
+  const workerSrc = new URL('pdfjs-dist/legacy/build/pdf.worker.mjs', import.meta.url).toString();
+  (pdfjs as any).GlobalWorkerOptions.workerSrc = workerSrc;
+
+  const loadingTask = (pdfjs as any).getDocument({
+    data: new Uint8Array(arrayBuffer),
+    useWorkerFetch: true,
+    disableFontFace: false,
+  });
+  const pdf = await loadingTask.promise;
+  const pages: string[] = [];
+
+  for (let i = 1; i <= pdf.numPages; i += 1) {
+    const page = await pdf.getPage(i);
+    const content = await page.getTextContent();
+    const text = (content.items as Array<{ str?: string }>).map((item) => item.str || '').join(' ');
+    pages.push(text);
+  }
+
+  return pages.join('\n\n').replace(/\s+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim();
+}
+
+async function parseLocally(file: File): Promise<RawParsedDocument> {
+  const extension = file.name.split('.').pop()?.toLowerCase();
+
+  if (extension === 'docx') {
+    const mammoth = await import('mammoth');
+    const result = await mammoth.convertToHtml({ arrayBuffer: await file.arrayBuffer() });
+    return {
+      fileTitle: file.name.replace(/\.docx$/i, ''),
+      format: 'docx',
+      html: result.value,
+      references: extractReferencesFromOupHtml(result.value),
+      diagnostics: (result.messages || []).map((item) => ({
+        level: 'warning' as const,
+        code: 'DOCX_PARSE_WARNING',
+        message: item.message,
+      })),
+    };
+  }
+
+  if (extension === 'pdf') {
+    const text = await extractPdfTextInBrowser(await file.arrayBuffer());
+    return {
+      fileTitle: file.name.replace(/\.pdf$/i, ''),
+      format: 'pdf',
+      text,
+      diagnostics: text
+        ? []
+        : [
+            {
+              level: 'warning',
+              code: 'PDF_EMPTY_TEXT',
+              message: 'No extractable text was detected in this PDF.',
+            },
+          ],
+    };
+  }
+
+  throw new Error('Unsupported file format');
+}
+
+async function importFile(file: File): Promise<ImportDocumentResult> {
+  const raw = (await parseViaServer(file)) ?? (await parseLocally(file));
+  const parsed = await parseWithWorker(raw);
+
+  return {
+    title: parsed.fileTitle,
+    sections: parsed.sections.map((section) => ({
+      title: section.title,
+      content: section.content,
+    })),
+    citations: parsed.citations.map((citation) => ({
+      authors: citation.authors,
+      title: citation.title,
+      year: citation.year,
+      journal: citation.journal,
+      doi: citation.doi,
+      url: citation.url,
+      type: citation.type,
+      freePdfUrl: undefined,
+      oaStatus: undefined,
+    })),
+    diagnostics: parsed.diagnostics,
+    totalWordCount: parsed.totalWordCount,
+  };
+}
+
+export async function importDocx(file: File): Promise<ImportDocumentResult> {
+  return importFile(file);
+}
+
+export async function importPdf(file: File): Promise<ImportDocumentResult> {
+  return importFile(file);
+}
 
 export async function exportToDocx(manuscript: Manuscript): Promise<void> {
   const { default: HTMLtoDOCX } = await import('html-to-docx');
@@ -59,21 +262,16 @@ export async function exportToDocx(manuscript: Manuscript): Promise<void> {
   downloadBlob(blob as Blob, `${sanitizeFilename(manuscript.title)}.docx`);
 }
 
-// ============================================================================
-// Export to PDF
-// ============================================================================
-
 export async function exportToPdf(manuscript: Manuscript): Promise<void> {
   const { default: jsPDF } = await import('jspdf');
   const { default: html2canvas } = await import('html2canvas');
 
-  // Create an off-screen container with the full document
   const container = document.createElement('div');
   container.innerHTML = buildFullHtml(manuscript);
-  // Extract just the body content and apply styles inline
   const bodyContent = container.querySelector('body');
+
   const wrapper = document.createElement('div');
-  wrapper.style.width = '794px'; // A4 width at 96 DPI
+  wrapper.style.width = '794px';
   wrapper.style.padding = '48px';
   wrapper.style.fontFamily = "'Times New Roman', serif";
   wrapper.style.fontSize = '12pt';
@@ -82,31 +280,10 @@ export async function exportToPdf(manuscript: Manuscript): Promise<void> {
   wrapper.style.background = '#fff';
   wrapper.innerHTML = bodyContent?.innerHTML || container.innerHTML;
 
-  // Style tables, headings, etc.
-  wrapper.querySelectorAll('h1').forEach((el) => {
-    (el as HTMLElement).style.fontSize = '18pt';
-    (el as HTMLElement).style.fontWeight = 'bold';
-    (el as HTMLElement).style.marginTop = '24pt';
-    (el as HTMLElement).style.marginBottom = '8pt';
-  });
-  wrapper.querySelectorAll('table').forEach((el) => {
-    (el as HTMLElement).style.borderCollapse = 'collapse';
-    (el as HTMLElement).style.width = '100%';
-  });
-  wrapper.querySelectorAll('td, th').forEach((el) => {
-    (el as HTMLElement).style.border = '1px solid #ccc';
-    (el as HTMLElement).style.padding = '6px 8px';
-  });
-
   document.body.appendChild(wrapper);
 
   try {
-    const canvas = await html2canvas(wrapper, {
-      scale: 2,
-      useCORS: true,
-      logging: false,
-    });
-
+    const canvas = await html2canvas(wrapper, { scale: 2, useCORS: true, logging: false });
     const imgData = canvas.toDataURL('image/jpeg', 0.95);
     const pdf = new jsPDF('p', 'mm', 'a4');
     const pdfWidth = pdf.internal.pageSize.getWidth();
@@ -131,227 +308,4 @@ export async function exportToPdf(manuscript: Manuscript): Promise<void> {
   } finally {
     document.body.removeChild(wrapper);
   }
-}
-
-// ============================================================================
-// Import DOCX → HTML sections
-// ============================================================================
-
-export async function importDocx(file: File): Promise<{ title: string; sections: Partial<DocumentSection>[] }> {
-  const mammoth = await import('mammoth');
-  const arrayBuffer = await file.arrayBuffer();
-  const result = await mammoth.convertToHtml({ arrayBuffer });
-  const html = result.value;
-
-  return parseHtmlToSections(html, file.name.replace(/\.docx$/i, ''));
-}
-
-// ============================================================================
-// Import PDF → text sections
-// ============================================================================
-
-export async function importPdf(file: File): Promise<{ title: string; sections: Partial<DocumentSection>[] }> {
-  // Use PDF.js via a simple text extraction approach
-  // Since pdfjs-dist is heavy, we'll use a lighter approach: read as text via the browser's FileReader
-  // and parse structure, or use a canvas-free approach
-
-  // For a cleaner solution, we dynamically load pdf.js from CDN
-  const arrayBuffer = await file.arrayBuffer();
-
-  // Try to use the pdfjsLib if available, otherwise fall back to basic text extraction
-  const text = await extractPdfText(arrayBuffer);
-  const title = file.name.replace(/\.pdf$/i, '');
-
-  // Split by what looks like section headings (all-caps lines or lines followed by double newlines)
-  const sections = parseTextToSections(text, title);
-  return { title, sections };
-}
-
-async function extractPdfText(arrayBuffer: ArrayBuffer): Promise<string> {
-  // Dynamically load pdf.js from CDN
-  if (!(window as any).pdfjsLib) {
-    await loadScript('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js');
-    (window as any).pdfjsLib.GlobalWorkerOptions.workerSrc =
-      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-  }
-
-  const pdfjsLib = (window as any).pdfjsLib;
-  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-  const textParts: string[] = [];
-
-  for (let i = 1; i <= pdf.numPages; i++) {
-    const page = await pdf.getPage(i);
-    const content = await page.getTextContent();
-    const pageText = content.items.map((item: any) => item.str).join(' ');
-    textParts.push(pageText);
-  }
-
-  return textParts.join('\n\n');
-}
-
-function loadScript(src: string): Promise<void> {
-  return new Promise((resolve, reject) => {
-    const existing = document.querySelector(`script[src="${src}"]`);
-    if (existing) { resolve(); return; }
-    const script = document.createElement('script');
-    script.src = src;
-    script.onload = () => resolve();
-    script.onerror = reject;
-    document.head.appendChild(script);
-  });
-}
-
-// ============================================================================
-// HTML → Sections parser
-// ============================================================================
-
-function parseHtmlToSections(
-  html: string,
-  fallbackTitle: string
-): { title: string; sections: Partial<DocumentSection>[] } {
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(`<div>${html}</div>`, 'text/html');
-  const container = doc.body.firstElementChild!;
-
-  const sections: Partial<DocumentSection>[] = [];
-  let currentTitle = '';
-  let currentContent = '';
-  let docTitle = fallbackTitle;
-
-  // Walk through child nodes
-  for (const node of Array.from(container.children)) {
-    const tag = node.tagName.toLowerCase();
-
-    if (tag === 'h1' || tag === 'h2') {
-      // Save previous section
-      if (currentTitle) {
-        sections.push({ title: currentTitle, content: currentContent.trim() });
-      } else if (currentContent.trim()) {
-        // Content before first heading becomes the first section
-        sections.push({ title: 'Introduction', content: currentContent.trim() });
-      }
-
-      // If this is the very first h1 and no sections yet, treat it as the document title
-      if (tag === 'h1' && sections.length === 0 && !currentTitle) {
-        docTitle = node.textContent?.trim() || fallbackTitle;
-        currentTitle = '';
-        currentContent = '';
-        continue;
-      }
-
-      currentTitle = node.textContent?.trim() || 'Untitled Section';
-      currentContent = '';
-    } else {
-      currentContent += node.outerHTML + '\n';
-    }
-  }
-
-  // Push last section
-  if (currentTitle) {
-    sections.push({ title: currentTitle, content: currentContent.trim() });
-  } else if (currentContent.trim()) {
-    sections.push({ title: 'Content', content: currentContent.trim() });
-  }
-
-  // If no sections were found, put everything in one section
-  if (sections.length === 0) {
-    sections.push({ title: 'Content', content: html });
-  }
-
-  return { title: docTitle, sections };
-}
-
-// ============================================================================
-// Plain text → Sections parser (for PDF import)
-// ============================================================================
-
-function parseTextToSections(
-  text: string,
-  fallbackTitle: string
-): Partial<DocumentSection>[] {
-  const lines = text.split('\n');
-  const sections: Partial<DocumentSection>[] = [];
-  let currentTitle = '';
-  let currentLines: string[] = [];
-
-  // Common academic section headings
-  const sectionHeadings = new Set([
-    'abstract', 'introduction', 'background', 'methods', 'methodology',
-    'materials and methods', 'results', 'discussion', 'conclusion', 'conclusions',
-    'references', 'bibliography', 'acknowledgements', 'acknowledgments',
-    'appendix', 'supplementary', 'literature review', 'related work',
-    'future work', 'limitations',
-  ]);
-
-  for (const line of lines) {
-    const trimmed = line.trim();
-    if (!trimmed) {
-      currentLines.push('');
-      continue;
-    }
-
-    // Detect headings: all-caps short lines, or known section names
-    const isHeading =
-      (trimmed.length < 60 && trimmed === trimmed.toUpperCase() && /[A-Z]/.test(trimmed)) ||
-      sectionHeadings.has(trimmed.toLowerCase());
-
-    if (isHeading) {
-      if (currentTitle || currentLines.some((l) => l.trim())) {
-        const content = currentLines
-          .join('\n')
-          .split('\n\n')
-          .filter((p) => p.trim())
-          .map((p) => `<p>${p.trim()}</p>`)
-          .join('\n');
-        sections.push({
-          title: currentTitle || 'Introduction',
-          content,
-        });
-      }
-      currentTitle =
-        trimmed.charAt(0).toUpperCase() + trimmed.slice(1).toLowerCase();
-      currentLines = [];
-    } else {
-      currentLines.push(trimmed);
-    }
-  }
-
-  // Push last section
-  if (currentTitle || currentLines.some((l) => l.trim())) {
-    const content = currentLines
-      .join('\n')
-      .split('\n\n')
-      .filter((p) => p.trim())
-      .map((p) => `<p>${p.trim()}</p>`)
-      .join('\n');
-    sections.push({
-      title: currentTitle || 'Content',
-      content,
-    });
-  }
-
-  if (sections.length === 0) {
-    sections.push({ title: 'Content', content: `<p>${text}</p>` });
-  }
-
-  return sections;
-}
-
-// ============================================================================
-// Helpers
-// ============================================================================
-
-function sanitizeFilename(name: string): string {
-  return name.replace(/[^a-zA-Z0-9\s-_]/g, '').trim() || 'manuscript';
-}
-
-function downloadBlob(blob: Blob, filename: string): void {
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = filename;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
 }

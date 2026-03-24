@@ -8,6 +8,7 @@ import { journalsRouter } from "./routes/journals";
 import { projectsRouter } from "./routes/projects";
 import { manuscriptsRouter } from "./routes/manuscripts";
 import { commentsRouter } from "./routes/comments";
+import { citationsRouter } from "./routes/citations";
 
 export function createApp() {
   const app = express();
@@ -18,7 +19,7 @@ export function createApp() {
       credentials: true,
     }),
   );
-  app.use(express.json({ limit: "5mb" }));
+  app.use(express.json({ limit: "25mb" }));
   app.use(express.urlencoded({ extended: true }));
 
   app.get("/api/health", (_req, res) => {
@@ -38,6 +39,7 @@ export function createApp() {
   app.use("/api/projects", projectsRouter);
   app.use("/api/manuscripts", manuscriptsRouter);
   app.use("/api/comments", commentsRouter);
+  app.use("/api/citations", citationsRouter);
 
   app.use("/api/*", notFoundHandler);
   app.use(errorHandler);

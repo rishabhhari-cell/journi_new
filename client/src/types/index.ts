@@ -352,8 +352,13 @@ export interface CitationFormData {
   doi?: string;
   url?: string;
   type: CitationType;
+  volume?: string;
+  issue?: string;
+  pages?: string;
+  publisher?: string;
   freePdfUrl?: string;
   oaStatus?: 'gold' | 'hybrid' | 'bronze' | 'green' | 'closed';
+  metadata?: Record<string, unknown>;
 }
 
 export interface SubmissionFormData {

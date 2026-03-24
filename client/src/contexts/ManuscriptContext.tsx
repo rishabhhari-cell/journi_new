@@ -20,19 +20,23 @@ import {
   deleteManuscript as deleteManuscriptApi,
   patchManuscriptSection,
   fetchComments,
+  fetchCitations,
   createComment as createCommentApi,
   patchComment as patchCommentApi,
   deleteComment as deleteCommentApi,
+  createCitation as createCitationApi,
+  deleteCitation as deleteCitationApi,
   createCollaborationSocket,
   type ApiManuscript,
   type ApiComment as BackendComment,
+  type ApiCitation as BackendCitation,
 } from '@/lib/api/backend';
 import { getStoredSession } from '@/lib/api/client';
 import * as Y from 'yjs';
 
 const MANUSCRIPT_SECTIONS: Record<ManuscriptType, string[]> = {
   full_paper: [
-    'Title Page',
+    'Title',
     'Abstract',
     'Introduction',
     'Materials and Methods',
@@ -43,11 +47,12 @@ const MANUSCRIPT_SECTIONS: Record<ManuscriptType, string[]> = {
     'References',
     'Figures and Tables',
   ],
-  abstract: ['Abstract'],
+  abstract: ['Title', 'Abstract'],
   cover_letter: ['Cover Letter'],
   response_letter: ['Response to Reviewers'],
   supplementary: ['Supplementary Materials'],
   literature_review: [
+    'Title',
     'Abstract',
     'Introduction',
     'Search Strategy',
@@ -124,7 +129,10 @@ function createEmptyManuscript(projectId: string, title: string, type: Manuscrip
     sections: MANUSCRIPT_SECTIONS[type].map((sectionTitle, index) => ({
       id: nanoid(),
       title: sectionTitle,
-      content: templates[sectionTitle] || '<p></p>',
+      content:
+        sectionTitle === 'Title'
+          ? `<p>${title}</p>`
+          : (templates[sectionTitle] || '<p></p>'),
       status: 'pending',
       order: index,
     })),
@@ -155,6 +163,33 @@ function mapBackendComment(comment: BackendComment): Comment {
   };
 }
 
+function mapBackendCitation(citation: BackendCitation): Citation {
+  const metadata = (citation.metadata ?? {}) as Record<string, unknown>;
+  return {
+    id: citation.id,
+    authors: citation.authors ?? [],
+    title: citation.title,
+    year: citation.publication_year ?? new Date().getFullYear(),
+    journal: typeof metadata.journal === 'string' ? metadata.journal : undefined,
+    doi: citation.doi ?? undefined,
+    url: citation.url ?? undefined,
+    type: citation.citation_type,
+    volume: typeof metadata.volume === 'string' ? metadata.volume : undefined,
+    issue: typeof metadata.issue === 'string' ? metadata.issue : undefined,
+    pages: typeof metadata.pages === 'string' ? metadata.pages : undefined,
+    publisher: typeof metadata.publisher === 'string' ? metadata.publisher : undefined,
+    freePdfUrl: typeof metadata.freePdfUrl === 'string' ? metadata.freePdfUrl : undefined,
+    oaStatus:
+      metadata.oaStatus === 'gold' ||
+      metadata.oaStatus === 'hybrid' ||
+      metadata.oaStatus === 'bronze' ||
+      metadata.oaStatus === 'green' ||
+      metadata.oaStatus === 'closed'
+        ? metadata.oaStatus
+        : undefined,
+  };
+}
+
 function mapBackendManuscript(apiManuscript: ApiManuscript, projectId: string): Manuscript {
   const type = isManuscriptType(apiManuscript.type) ? apiManuscript.type : 'full_paper';
   const sections = (apiManuscript.manuscript_sections ?? [])
@@ -170,7 +205,7 @@ function mapBackendManuscript(apiManuscript: ApiManuscript, projectId: string): 
       lastEditedAt: section.last_edited_at ? new Date(section.last_edited_at) : undefined,
     }));
 
-  return {
+  const mapped: Manuscript = {
     id: apiManuscript.id,
     projectId: apiManuscript.project_id || projectId,
     title: apiManuscript.title,
@@ -181,6 +216,42 @@ function mapBackendManuscript(apiManuscript: ApiManuscript, projectId: string): 
     createdAt: new Date(apiManuscript.created_at),
     updatedAt: new Date(apiManuscript.updated_at),
   };
+
+  return ensureTitleSection(mapped);
+}
+
+function ensureTitleSection(doc: Manuscript): Manuscript {
+  const hasAbstract = doc.sections.some((section) => section.title.trim().toLowerCase() === 'abstract');
+  const hasTitle = doc.sections.some((section) => section.title.trim().toLowerCase() === 'title');
+  if (!hasAbstract || hasTitle) return doc;
+
+  const titlePageIndex = doc.sections.findIndex((section) => section.title.trim().toLowerCase() === 'title page');
+  if (titlePageIndex >= 0) {
+    const sections = doc.sections.map((section, idx) =>
+      idx === titlePageIndex
+        ? {
+            ...section,
+            title: 'Title',
+            content: section.content && section.content !== '<p></p>' ? section.content : `<p>${doc.title}</p>`,
+          }
+        : section,
+    );
+    return { ...doc, sections };
+  }
+
+  const abstractIndex = doc.sections.findIndex((section) => section.title.trim().toLowerCase() === 'abstract');
+  if (abstractIndex <= 0) return doc;
+
+  const sections = doc.sections.map((section, idx) =>
+    idx === abstractIndex - 1
+      ? {
+          ...section,
+          title: 'Title',
+          content: section.content && section.content !== '<p></p>' ? section.content : `<p>${doc.title}</p>`,
+        }
+      : section,
+  );
+  return { ...doc, sections };
 }
 
 function uint8ToBase64(bytes: Uint8Array): string {
@@ -218,6 +289,7 @@ interface ManuscriptContextType {
   getSectionByTitle: (title: string) => DocumentSection | undefined;
   replaceSections: (sections: DocumentSection[]) => void;
   addCitation: (citation: CitationFormData) => void;
+  addCitations: (citations: CitationFormData[]) => void;
   removeCitation: (citationId: string) => void;
   addComment: (comment: CommentFormData) => void;
   removeComment: (commentId: string) => void;
@@ -241,13 +313,13 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
 
   const [manuscripts, setManuscripts] = useState<Manuscript[]>(() => {
     const stored = loadFromStorage<Manuscript[] | null>('manuscripts', null);
-    if (stored && stored.length > 0) return stored;
+    if (stored && stored.length > 0) return stored.map(ensureTitleSection);
     const oldManuscript = loadFromStorage<Manuscript | null>(STORAGE_KEYS.MANUSCRIPT, null);
     if (oldManuscript) {
-      return [{ ...oldManuscript, type: oldManuscript.type || 'full_paper' }];
+      return [ensureTitleSection({ ...oldManuscript, type: oldManuscript.type || 'full_paper' })];
     }
     const sample = generateSampleManuscript('mvp-project', []);
-    return [{ ...sample, type: 'full_paper' as ManuscriptType }];
+    return [ensureTitleSection({ ...sample, type: 'full_paper' as ManuscriptType })];
   });
 
   const [activeManuscriptId, setActiveManuscriptId] = useState<string>(() => manuscripts[0]?.id || '');
@@ -378,6 +450,32 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
         );
       } catch {
         // Keep local comments if backend fetch fails.
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [backendMode, manuscript?.id]);
+
+  useEffect(() => {
+    let cancelled = false;
+    if (!backendMode || !manuscript?.id) return;
+
+    (async () => {
+      try {
+        const response = await fetchCitations(manuscript.id);
+        if (cancelled) return;
+        const citations = response.data.map(mapBackendCitation);
+        setManuscripts((prev) =>
+          prev.map((doc) =>
+            doc.id === manuscript.id
+              ? { ...doc, citations }
+              : doc,
+          ),
+        );
+      } catch {
+        // Keep local citations if backend fetch fails.
       }
     })();
 
@@ -631,6 +729,55 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
       citations: [...doc.citations, next],
       updatedAt: new Date(),
     }));
+
+    if (backendMode && manuscript?.id) {
+      void createCitationApi({
+        manuscriptId: manuscript.id,
+        citationType: citation.type,
+        authors: citation.authors,
+        title: citation.title,
+        publicationYear: citation.year,
+        doi: citation.doi,
+        url: citation.url,
+        metadata: {
+          ...(citation.metadata ?? {}),
+          journal: citation.journal,
+          volume: citation.volume,
+          issue: citation.issue,
+          pages: citation.pages,
+          publisher: citation.publisher,
+          freePdfUrl: citation.freePdfUrl,
+          oaStatus: citation.oaStatus,
+        },
+      })
+        .then((response) => {
+          const mapped = mapBackendCitation(response.data);
+          setManuscripts((prev) =>
+            prev.map((doc) =>
+              doc.id === manuscript.id
+                ? {
+                    ...doc,
+                    citations: doc.citations.map((item) => (item.id === next.id ? mapped : item)),
+                    updatedAt: new Date(),
+                  }
+                : doc,
+            ),
+          );
+        })
+        .catch(() => {
+          // Keep optimistic citation.
+        });
+    }
+  };
+
+  const addCitations = (citations: CitationFormData[]) => {
+    const existing = new Set(manuscript.citations.map((item) => (item.doi || item.title).trim().toLowerCase()));
+    for (const citation of citations) {
+      const key = (citation.doi || citation.title).trim().toLowerCase();
+      if (!key || existing.has(key)) continue;
+      existing.add(key);
+      addCitation(citation);
+    }
   };
 
   const removeCitation = (citationId: string) => {
@@ -639,6 +786,12 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
       citations: doc.citations.filter((citation) => citation.id !== citationId),
       updatedAt: new Date(),
     }));
+
+    if (backendMode) {
+      void deleteCitationApi(citationId).catch(() => {
+        // Keep optimistic deletion.
+      });
+    }
   };
 
   const addComment = (commentData: CommentFormData) => {
@@ -735,6 +888,7 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
     getSectionByTitle,
     replaceSections,
     addCitation,
+    addCitations,
     removeCitation,
     addComment,
     removeComment,
