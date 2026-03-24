@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect, ReactNode, useMemo, useCallback } from 'react';
 import { nanoid } from 'nanoid';
 import type { Project, Task, Collaborator, Activity, TaskFormData, CollaboratorFormData } from '@/types';
-import { generateSampleProject, generateActivities } from '@/data/generators';
+import { generateSampleProject, generateSampleProject2, generateActivities } from '@/data/generators';
 import { useAuth } from '@/contexts/AuthContext';
 import {
   fetchProjects,
@@ -133,8 +133,9 @@ function initProjects(): { projects: Project[]; activeId: string } {
   } catch {
     // ignore corrupted storage
   }
-  const sample = createFallbackProject();
-  return { projects: [sample], activeId: sample.id };
+  const p1 = generateSampleProject();
+  const p2 = generateSampleProject2();
+  return { projects: [p1, p2], activeId: p1.id };
 }
 
 export function ProjectProvider({ children }: { children: ReactNode }) {

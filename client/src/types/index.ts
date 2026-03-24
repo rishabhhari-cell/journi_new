@@ -341,6 +341,7 @@ export interface CollaboratorFormData {
   name: string;
   email: string;
   role: CollaboratorRole;
+  orcidId?: string;
 }
 
 export interface CitationFormData {

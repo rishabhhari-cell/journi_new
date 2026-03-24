@@ -114,6 +114,33 @@ export function generateSampleProject(): Project {
   };
 }
 
+export function generateSampleProject2(): Project {
+  const collaborators = [
+    generateCollaborator('lead_author'),
+    generateCollaborator('co_author'),
+    generateCollaborator('supervisor'),
+    generateCollaborator('contributor'),
+  ];
+
+  const collaboratorIds = collaborators.map((c) => c.id);
+  const tasks = Array.from({ length: randomNumber(4, 8) }, () => generateTask(collaboratorIds));
+
+  const createdAt = new Date();
+  createdAt.setDate(createdAt.getDate() - randomNumber(10, 60));
+
+  return {
+    id: nanoid(),
+    title: 'CRISPR Gene Therapy Study',
+    description: 'Investigating CRISPR-Cas9 delivery mechanisms for targeted gene therapy',
+    status: 'active',
+    createdAt,
+    updatedAt: new Date(),
+    tasks,
+    collaborators,
+    dueDate: new Date(Date.now() + 45 * 24 * 60 * 60 * 1000), // 45 days from now
+  };
+}
+
 // ============================================================================
 // Manuscript Data Generation
 // ============================================================================
