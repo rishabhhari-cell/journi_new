@@ -40,13 +40,13 @@ export default function About() {
                 {
                   name: "Dr Yuri Aung",
                   role: "Doctor - Clinical & Regulatory Strategy Lead in MedTech",
-                  bio: "Yuri brings hands-on experience leading clinical research, regulatory strategy, and product development across global health and healthcare startups. He bridges the gap between clinical evidence and real-world product impact.",
+                  bio: "She brings hands-on experience leading clinical research and regulatory strategy across global healthcare startups.",
                   photo: "/team/yuri.jpg",
                 },
                 {
                   name: "Dr Rishabh Hariharan",
                   role: "Doctor - Researcher - Startup Operator",
-                  bio: "Rishabh combines a background in clinical research with early-stage venture building. He understands both the rigour required to produce strong research and the operational complexity of turning that research into something that ships.",
+                  bio: "He combines a strong clinical research background with early-stage venture building to ship products.",
                   photo: "/team/rish.jpg",
                 },
               ].map((person, i) => (
