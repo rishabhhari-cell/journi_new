@@ -121,7 +121,7 @@ export default function Dashboard() {
   };
 
   const tabHeadings: Record<DashboardTab, { title: string; subtitle: string }> = {
-    overview:     { title: 'Overview',           subtitle: `${project.title} — project snapshot` },
+    overview:     { title: 'Overview',           subtitle: 'Project snapshot' },
     tasks:        { title: 'Tasks',              subtitle: 'Manage tasks and milestones' },
     team:         { title: 'Team',               subtitle: 'Manage collaborators and roles' },
     calendar:     { title: 'Calendar',           subtitle: 'Tasks and deadlines by date' },

@@ -50,9 +50,6 @@ export default function Discovery() {
             <p className="text-sm text-muted-foreground">
               Search, compare, and shortlist journals with structured submission metadata.
             </p>
-            <p className="text-xs text-muted-foreground">
-              Source: <span className="font-medium text-foreground uppercase">{dataSource}</span>
-            </p>
           </div>
 
           <SearchBar onSearch={setSearchQuery} />
