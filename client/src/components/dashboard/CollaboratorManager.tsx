@@ -33,7 +33,6 @@ export default function CollaboratorManager({
     name: '',
     email: '',
     role: 'contributor',
-    avatar: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -56,7 +55,6 @@ export default function CollaboratorManager({
       name: '',
       email: '',
       role: 'contributor',
-      avatar: '',
     });
     setShowAddForm(false);
   };

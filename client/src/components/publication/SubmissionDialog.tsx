@@ -52,11 +52,11 @@ export default function SubmissionDialog({ isOpen, onClose, onSubmit }: Submissi
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.title.trim()) {
+    if (!(formData.title ?? '').trim()) {
       alert('Please enter a title');
       return;
     }
-    if (!formData.journal.trim()) {
+    if (!(formData.journal ?? '').trim()) {
       alert('Please select or enter a journal name');
       return;
     }
@@ -103,7 +103,7 @@ export default function SubmissionDialog({ isOpen, onClose, onSubmit }: Submissi
               </label>
               <input
                 type="text"
-                value={formData.title}
+                value={formData.title ?? ''}
                 onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                 placeholder="e.g., Novel IVF Protocol Efficacy Study"
                 className="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-journi-green"
@@ -123,7 +123,7 @@ export default function SubmissionDialog({ isOpen, onClose, onSubmit }: Submissi
                 <input
                   type="text"
                   list="journals"
-                  value={formData.journal}
+                  value={formData.journal ?? ''}
                   onChange={(e) => setFormData({ ...formData, journal: e.target.value })}
                   placeholder="Select or type journal name"
                   className="w-full pl-10 pr-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-journi-green"
@@ -168,7 +168,7 @@ export default function SubmissionDialog({ isOpen, onClose, onSubmit }: Submissi
                 />
                 <input
                   type="date"
-                  value={formData.submittedDate.toISOString().split('T')[0]}
+                  value={formData.submittedDate?.toISOString().split('T')[0] ?? ''}
                   onChange={(e) =>
                     setFormData({ ...formData, submittedDate: new Date(e.target.value) })
                   }

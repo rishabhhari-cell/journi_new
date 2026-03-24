@@ -17,23 +17,25 @@ import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
 import Underline from '@tiptap/extension-underline';
 import Color from '@tiptap/extension-color';
-import TextStyle from '@tiptap/extension-text-style';
+import { TextStyle } from '@tiptap/extension-text-style';
 import Heading from '@tiptap/extension-heading';
 import BulletList from '@tiptap/extension-bullet-list';
 import OrderedList from '@tiptap/extension-ordered-list';
 import Image from '@tiptap/extension-image';
-import Table from '@tiptap/extension-table';
+import { Table } from '@tiptap/extension-table';
 import TableRow from '@tiptap/extension-table-row';
 import TableCell from '@tiptap/extension-table-cell';
 import TableHeader from '@tiptap/extension-table-header';
 import { EditorContent } from '@tiptap/react';
 import Navbar from '@/components/Navbar';
+import ProjectSwitcher from '@/components/ProjectSwitcher';
+import NewManuscriptWizard from '@/components/collaboration/NewManuscriptWizard';
+import type { WizardResult } from '@/components/collaboration/NewManuscriptWizard';
 import EditorToolbar from '@/components/collaboration/EditorToolbar';
 import CitationDialog from '@/components/collaboration/CitationDialog';
 import ReferencesSection from '@/components/collaboration/ReferencesSection';
 import CommentThread from '@/components/collaboration/CommentThread';
 import { useManuscript } from '@/contexts/ManuscriptContext';
-import { useProject } from '@/contexts/ProjectContext';
 import type { CitationFormData, CommentFormData, DocumentSection, ManuscriptType } from '@/types';
 import { format } from 'date-fns';
 import { exportToDocx, exportToPdf, importDocx, importPdf } from '@/lib/document-io';
@@ -91,9 +93,9 @@ export default function Collaboration() {
     replaceSections,
   } = useManuscript();
 
-  const { project } = useProject();
+  const project = { collaborators: [] as { id: string; name: string; initials: string; online: boolean; role?: string }[] };
 
-  const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
+const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<ViewTab>('editor');
   const [isEditingTitle, setIsEditingTitle] = useState(false);
   const [titleDraft, setTitleDraft] = useState(manuscript.title);
@@ -115,6 +117,9 @@ export default function Collaboration() {
   const [showNewDocForm, setShowNewDocForm] = useState(false);
   const [newDocTitle, setNewDocTitle] = useState('');
   const [newDocType, setNewDocType] = useState<ManuscriptType>('full_paper');
+
+  // New manuscript wizard
+  const [showWizard, setShowWizard] = useState(false);
 
   // Literature review — search strategy tracker
   const [litSearchDbs, setLitSearchDbs] = useState<string[]>(['PubMed/MEDLINE']);
@@ -535,6 +540,30 @@ export default function Collaboration() {
     toast.success('New document created');
   };
 
+  // Handle wizard completion
+  const handleWizardComplete = async (result: WizardResult) => {
+    setShowWizard(false);
+    setShowDocSwitcher(false);
+
+    if (result.action === 'import' && result.file) {
+      // Create the manuscript first, then import the file into it
+      createManuscript(result.title, result.type);
+      // Trigger file import via a synthetic event
+      const dt = new DataTransfer();
+      dt.items.add(result.file);
+      const fakeEvent = { target: { files: dt.files } } as unknown as React.ChangeEvent<HTMLInputElement>;
+      await handleImportFile(fakeEvent);
+      toast.success('Document imported!');
+    } else {
+      createManuscript(result.title, result.type);
+      toast.success('New document created — start writing!');
+    }
+
+    if (result.journal) {
+      toast.success(`Target journal: ${result.journal.name}`, { duration: 4000 });
+    }
+  };
+
   // Delete document
   const handleDeleteDocument = (id: string) => {
     if (manuscripts.length <= 1) {
@@ -659,37 +688,23 @@ export default function Collaboration() {
               </p>
 
               <div className="space-y-3">
-                {/* Import existing work */}
+                {/* Open wizard */}
+                <button
+                  onClick={() => setShowWizard(true)}
+                  className="w-full flex items-center justify-center gap-3 px-5 py-3.5 text-sm font-medium text-white bg-journi-green hover:bg-journi-green/90 rounded-xl transition-colors"
+                >
+                  <FilePlus2 size={18} />
+                  Start new manuscript
+                </button>
+
+                {/* Quick import fallback */}
                 <button
                   onClick={() => fileInputRef.current?.click()}
                   disabled={isImporting}
                   className="w-full flex items-center justify-center gap-3 px-5 py-3.5 text-sm font-medium text-foreground bg-accent hover:bg-accent/80 rounded-xl transition-colors disabled:opacity-50 border border-border"
                 >
-                  {isImporting ? (
-                    <Loader2 size={18} className="animate-spin" />
-                  ) : (
-                    <FileUp size={18} />
-                  )}
-                  {isImporting
-                    ? 'Importing...'
-                    : 'Already started? Import your paper (.docx or .pdf)'}
-                </button>
-
-                {/* Start fresh */}
-                <button
-                  onClick={() => {
-                    const firstSection = manuscript.sections[0];
-                    if (firstSection) {
-                      updateSectionContent(firstSection.id, '<p></p><p></p>');
-                      setActiveSection(firstSection.title);
-                      setActiveTab('editor');
-                    }
-                    toast.success('Document ready — start writing!');
-                  }}
-                  className="w-full flex items-center justify-center gap-3 px-5 py-3.5 text-sm font-medium text-white bg-journi-green hover:bg-journi-green/90 rounded-xl transition-colors"
-                >
-                  <FilePlus2 size={18} />
-                  Start writing a new paper
+                  {isImporting ? <Loader2 size={18} className="animate-spin" /> : <FileUp size={18} />}
+                  {isImporting ? 'Importing...' : 'Already started? Import your paper (.docx or .pdf)'}
                 </button>
               </div>
 
@@ -724,6 +739,14 @@ export default function Collaboration() {
           className="hidden"
           onChange={handleImportFile}
         />
+
+        {/* New Manuscript Wizard */}
+        <NewManuscriptWizard
+          open={showWizard}
+          onClose={() => setShowWizard(false)}
+          onComplete={handleWizardComplete}
+          manuscriptTypeLabels={manuscriptTypeLabels}
+        />
       </div>
     );
   }
@@ -738,6 +761,11 @@ export default function Collaboration() {
       <div className="flex flex-1 pt-16">
         {/* Document Outline Sidebar — fixed */}
         <aside className="hidden lg:flex flex-col w-56 bg-card border-r border-border pt-4 pb-4 shrink-0 fixed top-16 bottom-0 z-30">
+          {/* Project Switcher */}
+          <div className="px-3 mb-2">
+            <ProjectSwitcher variant="compact" />
+          </div>
+
           {/* Document Switcher */}
           <div className="px-3 mb-3">
             <button
@@ -793,54 +821,14 @@ export default function Collaboration() {
                   ))}
                 </div>
 
-                {/* New document form */}
-                {showNewDocForm ? (
-                  <div className="p-2.5 border-t border-border space-y-2">
-                    <input
-                      type="text"
-                      value={newDocTitle}
-                      onChange={(e) => setNewDocTitle(e.target.value)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter') handleCreateDocument();
-                        if (e.key === 'Escape') setShowNewDocForm(false);
-                      }}
-                      placeholder="Document title..."
-                      className="w-full text-xs bg-muted text-foreground placeholder:text-muted-foreground rounded px-2 py-1.5 outline-none focus:ring-1 focus:ring-journi-green"
-                      autoFocus
-                    />
-                    <select
-                      value={newDocType}
-                      onChange={(e) => setNewDocType(e.target.value as ManuscriptType)}
-                      className="w-full text-xs bg-muted text-foreground rounded px-2 py-1.5 outline-none focus:ring-1 focus:ring-journi-green"
-                    >
-                      {(Object.entries(manuscriptTypeLabels) as [ManuscriptType, string][]).map(([key, label]) => (
-                        <option key={key} value={key}>{label}</option>
-                      ))}
-                    </select>
-                    <div className="flex gap-1.5">
-                      <button
-                        onClick={handleCreateDocument}
-                        className="flex-1 text-[10px] font-medium text-white bg-journi-green hover:bg-journi-green/90 rounded px-2 py-1.5 transition-colors"
-                      >
-                        Create
-                      </button>
-                      <button
-                        onClick={() => setShowNewDocForm(false)}
-                        className="flex-1 text-[10px] font-medium text-muted-foreground bg-accent hover:bg-accent/80 rounded px-2 py-1.5 transition-colors"
-                      >
-                        Cancel
-                      </button>
-                    </div>
-                  </div>
-                ) : (
-                  <button
-                    onClick={() => setShowNewDocForm(true)}
-                    className="w-full flex items-center gap-2 px-3 py-2 text-xs text-journi-green hover:bg-journi-green/5 transition-colors border-t border-border"
-                  >
-                    <Plus size={12} />
-                    New Document
-                  </button>
-                )}
+                {/* New document button — opens wizard */}
+                <button
+                  onClick={() => setShowWizard(true)}
+                  className="w-full flex items-center gap-2 px-3 py-2 text-xs text-journi-green hover:bg-journi-green/5 transition-colors border-t border-border"
+                >
+                  <Plus size={12} />
+                  New Document
+                </button>
               </motion.div>
             )}
           </div>
@@ -1640,7 +1628,9 @@ export default function Collaboration() {
                           <p className="text-xs font-medium text-foreground truncate">
                             {collab.name}
                           </p>
-                          <p className="text-[10px] text-muted-foreground">{collab.role.replace('_', ' ')}</p>
+                          <p className="text-[10px] text-muted-foreground">
+                            {(collab.role ?? 'contributor').replace('_', ' ')}
+                          </p>
                         </div>
                       </div>
                     ))}
@@ -1666,6 +1656,14 @@ export default function Collaboration() {
         isOpen={isCitationDialogOpen}
         onClose={() => setIsCitationDialogOpen(false)}
         onSubmit={handleCitationSubmit}
+      />
+
+      {/* New Manuscript Wizard */}
+      <NewManuscriptWizard
+        open={showWizard}
+        onClose={() => setShowWizard(false)}
+        onComplete={handleWizardComplete}
+        manuscriptTypeLabels={manuscriptTypeLabels}
       />
     </div>
   );

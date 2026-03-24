@@ -86,7 +86,7 @@ function Field({
 
 // ── Main modal ────────────────────────────────────────────────────────────────
 export default function AuthModal() {
-  const { modalOpen, modalView, closeModal, signIn, signUp, openModal } = useAuth();
+  const { modalOpen, modalView, closeModal, signIn, signUp, openModal, startOAuth } = useAuth();
 
   // Sign-in fields
   const [siEmail, setSiEmail] = useState('');
@@ -143,8 +143,12 @@ export default function AuthModal() {
     }
   };
 
-  const handleGoogle = () => {
-    toast.info('Google sign-in requires a Client ID configured in your environment.');
+  const handleGoogle = async () => {
+    try {
+      await startOAuth('google');
+    } catch {
+      toast.error('Google sign-in is not configured yet. Please check backend OAuth settings.');
+    }
   };
 
   return (

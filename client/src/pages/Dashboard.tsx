@@ -1,6 +1,6 @@
 /**
- * Journi Project Dashboard — Fully Functional
- * Features editable Gantt chart, task management, team collaboration
+ * Journi Project Dashboard
+ * Features task management, team collaboration, calendar, and publications
  */
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -14,13 +14,11 @@ import {
   MoreHorizontal,
   AlertCircle,
   Timer,
-  FileText,
   X,
   Send,
-  CheckCircle2,
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
-import GanttChart from '@/components/dashboard/GanttChart';
+import ProjectSwitcher from '@/components/ProjectSwitcher';
 import ListView from '@/components/dashboard/ListView';
 import TaskDialog from '@/components/dashboard/TaskDialog';
 import CollaboratorManager from '@/components/dashboard/CollaboratorManager';
@@ -50,12 +48,10 @@ export default function Dashboard() {
   } = useProject();
 
   const [activeTab, setActiveTab] = useState<SidebarTab>('projects');
-  const [viewMode, setViewMode] = useState<'gantt' | 'list'>('gantt');
   const [isTaskDialogOpen, setIsTaskDialogOpen] = useState(false);
   const [editingTask, setEditingTask] = useState<Task | undefined>(undefined);
   const [showNotifications, setShowNotifications] = useState(false);
 
-  // Task Dialog Handlers
   const handleOpenNewTaskDialog = () => {
     setEditingTask(undefined);
     setIsTaskDialogOpen(true);
@@ -79,22 +75,18 @@ export default function Dashboard() {
     updateTask(taskId, updates);
   };
 
-  // Calculate project stats
   const completedTasks = project.tasks.filter((t) => t.status === 'completed').length;
   const totalTasks = project.tasks.length;
   const progressPercentage = totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0;
 
-  // Safe date comparison helper
   const safeDate = (d: any): Date => (d instanceof Date ? d : new Date(d));
 
-  // Get upcoming deadlines (tasks ending soon)
   const now = new Date();
   const upcomingDeadlines = project.tasks
     .filter((t) => t.status !== 'completed' && safeDate(t.endDate) > now)
     .sort((a, b) => safeDate(a.endDate).getTime() - safeDate(b.endDate).getTime())
     .slice(0, 3);
 
-  // Calendar view: group tasks by month
   const tasksByMonth: Record<string, Task[]> = {};
   project.tasks.forEach((task) => {
     const monthKey = format(safeDate(task.startDate), 'MMMM yyyy');
@@ -118,16 +110,13 @@ export default function Dashboard() {
         {/* Sidebar */}
         <aside className="hidden lg:flex flex-col w-60 bg-card border-r border-border pt-6 pb-4 shrink-0">
           <div className="px-5 mb-6">
-            <h2 className="text-sm font-bold text-foreground uppercase tracking-wider">
-              {project.name}
-            </h2>
+            <ProjectSwitcher variant="sidebar" />
             <span className="inline-flex items-center gap-1.5 mt-2 px-2 py-0.5 rounded-full bg-status-progress/15 text-status-progress text-xs font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-status-progress" />
               In Progress
             </span>
             <p className="text-xs text-muted-foreground mt-2">
-              {project.collaborators.length} members &middot; {totalTasks} tasks &middot; {progressPercentage}%
-              complete
+              {project.collaborators.length} members &middot; {totalTasks} tasks &middot; {progressPercentage}% complete
             </p>
           </div>
 
@@ -137,10 +126,9 @@ export default function Dashboard() {
                 key={item.tab}
                 onClick={() => setActiveTab(item.tab)}
                 className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors mb-0.5
-                  ${
-                    activeTab === item.tab
-                      ? 'bg-journi-green/10 text-journi-green'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-accent'
+                  ${activeTab === item.tab
+                    ? 'bg-journi-green/10 text-journi-green'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-accent'
                   }`}
               >
                 <item.icon size={18} />
@@ -149,7 +137,6 @@ export default function Dashboard() {
             ))}
           </nav>
 
-          {/* Current User */}
           {project.collaborators[0] && (
             <div className="px-5 pt-4 border-t border-border">
               <div className="flex items-center gap-3">
@@ -197,7 +184,6 @@ export default function Dashboard() {
                     )}
                   </button>
 
-                  {/* Notification Dropdown */}
                   {showNotifications && (
                     <>
                       <div className="fixed inset-0 z-30" onClick={() => setShowNotifications(false)} />
@@ -246,10 +232,9 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* ============ PROJECTS TAB ============ */}
+            {/* PROJECTS TAB */}
             {activeTab === 'projects' && (
               <>
-                {/* Gantt/List View */}
                 <motion.div
                   className="bg-card rounded-xl border border-border p-6 mb-6"
                   initial={{ opacity: 0, y: 20 }}
@@ -257,27 +242,7 @@ export default function Dashboard() {
                   transition={{ duration: 0.4 }}
                 >
                   <div className="flex items-center justify-between mb-6">
-                    <h2 className="text-lg font-bold text-foreground">
-                      {viewMode === 'gantt' ? 'Timeline View' : 'List View'}
-                    </h2>
-                    <div className="flex items-center bg-muted rounded-lg p-0.5">
-                      <button
-                        onClick={() => setViewMode('list')}
-                        className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
-                          viewMode === 'list' ? 'bg-card text-foreground shadow-sm' : 'text-muted-foreground'
-                        }`}
-                      >
-                        List
-                      </button>
-                      <button
-                        onClick={() => setViewMode('gantt')}
-                        className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
-                          viewMode === 'gantt' ? 'bg-card text-foreground shadow-sm' : 'text-muted-foreground'
-                        }`}
-                      >
-                        Gantt
-                      </button>
-                    </div>
+                    <h2 className="text-lg font-bold text-foreground">Task List</h2>
                   </div>
 
                   {project.tasks.length === 0 ? (
@@ -291,12 +256,6 @@ export default function Dashboard() {
                         Create Task
                       </button>
                     </div>
-                  ) : viewMode === 'gantt' ? (
-                    <GanttChart
-                      tasks={project.tasks}
-                      onTaskUpdate={handleTaskUpdate}
-                      onTaskClick={handleOpenEditTaskDialog}
-                    />
                   ) : (
                     <ListView
                       tasks={project.tasks}
@@ -307,7 +266,6 @@ export default function Dashboard() {
                   )}
                 </motion.div>
 
-                {/* Bottom Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                   <motion.div
                     className="bg-card rounded-xl border border-border p-5 lg:col-span-2"
@@ -340,33 +298,24 @@ export default function Dashboard() {
                       ) : (
                         upcomingDeadlines.map((task) => {
                           const endDate = safeDate(task.endDate);
-                          const daysUntil = Math.ceil(
-                            (endDate.getTime() - Date.now()) / (1000 * 60 * 60 * 24)
-                          );
+                          const daysUntil = Math.ceil((endDate.getTime() - Date.now()) / (1000 * 60 * 60 * 24));
                           const isUrgent = daysUntil <= 7;
-
                           return (
                             <div
                               key={task.id}
                               className="flex items-start gap-3 cursor-pointer hover:bg-accent/50 rounded-lg p-2 -m-2 transition-colors"
                               onClick={() => handleOpenEditTaskDialog(task.id)}
                             >
-                              <div
-                                className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${
-                                  isUrgent ? 'bg-status-delayed/15' : 'bg-journi-green/15'
-                                }`}
-                              >
-                                {isUrgent ? (
-                                  <AlertCircle size={16} className="text-status-delayed" />
-                                ) : (
-                                  <Timer size={16} className="text-journi-green" />
-                                )}
+                              <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${isUrgent ? 'bg-status-delayed/15' : 'bg-journi-green/15'}`}>
+                                {isUrgent
+                                  ? <AlertCircle size={16} className="text-status-delayed" />
+                                  : <Timer size={16} className="text-journi-green" />
+                                }
                               </div>
                               <div>
                                 <p className="text-sm font-medium text-foreground">{task.name}</p>
                                 <p className="text-xs text-muted-foreground">
-                                  Due: {format(endDate, 'MMM d, yyyy')} ({daysUntil}{' '}
-                                  {daysUntil === 1 ? 'day' : 'days'})
+                                  Due: {format(endDate, 'MMM d, yyyy')} ({daysUntil} {daysUntil === 1 ? 'day' : 'days'})
                                 </p>
                               </div>
                             </div>
@@ -384,15 +333,10 @@ export default function Dashboard() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.4 }}
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-sm font-bold text-foreground">Recent Activity</h3>
-                  </div>
+                  <h3 className="text-sm font-bold text-foreground mb-4">Recent Activity</h3>
                   <div className="space-y-3">
                     {activities.slice(0, 5).map((activity) => (
-                      <div
-                        key={activity.id}
-                        className="flex items-center justify-between py-2 border-b border-border last:border-0"
-                      >
+                      <div key={activity.id} className="flex items-center justify-between py-2 border-b border-border last:border-0">
                         <div className="flex items-center gap-3">
                           <div className="w-7 h-7 rounded-full bg-journi-green/15 flex items-center justify-center text-[10px] font-bold text-journi-green">
                             {activity.userInitials}
@@ -412,7 +356,7 @@ export default function Dashboard() {
               </>
             )}
 
-            {/* ============ TEAM TAB ============ */}
+            {/* TEAM TAB */}
             {activeTab === 'team' && (
               <motion.div
                 className="bg-card rounded-xl border border-border p-6"
@@ -429,7 +373,7 @@ export default function Dashboard() {
               </motion.div>
             )}
 
-            {/* ============ CALENDAR TAB ============ */}
+            {/* CALENDAR TAB */}
             {activeTab === 'calendar' && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -470,7 +414,7 @@ export default function Dashboard() {
                                 <div>
                                   <p className="text-sm font-medium text-foreground">{task.name}</p>
                                   <p className="text-xs text-muted-foreground">
-                                    {format(safeDate(task.startDate), 'MMM d')} - {format(safeDate(task.endDate), 'MMM d, yyyy')}
+                                    {format(safeDate(task.startDate), 'MMM d')} – {format(safeDate(task.endDate), 'MMM d, yyyy')}
                                   </p>
                                 </div>
                               </div>
@@ -487,7 +431,7 @@ export default function Dashboard() {
               </motion.div>
             )}
 
-            {/* ============ PUBLICATIONS TAB ============ */}
+            {/* PUBLICATIONS TAB */}
             {activeTab === 'publications' && (
               <motion.div
                 className="bg-card rounded-xl border border-border p-6"
@@ -515,7 +459,6 @@ export default function Dashboard() {
         </main>
       </div>
 
-      {/* Task Dialog */}
       <TaskDialog
         isOpen={isTaskDialogOpen}
         onClose={() => setIsTaskDialogOpen(false)}

@@ -876,5 +876,5 @@ export const MEDICAL_JOURNALS = RAW_JOURNALS.map((raw, index) => ({
 }));
 
 // Export unique subject areas and locations for filters
-export const ALL_SUBJECT_AREAS = [...new Set(RAW_JOURNALS.flatMap((j) => j.subjectAreas))].sort();
-export const ALL_GEOGRAPHIC_LOCATIONS = [...new Set(RAW_JOURNALS.map((j) => j.geographicLocation))].sort();
+export const ALL_SUBJECT_AREAS = Array.from(new Set(RAW_JOURNALS.flatMap((j) => j.subjectAreas))).sort();
+export const ALL_GEOGRAPHIC_LOCATIONS = Array.from(new Set(RAW_JOURNALS.map((j) => j.geographicLocation))).sort();

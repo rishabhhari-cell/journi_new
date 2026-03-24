@@ -286,6 +286,17 @@ export default function JournalDetailDrawer({ journal, onClose }: JournalDetailD
             </div>
           )}
 
+          {!journal.formattingRequirements && journal.submissionRequirements && (
+            <div>
+              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">
+                Submission Requirements
+              </p>
+              <pre className="text-[11px] leading-relaxed bg-muted/40 rounded-lg p-3 overflow-x-auto text-foreground whitespace-pre-wrap">
+                {JSON.stringify(journal.submissionRequirements, null, 2)}
+              </pre>
+            </div>
+          )}
+
           {/* External Links */}
           <div className="flex flex-col gap-2 pt-1">
             {journal.website && (
@@ -297,6 +308,17 @@ export default function JournalDetailDrawer({ journal, onClose }: JournalDetailD
               >
                 <Globe size={15} />
                 Visit Journal Website
+              </a>
+            )}
+            {journal.submissionPortalUrl && (
+              <a
+                href={journal.submissionPortalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-4 py-2.5 border border-border rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+              >
+                <ExternalLink size={14} />
+                Open Submission Portal
               </a>
             )}
             {journal.openAlexId && (

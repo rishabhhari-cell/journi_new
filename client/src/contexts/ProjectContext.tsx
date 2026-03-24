@@ -1,16 +1,32 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode, useMemo, useCallback } from 'react';
 import { nanoid } from 'nanoid';
 import type { Project, Task, Collaborator, Activity, TaskFormData, CollaboratorFormData } from '@/types';
-import { saveToStorage, loadFromStorage, STORAGE_KEYS } from '@/lib/storage';
 import { generateSampleProject, generateActivities } from '@/data/generators';
+import { useAuth } from '@/contexts/AuthContext';
+import {
+  fetchProjects,
+  createProject as createProjectApi,
+  deleteProject as deleteProjectApi,
+  type ApiProject,
+} from '@/lib/api/backend';
 
-// ============================================================================
-// Context Type Definition
-// ============================================================================
+const PROJECTS_KEY = 'journi_projects';
+const ACTIVE_PROJECT_KEY = 'journi_active_project_id';
+const ACTIVITIES_KEY = 'journi_activities';
+const OVERLAYS_KEY = 'journi_project_overlays';
+
+interface ProjectOverlay {
+  tasks: Task[];
+  collaborators: Collaborator[];
+}
 
 interface ProjectContextType {
-  project: Project;
+  projects: Project[];
+  activeProject: Project;
   activities: Activity[];
+  setActiveProjectId: (id: string) => void;
+  createProject: (title: string, description?: string) => Project;
+  deleteProject: (id: string) => void;
   addTask: (task: TaskFormData) => void;
   updateTask: (taskId: string, updates: Partial<Task>) => void;
   deleteTask: (taskId: string) => void;
@@ -19,82 +35,256 @@ interface ProjectContextType {
   updateCollaborator: (collaboratorId: string, updates: Partial<Collaborator>) => void;
   getTask: (taskId: string) => Task | undefined;
   getCollaborator: (collaboratorId: string) => Collaborator | undefined;
+  project: Project;
 }
-
-// ============================================================================
-// Create Context
-// ============================================================================
 
 const ProjectContext = createContext<ProjectContextType | undefined>(undefined);
 
-// ============================================================================
-// Provider Component
-// ============================================================================
-
-interface ProjectProviderProps {
-  children: ReactNode;
-}
-
-// Ensure date fields are actual Date objects (localStorage may store them as strings)
-function rehydrateDates(project: Project): Project {
+function rehydrateProject(p: Project): Project {
   return {
-    ...project,
-    createdAt: project.createdAt ? new Date(project.createdAt) : new Date(),
-    updatedAt: project.updatedAt ? new Date(project.updatedAt) : new Date(),
-    tasks: project.tasks.map((task) => ({
-      ...task,
-      startDate: task.startDate ? new Date(task.startDate) : new Date(),
-      endDate: task.endDate ? new Date(task.endDate) : new Date(),
+    ...p,
+    createdAt: p.createdAt ? new Date(p.createdAt) : new Date(),
+    updatedAt: p.updatedAt ? new Date(p.updatedAt) : new Date(),
+    dueDate: p.dueDate ? new Date(p.dueDate) : undefined,
+    tasks: (p.tasks || []).map((t) => ({
+      ...t,
+      startDate: t.startDate ? new Date(t.startDate) : new Date(),
+      endDate: t.endDate ? new Date(t.endDate) : new Date(),
     })),
   };
 }
 
-function rehydrateActivities(activities: Activity[]): Activity[] {
-  return activities.map((a) => ({
-    ...a,
-    timestamp: a.timestamp ? new Date(a.timestamp) : new Date(),
-  }));
+function rehydrateActivities(acts: Activity[]): Activity[] {
+  return acts.map((a) => ({ ...a, timestamp: a.timestamp ? new Date(a.timestamp) : new Date() }));
 }
 
-export function ProjectProvider({ children }: ProjectProviderProps) {
-  // Load initial data from localStorage or generate sample data
-  const [project, setProject] = useState<Project>(() => {
-    const stored = loadFromStorage<Project | null>(STORAGE_KEYS.PROJECT, null);
-    return stored ? rehydrateDates(stored) : generateSampleProject();
-  });
+function createFallbackProject(): Project {
+  return generateSampleProject();
+}
+
+function loadOverlays(): Record<string, ProjectOverlay> {
+  try {
+    const raw = localStorage.getItem(OVERLAYS_KEY);
+    if (!raw) return {};
+    const parsed = JSON.parse(raw) as Record<string, ProjectOverlay>;
+    const next: Record<string, ProjectOverlay> = {};
+    for (const [projectId, overlay] of Object.entries(parsed)) {
+      next[projectId] = {
+        tasks: (overlay.tasks ?? []).map((task) => ({
+          ...task,
+          startDate: task.startDate ? new Date(task.startDate) : new Date(),
+          endDate: task.endDate ? new Date(task.endDate) : new Date(),
+        })),
+        collaborators: overlay.collaborators ?? [],
+      };
+    }
+    return next;
+  } catch {
+    return {};
+  }
+}
+
+function saveOverlays(projects: Project[]) {
+  const payload: Record<string, ProjectOverlay> = {};
+  for (const project of projects) {
+    payload[project.id] = {
+      tasks: project.tasks,
+      collaborators: project.collaborators,
+    };
+  }
+  localStorage.setItem(OVERLAYS_KEY, JSON.stringify(payload));
+}
+
+function mapApiProjectToUi(apiProject: ApiProject, overlays: Record<string, ProjectOverlay>): Project {
+  const overlay = overlays[apiProject.id];
+  const generatedCollaborators: Collaborator[] = (apiProject.project_members ?? []).map((member) => ({
+    id: member.user_id,
+    name: `Member ${member.user_id.slice(0, 6)}`,
+    email: `${member.user_id.slice(0, 8)}@unknown.local`,
+    role: 'contributor',
+    initials: member.user_id.slice(0, 2).toUpperCase(),
+    online: false,
+  }));
+
+  return {
+    id: apiProject.id,
+    title: apiProject.title,
+    description: apiProject.description ?? '',
+    status: apiProject.status,
+    createdAt: new Date(apiProject.created_at),
+    updatedAt: new Date(apiProject.updated_at),
+    dueDate: apiProject.due_date ? new Date(apiProject.due_date) : undefined,
+    tasks: overlay?.tasks ?? [],
+    collaborators: overlay?.collaborators ?? generatedCollaborators,
+  };
+}
+
+function initProjects(): { projects: Project[]; activeId: string } {
+  try {
+    const stored = localStorage.getItem(PROJECTS_KEY);
+    if (stored) {
+      const parsed: Project[] = JSON.parse(stored);
+      if (parsed.length > 0) {
+        const projects = parsed.map(rehydrateProject);
+        const activeId = localStorage.getItem(ACTIVE_PROJECT_KEY) || projects[0].id;
+        return { projects, activeId };
+      }
+    }
+  } catch {
+    // ignore corrupted storage
+  }
+  const sample = createFallbackProject();
+  return { projects: [sample], activeId: sample.id };
+}
+
+export function ProjectProvider({ children }: { children: ReactNode }) {
+  const { user, isTrial, activeOrganizationId } = useAuth();
+  const backendMode = Boolean(user && !isTrial && activeOrganizationId);
+
+  const fallbackProject = useMemo(() => createFallbackProject(), []);
+  const [{ projects, activeId }, setState] = useState(initProjects);
 
   const [activities, setActivities] = useState<Activity[]>(() => {
-    const stored = loadFromStorage<Activity[] | null>('activities', null);
-    return stored ? rehydrateActivities(stored) : generateActivities(project.collaborators);
+    try {
+      const stored = localStorage.getItem(ACTIVITIES_KEY);
+      if (stored) return rehydrateActivities(JSON.parse(stored));
+    } catch {
+      // ignore corrupted storage
+    }
+    const initial = initProjects();
+    const active = initial.projects.find((p) => p.id === initial.activeId) || initial.projects[0];
+    return generateActivities(active.collaborators);
   });
 
-  // Save to localStorage whenever project changes
-  useEffect(() => {
-    saveToStorage(STORAGE_KEYS.PROJECT, project);
-  }, [project]);
+  const setProjects = useCallback((updated: Project[], newActiveId?: string) => {
+    const nextProjects = updated.length > 0 ? updated : [fallbackProject];
+    const preferredActiveId = newActiveId ?? activeId;
+    const resolvedActiveId = nextProjects.some((project) => project.id === preferredActiveId)
+      ? preferredActiveId
+      : nextProjects[0].id;
+
+    setState({ projects: nextProjects, activeId: resolvedActiveId });
+    localStorage.setItem(PROJECTS_KEY, JSON.stringify(nextProjects));
+    localStorage.setItem(ACTIVE_PROJECT_KEY, resolvedActiveId);
+    saveOverlays(nextProjects);
+  }, [activeId, fallbackProject]);
 
   useEffect(() => {
-    saveToStorage('activities', activities);
+    localStorage.setItem(ACTIVITIES_KEY, JSON.stringify(activities));
   }, [activities]);
 
-  // ========================================
-  // Task Management Functions
-  // ========================================
+  useEffect(() => {
+    let cancelled = false;
+    if (!backendMode || !activeOrganizationId) {
+      return;
+    }
 
-  const addTask = (taskData: TaskFormData) => {
-    const newTask: Task = {
+    (async () => {
+      try {
+        const response = await fetchProjects(activeOrganizationId);
+        if (cancelled) return;
+
+        const overlays = loadOverlays();
+        let mapped = response.data.map((project) => mapApiProjectToUi(project, overlays));
+
+        if (mapped.length === 0) {
+          const created = await createProjectApi({
+            organizationId: activeOrganizationId,
+            title: 'My First Project',
+            description: '',
+          });
+          mapped = [mapApiProjectToUi(created.data, overlays)];
+        }
+
+        const preferredActiveId = localStorage.getItem(ACTIVE_PROJECT_KEY) || mapped[0].id;
+        setProjects(mapped, preferredActiveId);
+      } catch {
+        // Keep local state if backend fetch fails.
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [backendMode, activeOrganizationId, setProjects]);
+
+  const activeProject =
+    projects.find((p) => p.id === activeId) ||
+    projects[0] ||
+    fallbackProject;
+
+  const setActiveProjectId = (id: string) => {
+    setState((prev) => ({ ...prev, activeId: id }));
+    localStorage.setItem(ACTIVE_PROJECT_KEY, id);
+  };
+
+  const createProject = (title: string, description = ''): Project => {
+    const optimisticProject: Project = {
       id: nanoid(),
-      ...taskData,
+      title,
+      description,
+      status: 'active',
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      tasks: [],
+      collaborators: [],
     };
 
-    setProject((prev) => ({
-      ...prev,
-      tasks: [...prev.tasks, newTask],
+    setProjects([...projects, optimisticProject], optimisticProject.id);
+
+    if (backendMode && activeOrganizationId) {
+      void (async () => {
+        try {
+          const created = await createProjectApi({
+            organizationId: activeOrganizationId,
+            title,
+            description,
+          });
+          const overlays = loadOverlays();
+          const mapped = mapApiProjectToUi(created.data, overlays);
+          setProjects(
+            projects
+              .filter((project) => project.id !== optimisticProject.id)
+              .concat({ ...mapped, tasks: optimisticProject.tasks, collaborators: optimisticProject.collaborators }),
+            mapped.id,
+          );
+        } catch {
+          // Keep optimistic project locally if backend creation fails.
+        }
+      })();
+    }
+
+    return optimisticProject;
+  };
+
+  const deleteProject = (id: string) => {
+    if (projects.length <= 1) return;
+    const updated = projects.filter((p) => p.id !== id);
+    const newActiveId = id === activeId ? updated[0].id : activeId;
+    setProjects(updated, newActiveId);
+
+    if (backendMode) {
+      void deleteProjectApi(id).catch(() => {
+        // Keep optimistic deletion if backend call fails.
+      });
+    }
+  };
+
+  const updateActive = (updater: (p: Project) => Project) => {
+    const updated = projects.map((project) =>
+      project.id === activeProject.id ? updater(project) : project,
+    );
+    setProjects(updated, activeProject.id);
+  };
+
+  const addTask = (taskData: TaskFormData) => {
+    const newTask: Task = { id: nanoid(), ...taskData };
+    updateActive((project) => ({
+      ...project,
+      tasks: [...project.tasks, newTask],
       updatedAt: new Date(),
     }));
-
-    // Add activity
-    const currentUser = project.collaborators[0];
+    const currentUser = activeProject.collaborators[0];
     if (currentUser) {
       setActivities((prev) => [
         {
@@ -112,59 +302,42 @@ export function ProjectProvider({ children }: ProjectProviderProps) {
   };
 
   const updateTask = (taskId: string, updates: Partial<Task>) => {
-    setProject((prev) => ({
-      ...prev,
-      tasks: prev.tasks.map((task) =>
-        task.id === taskId ? { ...task, ...updates } : task
-      ),
+    updateActive((project) => ({
+      ...project,
+      tasks: project.tasks.map((task) => (task.id === taskId ? { ...task, ...updates } : task)),
       updatedAt: new Date(),
     }));
   };
 
   const deleteTask = (taskId: string) => {
-    setProject((prev) => ({
-      ...prev,
-      tasks: prev.tasks.filter((task) => task.id !== taskId),
+    updateActive((project) => ({
+      ...project,
+      tasks: project.tasks.filter((task) => task.id !== taskId),
       updatedAt: new Date(),
     }));
   };
 
-  const getTask = (taskId: string): Task | undefined => {
-    return project.tasks.find((task) => task.id === taskId);
-  };
+  const getTask = (taskId: string) => activeProject.tasks.find((task) => task.id === taskId);
 
-  // ========================================
-  // Collaborator Management Functions
-  // ========================================
-
-  const addCollaborator = (collaboratorData: CollaboratorFormData) => {
-    const initials = collaboratorData.name
+  const addCollaborator = (data: CollaboratorFormData) => {
+    const initials = data.name
       .split(' ')
-      .map((word) => word[0])
+      .map((part) => part[0])
       .join('')
       .substring(0, 2)
       .toUpperCase();
-
-    const newCollaborator: Collaborator = {
-      id: nanoid(),
-      ...collaboratorData,
-      initials,
-      online: false,
-    };
-
-    setProject((prev) => ({
-      ...prev,
-      collaborators: [...prev.collaborators, newCollaborator],
+    const collaborator: Collaborator = { id: nanoid(), ...data, initials, online: false };
+    updateActive((project) => ({
+      ...project,
+      collaborators: [...project.collaborators, collaborator],
       updatedAt: new Date(),
     }));
-
-    // Add activity
     setActivities((prev) => [
       {
         id: nanoid(),
-        userId: newCollaborator.id,
-        userName: newCollaborator.name,
-        userInitials: newCollaborator.initials,
+        userId: collaborator.id,
+        userName: collaborator.name,
+        userInitials: collaborator.initials,
         action: 'joined the project',
         type: 'milestone',
         timestamp: new Date(),
@@ -174,55 +347,53 @@ export function ProjectProvider({ children }: ProjectProviderProps) {
   };
 
   const removeCollaborator = (collaboratorId: string) => {
-    setProject((prev) => ({
-      ...prev,
-      collaborators: prev.collaborators.filter((c) => c.id !== collaboratorId),
+    updateActive((project) => ({
+      ...project,
+      collaborators: project.collaborators.filter((collaborator) => collaborator.id !== collaboratorId),
       updatedAt: new Date(),
     }));
   };
 
   const updateCollaborator = (collaboratorId: string, updates: Partial<Collaborator>) => {
-    setProject((prev) => ({
-      ...prev,
-      collaborators: prev.collaborators.map((c) =>
-        c.id === collaboratorId ? { ...c, ...updates } : c
+    updateActive((project) => ({
+      ...project,
+      collaborators: project.collaborators.map((collaborator) =>
+        collaborator.id === collaboratorId ? { ...collaborator, ...updates } : collaborator,
       ),
       updatedAt: new Date(),
     }));
   };
 
-  const getCollaborator = (collaboratorId: string): Collaborator | undefined => {
-    return project.collaborators.find((c) => c.id === collaboratorId);
-  };
+  const getCollaborator = (collaboratorId: string) =>
+    activeProject.collaborators.find((collaborator) => collaborator.id === collaboratorId);
 
-  // ========================================
-  // Context Value
-  // ========================================
-
-  const value: ProjectContextType = {
-    project,
-    activities,
-    addTask,
-    updateTask,
-    deleteTask,
-    addCollaborator,
-    removeCollaborator,
-    updateCollaborator,
-    getTask,
-    getCollaborator,
-  };
-
-  return <ProjectContext.Provider value={value}>{children}</ProjectContext.Provider>;
+  return (
+    <ProjectContext.Provider
+      value={{
+        projects,
+        activeProject,
+        activities,
+        setActiveProjectId,
+        createProject,
+        deleteProject,
+        addTask,
+        updateTask,
+        deleteTask,
+        addCollaborator,
+        removeCollaborator,
+        updateCollaborator,
+        getTask,
+        getCollaborator,
+        project: activeProject,
+      }}
+    >
+      {children}
+    </ProjectContext.Provider>
+  );
 }
-
-// ============================================================================
-// Hook to use Project Context
-// ============================================================================
 
 export function useProject() {
   const context = useContext(ProjectContext);
-  if (context === undefined) {
-    throw new Error('useProject must be used within a ProjectProvider');
-  }
+  if (!context) throw new Error('useProject must be used within a ProjectProvider');
   return context;
 }

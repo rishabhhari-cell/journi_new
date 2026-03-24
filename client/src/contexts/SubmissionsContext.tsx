@@ -89,8 +89,12 @@ export function SubmissionsProvider({ children }: SubmissionsProviderProps) {
   // ========================================
 
   const addSubmission = (submissionData: SubmissionFormData) => {
-    const journal = allJournals.find((j) => j.id === submissionData.journalId);
-    const submittedDate = new Date();
+    const fallbackJournal = allJournals[0];
+    const journal =
+      allJournals.find((j) => j.id === submissionData.journalId) ??
+      allJournals.find((j) => j.name === submissionData.journal) ??
+      fallbackJournal;
+    const submittedDate = submissionData.submittedDate ?? new Date();
     const estimatedDecisionDate = new Date(submittedDate);
     estimatedDecisionDate.setDate(
       estimatedDecisionDate.getDate() + (journal?.avgDecisionDays ?? 60)
@@ -98,11 +102,11 @@ export function SubmissionsProvider({ children }: SubmissionsProviderProps) {
 
     const newSubmission: Submission = {
       id: nanoid(),
-      manuscriptId: submissionData.manuscriptId,
-      journalId: submissionData.journalId,
+      manuscriptId: submissionData.manuscriptId ?? manuscript.id,
+      journalId: submissionData.journalId ?? journal?.id ?? 'unknown-journal',
       journalName: journal?.name || 'Unknown Journal',
-      title: manuscript.title,
-      status: 'draft',
+      title: submissionData.title ?? manuscript.title,
+      status: submissionData.status ?? 'draft',
       submittedDate,
       estimatedDecisionDate,
       timeline: [

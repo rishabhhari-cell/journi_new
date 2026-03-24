@@ -4,32 +4,36 @@
  */
 import { Link, useLocation } from "wouter";
 import { useState, useRef, useEffect } from "react";
-import { Menu, X, LogOut, ChevronDown } from "lucide-react";
+import { Menu, X, LogOut, ChevronDown, FlaskConical } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 
-const LOGO_URL = "/journi_transparent.png";
+const LOGO_URL = "/logos/Journi_new.svg";
 
-const navItems = [
-  { label: "Home", href: "/" },
+const publicNavItems = [
+  { label: "Features", href: "/features" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "About Us", href: "/about" },
+  { label: "Support", href: "/support" },
+];
+
+const appNavItems = [
   { label: "Dashboard", href: "/dashboard" },
-  { label: "Collaboration", href: "/collaboration" },
-  { label: "Discovery", href: "/discovery" },
-  { label: "Publication", href: "/publication" },
+  { label: "Editor", href: "/collaboration" },
+  { label: "Journal Finder", href: "/discovery" },
+  { label: "Submissions", href: "/publication" },
 ];
 
 export default function Navbar() {
-  const [location] = useLocation();
+  const [location, navigate] = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const userMenuRef = useRef<HTMLDivElement>(null);
-  const { user, signOut, openModal } = useAuth();
+  const { user, isTrial, signOut, openModal, signInAsGuest } = useAuth();
+  const navItems = user ? appNavItems : publicNavItems;
 
-  // Close user dropdown on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      if (userMenuRef.current && !userMenuRef.current.contains(e.target as Node)) {
-        setUserMenuOpen(false);
-      }
+      if (userMenuRef.current && !userMenuRef.current.contains(e.target as Node)) setUserMenuOpen(false);
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
@@ -39,34 +43,41 @@ export default function Navbar() {
     signOut();
     setUserMenuOpen(false);
     setMobileOpen(false);
+    navigate("/");
   };
 
   return (
     <header className="glass fixed top-0 left-0 right-0 z-50">
       <div className="container relative flex items-center h-16">
-        {/* Logo — left */}
+        {/* Logo */}
         <Link href="/" className="flex items-center shrink-0 ml-8">
           <img src={LOGO_URL} alt="Journi" className="h-16 w-auto" />
         </Link>
 
-        {/* Desktop Nav — absolutely centred */}
+        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
           {navItems.map((item) => {
-            const isActive = location === item.href;
+            const isActive = item.href.startsWith("/#") ? false : location === item.href;
+            const classes = `relative px-3.5 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
+              isActive ? "text-journi-green" : "text-muted-foreground hover:text-foreground hover:bg-accent"
+            }`;
+
+            if (item.href.startsWith("/#")) {
+              return (
+                <a key={item.href} href={item.href} className={classes}>
+                  {item.label}
+                </a>
+              );
+            }
+
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative px-3.5 py-2 text-sm font-medium rounded-md transition-colors duration-200
-                  ${isActive
-                    ? "text-journi-green"
-                    : "text-muted-foreground hover:text-foreground hover:bg-accent"
-                  }`}
+                className={classes}
               >
                 {item.label}
-                {isActive && (
-                  <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-journi-green rounded-full" />
-                )}
+                {isActive && <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-journi-green rounded-full" />}
               </Link>
             );
           })}
@@ -75,8 +86,12 @@ export default function Navbar() {
         {/* CTA / User — right */}
         <div className="hidden md:flex items-center gap-3 ml-auto">
           {user ? (
-            /* Signed-in: avatar + name dropdown */
-            <div className="relative" ref={userMenuRef}>
+            <div className="relative flex items-center gap-2" ref={userMenuRef}>
+              {isTrial && (
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 border border-amber-200">
+                  Trial
+                </span>
+              )}
               <button
                 onClick={() => setUserMenuOpen(!userMenuOpen)}
                 className="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-accent transition-colors"
@@ -84,13 +99,8 @@ export default function Navbar() {
                 <div className="w-7 h-7 rounded-full bg-journi-green text-journi-slate text-xs font-bold flex items-center justify-center shrink-0">
                   {user.initials}
                 </div>
-                <span className="text-sm font-medium text-foreground max-w-[120px] truncate">
-                  {user.name}
-                </span>
-                <ChevronDown
-                  size={14}
-                  className={`text-muted-foreground transition-transform ${userMenuOpen ? "rotate-180" : ""}`}
-                />
+                <span className="text-sm font-medium text-foreground max-w-[120px] truncate">{user.name}</span>
+                <ChevronDown size={14} className={`text-muted-foreground transition-transform ${userMenuOpen ? "rotate-180" : ""}`} />
               </button>
 
               {userMenuOpen && (
@@ -110,29 +120,26 @@ export default function Navbar() {
               )}
             </div>
           ) : (
-            /* Signed-out: Sign In + Get Started */
             <>
-              <button
-                onClick={() => openModal("signin")}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <button onClick={() => openModal("signin")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 Sign In
               </button>
+              <button onClick={() => openModal("signup")} className="text-sm font-medium border border-border text-foreground px-4 py-2 rounded-lg hover:bg-accent transition-colors">
+                Sign Up
+              </button>
               <button
-                onClick={() => openModal("signup")}
-                className="bg-journi-green text-journi-slate text-sm font-semibold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+                onClick={() => { signInAsGuest(); navigate("/dashboard"); }}
+                className="flex items-center gap-1.5 bg-journi-green text-journi-slate text-sm font-semibold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
               >
-                Get Started
+                <FlaskConical size={14} />
+                Trial
               </button>
             </>
           )}
         </div>
 
         {/* Mobile toggle */}
-        <button
-          className="md:hidden p-2 text-foreground ml-auto"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
+        <button className="md:hidden p-2 text-foreground ml-auto" onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
@@ -142,17 +149,29 @@ export default function Navbar() {
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
           <nav className="container py-4 flex flex-col gap-1">
             {navItems.map((item) => {
-              const isActive = location === item.href;
+              const isActive = item.href.startsWith("/#") ? false : location === item.href;
+              const classes = `px-3 py-2.5 text-sm font-medium rounded-md transition-colors
+                    ${isActive ? "text-journi-green bg-journi-green/5" : "text-muted-foreground hover:text-foreground hover:bg-accent"}`;
+
+              if (item.href.startsWith("/#")) {
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={classes}
+                  >
+                    {item.label}
+                  </a>
+                );
+              }
+
               return (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`px-3 py-2.5 text-sm font-medium rounded-md transition-colors
-                    ${isActive
-                      ? "text-journi-green bg-journi-green/5"
-                      : "text-muted-foreground hover:text-foreground hover:bg-accent"
-                    }`}
+                  className={classes}
                 >
                   {item.label}
                 </Link>
@@ -180,18 +199,15 @@ export default function Navbar() {
                   </button>
                 </div>
               ) : (
-                <div className="flex gap-3">
+                <div className="flex gap-2 flex-wrap">
+                  <button onClick={() => { openModal("signin"); setMobileOpen(false); }} className="text-sm font-medium text-muted-foreground">Sign In</button>
+                  <button onClick={() => { openModal("signup"); setMobileOpen(false); }} className="text-sm font-medium border border-border text-foreground px-3 py-1.5 rounded-lg">Sign Up</button>
                   <button
-                    onClick={() => { openModal("signin"); setMobileOpen(false); }}
-                    className="text-sm font-medium text-muted-foreground"
+                    onClick={() => { signInAsGuest(); navigate("/dashboard"); setMobileOpen(false); }}
+                    className="flex items-center gap-1.5 bg-journi-green text-journi-slate text-sm font-semibold px-3 py-1.5 rounded-lg"
                   >
-                    Sign In
-                  </button>
-                  <button
-                    onClick={() => { openModal("signup"); setMobileOpen(false); }}
-                    className="bg-journi-green text-journi-slate text-sm font-semibold px-4 py-2 rounded-lg"
-                  >
-                    Get Started
+                    <FlaskConical size={13} />
+                    Trial
                   </button>
                 </div>
               )}

@@ -25,7 +25,7 @@ interface JournalsContextType {
   totalPages: number;
   totalResults: number;
   getJournalById: (id: string) => Journal | undefined;
-  dataSource: 'openalex' | 'nlm' | 'static';
+  dataSource: 'backend' | 'openalex' | 'nlm' | 'static';
   isLoading: boolean;
 }
 
@@ -39,7 +39,7 @@ export function JournalsProvider({ children }: JournalsProviderProps) {
   const [searchResults, setSearchResults] = useState<Journal[]>([]);
   const [searchCache, setSearchCache] = useState<Record<string, Journal>>({});
   const [apiTotalResults, setApiTotalResults] = useState<number>(0);
-  const [dataSource, setDataSource] = useState<'openalex' | 'nlm' | 'static'>('openalex');
+  const [dataSource, setDataSource] = useState<'backend' | 'openalex' | 'nlm' | 'static'>('backend');
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const [searchQuery, setSearchQuery] = useState<string>('');

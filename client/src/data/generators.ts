@@ -176,9 +176,11 @@ function generateComment(collaborators: Collaborator[], sectionId: string): Comm
 export function generateSampleManuscript(projectId: string, collaborators: Collaborator[]): Manuscript {
   const sections = SECTION_TITLES.map((title, index) => generateSection(title, index));
   const citations = Array.from({ length: randomNumber(10, 30) }, () => generateCitation());
-  const comments = Array.from({ length: randomNumber(3, 8) }, () =>
-    generateComment(collaborators, randomElement(sections).id)
-  );
+  const comments = collaborators.length > 0
+    ? Array.from({ length: randomNumber(3, 8) }, () =>
+        generateComment(collaborators, randomElement(sections).id)
+      )
+    : [];
 
   return {
     id: nanoid(),

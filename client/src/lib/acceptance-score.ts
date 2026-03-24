@@ -243,15 +243,15 @@ export function extractManuscriptKeywordsWeighted(manuscript: Manuscript): Map<s
   if (areaScores.size === 0) return new Map();
 
   // Normalize scores to 0-1 range
-  const maxScore = Math.max(...areaScores.values());
+  const maxScore = Math.max(...Array.from(areaScores.values()));
   const normalized = new Map<string, number>();
-  for (const [area, score] of areaScores) {
+  for (const [area, score] of Array.from(areaScores.entries())) {
     normalized.set(area, score / maxScore);
   }
 
   // Filter out very low-signal areas (< 5% of max) to reduce noise
   const filtered = new Map<string, number>();
-  for (const [area, weight] of normalized) {
+  for (const [area, weight] of Array.from(normalized.entries())) {
     if (weight >= 0.05) {
       filtered.set(area, weight);
     }

@@ -242,7 +242,80 @@ export interface SearchOptions {
 export interface JournalSearchResult {
   journals: Journal[];
   total: number;
-  source: 'openalex' | 'nlm' | 'static';
+  source: 'backend' | 'openalex' | 'nlm' | 'static';
+}
+
+function mapBackendJournal(raw: any, index: number): Journal {
+  return {
+    id: raw.id,
+    name: raw.name,
+    externalId: raw.externalId ?? undefined,
+    abbreviation: raw.abbreviation ?? undefined,
+    coverColor: raw.coverColor ?? GRADIENTS[index % GRADIENTS.length],
+    coverInitial: raw.coverInitial ?? getInitials(raw.name),
+    logoUrl: raw.logoUrl ?? null,
+    impactFactor: raw.impactFactor ?? null,
+    impactFactorYear: raw.impactFactorYear ?? null,
+    avgDecisionDays: raw.avgDecisionDays ?? null,
+    acceptanceRate: raw.acceptanceRate ?? null,
+    openAccess: raw.openAccess ?? null,
+    subjectAreas: raw.subjectAreas ?? ['General'],
+    geographicLocation: raw.geographicLocation ?? 'Unknown',
+    publisher: raw.publisher ?? 'Unknown',
+    issn: raw.issnPrint ?? undefined,
+    issnOnline: raw.issnOnline ?? undefined,
+    website: raw.websiteUrl ?? raw.website ?? undefined,
+    websiteUrl: raw.websiteUrl ?? null,
+    submissionPortalUrl: raw.submissionPortalUrl ?? null,
+    submissionRequirements: raw.submissionRequirements ?? null,
+    apcCostUsd: raw.apcCostUsd ?? null,
+    provenance: raw.provenance ?? undefined,
+    lastVerifiedAt: raw.lastVerifiedAt ?? undefined,
+    formattingRequirements: raw.formattingRequirements ?? undefined,
+  };
+}
+
+async function searchBackend(
+  query: string | null,
+  limit: number,
+  options: SearchOptions = {},
+): Promise<JournalSearchResult | null> {
+  try {
+    const base = import.meta.env.VITE_API_BASE_URL ?? '/api';
+    const endpoint = `${base}/journals`;
+    const params = new URLSearchParams();
+    params.set('page', String(Math.floor((options.offset ?? 0) / limit) + 1));
+    params.set('perPage', String(limit));
+    if (query && query.trim().length > 0) {
+      params.set('q', query.trim());
+    }
+    if (typeof options.isOpenAccess === 'boolean') {
+      params.set('openAccess', String(options.isOpenAccess));
+    }
+    if (options.subjectAreas && options.subjectAreas.length > 0) {
+      params.set('subjectAreas', options.subjectAreas.join(','));
+    }
+
+    const response = await fetch(`${endpoint}?${params.toString()}`, {
+      headers: { Accept: 'application/json' },
+    });
+    if (!response.ok) {
+      return null;
+    }
+
+    const payload = await response.json();
+    if (!payload || !Array.isArray(payload.data)) {
+      return null;
+    }
+
+    return {
+      journals: payload.data.map((journal: any, index: number) => mapBackendJournal(journal, index)),
+      total: typeof payload.total === 'number' ? payload.total : payload.data.length,
+      source: 'backend',
+    };
+  } catch {
+    return null;
+  }
 }
 
 /**
@@ -255,6 +328,11 @@ export async function searchJournals(
   limit = 25,
   options: SearchOptions = {},
 ): Promise<JournalSearchResult> {
+  const backendResult = await searchBackend(query, limit, options);
+  if (backendResult) {
+    return backendResult;
+  }
+
   const [oaResult, nlmResult] = await Promise.allSettled([
     searchOpenAlexJournals(query, limit, options.offset ?? 0),
     searchNlmJournals(query, limit, options.offset ?? 0),
@@ -298,6 +376,11 @@ export async function listJournals(
   limit = 25,
   options: SearchOptions = {},
 ): Promise<JournalSearchResult> {
+  const backendResult = await searchBackend(null, limit, options);
+  if (backendResult) {
+    return backendResult;
+  }
+
   const [oaResult, nlmResult] = await Promise.allSettled([
     browseOpenAlexJournals(limit, options.offset ?? 0),
     browseNlmJournals(limit, options.offset ?? 0, true),

@@ -143,8 +143,10 @@ export interface Journal {
   id: string;
   name: string;
   abbreviation?: string;
+  externalId?: string;
   coverColor: string; // Tailwind gradient class
   coverInitial: string;
+  logoUrl?: string | null;
   impactFactor?: number | null;
   impactFactorYear?: number | null;
   matchScore?: number;
@@ -160,6 +162,9 @@ export interface Journal {
   isMedlineIndexed?: boolean;
   indexingScore?: number | null;
   website?: string;
+  websiteUrl?: string | null;
+  submissionPortalUrl?: string | null;
+  submissionRequirements?: Record<string, unknown> | null;
   formattingRequirements?: JournalFormattingRequirements;
   scoreInsights?: {
     topicRelevance: number;
@@ -176,6 +181,8 @@ export interface Journal {
   doajSeal?: boolean;
   doajId?: string;
   apcCurrency?: string;
+  provenance?: Record<string, string>;
+  lastVerifiedAt?: string;
 }
 
 // ============================================================================
@@ -209,7 +216,7 @@ export interface JournalFilters {
 // Publication Management
 // ============================================================================
 
-export type SubmissionStatus = 'draft' | 'under_review' | 'revision' | 'accepted' | 'rejected';
+export type SubmissionStatus = 'draft' | 'under_review' | 'revision' | 'accepted' | 'rejected' | 'published';
 
 export interface TimelineStep {
   step: string;
@@ -260,6 +267,52 @@ export interface Activity {
 }
 
 // ============================================================================
+// Backend Collaboration Types
+// ============================================================================
+
+export type ProjectMemberRole = 'owner' | 'admin' | 'editor' | 'viewer';
+
+export interface ProjectMember {
+  userId: string;
+  role: ProjectMemberRole;
+  canEdit: boolean;
+  canComment: boolean;
+}
+
+export interface Organization {
+  id: string;
+  name: string;
+  slug: string;
+  createdAt: string;
+}
+
+export interface OrganizationMembership {
+  organizationId: string;
+  role: ProjectMemberRole;
+  organization: Organization;
+}
+
+export interface AuditEvent {
+  id: string;
+  organizationId: string | null;
+  actorUserId: string | null;
+  eventType: string;
+  entityType: string | null;
+  entityId: string | null;
+  payload: Record<string, unknown>;
+  createdAt: string;
+}
+
+export interface PresenceState {
+  userId: string;
+  fullName: string;
+  initials: string;
+  sectionId?: string;
+  cursor?: { from: number; to: number };
+  updatedAt: string;
+}
+
+// ============================================================================
 // UI State Types
 // ============================================================================
 
@@ -302,8 +355,12 @@ export interface CitationFormData {
 }
 
 export interface SubmissionFormData {
-  manuscriptId: string;
-  journalId: string;
+  manuscriptId?: string;
+  journalId?: string;
+  title?: string;
+  journal?: string;
+  status?: SubmissionStatus;
+  submittedDate?: Date;
   coverLetter?: string;
   keywords?: string[];
 }

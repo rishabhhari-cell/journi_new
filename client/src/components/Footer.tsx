@@ -1,11 +1,11 @@
 /**
  * Journi Footer — Nordic Academic Design
  */
-const LOGO_URL = "/journi_black_outline.png";
+const LOGO_URL = "/logos/Journi_new.svg";
 
 export default function Footer() {
   return (
-    <footer className="bg-journi-slate text-white/80">
+    <footer id="support" className="bg-journi-slate text-white/80">
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
@@ -14,7 +14,7 @@ export default function Footer() {
               <img src={LOGO_URL} alt="Journi" className="h-28 w-auto" />
             </div>
             <p className="text-sm leading-relaxed text-white/60">
-              From Start-up to Write-up. Your all-in-one platform for research collaboration, creation, and publication.
+              Journi removes friction from manuscript submission — so you can focus on your research.
             </p>
           </div>
 
