@@ -5,6 +5,7 @@
 import Fuse from 'fuse.js';
 import type { Journal } from '@/types';
 import { MEDICAL_JOURNALS } from '@/data/journals-database';
+import { ACCEPTANCE_RATES } from '@/data/acceptance-rates';
 import { searchNlmJournals, browseNlmJournals, type NlmJournal } from '@/lib/nlm-api';
 import {
   searchOpenAlexJournals,
@@ -198,6 +199,7 @@ async function enrichWithDoaj(journals: Journal[]): Promise<Journal[]> {
         apcCostUsd: j.apcCostUsd ?? (doaj.hasApc ? doaj.apcMax : null),
         apcCurrency: doaj.apcCurrency ?? undefined,
         openAccess: j.openAccess ?? true, // DOAJ listed = OA
+        peerReviewType: doaj.reviewProcesses[0] ?? j.peerReviewType ?? null,
       };
     });
   } catch {
@@ -236,6 +238,7 @@ function getFuse(): Fuse<Journal> {
 export interface SearchOptions {
   offset?: number;
   isOpenAccess?: boolean;
+  isMedline?: boolean;
   subjectAreas?: string[];
 }
 
@@ -269,6 +272,7 @@ function mapBackendJournal(raw: any, index: number): Journal {
     submissionPortalUrl: raw.submissionPortalUrl ?? null,
     submissionRequirements: raw.submissionRequirements ?? null,
     apcCostUsd: raw.apcCostUsd ?? null,
+    peerReviewType: raw.peerReviewType ?? null,
     provenance: raw.provenance ?? undefined,
     lastVerifiedAt: raw.lastVerifiedAt ?? undefined,
     formattingRequirements: raw.formattingRequirements ?? undefined,
@@ -330,7 +334,7 @@ export async function searchJournals(
 ): Promise<JournalSearchResult> {
   const backendResult = await searchBackend(query, limit, options);
   if (backendResult) {
-    return backendResult;
+    return { ...backendResult, journals: enrichWithAcceptanceRate(backendResult.journals) };
   }
 
   const [oaResult, nlmResult] = await Promise.allSettled([
@@ -362,6 +366,7 @@ export async function searchJournals(
   let journals = mergeJournals(nlmJournals, oaJournals);
   journals = applyClientFilters(journals, options);
   journals = await enrichWithDoaj(journals);
+  journals = enrichWithAcceptanceRate(journals);
 
   const source = oaJournals.length > 0 ? 'openalex' : 'nlm';
 
@@ -378,7 +383,7 @@ export async function listJournals(
 ): Promise<JournalSearchResult> {
   const backendResult = await searchBackend(null, limit, options);
   if (backendResult) {
-    return backendResult;
+    return { ...backendResult, journals: enrichWithAcceptanceRate(backendResult.journals) };
   }
 
   const [oaResult, nlmResult] = await Promise.allSettled([
@@ -410,6 +415,7 @@ export async function listJournals(
   let journals = mergeJournals(nlmJournals, oaJournals);
   journals = applyClientFilters(journals, options);
   journals = await enrichWithDoaj(journals);
+  journals = enrichWithAcceptanceRate(journals);
 
   const source = oaJournals.length > 0 ? 'openalex' : 'nlm';
 
@@ -448,11 +454,24 @@ function listStatic(limit: number, options: SearchOptions): JournalSearchResult 
   };
 }
 
+function enrichWithAcceptanceRate(journals: Journal[]): Journal[] {
+  return journals.map((j) => {
+    if (j.acceptanceRate != null) return j;
+    const key = (j.issn ?? j.issnOnline ?? '').replace(/-/g, '');
+    const rate = key ? ACCEPTANCE_RATES[key] : undefined;
+    return rate != null ? { ...j, acceptanceRate: rate } : j;
+  });
+}
+
 function applyClientFilters(journals: Journal[], options: SearchOptions): Journal[] {
   let results = journals;
 
   if (typeof options.isOpenAccess === 'boolean') {
     results = results.filter((j) => j.openAccess === options.isOpenAccess);
+  }
+
+  if (options.isMedline === true) {
+    results = results.filter((j) => j.isMedlineIndexed === true);
   }
 
   if (options.subjectAreas && options.subjectAreas.length > 0) {

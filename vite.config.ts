@@ -177,4 +177,15 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    root: ".",
+    include: ["client/src/**/__tests__/**/*.test.ts"],
+    resolve: {
+      alias: {
+        "@": path.resolve(import.meta.dirname, "client", "src"),
+      },
+    },
+  },
 });

@@ -181,6 +181,7 @@ export interface Journal {
   doajSeal?: boolean;
   doajId?: string;
   apcCurrency?: string;
+  peerReviewType?: string | null;
   provenance?: Record<string, string>;
   lastVerifiedAt?: string;
 }
