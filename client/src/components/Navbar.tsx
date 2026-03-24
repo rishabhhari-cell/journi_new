@@ -4,10 +4,13 @@
  */
 import { Link, useLocation } from "wouter";
 import { useState, useRef, useEffect } from "react";
-import { Menu, X, LogOut, ChevronDown, FlaskConical } from "lucide-react";
+import { Menu, X, LogOut, ChevronDown, FlaskConical, ExternalLink } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
+import ProjectSwitcher from "@/components/ProjectSwitcher";
 
 const LOGO_URL = "/logos/Journi_new.svg";
+
+const APP_ROUTES = ["/dashboard", "/collaboration", "/discovery", "/publication", "/format"];
 
 const publicNavItems = [
   { label: "Features", href: "/features" },
@@ -29,7 +32,10 @@ export default function Navbar() {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const userMenuRef = useRef<HTMLDivElement>(null);
   const { user, isTrial, signOut, openModal, signInAsGuest } = useAuth();
-  const navItems = user ? appNavItems : publicNavItems;
+
+  const isAppRoute = APP_ROUTES.some((r) => location.startsWith(r));
+  const isAuthenticated = !!(user || isTrial);
+  const navItems = isAppRoute ? appNavItems : publicNavItems;
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -49,8 +55,8 @@ export default function Navbar() {
   return (
     <header className="glass fixed top-0 left-0 right-0 z-50">
       <div className="container relative flex items-center h-16">
-        {/* Logo */}
-        <Link href="/" className="flex items-center shrink-0 ml-8">
+        {/* Logo — stays in app when authenticated */}
+        <Link href={isAuthenticated ? "/dashboard" : "/"} className="flex items-center shrink-0 ml-8">
           <img src={LOGO_URL} alt="Journi" className="h-16 w-auto" />
         </Link>
 
@@ -85,7 +91,12 @@ export default function Navbar() {
 
         {/* CTA / User — right */}
         <div className="hidden md:flex items-center gap-3 ml-auto">
-          {user ? (
+          {/* Project switcher — only on app routes */}
+          {isAppRoute && isAuthenticated && (
+            <ProjectSwitcher variant="compact" />
+          )}
+
+          {isAuthenticated ? (
             <div className="relative flex items-center gap-2" ref={userMenuRef}>
               {isTrial && (
                 <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 border border-amber-200">
@@ -97,25 +108,46 @@ export default function Navbar() {
                 className="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-accent transition-colors"
               >
                 <div className="w-7 h-7 rounded-full bg-journi-green text-journi-slate text-xs font-bold flex items-center justify-center shrink-0">
-                  {user.initials}
+                  {user?.initials ?? "?"}
                 </div>
-                <span className="text-sm font-medium text-foreground max-w-[120px] truncate">{user.name}</span>
+                <span className="text-sm font-medium text-foreground max-w-[120px] truncate">{user?.name ?? "Trial User"}</span>
                 <ChevronDown size={14} className={`text-muted-foreground transition-transform ${userMenuOpen ? "rotate-180" : ""}`} />
               </button>
 
               {userMenuOpen && (
                 <div className="absolute right-0 top-full mt-1.5 w-52 bg-card border border-border rounded-xl shadow-lg py-1.5 z-10">
                   <div className="px-4 py-2.5 border-b border-border">
-                    <p className="text-xs font-semibold text-foreground truncate">{user.name}</p>
-                    <p className="text-xs text-muted-foreground truncate">{user.email}</p>
+                    <p className="text-xs font-semibold text-foreground truncate">{user?.name ?? "Trial User"}</p>
+                    {user?.email && <p className="text-xs text-muted-foreground truncate">{user.email}</p>}
                   </div>
-                  <button
-                    onClick={handleSignOut}
-                    className="w-full flex items-center gap-2 px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                  >
-                    <LogOut size={14} />
-                    Sign Out
-                  </button>
+                  {/* Marketing page links */}
+                  <div className="py-1">
+                    <p className="px-4 py-1 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">Journi</p>
+                    {[
+                      { label: "Features", href: "/features" },
+                      { label: "Pricing", href: "/pricing" },
+                      { label: "About Us", href: "/about" },
+                    ].map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setUserMenuOpen(false)}
+                        className="w-full flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                      >
+                        <ExternalLink size={12} />
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="border-t border-border pt-1">
+                    <button
+                      onClick={handleSignOut}
+                      className="w-full flex items-center gap-2 px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                    >
+                      <LogOut size={14} />
+                      Sign Out
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
@@ -179,17 +211,34 @@ export default function Navbar() {
             })}
 
             <div className="mt-3 pt-3 border-t border-border">
-              {user ? (
+              {isAuthenticated ? (
                 <div className="space-y-1">
                   <div className="flex items-center gap-2.5 px-3 py-2">
                     <div className="w-8 h-8 rounded-full bg-journi-green text-journi-slate text-xs font-bold flex items-center justify-center shrink-0">
-                      {user.initials}
+                      {user?.initials ?? "?"}
                     </div>
                     <div className="min-w-0">
-                      <p className="text-sm font-medium text-foreground truncate">{user.name}</p>
-                      <p className="text-xs text-muted-foreground truncate">{user.email}</p>
+                      <p className="text-sm font-medium text-foreground truncate">{user?.name ?? "Trial User"}</p>
+                      {user?.email && <p className="text-xs text-muted-foreground truncate">{user.email}</p>}
                     </div>
                   </div>
+                  {/* Marketing links in mobile menu */}
+                  <p className="px-3 pt-1 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">Journi</p>
+                  {[
+                    { label: "Features", href: "/features" },
+                    { label: "Pricing", href: "/pricing" },
+                    { label: "About Us", href: "/about" },
+                  ].map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
+                    >
+                      <ExternalLink size={12} />
+                      {item.label}
+                    </Link>
+                  ))}
                   <button
                     onClick={handleSignOut}
                     className="w-full flex items-center gap-2 px-3 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"

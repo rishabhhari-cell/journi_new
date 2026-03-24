@@ -16,6 +16,7 @@ import {
   Timer,
   X,
   Send,
+  PanelLeft,
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import ProjectSwitcher from '@/components/ProjectSwitcher';
@@ -51,6 +52,7 @@ export default function Dashboard() {
   const [isTaskDialogOpen, setIsTaskDialogOpen] = useState(false);
   const [editingTask, setEditingTask] = useState<Task | undefined>(undefined);
   const [showNotifications, setShowNotifications] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleOpenNewTaskDialog = () => {
     setEditingTask(undefined);
@@ -107,10 +109,19 @@ export default function Dashboard() {
       <Navbar />
 
       <div className="flex flex-1 pt-16">
-        {/* Sidebar */}
-        <aside className="hidden lg:flex flex-col w-60 bg-card border-r border-border pt-6 pb-4 shrink-0">
-          <div className="px-5 mb-6">
-            <ProjectSwitcher variant="sidebar" />
+        {/* Sidebar — slim: project switcher + stats only */}
+        {/* Mobile overlay */}
+        {sidebarOpen && (
+          <div className="fixed inset-0 z-20 bg-black/40 lg:hidden" onClick={() => setSidebarOpen(false)} />
+        )}
+        <aside className={`
+          fixed lg:relative top-16 lg:top-0 left-0 h-[calc(100vh-4rem)] lg:h-auto
+          flex flex-col w-60 bg-card border-r border-border pt-6 pb-4 shrink-0 z-20
+          transition-transform duration-200
+          ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+        `}>
+          <div className="px-5 mb-4">
+            <ProjectSwitcher variant="sidebar" onSwitch={() => setSidebarOpen(false)} />
             <span className="inline-flex items-center gap-1.5 mt-2 px-2 py-0.5 rounded-full bg-status-progress/15 text-status-progress text-xs font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-status-progress" />
               In Progress
@@ -120,25 +131,8 @@ export default function Dashboard() {
             </p>
           </div>
 
-          <nav className="flex-1 px-3">
-            {sidebarItems.map((item) => (
-              <button
-                key={item.tab}
-                onClick={() => setActiveTab(item.tab)}
-                className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors mb-0.5
-                  ${activeTab === item.tab
-                    ? 'bg-journi-green/10 text-journi-green'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-accent'
-                  }`}
-              >
-                <item.icon size={18} />
-                {item.label}
-              </button>
-            ))}
-          </nav>
-
           {project.collaborators[0] && (
-            <div className="px-5 pt-4 border-t border-border">
+            <div className="mt-auto px-5 pt-4 border-t border-border">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-journi-green/20 flex items-center justify-center text-xs font-bold text-journi-green">
                   {project.collaborators[0].initials}
@@ -155,6 +149,31 @@ export default function Dashboard() {
         {/* Main Content */}
         <main className="flex-1 overflow-auto">
           <div className="p-6 lg:p-8 max-w-[1400px]">
+            {/* Horizontal tab bar */}
+            <div className="flex items-center gap-1 border-b border-border mb-6 -mx-6 lg:-mx-8 px-6 lg:px-8">
+              {/* Mobile sidebar toggle */}
+              <button
+                onClick={() => setSidebarOpen(true)}
+                className="lg:hidden p-1.5 mr-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+              >
+                <PanelLeft size={18} />
+              </button>
+              {sidebarItems.map((item) => (
+                <button
+                  key={item.tab}
+                  onClick={() => setActiveTab(item.tab)}
+                  className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors whitespace-nowrap
+                    ${activeTab === item.tab
+                      ? 'border-journi-green text-journi-green'
+                      : 'border-transparent text-muted-foreground hover:text-foreground'
+                    }`}
+                >
+                  <item.icon size={15} />
+                  {item.label}
+                </button>
+              ))}
+            </div>
+
             {/* Header */}
             <div className="flex items-center justify-between mb-8">
               <div>
