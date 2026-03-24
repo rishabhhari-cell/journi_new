@@ -107,3 +107,6 @@ temp/
 
 # Webdev artifacts (checkpoint zips, migrations, etc.)
 .webdev/
+
+# Local codex/claude nested repos should never be tracked
+.claude/skills/agent-skills/
