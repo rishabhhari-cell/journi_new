@@ -42,6 +42,8 @@ interface OpenAlexSource {
   type: string;
   '2yr_mean_citedness': number | null;
   alternate_titles: string[] | null;
+  image_url: string | null;
+  image_thumbnail_url: string | null;
 }
 
 interface OpenAlexSearchResponse {
@@ -73,6 +75,8 @@ export interface OpenAlexJournal {
   homepageUrl: string | null;
   countryCode: string | null;
   impactFactor: number | null; // 2yr mean citedness proxy
+  imageUrl: string | null;
+  imageThumbnailUrl: string | null;
 }
 
 export interface OpenAlexSearchResult {
@@ -113,6 +117,8 @@ function parseSource(source: OpenAlexSource): OpenAlexJournal {
     homepageUrl: source.homepage_url,
     countryCode: source.country_code,
     impactFactor: source['2yr_mean_citedness'],
+    imageUrl: source.image_url ?? null,
+    imageThumbnailUrl: source.image_thumbnail_url ?? null,
   };
 }
 

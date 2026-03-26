@@ -90,6 +90,7 @@ function openAlexToJournal(oa: OpenAlexJournal, index: number): Journal {
     citationsCount: oa.citationsCount,
     worksCount: oa.worksCount,
     isDoajListed: oa.isInDoaj,
+    logoUrl: oa.imageUrl ?? null,
   };
 }
 

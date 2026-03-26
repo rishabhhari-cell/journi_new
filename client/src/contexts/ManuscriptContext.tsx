@@ -590,10 +590,13 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
   }, [activeSection, manuscript?.id]);
 
   useEffect(() => {
-    if (manuscript?.sections.length > 0) {
-      setActiveSection(manuscript.sections[0].title);
-    }
-  }, [activeManuscriptId, manuscript]);
+    if (!manuscript?.sections.length) return;
+    setActiveSection((prev) => {
+      if (prev === '__everything__') return prev;
+      const hasCurrent = manuscript.sections.some((section) => section.title === prev);
+      return hasCurrent ? prev : manuscript.sections[0].title;
+    });
+  }, [activeManuscriptId, manuscript?.sections]);
 
   const updateManuscript = useCallback((updater: (doc: Manuscript) => Manuscript) => {
     setManuscripts((prev) => prev.map((doc) => (doc.id === activeManuscriptId ? updater(doc) : doc)));
@@ -637,15 +640,12 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
   }, [activeProject?.id, backendMode]);
 
   const deleteManuscript = useCallback((id: string) => {
-    setManuscripts((prev) => {
-      const filtered = prev.filter((doc) => doc.id !== id);
-      return filtered.length > 0 ? filtered : prev;
-    });
+    setManuscripts((prev) => prev.filter((doc) => doc.id !== id));
 
     setActiveManuscriptId((prevId) => {
       if (prevId !== id) return prevId;
       const remaining = manuscripts.filter((doc) => doc.id !== id);
-      return remaining[0]?.id ?? prevId;
+      return remaining[0]?.id ?? '';
     });
 
     if (backendMode) {

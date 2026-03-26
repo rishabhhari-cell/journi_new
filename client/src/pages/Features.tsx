@@ -163,7 +163,7 @@ const CHAOS_ROWS: ChaosRow[] = [
     with:    "CONSORT, STROBE and more, integrated into the manuscript workflow",
   },
   {
-    without: "v3_FINAL_FINAL_edit2.docx",
+    without: `No more "v3_FINAL_FINAL_edit2.docx" documents`,
     with:    "Automatic version history, section-by-section and recoverable",
   },
 ];

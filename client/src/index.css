@@ -95,7 +95,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -177,7 +177,8 @@
     animation: marquee-scroll 80s linear infinite;
   }
 
-  .animate-marquee:hover {
+  /* Only pause on hover for default (light-bg) marquee — not the hero */
+  .animate-marquee-pauseable:hover {
     animation-play-state: paused;
   }
 }

@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { ExternalLink, FileUp, Loader2 } from 'lucide-react';
+import { ExternalLink, FileUp, Loader2, Search } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import SearchBar from '@/components/discovery/SearchBar';
 import FilterPanel from '@/components/discovery/FilterPanel';
@@ -29,37 +29,66 @@ export default function Discovery() {
     setResultsPerPage,
     paginatedJournals,
     allJournals,
-    dataSource,
     isLoading,
   } = useJournals();
 
   const [selectedJournal, setSelectedJournal] = useState<Journal | null>(null);
 
   const isIdle = !searchQuery.trim();
-  const canShowMarquee = isIdle && allJournals.length > 0;
-
   const cards = useMemo(() => paginatedJournals, [paginatedJournals]);
 
   return (
     <div className="min-h-screen bg-muted/20">
       <Navbar />
-      <main className="pt-20 pb-16">
-        <section className="container space-y-6">
-          <div className="text-center space-y-2">
-            <h1 className="text-3xl md:text-4xl font-extrabold text-foreground">Journal Discovery</h1>
-            <p className="text-sm text-muted-foreground">
-              Search, compare, and shortlist journals with structured submission metadata.
-            </p>
-          </div>
 
-          <SearchBar onSearch={setSearchQuery} />
-          <FilterPanel filters={filters} onFiltersChange={setFilters} />
+      {/* ── Hero Section ──────────────────────────────────────────────────── */}
+      <div
+        className={`relative overflow-hidden transition-all duration-500 ease-in-out bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900
+          ${isIdle ? 'h-[560px]' : 'h-[120px]'}`}
+      >
+        {/* Scattered journal covers — behind everything */}
+        {allJournals.length > 0 && isIdle && (
+          <JournalMarquee
+            journals={allJournals.slice(0, 40)}
+            variant="hero"
+          />
+        )}
 
-          {canShowMarquee && (
-            <div className="pt-2">
-              <JournalMarquee journals={allJournals.slice(0, 100)} totalAvailable={totalResults} rows={4} />
+        {/* Vignette: darkens edges, keeps centre clear so covers are visible */}
+        <div className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'radial-gradient(ellipse 70% 80% at 50% 50%, transparent 20%, rgba(15,23,42,0.55) 70%, rgba(15,23,42,0.90) 100%)',
+          }}
+        />
+
+        {/* Centered hero content */}
+        <div className="relative z-10 flex flex-col items-center justify-center h-full pt-20 pb-10 px-4">
+          {isIdle && (
+            <div className="text-center mb-8 animate-in fade-in duration-300">
+              <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight drop-shadow-lg">
+                Find Your Journal
+              </h1>
+              <p className="mt-3 text-base text-white/60 max-w-md mx-auto">
+                Search{' '}
+                <span className="font-semibold text-white/80">
+                  {totalResults.toLocaleString()}
+                </span>{' '}
+                indexed medical journals and shortlist with confidence.
+              </p>
             </div>
           )}
+
+          {/* Search bar — always visible in hero */}
+          <div className="w-full max-w-2xl">
+            <SearchBar onSearch={setSearchQuery} dark />
+          </div>
+        </div>
+      </div>
+
+      {/* ── Below-hero content ─────────────────────────────────────────────── */}
+      <main className="pb-16">
+        <section className="container space-y-4 pt-6">
+          <FilterPanel filters={filters} onFiltersChange={setFilters} />
 
           <section className="space-y-4">
             {isLoading && (
@@ -69,10 +98,17 @@ export default function Discovery() {
               </div>
             )}
 
-            {!isLoading && cards.length === 0 && (
+            {!isLoading && !isIdle && cards.length === 0 && (
               <div className="text-center py-16 border border-dashed border-border rounded-xl bg-card">
                 <p className="text-foreground font-medium">No journals match the current filters.</p>
                 <p className="text-sm text-muted-foreground mt-1">Try broadening the search criteria.</p>
+              </div>
+            )}
+
+            {!isLoading && isIdle && cards.length === 0 && (
+              <div className="text-center py-16 text-muted-foreground">
+                <Search size={32} className="mx-auto mb-3 opacity-30" />
+                <p className="text-sm">Start typing above to search journals</p>
               </div>
             )}
 
@@ -107,7 +143,7 @@ export default function Discovery() {
                           </div>
                           <button
                             onClick={() => setSelectedJournal(journal)}
-                            className="text-xs font-semibold text-journi-green hover:underline"
+                            className="text-xs font-semibold text-journi-green hover:underline shrink-0"
                           >
                             View details
                           </button>

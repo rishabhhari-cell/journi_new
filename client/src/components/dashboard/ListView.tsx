@@ -4,7 +4,7 @@
  */
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Edit2, Trash2, Calendar, Users, ArrowUpDown } from 'lucide-react';
+import { Edit2, Trash2, Users, ArrowUpDown } from 'lucide-react';
 import type { Task, Collaborator } from '@/types';
 import { format } from 'date-fns';
 import { getDaysDifference } from '@/lib/date-utils';
@@ -34,10 +34,11 @@ export default function ListView({ tasks, collaborators, onTaskClick, onTaskDele
   // Helper to get collaborator names
   const getAssigneeNames = (assignedTo?: string[]) => {
     if (!assignedTo || assignedTo.length === 0) return 'Unassigned';
-    return assignedTo
+    const names = assignedTo
       .map((id) => collaborators.find((c) => c.id === id)?.name)
-      .filter(Boolean)
-      .join(', ');
+      .filter(Boolean) as string[];
+    if (names.length <= 2) return names.join(', ');
+    return `${names.slice(0, 2).join(', ')} +${names.length - 2}`;
   };
 
   // Sort handler
@@ -91,29 +92,23 @@ export default function ListView({ tasks, collaborators, onTaskClick, onTaskDele
   );
 
   return (
-    <div className="overflow-x-auto">
-      <table className="w-full">
+    <div className="w-full">
+      <table className="w-full table-fixed">
         <thead>
           <tr className="border-b border-border">
-            <th className="text-left py-3 px-4 text-xs font-bold text-foreground uppercase tracking-wider">
+            <th className="w-[34%] text-left py-3 px-3 text-xs font-bold text-foreground uppercase tracking-wider">
               <SortButton field="name">Task Name</SortButton>
             </th>
-            <th className="text-left py-3 px-4 text-xs font-bold text-foreground uppercase tracking-wider">
+            <th className="w-[14%] text-left py-3 px-3 text-xs font-bold text-foreground uppercase tracking-wider">
               <SortButton field="status">Status</SortButton>
             </th>
-            <th className="text-left py-3 px-4 text-xs font-bold text-foreground uppercase tracking-wider">
-              <SortButton field="startDate">Start Date</SortButton>
+            <th className="w-[20%] text-left py-3 px-3 text-xs font-bold text-foreground uppercase tracking-wider">
+              <SortButton field="endDate">Timeline</SortButton>
             </th>
-            <th className="text-left py-3 px-4 text-xs font-bold text-foreground uppercase tracking-wider">
-              <SortButton field="endDate">End Date</SortButton>
-            </th>
-            <th className="text-left py-3 px-4 text-xs font-bold text-foreground uppercase tracking-wider">
-              <SortButton field="duration">Duration</SortButton>
-            </th>
-            <th className="text-left py-3 px-4 text-xs font-bold text-foreground uppercase tracking-wider">
+            <th className="w-[24%] text-left py-3 px-3 text-xs font-bold text-foreground uppercase tracking-wider">
               Assigned To
             </th>
-            <th className="text-right py-3 px-4 text-xs font-bold text-foreground uppercase tracking-wider">
+            <th className="w-[8%] text-right py-3 px-3 text-xs font-bold text-foreground uppercase tracking-wider">
               Actions
             </th>
           </tr>
@@ -121,7 +116,7 @@ export default function ListView({ tasks, collaborators, onTaskClick, onTaskDele
         <tbody>
           {sortedTasks.length === 0 ? (
             <tr>
-              <td colSpan={7} className="text-center py-8 text-sm text-muted-foreground">
+              <td colSpan={5} className="text-center py-8 text-sm text-muted-foreground">
                 No tasks yet. Create your first task to get started!
               </td>
             </tr>
@@ -140,19 +135,14 @@ export default function ListView({ tasks, collaborators, onTaskClick, onTaskDele
                   onClick={() => onTaskClick(task.id)}
                 >
                   {/* Task Name */}
-                  <td className="py-3 px-4">
-                    <div>
-                      <p className="text-sm font-medium text-foreground">{task.name}</p>
-                      {task.description && (
-                        <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1">
-                          {task.description}
-                        </p>
-                      )}
-                    </div>
+                  <td className="py-3 px-3 align-middle">
+                    <p className="text-sm font-medium text-foreground truncate" title={task.name}>
+                      {task.name}
+                    </p>
                   </td>
 
                   {/* Status */}
-                  <td className="py-3 px-4">
+                  <td className="py-3 px-3 align-middle">
                     <span
                       className={`inline-flex items-center gap-1.5 px-2 py-1 rounded-full text-xs font-medium ${config.color}/15 ${config.textColor}`}
                     >
@@ -161,41 +151,29 @@ export default function ListView({ tasks, collaborators, onTaskClick, onTaskDele
                     </span>
                   </td>
 
-                  {/* Start Date */}
-                  <td className="py-3 px-4">
-                    <div className="flex items-center gap-1.5 text-sm text-foreground">
-                      <Calendar size={14} className="text-muted-foreground" />
-                      {format(task.startDate, 'MMM d, yyyy')}
+                  <td className="py-3 px-3 align-middle">
+                    <div className="text-sm text-foreground">
+                      <p className="truncate" title={`${format(task.startDate, 'MMM d')} - ${format(task.endDate, 'MMM d, yyyy')}`}>
+                        {format(task.startDate, 'MMM d')} - {format(task.endDate, 'MMM d, yyyy')}
+                      </p>
+                      <p className="text-xs text-muted-foreground mt-0.5">
+                        {duration} {duration === 1 ? 'day' : 'days'}
+                      </p>
                     </div>
-                  </td>
-
-                  {/* End Date */}
-                  <td className="py-3 px-4">
-                    <div className="flex items-center gap-1.5 text-sm text-foreground">
-                      <Calendar size={14} className="text-muted-foreground" />
-                      {format(task.endDate, 'MMM d, yyyy')}
-                    </div>
-                  </td>
-
-                  {/* Duration */}
-                  <td className="py-3 px-4">
-                    <span className="text-sm text-foreground">
-                      {duration} {duration === 1 ? 'day' : 'days'}
-                    </span>
                   </td>
 
                   {/* Assigned To */}
-                  <td className="py-3 px-4">
+                  <td className="py-3 px-3 pr-5 align-middle">
                     <div className="flex items-center gap-1.5">
                       <Users size={14} className="text-muted-foreground" />
-                      <span className="text-sm text-foreground">
+                      <span className="text-sm text-foreground" title={getAssigneeNames(task.assignedTo)}>
                         {getAssigneeNames(task.assignedTo)}
                       </span>
                     </div>
                   </td>
 
                   {/* Actions */}
-                  <td className="py-3 px-4">
+                  <td className="py-3 px-3 pl-4 align-middle">
                     <div className="flex items-center justify-end gap-2">
                       <button
                         onClick={(e) => {

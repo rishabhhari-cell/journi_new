@@ -10,7 +10,7 @@ import {
   CheckCircle, Circle, BookOpen, MessageSquare, Pencil, Check, FileText,
   Upload, FileDown, Loader2, MessageSquarePlus, Layers, Plus, Trash2,
   FilePlus2, FileUp, ChevronDown, DollarSign, AlertTriangle, Minus,
-  BookMarked, Database,
+  BookMarked, Database, Send, X,
 } from 'lucide-react';
 import { useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
@@ -35,6 +35,7 @@ import EditorToolbar from '@/components/collaboration/EditorToolbar';
 import CitationDialog from '@/components/collaboration/CitationDialog';
 import ReferencesSection from '@/components/collaboration/ReferencesSection';
 import CommentThread from '@/components/collaboration/CommentThread';
+import SubmitToJournalDialog from '@/components/publication/SubmitToJournalDialog';
 import { useManuscript } from '@/contexts/ManuscriptContext';
 import type { CitationFormData, CommentFormData, DocumentSection, ManuscriptType } from '@/types';
 import { format } from 'date-fns';
@@ -150,6 +151,12 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
 
   // New manuscript wizard
   const [showWizard, setShowWizard] = useState(false);
+
+  // Submit to journal dialog
+  const [submitDialogOpen, setSubmitDialogOpen] = useState(false);
+
+  // OUP seed confirmation
+  const [seedConfirmOpen, setSeedConfirmOpen] = useState(false);
 
   // Literature review — search strategy tracker
   const [litSearchDbs, setLitSearchDbs] = useState<string[]>(['PubMed/MEDLINE']);
@@ -591,18 +598,16 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   };
 
   const handleSeedOupPaper = () => {
+    setSeedConfirmOpen(true);
+  };
+
+  const handleConfirmSeedImport = () => {
     const seedSections = OUP_AI_REVIEW_SEED.sections;
     const existingSections = [...manuscript.sections].sort((a, b) => a.order - b.order);
-
-    if (existingSections.length < seedSections.length) {
-      toast.error('This manuscript template has fewer sections than required for the seeded paper.');
-      return;
-    }
+    const timestamp = Date.now();
 
     const updated = existingSections.map((section, index) => {
-      if (index >= seedSections.length) {
-        return { ...section, order: index };
-      }
+      if (index >= seedSections.length) return { ...section, order: index };
       const seed = seedSections[index];
       return {
         ...section,
@@ -615,6 +620,21 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
       };
     });
 
+    if (seedSections.length > existingSections.length) {
+      for (let i = existingSections.length; i < seedSections.length; i++) {
+        const seed = seedSections[i];
+        updated.push({
+          id: `seeded-${timestamp}-${i}`,
+          title: seed.title,
+          content: normalizeImportedText(seed.content),
+          status: 'draft',
+          lastEditedBy: 'Seed Import',
+          lastEditedAt: new Date(),
+          order: i,
+        });
+      }
+    }
+
     updateTitle(OUP_AI_REVIEW_SEED.manuscriptTitle);
     replaceSections(updated);
     addCitations(
@@ -626,6 +646,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     );
     setActiveSection('Title');
     setActiveTab('editor');
+    setSeedConfirmOpen(false);
     toast.success(`Loaded seeded OUP paper (${OUP_AI_REVIEW_SEED.citations.length} references)`);
   };
 
@@ -669,10 +690,6 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
 
   // Delete document
   const handleDeleteDocument = (id: string) => {
-    if (manuscripts.length <= 1) {
-      toast.error('Cannot delete the only document');
-      return;
-    }
     if (window.confirm('Delete this document? This cannot be undone.')) {
       deleteManuscript(id);
       toast.success('Document deleted');
@@ -763,6 +780,70 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
 
   // ========================================
   // Onboarding screen (when manuscript is empty)
+  // ========================================
+  // Zero manuscripts — "Get Started" screen
+  // ========================================
+  if (manuscripts.length === 0) {
+    return (
+      <div className="min-h-screen flex flex-col bg-muted/30">
+        <Navbar />
+        <div className="flex flex-1 pt-16 items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-lg w-full mx-4"
+          >
+            <div className="bg-card rounded-2xl border border-border p-10 text-center shadow-sm">
+              <div className="w-16 h-16 rounded-2xl bg-journi-green/10 flex items-center justify-center mx-auto mb-6">
+                <FilePlus2 size={32} className="text-journi-green" />
+              </div>
+
+              <h1 className="text-2xl font-bold text-foreground mb-2">Get Started</h1>
+              <p className="text-sm text-muted-foreground mb-8">
+                Create a new manuscript or import an existing paper to begin.
+              </p>
+
+              <div className="space-y-3">
+                <button
+                  onClick={() => setShowWizard(true)}
+                  className="w-full flex items-center justify-center gap-3 px-5 py-3.5 text-sm font-medium text-white bg-journi-green hover:bg-journi-green/90 rounded-xl transition-colors"
+                >
+                  <FilePlus2 size={18} />
+                  Start new manuscript
+                </button>
+
+                <button
+                  onClick={() => fileInputRef.current?.click()}
+                  disabled={isImporting}
+                  className="w-full flex items-center justify-center gap-3 px-5 py-3.5 text-sm font-medium text-foreground bg-accent hover:bg-accent/80 rounded-xl transition-colors disabled:opacity-50 border border-border"
+                >
+                  {isImporting ? <Loader2 size={18} className="animate-spin" /> : <FileUp size={18} />}
+                  {isImporting ? 'Importing...' : 'Already started? Import your paper (.docx or .pdf)'}
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept=".docx,.pdf"
+          className="hidden"
+          onChange={handleImportFile}
+        />
+
+        <NewManuscriptWizard
+          open={showWizard}
+          onClose={() => setShowWizard(false)}
+          onComplete={handleWizardComplete}
+          manuscriptTypeLabels={manuscriptTypeLabels}
+        />
+      </div>
+    );
+  }
+
   // ========================================
   if (isManuscriptEmpty && !isEverythingView) {
     return (
@@ -908,18 +989,16 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                       <span className="text-[9px] text-muted-foreground shrink-0">
                         {manuscriptTypeLabels[m.type]}
                       </span>
-                      {manuscripts.length > 1 && m.id !== activeManuscriptId && (
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleDeleteDocument(m.id);
-                          }}
-                          className="p-0.5 rounded hover:bg-status-delayed/10 text-muted-foreground hover:text-status-delayed shrink-0"
-                          title="Delete document"
-                        >
-                          <Trash2 size={11} />
-                        </button>
-                      )}
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleDeleteDocument(m.id);
+                        }}
+                        className="p-0.5 rounded hover:bg-status-delayed/10 text-muted-foreground hover:text-status-delayed shrink-0"
+                        title="Delete document"
+                      >
+                        <Trash2 size={11} />
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -1103,8 +1182,19 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
             </div>
           </div>
 
+          {/* Submit button */}
+          <div className="px-3 pt-3 border-t border-border">
+            <button
+              onClick={() => setSubmitDialogOpen(true)}
+              className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-journi-green text-journi-slate text-[11px] font-semibold rounded-lg hover:opacity-90 transition-opacity"
+            >
+              <Send size={12} />
+              Submit Paper
+            </button>
+          </div>
+
           {/* Export */}
-          <div className="px-3 pt-3 pb-3 border-t border-border space-y-1.5">
+          <div className="px-3 pt-3 pb-3 border-border space-y-1.5">
             <div className="flex gap-1.5">
               <button
                 onClick={() => fileInputRef.current?.click()}
@@ -1800,6 +1890,88 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         onComplete={handleWizardComplete}
         manuscriptTypeLabels={manuscriptTypeLabels}
       />
+
+      {/* Submit to Journal Dialog */}
+      <SubmitToJournalDialog
+        isOpen={submitDialogOpen}
+        onClose={() => setSubmitDialogOpen(false)}
+        manuscriptTitle={manuscript.title}
+        manuscriptId={manuscript.id}
+      />
+
+      {/* OUP Seed import confirmation */}
+      {seedConfirmOpen && (() => {
+        const totalWords = OUP_AI_REVIEW_SEED.sections.reduce(
+          (sum, s) => sum + countWords(s.content), 0
+        );
+        return (
+          <>
+            <div className="fixed inset-0 bg-black/50 z-40 backdrop-blur-sm" onClick={() => setSeedConfirmOpen(false)} />
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+              <div className="bg-card rounded-2xl border border-border shadow-xl w-full max-w-md overflow-hidden">
+                <div className="flex items-center justify-between px-6 py-5 border-b border-border">
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-lg bg-journi-green/15 flex items-center justify-center">
+                      <Upload size={18} className="text-journi-green" />
+                    </div>
+                    <div>
+                      <h2 className="text-base font-bold text-foreground">Import Demo Paper</h2>
+                      <p className="text-xs text-muted-foreground">Review details before loading</p>
+                    </div>
+                  </div>
+                  <button onClick={() => setSeedConfirmOpen(false)} className="p-1.5 rounded-lg hover:bg-accent text-muted-foreground transition-colors">
+                    <X size={18} />
+                  </button>
+                </div>
+                <div className="px-6 py-5 space-y-4">
+                  <div className="rounded-xl bg-muted/50 border border-border divide-y divide-border overflow-hidden">
+                    <div className="px-4 py-3">
+                      <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-1">Paper Title</p>
+                      <p className="text-sm font-medium text-foreground leading-snug">{OUP_AI_REVIEW_SEED.paperTitle}</p>
+                    </div>
+                    <div className="px-4 py-3 flex gap-6">
+                      <div>
+                        <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-1">Type</p>
+                        <p className="text-sm font-medium text-foreground">Literature Review</p>
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-1">Sections</p>
+                        <p className="text-sm font-medium text-foreground">{OUP_AI_REVIEW_SEED.sections.length}</p>
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-1">Word Count</p>
+                        <p className="text-sm font-medium text-foreground">{totalWords.toLocaleString()}</p>
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-1">References</p>
+                        <p className="text-sm font-medium text-foreground">{OUP_AI_REVIEW_SEED.citations.length}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    This will replace your current editor content with the demo paper. Your existing work will be overwritten.
+                  </p>
+                  <div className="flex gap-3">
+                    <button
+                      onClick={() => setSeedConfirmOpen(false)}
+                      className="flex-1 px-4 py-2.5 border border-border rounded-xl text-sm font-medium text-foreground hover:bg-accent transition-colors"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={handleConfirmSeedImport}
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-journi-green text-journi-slate rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity"
+                    >
+                      <Upload size={14} />
+                      Confirm Import
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        );
+      })()}
     </div>
   );
 }

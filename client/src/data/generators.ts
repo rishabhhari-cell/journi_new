@@ -71,6 +71,11 @@ const FIRST_NAMES = ['Emily', 'Michael', 'Sarah', 'David', 'Lisa', 'John', 'Mari
 const LAST_NAMES = ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis', 'Rodriguez', 'Martinez'];
 const SUBJECT_AREAS = ['Molecular Biology', 'Neuroscience', 'Oncology', 'Cardiology', 'Immunology', 'Genetics', 'Pharmacology', 'Public Health', 'Biochemistry', 'Cell Biology'];
 
+function generateOrcid(): string {
+  const seg = () => String(Math.floor(1000 + Math.random() * 9000));
+  return `${seg()}-${seg()}-${seg()}-${seg()}`;
+}
+
 function generateCollaborator(role: CollaboratorRole): Collaborator {
   const firstName = randomElement(FIRST_NAMES);
   const lastName = randomElement(LAST_NAMES);
@@ -83,6 +88,7 @@ function generateCollaborator(role: CollaboratorRole): Collaborator {
     role,
     initials,
     online: Math.random() > 0.5,
+    orcidId: Math.random() > 0.25 ? generateOrcid() : undefined, // ~75% have ORCID
   };
 }
 

@@ -27,6 +27,8 @@ import ListView from '@/components/dashboard/ListView';
 import TaskDialog from '@/components/dashboard/TaskDialog';
 import CollaboratorManager from '@/components/dashboard/CollaboratorManager';
 import { useProject } from '@/contexts/ProjectContext';
+import { useSubmissions } from '@/contexts/SubmissionsContext';
+import { useManuscript } from '@/contexts/ManuscriptContext';
 import type { Task, TaskFormData } from '@/types';
 import { format, differenceInDays } from 'date-fns';
 
@@ -48,6 +50,15 @@ const statusConfig: Record<string, { color: string; bg: string; label: string }>
   upcoming:  { color: 'bg-status-upcoming',  bg: 'bg-status-upcoming/15',  label: 'Upcoming' },
 };
 
+const submissionStatusConfig: Record<string, { label: string; text: string; bg: string; dot: string }> = {
+  draft: { label: 'Draft', text: 'text-muted-foreground', bg: 'bg-muted/60', dot: 'bg-muted-foreground' },
+  under_review: { label: 'Under Review', text: 'text-blue-600', bg: 'bg-blue-50', dot: 'bg-blue-500' },
+  revision: { label: 'Revision', text: 'text-amber-600', bg: 'bg-amber-50', dot: 'bg-amber-500' },
+  accepted: { label: 'Accepted', text: 'text-journi-green', bg: 'bg-journi-green/10', dot: 'bg-journi-green' },
+  rejected: { label: 'Rejected', text: 'text-status-delayed', bg: 'bg-status-delayed/10', dot: 'bg-status-delayed' },
+  published: { label: 'Published', text: 'text-purple-600', bg: 'bg-purple-50', dot: 'bg-purple-500' },
+};
+
 export default function Dashboard() {
   const {
     project,
@@ -59,6 +70,8 @@ export default function Dashboard() {
     removeCollaborator,
     updateCollaborator,
   } = useProject();
+  const { submissions } = useSubmissions();
+  const { manuscripts } = useManuscript();
 
   const [activeTab, setActiveTab] = useState<DashboardTab>('overview');
   const [isTaskDialogOpen, setIsTaskDialogOpen] = useState(false);
@@ -92,7 +105,28 @@ export default function Dashboard() {
   const upcomingDeadlines = project.tasks
     .filter((t) => t.status !== 'completed' && safeDate(t.endDate) > now)
     .sort((a, b) => safeDate(a.endDate).getTime() - safeDate(b.endDate).getTime())
-    .slice(0, 4);
+    .slice(0, 6);
+
+  const manuscriptCitationCount = Object.fromEntries(
+    manuscripts.map((doc) => [doc.id, doc.citations.length]),
+  );
+
+  const publicationLog = [...submissions]
+    .sort((a, b) => {
+      const aTime = safeDate(a.actualDecisionDate || a.submittedDate || a.estimatedDecisionDate || now).getTime();
+      const bTime = safeDate(b.actualDecisionDate || b.submittedDate || b.estimatedDecisionDate || now).getTime();
+      return bTime - aTime;
+    })
+    .map((submission) => ({
+      ...submission,
+      citationCount: manuscriptCitationCount[submission.manuscriptId] ?? 0,
+      lastUpdated: safeDate(
+        submission.actualDecisionDate || submission.submittedDate || submission.estimatedDecisionDate || now,
+      ),
+    }));
+
+  const publishedCount = publicationLog.filter((s) => s.status === 'published').length;
+  const acceptedCount = publicationLog.filter((s) => s.status === 'accepted').length;
 
   const tasksByMonth: Record<string, Task[]> = {};
   project.tasks.forEach((task) => {
@@ -519,73 +553,78 @@ export default function Dashboard() {
                 transition={{ duration: 0.3 }}
                 className="space-y-6"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                  {/* Task list */}
-                  <div className="lg:col-span-2 bg-card rounded-xl border border-border p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <h2 className="text-sm font-bold text-foreground">All Tasks</h2>
-                      <button
-                        onClick={handleOpenNewTaskDialog}
-                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-journi-green hover:underline"
-                      >
-                        <Plus size={13} /> Add task
-                      </button>
-                    </div>
-                    {project.tasks.length === 0 ? (
-                      <div className="text-center py-12">
-                        <p className="text-sm text-muted-foreground mb-4">No tasks yet. Create your first task!</p>
-                        <button
-                          onClick={handleOpenNewTaskDialog}
-                          className="inline-flex items-center gap-2 bg-journi-green text-journi-slate text-sm font-semibold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
-                        >
-                          <Plus size={16} /> Create Task
-                        </button>
-                      </div>
-                    ) : (
-                      <ListView
-                        tasks={project.tasks}
-                        collaborators={project.collaborators}
-                        onTaskClick={handleOpenEditTaskDialog}
-                        onTaskDelete={deleteTask}
-                      />
-                    )}
-                  </div>
-
-                  {/* Upcoming deadlines */}
-                  <div className="bg-card rounded-xl border border-border p-5">
-                    <h3 className="text-sm font-bold text-foreground mb-4">Upcoming Deadlines</h3>
-                    {upcomingDeadlines.length === 0 ? (
-                      <p className="text-xs text-muted-foreground">No upcoming deadlines</p>
-                    ) : (
-                      <div className="space-y-3">
-                        {upcomingDeadlines.map((task) => {
-                          const endDate = safeDate(task.endDate);
-                          const daysLeft = differenceInDays(endDate, now);
-                          const isUrgent = daysLeft <= 7;
-                          return (
-                            <div
-                              key={task.id}
-                              className="flex items-start gap-3 cursor-pointer hover:bg-accent/50 rounded-lg p-2 -m-2 transition-colors"
-                              onClick={() => handleOpenEditTaskDialog(task.id)}
-                            >
+                {/* Upcoming deadlines */}
+                <div className="bg-card rounded-xl border border-border p-5">
+                  <h3 className="text-sm font-bold text-foreground mb-4">Upcoming Deadlines</h3>
+                  {upcomingDeadlines.length === 0 ? (
+                    <p className="text-xs text-muted-foreground">No upcoming deadlines</p>
+                  ) : (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
+                      {upcomingDeadlines.map((task) => {
+                        const endDate = safeDate(task.endDate);
+                        const daysLeft = differenceInDays(endDate, now);
+                        const isUrgent = daysLeft <= 7;
+                        return (
+                          <button
+                            key={task.id}
+                            onClick={() => handleOpenEditTaskDialog(task.id)}
+                            className="w-full text-left rounded-lg border border-border bg-background/40 p-3 hover:bg-accent/60 transition-colors"
+                          >
+                            <div className="flex items-start gap-3">
                               <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${isUrgent ? 'bg-status-delayed/15' : 'bg-journi-green/15'}`}>
                                 {isUrgent
                                   ? <AlertCircle size={16} className="text-status-delayed" />
                                   : <Timer size={16} className="text-journi-green" />
                                 }
                               </div>
-                              <div>
-                                <p className="text-sm font-medium text-foreground">{task.name}</p>
-                                <p className="text-xs text-muted-foreground">
-                                  Due: {format(endDate, 'MMM d, yyyy')} ({daysLeft}d)
+                              <div className="min-w-0">
+                                <p className="text-sm font-medium text-foreground truncate" title={task.name}>
+                                  {task.name}
+                                </p>
+                                <p className="text-xs text-muted-foreground mt-1">
+                                  Due {format(endDate, 'MMM d, yyyy')}
+                                </p>
+                                <p className={`text-xs mt-0.5 ${isUrgent ? 'text-status-delayed' : 'text-journi-green'}`}>
+                                  {daysLeft} {daysLeft === 1 ? 'day left' : 'days left'}
                                 </p>
                               </div>
                             </div>
-                          );
-                        })}
-                      </div>
-                    )}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+
+                {/* Task list */}
+                <div className="bg-card rounded-xl border border-border p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <h2 className="text-sm font-bold text-foreground">All Tasks</h2>
+                    <button
+                      onClick={handleOpenNewTaskDialog}
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-journi-green hover:underline"
+                    >
+                      <Plus size={13} /> Add task
+                    </button>
                   </div>
+                  {project.tasks.length === 0 ? (
+                    <div className="text-center py-12">
+                      <p className="text-sm text-muted-foreground mb-4">No tasks yet. Create your first task!</p>
+                      <button
+                        onClick={handleOpenNewTaskDialog}
+                        className="inline-flex items-center gap-2 bg-journi-green text-journi-slate text-sm font-semibold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+                      >
+                        <Plus size={16} /> Create Task
+                      </button>
+                    </div>
+                  ) : (
+                    <ListView
+                      tasks={project.tasks}
+                      collaborators={project.collaborators}
+                      onTaskClick={handleOpenEditTaskDialog}
+                      onTaskDelete={deleteTask}
+                    />
+                  )}
                 </div>
               </motion.div>
             )}
@@ -667,26 +706,120 @@ export default function Dashboard() {
             {/* ── PUBLICATIONS TAB ── */}
             {activeTab === 'publications' && (
               <motion.div
-                className="bg-card rounded-xl border border-border p-6"
+                className="space-y-6"
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="text-center py-10">
-                  <div className="w-14 h-14 rounded-xl bg-journi-green/10 flex items-center justify-center mx-auto mb-4">
-                    <Send size={28} className="text-journi-green" />
+                <div className="bg-card rounded-xl border border-border p-5">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-lg bg-journi-green/10 flex items-center justify-center">
+                        <Send size={18} className="text-journi-green" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-bold text-foreground">Team Publication Logbook</p>
+                        <p className="text-xs text-muted-foreground">
+                          Track manuscript outcomes, journals, and citation lengths across the team.
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href="/publication"
+                      className="inline-flex items-center justify-center gap-2 bg-journi-green text-journi-slate text-sm font-semibold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+                    >
+                      <BookOpen size={15} />
+                      Go to Submissions Portal
+                    </a>
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-2">Publication Tracking</h3>
-                  <p className="text-sm text-muted-foreground mb-6 max-w-md mx-auto">
-                    Manage your journal submissions and track review progress in the Publication Portal.
-                  </p>
-                  <a
-                    href="/publication"
-                    className="inline-flex items-center gap-2 bg-journi-green text-journi-slate text-sm font-semibold px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity"
-                  >
-                    <BookOpen size={16} />
-                    Go to Publication Portal
-                  </a>
+                  <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div className="rounded-lg bg-muted/50 border border-border px-3 py-2">
+                      <p className="text-[11px] uppercase tracking-wider text-muted-foreground">Logged Records</p>
+                      <p className="text-lg font-bold text-foreground">{publicationLog.length}</p>
+                    </div>
+                    <div className="rounded-lg bg-journi-green/10 border border-journi-green/20 px-3 py-2">
+                      <p className="text-[11px] uppercase tracking-wider text-journi-green">Published</p>
+                      <p className="text-lg font-bold text-journi-green">{publishedCount}</p>
+                    </div>
+                    <div className="rounded-lg bg-blue-50 border border-blue-100 px-3 py-2">
+                      <p className="text-[11px] uppercase tracking-wider text-blue-600">Accepted</p>
+                      <p className="text-lg font-bold text-blue-700">{acceptedCount}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-card rounded-xl border border-border p-6">
+                  {publicationLog.length === 0 ? (
+                    <div className="text-center py-12">
+                      <p className="text-sm font-medium text-foreground mb-1">No publications logged yet</p>
+                      <p className="text-xs text-muted-foreground mb-4">
+                        Create your first submission in the portal to start building your team logbook.
+                      </p>
+                      <a
+                        href="/publication"
+                        className="inline-flex items-center gap-2 bg-journi-green text-journi-slate text-sm font-semibold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+                      >
+                        <BookOpen size={15} />
+                        Open Submissions Portal
+                      </a>
+                    </div>
+                  ) : (
+                    <div className="space-y-2">
+                      {publicationLog.map((entry) => {
+                        const cfg = submissionStatusConfig[entry.status] || submissionStatusConfig.draft;
+                        return (
+                          <div
+                            key={entry.id}
+                            className="rounded-lg border border-border bg-background/40 p-3"
+                          >
+                            <div className="grid grid-cols-1 md:grid-cols-[2fr_1.2fr_auto_auto_auto] gap-3 md:items-center">
+                              <div className="min-w-0">
+                                <p className="text-[11px] uppercase tracking-wider text-muted-foreground mb-1 md:hidden">
+                                  Manuscript
+                                </p>
+                                <p className="text-sm font-medium text-foreground truncate" title={entry.title}>
+                                  {entry.title}
+                                </p>
+                              </div>
+                              <div className="min-w-0">
+                                <p className="text-[11px] uppercase tracking-wider text-muted-foreground mb-1 md:hidden">
+                                  Journal
+                                </p>
+                                <p className="text-sm text-foreground truncate" title={entry.journalName}>
+                                  {entry.journalName || 'Unknown Journal'}
+                                </p>
+                              </div>
+                              <div>
+                                <p className="text-[11px] uppercase tracking-wider text-muted-foreground mb-1 md:hidden">
+                                  Status
+                                </p>
+                                <span className={`inline-flex items-center gap-1.5 px-2 py-1 rounded-full text-xs font-medium ${cfg.bg} ${cfg.text}`}>
+                                  <span className={`w-1.5 h-1.5 rounded-full ${cfg.dot}`} />
+                                  {cfg.label}
+                                </span>
+                              </div>
+                              <div>
+                                <p className="text-[11px] uppercase tracking-wider text-muted-foreground mb-1 md:hidden">
+                                  Citation Length
+                                </p>
+                                <p className="text-sm text-foreground whitespace-nowrap">
+                                  {entry.citationCount} {entry.citationCount === 1 ? 'citation' : 'citations'}
+                                </p>
+                              </div>
+                              <div>
+                                <p className="text-[11px] uppercase tracking-wider text-muted-foreground mb-1 md:hidden">
+                                  Last Updated
+                                </p>
+                                <p className="text-sm text-muted-foreground whitespace-nowrap">
+                                  {format(entry.lastUpdated, 'MMM d, yyyy')}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>
               </motion.div>
             )}

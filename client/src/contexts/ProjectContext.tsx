@@ -40,6 +40,16 @@ interface ProjectContextType {
 
 const ProjectContext = createContext<ProjectContextType | undefined>(undefined);
 
+// Deterministic fake ORCID for sample collaborators that predate the ORCID field
+function backfillOrcid(c: Collaborator): Collaborator {
+  if (c.orcidId) return c;
+  // Use a simple hash of the id to decide ~75% get one, and to generate stable digits
+  const hash = c.id.split('').reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
+  if (hash % 4 === 0) return c; // ~25% have none
+  const seg = (n: number) => String(1000 + (Math.abs(n) % 9000)).padStart(4, '0');
+  return { ...c, orcidId: `${seg(hash)}-${seg(hash * 7)}-${seg(hash * 13)}-${seg(hash * 19)}` };
+}
+
 function rehydrateProject(p: Project): Project {
   return {
     ...p,
@@ -51,6 +61,7 @@ function rehydrateProject(p: Project): Project {
       startDate: t.startDate ? new Date(t.startDate) : new Date(),
       endDate: t.endDate ? new Date(t.endDate) : new Date(),
     })),
+    collaborators: (p.collaborators || []).map(backfillOrcid),
   };
 }
 
@@ -169,6 +180,13 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     localStorage.setItem(ACTIVE_PROJECT_KEY, resolvedActiveId);
     saveOverlays(nextProjects);
   }, [activeId, fallbackProject]);
+
+  // Persist once on mount to save any backfilled fields (e.g. ORCID migration)
+  useEffect(() => {
+    localStorage.setItem(PROJECTS_KEY, JSON.stringify(projects));
+    saveOverlays(projects);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     localStorage.setItem(ACTIVITIES_KEY, JSON.stringify(activities));
