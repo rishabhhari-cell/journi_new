@@ -38,6 +38,7 @@ export default function TaskDialog({
     assignedTo: [],
     description: '',
   });
+  const [error, setError] = useState('');
 
   // Populate form when editing existing task
   useEffect(() => {
@@ -65,15 +66,15 @@ export default function TaskDialog({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setError('');
 
-    // Validation
     if (!formData.name.trim()) {
-      alert('Please enter a task name');
+      setError('Please enter a task name');
       return;
     }
 
     if (formData.startDate >= formData.endDate) {
-      alert('End date must be after start date');
+      setError('End date must be after start date');
       return;
     }
 
@@ -118,6 +119,11 @@ export default function TaskDialog({
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="p-6 space-y-5">
+            {error && (
+              <div role="alert" className="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-red-500/10 text-red-600 text-sm">
+                {error}
+              </div>
+            )}
             {/* Task Name */}
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">

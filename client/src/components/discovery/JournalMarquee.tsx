@@ -176,6 +176,7 @@ function HeroCoverCard({ layout }: { layout: CardLayout }) {
               <img
                 src={faviconUrl}
                 alt=""
+                aria-hidden="true"
                 className="w-10 h-10 rounded-lg opacity-80"
                 onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
               />

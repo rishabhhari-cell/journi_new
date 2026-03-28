@@ -5,6 +5,10 @@
   outline: none;
 }
 
+.ProseMirror:focus-visible {
+  box-shadow: 0 0 0 2px oklch(0.75 0.18 155 / 0.4);
+}
+
 .ProseMirror p {
   margin-bottom: 1em;
 }

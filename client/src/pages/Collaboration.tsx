@@ -152,6 +152,12 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   // New manuscript wizard
   const [showWizard, setShowWizard] = useState(false);
 
+  // Resize table dialog (replaces window.prompt)
+  const [resizeDialog, setResizeDialog] = useState<{ open: boolean; rows: string; cols: string } | null>(null);
+
+  // Rename section inline (replaces window.prompt)
+  const [renamingSection, setRenamingSection] = useState<{ id: string; value: string } | null>(null);
+
   // Submit to journal dialog
   const [submitDialogOpen, setSubmitDialogOpen] = useState(false);
 
@@ -342,45 +348,36 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
 
   const handleResizeTable = () => {
     if (!editor) return;
-
     const currentSize = getSelectedTableSize();
     if (!currentSize) return;
+    setResizeDialog({ open: true, rows: String(currentSize.rows), cols: String(currentSize.cols) });
+    setTableContextMenuPos(null);
+  };
 
-    const rowsInput = window.prompt('Number of rows:', String(currentSize.rows));
-    if (rowsInput === null) return;
+  const applyResizeTable = () => {
+    if (!editor || !resizeDialog) return;
+    const currentSize = getSelectedTableSize();
+    if (!currentSize) { setResizeDialog(null); return; }
 
-    const colsInput = window.prompt('Number of columns:', String(currentSize.cols));
-    if (colsInput === null) return;
-
-    const nextRows = Number.parseInt(rowsInput, 10);
-    const nextCols = Number.parseInt(colsInput, 10);
+    const nextRows = Number.parseInt(resizeDialog.rows, 10);
+    const nextCols = Number.parseInt(resizeDialog.cols, 10);
 
     if (!Number.isInteger(nextRows) || !Number.isInteger(nextCols) || nextRows < 1 || nextCols < 1) {
-      window.alert('Please enter valid positive integers for rows and columns.');
+      toast.error('Please enter valid positive integers for rows and columns.');
       return;
     }
 
     if (nextRows > currentSize.rows) {
-      for (let i = 0; i < nextRows - currentSize.rows; i += 1) {
-        editor.chain().focus().addRowAfter().run();
-      }
+      for (let i = 0; i < nextRows - currentSize.rows; i += 1) editor.chain().focus().addRowAfter().run();
     } else if (nextRows < currentSize.rows) {
-      for (let i = 0; i < currentSize.rows - nextRows; i += 1) {
-        editor.chain().focus().deleteRow().run();
-      }
+      for (let i = 0; i < currentSize.rows - nextRows; i += 1) editor.chain().focus().deleteRow().run();
     }
-
     if (nextCols > currentSize.cols) {
-      for (let i = 0; i < nextCols - currentSize.cols; i += 1) {
-        editor.chain().focus().addColumnAfter().run();
-      }
+      for (let i = 0; i < nextCols - currentSize.cols; i += 1) editor.chain().focus().addColumnAfter().run();
     } else if (nextCols < currentSize.cols) {
-      for (let i = 0; i < currentSize.cols - nextCols; i += 1) {
-        editor.chain().focus().deleteColumn().run();
-      }
+      for (let i = 0; i < currentSize.cols - nextCols; i += 1) editor.chain().focus().deleteColumn().run();
     }
-
-    setTableContextMenuPos(null);
+    setResizeDialog(null);
   };
 
   const handleEditorContextMenu = (e: MouseEvent<HTMLDivElement>) => {
@@ -700,11 +697,14 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   const handleRenameSection = (sectionId: string) => {
     const section = manuscript.sections.find((s) => s.id === sectionId);
     if (!section) return;
+    setRenamingSection({ id: sectionId, value: section.title });
+  };
 
-    const nextTitleInput = window.prompt('Rename subsection:', section.title);
-    if (nextTitleInput === null) return;
-
+  const applyRenameSection = () => {
+    if (!renamingSection) return;
+    const { id: sectionId, value: nextTitleInput } = renamingSection;
     const nextTitle = nextTitleInput.trim();
+
     if (!nextTitle) {
       toast.error('Subsection name cannot be empty');
       return;
@@ -715,19 +715,20 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     );
     if (duplicateExists) {
       toast.error('A subsection with that name already exists');
+      setRenamingSection(null);
       return;
     }
 
     const updatedSections = manuscript.sections.map((s) =>
       s.id === sectionId ? { ...s, title: nextTitle } : s
     );
+    const section = manuscript.sections.find((s) => s.id === sectionId);
     replaceSections(updatedSections);
-
-    if (activeSection === section.title) {
+    if (section && activeSection === section.title) {
       setActiveSection(nextTitle);
     }
-
     toast.success('Subsection renamed');
+    setRenamingSection(null);
   };
 
   // Delete section (subsection) from left sidebar
@@ -739,10 +740,6 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
 
     const section = manuscript.sections.find((s) => s.id === sectionId);
     if (!section) return;
-
-    if (!window.confirm(`Delete subsection "${section.title}"? This cannot be undone.`)) {
-      return;
-    }
 
     const currentIndex = manuscript.sections.findIndex((s) => s.id === sectionId);
     const updatedSections = manuscript.sections.filter((s) => s.id !== sectionId);
@@ -1972,6 +1969,74 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
           </>
         );
       })()}
+
+      {/* Resize Table Dialog */}
+      {resizeDialog?.open && (
+        <>
+          <div className="fixed inset-0 bg-black/50 z-[70] backdrop-blur-sm" onClick={() => setResizeDialog(null)} />
+          <div className="fixed inset-0 z-[71] flex items-center justify-center p-4">
+            <div className="bg-card rounded-xl border border-border shadow-lg w-full max-w-xs p-6 space-y-4">
+              <h2 className="text-base font-bold text-foreground">Resize Table</h2>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label htmlFor="resize-rows" className="block text-xs font-medium text-foreground mb-1">Rows</label>
+                  <input
+                    id="resize-rows"
+                    type="number"
+                    min="1"
+                    value={resizeDialog.rows}
+                    onChange={(e) => setResizeDialog({ ...resizeDialog, rows: e.target.value })}
+                    className="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-journi-green"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="resize-cols" className="block text-xs font-medium text-foreground mb-1">Columns</label>
+                  <input
+                    id="resize-cols"
+                    type="number"
+                    min="1"
+                    value={resizeDialog.cols}
+                    onChange={(e) => setResizeDialog({ ...resizeDialog, cols: e.target.value })}
+                    className="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-journi-green"
+                  />
+                </div>
+              </div>
+              <div className="flex gap-2 pt-2">
+                <button onClick={() => setResizeDialog(null)} className="flex-1 px-3 py-2 border border-border rounded-lg text-sm text-foreground hover:bg-accent transition-colors">Cancel</button>
+                <button onClick={applyResizeTable} className="flex-1 px-3 py-2 bg-journi-green text-journi-slate rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">Apply</button>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+
+      {/* Rename Section Dialog */}
+      {renamingSection && (
+        <>
+          <div className="fixed inset-0 bg-black/50 z-[70] backdrop-blur-sm" onClick={() => setRenamingSection(null)} />
+          <div className="fixed inset-0 z-[71] flex items-center justify-center p-4">
+            <div className="bg-card rounded-xl border border-border shadow-lg w-full max-w-xs p-6 space-y-4">
+              <h2 className="text-base font-bold text-foreground">Rename Subsection</h2>
+              <div>
+                <label htmlFor="rename-section-input" className="sr-only">Subsection name</label>
+                <input
+                  id="rename-section-input"
+                  type="text"
+                  value={renamingSection.value}
+                  onChange={(e) => setRenamingSection({ ...renamingSection, value: e.target.value })}
+                  onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); applyRenameSection(); } if (e.key === 'Escape') setRenamingSection(null); }}
+                  autoFocus
+                  className="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-journi-green"
+                />
+              </div>
+              <div className="flex gap-2">
+                <button onClick={() => setRenamingSection(null)} className="flex-1 px-3 py-2 border border-border rounded-lg text-sm text-foreground hover:bg-accent transition-colors">Cancel</button>
+                <button onClick={applyRenameSection} className="flex-1 px-3 py-2 bg-journi-green text-journi-slate rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">Rename</button>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }

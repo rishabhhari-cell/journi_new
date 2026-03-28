@@ -59,7 +59,7 @@ export default function About() {
                   custom={i + 1}
                 >
                   <div className="shrink-0">
-                    <img src={person.photo} alt={person.name} className="w-24 h-24 rounded-2xl object-cover" />
+                    <img src={person.photo} alt={person.name} width={96} height={96} className="w-24 h-24 rounded-2xl object-cover" />
                   </div>
                   <div className="min-w-0">
                     <h2 className="text-lg font-bold text-foreground">{person.name}</h2>

@@ -93,9 +93,9 @@ export default function Pagination({
           onClick={handlePrevious}
           disabled={currentPage === 1}
           className="p-2 rounded-lg border border-border bg-card text-muted-foreground hover:text-foreground hover:bg-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          title="Previous page"
+          aria-label="Previous page"
         >
-          <ChevronLeft size={16} />
+          <ChevronLeft size={16} aria-hidden="true" />
         </button>
 
         {getPageNumbers().map((page, index) =>
@@ -107,6 +107,8 @@ export default function Pagination({
             <button
               key={page}
               onClick={() => onPageChange(page as number)}
+              aria-label={`Go to page ${page}`}
+              aria-current={currentPage === page ? 'page' : undefined}
               className={`min-w-[2rem] px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                 currentPage === page
                   ? 'bg-journi-green text-white'
@@ -122,9 +124,9 @@ export default function Pagination({
           onClick={handleNext}
           disabled={currentPage === totalPages}
           className="p-2 rounded-lg border border-border bg-card text-muted-foreground hover:text-foreground hover:bg-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          title="Next page"
+          aria-label="Next page"
         >
-          <ChevronRight size={16} />
+          <ChevronRight size={16} aria-hidden="true" />
         </button>
       </div>
 
@@ -134,6 +136,7 @@ export default function Pagination({
         <select
           value={resultsPerPage}
           onChange={(e) => onResultsPerPageChange(parseInt(e.target.value))}
+          aria-label="Results per page"
           className="px-3 py-1.5 rounded-lg border border-border bg-card text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-journi-green/30 focus:border-journi-green"
         >
           {RESULTS_PER_PAGE_OPTIONS.map((option) => (

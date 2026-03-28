@@ -106,6 +106,8 @@ export default function Navbar() {
               <button
                 onClick={() => setUserMenuOpen(!userMenuOpen)}
                 className="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-accent transition-colors"
+                aria-label="User menu"
+                aria-expanded={userMenuOpen}
               >
                 <div className="w-7 h-7 rounded-full bg-journi-green text-journi-slate text-xs font-bold flex items-center justify-center shrink-0">
                   {user?.initials ?? "?"}
@@ -171,7 +173,12 @@ export default function Navbar() {
         </div>
 
         {/* Mobile toggle */}
-        <button className="md:hidden p-2 text-foreground ml-auto" onClick={() => setMobileOpen(!mobileOpen)}>
+        <button
+          className="md:hidden p-2 text-foreground ml-auto"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={mobileOpen}
+        >
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>

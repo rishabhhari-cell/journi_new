@@ -66,6 +66,7 @@ export default function FilterPanel({ filters, onFiltersChange }: FilterPanelPro
     return (
       <button
         onClick={() => toggleFilter(name)}
+        aria-expanded={isExpanded}
         className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border text-xs font-medium transition-colors ${
           isExpanded
             ? 'border-journi-green bg-journi-green/5 text-journi-green'
@@ -73,7 +74,7 @@ export default function FilterPanel({ filters, onFiltersChange }: FilterPanelPro
         }`}
       >
         {label}
-        <Icon size={13} />
+        <Icon size={13} aria-hidden="true" />
       </button>
     );
   };
@@ -107,8 +108,9 @@ export default function FilterPanel({ filters, onFiltersChange }: FilterPanelPro
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className="flex-1">
-                  <label className="text-xs text-muted-foreground mb-1 block">Min</label>
+                  <label htmlFor="impact-min" className="text-xs text-muted-foreground mb-1 block">Min</label>
                   <input
+                    id="impact-min"
                     type="range"
                     min="0"
                     max="300"
@@ -116,14 +118,19 @@ export default function FilterPanel({ filters, onFiltersChange }: FilterPanelPro
                     value={impactMin}
                     onChange={(e) => updateFilters({ impactFactorMin: parseFloat(e.target.value) })}
                     className="w-full accent-journi-green"
+                    aria-valuemin={0}
+                    aria-valuemax={300}
+                    aria-valuenow={impactMin}
+                    aria-valuetext={`${impactMin.toFixed(1)}`}
                   />
-                  <div className="text-xs font-medium text-foreground mt-1">
+                  <div className="text-xs font-medium text-foreground mt-1" aria-live="polite" aria-atomic="true">
                     {impactMin.toFixed(1)}
                   </div>
                 </div>
                 <div className="flex-1">
-                  <label className="text-xs text-muted-foreground mb-1 block">Max</label>
+                  <label htmlFor="impact-max" className="text-xs text-muted-foreground mb-1 block">Max</label>
                   <input
+                    id="impact-max"
                     type="range"
                     min="0"
                     max="300"
@@ -131,8 +138,12 @@ export default function FilterPanel({ filters, onFiltersChange }: FilterPanelPro
                     value={impactMax}
                     onChange={(e) => updateFilters({ impactFactorMax: parseFloat(e.target.value) })}
                     className="w-full accent-journi-green"
+                    aria-valuemin={0}
+                    aria-valuemax={300}
+                    aria-valuenow={impactMax}
+                    aria-valuetext={`${impactMax.toFixed(1)}`}
                   />
-                  <div className="text-xs font-medium text-foreground mt-1">
+                  <div className="text-xs font-medium text-foreground mt-1" aria-live="polite" aria-atomic="true">
                     {impactMax.toFixed(1)}
                   </div>
                 </div>
@@ -252,7 +263,9 @@ export default function FilterPanel({ filters, onFiltersChange }: FilterPanelPro
           <div className="bg-card border border-border rounded-xl p-5 shadow-lg">
             <h3 className="text-sm font-bold text-foreground mb-4">Time to Publication (Max Days)</h3>
             <div className="space-y-2">
+              <label htmlFor="time-max" className="sr-only">Maximum days to publication</label>
               <input
+                id="time-max"
                 type="range"
                 min="0"
                 max="300"
@@ -260,10 +273,14 @@ export default function FilterPanel({ filters, onFiltersChange }: FilterPanelPro
                 value={timeMax}
                 onChange={(e) => updateFilters({ timeToPublicationMax: parseInt(e.target.value) })}
                 className="w-full accent-journi-green"
+                aria-valuemin={0}
+                aria-valuemax={300}
+                aria-valuenow={timeMax}
+                aria-valuetext={`${timeMax} days`}
               />
               <div className="flex items-center justify-between">
                 <span className="text-xs text-muted-foreground">0 days</span>
-                <span className="text-sm font-medium text-journi-green">
+                <span className="text-sm font-medium text-journi-green" aria-live="polite" aria-atomic="true">
                   {timeMax} days
                 </span>
                 <span className="text-xs text-muted-foreground">300 days</span>

@@ -82,6 +82,7 @@ export default function ListView({ tasks, collaborators, onTaskClick, onTaskDele
     <button
       onClick={() => handleSort(field)}
       className="flex items-center gap-1 hover:text-journi-green transition-colors"
+      aria-label={`Sort by ${field}${sortField === field ? (sortDirection === 'asc' ? ', ascending' : ', descending') : ''}`}
     >
       {children}
       <ArrowUpDown
@@ -181,19 +182,17 @@ export default function ListView({ tasks, collaborators, onTaskClick, onTaskDele
                           onTaskClick(task.id);
                         }}
                         className="p-1.5 rounded-lg hover:bg-journi-green/10 text-muted-foreground hover:text-journi-green transition-colors"
-                        title="Edit task"
+                        aria-label={`Edit task: ${task.name}`}
                       >
                         <Edit2 size={16} />
                       </button>
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
-                          if (window.confirm(`Delete task "${task.name}"?`)) {
-                            onTaskDelete(task.id);
-                          }
+                          onTaskDelete(task.id);
                         }}
                         className="p-1.5 rounded-lg hover:bg-status-delayed/10 text-muted-foreground hover:text-status-delayed transition-colors"
-                        title="Delete task"
+                        aria-label={`Delete task: ${task.name}`}
                       >
                         <Trash2 size={16} />
                       </button>

@@ -58,6 +58,8 @@ export default function ProjectSwitcher({ variant = 'sidebar', onSwitch }: Props
         <button
           onClick={() => setOpen(!open)}
           className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-accent hover:bg-accent/80 transition-colors text-sm font-medium text-foreground max-w-[180px]"
+          aria-label={`Switch project: ${activeProject.title}`}
+          aria-expanded={open}
         >
           <FolderOpen size={13} className="text-journi-green shrink-0" />
           <span className="truncate">{activeProject.title}</span>
@@ -73,6 +75,8 @@ export default function ProjectSwitcher({ variant = 'sidebar', onSwitch }: Props
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between gap-2 group"
+        aria-label={`Switch project: ${activeProject.title}`}
+        aria-expanded={open}
       >
         <div className="min-w-0">
           <h2 className="text-sm font-bold text-foreground uppercase tracking-wider truncate text-left">
@@ -118,12 +122,15 @@ function Dropdown({
       <div className="border-t border-border mt-1 pt-1">
         {creating ? (
           <form onSubmit={onCreate} className="px-3 py-2 flex gap-2">
+            <label htmlFor="new-project-name" className="sr-only">Project name</label>
             <input
+              id="new-project-name"
               ref={inputRef}
               value={newName}
               onChange={(e) => setNewName(e.target.value)}
               placeholder="Project name…"
               className="flex-1 px-2 py-1 text-xs bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-journi-green"
+              autoComplete="off"
             />
             <button type="submit" className="px-2 py-1 bg-journi-green text-journi-slate text-xs font-semibold rounded-md hover:opacity-90">
               Create

@@ -38,6 +38,10 @@ export default function EditorToolbar({ editor, onOpenCitationDialog }: EditorTo
   const [showTableGrid, setShowTableGrid] = useState(false);
   const [hoveredCell, setHoveredCell] = useState<{ row: number; col: number } | null>(null);
   const tableGridRef = useRef<HTMLDivElement>(null);
+  const [linkInput, setLinkInput] = useState<{ show: boolean; value: string }>({ show: false, value: '' });
+  const [imageUrlInput, setImageUrlInput] = useState<{ show: boolean; value: string }>({ show: false, value: '' });
+  const linkInputRef = useRef<HTMLInputElement>(null);
+  const imageUrlInputRef = useRef<HTMLInputElement>(null);
 
   if (!editor) {
     return null;
@@ -65,33 +69,39 @@ export default function EditorToolbar({ editor, onOpenCitationDialog }: EditorTo
             ? 'text-muted-foreground hover:text-status-delayed hover:bg-status-delayed/10'
             : 'text-muted-foreground hover:text-foreground hover:bg-accent'
       }`}
-      title={title}
+      aria-label={title}
       type="button"
     >
-      <Icon size={16} />
+      <Icon size={16} aria-hidden="true" />
     </button>
   );
 
   const Divider = () => <div className="w-px h-5 bg-border mx-1" />;
 
   const setLink = () => {
-    const previousUrl = editor.getAttributes('link').href;
-    const url = window.prompt('Enter URL:', previousUrl);
+    const previousUrl = editor.getAttributes('link').href ?? '';
+    setLinkInput({ show: true, value: previousUrl });
+    setTimeout(() => linkInputRef.current?.focus(), 50);
+  };
 
-    if (url === null) {
-      return;
-    }
-
+  const confirmLink = () => {
+    const url = linkInput.value.trim();
+    setLinkInput({ show: false, value: '' });
     if (url === '') {
       editor.chain().focus().extendMarkRange('link').unsetLink().run();
-      return;
+    } else {
+      editor.chain().focus().extendMarkRange('link').setLink({ href: url }).run();
     }
-
-    editor.chain().focus().extendMarkRange('link').setLink({ href: url }).run();
   };
 
   const insertImageUrl = () => {
-    const url = window.prompt('Enter image URL:');
+    setImageUrlInput({ show: true, value: '' });
+    setTimeout(() => imageUrlInputRef.current?.focus(), 50);
+  };
+
+  const confirmImageUrl = () => {
+    const url = imageUrlInput.value.trim();
+    setImageUrlInput({ show: false, value: '' });
     if (url) {
       editor.chain().focus().setImage({ src: url }).run();
     }
@@ -137,7 +147,44 @@ export default function EditorToolbar({ editor, onOpenCitationDialog }: EditorTo
   const isInTable = editor.isActive('table');
 
   return (
-    <div className="bg-card border-b border-border px-6 py-2.5 flex items-center gap-1 overflow-x-auto">
+    <div className="bg-card border-b border-border">
+    {/* Inline link URL input */}
+    {linkInput.show && (
+      <div className="flex items-center gap-2 px-6 py-2 border-b border-border bg-accent/30">
+        <label htmlFor="toolbar-link-url" className="text-xs text-muted-foreground shrink-0">Link URL:</label>
+        <input
+          id="toolbar-link-url"
+          ref={linkInputRef}
+          type="url"
+          value={linkInput.value}
+          onChange={(e) => setLinkInput({ ...linkInput, value: e.target.value })}
+          onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); confirmLink(); } if (e.key === 'Escape') setLinkInput({ show: false, value: '' }); }}
+          placeholder="https://example.com"
+          className="flex-1 px-2 py-1 text-sm bg-background border border-border rounded focus:outline-none focus:ring-2 focus:ring-journi-green"
+        />
+        <button type="button" onClick={confirmLink} className="px-3 py-1 text-xs font-semibold bg-journi-green text-journi-slate rounded hover:opacity-90">Apply</button>
+        <button type="button" onClick={() => setLinkInput({ show: false, value: '' })} aria-label="Cancel link" className="px-2 py-1 text-xs text-muted-foreground hover:text-foreground">Cancel</button>
+      </div>
+    )}
+    {/* Inline image URL input */}
+    {imageUrlInput.show && (
+      <div className="flex items-center gap-2 px-6 py-2 border-b border-border bg-accent/30">
+        <label htmlFor="toolbar-image-url" className="text-xs text-muted-foreground shrink-0">Image URL:</label>
+        <input
+          id="toolbar-image-url"
+          ref={imageUrlInputRef}
+          type="url"
+          value={imageUrlInput.value}
+          onChange={(e) => setImageUrlInput({ ...imageUrlInput, value: e.target.value })}
+          onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); confirmImageUrl(); } if (e.key === 'Escape') setImageUrlInput({ show: false, value: '' }); }}
+          placeholder="https://example.com/image.png"
+          className="flex-1 px-2 py-1 text-sm bg-background border border-border rounded focus:outline-none focus:ring-2 focus:ring-journi-green"
+        />
+        <button type="button" onClick={confirmImageUrl} className="px-3 py-1 text-xs font-semibold bg-journi-green text-journi-slate rounded hover:opacity-90">Insert</button>
+        <button type="button" onClick={() => setImageUrlInput({ show: false, value: '' })} aria-label="Cancel image URL" className="px-2 py-1 text-xs text-muted-foreground hover:text-foreground">Cancel</button>
+      </div>
+    )}
+    <div className="px-6 py-2.5 flex items-center gap-1 overflow-x-auto">
       {/* Text Formatting */}
       <ToolbarButton
         onClick={() => editor.chain().focus().toggleBold().run()}
@@ -329,6 +376,7 @@ export default function EditorToolbar({ editor, onOpenCitationDialog }: EditorTo
           Add Citation
         </button>
       )}
+    </div>
     </div>
   );
 }

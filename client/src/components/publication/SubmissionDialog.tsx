@@ -37,6 +37,7 @@ export default function SubmissionDialog({ isOpen, onClose, onSubmit }: Submissi
     status: 'draft',
     submittedDate: new Date(),
   });
+  const [error, setError] = useState('');
 
   useEffect(() => {
     if (!isOpen) {
@@ -46,18 +47,20 @@ export default function SubmissionDialog({ isOpen, onClose, onSubmit }: Submissi
         status: 'draft',
         submittedDate: new Date(),
       });
+      setError('');
     }
   }, [isOpen]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setError('');
 
     if (!(formData.title ?? '').trim()) {
-      alert('Please enter a title');
+      setError('Please enter a title');
       return;
     }
     if (!(formData.journal ?? '').trim()) {
-      alert('Please select or enter a journal name');
+      setError('Please select or enter a journal name');
       return;
     }
 
@@ -96,6 +99,11 @@ export default function SubmissionDialog({ isOpen, onClose, onSubmit }: Submissi
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="p-6 space-y-5">
+            {error && (
+              <div role="alert" className="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-red-500/10 text-red-600 text-sm">
+                <span>{error}</span>
+              </div>
+            )}
             {/* Title */}
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">

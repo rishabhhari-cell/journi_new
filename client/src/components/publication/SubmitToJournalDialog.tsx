@@ -180,7 +180,7 @@ export default function SubmitToJournalDialog({ isOpen, onClose, manuscriptTitle
                           className="w-full flex items-center gap-3 px-4 py-2.5 text-left hover:bg-accent transition-colors"
                         >
                           {j.logoUrl ? (
-                            <img src={j.logoUrl} alt="" className="w-8 h-9 rounded object-cover border border-border bg-white shrink-0" />
+                            <img src={j.logoUrl} alt="" aria-hidden="true" className="w-8 h-9 rounded object-cover border border-border bg-white shrink-0" />
                           ) : (
                             <div className={`w-8 h-9 rounded bg-gradient-to-br ${j.coverColor} flex items-center justify-center text-white text-[9px] font-bold shrink-0`}>
                               {j.coverInitial}

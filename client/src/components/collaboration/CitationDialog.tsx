@@ -38,6 +38,7 @@ export default function CitationDialog({ isOpen, onClose, onSubmit }: CitationDi
   const [tab, setTab] = useState<TabMode>('smart');
   const [formData, setFormData] = useState(emptyForm);
   const [authorInput, setAuthorInput] = useState('');
+  const [formError, setFormError] = useState('');
 
   // Smart lookup state
   const [smartInput, setSmartInput] = useState('');
@@ -61,6 +62,7 @@ export default function CitationDialog({ isOpen, onClose, onSubmit }: CitationDi
       setFreePdfUrl(null);
       setOaStatus(null);
       setTab('smart');
+      setFormError('');
     }
   }, [isOpen]);
 
@@ -134,17 +136,18 @@ export default function CitationDialog({ isOpen, onClose, onSubmit }: CitationDi
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setFormError('');
 
     if (formData.authors.length === 0) {
-      alert('Please add at least one author');
+      setFormError('Please add at least one author');
       return;
     }
     if (!formData.title.trim()) {
-      alert('Please enter a title');
+      setFormError('Please enter a title');
       return;
     }
     if (!formData.year || formData.year < 1900 || formData.year > new Date().getFullYear() + 10) {
-      alert('Please enter a valid year');
+      setFormError('Please enter a valid year');
       return;
     }
 
@@ -405,6 +408,11 @@ export default function CitationDialog({ isOpen, onClose, onSubmit }: CitationDi
           {/* Manual Tab */}
           {tab === 'manual' && (
             <form onSubmit={handleSubmit} className="p-6 space-y-5">
+              {formError && (
+                <div role="alert" className="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-red-500/10 text-red-600 text-sm">
+                  {formError}
+                </div>
+              )}
               {/* Citation Type */}
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">

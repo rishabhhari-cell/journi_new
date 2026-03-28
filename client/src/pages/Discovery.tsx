@@ -43,7 +43,7 @@ export default function Discovery() {
 
       {/* ── Hero Section ──────────────────────────────────────────────────── */}
       <div
-        className={`relative overflow-hidden transition-all duration-500 ease-in-out bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900
+        className={`relative overflow-hidden motion-safe:transition-all motion-safe:duration-500 motion-safe:ease-in-out bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900
           ${isIdle ? 'h-[560px]' : 'h-[120px]'}`}
       >
         {/* Scattered journal covers — behind everything */}

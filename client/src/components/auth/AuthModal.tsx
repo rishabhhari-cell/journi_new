@@ -33,6 +33,8 @@ function GoogleIcon() {
 }
 
 // ── Field component ───────────────────────────────────────────────────────────
+let fieldIdCounter = 0;
+
 function Field({
   label,
   type,
@@ -51,18 +53,21 @@ function Field({
   autoComplete?: string;
 }) {
   const [show, setShow] = useState(false);
+  const [id] = useState(() => `field-${++fieldIdCounter}`);
   const isPassword = type === 'password';
   const inputType = isPassword ? (show ? 'text' : 'password') : type;
 
   return (
     <div>
-      <label className="block text-xs font-medium text-muted-foreground mb-1.5">{label}</label>
+      <label htmlFor={id} className="block text-xs font-medium text-muted-foreground mb-1.5">{label}</label>
       <div className="relative">
         <Icon
           size={14}
           className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
+          aria-hidden="true"
         />
         <input
+          id={id}
           type={inputType}
           value={value}
           onChange={(e) => onChange(e.target.value)}
@@ -74,9 +79,10 @@ function Field({
           <button
             type="button"
             onClick={() => setShow(!show)}
+            aria-label={show ? 'Hide password' : 'Show password'}
             className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
           >
-            {show ? <EyeOff size={14} /> : <Eye size={14} />}
+            {show ? <EyeOff size={14} aria-hidden="true" /> : <Eye size={14} aria-hidden="true" />}
           </button>
         )}
       </div>
@@ -192,9 +198,10 @@ export default function AuthModal() {
               </button>
               <button
                 onClick={closeModal}
+                aria-label="Close"
                 className="px-4 text-muted-foreground hover:text-foreground transition-colors"
               >
-                <X size={16} />
+                <X size={16} aria-hidden="true" />
               </button>
             </div>
 

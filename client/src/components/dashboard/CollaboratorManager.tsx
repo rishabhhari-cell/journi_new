@@ -39,6 +39,8 @@ export default function CollaboratorManager({
 }: CollaboratorManagerProps) {
   const [showAddForm, setShowAddForm] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
+  const [formError, setFormError] = useState('');
+  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
   const [formData, setFormData] = useState<CollaboratorFormData>({
     name: '',
     email: '',
@@ -48,26 +50,26 @@ export default function CollaboratorManager({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setFormError('');
 
-    // Validation
     if (!formData.name.trim()) {
-      alert('Please enter a name');
+      setFormError('Please enter a name');
       return;
     }
     if (!formData.email.trim() || !formData.email.includes('@')) {
-      alert('Please enter a valid email');
+      setFormError('Please enter a valid email');
       return;
     }
 
     onAddCollaborator({ ...formData, orcidId: formData.orcidId?.trim() || undefined });
 
-    // Reset form
     setFormData({
       name: '',
       email: '',
       role: 'contributor',
       orcidId: '',
     });
+    setFormError('');
     setShowAddForm(false);
   };
 
@@ -112,12 +114,19 @@ export default function CollaboratorManager({
             <h4 className="text-sm font-semibold text-foreground">Add New Member</h4>
             <button
               type="button"
-              onClick={() => setShowAddForm(false)}
+              onClick={() => { setShowAddForm(false); setFormError(''); }}
+              aria-label="Close add member form"
               className="p-1 rounded-lg hover:bg-accent transition-colors text-muted-foreground"
             >
               <X size={16} />
             </button>
           </div>
+
+          {formError && (
+            <div role="alert" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-red-500/10 text-red-600 text-xs">
+              {formError}
+            </div>
+          )}
 
           <div>
             <label className="block text-xs font-medium text-foreground mb-1.5">
@@ -298,17 +307,32 @@ export default function CollaboratorManager({
 
                 {/* Actions */}
                 <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <button
-                    onClick={() => {
-                      if (window.confirm(`Remove ${collab.name} from the team?`)) {
-                        onRemoveCollaborator(collab.id);
-                      }
-                    }}
-                    className="p-1.5 rounded-lg hover:bg-status-delayed/10 text-muted-foreground hover:text-status-delayed transition-colors"
-                    title="Remove member"
-                  >
-                    <Trash2 size={16} />
-                  </button>
+                  {confirmDeleteId === collab.id ? (
+                    <div className="flex items-center gap-1">
+                      <button
+                        onClick={() => { onRemoveCollaborator(collab.id); setConfirmDeleteId(null); }}
+                        className="px-2 py-1 rounded text-xs font-semibold bg-status-delayed text-white hover:opacity-90 transition-opacity"
+                        aria-label={`Confirm remove ${collab.name}`}
+                      >
+                        Remove
+                      </button>
+                      <button
+                        onClick={() => setConfirmDeleteId(null)}
+                        className="px-2 py-1 rounded text-xs text-muted-foreground hover:text-foreground"
+                        aria-label="Cancel"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      onClick={() => setConfirmDeleteId(collab.id)}
+                      className="p-1.5 rounded-lg hover:bg-status-delayed/10 text-muted-foreground hover:text-status-delayed transition-colors"
+                      aria-label={`Remove ${collab.name} from the team`}
+                    >
+                      <Trash2 size={16} />
+                    </button>
+                  )}
                 </div>
               </motion.div>
             );
