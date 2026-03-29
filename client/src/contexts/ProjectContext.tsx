@@ -27,6 +27,7 @@ interface ProjectContextType {
   activeProject: Project;
   activities: Activity[];
   showOnboarding: boolean;
+  isLoadingProjects: boolean;
   dismissOnboarding: () => void;
   setActiveProjectId: (id: string) => void;
   createProject: (title: string, description?: string, dueDate?: string) => Promise<Project>;
@@ -180,6 +181,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
   const fallbackProject = useMemo(() => createFallbackProject(), []);
   const [{ projects, activeId }, setState] = useState(initProjects);
   const [showOnboarding, setShowOnboarding] = useState(false);
+  const [isLoadingProjects, setIsLoadingProjects] = useState(backendMode);
 
   const taskSaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -221,8 +223,12 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     let cancelled = false;
-    if (!backendMode || !activeOrganizationId) return;
+    if (!backendMode || !activeOrganizationId) {
+      setIsLoadingProjects(false);
+      return;
+    }
 
+    setIsLoadingProjects(true);
     (async () => {
       try {
         const response = await fetchProjects(activeOrganizationId);
@@ -245,6 +251,8 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
         setProjects(mapped, preferredActiveId);
       } catch {
         // Keep local state if backend fetch fails.
+      } finally {
+        if (!cancelled) setIsLoadingProjects(false);
       }
     })();
 
@@ -425,6 +433,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
         activeProject,
         activities,
         showOnboarding,
+        isLoadingProjects,
         dismissOnboarding,
         setActiveProjectId,
         createProject,

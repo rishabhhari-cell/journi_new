@@ -183,43 +183,60 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     void bootstrap();
   }, [hydrateFromSession]);
 
+  /** Apply user + session + memberships from a signin/signup response (no extra /auth/me call). */
+  const applyAuthResponse = useCallback(
+    (nextUser: AuthUser, session: ApiSession | null, responseMemberships?: OrganizationMembershipDTO[]) => {
+      setUser(nextUser);
+      persistUser(nextUser);
+      setIsTrial(false);
+
+      if (session) {
+        setStoredSession(session);
+      }
+
+      const nextMemberships = responseMemberships ?? [];
+      setMemberships(nextMemberships);
+
+      const storedOrgId = localStorage.getItem(ORG_STORAGE_KEY);
+      const preferredOrgId =
+        storedOrgId && nextMemberships.some((m) => m.organizationId === storedOrgId)
+          ? storedOrgId
+          : nextMemberships[0]?.organizationId ?? null;
+      setActiveOrganizationIdState(preferredOrgId);
+      if (preferredOrgId) {
+        localStorage.setItem(ORG_STORAGE_KEY, preferredOrgId);
+      } else {
+        localStorage.removeItem(ORG_STORAGE_KEY);
+      }
+    },
+    [],
+  );
+
   const signUp = useCallback(async (name: string, email: string, password: string) => {
-    const response = await apiFetchNoAuth<{ user: ApiUser; session: ApiSession | null }>('/auth/signup', {
+    const response = await apiFetchNoAuth<{
+      user: ApiUser;
+      session: ApiSession | null;
+      memberships?: OrganizationMembershipDTO[];
+    }>('/auth/signup', {
       method: 'POST',
-      body: JSON.stringify({
-        fullName: name,
-        email,
-        password,
-      }),
+      body: JSON.stringify({ fullName: name, email, password }),
     });
 
-    const nextUser = toAuthUser(response.user);
-    setUser(nextUser);
-    persistUser(nextUser);
-    setIsTrial(false);
-    if (response.session) {
-      await hydrateFromSession(response.session);
-    } else {
-      setMemberships([]);
-      setActiveOrganizationIdState(null);
-      localStorage.removeItem(ORG_STORAGE_KEY);
-    }
-  }, [hydrateFromSession]);
+    applyAuthResponse(toAuthUser(response.user), response.session, response.memberships);
+  }, [applyAuthResponse]);
 
   const signIn = useCallback(async (email: string, password: string) => {
-    const response = await apiFetchNoAuth<{ user: ApiUser; session: ApiSession | null }>('/auth/signin', {
+    const response = await apiFetchNoAuth<{
+      user: ApiUser;
+      session: ApiSession | null;
+      memberships?: OrganizationMembershipDTO[];
+    }>('/auth/signin', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
     });
 
-    const nextUser = toAuthUser(response.user);
-    setUser(nextUser);
-    persistUser(nextUser);
-    setIsTrial(false);
-    if (response.session) {
-      await hydrateFromSession(response.session);
-    }
-  }, [hydrateFromSession]);
+    applyAuthResponse(toAuthUser(response.user), response.session, response.memberships);
+  }, [applyAuthResponse]);
 
   const startOAuth = useCallback(async (provider: 'google' = 'google') => {
     const response = await apiFetchNoAuth<{ url: string }>('/auth/oauth', {

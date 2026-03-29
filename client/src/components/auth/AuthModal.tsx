@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Eye, EyeOff, Mail, Lock, User, AlertCircle, CheckCircle2, Building2, ChevronDown } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
+import { useLocation } from 'wouter';
 import { toast } from 'sonner';
 
 // ── Google icon SVG ───────────────────────────────────────────────────────────
@@ -93,6 +94,7 @@ function Field({
 // ── Main modal ────────────────────────────────────────────────────────────────
 export default function AuthModal() {
   const { modalOpen, modalView, closeModal, signIn, signUp, openModal, startOAuth } = useAuth();
+  const [, navigate] = useLocation();
 
   // Sign-in fields
   const [siEmail, setSiEmail] = useState('');
@@ -124,6 +126,7 @@ export default function AuthModal() {
       await signIn(siEmail, siPassword);
       toast.success('Welcome back!');
       closeModal();
+      navigate('/dashboard');
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Sign in failed.');
     } finally {
@@ -143,6 +146,7 @@ export default function AuthModal() {
       await signUp(suName, suEmail, suPassword);
       toast.success('Account created — welcome to Journi!');
       closeModal();
+      navigate('/dashboard');
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Sign up failed.');
     } finally {

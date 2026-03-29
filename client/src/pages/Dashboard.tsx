@@ -66,6 +66,7 @@ export default function Dashboard() {
     project,
     activities,
     showOnboarding,
+    isLoadingProjects,
     dismissOnboarding,
     addTask,
     updateTask,
@@ -166,6 +167,20 @@ export default function Dashboard() {
     calendar:     { title: 'Calendar',           subtitle: 'Tasks and deadlines by date' },
     publications: { title: 'Publications',       subtitle: 'Track your journal submissions' },
   };
+
+  if (isLoadingProjects && !isTrial) {
+    return (
+      <div className="min-h-screen flex flex-col bg-muted/30">
+        <Navbar />
+        <div className="flex flex-1 items-center justify-center pt-16">
+          <div className="flex flex-col items-center gap-3">
+            <div className="h-8 w-8 animate-spin rounded-full border-2 border-muted-foreground/20 border-t-journi-green" />
+            <p className="text-sm text-muted-foreground">Loading your projects…</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-muted/30">

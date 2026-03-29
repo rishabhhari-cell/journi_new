@@ -91,6 +91,61 @@ function mapUser(user: any, fullName?: string | null): ApiUser {
   };
 }
 
+/** Fetch memberships for a user, auto-creating a personal workspace if none exist. */
+async function fetchMembershipsWithAutoOrg(
+  userId: string,
+  fullName: string,
+): Promise<OrganizationMembershipDTO[]> {
+  const { data: memberships } = await supabaseAdmin
+    .from("organization_members")
+    .select("organization_id, role, organizations(id, name, slug, created_at)")
+    .eq("user_id", userId);
+
+  let dtos: OrganizationMembershipDTO[] = (memberships ?? [])
+    .map((m: any) => {
+      const org = Array.isArray(m.organizations) ? m.organizations[0] : m.organizations;
+      if (!org) return null;
+      return {
+        organizationId: m.organization_id,
+        role: m.role,
+        organization: { id: org.id, name: org.name, slug: org.slug, createdAt: org.created_at },
+      };
+    })
+    .filter(Boolean) as OrganizationMembershipDTO[];
+
+  if (dtos.length === 0) {
+    const wsName = `${fullName}'s Workspace`;
+    const slug =
+      wsName.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 48) +
+      "-" +
+      crypto.randomBytes(2).toString("hex");
+
+    const { data: newOrg } = await supabaseAdmin
+      .from("organizations")
+      .insert({ name: wsName, slug, created_by: userId })
+      .select("id, name, slug, created_at")
+      .single();
+
+    if (newOrg) {
+      await supabaseAdmin.from("organization_members").upsert({
+        organization_id: newOrg.id,
+        user_id: userId,
+        role: "owner",
+        invited_by: userId,
+      });
+      dtos = [
+        {
+          organizationId: newOrg.id,
+          role: "owner",
+          organization: { id: newOrg.id, name: newOrg.name, slug: newOrg.slug, createdAt: newOrg.created_at },
+        },
+      ];
+    }
+  }
+
+  return dtos;
+}
+
 async function upsertProfile(params: { userId: string; fullName: string; email: string }) {
   await supabaseAdmin.from("profiles").upsert(
     {
@@ -161,6 +216,9 @@ authRouter.post("/signup", async (req, res, next) => {
       }
     }
 
+    // Fetch memberships inline (includes auto-created workspace + any institution enrollment)
+    const membershipDtos = await fetchMembershipsWithAutoOrg(data.user.id, input.fullName);
+
     await writeAuditEvent({
       actorUserId: data.user.id,
       eventType: "auth.signup",
@@ -171,6 +229,7 @@ authRouter.post("/signup", async (req, res, next) => {
     res.status(201).json({
       user: mapUser(data.user, input.fullName),
       session: mapSession(data.session),
+      memberships: membershipDtos,
     });
   } catch (error) {
     next(error);
@@ -195,6 +254,14 @@ authRouter.post("/signin", async (req, res, next) => {
       .eq("id", data.user.id)
       .maybeSingle();
 
+    const fullName = profile?.full_name ?? null;
+
+    // Fetch memberships inline so the frontend doesn't need a separate /auth/me call
+    const membershipDtos = await fetchMembershipsWithAutoOrg(
+      data.user.id,
+      fullName ?? data.user.email ?? "User",
+    );
+
     await writeAuditEvent({
       actorUserId: data.user.id,
       eventType: "auth.signin",
@@ -203,8 +270,9 @@ authRouter.post("/signin", async (req, res, next) => {
     });
 
     res.json({
-      user: mapUser(data.user, profile?.full_name ?? null),
+      user: mapUser(data.user, fullName),
       session: mapSession(data.session),
+      memberships: membershipDtos,
     });
   } catch (error) {
     next(error);
@@ -300,74 +368,9 @@ authRouter.get("/me", requireAuth, async (req, res, next) => {
       profile = { full_name: oauthName, initials: toInitials(oauthName), email: oauthEmail };
     }
 
-    const { data: memberships, error: membershipsError } = await supabaseAdmin
-      .from("organization_members")
-      .select("organization_id, role, organizations(id, name, slug, created_at)")
-      .eq("user_id", userId);
-    if (membershipsError) {
-      throw new HttpError(500, membershipsError.message, "MEMBERSHIP_FETCH_FAILED");
-    }
-
     const fullName = profile?.full_name ?? "User";
+    const membershipDtos = await fetchMembershipsWithAutoOrg(userId, fullName);
 
-    let membershipDtos: OrganizationMembershipDTO[] = (memberships ?? [])
-      .map((membership: any) => {
-        const org = Array.isArray(membership.organizations)
-          ? membership.organizations[0]
-          : membership.organizations;
-        if (!org) return null;
-        return {
-          organizationId: membership.organization_id,
-          role: membership.role,
-          organization: {
-            id: org.id,
-            name: org.name,
-            slug: org.slug,
-            createdAt: org.created_at,
-          },
-        };
-      })
-      .filter(Boolean) as OrganizationMembershipDTO[];
-
-    // Auto-create a personal workspace for users with no organization
-    if (membershipDtos.length === 0) {
-      const wsName = `${fullName}'s Workspace`;
-      const slug =
-        wsName
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, "-")
-          .replace(/^-|-$/g, "")
-          .slice(0, 48) +
-        "-" +
-        crypto.randomBytes(2).toString("hex");
-
-      const { data: newOrg } = await supabaseAdmin
-        .from("organizations")
-        .insert({ name: wsName, slug, created_by: userId })
-        .select("id, name, slug, created_at")
-        .single();
-
-      if (newOrg) {
-        await supabaseAdmin.from("organization_members").upsert({
-          organization_id: newOrg.id,
-          user_id: userId,
-          role: "owner",
-          invited_by: userId,
-        });
-        membershipDtos = [
-          {
-            organizationId: newOrg.id,
-            role: "owner",
-            organization: {
-              id: newOrg.id,
-              name: newOrg.name,
-              slug: newOrg.slug,
-              createdAt: newOrg.created_at,
-            },
-          },
-        ];
-      }
-    }
     const providerStr = rawAuthUser?.app_metadata?.provider;
     const provider: ApiUser["provider"] = providerStr === "google" ? "google" : "local";
     const user: ApiUser = {
