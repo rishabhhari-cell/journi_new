@@ -1,7 +1,7 @@
 [build]
 builder = "nixpacks"
 installCommand = "npm install -g corepack@0.24.1 && corepack enable && pnpm i --no-frozen-lockfile"
-buildCommand = "npm run build:server"
+buildCommand = "npm run build"
 
 [deploy]
 startCommand = "npm run start"
