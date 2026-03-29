@@ -77,6 +77,8 @@ export interface ApiProject {
   created_at: string;
   updated_at: string;
   project_members?: ApiProjectMember[];
+  tasks_json?: unknown[];
+  collaborators_json?: unknown[];
 }
 
 export interface ApiManuscriptSection {
@@ -207,6 +209,20 @@ export async function patchProject(
 export async function deleteProject(projectId: string) {
   return apiFetch<{ ok: boolean }>(`/projects/${projectId}`, {
     method: 'DELETE',
+  });
+}
+
+export async function patchProjectTasks(projectId: string, tasks: unknown[]) {
+  return apiFetch<{ ok: boolean }>(`/projects/${projectId}/tasks`, {
+    method: 'PATCH',
+    body: JSON.stringify({ tasks }),
+  });
+}
+
+export async function patchProjectCollaborators(projectId: string, collaborators: unknown[]) {
+  return apiFetch<{ ok: boolean }>(`/projects/${projectId}/collaborators`, {
+    method: 'PATCH',
+    body: JSON.stringify({ collaborators }),
   });
 }
 

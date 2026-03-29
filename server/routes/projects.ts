@@ -23,6 +23,14 @@ const patchProjectSchema = z.object({
   dueDate: z.string().datetime().nullable().optional(),
 });
 
+const patchTasksSchema = z.object({
+  tasks: z.array(z.record(z.unknown())),
+});
+
+const patchCollaboratorsSchema = z.object({
+  collaborators: z.array(z.record(z.unknown())),
+});
+
 const querySchema = z.object({
   organizationId: z.string().uuid(),
 });
@@ -149,6 +157,42 @@ projectsRouter.get("/:projectId", async (req, res, next) => {
       throw new HttpError(500, error.message, "PROJECT_FETCH_FAILED");
     }
     res.json({ data });
+  } catch (error) {
+    next(error);
+  }
+});
+
+projectsRouter.patch("/:projectId/tasks", async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    const { tasks } = patchTasksSchema.parse(req.body);
+    await assertProjectEditable(authReq.auth.userId, req.params.projectId);
+
+    const { error } = await supabaseAdmin
+      .from("projects")
+      .update({ tasks_json: tasks, updated_at: new Date().toISOString() })
+      .eq("id", req.params.projectId);
+
+    if (error) throw new HttpError(400, error.message, "PROJECT_TASKS_UPDATE_FAILED");
+    res.json({ ok: true });
+  } catch (error) {
+    next(error);
+  }
+});
+
+projectsRouter.patch("/:projectId/collaborators", async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    const { collaborators } = patchCollaboratorsSchema.parse(req.body);
+    await assertProjectEditable(authReq.auth.userId, req.params.projectId);
+
+    const { error } = await supabaseAdmin
+      .from("projects")
+      .update({ collaborators_json: collaborators, updated_at: new Date().toISOString() })
+      .eq("id", req.params.projectId);
+
+    if (error) throw new HttpError(400, error.message, "PROJECT_COLLABORATORS_UPDATE_FAILED");
+    res.json({ ok: true });
   } catch (error) {
     next(error);
   }

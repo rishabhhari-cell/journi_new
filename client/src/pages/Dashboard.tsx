@@ -26,7 +26,9 @@ import ProjectSwitcher from '@/components/ProjectSwitcher';
 import ListView from '@/components/dashboard/ListView';
 import TaskDialog from '@/components/dashboard/TaskDialog';
 import CollaboratorManager from '@/components/dashboard/CollaboratorManager';
+import ProjectOnboardingWizard from '@/components/dashboard/ProjectOnboardingWizard';
 import { useProject } from '@/contexts/ProjectContext';
+import { useAuth } from '@/contexts/AuthContext';
 import { useSubmissions } from '@/contexts/SubmissionsContext';
 import { useManuscript } from '@/contexts/ManuscriptContext';
 import type { Task, TaskFormData } from '@/types';
@@ -63,6 +65,8 @@ export default function Dashboard() {
   const {
     project,
     activities,
+    showOnboarding,
+    dismissOnboarding,
     addTask,
     updateTask,
     deleteTask,
@@ -70,6 +74,7 @@ export default function Dashboard() {
     removeCollaborator,
     updateCollaborator,
   } = useProject();
+  const { isTrial } = useAuth();
   const { submissions } = useSubmissions();
   const { manuscripts } = useManuscript();
 
@@ -165,6 +170,11 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen flex flex-col bg-muted/30">
       <Navbar />
+
+      {/* Onboarding wizard for new real users */}
+      {showOnboarding && !isTrial && (
+        <ProjectOnboardingWizard onComplete={dismissOnboarding} />
+      )}
 
       <div className="flex flex-1 pt-16">
         {/* Mobile overlay */}

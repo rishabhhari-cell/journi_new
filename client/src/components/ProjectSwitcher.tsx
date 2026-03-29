@@ -44,7 +44,7 @@ export default function ProjectSwitcher({ variant = 'sidebar', onSwitch }: Props
     e.preventDefault();
     const name = newName.trim();
     if (!name) return;
-    const project = createProject(name);
+    void createProject(name);
     setNewName('');
     setCreating(false);
     setOpen(false);

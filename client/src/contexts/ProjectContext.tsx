@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect, ReactNode, useMemo, useCallback } from 'react';
+import { createContext, useContext, useState, useEffect, useRef, ReactNode, useMemo, useCallback } from 'react';
 import { nanoid } from 'nanoid';
 import type { Project, Task, Collaborator, Activity, TaskFormData, CollaboratorFormData } from '@/types';
 import { generateSampleProject, generateSampleProject2, generateActivities } from '@/data/generators';
@@ -7,6 +7,8 @@ import {
   fetchProjects,
   createProject as createProjectApi,
   deleteProject as deleteProjectApi,
+  patchProjectTasks,
+  patchProjectCollaborators,
   type ApiProject,
 } from '@/lib/api/backend';
 
@@ -24,8 +26,10 @@ interface ProjectContextType {
   projects: Project[];
   activeProject: Project;
   activities: Activity[];
+  showOnboarding: boolean;
+  dismissOnboarding: () => void;
   setActiveProjectId: (id: string) => void;
-  createProject: (title: string, description?: string) => Project;
+  createProject: (title: string, description?: string, dueDate?: string) => Promise<Project>;
   deleteProject: (id: string) => void;
   addTask: (task: TaskFormData) => void;
   updateTask: (taskId: string, updates: Partial<Task>) => void;
@@ -43,9 +47,8 @@ const ProjectContext = createContext<ProjectContextType | undefined>(undefined);
 // Deterministic fake ORCID for sample collaborators that predate the ORCID field
 function backfillOrcid(c: Collaborator): Collaborator {
   if (c.orcidId) return c;
-  // Use a simple hash of the id to decide ~75% get one, and to generate stable digits
   const hash = c.id.split('').reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
-  if (hash % 4 === 0) return c; // ~25% have none
+  if (hash % 4 === 0) return c;
   const seg = (n: number) => String(1000 + (Math.abs(n) % 9000)).padStart(4, '0');
   return { ...c, orcidId: `${seg(hash)}-${seg(hash * 7)}-${seg(hash * 13)}-${seg(hash * 19)}` };
 }
@@ -73,6 +76,7 @@ function createFallbackProject(): Project {
   return generateSampleProject();
 }
 
+// localStorage overlays — used only for trial users
 function loadOverlays(): Record<string, ProjectOverlay> {
   try {
     const raw = localStorage.getItem(OVERLAYS_KEY);
@@ -98,24 +102,28 @@ function loadOverlays(): Record<string, ProjectOverlay> {
 function saveOverlays(projects: Project[]) {
   const payload: Record<string, ProjectOverlay> = {};
   for (const project of projects) {
-    payload[project.id] = {
-      tasks: project.tasks,
-      collaborators: project.collaborators,
-    };
+    payload[project.id] = { tasks: project.tasks, collaborators: project.collaborators };
   }
   localStorage.setItem(OVERLAYS_KEY, JSON.stringify(payload));
 }
 
-function mapApiProjectToUi(apiProject: ApiProject, overlays: Record<string, ProjectOverlay>): Project {
-  const overlay = overlays[apiProject.id];
-  const generatedCollaborators: Collaborator[] = (apiProject.project_members ?? []).map((member) => ({
-    id: member.user_id,
-    name: `Member ${member.user_id.slice(0, 6)}`,
-    email: `${member.user_id.slice(0, 8)}@unknown.local`,
-    role: 'contributor',
-    initials: member.user_id.slice(0, 2).toUpperCase(),
-    online: false,
-  }));
+function rehydrateTasks(raw: unknown[]): Task[] {
+  return raw.map((t) => {
+    const task = t as Task;
+    return {
+      ...task,
+      startDate: task.startDate ? new Date(task.startDate) : new Date(),
+      endDate: task.endDate ? new Date(task.endDate) : new Date(),
+    };
+  });
+}
+
+function mapApiProjectToUi(apiProject: ApiProject): Project {
+  // Read tasks and collaborators from backend JSONB columns when available
+  const tasks: Task[] = apiProject.tasks_json ? rehydrateTasks(apiProject.tasks_json) : [];
+  const collaborators: Collaborator[] = apiProject.collaborators_json
+    ? (apiProject.collaborators_json as Collaborator[])
+    : [];
 
   return {
     id: apiProject.id,
@@ -125,8 +133,8 @@ function mapApiProjectToUi(apiProject: ApiProject, overlays: Record<string, Proj
     createdAt: new Date(apiProject.created_at),
     updatedAt: new Date(apiProject.updated_at),
     dueDate: apiProject.due_date ? new Date(apiProject.due_date) : undefined,
-    tasks: overlay?.tasks ?? [],
-    collaborators: overlay?.collaborators ?? generatedCollaborators,
+    tasks,
+    collaborators,
   };
 }
 
@@ -155,6 +163,9 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
 
   const fallbackProject = useMemo(() => createFallbackProject(), []);
   const [{ projects, activeId }, setState] = useState(initProjects);
+  const [showOnboarding, setShowOnboarding] = useState(false);
+
+  const taskSaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const [activities, setActivities] = useState<Activity[]>(() => {
     try {
@@ -178,13 +189,13 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     setState({ projects: nextProjects, activeId: resolvedActiveId });
     localStorage.setItem(PROJECTS_KEY, JSON.stringify(nextProjects));
     localStorage.setItem(ACTIVE_PROJECT_KEY, resolvedActiveId);
-    saveOverlays(nextProjects);
-  }, [activeId, fallbackProject]);
+    if (isTrial) saveOverlays(nextProjects);
+  }, [activeId, fallbackProject, isTrial]);
 
   // Persist once on mount to save any backfilled fields (e.g. ORCID migration)
   useEffect(() => {
     localStorage.setItem(PROJECTS_KEY, JSON.stringify(projects));
-    saveOverlays(projects);
+    if (isTrial) saveOverlays(projects);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -194,25 +205,19 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     let cancelled = false;
-    if (!backendMode || !activeOrganizationId) {
-      return;
-    }
+    if (!backendMode || !activeOrganizationId) return;
 
     (async () => {
       try {
         const response = await fetchProjects(activeOrganizationId);
         if (cancelled) return;
 
-        const overlays = loadOverlays();
-        let mapped = response.data.map((project) => mapApiProjectToUi(project, overlays));
+        const mapped = response.data.map((project) => mapApiProjectToUi(project));
 
         if (mapped.length === 0) {
-          const created = await createProjectApi({
-            organizationId: activeOrganizationId,
-            title: 'My First Project',
-            description: '',
-          });
-          mapped = [mapApiProjectToUi(created.data, overlays)];
+          // New user — show onboarding wizard instead of auto-creating
+          setShowOnboarding(true);
+          return;
         }
 
         const preferredActiveId = localStorage.getItem(ACTIVE_PROJECT_KEY) || mapped[0].id;
@@ -222,9 +227,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
       }
     })();
 
-    return () => {
-      cancelled = true;
-    };
+    return () => { cancelled = true; };
   }, [backendMode, activeOrganizationId, setProjects]);
 
   const activeProject =
@@ -232,12 +235,32 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     projects[0] ||
     fallbackProject;
 
+  const activeProjectRef = useRef(activeProject);
+  activeProjectRef.current = activeProject;
+
+  const dismissOnboarding = useCallback(() => setShowOnboarding(false), []);
+
   const setActiveProjectId = (id: string) => {
     setState((prev) => ({ ...prev, activeId: id }));
     localStorage.setItem(ACTIVE_PROJECT_KEY, id);
   };
 
-  const createProject = (title: string, description = ''): Project => {
+  // Debounced task save to backend
+  const scheduleTaskSave = useCallback((projectId: string, tasks: Task[]) => {
+    if (!backendMode) return;
+    if (taskSaveTimerRef.current) clearTimeout(taskSaveTimerRef.current);
+    taskSaveTimerRef.current = setTimeout(() => {
+      void patchProjectTasks(projectId, tasks as unknown[]).catch(() => {});
+    }, 800);
+  }, [backendMode]);
+
+  // Immediate collaborator save to backend
+  const saveCollaborators = useCallback((projectId: string, collaborators: Collaborator[]) => {
+    if (!backendMode) return;
+    void patchProjectCollaborators(projectId, collaborators as unknown[]).catch(() => {});
+  }, [backendMode]);
+
+  const createProject = useCallback(async (title: string, description = '', dueDate?: string): Promise<Project> => {
     const optimisticProject: Project = {
       id: nanoid(),
       title,
@@ -245,6 +268,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
       status: 'active',
       createdAt: new Date(),
       updatedAt: new Date(),
+      dueDate: dueDate ? new Date(dueDate) : undefined,
       tasks: [],
       collaborators: [],
     };
@@ -252,29 +276,28 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     setProjects([...projects, optimisticProject], optimisticProject.id);
 
     if (backendMode && activeOrganizationId) {
-      void (async () => {
-        try {
-          const created = await createProjectApi({
-            organizationId: activeOrganizationId,
-            title,
-            description,
-          });
-          const overlays = loadOverlays();
-          const mapped = mapApiProjectToUi(created.data, overlays);
-          setProjects(
-            projects
-              .filter((project) => project.id !== optimisticProject.id)
-              .concat({ ...mapped, tasks: optimisticProject.tasks, collaborators: optimisticProject.collaborators }),
-            mapped.id,
-          );
-        } catch {
-          // Keep optimistic project locally if backend creation fails.
-        }
-      })();
+      try {
+        const created = await createProjectApi({
+          organizationId: activeOrganizationId,
+          title,
+          description,
+          dueDate,
+        });
+        const mapped = mapApiProjectToUi(created.data);
+        setProjects(
+          projects
+            .filter((p) => p.id !== optimisticProject.id)
+            .concat({ ...mapped, tasks: optimisticProject.tasks, collaborators: optimisticProject.collaborators }),
+          mapped.id,
+        );
+        return { ...mapped, tasks: optimisticProject.tasks, collaborators: optimisticProject.collaborators };
+      } catch {
+        // Keep optimistic project locally if backend creation fails.
+      }
     }
 
     return optimisticProject;
-  };
+  }, [projects, backendMode, activeOrganizationId, setProjects]);
 
   const deleteProject = (id: string) => {
     if (projects.length <= 1) return;
@@ -283,9 +306,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     setProjects(updated, newActiveId);
 
     if (backendMode) {
-      void deleteProjectApi(id).catch(() => {
-        // Keep optimistic deletion if backend call fails.
-      });
+      void deleteProjectApi(id).catch(() => {});
     }
   };
 
@@ -298,11 +319,10 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
 
   const addTask = (taskData: TaskFormData) => {
     const newTask: Task = { id: nanoid(), ...taskData };
-    updateActive((project) => ({
-      ...project,
-      tasks: [...project.tasks, newTask],
-      updatedAt: new Date(),
-    }));
+    const newTasks = [...activeProject.tasks, newTask];
+    updateActive((project) => ({ ...project, tasks: newTasks, updatedAt: new Date() }));
+    scheduleTaskSave(activeProject.id, newTasks);
+
     const currentUser = activeProject.collaborators[0];
     if (currentUser) {
       setActivities((prev) => [
@@ -321,19 +341,15 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
   };
 
   const updateTask = (taskId: string, updates: Partial<Task>) => {
-    updateActive((project) => ({
-      ...project,
-      tasks: project.tasks.map((task) => (task.id === taskId ? { ...task, ...updates } : task)),
-      updatedAt: new Date(),
-    }));
+    const newTasks = activeProject.tasks.map((task) => (task.id === taskId ? { ...task, ...updates } : task));
+    updateActive((project) => ({ ...project, tasks: newTasks, updatedAt: new Date() }));
+    scheduleTaskSave(activeProject.id, newTasks);
   };
 
   const deleteTask = (taskId: string) => {
-    updateActive((project) => ({
-      ...project,
-      tasks: project.tasks.filter((task) => task.id !== taskId),
-      updatedAt: new Date(),
-    }));
+    const newTasks = activeProject.tasks.filter((task) => task.id !== taskId);
+    updateActive((project) => ({ ...project, tasks: newTasks, updatedAt: new Date() }));
+    scheduleTaskSave(activeProject.id, newTasks);
   };
 
   const getTask = (taskId: string) => activeProject.tasks.find((task) => task.id === taskId);
@@ -346,11 +362,10 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
       .substring(0, 2)
       .toUpperCase();
     const collaborator: Collaborator = { id: nanoid(), ...data, initials, online: false };
-    updateActive((project) => ({
-      ...project,
-      collaborators: [...project.collaborators, collaborator],
-      updatedAt: new Date(),
-    }));
+    const newCollaborators = [...activeProject.collaborators, collaborator];
+    updateActive((project) => ({ ...project, collaborators: newCollaborators, updatedAt: new Date() }));
+    saveCollaborators(activeProject.id, newCollaborators);
+
     setActivities((prev) => [
       {
         id: nanoid(),
@@ -366,25 +381,21 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
   };
 
   const removeCollaborator = (collaboratorId: string) => {
-    updateActive((project) => ({
-      ...project,
-      collaborators: project.collaborators.filter((collaborator) => collaborator.id !== collaboratorId),
-      updatedAt: new Date(),
-    }));
+    const newCollaborators = activeProject.collaborators.filter((c) => c.id !== collaboratorId);
+    updateActive((project) => ({ ...project, collaborators: newCollaborators, updatedAt: new Date() }));
+    saveCollaborators(activeProject.id, newCollaborators);
   };
 
   const updateCollaborator = (collaboratorId: string, updates: Partial<Collaborator>) => {
-    updateActive((project) => ({
-      ...project,
-      collaborators: project.collaborators.map((collaborator) =>
-        collaborator.id === collaboratorId ? { ...collaborator, ...updates } : collaborator,
-      ),
-      updatedAt: new Date(),
-    }));
+    const newCollaborators = activeProject.collaborators.map((c) =>
+      c.id === collaboratorId ? { ...c, ...updates } : c,
+    );
+    updateActive((project) => ({ ...project, collaborators: newCollaborators, updatedAt: new Date() }));
+    saveCollaborators(activeProject.id, newCollaborators);
   };
 
   const getCollaborator = (collaboratorId: string) =>
-    activeProject.collaborators.find((collaborator) => collaborator.id === collaboratorId);
+    activeProject.collaborators.find((c) => c.id === collaboratorId);
 
   return (
     <ProjectContext.Provider
@@ -392,6 +403,8 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
         projects,
         activeProject,
         activities,
+        showOnboarding,
+        dismissOnboarding,
         setActiveProjectId,
         createProject,
         deleteProject,
