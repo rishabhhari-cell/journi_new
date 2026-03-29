@@ -15,7 +15,7 @@ export function createApp() {
 
   app.use(
     cors({
-      origin: [env.CLIENT_BASE_URL, env.APP_BASE_URL],
+      origin: (origin, callback) => callback(null, true),
       credentials: true,
     }),
   );
