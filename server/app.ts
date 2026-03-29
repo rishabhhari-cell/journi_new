@@ -1,5 +1,6 @@
 import cors from "cors";
 import express from "express";
+import path from "node:path";
 import { env } from "./config/env";
 import { errorHandler, notFoundHandler } from "./middleware/error-handler";
 import { authRouter } from "./routes/auth";
@@ -42,6 +43,16 @@ export function createApp() {
   app.use("/api/citations", citationsRouter);
 
   app.use("/api/*", notFoundHandler);
+
+  // Serve built React frontend in production
+  if (env.NODE_ENV === "production") {
+    const publicPath = path.join(process.cwd(), "dist", "public");
+    app.use(express.static(publicPath));
+    app.get("*", (_req, res) => {
+      res.sendFile(path.join(publicPath, "index.html"));
+    });
+  }
+
   app.use(errorHandler);
 
   return app;
