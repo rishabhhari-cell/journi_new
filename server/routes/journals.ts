@@ -2,6 +2,7 @@ import { Router } from "express";
 import { z } from "zod";
 import { assertAnyOrganizationRole } from "../lib/access";
 import { HttpError } from "../lib/http-error";
+import { supabaseAdmin } from "../lib/supabase";
 import { requireAuth, type AuthedRequest } from "../middleware/auth";
 import { writeAuditEvent } from "../services/audit.service";
 import { ingestJournals } from "../services/journals/ingest.service";
@@ -118,6 +119,124 @@ journalsRouter.post("/import", requireAuth, async (req, res, next) => {
     });
 
     res.status(201).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+});
+
+// PATCH /journals/:journalId — admin-only manual corrections (acceptance rate, metrics, guidelines)
+const journalPatchSchema = z.object({
+  name: z.string().min(2).optional(),
+  abbreviation: z.string().optional(),
+  impactFactor: z.number().nullable().optional(),
+  impactFactorYear: z.number().int().nullable().optional(),
+  openAccess: z.boolean().nullable().optional(),
+  websiteUrl: z.string().url().nullable().optional(),
+  submissionPortalUrl: z.string().url().nullable().optional(),
+  submissionRequirements: z.record(z.string(), z.unknown()).nullable().optional(),
+  publisher: z.string().optional(),
+  subjectAreas: z.array(z.string()).optional(),
+  geographicLocation: z.string().optional(),
+  issnPrint: z.string().optional(),
+  issnOnline: z.string().optional(),
+  acceptanceRate: z.number().min(0).max(100).nullable().optional(),
+  avgDecisionDays: z.number().int().min(1).nullable().optional(),
+  apcCostUsd: z.number().nullable().optional(),
+});
+
+journalsRouter.patch("/:journalId", requireAuth, async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    await assertAnyOrganizationRole(authReq.auth.userId, "admin");
+
+    const journalId = req.params.journalId;
+    const input = journalPatchSchema.parse(req.body);
+
+    const updates: Record<string, unknown> = {};
+    if (input.name !== undefined) updates.name = input.name;
+    if (input.abbreviation !== undefined) updates.abbreviation = input.abbreviation;
+    if (input.impactFactor !== undefined) updates.impact_factor = input.impactFactor;
+    if (input.impactFactorYear !== undefined) updates.impact_factor_year = input.impactFactorYear;
+    if (input.openAccess !== undefined) updates.open_access = input.openAccess;
+    if (input.websiteUrl !== undefined) updates.website_url = input.websiteUrl;
+    if (input.submissionPortalUrl !== undefined) updates.submission_portal_url = input.submissionPortalUrl;
+    if (input.submissionRequirements !== undefined) updates.submission_requirements_json = input.submissionRequirements;
+    if (input.publisher !== undefined) updates.publisher = input.publisher;
+    if (input.subjectAreas !== undefined) updates.subject_areas = input.subjectAreas;
+    if (input.geographicLocation !== undefined) updates.geographic_location = input.geographicLocation;
+    if (input.issnPrint !== undefined) updates.issn_print = input.issnPrint;
+    if (input.issnOnline !== undefined) updates.issn_online = input.issnOnline;
+    if (input.acceptanceRate !== undefined) updates.acceptance_rate = input.acceptanceRate;
+    if (input.avgDecisionDays !== undefined) updates.avg_decision_days = input.avgDecisionDays;
+    if (input.apcCostUsd !== undefined) updates.apc_cost_usd = input.apcCostUsd;
+
+    // Mark manually edited fields as "manual" provenance (priority 100)
+    const { data: existing } = await supabaseAdmin
+      .from("journals")
+      .select("provenance")
+      .eq("id", journalId)
+      .maybeSingle();
+
+    const provenance = { ...(existing?.provenance ?? {}) };
+    for (const key of Object.keys(updates)) {
+      provenance[key] = "manual";
+    }
+    updates.provenance = provenance;
+    updates.last_verified_at = new Date().toISOString();
+
+    const { data, error } = await supabaseAdmin
+      .from("journals")
+      .update(updates)
+      .eq("id", journalId)
+      .select("*")
+      .single();
+
+    if (error || !data) {
+      throw new HttpError(400, error?.message ?? "Journal update failed", "JOURNAL_UPDATE_FAILED");
+    }
+
+    await writeAuditEvent({
+      actorUserId: authReq.auth.userId,
+      eventType: "journals.import",
+      entityType: "journal",
+      entityId: journalId,
+      payload: { source: "manual_patch", fields: Object.keys(updates) },
+    });
+
+    res.json({ data });
+  } catch (error) {
+    next(error);
+  }
+});
+
+// GET /journals/:journalId/guidelines
+journalsRouter.get("/:journalId/guidelines", async (req, res, next) => {
+  try {
+    const journal = await getJournalById(req.params.journalId);
+    if (!journal) {
+      throw new HttpError(404, "Journal not found", "JOURNAL_NOT_FOUND");
+    }
+
+    const raw = (journal as any).submission_requirements_json as Record<string, unknown> | null;
+
+    // Return structured guidelines with sensible defaults for null fields
+    const guidelines = {
+      journalId: journal.id,
+      journalName: journal.name,
+      submissionPortalUrl: (journal as any).submission_portal_url ?? null,
+      wordLimits: (raw?.word_limits as Record<string, unknown>) ?? null,
+      sectionsRequired: (raw?.sections_required as string[]) ?? null,
+      citationStyle: (raw?.citation_style as string) ?? null,
+      figuresMax: (raw?.figures_max as number) ?? null,
+      tablesMax: (raw?.tables_max as number) ?? null,
+      structuredAbstract: (raw?.structured_abstract as boolean) ?? null,
+      notes: (raw?.notes as string) ?? null,
+      acceptanceRate: (journal as any).acceptance_rate ?? null,
+      avgDecisionDays: (journal as any).avg_decision_days ?? null,
+      raw: raw ?? null,
+    };
+
+    res.json({ data: guidelines });
   } catch (error) {
     next(error);
   }

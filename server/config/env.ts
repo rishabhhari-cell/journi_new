@@ -15,6 +15,8 @@ const envSchema = z.object({
   JOURNAL_SYNC_STALE_HOURS: z.coerce.number().int().min(1).default(168),
   WS_SNAPSHOT_DEBOUNCE_MS: z.coerce.number().int().min(1000).default(15000),
   INVITE_TOKEN_TTL_HOURS: z.coerce.number().int().min(1).default(168),
+  // Optional — required only when the reformatter feature is used
+  ANTHROPIC_API_KEY: z.string().min(1).optional(),
 });
 
 const parsed = envSchema.safeParse(process.env);

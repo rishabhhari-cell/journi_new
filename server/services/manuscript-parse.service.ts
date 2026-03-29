@@ -102,7 +102,21 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
   const fileTitle = sanitizeTitle(input.fileName);
 
   if (extension === "docx") {
-    const result = await mammoth.convertToHtml({ buffer: input.buffer });
+    const mammothStyleMap = [
+      "p[style-name='Heading 1'] => h1:fresh",
+      "p[style-name='Heading 2'] => h2:fresh",
+      "p[style-name='Heading 3'] => h3:fresh",
+      "p[style-name='Title'] => h1:fresh",
+      "p[style-name='Subtitle'] => h2:fresh",
+      "p[style-name='Abstract'] => h2:fresh",
+      "p[style-name='abstract'] => h2:fresh",
+      "p[style-name='Section Heading'] => h2:fresh",
+    ];
+
+    const result = await mammoth.convertToHtml({
+      buffer: input.buffer,
+      styleMap: mammothStyleMap,
+    } as any);
     const warnings = (result.messages || []).map((message) => ({
       level: "warning" as const,
       code: "DOCX_PARSE_WARNING",
@@ -115,6 +129,24 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
       html: result.value,
       diagnostics: [...diagnostics, ...warnings],
       references: extractReferencesFromOupHtml(result.value),
+    };
+  }
+
+  if (extension === "jpg" || extension === "jpeg" || extension === "png" || extension === "gif" || extension === "webp") {
+    const mimeMap: Record<string, string> = {
+      jpg: "image/jpeg",
+      jpeg: "image/jpeg",
+      png: "image/png",
+      gif: "image/gif",
+      webp: "image/webp",
+    };
+    const mime = input.mimeType ?? mimeMap[extension] ?? "image/jpeg";
+    const dataUrl = `data:${mime};base64,${input.buffer.toString("base64")}`;
+    return {
+      fileTitle,
+      format: "image",
+      imageDataUrl: dataUrl,
+      diagnostics,
     };
   }
 

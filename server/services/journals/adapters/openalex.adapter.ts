@@ -57,7 +57,9 @@ export async function fetchOpenAlexEnrichment(input: {
       apc_cost_usd: source.apc_usd,
       website_url: source.homepage_url,
       subject_areas: subjects,
+      // 2yr_mean_citedness is NOT the traditional JIF — stored with provenance label
       impact_factor: source["2yr_mean_citedness"],
+      impact_factor_metric: "2yr_mean_citedness",
       issn_print: source.issn_l ?? source.issn?.[0] ?? null,
     },
   };

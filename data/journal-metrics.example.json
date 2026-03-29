@@ -1,0 +1,86 @@
+[
+  {
+    "name": "The BMJ",
+    "issnPrint": "0959-8138",
+    "issnOnline": "1756-1833",
+    "acceptanceRate": 7,
+    "avgDecisionDays": 28,
+    "impactFactor": 105.7,
+    "impactFactorYear": 2023,
+    "abbreviation": "BMJ",
+    "publisher": "BMJ Publishing Group",
+    "websiteUrl": "https://www.bmj.com",
+    "submissionPortalUrl": "https://submit.bmj.com",
+    "openAccess": false,
+    "subjectAreas": ["Medicine", "General Medicine"],
+    "submissionRequirements": {
+      "word_limits": {
+        "abstract": 300,
+        "main_text": 3000,
+        "total": null
+      },
+      "sections_required": ["Abstract", "Introduction", "Methods", "Results", "Discussion"],
+      "citation_style": "Vancouver",
+      "figures_max": 6,
+      "tables_max": 4,
+      "structured_abstract": true,
+      "notes": "Double-blind peer review. What this paper adds box required."
+    }
+  },
+  {
+    "name": "The Lancet",
+    "issnPrint": "0140-6736",
+    "issnOnline": "1474-547X",
+    "acceptanceRate": 5,
+    "avgDecisionDays": 21,
+    "impactFactor": 202.7,
+    "impactFactorYear": 2023,
+    "abbreviation": "Lancet",
+    "publisher": "Elsevier",
+    "websiteUrl": "https://www.thelancet.com",
+    "submissionPortalUrl": "https://www.editorialmanager.com/tl",
+    "openAccess": false,
+    "subjectAreas": ["Medicine", "General Medicine"],
+    "submissionRequirements": {
+      "word_limits": {
+        "abstract": 250,
+        "main_text": 4000,
+        "total": null
+      },
+      "sections_required": ["Abstract", "Introduction", "Methods", "Results", "Discussion", "Contributors"],
+      "citation_style": "Vancouver",
+      "figures_max": 8,
+      "tables_max": 5,
+      "structured_abstract": false,
+      "notes": "Requires contributor statement and declaration of interests."
+    }
+  },
+  {
+    "name": "NEJM",
+    "issnPrint": "0028-4793",
+    "issnOnline": "1533-4406",
+    "acceptanceRate": 6,
+    "avgDecisionDays": 14,
+    "impactFactor": 176.1,
+    "impactFactorYear": 2023,
+    "abbreviation": "N Engl J Med",
+    "publisher": "Massachusetts Medical Society",
+    "websiteUrl": "https://www.nejm.org",
+    "submissionPortalUrl": "https://submit.nejm.org",
+    "openAccess": false,
+    "subjectAreas": ["Medicine", "General Medicine"],
+    "submissionRequirements": {
+      "word_limits": {
+        "abstract": 250,
+        "main_text": 3500,
+        "total": null
+      },
+      "sections_required": ["Abstract", "Introduction", "Methods", "Results", "Discussion"],
+      "citation_style": "Vancouver",
+      "figures_max": 5,
+      "tables_max": 5,
+      "structured_abstract": true,
+      "notes": "Clinical trial registration required. CONSORT checklist for RCTs."
+    }
+  }
+]

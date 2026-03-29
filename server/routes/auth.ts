@@ -11,6 +11,30 @@ import { writeAuditEvent } from "../services/audit.service";
 
 export const authRouter = Router();
 
+/** Look up the email domain against institution_domains and auto-enroll if matched. */
+async function autoEnrollInstitutionMember(userId: string, email: string): Promise<void> {
+  const domain = email.split("@")[1]?.toLowerCase();
+  if (!domain) return;
+
+  const { data } = await supabaseAdmin
+    .from("institution_domains")
+    .select("organization_id, default_role")
+    .eq("domain", domain)
+    .maybeSingle();
+
+  if (!data) return;
+
+  await supabaseAdmin.from("organization_members").upsert(
+    {
+      organization_id: data.organization_id,
+      user_id: userId,
+      role: data.default_role,
+      invited_by: null,
+    },
+    { onConflict: "organization_id,user_id", ignoreDuplicates: true },
+  );
+}
+
 const signInSchema = z.object({
   email: z.string().email(),
   password: z.string().min(8),
@@ -106,6 +130,9 @@ authRouter.post("/signup", async (req, res, next) => {
       fullName: input.fullName,
       email: input.email,
     });
+
+    // Auto-enroll into institution org if email domain is registered
+    await autoEnrollInstitutionMember(data.user.id, input.email);
 
     if (input.organizationName) {
       const slug = input.organizationName
@@ -356,6 +383,86 @@ authRouter.get("/admin/health", requireAuth, async (req, res, next) => {
     const authReq = req as unknown as AuthedRequest;
     await assertAnyOrganizationRole(authReq.auth.userId, "admin");
     res.json({ ok: true });
+  } catch (error) {
+    next(error);
+  }
+});
+
+const institutionDomainSchema = z.object({
+  domain: z
+    .string()
+    .min(3)
+    .transform((d) => d.toLowerCase().replace(/^@/, "")),
+  organizationId: z.string().uuid(),
+  defaultRole: z.enum(["viewer", "editor", "admin"]).default("viewer"),
+});
+
+// POST /auth/admin/institution-domains — register an email domain → org mapping
+authRouter.post("/admin/institution-domains", requireAuth, async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    await assertAnyOrganizationRole(authReq.auth.userId, "admin");
+    const input = institutionDomainSchema.parse(req.body);
+
+    const { data, error } = await supabaseAdmin
+      .from("institution_domains")
+      .upsert(
+        {
+          domain: input.domain,
+          organization_id: input.organizationId,
+          default_role: input.defaultRole,
+          created_by: authReq.auth.userId,
+        },
+        { onConflict: "domain" },
+      )
+      .select("*")
+      .single();
+
+    if (error || !data) {
+      throw new HttpError(400, error?.message ?? "Failed to register domain", "DOMAIN_REGISTER_FAILED");
+    }
+
+    res.status(201).json({ data });
+  } catch (error) {
+    next(error);
+  }
+});
+
+// DELETE /auth/admin/institution-domains/:domain — remove a domain mapping
+authRouter.delete("/admin/institution-domains/:domain", requireAuth, async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    await assertAnyOrganizationRole(authReq.auth.userId, "admin");
+    const domain = req.params.domain.toLowerCase();
+
+    const { error } = await supabaseAdmin
+      .from("institution_domains")
+      .delete()
+      .eq("domain", domain);
+
+    if (error) {
+      throw new HttpError(400, error.message, "DOMAIN_DELETE_FAILED");
+    }
+
+    res.json({ ok: true });
+  } catch (error) {
+    next(error);
+  }
+});
+
+// GET /auth/admin/institution-domains — list all registered domains
+authRouter.get("/admin/institution-domains", requireAuth, async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    await assertAnyOrganizationRole(authReq.auth.userId, "admin");
+
+    const { data, error } = await supabaseAdmin
+      .from("institution_domains")
+      .select("id, domain, organization_id, default_role, created_at, organizations(name)")
+      .order("domain");
+
+    if (error) throw new HttpError(500, error.message, "DOMAINS_LIST_FAILED");
+    res.json({ data: data ?? [] });
   } catch (error) {
     next(error);
   }

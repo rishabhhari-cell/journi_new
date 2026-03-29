@@ -6,6 +6,8 @@ import { supabaseAdmin } from "../lib/supabase";
 import { requireAuth, type AuthedRequest } from "../middleware/auth";
 import { writeAuditEvent } from "../services/audit.service";
 import { parseUploadedDocument } from "../services/manuscript-parse.service";
+import { reformatManuscript } from "../services/reformat.service";
+import { getJournalById } from "../services/journals/search.service";
 
 export const manuscriptsRouter = Router();
 
@@ -289,6 +291,69 @@ manuscriptsRouter.get("/:manuscriptId/versions", async (req, res, next) => {
     }
 
     res.json({ data: data ?? [] });
+  } catch (error) {
+    next(error);
+  }
+});
+
+const reformatSchema = z.object({
+  journalId: z.string().uuid(),
+});
+
+// POST /manuscripts/:manuscriptId/reformat
+// Analyses the manuscript against a journal's submission requirements and returns
+// a list of minimal suggested edits (track-changes style). Does NOT auto-save.
+manuscriptsRouter.post("/:manuscriptId/reformat", async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    const manuscriptId = req.params.manuscriptId;
+    const input = reformatSchema.parse(req.body);
+
+    await assertManuscriptAccess(authReq.auth.userId, manuscriptId, false);
+
+    // Fetch manuscript sections
+    const { data: sections, error: sectionsError } = await supabaseAdmin
+      .from("manuscript_sections")
+      .select("id, title, content_html, sort_order")
+      .eq("manuscript_id", manuscriptId)
+      .order("sort_order", { ascending: true });
+
+    if (sectionsError) {
+      throw new HttpError(500, sectionsError.message, "MANUSCRIPT_SECTIONS_FETCH_FAILED");
+    }
+    if (!sections || sections.length === 0) {
+      throw new HttpError(400, "Manuscript has no sections to reformat", "MANUSCRIPT_EMPTY");
+    }
+
+    // Fetch journal guidelines
+    const journal = await getJournalById(input.journalId);
+    if (!journal) {
+      throw new HttpError(404, "Journal not found", "JOURNAL_NOT_FOUND");
+    }
+
+    const raw = (journal as any).submission_requirements_json as Record<string, unknown> | null;
+
+    const suggestions = await reformatManuscript({
+      manuscriptSections: sections.map((s: any) => ({
+        id: s.id,
+        title: s.title,
+        contentHtml: s.content_html ?? "<p></p>",
+      })),
+      journalGuidelines: {
+        journalName: journal.name,
+        wordLimits: (raw?.word_limits as any) ?? null,
+        sectionsRequired: (raw?.sections_required as string[]) ?? null,
+        citationStyle: (raw?.citation_style as string) ?? null,
+        structuredAbstract: (raw?.structured_abstract as boolean) ?? null,
+        figuresMax: (raw?.figures_max as number) ?? null,
+        tablesMax: (raw?.tables_max as number) ?? null,
+        notes: (raw?.notes as string) ?? null,
+        acceptanceRate: (journal as any).acceptance_rate ?? null,
+        avgDecisionDays: (journal as any).avg_decision_days ?? null,
+      },
+    });
+
+    res.json({ data: suggestions });
   } catch (error) {
     next(error);
   }

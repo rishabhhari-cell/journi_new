@@ -41,9 +41,10 @@ export interface ParsedManuscript {
 
 export interface RawParsedDocument {
   fileTitle: string;
-  format: "docx" | "pdf";
+  format: "docx" | "pdf" | "image";
   html?: string;
   text?: string;
+  imageDataUrl?: string;
   references?: string[];
   diagnostics?: ParseDiagnostic[];
 }
@@ -193,6 +194,29 @@ function mergeIntoCanonicalOrder(
   return ordered;
 }
 
+function isBoldOnlyHeading(node: Element): boolean {
+  const tag = node.tagName.toLowerCase();
+  if (tag !== "p") return false;
+  const text = (node.textContent || "").trim();
+  if (!text || text.length > 80) return false;
+
+  // Paragraph whose entire content is a single <strong> or <b> element
+  const children = Array.from(node.children);
+  const soleChild = children.length === 1 ? children[0] : null;
+  const isBold =
+    soleChild !== null &&
+    (soleChild.tagName.toLowerCase() === "strong" || soleChild.tagName.toLowerCase() === "b") &&
+    (soleChild.textContent || "").trim() === text;
+
+  if (!isBold) return false;
+
+  // Only treat as heading if text matches a known canonical section name or looks like ALL-CAPS heading
+  for (const [, matcher] of CANONICAL_ALIASES) {
+    if (matcher.test(text)) return true;
+  }
+  return /^[A-Z][A-Z\s&/\-0-9]{2,}$/.test(text);
+}
+
 function parseSectionsFromHtml(html: string): IntermediateSection[] {
   if (typeof DOMParser === "undefined") return [];
   const parser = new DOMParser();
@@ -206,7 +230,7 @@ function parseSectionsFromHtml(html: string): IntermediateSection[] {
 
   for (const node of Array.from(root.children)) {
     const tag = node.tagName.toLowerCase();
-    if (tag === "h1" || tag === "h2" || tag === "h3") {
+    if (tag === "h1" || tag === "h2" || tag === "h3" || isBoldOnlyHeading(node)) {
       if (currentTitle || currentContent.trim()) {
         sections.push({
           title: currentTitle || "Content",
@@ -331,6 +355,26 @@ function extractReferenceLines(contentHtml: string): string[] {
 export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
   const diagnostics = [...(raw.diagnostics || [])];
   const fileTitle = raw.fileTitle || "Imported Manuscript";
+
+  // Image files are embedded directly as a figure section
+  if (raw.format === "image" && raw.imageDataUrl) {
+    const imgHtml = `<p><img src="${raw.imageDataUrl}" alt="${fileTitle}" style="max-width:100%" /></p>`;
+    return {
+      fileTitle,
+      sections: [
+        {
+          title: "Figure",
+          content: imgHtml,
+          order: 0,
+          wordCount: 0,
+          sourceTitle: "Figure",
+        },
+      ],
+      citations: [],
+      diagnostics,
+      totalWordCount: 0,
+    };
+  }
 
   const sectionsFromHtml = raw.html ? parseSectionsFromHtml(raw.html) : [];
   const sectionsFromText = raw.text ? parseSectionsFromText(raw.text) : [];
