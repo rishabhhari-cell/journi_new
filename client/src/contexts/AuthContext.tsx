@@ -99,7 +99,7 @@ function parseOAuthHash(): ApiSession | null {
 }
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<AuthUser | null>(null);
+  const [user, setUser] = useState<AuthUser | null>(readPersistedUser);
   const [memberships, setMemberships] = useState<OrganizationMembershipDTO[]>([]);
   const [activeOrganizationId, setActiveOrganizationIdState] = useState<string | null>(() => {
     return localStorage.getItem(ORG_STORAGE_KEY);
@@ -271,6 +271,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setMemberships([]);
       setActiveOrganizationIdState(null);
       localStorage.removeItem(ORG_STORAGE_KEY);
+      // Clear project data so next session starts fresh
+      localStorage.removeItem('journi_projects');
+      localStorage.removeItem('journi_active_project_id');
+      localStorage.removeItem('journi_activities');
+      localStorage.removeItem('journi_project_overlays');
       setIsTrial(false);
     }
   }, []);

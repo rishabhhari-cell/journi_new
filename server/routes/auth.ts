@@ -308,7 +308,9 @@ authRouter.get("/me", requireAuth, async (req, res, next) => {
       throw new HttpError(500, membershipsError.message, "MEMBERSHIP_FETCH_FAILED");
     }
 
-    const membershipDtos: OrganizationMembershipDTO[] = (memberships ?? [])
+    const fullName = profile?.full_name ?? "User";
+
+    let membershipDtos: OrganizationMembershipDTO[] = (memberships ?? [])
       .map((membership: any) => {
         const org = Array.isArray(membership.organizations)
           ? membership.organizations[0]
@@ -327,7 +329,45 @@ authRouter.get("/me", requireAuth, async (req, res, next) => {
       })
       .filter(Boolean) as OrganizationMembershipDTO[];
 
-    const fullName = profile?.full_name ?? "User";
+    // Auto-create a personal workspace for users with no organization
+    if (membershipDtos.length === 0) {
+      const wsName = `${fullName}'s Workspace`;
+      const slug =
+        wsName
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-|-$/g, "")
+          .slice(0, 48) +
+        "-" +
+        crypto.randomBytes(2).toString("hex");
+
+      const { data: newOrg } = await supabaseAdmin
+        .from("organizations")
+        .insert({ name: wsName, slug, created_by: userId })
+        .select("id, name, slug, created_at")
+        .single();
+
+      if (newOrg) {
+        await supabaseAdmin.from("organization_members").upsert({
+          organization_id: newOrg.id,
+          user_id: userId,
+          role: "owner",
+          invited_by: userId,
+        });
+        membershipDtos = [
+          {
+            organizationId: newOrg.id,
+            role: "owner",
+            organization: {
+              id: newOrg.id,
+              name: newOrg.name,
+              slug: newOrg.slug,
+              createdAt: newOrg.created_at,
+            },
+          },
+        ];
+      }
+    }
     const providerStr = rawAuthUser?.app_metadata?.provider;
     const provider: ApiUser["provider"] = providerStr === "google" ? "google" : "local";
     const user: ApiUser = {

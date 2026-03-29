@@ -138,6 +138,18 @@ function mapApiProjectToUi(apiProject: ApiProject): Project {
   };
 }
 
+function hasRealSession(): boolean {
+  try {
+    const userRaw = localStorage.getItem('journi_auth_user');
+    if (!userRaw) return false;
+    const user = JSON.parse(userRaw);
+    // Trial/guest users don't count as real
+    return user && user.id !== 'guest';
+  } catch {
+    return false;
+  }
+}
+
 function initProjects(): { projects: Project[]; activeId: string } {
   try {
     const stored = localStorage.getItem(PROJECTS_KEY);
@@ -151,6 +163,10 @@ function initProjects(): { projects: Project[]; activeId: string } {
     }
   } catch {
     // ignore corrupted storage
+  }
+  // Real authenticated users start empty — backend fetch will supply their projects
+  if (hasRealSession()) {
+    return { projects: [], activeId: '' };
   }
   const p1 = generateSampleProject();
   const p2 = generateSampleProject2();
@@ -217,6 +233,11 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
         if (mapped.length === 0) {
           // New user — show onboarding wizard instead of auto-creating
           setShowOnboarding(true);
+          // Clear any sample/stale data so it doesn't show behind the wizard
+          localStorage.removeItem(PROJECTS_KEY);
+          localStorage.removeItem(ACTIVITIES_KEY);
+          setState({ projects: [], activeId: '' });
+          setActivities([]);
           return;
         }
 
