@@ -4,7 +4,7 @@
  */
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Eye, EyeOff, Mail, Lock, User, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { X, Eye, EyeOff, Mail, Lock, User, AlertCircle, CheckCircle2, Building2, ChevronDown } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { toast } from 'sonner';
 
@@ -107,6 +107,7 @@ export default function AuthModal() {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [loading, setLoading] = useState(false);
+  const [institutionalExpanded, setInstitutionalExpanded] = useState(false);
 
   // Clear errors when switching views
   useEffect(() => {
@@ -153,7 +154,7 @@ export default function AuthModal() {
     try {
       await startOAuth('google');
     } catch {
-      toast.error('Google sign-in is not configured yet. Please check backend OAuth settings.');
+      toast.error('Google sign-in unavailable — enable the Google provider in your Supabase dashboard under Authentication → Providers.', { duration: 6000 });
     }
   };
 
@@ -216,13 +217,6 @@ export default function AuthModal() {
                 Continue with Google
               </button>
 
-              {/* Divider */}
-              <div className="flex items-center gap-3 mb-5">
-                <div className="flex-1 border-t border-border" />
-                <span className="text-xs text-muted-foreground">or</span>
-                <div className="flex-1 border-t border-border" />
-              </div>
-
               {/* Error / success banners */}
               <AnimatePresence>
                 {error && (
@@ -248,6 +242,50 @@ export default function AuthModal() {
                   </motion.div>
                 )}
               </AnimatePresence>
+
+              {/* Institutional login */}
+              <button
+                type="button"
+                onClick={() => setInstitutionalExpanded(!institutionalExpanded)}
+                className="w-full flex items-center justify-between gap-2 px-3 py-2.5 rounded-xl border border-border bg-background hover:bg-accent transition-colors text-sm font-medium text-foreground mb-5"
+              >
+                <span className="flex items-center gap-2.5">
+                  <Building2 size={16} className="text-muted-foreground" />
+                  Sign in with institution
+                </span>
+                <ChevronDown
+                  size={14}
+                  className={`text-muted-foreground transition-transform ${institutionalExpanded ? 'rotate-180' : ''}`}
+                />
+              </button>
+
+              <AnimatePresence>
+                {institutionalExpanded && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="overflow-hidden mb-5"
+                  >
+                    <div className="px-3 py-3 rounded-xl bg-journi-green/5 border border-journi-green/20 text-xs text-muted-foreground leading-relaxed">
+                      <p className="font-semibold text-foreground mb-1">Institutional access</p>
+                      <p>
+                        Sign up or sign in using your institutional email address (e.g.{' '}
+                        <span className="font-mono text-journi-green">name@ucl.ac.uk</span>). You'll be
+                        automatically added to your institution's Journi workspace.
+                      </p>
+                      <p className="mt-2">Use the email &amp; password form below — no separate login is needed.</p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* Divider */}
+              <div className="flex items-center gap-3 mb-5">
+                <div className="flex-1 border-t border-border" />
+                <span className="text-xs text-muted-foreground">or sign in with email</span>
+                <div className="flex-1 border-t border-border" />
+              </div>
 
               {/* Animated form switch */}
               <AnimatePresence mode="wait">

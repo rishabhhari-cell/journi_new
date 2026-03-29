@@ -10,7 +10,7 @@ import {
   CheckCircle, Circle, BookOpen, MessageSquare, Pencil, Check, FileText,
   Upload, FileDown, Loader2, MessageSquarePlus, Layers, Plus, Trash2,
   FilePlus2, FileUp, ChevronDown, DollarSign, AlertTriangle, Minus,
-  BookMarked, Database, Send, X,
+  BookMarked, Database, Send, X, Wand2,
 } from 'lucide-react';
 import { useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
@@ -36,10 +36,11 @@ import CitationDialog from '@/components/collaboration/CitationDialog';
 import ReferencesSection from '@/components/collaboration/ReferencesSection';
 import CommentThread from '@/components/collaboration/CommentThread';
 import SubmitToJournalDialog from '@/components/publication/SubmitToJournalDialog';
+import ReformatPanel from '@/components/collaboration/ReformatPanel';
 import { useManuscript } from '@/contexts/ManuscriptContext';
 import type { CitationFormData, CommentFormData, DocumentSection, ManuscriptType } from '@/types';
 import { format } from 'date-fns';
-import { exportToDocx, exportToPdf, importDocx, importPdf } from '@/lib/document-io';
+import { exportToDocx, exportToPdf, importDocx, importPdf, importImage } from '@/lib/document-io';
 import { toast } from 'sonner';
 import { countWordsFromHtml } from '@shared/word-count';
 import { OUP_AI_REVIEW_SEED } from '@/data/seeded-ou-paper';
@@ -160,6 +161,9 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
 
   // Submit to journal dialog
   const [submitDialogOpen, setSubmitDialogOpen] = useState(false);
+
+  // Reformat panel
+  const [isReformatOpen, setIsReformatOpen] = useState(false);
 
   // OUP seed confirmation
   const [seedConfirmOpen, setSeedConfirmOpen] = useState(false);
@@ -487,8 +491,10 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         result = await importDocx(file);
       } else if (ext === 'pdf') {
         result = await importPdf(file);
+      } else if (ext === 'jpg' || ext === 'jpeg' || ext === 'png' || ext === 'gif' || ext === 'webp') {
+        result = await importImage(file);
       } else {
-        toast.error('Unsupported file type. Please use .docx or .pdf files.');
+        toast.error('Unsupported file type. Please use .docx, .pdf, or an image file.');
         return;
       }
 
@@ -596,6 +602,19 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
 
   const handleSeedOupPaper = () => {
     setSeedConfirmOpen(true);
+  };
+
+  const handleReformatAccept = (
+    acceptedSectionId: string,
+    _newHtml: string,
+    _currentHtml: string,
+    originalText: string,
+    suggestedText: string,
+  ) => {
+    const section = manuscript.sections.find((s) => s.id === acceptedSectionId);
+    if (!section) return;
+    const newHtml = section.content.replace(originalText, suggestedText);
+    updateSectionContent(acceptedSectionId, newHtml);
   };
 
   const handleConfirmSeedImport = () => {
@@ -826,7 +845,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         <input
           ref={fileInputRef}
           type="file"
-          accept=".docx,.pdf"
+          accept=".docx,.pdf,.jpg,.jpeg,.png,.gif,.webp"
           className="hidden"
           onChange={handleImportFile}
         />
@@ -916,7 +935,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         <input
           ref={fileInputRef}
           type="file"
-          accept=".docx,.pdf"
+          accept=".docx,.pdf,.jpg,.jpeg,.png,.gif,.webp"
           className="hidden"
           onChange={handleImportFile}
         />
@@ -1179,8 +1198,15 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
             </div>
           </div>
 
-          {/* Submit button */}
-          <div className="px-3 pt-3 border-t border-border">
+          {/* Reformat + Submit buttons */}
+          <div className="px-3 pt-3 border-t border-border space-y-1.5">
+            <button
+              onClick={() => setIsReformatOpen(true)}
+              className="w-full flex items-center justify-center gap-2 px-3 py-2 border border-journi-green/40 text-journi-green text-[11px] font-semibold rounded-lg hover:bg-journi-green/10 transition-colors"
+            >
+              <Wand2 size={12} />
+              Reformat for Journal
+            </button>
             <button
               onClick={() => setSubmitDialogOpen(true)}
               className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-journi-green text-journi-slate text-[11px] font-semibold rounded-lg hover:opacity-90 transition-opacity"
@@ -1545,6 +1571,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                       <ReferencesSection
                         citations={manuscript.citations}
                         onRemoveCitation={removeCitation}
+                        manuscriptId={manuscript.id}
                       />
                     )}
 
@@ -1868,7 +1895,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
       <input
         ref={fileInputRef}
         type="file"
-        accept=".docx,.pdf"
+        accept=".docx,.pdf,.jpg,.jpeg,.png,.gif,.webp"
         className="hidden"
         onChange={handleImportFile}
       />
@@ -1894,6 +1921,14 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         onClose={() => setSubmitDialogOpen(false)}
         manuscriptTitle={manuscript.title}
         manuscriptId={manuscript.id}
+      />
+
+      {/* Reformat Panel */}
+      <ReformatPanel
+        isOpen={isReformatOpen}
+        onClose={() => setIsReformatOpen(false)}
+        manuscriptId={manuscript.id}
+        onAcceptChange={handleReformatAccept}
       />
 
       {/* OUP Seed import confirmation */}

@@ -212,6 +212,23 @@ async function parseLocally(file: File): Promise<RawParsedDocument> {
     };
   }
 
+  if (extension === 'jpg' || extension === 'jpeg' || extension === 'png' || extension === 'gif' || extension === 'webp') {
+    const mime = file.type || `image/${extension === 'jpg' ? 'jpeg' : extension}`;
+    const bytes = new Uint8Array(await file.arrayBuffer());
+    const chunkSize = 0x8000;
+    let binary = '';
+    for (let i = 0; i < bytes.length; i += chunkSize) {
+      binary += String.fromCharCode(...bytes.subarray(i, i + chunkSize));
+    }
+    const dataUrl = `data:${mime};base64,${btoa(binary)}`;
+    return {
+      fileTitle: file.name.replace(/\.[^.]+$/, ''),
+      format: 'image',
+      imageDataUrl: dataUrl,
+      diagnostics: [],
+    };
+  }
+
   throw new Error('Unsupported file format');
 }
 
@@ -246,6 +263,10 @@ export async function importDocx(file: File): Promise<ImportDocumentResult> {
 }
 
 export async function importPdf(file: File): Promise<ImportDocumentResult> {
+  return importFile(file);
+}
+
+export async function importImage(file: File): Promise<ImportDocumentResult> {
   return importFile(file);
 }
 

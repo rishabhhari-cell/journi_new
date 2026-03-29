@@ -28,6 +28,7 @@ interface AuthContextType {
   signIn: (email: string, password: string) => Promise<void>;
   signUp: (name: string, email: string, password: string) => Promise<void>;
   startOAuth: (provider?: 'google') => Promise<void>;
+  updateProfile: (name: string) => Promise<void>;
   signInAsGuest: () => void;
   signOut: () => Promise<void>;
   openModal: (view?: 'signin' | 'signup') => void;
@@ -140,7 +141,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         const oauthSession = parseOAuthHash();
         if (oauthSession) {
           await hydrateFromSession(oauthSession);
-          window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+          // Session stored — redirect to dashboard (clears the hash fragment too)
+          window.location.replace('/dashboard');
           return;
         }
 
@@ -230,6 +232,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     window.location.assign(response.url);
   }, []);
 
+  const updateProfile = useCallback(async (name: string) => {
+    const response = await apiFetch<{ user: ApiUser }>('/auth/profile', {
+      method: 'PATCH',
+      body: JSON.stringify({ fullName: name }),
+    });
+    const nextUser = toAuthUser(response.user);
+    setUser(nextUser);
+    persistUser(nextUser);
+  }, []);
+
   const signInAsGuest = useCallback(() => {
     const guest: AuthUser = {
       id: 'guest',
@@ -293,6 +305,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         signIn,
         signUp,
         startOAuth,
+        updateProfile,
         signInAsGuest,
         signOut,
         openModal,

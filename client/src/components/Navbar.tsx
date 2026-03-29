@@ -4,7 +4,7 @@
  */
 import { Link, useLocation } from "wouter";
 import { useState, useRef, useEffect } from "react";
-import { Menu, X, LogOut, ChevronDown, FlaskConical, ExternalLink } from "lucide-react";
+import { Menu, X, LogOut, ChevronDown, FlaskConical, ExternalLink, UserCircle } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import ProjectSwitcher from "@/components/ProjectSwitcher";
 
@@ -122,8 +122,19 @@ export default function Navbar() {
                     <p className="text-xs font-semibold text-foreground truncate">{user?.name ?? "Trial User"}</p>
                     {user?.email && <p className="text-xs text-muted-foreground truncate">{user.email}</p>}
                   </div>
-                  {/* Marketing page links */}
+                  {/* Account link */}
                   <div className="py-1">
+                    <Link
+                      href="/profile"
+                      onClick={() => setUserMenuOpen(false)}
+                      className="w-full flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                    >
+                      <UserCircle size={14} />
+                      Account
+                    </Link>
+                  </div>
+                  {/* Marketing page links */}
+                  <div className="py-1 border-t border-border">
                     <p className="px-4 py-1 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">Journi</p>
                     {[
                       { label: "Features", href: "/features" },
@@ -229,6 +240,15 @@ export default function Navbar() {
                       {user?.email && <p className="text-xs text-muted-foreground truncate">{user.email}</p>}
                     </div>
                   </div>
+                  {/* Account link */}
+                  <Link
+                    href="/profile"
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
+                  >
+                    <UserCircle size={14} />
+                    Account
+                  </Link>
                   {/* Marketing links in mobile menu */}
                   <p className="px-3 pt-1 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">Journi</p>
                   {[

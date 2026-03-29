@@ -1,6 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
+import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -19,6 +20,16 @@ import Collaboration from "./pages/Collaboration";
 import Discovery from "./pages/Discovery";
 import Publication from "./pages/Publication";
 import FormatPreview from "./pages/FormatPreview";
+import Admin from "./pages/Admin";
+import Profile from "./pages/Profile";
+
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  return null;
+}
 
 function NotFound() {
   return (
@@ -33,7 +44,9 @@ function NotFound() {
 
 function Router() {
   return (
-    <Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
       <Route path="/" component={Home} />
       <Route path="/features" component={Features} />
       <Route path="/pricing" component={Pricing} />
@@ -44,8 +57,11 @@ function Router() {
       <Route path="/discovery" component={Discovery} />
       <Route path="/publication" component={Publication} />
       <Route path="/format/:journalId" component={FormatPreview} />
+      <Route path="/admin" component={Admin} />
+      <Route path="/profile" component={Profile} />
       <Route component={NotFound} />
     </Switch>
+    </>
   );
 }
 

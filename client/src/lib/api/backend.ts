@@ -376,3 +376,122 @@ export async function deleteCitation(citationId: string) {
   });
 }
 
+export async function patchCitation(
+  citationId: string,
+  input: {
+    citationType?: 'article' | 'book' | 'website' | 'conference';
+    authors?: string[];
+    title?: string;
+    publicationYear?: number | null;
+    doi?: string | null;
+    url?: string | null;
+    metadata?: Record<string, unknown>;
+  },
+) {
+  return apiFetch<{ data: ApiCitation }>(`/citations/${citationId}`, {
+    method: 'PATCH',
+    body: JSON.stringify(input),
+  });
+}
+
+export async function lookupCitationByDoi(doi: string) {
+  return apiFetch<{
+    data: {
+      citationType: string;
+      authors: string[];
+      title: string;
+      publicationYear: number | null;
+      doi: string;
+      url: string | null;
+      metadata: Record<string, unknown>;
+    };
+  }>('/citations/lookup', {
+    method: 'POST',
+    body: JSON.stringify({ doi }),
+  });
+}
+
+export async function fetchCitationsFormatted(manuscriptId: string, format: 'vancouver' | 'apa' | 'mla') {
+  const query = new URLSearchParams({ manuscriptId, format });
+  return apiFetch<{ data: Array<{ id: string; formatted: string }> }>(
+    `/citations?${query.toString()}`,
+    { method: 'GET' },
+  );
+}
+
+// --- Journal guidelines ---
+
+export interface JournalGuidelinesDTO {
+  journalId: string;
+  journalName: string;
+  submissionPortalUrl: string | null;
+  wordLimits: { abstract?: number | null; main_text?: number | null; total?: number | null } | null;
+  sectionsRequired: string[] | null;
+  citationStyle: string | null;
+  figuresMax: number | null;
+  tablesMax: number | null;
+  structuredAbstract: boolean | null;
+  notes: string | null;
+  acceptanceRate: number | null;
+  avgDecisionDays: number | null;
+  raw: Record<string, unknown> | null;
+}
+
+export async function fetchJournalGuidelines(journalId: string) {
+  return apiFetch<{ data: JournalGuidelinesDTO }>(`/journals/${journalId}/guidelines`, {
+    method: 'GET',
+  });
+}
+
+// --- Reformatter ---
+
+export interface ReformatSuggestion {
+  sectionId: string;
+  sectionTitle: string;
+  type: 'word_trim' | 'section_add' | 'citation_style' | 'heading_rename' | 'structure';
+  originalText: string;
+  suggestedText: string;
+  reason: string;
+}
+
+export async function reformatManuscript(manuscriptId: string, journalId: string) {
+  return apiFetch<{ data: ReformatSuggestion[] }>(`/manuscripts/${manuscriptId}/reformat`, {
+    method: 'POST',
+    body: JSON.stringify({ journalId }),
+  });
+}
+
+// --- Institution domain admin ---
+
+export interface InstitutionDomainDTO {
+  id: string;
+  domain: string;
+  organization_id: string;
+  default_role: string;
+  created_at: string;
+  organizations?: { name: string } | null;
+}
+
+export async function listInstitutionDomains() {
+  return apiFetch<{ data: InstitutionDomainDTO[] }>('/auth/admin/institution-domains', {
+    method: 'GET',
+  });
+}
+
+export async function createInstitutionDomain(input: {
+  domain: string;
+  organizationId: string;
+  defaultRole: string;
+}) {
+  return apiFetch<{ data: InstitutionDomainDTO }>('/auth/admin/institution-domains', {
+    method: 'POST',
+    body: JSON.stringify(input),
+  });
+}
+
+export async function deleteInstitutionDomain(domain: string) {
+  return apiFetch<{ ok: boolean }>(`/auth/admin/institution-domains/${encodeURIComponent(domain)}`, {
+    method: 'DELETE',
+  });
+}
+

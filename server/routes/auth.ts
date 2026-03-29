@@ -215,16 +215,15 @@ authRouter.post("/oauth", async (req, res, next) => {
   try {
     const input = oauthSchema.parse(req.body);
     const redirectTo = input.redirectTo ?? `${env.CLIENT_BASE_URL}/`;
-    const { data, error } = await supabasePublic.auth.signInWithOAuth({
-      provider: input.provider,
-      options: { redirectTo },
-    });
 
-    if (error || !data.url) {
-      throw new HttpError(400, error?.message ?? "OAuth init failed", "OAUTH_INIT_FAILED");
-    }
+    // Construct implicit-flow URL directly (no PKCE code_challenge).
+    // Supabase's /auth/v1/authorize without PKCE params returns tokens in the
+    // hash fragment after auth, which the frontend parseOAuthHash() can read.
+    const authorizeUrl = new URL(`${env.SUPABASE_URL}/auth/v1/authorize`);
+    authorizeUrl.searchParams.set("provider", input.provider);
+    authorizeUrl.searchParams.set("redirect_to", redirectTo);
 
-    res.json({ url: data.url });
+    res.json({ url: authorizeUrl.toString() });
   } catch (error) {
     next(error);
   }
@@ -274,13 +273,31 @@ authRouter.get("/me", requireAuth, async (req, res, next) => {
     const authReq = req as unknown as AuthedRequest;
     const userId = authReq.auth.userId;
 
-    const { data: profile, error: profileError } = await supabaseAdmin
+    let { data: profile, error: profileError } = await supabaseAdmin
       .from("profiles")
       .select("full_name, initials, email")
       .eq("id", userId)
       .maybeSingle();
     if (profileError) {
       throw new HttpError(500, profileError.message, "PROFILE_FETCH_FAILED");
+    }
+
+    // Fetch the raw Supabase auth user once — used for provider detection and
+    // auto-creating the profile row for first-time OAuth users.
+    const { data: authUserData } = await supabaseAdmin.auth.admin.getUserById(userId);
+    const rawAuthUser = authUserData?.user;
+
+    // First-time OAuth user — no profile row yet; auto-create it from Google metadata.
+    if (!profile) {
+      const oauthName =
+        rawAuthUser?.user_metadata?.full_name ??
+        rawAuthUser?.user_metadata?.name ??
+        (rawAuthUser?.email ?? authReq.auth.email).split("@")[0] ??
+        "User";
+      const oauthEmail = rawAuthUser?.email ?? authReq.auth.email;
+      await upsertProfile({ userId, fullName: oauthName, email: oauthEmail });
+      await autoEnrollInstitutionMember(userId, oauthEmail);
+      profile = { full_name: oauthName, initials: toInitials(oauthName), email: oauthEmail };
     }
 
     const { data: memberships, error: membershipsError } = await supabaseAdmin
@@ -311,12 +328,14 @@ authRouter.get("/me", requireAuth, async (req, res, next) => {
       .filter(Boolean) as OrganizationMembershipDTO[];
 
     const fullName = profile?.full_name ?? "User";
+    const providerStr = rawAuthUser?.app_metadata?.provider;
+    const provider: ApiUser["provider"] = providerStr === "google" ? "google" : "local";
     const user: ApiUser = {
       id: userId,
       email: profile?.email ?? authReq.auth.email,
       fullName,
       initials: profile?.initials ?? toInitials(fullName),
-      provider: "local",
+      provider,
     };
 
     res.json({
@@ -373,6 +392,35 @@ authRouter.post("/invites/accept", requireAuth, async (req, res, next) => {
     });
 
     res.json({ ok: true, organizationId: invite.organization_id, role: invite.role });
+  } catch (error) {
+    next(error);
+  }
+});
+
+const updateProfileSchema = z.object({
+  fullName: z.string().min(2).max(100),
+});
+
+authRouter.patch("/profile", requireAuth, async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    const input = updateProfileSchema.parse(req.body);
+    await upsertProfile({
+      userId: authReq.auth.userId,
+      fullName: input.fullName,
+      email: authReq.auth.email,
+    });
+    const { data: rawUser } = await supabaseAdmin.auth.admin.getUserById(authReq.auth.userId);
+    const providerStr = rawUser?.user?.app_metadata?.provider;
+    const provider: ApiUser["provider"] = providerStr === "google" ? "google" : "local";
+    const user: ApiUser = {
+      id: authReq.auth.userId,
+      email: authReq.auth.email,
+      fullName: input.fullName,
+      initials: toInitials(input.fullName),
+      provider,
+    };
+    res.json({ user });
   } catch (error) {
     next(error);
   }

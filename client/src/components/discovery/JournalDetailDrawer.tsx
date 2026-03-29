@@ -4,9 +4,10 @@
  * Lazily fetches Crossref journal metadata on open.
  */
 import { useEffect, useState } from 'react';
-import { X, ExternalLink, BookOpen, TrendingUp, Clock, Users, Globe, Award } from 'lucide-react';
+import { X, ExternalLink, BookOpen, TrendingUp, Clock, Users, Globe, Award, FileText, List, Quote, Image } from 'lucide-react';
 import type { Journal } from '@/types';
 import OAPolicyBadge from '@/components/discovery/OAPolicyBadge';
+import { fetchJournalGuidelines, type JournalGuidelinesDTO } from '@/lib/api/backend';
 
 interface JournalDetailDrawerProps {
   journal: Journal | null;
@@ -66,19 +67,26 @@ function Stat({
 export default function JournalDetailDrawer({ journal, onClose }: JournalDetailDrawerProps) {
   const [crossrefMeta, setCrossrefMeta] = useState<CrossrefJournalMeta | null>(null);
   const [isLoadingMeta, setIsLoadingMeta] = useState(false);
+  const [guidelines, setGuidelines] = useState<JournalGuidelinesDTO | null>(null);
 
   useEffect(() => {
     if (!journal) {
       setCrossrefMeta(null);
+      setGuidelines(null);
       return;
     }
     const issn = journal.issn ?? journal.issnOnline;
-    if (!issn) return;
+    if (issn) {
+      setIsLoadingMeta(true);
+      fetchCrossrefMeta(issn)
+        .then(setCrossrefMeta)
+        .finally(() => setIsLoadingMeta(false));
+    }
 
-    setIsLoadingMeta(true);
-    fetchCrossrefMeta(issn)
-      .then(setCrossrefMeta)
-      .finally(() => setIsLoadingMeta(false));
+    // Fetch structured guidelines from backend (silently ignore if not available)
+    fetchJournalGuidelines(journal.id)
+      .then((res) => setGuidelines(res.data ?? null))
+      .catch(() => setGuidelines(null));
   }, [journal?.id]);
 
   if (!journal) return null;
@@ -286,14 +294,69 @@ export default function JournalDetailDrawer({ journal, onClose }: JournalDetailD
             </div>
           )}
 
-          {!journal.formattingRequirements && journal.submissionRequirements && (
+          {/* Structured submission guidelines from backend */}
+          {guidelines && (
             <div>
               <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">
-                Submission Requirements
+                Submission Guidelines
               </p>
-              <pre className="text-[11px] leading-relaxed bg-muted/40 rounded-lg p-3 overflow-x-auto text-foreground whitespace-pre-wrap">
-                {JSON.stringify(journal.submissionRequirements, null, 2)}
-              </pre>
+              <div className="space-y-1.5 text-xs text-foreground">
+                {guidelines.citationStyle && (
+                  <div className="flex items-center justify-between py-1.5 border-b border-border">
+                    <span className="flex items-center gap-1.5 text-muted-foreground"><Quote size={11} />Citation style</span>
+                    <span className="font-medium">{guidelines.citationStyle}</span>
+                  </div>
+                )}
+                {guidelines.wordLimits?.total && (
+                  <div className="flex items-center justify-between py-1.5 border-b border-border">
+                    <span className="flex items-center gap-1.5 text-muted-foreground"><FileText size={11} />Total word limit</span>
+                    <span className="font-medium">{guidelines.wordLimits.total.toLocaleString()}</span>
+                  </div>
+                )}
+                {guidelines.wordLimits?.main_text && (
+                  <div className="flex items-center justify-between py-1.5 border-b border-border">
+                    <span className="flex items-center gap-1.5 text-muted-foreground"><FileText size={11} />Main text limit</span>
+                    <span className="font-medium">{guidelines.wordLimits.main_text.toLocaleString()}</span>
+                  </div>
+                )}
+                {guidelines.wordLimits?.abstract && (
+                  <div className="flex items-center justify-between py-1.5 border-b border-border">
+                    <span className="flex items-center gap-1.5 text-muted-foreground"><FileText size={11} />Abstract limit</span>
+                    <span className="font-medium">{guidelines.wordLimits.abstract.toLocaleString()}</span>
+                  </div>
+                )}
+                {guidelines.figuresMax != null && (
+                  <div className="flex items-center justify-between py-1.5 border-b border-border">
+                    <span className="flex items-center gap-1.5 text-muted-foreground"><Image size={11} />Max figures</span>
+                    <span className="font-medium">{guidelines.figuresMax}</span>
+                  </div>
+                )}
+                {guidelines.tablesMax != null && (
+                  <div className="flex items-center justify-between py-1.5 border-b border-border">
+                    <span className="flex items-center gap-1.5 text-muted-foreground"><List size={11} />Max tables</span>
+                    <span className="font-medium">{guidelines.tablesMax}</span>
+                  </div>
+                )}
+                {guidelines.structuredAbstract != null && (
+                  <div className="flex items-center gap-2 py-1.5 border-b border-border">
+                    <span className={`w-2 h-2 rounded-full shrink-0 ${guidelines.structuredAbstract ? 'bg-journi-green' : 'bg-muted-foreground'}`} />
+                    <span className="text-muted-foreground">{guidelines.structuredAbstract ? 'Structured abstract required' : 'Unstructured abstract accepted'}</span>
+                  </div>
+                )}
+                {guidelines.sectionsRequired && guidelines.sectionsRequired.length > 0 && (
+                  <div className="pt-1.5">
+                    <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-1.5">Required sections</p>
+                    <div className="flex flex-wrap gap-1">
+                      {guidelines.sectionsRequired.map((s) => (
+                        <span key={s} className="px-2 py-0.5 rounded-full bg-accent text-foreground text-[10px]">{s}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {guidelines.notes && (
+                  <p className="pt-1.5 text-[11px] text-muted-foreground italic leading-relaxed">{guidelines.notes}</p>
+                )}
+              </div>
             </div>
           )}
 
