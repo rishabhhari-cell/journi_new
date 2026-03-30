@@ -41,6 +41,7 @@ import { useManuscript } from '@/contexts/ManuscriptContext';
 import type { CitationFormData, CommentFormData, DocumentSection, ManuscriptType } from '@/types';
 import { format } from 'date-fns';
 import { exportToDocx, exportToPdf, importDocx, importPdf, importImage } from '@/lib/document-io';
+import { normalizeImportedHtml, normalizePlainImportedText } from '@/lib/import-normalization';
 import { toast } from 'sonner';
 import { countWordsFromHtml } from '@shared/word-count';
 import { OUP_AI_REVIEW_SEED } from '@/data/seeded-ou-paper';
@@ -70,28 +71,6 @@ const LIT_DATABASES = ['PubMed/MEDLINE', 'Cochrane Library', 'Embase', 'Web of S
 
 function countWords(html: string): number {
   return countWordsFromHtml(html);
-}
-
-function normalizeImportedText(input: string): string {
-  return input
-    .replace(/â€™/g, '’')
-    .replace(/â€˜/g, '‘')
-    .replace(/â€œ/g, '“')
-    .replace(/â€/g, '”')
-    .replace(/â€“/g, '–')
-    .replace(/â€”/g, '—')
-    .replace(/â€”/g, '—')
-    .replace(/â€˜/g, '‘')
-    .replace(/â€\u009d/g, '”')
-    .replace(/â€\u009c/g, '“')
-    .replace(/Ã³/g, 'ó')
-    .replace(/Ã©/g, 'é')
-    .replace(/Ã¡/g, 'á')
-    .replace(/Ã¼/g, 'ü')
-    .replace(/Ã¶/g, 'ö')
-    .replace(/Ã±/g, 'ñ')
-    .replace(/Å‘/g, 'ő')
-    .replace(/Â/g, '');
 }
 
 export default function Collaboration() {
@@ -504,15 +483,18 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
       }
 
       if (result.title?.trim()) {
-        updateTitle(result.title.trim());
+        updateTitle(normalizePlainImportedText(result.title, { trim: true }));
       }
 
       if (result.citations.length > 0) {
         addCitations(
           result.citations.map((citation) => ({
             ...citation,
-            title: normalizeImportedText(citation.title),
-            journal: citation.journal ? normalizeImportedText(citation.journal) : undefined,
+            authors: citation.authors.map((author) => normalizePlainImportedText(author, { trim: true })),
+            title: normalizePlainImportedText(citation.title, { trim: true }),
+            journal: citation.journal ? normalizePlainImportedText(citation.journal, { trim: true }) : undefined,
+            doi: citation.doi ? normalizePlainImportedText(citation.doi, { trim: true }) : undefined,
+            url: citation.url ? normalizePlainImportedText(citation.url, { trim: true }) : undefined,
           })),
         );
       }
@@ -524,13 +506,14 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
       const unmatchedImported: Partial<DocumentSection>[] = [];
 
       for (const imported of result.sections) {
-        const importedTitle = (imported.title || '').trim().toLowerCase();
+        const normalizedImportedTitle = normalizePlainImportedText(imported.title || '', { trim: true });
+        const importedTitle = normalizedImportedTitle.toLowerCase();
         const match = existingSections.find(
           (s) => s.title.trim().toLowerCase() === importedTitle
         );
 
         if (match) {
-          updateSectionContent(match.id, normalizeImportedText(imported.content || '<p></p>'));
+          updateSectionContent(match.id, normalizeImportedHtml(imported.content || '<p></p>'));
           matchedCount++;
         } else {
           const genericTitles = ['content', 'untitled section'];
@@ -539,7 +522,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
           if (isGeneric && result.sections.length === 1) {
             const activeS = getSectionByTitle(activeSection);
             if (activeS) {
-              updateSectionContent(activeS.id, normalizeImportedText(imported.content || '<p></p>'));
+              updateSectionContent(activeS.id, normalizeImportedHtml(imported.content || '<p></p>'));
               matchedCount++;
             } else {
               unmatchedImported.push(imported);
@@ -555,8 +538,8 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
           ...existingSections,
           ...unmatchedImported.map((s, i) => ({
             id: `imported-${Date.now()}-${i}`,
-            title: s.title || `Imported Section ${i + 1}`,
-            content: normalizeImportedText(s.content || '<p></p>'),
+            title: normalizePlainImportedText(s.title || `Imported Section ${i + 1}`, { trim: true }) || `Imported Section ${i + 1}`,
+            content: normalizeImportedHtml(s.content || '<p></p>'),
             status: 'draft' as const,
             order: existingSections.length + i,
             lastEditedBy: 'Imported',
@@ -628,7 +611,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
       return {
         ...section,
         title: seed.title,
-        content: normalizeImportedText(seed.content),
+        content: normalizeImportedHtml(seed.content),
         status: 'draft' as const,
         lastEditedBy: 'Seed Import',
         lastEditedAt: new Date(),
@@ -642,7 +625,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         updated.push({
           id: `seeded-${timestamp}-${i}`,
           title: seed.title,
-          content: normalizeImportedText(seed.content),
+          content: normalizeImportedHtml(seed.content),
           status: 'draft',
           lastEditedBy: 'Seed Import',
           lastEditedAt: new Date(),
@@ -656,8 +639,11 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     addCitations(
       OUP_AI_REVIEW_SEED.citations.map((citation) => ({
         ...citation,
-        title: normalizeImportedText(citation.title),
-        journal: citation.journal ? normalizeImportedText(citation.journal) : undefined,
+        authors: citation.authors.map((author) => normalizePlainImportedText(author, { trim: true })),
+        title: normalizePlainImportedText(citation.title, { trim: true }),
+        journal: citation.journal ? normalizePlainImportedText(citation.journal, { trim: true }) : undefined,
+        doi: citation.doi ? normalizePlainImportedText(citation.doi, { trim: true }) : undefined,
+        url: citation.url ? normalizePlainImportedText(citation.url, { trim: true }) : undefined,
       })),
     );
     setActiveSection('Title');
@@ -1430,9 +1416,9 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                     <div className="flex items-center gap-2 mb-6 border-b border-border">
                       <button
                         onClick={() => setActiveTab('editor')}
-                        className={`px-4 py-2 text-sm font-medium transition-colors ${
+                        className={`px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 ${
                           activeTab === 'editor'
-                            ? 'text-journi-green border-b-2 border-journi-green'
+                            ? 'text-[#8b86c4] border-b-2 border-[#8b86c4]'
                             : 'text-muted-foreground hover:text-foreground'
                         }`}
                       >
@@ -1440,23 +1426,23 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                       </button>
                       <button
                         onClick={() => setActiveTab('references')}
-                        className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors ${
+                        className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 ${
                           activeTab === 'references'
-                            ? 'text-journi-green border-b-2 border-journi-green'
+                            ? 'text-[#8b86c4] border-b-2 border-[#8b86c4]'
                             : 'text-muted-foreground hover:text-foreground'
                         }`}
                       >
                         <BookOpen size={16} />
                         References
-                        <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-journi-green/15 text-journi-green text-[10px] font-bold">
+                        <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#9999cc]/20 text-[#8b86c4] text-[10px] font-bold">
                           {manuscript.citations.length}
                         </span>
                       </button>
                       <button
                         onClick={() => setActiveTab('comments')}
-                        className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors ${
+                        className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 ${
                           activeTab === 'comments'
-                            ? 'text-journi-green border-b-2 border-journi-green'
+                            ? 'text-[#8b86c4] border-b-2 border-[#8b86c4]'
                             : 'text-muted-foreground hover:text-foreground'
                         }`}
                       >

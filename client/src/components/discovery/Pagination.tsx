@@ -111,7 +111,7 @@ export default function Pagination({
               aria-current={currentPage === page ? 'page' : undefined}
               className={`min-w-[2rem] px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                 currentPage === page
-                  ? 'bg-journi-green text-white'
+                  ? 'bg-[#9999cc] text-white'
                   : 'border border-border bg-card text-foreground hover:bg-accent'
               }`}
             >
@@ -137,7 +137,7 @@ export default function Pagination({
           value={resultsPerPage}
           onChange={(e) => onResultsPerPageChange(parseInt(e.target.value))}
           aria-label="Results per page"
-          className="px-3 py-1.5 rounded-lg border border-border bg-card text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-journi-green/30 focus:border-journi-green"
+          className="px-3 py-1.5 rounded-lg border border-border bg-card text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-[#9999cc]/35 focus:border-[#9999cc]"
         >
           {RESULTS_PER_PAGE_OPTIONS.map((option) => (
             <option key={option} value={option}>

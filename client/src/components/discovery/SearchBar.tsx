@@ -36,7 +36,7 @@ export default function SearchBar({ onSearch, dark = false }: SearchBarProps) {
         placeholder="Search by topic, journal, or conference..."
         autoComplete="off"
         aria-label="Search journals"
-        className={`w-full pl-11 pr-10 py-3.5 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-journi-green/40 focus:border-journi-green transition-all shadow-xl
+        className={`w-full pl-11 pr-10 py-3.5 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-[#9999cc]/40 focus:border-[#9999cc] transition-all shadow-xl
           ${dark
             ? 'bg-white/10 border-white/20 text-white placeholder:text-white/40 backdrop-blur-sm'
             : 'bg-card border-border text-foreground placeholder:text-muted-foreground'

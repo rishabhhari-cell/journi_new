@@ -117,7 +117,7 @@ export default function Discovery() {
                 {cards.map((journal) => (
                   <article
                     key={journal.id}
-                    className="rounded-xl border border-border bg-card p-4 shadow-sm hover:border-journi-green/40 transition-colors"
+                    className="rounded-xl border border-border bg-card p-4 shadow-sm hover:border-[#9999cc]/45 transition-colors"
                   >
                     <div className="flex items-start gap-3">
                       {journal.logoUrl ? (
@@ -143,7 +143,7 @@ export default function Discovery() {
                           </div>
                           <button
                             onClick={() => setSelectedJournal(journal)}
-                            className="text-xs font-semibold text-journi-green hover:underline shrink-0"
+                            className="text-xs font-semibold text-[#8b86c4] hover:underline shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 rounded-sm"
                           >
                             View details
                           </button>

@@ -7,6 +7,22 @@ export interface ParseUploadInput {
   buffer: Buffer;
 }
 
+const HTML_ENTITY_MAP: Record<string, string> = {
+  amp: "&",
+  lt: "<",
+  gt: ">",
+  quot: '"',
+  apos: "'",
+  nbsp: " ",
+  ndash: "\u2013",
+  mdash: "\u2014",
+  lsquo: "\u2018",
+  rsquo: "\u2019",
+  ldquo: "\u201c",
+  rdquo: "\u201d",
+  hellip: "\u2026",
+};
+
 function extname(fileName: string): string {
   const parts = fileName.toLowerCase().split(".");
   return parts.length > 1 ? parts[parts.length - 1] : "";
@@ -22,6 +38,26 @@ function normalizeText(value: string): string {
     .replace(/\s+\n/g, "\n")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
+}
+
+function decodeHtmlEntities(value: string): string {
+  return value.replace(/&(#x?[0-9a-fA-F]+|[a-zA-Z]+);/g, (entity, token: string) => {
+    if (token[0] === "#") {
+      const isHex = token[1]?.toLowerCase() === "x";
+      const raw = isHex ? token.slice(2) : token.slice(1);
+      const codePoint = Number.parseInt(raw, isHex ? 16 : 10);
+      if (Number.isFinite(codePoint)) {
+        try {
+          return String.fromCodePoint(codePoint);
+        } catch {
+          return entity;
+        }
+      }
+      return entity;
+    }
+
+    return HTML_ENTITY_MAP[token.toLowerCase()] ?? entity;
+  });
 }
 
 async function extractPdfText(buffer: Buffer): Promise<string> {
@@ -86,6 +122,11 @@ function extractReferencesFromOupHtml(html: string): string[] {
         .replace(/<[^>]+>/g, " ")
         .replace(/&nbsp;/gi, " ")
         .replace(/&amp;/gi, "&")
+        .trim(),
+    }))
+    .map((ref) => ({
+      ...ref,
+      text: decodeHtmlEntities(ref.text)
         .replace(/\s+/g, " ")
         .replace(/\s+([,.;:!?])/g, "$1")
         .trim(),

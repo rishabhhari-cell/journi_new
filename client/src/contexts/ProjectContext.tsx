@@ -181,7 +181,12 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
   const fallbackProject = useMemo(() => createFallbackProject(), []);
   const [{ projects, activeId }, setState] = useState(initProjects);
   const [showOnboarding, setShowOnboarding] = useState(false);
-  const [isLoadingProjects, setIsLoadingProjects] = useState(backendMode);
+  const [isLoadingProjects, setIsLoadingProjects] = useState(() => {
+    if (!backendMode) return false;
+    // If we just signed in and have preloaded data, we won't need to load over the network.
+    if (localStorage.getItem('journi_preloaded_api_projects')) return false;
+    return true;
+  });
 
   const taskSaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -228,9 +233,40 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
       return;
     }
 
+    // Immediately clear any stale sample/trial data so it never flashes on screen
+    setState((prev) => {
+      if (prev.projects.length > 0 && !localStorage.getItem('journi_preloaded_api_projects')) {
+        return { projects: [], activeId: '' };
+      }
+      return prev;
+    });
     setIsLoadingProjects(true);
+
     (async () => {
       try {
+        // --- FAST PATH: Eagerly load pre-fetched projects from Auth Context ---
+        const preloadedRaw = localStorage.getItem('journi_preloaded_api_projects');
+        if (preloadedRaw) {
+          localStorage.removeItem('journi_preloaded_api_projects');
+          const parsed = JSON.parse(preloadedRaw) as ApiProject[];
+          const mapped = parsed.map(mapApiProjectToUi);
+
+          if (mapped.length === 0) {
+            setShowOnboarding(true);
+            localStorage.removeItem(PROJECTS_KEY);
+            localStorage.removeItem(ACTIVITIES_KEY);
+            setState({ projects: [], activeId: '' });
+            setActivities([]);
+          } else {
+            const preferredActiveId = localStorage.getItem(ACTIVE_PROJECT_KEY) || mapped[0].id;
+            setProjects(mapped, preferredActiveId);
+          }
+          if (!cancelled) setIsLoadingProjects(false);
+          return;
+        }
+
+        // --- SLOW PATH: Standard Network Fetch ---
+        setIsLoadingProjects(true);
         const response = await fetchProjects(activeOrganizationId);
         if (cancelled) return;
 
@@ -302,31 +338,46 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
       collaborators: [],
     };
 
-    setProjects([...projects, optimisticProject], optimisticProject.id);
+    // Use functional state update to avoid stale closures
+    setState((prev) => {
+      const nextProjects = [...prev.projects, optimisticProject];
+      localStorage.setItem(PROJECTS_KEY, JSON.stringify(nextProjects));
+      localStorage.setItem(ACTIVE_PROJECT_KEY, optimisticProject.id);
+      if (isTrial) saveOverlays(nextProjects);
+      return { projects: nextProjects, activeId: optimisticProject.id };
+    });
 
     if (backendMode && activeOrganizationId) {
-      try {
-        const created = await createProjectApi({
-          organizationId: activeOrganizationId,
-          title,
-          description,
-          dueDate,
+      // FIRE AND FORGET
+      createProjectApi({
+        organizationId: activeOrganizationId,
+        title,
+        description,
+        dueDate,
+      })
+        .then((created) => {
+          const mapped = mapApiProjectToUi(created.data);
+          setState((prev) => {
+            const nextProjects = prev.projects.map((p) =>
+              p.id === optimisticProject.id
+                ? { ...mapped, tasks: p.tasks, collaborators: p.collaborators }
+                : p
+            );
+            const nextActiveId = prev.activeId === optimisticProject.id ? mapped.id : prev.activeId;
+
+            localStorage.setItem(PROJECTS_KEY, JSON.stringify(nextProjects));
+            localStorage.setItem(ACTIVE_PROJECT_KEY, nextActiveId);
+            if (isTrial) saveOverlays(nextProjects);
+            return { projects: nextProjects, activeId: nextActiveId };
+          });
+        })
+        .catch(() => {
+          // Keep optimistic project locally if backend creation fails
         });
-        const mapped = mapApiProjectToUi(created.data);
-        setProjects(
-          projects
-            .filter((p) => p.id !== optimisticProject.id)
-            .concat({ ...mapped, tasks: optimisticProject.tasks, collaborators: optimisticProject.collaborators }),
-          mapped.id,
-        );
-        return { ...mapped, tasks: optimisticProject.tasks, collaborators: optimisticProject.collaborators };
-      } catch {
-        // Keep optimistic project locally if backend creation fails.
-      }
     }
 
     return optimisticProject;
-  }, [projects, backendMode, activeOrganizationId, setProjects]);
+  }, [backendMode, activeOrganizationId, isTrial]);
 
   const deleteProject = (id: string) => {
     if (projects.length <= 1) return;

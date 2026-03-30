@@ -6,6 +6,11 @@
 import type { CitationFormData, DocumentSection, Manuscript } from '@/types';
 import type { ParseDiagnostic, ParsedManuscript, RawParsedDocument } from '@shared/document-parse';
 import { parseManuscriptUpload } from '@/lib/api/backend';
+import {
+  containsLikelyEncodingArtifacts,
+  normalizeImportedHtml,
+  normalizePlainImportedText,
+} from '@/lib/import-normalization';
 
 export interface ImportDocumentResult {
   title: string;
@@ -17,6 +22,14 @@ export interface ImportDocumentResult {
 
 function sanitizeFilename(name: string): string {
   return name.replace(/[^a-zA-Z0-9\s-_]/g, '').trim() || 'manuscript';
+}
+
+function hasAnyEncodingArtifacts(values: string[]): boolean {
+  for (const value of values) {
+    if (!value) continue;
+    if (containsLikelyEncodingArtifacts(value)) return true;
+  }
+  return false;
 }
 
 function downloadBlob(blob: Blob, filename: string): void {
@@ -235,25 +248,50 @@ async function parseLocally(file: File): Promise<RawParsedDocument> {
 async function importFile(file: File): Promise<ImportDocumentResult> {
   const raw = (await parseViaServer(file)) ?? (await parseLocally(file));
   const parsed = await parseWithWorker(raw);
+  const diagnostics = [...parsed.diagnostics];
+
+  const title = normalizePlainImportedText(parsed.fileTitle, { trim: true });
+  const sections = parsed.sections.map((section) => ({
+    title: normalizePlainImportedText(section.title, { trim: true }),
+    content: normalizeImportedHtml(section.content),
+  }));
+
+  const citations: CitationFormData[] = parsed.citations.map((citation) => ({
+    authors: citation.authors.map((author) => normalizePlainImportedText(author, { trim: true })),
+    title: normalizePlainImportedText(citation.title, { trim: true }),
+    year: citation.year,
+    journal: citation.journal ? normalizePlainImportedText(citation.journal, { trim: true }) : undefined,
+    doi: citation.doi ? normalizePlainImportedText(citation.doi, { trim: true }) : undefined,
+    url: citation.url ? normalizePlainImportedText(citation.url, { trim: true }) : undefined,
+    type: citation.type,
+    freePdfUrl: undefined,
+    oaStatus: undefined,
+  }));
+
+  const artifactValues = [
+    title,
+    ...sections.flatMap((section) => [section.title || '', section.content || '']),
+    ...citations.flatMap((citation) => [
+      citation.title || '',
+      citation.journal || '',
+      citation.doi || '',
+      citation.url || '',
+      ...citation.authors,
+    ]),
+  ];
+  if (hasAnyEncodingArtifacts(artifactValues)) {
+    diagnostics.push({
+      level: 'warning',
+      code: 'ENCODING_REVIEW_RECOMMENDED',
+      message: 'Some imported text may still contain encoding artifacts. Please review punctuation and symbols.',
+    });
+  }
 
   return {
-    title: parsed.fileTitle,
-    sections: parsed.sections.map((section) => ({
-      title: section.title,
-      content: section.content,
-    })),
-    citations: parsed.citations.map((citation) => ({
-      authors: citation.authors,
-      title: citation.title,
-      year: citation.year,
-      journal: citation.journal,
-      doi: citation.doi,
-      url: citation.url,
-      type: citation.type,
-      freePdfUrl: undefined,
-      oaStatus: undefined,
-    })),
-    diagnostics: parsed.diagnostics,
+    title,
+    sections,
+    citations,
+    diagnostics,
     totalWordCount: parsed.totalWordCount,
   };
 }

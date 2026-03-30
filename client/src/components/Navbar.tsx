@@ -267,13 +267,13 @@ export default function Navbar() {
                     className={cn(
                       "relative px-3.5 py-2 text-sm font-medium rounded-md transition-colors duration-200",
                       isActive
-                        ? "text-journi-green"
+                        ? "text-[#8b86c4] font-semibold"
                         : "text-muted-foreground hover:text-foreground hover:bg-accent",
                     )}
                   >
                     {item.label}
                     {isActive && (
-                      <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-journi-green rounded-full" />
+                      <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-[#8b86c4] rounded-full" />
                     )}
                   </Link>
                 );
@@ -360,7 +360,17 @@ export default function Navbar() {
           )}
 
           {isAuthenticated ? (
-            <div className="relative flex items-center gap-2" ref={userMenuRef}>
+            <>
+              {!isAppRoute && (
+                <Button
+                  size="sm"
+                  onClick={() => navigate("/dashboard")}
+                  className="bg-journi-green text-journi-slate hover:bg-journi-green/90 font-semibold"
+                >
+                  Go to Dashboard
+                </Button>
+              )}
+              <div className="relative flex items-center gap-2" ref={userMenuRef}>
               {isTrial && (
                 <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 border border-amber-200">
                   Trial
@@ -439,6 +449,7 @@ export default function Navbar() {
                 </div>
               )}
             </div>
+            </>
           ) : (
             <div className="flex items-center gap-2">
               <Button variant="ghost" size="sm" onClick={() => openModal("signin")}>
@@ -488,14 +499,14 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={closeMobile}
-                  className={cn(
-                    "px-3 py-2.5 text-sm font-medium rounded-md transition-colors",
-                    isActive
-                      ? "text-journi-green bg-journi-green/5"
-                      : "text-muted-foreground hover:text-foreground hover:bg-accent",
-                  )}
-                >
-                  {item.label}
+                className={cn(
+                  "px-3 py-2.5 text-sm font-medium rounded-md transition-colors",
+                  isActive
+                    ? "text-[#8b86c4] font-semibold bg-[#8b86c4]/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-accent",
+                )}
+              >
+                {item.label}
                 </Link>
               );
             })
@@ -585,6 +596,16 @@ export default function Navbar() {
         <div className="mt-auto pt-4 border-t border-border">
           {isAuthenticated ? (
             <div className="space-y-1">
+              {!isAppRoute && (
+                <div className="pb-2 border-b border-border/50 mb-2">
+                  <button
+                    onClick={() => { navigate("/dashboard"); closeMobile(); }}
+                    className="w-full flex items-center justify-center gap-2 px-3 py-2.5 bg-journi-green text-journi-slate font-semibold rounded-md hover:bg-journi-green/90 transition-colors"
+                  >
+                    Go to Dashboard
+                  </button>
+                </div>
+              )}
               <div className="flex items-center gap-2.5 px-3 py-2">
                 <div className="w-8 h-8 rounded-full bg-journi-green text-journi-slate text-xs font-bold flex items-center justify-center shrink-0">
                   {user?.initials ?? "?"}

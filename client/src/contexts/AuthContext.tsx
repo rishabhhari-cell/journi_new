@@ -185,7 +185,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   /** Apply user + session + memberships from a signin/signup response (no extra /auth/me call). */
   const applyAuthResponse = useCallback(
-    (nextUser: AuthUser, session: ApiSession | null, responseMemberships?: OrganizationMembershipDTO[]) => {
+    (nextUser: AuthUser, session: ApiSession | null, responseMemberships?: OrganizationMembershipDTO[], responseProjects?: any[]) => {
+      // Clear stale trial/sample project data so Dashboard never flashes old content
+      localStorage.removeItem('journi_projects');
+      localStorage.removeItem('journi_active_project_id');
+      localStorage.removeItem('journi_activities');
+      localStorage.removeItem('journi_project_overlays');
+
       setUser(nextUser);
       persistUser(nextUser);
       setIsTrial(false);
@@ -196,6 +202,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
       const nextMemberships = responseMemberships ?? [];
       setMemberships(nextMemberships);
+
+      if (responseProjects) {
+        localStorage.setItem('journi_preloaded_api_projects', JSON.stringify(responseProjects));
+      }
 
       const storedOrgId = localStorage.getItem(ORG_STORAGE_KEY);
       const preferredOrgId =
@@ -217,12 +227,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       user: ApiUser;
       session: ApiSession | null;
       memberships?: OrganizationMembershipDTO[];
+      projects?: any[];
     }>('/auth/signup', {
       method: 'POST',
       body: JSON.stringify({ fullName: name, email, password }),
     });
 
-    applyAuthResponse(toAuthUser(response.user), response.session, response.memberships);
+    applyAuthResponse(toAuthUser(response.user), response.session, response.memberships, response.projects);
   }, [applyAuthResponse]);
 
   const signIn = useCallback(async (email: string, password: string) => {
@@ -230,12 +241,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       user: ApiUser;
       session: ApiSession | null;
       memberships?: OrganizationMembershipDTO[];
+      projects?: any[];
     }>('/auth/signin', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
     });
 
-    applyAuthResponse(toAuthUser(response.user), response.session, response.memberships);
+    applyAuthResponse(toAuthUser(response.user), response.session, response.memberships, response.projects);
   }, [applyAuthResponse]);
 
   const startOAuth = useCallback(async (provider: 'google' = 'google') => {
@@ -288,6 +300,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setMemberships([]);
       setActiveOrganizationIdState(null);
       localStorage.removeItem(ORG_STORAGE_KEY);
+      localStorage.removeItem('journi_preloaded_api_projects');
       // Clear project data so next session starts fresh
       localStorage.removeItem('journi_projects');
       localStorage.removeItem('journi_active_project_id');

@@ -69,7 +69,7 @@ export default function FilterPanel({ filters, onFiltersChange }: FilterPanelPro
         aria-expanded={isExpanded}
         className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border text-xs font-medium transition-colors ${
           isExpanded
-            ? 'border-journi-green bg-journi-green/5 text-journi-green'
+            ? 'border-[#9999cc] bg-[#9999cc]/10 text-[#8b86c4]'
             : 'border-border bg-card text-muted-foreground hover:text-foreground hover:border-foreground/20'
         }`}
       >
@@ -207,13 +207,13 @@ export default function FilterPanel({ filters, onFiltersChange }: FilterPanelPro
                     onClick={() => toggleSubjectArea(area)}
                     className={`flex items-center gap-2 px-3 py-2 rounded-lg text-left text-sm transition-colors ${
                       isSelected
-                        ? 'bg-journi-green/10 border-2 border-journi-green text-journi-green'
+                        ? 'bg-[#9999cc]/10 border-2 border-[#9999cc] text-[#8b86c4]'
                         : 'bg-muted border-2 border-transparent text-foreground hover:bg-accent'
                     }`}
                   >
                     <div
                       className={`w-4 h-4 rounded border-2 flex items-center justify-center transition-colors ${
-                        isSelected ? 'bg-journi-green border-journi-green' : 'border-border'
+                        isSelected ? 'bg-[#9999cc] border-[#9999cc]' : 'border-border'
                       }`}
                     >
                       {isSelected && <Check size={12} className="text-white" />}
@@ -239,13 +239,13 @@ export default function FilterPanel({ filters, onFiltersChange }: FilterPanelPro
                     onClick={() => toggleGeographicLocation(location)}
                     className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-sm transition-colors ${
                       isSelected
-                        ? 'bg-journi-green/10 text-journi-green font-medium'
+                        ? 'bg-[#9999cc]/10 text-[#8b86c4] font-medium'
                         : 'text-foreground hover:bg-accent'
                     }`}
                   >
                     <div
                       className={`w-4 h-4 rounded border-2 flex items-center justify-center transition-colors ${
-                        isSelected ? 'bg-journi-green border-journi-green' : 'border-border'
+                        isSelected ? 'bg-[#9999cc] border-[#9999cc]' : 'border-border'
                       }`}
                     >
                       {isSelected && <Check size={12} className="text-white" />}
@@ -280,7 +280,7 @@ export default function FilterPanel({ filters, onFiltersChange }: FilterPanelPro
               />
               <div className="flex items-center justify-between">
                 <span className="text-xs text-muted-foreground">0 days</span>
-                <span className="text-sm font-medium text-journi-green" aria-live="polite" aria-atomic="true">
+                <span className="text-sm font-medium text-[#8b86c4]" aria-live="polite" aria-atomic="true">
                   {timeMax} days
                 </span>
                 <span className="text-xs text-muted-foreground">300 days</span>

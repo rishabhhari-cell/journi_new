@@ -238,15 +238,15 @@ export default function Dashboard() {
                 key={item.tab}
                 onClick={() => { setActiveTab(item.tab); setSidebarOpen(false); }}
                 className={`
-                  relative w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors
+                  relative w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40
                   ${activeTab === item.tab
-                    ? 'bg-journi-green/10 text-journi-green'
+                    ? 'bg-[#9999cc]/12 text-[#8b86c4]'
                     : 'text-muted-foreground hover:text-foreground hover:bg-accent'
                   }
                 `}
               >
                 {activeTab === item.tab && (
-                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-5 bg-journi-green rounded-full" />
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-5 bg-[#8b86c4] rounded-full" />
                 )}
                 <item.icon size={16} />
                 {item.label}
@@ -423,7 +423,7 @@ export default function Dashboard() {
                       </h2>
                       <button
                         onClick={() => setActiveTab('tasks')}
-                        className="text-xs text-journi-green hover:underline flex items-center gap-1"
+                        className="text-xs text-[#8b86c4] hover:underline flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 rounded-sm"
                       >
                         View all <ArrowRight size={12} />
                       </button>
@@ -485,7 +485,7 @@ export default function Dashboard() {
                       </h2>
                       <button
                         onClick={() => setActiveTab('team')}
-                        className="text-xs text-journi-green hover:underline flex items-center gap-1"
+                        className="text-xs text-[#8b86c4] hover:underline flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 rounded-sm"
                       >
                         Manage <ArrowRight size={12} />
                       </button>
@@ -561,7 +561,7 @@ export default function Dashboard() {
                     </div>
                     <a
                       href="/publication"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-journi-green hover:underline"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#8b86c4] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 rounded-sm"
                     >
                       Open portal <ArrowRight size={14} />
                     </a>
@@ -627,7 +627,7 @@ export default function Dashboard() {
                     <h2 className="text-sm font-bold text-foreground">All Tasks</h2>
                     <button
                       onClick={handleOpenNewTaskDialog}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-journi-green hover:underline"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#8b86c4] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 rounded-sm"
                     >
                       <Plus size={13} /> Add task
                     </button>

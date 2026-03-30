@@ -159,6 +159,16 @@ async function upsertProfile(params: { userId: string; fullName: string; email: 
   );
 }
 
+async function fetchInitialProjects(organizationId: string | undefined) {
+  if (!organizationId) return [];
+  const { data } = await supabaseAdmin
+    .from("projects")
+    .select("*, project_members(user_id, role, can_edit, can_comment)")
+    .eq("organization_id", organizationId)
+    .order("updated_at", { ascending: false });
+  return data ?? [];
+}
+
 authRouter.post("/signup", async (req, res, next) => {
   try {
     const input = signUpSchema.parse(req.body);
@@ -216,20 +226,24 @@ authRouter.post("/signup", async (req, res, next) => {
       }
     }
 
-    // Fetch memberships inline (includes auto-created workspace + any institution enrollment)
-    const membershipDtos = await fetchMembershipsWithAutoOrg(data.user.id, input.fullName);
-
-    await writeAuditEvent({
-      actorUserId: data.user.id,
-      eventType: "auth.signup",
-      entityType: "user",
-      entityId: data.user.id,
-    });
+    // Fetch memberships inline (includes auto-created workspace + any institution enrollment).
+    // Run memberships + audit in parallel; projects depend on memberships so they run after.
+    const [membershipDtos] = await Promise.all([
+      fetchMembershipsWithAutoOrg(data.user.id, input.fullName),
+      writeAuditEvent({
+        actorUserId: data.user.id,
+        eventType: "auth.signup",
+        entityType: "user",
+        entityId: data.user.id,
+      }),
+    ]);
+    const initialProjects = await fetchInitialProjects(membershipDtos[0]?.organizationId);
 
     res.status(201).json({
       user: mapUser(data.user, input.fullName),
       session: mapSession(data.session),
       memberships: membershipDtos,
+      projects: initialProjects,
     });
   } catch (error) {
     next(error);
@@ -248,31 +262,31 @@ authRouter.post("/signin", async (req, res, next) => {
       throw new HttpError(401, error?.message ?? "Invalid credentials", "SIGNIN_FAILED");
     }
 
-    const { data: profile } = await supabaseAdmin
-      .from("profiles")
-      .select("full_name")
-      .eq("id", data.user.id)
-      .maybeSingle();
+    // Run profile fetch + audit in parallel (profile provides fullName for workspace naming)
+    const [{ data: profile }] = await Promise.all([
+      supabaseAdmin.from("profiles").select("full_name").eq("id", data.user.id).maybeSingle(),
+      writeAuditEvent({
+        actorUserId: data.user.id,
+        eventType: "auth.signin",
+        entityType: "user",
+        entityId: data.user.id,
+      }),
+    ]);
 
     const fullName = profile?.full_name ?? null;
 
-    // Fetch memberships inline so the frontend doesn't need a separate /auth/me call
+    // Fetch memberships (may auto-create workspace for new users), then projects
     const membershipDtos = await fetchMembershipsWithAutoOrg(
       data.user.id,
       fullName ?? data.user.email ?? "User",
     );
-
-    await writeAuditEvent({
-      actorUserId: data.user.id,
-      eventType: "auth.signin",
-      entityType: "user",
-      entityId: data.user.id,
-    });
+    const initialProjects = await fetchInitialProjects(membershipDtos[0]?.organizationId);
 
     res.json({
       user: mapUser(data.user, fullName),
       session: mapSession(data.session),
       memberships: membershipDtos,
+      projects: initialProjects,
     });
   } catch (error) {
     next(error);
@@ -341,19 +355,16 @@ authRouter.get("/me", requireAuth, async (req, res, next) => {
     const authReq = req as unknown as AuthedRequest;
     const userId = authReq.auth.userId;
 
-    let { data: profile, error: profileError } = await supabaseAdmin
-      .from("profiles")
-      .select("full_name, initials, email")
-      .eq("id", userId)
-      .maybeSingle();
-    if (profileError) {
-      throw new HttpError(500, profileError.message, "PROFILE_FETCH_FAILED");
+    // Fetch profile + auth user in parallel
+    const [profileResult, authUserResult] = await Promise.all([
+      supabaseAdmin.from("profiles").select("full_name, initials, email").eq("id", userId).maybeSingle(),
+      supabaseAdmin.auth.admin.getUserById(userId),
+    ]);
+    if (profileResult.error) {
+      throw new HttpError(500, profileResult.error.message, "PROFILE_FETCH_FAILED");
     }
-
-    // Fetch the raw Supabase auth user once — used for provider detection and
-    // auto-creating the profile row for first-time OAuth users.
-    const { data: authUserData } = await supabaseAdmin.auth.admin.getUserById(userId);
-    const rawAuthUser = authUserData?.user;
+    let profile = profileResult.data;
+    const rawAuthUser = authUserResult.data?.user;
 
     // First-time OAuth user — no profile row yet; auto-create it from Google metadata.
     if (!profile) {

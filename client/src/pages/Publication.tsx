@@ -48,7 +48,7 @@ function SubmissionCard({ submission }: { submission: Submission }) {
   const cfg = STATUS_CONFIG[submission.status];
 
   return (
-    <article className="rounded-xl border border-border bg-card p-5 shadow-sm hover:border-journi-green/30 transition-colors">
+    <article className="rounded-xl border border-border bg-card p-5 shadow-sm hover:border-[#9999cc]/45 transition-colors">
       <div className="flex items-start justify-between gap-4">
         {/* Left: title + journal */}
         <div className="min-w-0 flex-1">
@@ -70,7 +70,7 @@ function SubmissionCard({ submission }: { submission: Submission }) {
           <div className="relative">
             <button
               onClick={() => setMenuOpen((o) => !o)}
-              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-border text-xs text-muted-foreground hover:bg-accent transition-colors"
+              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-border text-xs text-muted-foreground hover:bg-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40"
             >
               Change status <ChevronDown size={12} />
             </button>
@@ -88,7 +88,7 @@ function SubmissionCard({ submission }: { submission: Submission }) {
                           setMenuOpen(false);
                         }}
                         className={`w-full flex items-center gap-2 px-3 py-2 text-xs font-medium transition-colors hover:bg-accent ${
-                          submission.status === s ? 'text-journi-green' : 'text-foreground'
+                          submission.status === s ? 'text-[#8b86c4] font-semibold' : 'text-foreground'
                         }`}
                       >
                         <span className={`w-2 h-2 rounded-full ${sc.dot}`} />
@@ -266,16 +266,16 @@ export default function Publication() {
                 <button
                   key={s}
                   onClick={() => setStatusFilter(s)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 ${
                     statusFilter === s
-                      ? 'bg-journi-green text-journi-slate'
+                      ? 'bg-[#9999cc] text-white font-semibold'
                       : 'bg-card border border-border text-muted-foreground hover:text-foreground hover:bg-accent'
                   }`}
                 >
                   {label}
                   {count > 0 && (
                     <span className={`ml-1.5 px-1.5 py-0.5 rounded-full text-[10px] font-bold ${
-                      statusFilter === s ? 'bg-journi-slate/20 text-journi-slate' : 'bg-muted text-muted-foreground'
+                      statusFilter === s ? 'bg-white/20 text-white' : 'bg-muted text-muted-foreground'
                     }`}>
                       {count}
                     </span>

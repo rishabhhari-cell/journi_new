@@ -9,12 +9,14 @@ import {
   ChevronRight, FlaskConical, Users,
 } from "lucide-react";
 import { Link, useLocation } from "wouter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import Navbar from "@/components/Navbar";
 import WorkflowShowcase from "@/components/WorkflowShowcase";
 import HeroShader from "@/components/ui/hero";
 import HeroLogoAnimation from "@/components/HeroLogoAnimation";
+
+const HERO_SEEN_KEY = "journi_hero_seen";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -27,9 +29,26 @@ const fadeUp = {
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function Home() {
-  const { openModal, signInAsGuest } = useAuth();
+  const { user, isTrial, openModal, signInAsGuest } = useAuth();
   const [, navigate] = useLocation();
-  const [logoDone, setLogoDone] = useState(false);
+  const isAuthenticated = !!(user || isTrial);
+  const [animate] = useState(() => {
+    try { return !sessionStorage.getItem(HERO_SEEN_KEY); } catch { return false; }
+  });
+  const [phase, setPhase] = useState(animate ? 0 : 3);
+
+  useEffect(() => {
+    if (!animate) return;
+    // phase 0: logo visible → after brief pause, start "Research," fade
+    const t1 = setTimeout(() => setPhase(1), 300);
+    return () => clearTimeout(t1);
+  }, [animate]);
+
+  useEffect(() => {
+    if (phase === 3 && animate) {
+      try { sessionStorage.setItem(HERO_SEEN_KEY, "1"); } catch {}
+    }
+  }, [phase, animate]);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -43,13 +62,14 @@ export default function Home() {
             {/* Left */}
             <div className="pt-0 pb-8">
               <div className="mb-5">
-                <HeroLogoAnimation onComplete={() => setLogoDone(true)} />
+                <HeroLogoAnimation />
                 <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight text-foreground leading-[1.1] mt-3">
                   <motion.span
                     className="inline-block"
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={logoDone ? { opacity: 1, y: 0 } : undefined}
+                    initial={animate ? { opacity: 0, y: 16 } : false}
+                    animate={phase >= 1 ? { opacity: 1, y: 0 } : undefined}
                     transition={{ duration: 0.5, ease: [0, 0, 0.2, 1] }}
+                    onAnimationComplete={() => { if (phase === 1) setPhase(2); }}
                   >
                     Research,
                   </motion.span>
@@ -58,38 +78,51 @@ export default function Home() {
                     {"simplified.".split("").map((char, index) => (
                       <motion.span
                         key={index}
-                        initial={{ opacity: 0, display: "none" }}
-                        animate={logoDone ? { opacity: 1, display: "inline" } : undefined}
-                        transition={{ duration: 0.01, delay: 0.5 + index * 0.08 }}
+                        className="inline-block"
+                        initial={animate ? { opacity: 0 } : false}
+                        animate={phase >= 2 ? { opacity: 1 } : undefined}
+                        transition={{ duration: 0.03, delay: index * 0.06 }}
+                        onAnimationComplete={() => {
+                          if (index === "simplified.".length - 1 && phase === 2) setPhase(3);
+                        }}
                       >
-                        {char}
+                        {char === " " ? "\u00A0" : char}
                       </motion.span>
                     ))}
-                    
                   </span>
                 </h1>
               </div>
               <motion.p
                 className="text-lg text-muted-foreground leading-relaxed max-w-lg mb-8"
-                initial={{ opacity: 0, y: 16 }}
-                animate={logoDone ? { opacity: 1, y: 0 } : undefined}
-                transition={{ duration: 0.5, delay: 1.5, ease: [0, 0, 0.2, 1] }}
+                initial={animate ? { opacity: 0, y: 16 } : false}
+                animate={phase >= 3 ? { opacity: 1, y: 0 } : undefined}
+                transition={{ duration: 0.5, ease: [0, 0, 0.2, 1] }}
               >
                 Journi removes friction from manuscript submission — so you can focus on your research.
               </motion.p>
               <motion.div
                 className="flex flex-wrap gap-3"
-                initial={{ opacity: 0, y: 16 }}
-                animate={logoDone ? { opacity: 1, y: 0 } : undefined}
-                transition={{ duration: 0.5, delay: 1.6, ease: [0, 0, 0.2, 1] }}
+                initial={animate ? { opacity: 0, y: 16 } : false}
+                animate={phase >= 3 ? { opacity: 1, y: 0 } : undefined}
+                transition={{ duration: 0.5, delay: 0.1, ease: [0, 0, 0.2, 1] }}
               >
-                <button
-                  onClick={() => { signInAsGuest(); navigate("/collaboration"); }}
-                  className="inline-flex items-center gap-2 bg-journi-green text-journi-slate font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
-                >
-                  Try it with your manuscript
-                  <ArrowRight size={17} />
-                </button>
+                {isAuthenticated ? (
+                  <button
+                    onClick={() => navigate("/dashboard")}
+                    className="inline-flex items-center gap-2 bg-journi-green text-journi-slate font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
+                  >
+                    Open Dashboard
+                    <ArrowRight size={17} />
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => { signInAsGuest(); navigate("/collaboration"); }}
+                    className="inline-flex items-center gap-2 bg-journi-green text-journi-slate font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
+                  >
+                    Try it with your manuscript
+                    <ArrowRight size={17} />
+                  </button>
+                )}
                 <a
                   href="#how-it-works"
                   className="inline-flex items-center gap-2 border border-[#9999cc] text-foreground font-medium px-6 py-3 rounded-lg hover:bg-[#9999cc] hover:text-white hover:font-bold transition-colors"
@@ -99,7 +132,7 @@ export default function Home() {
               </motion.div>
             </div>
             {/* Right: large workflow showcase */}
-            <WorkflowShowcase animateWhen={logoDone} entranceDelay={1.5} />
+            <WorkflowShowcase animateWhen={phase >= 3} entranceDelay={0.2} />
           </div>
         </div>
 
@@ -305,20 +338,32 @@ export default function Home() {
               No setup. No friction. Start with your manuscript today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button
-                onClick={() => { signInAsGuest(); navigate("/collaboration"); }}
-                className="inline-flex items-center gap-2 bg-journi-green text-journi-slate font-semibold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity"
-              >
-                Try it with your manuscript
-                <ArrowRight size={18} />
-              </button>
-              <button
-                onClick={() => openModal("signup")}
-                className="inline-flex items-center gap-2 bg-[#9999cc] text-white font-medium px-8 py-3.5 rounded-lg hover:bg-[#9999cc] hover:text-white hover:font-bold transition-colors"
-              >
-                <FlaskConical size={17} />
-                Sign Up Free
-              </button>
+              {isAuthenticated ? (
+                <button
+                  onClick={() => navigate("/dashboard")}
+                  className="inline-flex items-center gap-2 bg-journi-green text-journi-slate font-semibold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity"
+                >
+                  Go to your Dashboard
+                  <ArrowRight size={18} />
+                </button>
+              ) : (
+                <>
+                  <button
+                    onClick={() => { signInAsGuest(); navigate("/collaboration"); }}
+                    className="inline-flex items-center gap-2 bg-journi-green text-journi-slate font-semibold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity"
+                  >
+                    Try it with your manuscript
+                    <ArrowRight size={18} />
+                  </button>
+                  <button
+                    onClick={() => openModal("signup")}
+                    className="inline-flex items-center gap-2 bg-[#9999cc] text-white font-medium px-8 py-3.5 rounded-lg hover:bg-[#9999cc] hover:text-white hover:font-bold transition-colors"
+                  >
+                    <FlaskConical size={17} />
+                    Sign Up Free
+                  </button>
+                </>
+              )}
             </div>
           </motion.div>
         </div>
