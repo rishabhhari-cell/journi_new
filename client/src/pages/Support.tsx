@@ -6,7 +6,7 @@ export default function Support() {
     <div className="min-h-screen flex flex-col bg-background">
       <Navbar />
       <main className="flex-1 pt-16">
-        <section className="py-20 md:py-28">
+        <section id="support-overview" className="py-20 md:py-28 scroll-mt-24">
           <div className="container max-w-3xl">
             <p className="text-xs font-bold text-journi-green uppercase tracking-widest mb-3">Support</p>
             <h1 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">We are here to help</h1>

@@ -17,7 +17,7 @@ export default function About() {
     <div className="min-h-screen flex flex-col bg-background">
       <Navbar />
       <main className="flex-1 pt-16">
-        <section className="py-20 md:py-28 bg-muted/30">
+        <section id="team" className="py-20 md:py-28 bg-muted/30 scroll-mt-24">
           <div className="container">
             <motion.div
               className="text-center max-w-2xl mx-auto mb-16"
@@ -71,6 +71,7 @@ export default function About() {
             </div>
 
             <motion.div
+              id="why-us"
               className="max-w-3xl mx-auto"
               initial="hidden"
               animate="visible"

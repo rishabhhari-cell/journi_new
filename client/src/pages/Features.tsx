@@ -9,7 +9,7 @@
  * To add/edit comparisons: update CHAOS_ROWS below.
  * To add/edit the scenario: update SCENARIO_STEPS below.
  */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 import {
@@ -217,6 +217,19 @@ export default function Features() {
   const { openModal, signInAsGuest } = useAuth();
   const [, navigate] = useLocation();
 
+  useEffect(() => {
+    const syncCategoryFromHash = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (CATEGORIES.some((category) => category.id === hash)) {
+        setActiveCategory(hash);
+      }
+    };
+
+    syncCategoryFromHash();
+    window.addEventListener("hashchange", syncCategoryFromHash);
+    return () => window.removeEventListener("hashchange", syncCategoryFromHash);
+  }, []);
+
   const currentFeatures = CATEGORIES.find((c) => c.id === activeCategory)?.features ?? [];
 
   return (
@@ -259,7 +272,7 @@ export default function Features() {
         </section>
 
         {/* ── Feature category grid ─────────────────────────────────────────── */}
-        <section className="py-16 md:py-24">
+        <section id="feature-categories" className="py-16 md:py-24 scroll-mt-24">
           <div className="container">
             <motion.div
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}
@@ -269,6 +282,7 @@ export default function Features() {
                 {CATEGORIES.map((cat) => (
                   <button
                     key={cat.id}
+                    id={cat.id}
                     role="tab"
                     aria-selected={activeCategory === cat.id}
                     onClick={() => setActiveCategory(cat.id)}

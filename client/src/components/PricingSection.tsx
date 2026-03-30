@@ -336,12 +336,12 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
       {/* CTA button */}
       <a
         href={plan.ctaHref}
-        className={`inline-flex items-center justify-center gap-2 w-full mt-8 px-5 py-3 rounded-lg text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green ${
+        className={`inline-flex items-center justify-center gap-2 w-full mt-8 px-5 py-3 rounded-lg text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 ${
           plan.recommended
             ? "bg-journi-green text-journi-slate hover:opacity-90"
             : plan.id === "enterprise"
-            ? "bg-journi-slate text-white hover:opacity-90"
-            : "border border-border text-foreground hover:bg-accent"
+            ? "bg-[#9999cc] text-white hover:bg-[#9999cc] hover:text-white hover:font-bold"
+            : "border border-[#9999cc] text-foreground hover:bg-[#9999cc] hover:text-white hover:font-bold"
         }`}
       >
         {plan.cta}

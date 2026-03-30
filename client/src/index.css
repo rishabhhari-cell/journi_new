@@ -43,52 +43,53 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   /* Journi custom colors */
-  --color-journi-green: oklch(0.75 0.18 155);
-  --color-journi-green-light: oklch(0.92 0.08 155);
-  --color-journi-green-dark: oklch(0.55 0.18 155);
-  --color-journi-slate: oklch(0.25 0.02 260);
-  --color-status-completed: oklch(0.65 0.2 160);
-  --color-status-progress: oklch(0.65 0.2 250);
-  --color-status-pending: oklch(0.78 0.15 85);
+  --color-journi-green: #4fb151;
+  --color-journi-green-light: #58c151;
+  --color-journi-green-dark: #399a3b;
+  --color-journi-slate: #111111;
+  --color-journi-purple: #9999cc;
+  --color-status-completed: #4fb151;
+  --color-status-progress: #73cf6e;
+  --color-status-pending: #73cf6e;
   --color-status-delayed: oklch(0.63 0.22 25);
-  --color-status-upcoming: oklch(0.75 0.02 260);
+  --color-status-upcoming: #58c151;
 }
 
 :root {
   color-scheme: light;
-  --primary: oklch(0.75 0.18 155);
-  --primary-foreground: oklch(0.15 0.02 155);
-  --sidebar-primary: oklch(0.7 0.18 155);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --chart-1: oklch(0.75 0.18 155);
-  --chart-2: oklch(0.65 0.2 250);
-  --chart-3: oklch(0.78 0.15 85);
-  --chart-4: oklch(0.63 0.22 25);
-  --chart-5: oklch(0.75 0.02 260);
+  --primary: #4fb151;
+  --primary-foreground: #ffffff;
+  --sidebar-primary: #4fb151;
+  --sidebar-primary-foreground: #ffffff;
+  --chart-1: #4fb151;
+  --chart-2: #73cf6e;
+  --chart-3: #9999cc;
+  --chart-4: #73cf6e;
+  --chart-5: #4fb151;
   --radius: 0.5rem;
-  --background: oklch(0.995 0 0);
-  --foreground: oklch(0.15 0.02 260);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.02 260);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.02 260);
-  --secondary: oklch(0.97 0.005 260);
-  --secondary-foreground: oklch(0.35 0.02 260);
-  --muted: oklch(0.96 0.005 260);
-  --muted-foreground: oklch(0.5 0.02 260);
-  --accent: oklch(0.96 0.005 260);
-  --accent-foreground: oklch(0.15 0.02 260);
+  --background: #ffffff;
+  --foreground: #111111;
+  --card: #ffffff;
+  --card-foreground: #111111;
+  --popover: #ffffff;
+  --popover-foreground: #111111;
+  --secondary: #f4f5f5;
+  --secondary-foreground: #111111;
+  --muted: #f5f6f6;
+  --muted-foreground: #545454;
+  --accent: #f1f3f2;
+  --accent-foreground: #111111;
   --destructive: oklch(0.63 0.22 25);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.92 0.005 260);
-  --input: oklch(0.92 0.005 260);
-  --ring: oklch(0.75 0.18 155);
-  --sidebar: oklch(0.98 0 0);
-  --sidebar-foreground: oklch(0.15 0.02 260);
-  --sidebar-accent: oklch(0.96 0.005 260);
-  --sidebar-accent-foreground: oklch(0.15 0.02 260);
-  --sidebar-border: oklch(0.92 0.005 260);
-  --sidebar-ring: oklch(0.75 0.18 155);
+  --border: #e9e9e9;
+  --input: #e9e9e9;
+  --ring: #73cf6e;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #111111;
+  --sidebar-accent: #f6edd9;
+  --sidebar-accent-foreground: #111111;
+  --sidebar-border: #e9e9e9;
+  --sidebar-ring: #73cf6e;
 }
 
 .dark {
@@ -146,26 +147,26 @@
 
   /* Gantt chart status colors */
   .gantt-completed {
-    background: oklch(0.65 0.2 160);
+    background: #4fb151;
   }
   .gantt-progress {
-    background: oklch(0.65 0.2 250);
+    background: #73cf6e;
   }
   .gantt-pending {
-    background: oklch(0.78 0.15 85);
+    background: #73cf6e;
   }
   .gantt-delayed {
     background: oklch(0.63 0.22 25);
   }
   .gantt-upcoming {
-    background: oklch(0.75 0.02 260);
+    background: #4fb151;
   }
 
   /* Frosted glass effect */
   .glass {
     backdrop-filter: blur(12px) saturate(180%);
-    background: oklch(1 0 0 / 80%);
-    border-bottom: 1px solid oklch(0.92 0.005 260);
+    background: rgb(255 255 255 / 84%);
+    border-bottom: 1px solid #e9e9e9;
   }
 
   /* Marquee infinite scroll */

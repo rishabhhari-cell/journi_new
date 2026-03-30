@@ -26,7 +26,23 @@ import Profile from "./pages/Profile";
 function ScrollToTop() {
   const [location] = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const hash = window.location.hash;
+    if (!hash) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    const anchorId = decodeURIComponent(hash.slice(1));
+    const rafId = window.requestAnimationFrame(() => {
+      const target = document.getElementById(anchorId);
+      if (target) {
+        target.scrollIntoView();
+      } else {
+        window.scrollTo(0, 0);
+      }
+    });
+
+    return () => window.cancelAnimationFrame(rafId);
   }, [location]);
   return null;
 }
