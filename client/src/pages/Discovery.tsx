@@ -43,8 +43,9 @@ export default function Discovery() {
 
       {/* ── Hero Section ──────────────────────────────────────────────────── */}
       <div
-        className={`relative overflow-hidden motion-safe:transition-all motion-safe:duration-500 motion-safe:ease-in-out bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900
+        className={`relative overflow-hidden motion-safe:transition-all motion-safe:duration-500 motion-safe:ease-in-out
           ${isIdle ? 'h-[560px]' : 'h-[120px]'}`}
+        style={{ background: 'linear-gradient(135deg, #0f3310 0%, #1a4d1b 35%, #2d7a2f 65%, #1f5e21 100%)' }}
       >
         {/* Scattered journal covers — behind everything */}
         {allJournals.length > 0 && isIdle && (

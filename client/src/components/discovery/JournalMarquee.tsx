@@ -6,22 +6,6 @@
 import { useMemo, useEffect, useRef, useState } from 'react';
 import type { Journal } from '@/types';
 
-// Hero cover cards use Journi brand green variations
-const HERO_GRADIENTS = [
-  'from-[#1a4d1b] to-[#4fb151]',
-  'from-[#163d17] to-[#399a3b]',
-  'from-[#2d7a2f] to-[#58c151]',
-  'from-[#1f5e21] to-[#4fb151]',
-  'from-[#0f3310] to-[#2d7a2f]',
-  'from-[#234d24] to-[#4fb151]',
-  'from-[#1a4d1b] to-[#58c151]',
-  'from-[#163d17] to-[#4fb151]',
-  'from-[#2d7a2f] to-[#399a3b]',
-  'from-[#1f5e21] to-[#58c151]',
-  'from-[#0f3310] to-[#399a3b]',
-  'from-[#234d24] to-[#58c151]',
-];
-
 const GRADIENTS = [
   'from-blue-900 to-blue-700',
   'from-emerald-900 to-emerald-700',
@@ -124,7 +108,7 @@ function computeLayout(
         journal,
         cx, cy, w: W, h: H,
         rotation,
-        gradient: HERO_GRADIENTS[idx % HERO_GRADIENTS.length],
+        gradient: GRADIENTS[idx % GRADIENTS.length],
         zIndex: idx,
         objectPosition: positions[Math.floor(Math.random() * positions.length)],
       };
@@ -179,32 +163,30 @@ function HeroCoverCard({ layout }: { layout: CardLayout }) {
           </div>
         </div>
       ) : (
-        <div className={`w-full h-full bg-gradient-to-br ${gradient} flex flex-col px-4 py-4 relative overflow-hidden`}>
-          {/* Subtle textured overlay */}
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(255,255,255,0.08) 8px, rgba(255,255,255,0.08) 9px)' }} />
-          {/* Large initials watermark */}
-          <div className="absolute right-2 bottom-12 text-white/10 font-black leading-none select-none pointer-events-none" style={{ fontSize: `${w * 0.55}px` }}>
-            {getInitials(journal.name)[0] ?? 'J'}
-          </div>
-          {/* Header bar */}
-          <div className="flex items-center gap-1 mb-3 shrink-0 relative z-10">
-            <div className="h-px flex-1 bg-white/25" />
+        <div className={`w-full h-full bg-gradient-to-br ${gradient} flex flex-col px-4 py-4`}>
+          <div className="flex items-center gap-1 mb-3 shrink-0">
+            <div className="h-px flex-1 bg-white/30" />
             {impactFactor && (
-              <span className="text-white/70 text-[9px] font-bold uppercase tracking-widest px-1.5 shrink-0 bg-white/10 rounded-full py-0.5">IF {impactFactor}</span>
+              <span className="text-white/60 text-[9px] font-bold uppercase tracking-widest px-1.5 shrink-0">IF {impactFactor}</span>
             )}
-            <div className="h-px flex-1 bg-white/25" />
+            <div className="h-px flex-1 bg-white/30" />
           </div>
-          {/* Journi "J" logo mark */}
-          <div className="flex justify-center mb-3 shrink-0 relative z-10">
-            <div className="w-9 h-9 rounded-lg bg-white/15 border border-white/20 flex items-center justify-center">
-              <span className="text-white font-black text-base">J</span>
+          {faviconUrl && (
+            <div className="flex justify-center mb-3 shrink-0">
+              <img
+                src={faviconUrl}
+                alt=""
+                aria-hidden="true"
+                className="w-10 h-10 rounded-lg opacity-80"
+                onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+              />
             </div>
-          </div>
-          <p className="text-white font-extrabold text-sm tracking-wide uppercase leading-snug flex-1 overflow-hidden relative z-10">
+          )}
+          <p className="text-white font-extrabold text-sm tracking-wide uppercase leading-snug flex-1 overflow-hidden">
             {journal.name}
           </p>
-          <div className="mt-auto pt-3 border-t border-white/20 shrink-0 relative z-10">
-            {subject && <p className="text-white/55 text-[9px] uppercase tracking-widest truncate">{subject}</p>}
+          <div className="mt-auto pt-3 border-t border-white/20 shrink-0">
+            {subject && <p className="text-white/50 text-[9px] uppercase tracking-widest truncate">{subject}</p>}
             {journal.publisher && <p className="text-white/35 text-[9px] truncate mt-0.5">{journal.publisher}</p>}
           </div>
         </div>

@@ -15,6 +15,7 @@ import { getScienceWorkspaceVisual } from "@/lib/workspace-visuals";
 
 interface ProjectWorkspace extends Workspace {
   logo?: string;
+  visualKey?: string;
 }
 
 function WorkspaceScienceAvatar({
@@ -24,7 +25,8 @@ function WorkspaceScienceAvatar({
   workspace: ProjectWorkspace;
   compact?: boolean;
 }) {
-  const visual = getScienceWorkspaceVisual(workspace.id);
+  const stableVisualKey = workspace.visualKey || workspace.id;
+  const visual = getScienceWorkspaceVisual(stableVisualKey);
   const Icon = visual.icon;
 
   return (
@@ -53,6 +55,7 @@ export default function ProjectWorkspaceManager() {
   const workspaces: ProjectWorkspace[] = projects.map((project) => ({
     id: project.id,
     name: project.title,
+    visualKey: project.title.trim().toLowerCase(),
     logo: typeof (project as { logo?: unknown }).logo === "string"
       ? ((project as { logo?: string }).logo ?? undefined)
       : undefined,
