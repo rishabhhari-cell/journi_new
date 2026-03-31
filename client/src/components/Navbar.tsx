@@ -21,7 +21,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
-import ProjectSwitcher from "@/components/ProjectSwitcher";
+import ProjectWorkspaceManager from "@/components/ProjectWorkspaceManager";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { MenuToggleIcon } from "@/components/ui/menu-toggle-icon";
@@ -356,7 +356,7 @@ export default function Navbar() {
         {/* CTA / User — right */}
         <div className="hidden md:flex items-center gap-3 ml-auto">
           {isAppRoute && isAuthenticated && (
-            <ProjectSwitcher variant="compact" />
+            <ProjectWorkspaceManager />
           )}
 
           {isAuthenticated ? (
