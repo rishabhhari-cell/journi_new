@@ -71,7 +71,7 @@ export default function Home() {
                     transition={{ duration: 0.5, ease: [0, 0, 0.2, 1] }}
                     onAnimationComplete={() => { if (phase === 1) setPhase(2); }}
                   >
-                    Research,
+                    Your research,
                   </motion.span>
                   <br />
                   <span className="text-journi-green inline-block">
