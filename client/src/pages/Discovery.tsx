@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { ExternalLink, FileUp, Loader2, Search } from 'lucide-react';
+import { ExternalLink, FileUp, Loader2, Search, SlidersHorizontal, X } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import SearchBar from '@/components/discovery/SearchBar';
 import FilterPanel from '@/components/discovery/FilterPanel';
@@ -8,12 +8,20 @@ import JournalDetailDrawer from '@/components/discovery/JournalDetailDrawer';
 import JournalMarquee from '@/components/discovery/JournalMarquee';
 import OAPolicyBadge from '@/components/discovery/OAPolicyBadge';
 import { useJournals } from '@/contexts/JournalsContext';
+import type { SortBy } from '@/contexts/JournalsContext';
 import type { Journal } from '@/types';
 
-function formatImpactFactor(value: number | null | undefined) {
-  if (typeof value !== 'number') return 'N/A';
-  return value.toFixed(2);
+function formatImpactFactor(value: number | null | undefined): string | null {
+  if (typeof value !== 'number') return null;
+  return value.toFixed(1);
 }
+
+const SORT_OPTIONS: { value: SortBy; label: string }[] = [
+  { value: 'relevance', label: 'Relevance' },
+  { value: 'impactFactor', label: 'Impact Factor' },
+  { value: 'acceptanceRate', label: 'Acceptance' },
+  { value: 'name', label: 'Name' },
+];
 
 export default function Discovery() {
   const {
@@ -21,6 +29,8 @@ export default function Discovery() {
     setFilters,
     searchQuery,
     setSearchQuery,
+    sortBy,
+    setSortBy,
     currentPage,
     setCurrentPage,
     totalPages,
@@ -33,9 +43,19 @@ export default function Discovery() {
   } = useJournals();
 
   const [selectedJournal, setSelectedJournal] = useState<Journal | null>(null);
+  const [showFilters, setShowFilters] = useState(false);
 
   const isIdle = !searchQuery.trim();
   const cards = useMemo(() => paginatedJournals, [paginatedJournals]);
+
+  const activeFilterCount = [
+    filters.impactFactorMin !== undefined,
+    filters.impactFactorMax !== undefined,
+    filters.openAccess !== undefined,
+    (filters.subjectAreas?.length ?? 0) > 0,
+    (filters.geographicLocations?.length ?? 0) > 0,
+    filters.timeToPublicationMax !== undefined,
+  ].filter(Boolean).length;
 
   return (
     <div className="min-h-screen bg-muted/20">
@@ -45,7 +65,7 @@ export default function Discovery() {
       <div
         className={`relative overflow-hidden motion-safe:transition-all motion-safe:duration-500 motion-safe:ease-in-out
           ${isIdle ? 'h-[560px]' : 'h-[120px]'}`}
-        style={{ background: 'linear-gradient(135deg, #0f3310 0%, #1a4d1b 35%, #2d7a2f 65%, #1f5e21 100%)' }}
+        style={{ background: 'linear-gradient(135deg, #eef6ee 0%, #e2f0e2 45%, #eaf5ea 100%)' }}
       >
         {/* Scattered journal covers — behind everything */}
         {allJournals.length > 0 && isIdle && (
@@ -55,10 +75,11 @@ export default function Discovery() {
           />
         )}
 
-        {/* Vignette: darkens edges, keeps centre clear so covers are visible */}
-        <div className="absolute inset-0 pointer-events-none"
+        {/* Vignette: softens edges so covers blend into the sage background */}
+        <div
+          className="absolute inset-0 pointer-events-none"
           style={{
-            background: 'radial-gradient(ellipse 70% 80% at 50% 50%, transparent 20%, rgba(15,23,42,0.55) 70%, rgba(15,23,42,0.90) 100%)',
+            background: 'radial-gradient(ellipse 70% 80% at 50% 50%, transparent 20%, rgba(180,215,180,0.3) 70%, rgba(160,200,160,0.6) 100%)',
           }}
         />
 
@@ -66,13 +87,13 @@ export default function Discovery() {
         <div className="relative z-10 flex flex-col items-center justify-center h-full pt-20 pb-10 px-4">
           {isIdle && (
             <div className="text-center mb-8 animate-in fade-in duration-300">
-              <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight drop-shadow-lg">
+              <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tight drop-shadow-sm">
                 Find Your Journal
               </h1>
-              <p className="mt-3 text-base text-white/60 max-w-md mx-auto">
+              <p className="mt-3 text-base text-muted-foreground max-w-md mx-auto">
                 Search{' '}
-                <span className="font-semibold text-white/80">
-                  {totalResults.toLocaleString()}
+                <span className="font-semibold text-foreground">
+                  {isLoading ? '…' : totalResults.toLocaleString()}
                 </span>{' '}
                 indexed medical journals and shortlist with confidence.
               </p>
@@ -81,7 +102,7 @@ export default function Discovery() {
 
           {/* Search bar — always visible in hero */}
           <div className="w-full max-w-2xl">
-            <SearchBar onSearch={setSearchQuery} dark />
+            <SearchBar onSearch={setSearchQuery} />
           </div>
         </div>
       </div>
@@ -89,7 +110,41 @@ export default function Discovery() {
       {/* ── Below-hero content ─────────────────────────────────────────────── */}
       <main className="pb-16">
         <section className="container space-y-4 pt-6">
-          <FilterPanel filters={filters} onFiltersChange={setFilters} />
+
+          {/* ── Filter toggle row ───────────────────────────────────────────── */}
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setShowFilters((v) => !v)}
+              aria-expanded={showFilters}
+              className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border text-xs font-medium transition-colors ${
+                showFilters || activeFilterCount > 0
+                  ? 'border-journi-green/40 bg-journi-green/10 text-journi-green'
+                  : 'border-border bg-card text-muted-foreground hover:text-foreground hover:border-foreground/20'
+              }`}
+            >
+              <SlidersHorizontal size={13} aria-hidden="true" />
+              Filters
+              {activeFilterCount > 0 && (
+                <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-journi-green text-white text-[9px] font-bold leading-none">
+                  {activeFilterCount}
+                </span>
+              )}
+            </button>
+            {activeFilterCount > 0 && (
+              <button
+                onClick={() => setFilters({})}
+                className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <X size={12} aria-hidden="true" />
+                Clear filters
+              </button>
+            )}
+          </div>
+
+          {/* Filter panel — shown when toggled */}
+          {showFilters && (
+            <FilterPanel filters={filters} onFiltersChange={setFilters} />
+          )}
 
           <section className="space-y-4">
             {isLoading && (
@@ -114,98 +169,128 @@ export default function Discovery() {
             )}
 
             {!isLoading && cards.length > 0 && (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                {cards.map((journal) => (
-                  <article
-                    key={journal.id}
-                    className="rounded-xl border border-border bg-card p-4 shadow-sm hover:border-[#9999cc]/45 transition-colors"
-                  >
-                    <div className="flex items-start gap-3">
-                      {journal.logoUrl ? (
-                        <img
-                          src={journal.logoUrl}
-                          alt={`${journal.name} logo`}
-                          className="w-12 h-14 rounded-md object-cover border border-border bg-white"
-                          loading="lazy"
-                        />
-                      ) : (
-                        <div className={`w-12 h-14 rounded-md bg-gradient-to-br ${journal.coverColor} flex items-center justify-center text-white text-[10px] font-bold`}>
-                          {journal.coverInitial}
-                        </div>
-                      )}
+              <>
+                {/* ── Sort row ──────────────────────────────────────────────── */}
+                <div className="flex items-center justify-between">
+                  <p className="text-xs text-muted-foreground">
+                    {totalResults.toLocaleString()} result{totalResults !== 1 ? 's' : ''}
+                  </p>
+                  <div className="flex items-center gap-0.5">
+                    <span className="text-xs text-muted-foreground mr-1.5">Sort:</span>
+                    {SORT_OPTIONS.map((opt) => (
+                      <button
+                        key={opt.value}
+                        onClick={() => setSortBy(opt.value)}
+                        className={`text-xs px-2.5 py-1 rounded-md transition-colors ${
+                          sortBy === opt.value
+                            ? 'bg-journi-green/10 text-journi-green font-semibold'
+                            : 'text-muted-foreground hover:text-foreground'
+                        }`}
+                      >
+                        {opt.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
 
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-start justify-between gap-3">
-                          <div>
-                            <h2 className="text-base font-bold text-foreground leading-snug">{journal.name}</h2>
-                            <p className="text-xs text-muted-foreground mt-0.5">
-                              {journal.publisher || 'Unknown Publisher'}
-                            </p>
-                          </div>
-                          <button
-                            onClick={() => setSelectedJournal(journal)}
-                            className="text-xs font-semibold text-journi-green hover:underline shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/40 rounded-sm"
-                          >
-                            View details
-                          </button>
-                        </div>
-
-                        <div className="mt-3 grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
-                          <div className="p-2 rounded bg-muted/40">
-                            <p className="text-muted-foreground">Impact factor</p>
-                            <p className="font-semibold text-foreground">{formatImpactFactor(journal.impactFactor)}</p>
-                          </div>
-                          <div className="p-2 rounded bg-muted/40">
-                            <p className="text-muted-foreground">Decision time</p>
-                            <p className="font-semibold text-foreground">
-                              {typeof journal.avgDecisionDays === 'number' ? `${journal.avgDecisionDays}d` : 'N/A'}
-                            </p>
-                          </div>
-                          <div className="p-2 rounded bg-muted/40">
-                            <p className="text-muted-foreground">Acceptance</p>
-                            <p className="font-semibold text-foreground">
-                              {typeof journal.acceptanceRate === 'number' ? `${journal.acceptanceRate}%` : 'N/A'}
-                            </p>
-                          </div>
-                          <div className="p-2 rounded bg-muted/40">
-                            <p className="text-muted-foreground">Open access</p>
-                            <p className="font-semibold text-foreground">
-                              {journal.openAccess === true ? 'Yes' : journal.openAccess === false ? 'No' : 'Unknown'}
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="mt-2">
-                          <OAPolicyBadge journal={journal} />
-                        </div>
-
-                        <div className="mt-3 flex flex-wrap gap-2">
-                          {journal.websiteUrl || journal.website ? (
-                            <a
-                              href={journal.websiteUrl || journal.website}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-border text-xs text-foreground hover:bg-accent"
+                {/* ── Journal cards ─────────────────────────────────────────── */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+                  {cards.map((journal) => {
+                    const ifStr = formatImpactFactor(journal.impactFactor);
+                    return (
+                      <article
+                        key={journal.id}
+                        onClick={() => setSelectedJournal(journal)}
+                        className="rounded-xl border border-border bg-card px-4 py-3.5 shadow-sm hover:border-journi-green/40 hover:shadow-[0_2px_12px_rgba(79,177,81,0.08)] transition-all cursor-pointer group"
+                      >
+                        <div className="flex items-start gap-3">
+                          {/* Cover thumbnail */}
+                          {journal.logoUrl ? (
+                            <img
+                              src={journal.logoUrl}
+                              alt={`${journal.name} logo`}
+                              className="w-12 h-14 rounded-md object-cover border border-border bg-white shrink-0"
+                              loading="lazy"
+                            />
+                          ) : (
+                            <div
+                              className={`w-12 h-14 rounded-md bg-gradient-to-br ${journal.coverColor} flex items-center justify-center text-white text-[9px] font-bold shrink-0`}
                             >
-                              <ExternalLink size={13} /> Website
-                            </a>
-                          ) : null}
-                          {journal.submissionPortalUrl ? (
-                            <a
-                              href={journal.submissionPortalUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-border text-xs text-foreground hover:bg-accent"
-                            >
-                              <FileUp size={13} /> Submission Portal
-                            </a>
-                          ) : null}
+                              {journal.coverInitial}
+                            </div>
+                          )}
+
+                          <div className="flex-1 min-w-0">
+                            {/* Name + publisher + hover arrow */}
+                            <div className="flex items-start justify-between gap-2">
+                              <div className="min-w-0">
+                                <h2 className="text-sm font-bold text-foreground leading-snug">{journal.name}</h2>
+                                <p className="text-[11px] text-muted-foreground mt-0.5 truncate">
+                                  {journal.publisher || 'Unknown Publisher'}
+                                </p>
+                              </div>
+                              <span className="text-[11px] text-journi-green shrink-0 opacity-0 group-hover:opacity-100 transition-opacity font-medium pt-0.5">
+                                Details →
+                              </span>
+                            </div>
+
+                            {/* Impact factor + secondary info pills */}
+                            <div className="mt-2.5 flex items-baseline gap-3 flex-wrap">
+                              <div className="flex items-baseline gap-1 shrink-0">
+                                <span className="text-lg font-extrabold text-foreground leading-none">
+                                  {ifStr ?? '—'}
+                                </span>
+                                <span className="text-[9px] text-muted-foreground uppercase tracking-widest font-semibold">
+                                  IF
+                                </span>
+                              </div>
+                              <div className="flex flex-wrap gap-1.5">
+                                {typeof journal.avgDecisionDays === 'number' && (
+                                  <span className="text-[10px] bg-muted/70 text-muted-foreground px-2 py-0.5 rounded-full">
+                                    ~{journal.avgDecisionDays}d decision
+                                  </span>
+                                )}
+                                {typeof journal.acceptanceRate === 'number' && (
+                                  <span className="text-[10px] bg-muted/70 text-muted-foreground px-2 py-0.5 rounded-full">
+                                    {journal.acceptanceRate}% accept
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+
+                            {/* OA badges + external links */}
+                            <div className="mt-2 flex flex-wrap items-center gap-1.5">
+                              <OAPolicyBadge journal={journal} />
+                              {(journal.websiteUrl || journal.website) && (
+                                <a
+                                  href={journal.websiteUrl || journal.website}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  onClick={(e) => e.stopPropagation()}
+                                  className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border text-[10px] text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                                >
+                                  <ExternalLink size={10} aria-hidden="true" /> Website
+                                </a>
+                              )}
+                              {journal.submissionPortalUrl && (
+                                <a
+                                  href={journal.submissionPortalUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  onClick={(e) => e.stopPropagation()}
+                                  className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border text-[10px] text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                                >
+                                  <FileUp size={10} aria-hidden="true" /> Submit
+                                </a>
+                              )}
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  </article>
-                ))}
-              </div>
+                      </article>
+                    );
+                  })}
+                </div>
+              </>
             )}
 
             <Pagination
