@@ -267,13 +267,13 @@ export default function Navbar() {
                     className={cn(
                       "relative px-3.5 py-2 text-sm font-medium rounded-md transition-colors duration-200",
                       isActive
-                        ? "text-[#8b86c4] font-semibold"
+                        ? "text-[#685FB4] font-semibold"
                         : "text-muted-foreground hover:text-foreground hover:bg-accent",
                     )}
                   >
                     {item.label}
                     {isActive && (
-                      <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-[#8b86c4] rounded-full" />
+                      <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-[#685FB4] rounded-full" />
                     )}
                   </Link>
                 );
@@ -289,7 +289,7 @@ export default function Navbar() {
                     onClick={() => navigateToPageTop("/features")}
                     className={cn(
                       "bg-transparent text-sm font-medium hover:text-foreground",
-                      location.startsWith("/features") ? "text-[#8b86c4] font-bold" : "text-muted-foreground",
+                      location.startsWith("/features") ? "text-[#685FB4] font-bold" : "text-muted-foreground",
                     )}
                   >
                     Features
@@ -317,7 +317,7 @@ export default function Navbar() {
                       className={cn(
                         "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors",
                         location.startsWith("/pricing")
-                          ? "text-[#8b86c4] font-bold"
+                          ? "text-[#685FB4] font-bold"
                           : "text-muted-foreground hover:text-foreground hover:bg-accent",
                       )}
                     >
@@ -332,7 +332,7 @@ export default function Navbar() {
                     onClick={() => navigateToPageTop("/about")}
                     className={cn(
                       "bg-transparent text-sm font-medium hover:text-foreground",
-                      location.startsWith("/about") ? "text-[#8b86c4] font-bold" : "text-muted-foreground",
+                      location.startsWith("/about") ? "text-[#685FB4] font-bold" : "text-muted-foreground",
                     )}
                   >
                     About
@@ -365,7 +365,7 @@ export default function Navbar() {
                 <Button
                   size="sm"
                   onClick={() => navigate("/dashboard")}
-                  className="bg-journi-green text-journi-slate hover:bg-journi-green/90 font-semibold"
+                  className="bg-[#7B71C7] text-white hover:bg-[#6C63B7] font-semibold"
                 >
                   Go to Dashboard
                 </Button>
@@ -502,7 +502,7 @@ export default function Navbar() {
                 className={cn(
                   "px-3 py-2.5 text-sm font-medium rounded-md transition-colors",
                   isActive
-                    ? "text-[#8b86c4] font-semibold bg-[#8b86c4]/10"
+                    ? "text-[#685FB4] font-semibold bg-[#685FB4]/12"
                     : "text-muted-foreground hover:text-foreground hover:bg-accent",
                 )}
               >
@@ -522,7 +522,7 @@ export default function Navbar() {
                 className={cn(
                   "px-3 py-2.5 text-sm font-medium rounded-md transition-colors",
                   location.startsWith("/features")
-                    ? "text-[#8b86c4] font-bold bg-[#8b86c4]/10"
+                    ? "text-[#685FB4] font-bold bg-[#685FB4]/12"
                     : "text-muted-foreground hover:text-foreground hover:bg-accent",
                 )}
               >
@@ -552,7 +552,7 @@ export default function Navbar() {
                 className={cn(
                   "px-3 py-2.5 text-sm font-medium rounded-md transition-colors",
                   location.startsWith("/pricing")
-                    ? "text-[#8b86c4] font-bold bg-[#8b86c4]/10"
+                    ? "text-[#685FB4] font-bold bg-[#685FB4]/12"
                     : "text-muted-foreground hover:text-foreground hover:bg-accent",
                 )}
               >
@@ -568,7 +568,7 @@ export default function Navbar() {
                 className={cn(
                   "px-3 py-2.5 text-sm font-medium rounded-md transition-colors",
                   location.startsWith("/about")
-                    ? "text-[#8b86c4] font-bold bg-[#8b86c4]/10"
+                    ? "text-[#685FB4] font-bold bg-[#685FB4]/12"
                     : "text-muted-foreground hover:text-foreground hover:bg-accent",
                 )}
               >
@@ -600,7 +600,7 @@ export default function Navbar() {
                 <div className="pb-2 border-b border-border/50 mb-2">
                   <button
                     onClick={() => { navigate("/dashboard"); closeMobile(); }}
-                    className="w-full flex items-center justify-center gap-2 px-3 py-2.5 bg-journi-green text-journi-slate font-semibold rounded-md hover:bg-journi-green/90 transition-colors"
+                    className="w-full flex items-center justify-center gap-2 px-3 py-2.5 bg-[#7B71C7] text-white font-semibold rounded-md hover:bg-[#6C63B7] transition-colors"
                   >
                     Go to Dashboard
                   </button>

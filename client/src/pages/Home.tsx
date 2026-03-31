@@ -109,7 +109,7 @@ export default function Home() {
                 {isAuthenticated ? (
                   <button
                     onClick={() => navigate("/dashboard")}
-                    className="inline-flex items-center gap-2 bg-[#9999cc] text-white font-bold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
+                    className="inline-flex items-center gap-2 bg-[#7B71C7] text-white font-bold px-6 py-3 rounded-lg hover:bg-[#6C63B7] transition-colors"
                   >
                     Open Dashboard
                     <ArrowRight size={17} />
@@ -125,7 +125,7 @@ export default function Home() {
                 )}
                 <a
                   href="#how-it-works"
-                  className="inline-flex items-center gap-2 border border-[#9999cc] text-foreground font-medium px-6 py-3 rounded-lg hover:bg-[#9999cc] hover:text-white hover:font-bold transition-colors"
+                  className="inline-flex items-center gap-2 border border-[#7B71C7] text-[#685FB4] font-medium px-6 py-3 rounded-lg hover:bg-[#7B71C7] hover:text-white hover:font-bold transition-colors"
                 >
                   See how it works
                 </a>
@@ -195,7 +195,7 @@ export default function Home() {
             ].map((pillar, i) => (
               <motion.div
                 key={pillar.title}
-                className="p-10 rounded-2xl border border-[#9999cc]/35 hover:border-[#9999cc]/70 hover:shadow-lg hover:shadow-[#9999cc]/10 transition-all group"
+                className="p-10 rounded-2xl border border-[#7B71C7]/45 hover:border-[#7B71C7]/75 hover:shadow-lg hover:shadow-[#7B71C7]/15 transition-all group"
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i + 1}
               >
                 <div className="w-14 h-14 rounded-xl bg-journi-green/10 flex items-center justify-center mb-6 group-hover:bg-journi-green/20 transition-colors">
@@ -213,7 +213,7 @@ export default function Home() {
                 </ul>
                 <Link
                   href={pillar.link}
-                  className="inline-flex items-center gap-1 mt-6 text-sm text-[#8b86c4] font-semibold hover:underline"
+                  className="inline-flex items-center gap-1 mt-6 text-sm text-[#685FB4] font-semibold hover:underline"
                 >
                   Explore <ChevronRight size={14} />
                 </Link>
@@ -341,7 +341,7 @@ export default function Home() {
               {isAuthenticated ? (
                 <button
                   onClick={() => navigate("/dashboard")}
-                  className="inline-flex items-center gap-2 bg-[#9999cc] text-white font-bold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center gap-2 bg-[#7B71C7] text-white font-bold px-8 py-3.5 rounded-lg hover:bg-[#6C63B7] transition-colors"
                 >
                   Go to your Dashboard
                   <ArrowRight size={18} />
@@ -357,7 +357,7 @@ export default function Home() {
                   </button>
                   <button
                     onClick={() => openModal("signup")}
-                    className="inline-flex items-center gap-2 bg-[#9999cc] text-white font-medium px-8 py-3.5 rounded-lg hover:bg-[#9999cc] hover:text-white hover:font-bold transition-colors"
+                    className="inline-flex items-center gap-2 bg-[#7B71C7] text-white font-medium px-8 py-3.5 rounded-lg hover:bg-[#6C63B7] hover:text-white hover:font-bold transition-colors"
                   >
                     <FlaskConical size={17} />
                     Sign Up Free

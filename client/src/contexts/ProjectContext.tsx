@@ -190,7 +190,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
 
   const taskSaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const [activities, setActivities] = useState<Activity[]>(() => {
+  const [allActivities, setAllActivities] = useState<Activity[]>(() => {
     try {
       const stored = localStorage.getItem(ACTIVITIES_KEY);
       if (stored) return rehydrateActivities(JSON.parse(stored));
@@ -199,8 +199,17 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     }
     const initial = initProjects();
     const active = initial.projects.find((p) => p.id === initial.activeId) || initial.projects[0];
-    return generateActivities(active.collaborators);
+    if (!active || active.collaborators.length === 0) return [];
+    return generateActivities(active.collaborators).map((activity) => ({
+      ...activity,
+      metadata: { ...(activity.metadata ?? {}), projectId: active.id },
+    }));
   });
+
+  const activities = useMemo(
+    () => allActivities.filter((activity) => activity.metadata?.projectId === activeId),
+    [allActivities, activeId],
+  );
 
   const setProjects = useCallback((updated: Project[], newActiveId?: string) => {
     const nextProjects = updated.length > 0 ? updated : [fallbackProject];
@@ -223,8 +232,8 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem(ACTIVITIES_KEY, JSON.stringify(activities));
-  }, [activities]);
+    localStorage.setItem(ACTIVITIES_KEY, JSON.stringify(allActivities));
+  }, [allActivities]);
 
   useEffect(() => {
     let cancelled = false;
@@ -256,7 +265,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
             localStorage.removeItem(PROJECTS_KEY);
             localStorage.removeItem(ACTIVITIES_KEY);
             setState({ projects: [], activeId: '' });
-            setActivities([]);
+            setAllActivities([]);
           } else {
             const preferred = localStorage.getItem(ACTIVE_PROJECT_KEY) || mapped[0].id;
             const resolved = mapped.some((p) => p.id === preferred) ? preferred : mapped[0].id;
@@ -280,7 +289,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
           localStorage.removeItem(PROJECTS_KEY);
           localStorage.removeItem(ACTIVITIES_KEY);
           setState({ projects: [], activeId: '' });
-          setActivities([]);
+          setAllActivities([]);
           return;
         }
 
@@ -410,7 +419,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
 
     const currentUser = activeProject.collaborators[0];
     if (currentUser) {
-      setActivities((prev) => [
+      setAllActivities((prev) => [
         {
           id: nanoid(),
           userId: currentUser.id,
@@ -419,6 +428,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
           action: `created task "${taskData.name}"`,
           type: 'task',
           timestamp: new Date(),
+          metadata: { projectId: activeProject.id },
         },
         ...prev,
       ]);
@@ -451,7 +461,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     updateActive((project) => ({ ...project, collaborators: newCollaborators, updatedAt: new Date() }));
     saveCollaborators(activeProject.id, newCollaborators);
 
-    setActivities((prev) => [
+    setAllActivities((prev) => [
       {
         id: nanoid(),
         userId: collaborator.id,
@@ -460,6 +470,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
         action: 'joined the project',
         type: 'milestone',
         timestamp: new Date(),
+        metadata: { projectId: activeProject.id },
       },
       ...prev,
     ]);
