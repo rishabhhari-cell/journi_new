@@ -152,16 +152,16 @@ export default function StickyFooter() {
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-journi-green-light px-4 py-6 md:px-12 md:py-12"
+            className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-gradient-to-br from-[#eef8ef] via-[#f5fbf5] to-[#e8f3ea] px-4 py-6 md:px-12 md:py-12"
           >
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/5 to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-black/5" />
 
             <motion.div
               variants={backgroundVariants}
-              className="absolute right-0 top-0 h-52 w-52 rounded-full bg-white/20 blur-3xl md:h-96 md:w-96"
+              className="absolute right-0 top-0 h-52 w-52 rounded-full bg-journi-green/15 blur-3xl md:h-96 md:w-96"
               animate={{
                 scale: [1, 1.1, 1],
-                opacity: [0.15, 0.35, 0.15],
+                opacity: [0.08, 0.18, 0.08],
               }}
               transition={{
                 duration: 4,
@@ -172,10 +172,10 @@ export default function StickyFooter() {
 
             <motion.div
               variants={backgroundVariants}
-              className="absolute bottom-0 left-0 h-52 w-52 rounded-full bg-journi-green-dark/25 blur-3xl md:h-96 md:w-96"
+              className="absolute bottom-0 left-0 h-52 w-52 rounded-full bg-[#7B71C7]/15 blur-3xl md:h-96 md:w-96"
               animate={{
                 scale: [1, 1.2, 1],
-                opacity: [0.12, 0.28, 0.12],
+                opacity: [0.06, 0.14, 0.06],
               }}
               transition={{
                 duration: 5,
@@ -208,7 +208,7 @@ export default function StickyFooter() {
                     scale: 1.01,
                     transition: { type: "spring" as const, stiffness: 300, damping: 20 },
                   }}
-                  className="w-fit"
+                  className="w-fit rounded-2xl border border-white/70 bg-white/80 px-5 py-3 shadow-sm"
                 >
                   <img src="/logos/Journi_new.svg" alt="Journi" className="h-20 w-auto md:h-24 lg:h-28" />
                 </motion.div>
