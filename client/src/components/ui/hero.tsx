@@ -20,7 +20,7 @@ export default function HeroShader({ children, className = "" }: HeroShaderProps
         transition={{ duration: 1.1 }}
       >
         <MeshGradient
-          className="absolute inset-0 w-full h-full opacity-44"
+          className="absolute inset-0 w-full h-full opacity-[39%]"
           colors={["#FFFFFF", "#D7F0DD", "#BFE5C8", "#DAD5F3", "#E9F7EC"]}
           speed={0.2}
         />
