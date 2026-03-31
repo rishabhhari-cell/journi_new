@@ -21,10 +21,10 @@ export default function Support() {
                   Reach us for product, technical, and account questions.
                 </p>
                 <a
-                  href="mailto:support@journi.app"
+                  href="mailto:support@journi.com"
                   className="text-journi-green text-sm font-semibold hover:underline"
                 >
-                  support@journi.app
+                  support@journi.com
                 </a>
               </div>
 

@@ -8,6 +8,7 @@ import { HttpError } from "../lib/http-error";
 import { supabaseAdmin } from "../lib/supabase";
 import { requireAuth, type AuthedRequest } from "../middleware/auth";
 import { writeAuditEvent } from "../services/audit.service";
+import { sendOrganizationInviteEmail } from "../services/email.service";
 
 export const organizationsRouter = Router();
 
@@ -155,6 +156,26 @@ organizationsRouter.post("/:organizationId/invite", async (req, res, next) => {
         email: input.email.toLowerCase(),
         role: input.role,
       },
+    });
+
+    const [{ data: inviterProfile }, { data: org }] = await Promise.all([
+      supabaseAdmin.from("profiles").select("full_name, email").eq("id", authReq.auth.userId).maybeSingle(),
+      supabaseAdmin.from("organizations").select("name").eq("id", organizationId).maybeSingle(),
+    ]);
+
+    const inviterName =
+      inviterProfile?.full_name?.trim() ||
+      inviterProfile?.email?.trim() ||
+      "A Journi collaborator";
+    const organizationName = org?.name || "your team";
+    const inviteUrl = `${env.CLIENT_BASE_URL}/?inviteToken=${encodeURIComponent(inviteToken)}`;
+
+    void sendOrganizationInviteEmail({
+      to: input.email.toLowerCase(),
+      inviterName,
+      organizationName,
+      role: input.role,
+      inviteUrl,
     });
 
     res.status(201).json({

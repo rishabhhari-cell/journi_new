@@ -18,6 +18,34 @@ This backend now provides:
    - `npm install`
    - `npm run dev`
 
+## Email Setup (Railway + Journi domain)
+
+Configure these Railway environment variables:
+
+- `MAIL_FROM=info@journi.com`
+- `MAIL_REPLY_TO=support@journi.com`
+- `SUPPORT_EMAIL=support@journi.com`
+- `RESEND_API_KEY=<your_resend_api_key>`
+- `RESET_PASSWORD_REDIRECT_URL=https://<your-domain>/reset-password` (optional override)
+
+What Journi now sends:
+
+- Sign-up welcome email (from `info@journi.com`)
+- Team invite email (from `info@journi.com`)
+- Mention notification emails (from `info@journi.com`)
+- Password reset emails through Supabase Auth (`/api/auth/forgot-password`)
+
+Supabase Auth requirements:
+
+- Enable email confirmation in Supabase Auth settings.
+- Configure Supabase Auth SMTP to send from `info@journi.com`.
+- Update Auth email templates (confirmation + recovery) to your branding.
+
+Inbound support mailbox:
+
+- Create `support@journi.com` with your mailbox provider (Google Workspace/Zoho/etc).
+- Point domain MX records to that provider.
+
 ## Realtime Protocol
 
 Connect WebSocket:

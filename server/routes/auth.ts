@@ -8,6 +8,7 @@ import { HttpError } from "../lib/http-error";
 import { createUserScopedSupabase, supabaseAdmin, supabasePublic } from "../lib/supabase";
 import { requireAuth, type AuthedRequest } from "../middleware/auth";
 import { writeAuditEvent } from "../services/audit.service";
+import { sendWelcomeEmail } from "../services/email.service";
 
 export const authRouter = Router();
 
@@ -49,6 +50,14 @@ const signUpSchema = z.object({
 
 const refreshSchema = z.object({
   refreshToken: z.string().min(10),
+});
+
+const forgotPasswordSchema = z.object({
+  email: z.string().email(),
+});
+
+const updatePasswordSchema = z.object({
+  password: z.string().min(8),
 });
 
 const oauthSchema = z.object({
@@ -239,11 +248,17 @@ authRouter.post("/signup", async (req, res, next) => {
     ]);
     const initialProjects = await fetchInitialProjects(membershipDtos[0]?.organizationId);
 
+    void sendWelcomeEmail({
+      to: input.email,
+      fullName: input.fullName,
+    });
+
     res.status(201).json({
       user: mapUser(data.user, input.fullName),
       session: mapSession(data.session),
       memberships: membershipDtos,
       projects: initialProjects,
+      requiresEmailVerification: !data.session,
     });
   } catch (error) {
     next(error);
@@ -326,6 +341,50 @@ authRouter.post("/refresh", async (req, res, next) => {
       user: data.user ? mapUser(data.user) : null,
       session: mapSession(data.session),
     });
+  } catch (error) {
+    next(error);
+  }
+});
+
+authRouter.post("/forgot-password", async (req, res, next) => {
+  try {
+    const input = forgotPasswordSchema.parse(req.body);
+    const redirectTo = env.RESET_PASSWORD_REDIRECT_URL ?? `${env.CLIENT_BASE_URL}/reset-password`;
+
+    const { error } = await supabasePublic.auth.resetPasswordForEmail(input.email, {
+      redirectTo,
+    });
+
+    if (error) {
+      throw new HttpError(400, error.message, "FORGOT_PASSWORD_FAILED");
+    }
+
+    // Generic success response - do not disclose whether email exists.
+    res.json({ ok: true });
+  } catch (error) {
+    next(error);
+  }
+});
+
+authRouter.post("/update-password", requireAuth, async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    const input = updatePasswordSchema.parse(req.body);
+    const userClient = createUserScopedSupabase(authReq.auth.accessToken);
+
+    const { error } = await userClient.auth.updateUser({ password: input.password });
+    if (error) {
+      throw new HttpError(400, error.message, "UPDATE_PASSWORD_FAILED");
+    }
+
+    await writeAuditEvent({
+      actorUserId: authReq.auth.userId,
+      eventType: "auth.password.updated",
+      entityType: "user",
+      entityId: authReq.auth.userId,
+    });
+
+    res.json({ ok: true });
   } catch (error) {
     next(error);
   }

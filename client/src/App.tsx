@@ -22,6 +22,7 @@ import Publication from "./pages/Publication";
 import FormatPreview from "./pages/FormatPreview";
 import Admin from "./pages/Admin";
 import Profile from "./pages/Profile";
+import ResetPassword from "./pages/ResetPassword";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -75,6 +76,7 @@ function Router() {
       <Route path="/format/:journalId" component={FormatPreview} />
       <Route path="/admin" component={Admin} />
       <Route path="/profile" component={Profile} />
+      <Route path="/reset-password" component={ResetPassword} />
       <Route component={NotFound} />
     </Switch>
     </>

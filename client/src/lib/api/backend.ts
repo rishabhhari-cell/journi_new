@@ -7,6 +7,7 @@ import type {
 } from '@shared/backend';
 import type { RawParsedDocument } from '@shared/document-parse';
 import { apiFetch } from './client';
+import { apiFetchNoAuth } from './client';
 
 export interface SearchJournalParams {
   q?: string;
@@ -511,3 +512,23 @@ export async function deleteInstitutionDomain(domain: string) {
   });
 }
 
+export async function requestPasswordReset(email: string) {
+  return apiFetchNoAuth<{ ok: boolean }>('/auth/forgot-password', {
+    method: 'POST',
+    body: JSON.stringify({ email }),
+  });
+}
+
+export async function updatePassword(password: string) {
+  return apiFetch<{ ok: boolean }>('/auth/update-password', {
+    method: 'POST',
+    body: JSON.stringify({ password }),
+  });
+}
+
+export async function acceptOrganizationInvite(token: string) {
+  return apiFetch<{ ok: boolean; organizationId: string; role: OrgRole }>('/auth/invites/accept', {
+    method: 'POST',
+    body: JSON.stringify({ token }),
+  });
+}

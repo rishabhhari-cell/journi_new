@@ -289,7 +289,8 @@ export default function Home() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            <div className="hidden md:block absolute top-8 left-[calc(16.67%+1rem)] right-[calc(16.67%+1rem)] h-0.5 bg-border z-0" />
+            {/* Line runs from right edge of sq1 to left edge of sq3. Squares have solid bg so they cleanly cover the line ends. */}
+            <div className="hidden md:block absolute top-8 left-[calc(16.67%+2rem)] right-[calc(16.67%+2rem)] h-px bg-border z-0" />
             {[
               {
                 step: "01", icon: FileText,
@@ -312,8 +313,10 @@ export default function Home() {
                 className="relative z-10 flex flex-col items-center text-center"
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i + 1}
               >
-                <div className="w-16 h-16 rounded-2xl bg-journi-green/10 border border-journi-green/20 flex items-center justify-center mb-5">
-                  <step.icon size={24} className="text-journi-green" />
+                {/* Solid bg-card base prevents line from showing through the semi-transparent green tint */}
+                <div className="relative w-16 h-16 rounded-2xl bg-card border border-journi-green/20 flex items-center justify-center mb-5 overflow-hidden">
+                  <div className="absolute inset-0 bg-journi-green/10" />
+                  <step.icon size={24} className="text-journi-green relative z-10" />
                 </div>
                 <span className="text-xs font-bold text-journi-green mb-2 tracking-widest">{step.step}</span>
                 <h3 className="text-lg font-bold text-foreground mb-2">{step.title}</h3>

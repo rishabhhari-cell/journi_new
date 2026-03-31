@@ -93,7 +93,7 @@ function Field({
 
 // ── Main modal ────────────────────────────────────────────────────────────────
 export default function AuthModal() {
-  const { modalOpen, modalView, closeModal, signIn, signUp, openModal, startOAuth } = useAuth();
+  const { modalOpen, modalView, closeModal, signIn, signUp, requestPasswordReset, openModal, startOAuth } = useAuth();
   const [, navigate] = useLocation();
 
   // Sign-in fields
@@ -105,6 +105,7 @@ export default function AuthModal() {
   const [suEmail, setSuEmail] = useState('');
   const [suPassword, setSuPassword] = useState('');
   const [suConfirm, setSuConfirm] = useState('');
+  const [forgotEmail, setForgotEmail] = useState('');
 
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
@@ -143,12 +144,33 @@ export default function AuthModal() {
     if (suPassword !== suConfirm) return setError('Passwords do not match.');
     setLoading(true);
     try {
-      await signUp(suName, suEmail, suPassword);
-      toast.success('Account created — welcome to Journi!');
-      closeModal();
-      navigate('/dashboard');
+      const result = await signUp(suName, suEmail, suPassword);
+      if (result.requiresEmailVerification) {
+        toast.success('Account created. Check your email to verify your account.');
+        setSuccess('Verification email sent. Please verify your email, then sign in.');
+        openModal('signin');
+      } else {
+        toast.success('Account created — welcome to Journi!');
+        closeModal();
+        navigate('/dashboard');
+      }
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Sign up failed.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleForgotPassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+    if (!forgotEmail.trim()) return setError('Please enter your email.');
+    setLoading(true);
+    try {
+      await requestPasswordReset(forgotEmail.trim());
+      setSuccess('If an account exists for this email, a password reset link has been sent.');
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'Failed to request password reset.');
     } finally {
       setLoading(false);
     }
@@ -330,6 +352,16 @@ export default function AuthModal() {
                       {loading ? 'Signing in…' : 'Sign In'}
                     </button>
 
+                    <div className="text-right">
+                      <button
+                        type="button"
+                        onClick={() => openModal('forgot')}
+                        className="text-xs text-journi-green hover:underline font-medium"
+                      >
+                        Forgot password?
+                      </button>
+                    </div>
+
                     <p className="text-center text-xs text-muted-foreground">
                       No account?{' '}
                       <button
@@ -341,7 +373,7 @@ export default function AuthModal() {
                       </button>
                     </p>
                   </motion.form>
-                ) : (
+                ) : modalView === 'signup' ? (
                   <motion.form
                     key="signup"
                     onSubmit={handleSignUp}
@@ -404,6 +436,45 @@ export default function AuthModal() {
                         className="text-journi-green hover:underline font-medium"
                       >
                         Sign in
+                      </button>
+                    </p>
+                  </motion.form>
+                ) : (
+                  <motion.form
+                    key="forgot"
+                    onSubmit={handleForgotPassword}
+                    initial={{ opacity: 0, x: 12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -12 }}
+                    transition={{ duration: 0.18 }}
+                    className="space-y-4"
+                  >
+                    <Field
+                      label="Account email"
+                      type="email"
+                      value={forgotEmail}
+                      onChange={setForgotEmail}
+                      placeholder="you@example.com"
+                      icon={Mail}
+                      autoComplete="email"
+                    />
+
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="w-full py-2.5 rounded-xl bg-journi-green text-journi-slate text-sm font-bold hover:opacity-90 transition-opacity disabled:opacity-60 mt-1"
+                    >
+                      {loading ? 'Sending link…' : 'Send reset link'}
+                    </button>
+
+                    <p className="text-center text-xs text-muted-foreground">
+                      Remembered your password?{' '}
+                      <button
+                        type="button"
+                        onClick={() => openModal('signin')}
+                        className="text-journi-green hover:underline font-medium"
+                      >
+                        Back to sign in
                       </button>
                     </p>
                   </motion.form>

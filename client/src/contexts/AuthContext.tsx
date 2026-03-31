@@ -8,6 +8,7 @@ import {
   getStoredSession,
   setStoredSession,
 } from '@/lib/api/client';
+import { acceptOrganizationInvite, requestPasswordReset } from '@/lib/api/backend';
 
 export interface AuthUser {
   id: string;
@@ -26,20 +27,22 @@ interface AuthContextType {
   isLoading: boolean;
   isTrial: boolean;
   signIn: (email: string, password: string) => Promise<void>;
-  signUp: (name: string, email: string, password: string) => Promise<void>;
+  signUp: (name: string, email: string, password: string) => Promise<{ requiresEmailVerification: boolean }>;
+  requestPasswordReset: (email: string) => Promise<void>;
   startOAuth: (provider?: 'google') => Promise<void>;
   updateProfile: (name: string) => Promise<void>;
   signInAsGuest: () => void;
   signOut: () => Promise<void>;
-  openModal: (view?: 'signin' | 'signup') => void;
+  openModal: (view?: 'signin' | 'signup' | 'forgot') => void;
   closeModal: () => void;
   modalOpen: boolean;
-  modalView: 'signin' | 'signup';
+  modalView: 'signin' | 'signup' | 'forgot';
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
 const USER_STORAGE_KEY = 'journi_auth_user';
 const ORG_STORAGE_KEY = 'journi_active_org_id';
+const PENDING_INVITE_KEY = 'journi_pending_invite_token';
 
 function makeInitials(name: string) {
   return name
@@ -78,7 +81,7 @@ function readPersistedUser(): AuthUser | null {
   }
 }
 
-function parseOAuthHash(): ApiSession | null {
+function parseOAuthHash(): { session: ApiSession; type: string | null } | null {
   const hash = window.location.hash.startsWith('#')
     ? window.location.hash.slice(1)
     : window.location.hash;
@@ -92,9 +95,12 @@ function parseOAuthHash(): ApiSession | null {
   if (!accessToken || !refreshToken) return null;
 
   return {
-    accessToken,
-    refreshToken,
-    expiresAt: expiresAtRaw ? Number(expiresAtRaw) : null,
+    session: {
+      accessToken,
+      refreshToken,
+      expiresAt: expiresAtRaw ? Number(expiresAtRaw) : null,
+    },
+    type: params.get('type'),
   };
 }
 
@@ -107,7 +113,31 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
   const [isTrial, setIsTrial] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalView, setModalView] = useState<'signin' | 'signup'>('signin');
+  const [modalView, setModalView] = useState<'signin' | 'signup' | 'forgot'>('signin');
+
+  const stashInviteTokenFromUrl = useCallback(() => {
+    const url = new URL(window.location.href);
+    const inviteToken = url.searchParams.get('inviteToken');
+    if (!inviteToken) return;
+    localStorage.setItem(PENDING_INVITE_KEY, inviteToken);
+    url.searchParams.delete('inviteToken');
+    window.history.replaceState({}, document.title, `${url.pathname}${url.search}${url.hash}`);
+  }, []);
+
+  const acceptPendingInvite = useCallback(async () => {
+    const inviteToken = localStorage.getItem(PENDING_INVITE_KEY);
+    if (!inviteToken) return;
+    try {
+      await acceptOrganizationInvite(inviteToken);
+      localStorage.removeItem(PENDING_INVITE_KEY);
+      const me = await apiFetch<{ user: ApiUser; memberships?: OrganizationMembershipDTO[] }>('/auth/me', {
+        method: 'GET',
+      });
+      setMemberships(me.memberships ?? []);
+    } catch {
+      // Keep token for later retry after next authenticated bootstrap.
+    }
+  }, []);
 
   const hydrateFromSession = useCallback(async (session: ApiSession) => {
     const me = await apiFetch<{ user: ApiUser; memberships?: OrganizationMembershipDTO[] }>('/auth/me', {
@@ -138,9 +168,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const bootstrap = async () => {
       try {
-        const oauthSession = parseOAuthHash();
-        if (oauthSession) {
-          await hydrateFromSession(oauthSession);
+        stashInviteTokenFromUrl();
+        const oauthHash = parseOAuthHash();
+        if (oauthHash) {
+          await hydrateFromSession(oauthHash.session);
+          await acceptPendingInvite();
+          const isRecovery = oauthHash.type === 'recovery';
+          if (isRecovery) {
+            window.history.replaceState({}, document.title, '/reset-password');
+            setIsLoading(false);
+            return;
+          }
           // Session stored — redirect to dashboard (clears the hash fragment too)
           window.location.replace('/dashboard');
           return;
@@ -150,6 +188,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         if (existingSession?.accessToken) {
           try {
             await hydrateFromSession(existingSession);
+            await acceptPendingInvite();
             return;
           } catch {
             if (existingSession.refreshToken) {
@@ -159,6 +198,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
               });
               if (refreshed.session?.accessToken) {
                 await hydrateFromSession(refreshed.session);
+                await acceptPendingInvite();
                 return;
               }
             }
@@ -181,7 +221,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     };
 
     void bootstrap();
-  }, [hydrateFromSession]);
+  }, [acceptPendingInvite, hydrateFromSession, stashInviteTokenFromUrl]);
 
   /** Apply user + session + memberships from a signin/signup response (no extra /auth/me call). */
   const applyAuthResponse = useCallback(
@@ -228,13 +268,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       session: ApiSession | null;
       memberships?: OrganizationMembershipDTO[];
       projects?: any[];
+      requiresEmailVerification?: boolean;
     }>('/auth/signup', {
       method: 'POST',
       body: JSON.stringify({ fullName: name, email, password }),
     });
 
+    if (response.requiresEmailVerification || !response.session) {
+      return { requiresEmailVerification: true };
+    }
+
     applyAuthResponse(toAuthUser(response.user), response.session, response.memberships, response.projects);
-  }, [applyAuthResponse]);
+    await acceptPendingInvite();
+    return { requiresEmailVerification: false };
+  }, [acceptPendingInvite, applyAuthResponse]);
 
   const signIn = useCallback(async (email: string, password: string) => {
     const response = await apiFetchNoAuth<{
@@ -248,7 +295,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
 
     applyAuthResponse(toAuthUser(response.user), response.session, response.memberships, response.projects);
-  }, [applyAuthResponse]);
+    await acceptPendingInvite();
+  }, [acceptPendingInvite, applyAuthResponse]);
 
   const startOAuth = useCallback(async (provider: 'google' = 'google') => {
     const response = await apiFetchNoAuth<{ url: string }>('/auth/oauth', {
@@ -259,6 +307,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }),
     });
     window.location.assign(response.url);
+  }, []);
+
+  const requestPasswordResetAction = useCallback(async (email: string) => {
+    await requestPasswordReset(email);
   }, []);
 
   const updateProfile = useCallback(async (name: string) => {
@@ -320,7 +372,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     memberships[0] ??
     null;
 
-  const openModal = useCallback((view: 'signin' | 'signup' = 'signin') => {
+  const openModal = useCallback((view: 'signin' | 'signup' | 'forgot' = 'signin') => {
     setModalView(view);
     setModalOpen(true);
   }, []);
@@ -339,6 +391,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         isTrial,
         signIn,
         signUp,
+        requestPasswordReset: requestPasswordResetAction,
         startOAuth,
         updateProfile,
         signInAsGuest,
