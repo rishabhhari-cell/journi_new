@@ -3,7 +3,7 @@
  * Sidebar nav (Linear-style) with Overview, Tasks, Team, Calendar, Publications
  */
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import {
   LayoutGrid,
   CheckSquare,
@@ -85,6 +85,11 @@ export default function Dashboard() {
   const [showNotifications, setShowNotifications] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const closeTaskPanel = () => {
+    setIsTaskDialogOpen(false);
+    setEditingTask(undefined);
+  };
+
   const safeDate = (d: any): Date => (d instanceof Date ? d : new Date(d));
 
   const completedTasks = project.tasks.filter((t) => t.status === 'completed').length;
@@ -148,6 +153,7 @@ export default function Dashboard() {
 
   const handleOpenEditTaskDialog = (taskId: string) => {
     const task = project.tasks.find((t) => t.id === taskId);
+    if (!task) return;
     setEditingTask(task);
     setIsTaskDialogOpen(true);
   };
@@ -158,6 +164,7 @@ export default function Dashboard() {
     } else {
       addTask(taskData);
     }
+    closeTaskPanel();
   };
 
   const tabHeadings: Record<DashboardTab, { title: string; subtitle: string }> = {
@@ -576,7 +583,7 @@ export default function Dashboard() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="space-y-6"
+                className="relative space-y-6 overflow-hidden"
               >
                 {/* Upcoming deadlines */}
                 <div className="bg-card rounded-xl border border-border p-5">
@@ -646,11 +653,26 @@ export default function Dashboard() {
                     <ListView
                       tasks={project.tasks}
                       collaborators={project.collaborators}
-                      onTaskClick={handleOpenEditTaskDialog}
-                      onTaskDelete={deleteTask}
+                      onEdit={(task) => {
+                        setEditingTask(task);
+                        setIsTaskDialogOpen(true);
+                      }}
+                      onDelete={deleteTask}
+                      onUpdate={(taskId, updates) => updateTask(taskId, updates)}
                     />
                   )}
                 </div>
+
+                <AnimatePresence>
+                  {isTaskDialogOpen && (
+                    <TaskDialog
+                      onClose={closeTaskPanel}
+                      onSubmit={handleTaskSubmit}
+                      task={editingTask}
+                      collaborators={project.collaborators}
+                    />
+                  )}
+                </AnimatePresence>
               </motion.div>
             )}
 
@@ -852,13 +874,6 @@ export default function Dashboard() {
         </main>
       </div>
 
-      <TaskDialog
-        isOpen={isTaskDialogOpen}
-        onClose={() => setIsTaskDialogOpen(false)}
-        onSubmit={handleTaskSubmit}
-        task={editingTask}
-        collaborators={project.collaborators}
-      />
     </div>
   );
 }

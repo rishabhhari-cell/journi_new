@@ -4,6 +4,7 @@ import { nanoid } from 'nanoid';
 import type {
   Project,
   Task,
+  TaskPriority,
   Collaborator,
   Manuscript,
   DocumentSection,
@@ -49,19 +50,29 @@ const TASK_NAMES = [
 ];
 
 const TASK_STATUSES: TaskStatus[] = ['completed', 'progress', 'pending', 'delayed', 'upcoming'];
+const TASK_PRIORITIES: TaskPriority[] = ['urgent', 'urgent', 'medium', 'medium', 'medium', 'medium', 'medium', 'low', 'low', 'low'];
+
+function getCompletionPctForStatus(status: TaskStatus): number {
+  if (status === 'completed') return 100;
+  if (status === 'progress') return randomNumber(20, 80);
+  return 0;
+}
 
 function generateTask(collaboratorIds: string[]): Task {
   const startDate = new Date();
   startDate.setDate(startDate.getDate() + randomNumber(-30, 30));
   const endDate = new Date(startDate);
   endDate.setDate(endDate.getDate() + randomNumber(5, 30));
+  const status = randomElement(TASK_STATUSES);
 
   return {
     id: nanoid(),
     name: randomElement(TASK_NAMES),
     startDate,
     endDate,
-    status: randomElement(TASK_STATUSES),
+    status,
+    priority: randomElement(TASK_PRIORITIES),
+    completionPct: getCompletionPctForStatus(status),
     assignedTo: Array.from({ length: randomNumber(0, 2) }, () => randomElement(collaboratorIds)),
     description: 'Task description placeholder',
   };

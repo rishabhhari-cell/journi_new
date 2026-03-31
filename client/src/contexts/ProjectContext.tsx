@@ -22,6 +22,30 @@ interface ProjectOverlay {
   collaborators: Collaborator[];
 }
 
+function inferCompletionPct(task: Partial<Task>): number {
+  if (typeof task.completionPct === 'number') {
+    return Math.max(0, Math.min(100, Math.round(task.completionPct)));
+  }
+  if (task.status === 'completed') return 100;
+  if (task.status === 'progress') return 50;
+  return 0;
+}
+
+function normalizeTask(task: Partial<Task>): Task {
+  return {
+    id: task.id || nanoid(),
+    name: task.name || 'Untitled Task',
+    startDate: task.startDate ? new Date(task.startDate) : new Date(),
+    endDate: task.endDate ? new Date(task.endDate) : new Date(),
+    status: task.status || 'pending',
+    priority: task.priority || 'medium',
+    completionPct: inferCompletionPct(task),
+    assignedTo: task.assignedTo || [],
+    description: task.description || '',
+    dependencies: task.dependencies || [],
+  };
+}
+
 interface ProjectContextType {
   projects: Project[];
   activeProject: Project;
@@ -60,11 +84,7 @@ function rehydrateProject(p: Project): Project {
     createdAt: p.createdAt ? new Date(p.createdAt) : new Date(),
     updatedAt: p.updatedAt ? new Date(p.updatedAt) : new Date(),
     dueDate: p.dueDate ? new Date(p.dueDate) : undefined,
-    tasks: (p.tasks || []).map((t) => ({
-      ...t,
-      startDate: t.startDate ? new Date(t.startDate) : new Date(),
-      endDate: t.endDate ? new Date(t.endDate) : new Date(),
-    })),
+    tasks: (p.tasks || []).map((t) => normalizeTask(t)),
     collaborators: (p.collaborators || []).map(backfillOrcid),
   };
 }
@@ -86,11 +106,7 @@ function loadOverlays(): Record<string, ProjectOverlay> {
     const next: Record<string, ProjectOverlay> = {};
     for (const [projectId, overlay] of Object.entries(parsed)) {
       next[projectId] = {
-        tasks: (overlay.tasks ?? []).map((task) => ({
-          ...task,
-          startDate: task.startDate ? new Date(task.startDate) : new Date(),
-          endDate: task.endDate ? new Date(task.endDate) : new Date(),
-        })),
+        tasks: (overlay.tasks ?? []).map((task) => normalizeTask(task)),
         collaborators: overlay.collaborators ?? [],
       };
     }
@@ -109,14 +125,7 @@ function saveOverlays(projects: Project[]) {
 }
 
 function rehydrateTasks(raw: unknown[]): Task[] {
-  return raw.map((t) => {
-    const task = t as Task;
-    return {
-      ...task,
-      startDate: task.startDate ? new Date(task.startDate) : new Date(),
-      endDate: task.endDate ? new Date(task.endDate) : new Date(),
-    };
-  });
+  return raw.map((t) => normalizeTask(t as Partial<Task>));
 }
 
 function mapApiProjectToUi(apiProject: ApiProject): Project {

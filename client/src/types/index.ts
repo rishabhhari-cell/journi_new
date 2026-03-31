@@ -5,6 +5,7 @@
 // ============================================================================
 
 export type TaskStatus = 'completed' | 'progress' | 'pending' | 'delayed' | 'upcoming';
+export type TaskPriority = 'urgent' | 'medium' | 'low';
 
 export interface Task {
   id: string;
@@ -12,6 +13,8 @@ export interface Task {
   startDate: Date;
   endDate: Date;
   status: TaskStatus;
+  priority: TaskPriority;
+  completionPct: number; // 0-100
   assignedTo?: string[];
   description?: string;
   dependencies?: string[];
@@ -333,8 +336,11 @@ export interface TaskFormData {
   startDate: Date;
   endDate: Date;
   status: TaskStatus;
+  priority: TaskPriority;
+  completionPct: number;
   assignedTo?: string[];
   description?: string;
+  dependencies?: string[];
 }
 
 export interface CollaboratorFormData {
