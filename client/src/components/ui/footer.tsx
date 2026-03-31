@@ -76,7 +76,7 @@ const footerData = {
     { href: "#", label: "LinkedIn", icon: Linkedin },
   ],
   subtitle: "Your research, simplified.",
-  copyright: "©2026 Journi. All rights reserved.",
+  copyright: "Â©2026 Journi. All rights reserved.",
 }
 
 const NavSection = ({ title, links, index }: { title: string; links: string[]; index: number }) => (
@@ -275,3 +275,4 @@ export default function StickyFooter() {
     </div>
   )
 }
+
