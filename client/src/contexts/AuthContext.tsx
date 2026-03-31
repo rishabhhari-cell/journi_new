@@ -333,7 +333,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         user,
         memberships,
         activeOrganization,
-        activeOrganizationId: activeOrganization?.organizationId ?? null,
+        activeOrganizationId: activeOrganization?.organizationId ?? activeOrganizationId ?? null,
         setActiveOrganizationId,
         isLoading,
         isTrial,

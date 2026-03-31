@@ -258,15 +258,17 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
             setState({ projects: [], activeId: '' });
             setActivities([]);
           } else {
-            const preferredActiveId = localStorage.getItem(ACTIVE_PROJECT_KEY) || mapped[0].id;
-            setProjects(mapped, preferredActiveId);
+            const preferred = localStorage.getItem(ACTIVE_PROJECT_KEY) || mapped[0].id;
+            const resolved = mapped.some((p) => p.id === preferred) ? preferred : mapped[0].id;
+            setState({ projects: mapped, activeId: resolved });
+            localStorage.setItem(PROJECTS_KEY, JSON.stringify(mapped));
+            localStorage.setItem(ACTIVE_PROJECT_KEY, resolved);
           }
           if (!cancelled) setIsLoadingProjects(false);
           return;
         }
 
         // --- SLOW PATH: Standard Network Fetch ---
-        setIsLoadingProjects(true);
         const response = await fetchProjects(activeOrganizationId);
         if (cancelled) return;
 
@@ -275,7 +277,6 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
         if (mapped.length === 0) {
           // New user — show onboarding wizard instead of auto-creating
           setShowOnboarding(true);
-          // Clear any sample/stale data so it doesn't show behind the wizard
           localStorage.removeItem(PROJECTS_KEY);
           localStorage.removeItem(ACTIVITIES_KEY);
           setState({ projects: [], activeId: '' });
@@ -283,8 +284,11 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
           return;
         }
 
-        const preferredActiveId = localStorage.getItem(ACTIVE_PROJECT_KEY) || mapped[0].id;
-        setProjects(mapped, preferredActiveId);
+        const preferred = localStorage.getItem(ACTIVE_PROJECT_KEY) || mapped[0].id;
+        const resolved = mapped.some((p) => p.id === preferred) ? preferred : mapped[0].id;
+        setState({ projects: mapped, activeId: resolved });
+        localStorage.setItem(PROJECTS_KEY, JSON.stringify(mapped));
+        localStorage.setItem(ACTIVE_PROJECT_KEY, resolved);
       } catch {
         // Keep local state if backend fetch fails.
       } finally {
@@ -293,7 +297,8 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     })();
 
     return () => { cancelled = true; };
-  }, [backendMode, activeOrganizationId, setProjects]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [backendMode, activeOrganizationId]);
 
   const activeProject =
     projects.find((p) => p.id === activeId) ||
