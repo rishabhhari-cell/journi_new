@@ -75,9 +75,8 @@ const footerData = {
     { href: "#", label: "GitHub", icon: Github },
     { href: "#", label: "LinkedIn", icon: Linkedin },
   ],
-  title: "Journi",
   subtitle: "Your research, simplified.",
-  copyright: "Â©2026 Journi. All rights reserved.",
+  copyright: "©2026 Journi. All rights reserved.",
 }
 
 const NavSection = ({ title, links, index }: { title: string; links: string[]; index: number }) => (
@@ -86,7 +85,7 @@ const NavSection = ({ title, links, index }: { title: string; links: string[]; i
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 + index * 0.1, duration: 0.5, ease: EASE_OUT }}
-      className="mb-2 border-b border-white/20 pb-1 text-xs font-semibold uppercase tracking-wider text-white/70 transition-colors duration-300 hover:text-white"
+      className="mb-2 border-b border-journi-slate/20 pb-1 text-xs font-semibold uppercase tracking-wider text-journi-slate/70 transition-colors duration-300 hover:text-journi-slate"
     >
       {title}
     </motion.h3>
@@ -100,12 +99,12 @@ const NavSection = ({ title, links, index }: { title: string; links: string[]; i
           x: 8,
           transition: { type: "spring" as const, stiffness: 300, damping: 20 },
         }}
-        className="group relative text-xs text-white/70 transition-colors duration-300 hover:text-white md:text-sm"
+        className="group relative text-xs text-journi-slate/75 transition-colors duration-300 hover:text-journi-slate md:text-sm"
       >
         <span className="relative">
           {link}
           <motion.span
-            className="absolute bottom-0 left-0 h-0.5 bg-journi-green"
+            className="absolute bottom-0 left-0 h-0.5 bg-journi-slate/70"
             initial={{ width: 0 }}
             whileHover={{ width: "100%" }}
             transition={{ duration: 0.3 }}
@@ -137,10 +136,10 @@ const SocialLink = ({
       transition: { type: "spring" as const, stiffness: 300, damping: 15 },
     }}
     whileTap={{ scale: 0.92 }}
-    className="group flex h-8 w-8 items-center justify-center rounded-full bg-white/10 transition-colors duration-300 hover:bg-journi-green md:h-9 md:w-9"
+    className="group flex h-8 w-8 items-center justify-center rounded-full bg-white/35 transition-colors duration-300 hover:bg-journi-slate md:h-9 md:w-9"
     aria-label={label}
   >
-    <Icon className="h-4 w-4 text-white/80 group-hover:text-white" />
+    <Icon className="h-4 w-4 text-journi-slate/80 group-hover:text-white" />
   </motion.a>
 )
 
@@ -153,16 +152,16 @@ export default function StickyFooter() {
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-gradient-to-br from-[#141414] via-[#1a1a1a] to-[#0f0f0f] px-4 py-6 md:px-12 md:py-12"
+            className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-journi-green-light px-4 py-6 md:px-12 md:py-12"
           >
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/5 to-transparent" />
 
             <motion.div
               variants={backgroundVariants}
-              className="absolute right-0 top-0 h-52 w-52 rounded-full bg-journi-green/20 blur-3xl md:h-96 md:w-96"
+              className="absolute right-0 top-0 h-52 w-52 rounded-full bg-white/20 blur-3xl md:h-96 md:w-96"
               animate={{
                 scale: [1, 1.1, 1],
-                opacity: [0.2, 0.5, 0.2],
+                opacity: [0.15, 0.35, 0.15],
               }}
               transition={{
                 duration: 4,
@@ -173,10 +172,10 @@ export default function StickyFooter() {
 
             <motion.div
               variants={backgroundVariants}
-              className="absolute bottom-0 left-0 h-52 w-52 rounded-full bg-[#7B71C7]/20 blur-3xl md:h-96 md:w-96"
+              className="absolute bottom-0 left-0 h-52 w-52 rounded-full bg-journi-green-dark/25 blur-3xl md:h-96 md:w-96"
               animate={{
                 scale: [1, 1.2, 1],
-                opacity: [0.15, 0.4, 0.15],
+                opacity: [0.12, 0.28, 0.12],
               }}
               transition={{
                 duration: 5,
@@ -201,7 +200,7 @@ export default function StickyFooter() {
               className="relative z-10 mt-6 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end md:gap-6"
             >
               <div className="flex-1">
-                <motion.h1
+                <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1, duration: 0.8, ease: EASE_OUT }}
@@ -209,10 +208,10 @@ export default function StickyFooter() {
                     scale: 1.01,
                     transition: { type: "spring" as const, stiffness: 300, damping: 20 },
                   }}
-                  className="cursor-default bg-gradient-to-r from-white via-white/80 to-journi-green/60 bg-clip-text text-[13vw] font-extrabold leading-[0.8] text-transparent md:text-[10vw] lg:text-[8vw] xl:text-[6vw]"
+                  className="w-fit"
                 >
-                  {footerData.title}
-                </motion.h1>
+                  <img src="/logos/Journi_new.svg" alt="Journi" className="h-20 w-auto md:h-24 lg:h-28" />
+                </motion.div>
 
                 <motion.div
                   initial={{ opacity: 0, width: 0 }}
@@ -221,7 +220,7 @@ export default function StickyFooter() {
                   className="mt-3 flex items-center gap-3 md:mt-4 md:gap-4"
                 >
                   <motion.div
-                    className="h-0.5 w-8 bg-gradient-to-r from-journi-green to-[#7B71C7] md:w-12"
+                    className="h-0.5 w-8 bg-gradient-to-r from-journi-slate/70 to-journi-slate/40 md:w-12"
                     animate={{
                       scaleX: [1, 1.2, 1],
                     }}
@@ -235,7 +234,7 @@ export default function StickyFooter() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.4, duration: 0.5 }}
-                    className="text-xs text-white/70 transition-colors duration-300 hover:text-white md:text-sm"
+                    className="text-xs text-journi-slate/80 transition-colors duration-300 hover:text-journi-slate md:text-sm"
                   >
                     {footerData.subtitle}
                   </motion.p>
@@ -252,7 +251,7 @@ export default function StickyFooter() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1.8, duration: 0.5 }}
-                  className="mb-2 text-xs text-white/60 transition-colors duration-300 hover:text-white/90 md:mb-3 md:text-sm"
+                  className="mb-2 text-xs text-journi-slate/70 transition-colors duration-300 hover:text-journi-slate md:mb-3 md:text-sm"
                 >
                   {footerData.copyright}
                 </motion.p>

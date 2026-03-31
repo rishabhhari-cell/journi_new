@@ -289,8 +289,11 @@ export default function Home() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            {/* Line runs from right edge of sq1 to left edge of sq3. Squares have solid bg so they cleanly cover the line ends. */}
-            <div className="hidden md:block absolute top-8 left-[calc(16.67%+2rem)] right-[calc(16.67%+2rem)] h-px bg-border z-0" />
+            {/* Line: gap-8 = 2rem × 2 gaps = 4rem total. Column center = (100% - 4rem)/6. Right edge of sq1 = center + half sq width (2rem). */}
+            <div
+              className="hidden md:block absolute top-8 h-px bg-border z-0"
+              style={{ left: 'calc((100% - 4rem) / 6 + 2rem)', right: 'calc((100% - 4rem) / 6 + 2rem)' }}
+            />
             {[
               {
                 step: "01", icon: FileText,
