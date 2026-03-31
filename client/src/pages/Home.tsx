@@ -109,7 +109,7 @@ export default function Home() {
                 {isAuthenticated ? (
                   <button
                     onClick={() => navigate("/dashboard")}
-                    className="inline-flex items-center gap-2 bg-journi-green text-journi-slate font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
+                    className="inline-flex items-center gap-2 bg-[#9999cc] text-white font-bold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
                   >
                     Open Dashboard
                     <ArrowRight size={17} />
@@ -341,7 +341,7 @@ export default function Home() {
               {isAuthenticated ? (
                 <button
                   onClick={() => navigate("/dashboard")}
-                  className="inline-flex items-center gap-2 bg-journi-green text-journi-slate font-semibold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center gap-2 bg-[#9999cc] text-white font-bold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity"
                 >
                   Go to your Dashboard
                   <ArrowRight size={18} />
