@@ -21,7 +21,7 @@ export function countWordsFromText(text: string): number {
   if (typeof Intl !== "undefined" && "Segmenter" in Intl) {
     const segmenter = new Intl.Segmenter(undefined, { granularity: "word" });
     let count = 0;
-    for (const token of segmenter.segment(cleaned)) {
+    for (const token of Array.from(segmenter.segment(cleaned))) {
       if (token.isWordLike) count += 1;
     }
     return count;

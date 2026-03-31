@@ -4,7 +4,15 @@
  * - Deterministic DOCX/PDF export from canonical manuscript HTML
  */
 import type { CitationFormData, DocumentSection, Manuscript } from '@/types';
-import type { ParseDiagnostic, ParsedManuscript, RawParsedDocument } from '@shared/document-parse';
+import type {
+  ParseDiagnostic,
+  ParsedBlock,
+  ParsedFigure,
+  ParsedLink,
+  ParsedManuscript,
+  ParsedTable,
+  RawParsedDocument,
+} from '@shared/document-parse';
 import { parseManuscriptUpload } from '@/lib/api/backend';
 import {
   containsLikelyEncodingArtifacts,
@@ -18,6 +26,13 @@ export interface ImportDocumentResult {
   citations: CitationFormData[];
   diagnostics: ParseDiagnostic[];
   totalWordCount: number;
+  review: {
+    required: boolean;
+    blocks: ParsedBlock[];
+    figures: ParsedFigure[];
+    tables: ParsedTable[];
+    links: ParsedLink[];
+  };
 }
 
 function sanitizeFilename(name: string): string {
@@ -130,7 +145,7 @@ async function parseViaServer(file: File): Promise<RawParsedDocument | null> {
   let binary = '';
   for (let i = 0; i < bytes.length; i += chunkSize) {
     const chunk = bytes.subarray(i, i + chunkSize);
-    binary += String.fromCharCode(...chunk);
+    binary += String.fromCharCode(...Array.from(chunk));
   }
   const base64 = btoa(binary);
 
@@ -165,7 +180,44 @@ function extractReferencesFromOupHtml(html: string): string[] {
     .map((entry) => entry.text);
 }
 
-async function extractPdfTextInBrowser(arrayBuffer: ArrayBuffer): Promise<string> {
+interface BrowserPdfExtractPayload {
+  text: string;
+  blocks: ParsedBlock[];
+  figures: ParsedFigure[];
+  tables: ParsedTable[];
+  diagnostics: ParseDiagnostic[];
+}
+
+function classifyPdfLine(text: string): ParsedBlock['type'] {
+  const trimmed = text.trim();
+  if (/^(fig(?:ure)?\.?\s*\d+|diagram\s*\d+)/i.test(trimmed)) return 'caption';
+  if (/^table\s*\d+/i.test(trimmed)) return 'caption';
+  if (/^(?:\[\d+\]|\d+[.)])\s+.+/.test(trimmed) && /\b(19|20)\d{2}\b/.test(trimmed)) return 'reference';
+  if (/\|/.test(trimmed) || /\t/.test(trimmed) || /\S+\s{2,}\S+/.test(trimmed)) return 'table';
+  return 'text';
+}
+
+function tableRowToMatrix(line: string): string[][] {
+  const row = line
+    .split(/\||\t+|\s{2,}/g)
+    .map((cell) => cell.trim())
+    .filter(Boolean);
+  return row.length > 0 ? [row] : [];
+}
+
+function tableMatrixToHtml(matrix: string[][]): string {
+  if (matrix.length === 0) return '<table><tbody></tbody></table>';
+  const rows = matrix.map((row) => `<tr>${row.map((cell) => `<td>${cell}</td>`).join('')}</tr>`).join('');
+  return `<table><tbody>${rows}</tbody></table>`;
+}
+
+function createFigurePlaceholder(caption: string): string {
+  const safeCaption = caption.replace(/[<>&'"]/g, '');
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360"><rect width="100%" height="100%" fill="#f8fafc"/><rect x="10" y="10" width="620" height="340" rx="12" fill="#eef2ff" stroke="#c7d2fe"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="#475569" font-family="Arial" font-size="18">${safeCaption}</text></svg>`;
+  return `data:image/svg+xml;base64,${btoa(unescape(encodeURIComponent(svg)))}`;
+}
+
+async function extractPdfTextInBrowser(arrayBuffer: ArrayBuffer): Promise<BrowserPdfExtractPayload> {
   const pdfjs = await import('pdfjs-dist/legacy/build/pdf.mjs');
   const workerSrc = new URL('pdfjs-dist/legacy/build/pdf.worker.mjs', import.meta.url).toString();
   (pdfjs as any).GlobalWorkerOptions.workerSrc = workerSrc;
@@ -177,15 +229,127 @@ async function extractPdfTextInBrowser(arrayBuffer: ArrayBuffer): Promise<string
   });
   const pdf = await loadingTask.promise;
   const pages: string[] = [];
+  const blocks: ParsedBlock[] = [];
+  const figures: ParsedFigure[] = [];
+  const tables: ParsedTable[] = [];
+  const diagnostics: ParseDiagnostic[] = [];
+  let blockCount = 0;
+  let figureCount = 0;
+  let tableCount = 0;
 
   for (let i = 1; i <= pdf.numPages; i += 1) {
     const page = await pdf.getPage(i);
     const content = await page.getTextContent();
-    const text = (content.items as Array<{ str?: string }>).map((item) => item.str || '').join(' ');
-    pages.push(text);
+    const items = (content.items as Array<{ str?: string; transform?: number[]; width?: number; height?: number }>)
+      .filter((item) => typeof item.str === 'string' && item.str.trim().length > 0)
+      .map((item) => ({
+        text: item.str?.trim() || '',
+        x: item.transform?.[4] || 0,
+        y: item.transform?.[5] || 0,
+        width: item.width || 0,
+        height: Math.abs(item.height || 10),
+      }))
+      .sort((a, b) => (Math.abs(a.y - b.y) < 1 ? a.x - b.x : b.y - a.y));
+
+    if (items.length === 0) {
+      diagnostics.push({
+        level: 'warning',
+        code: 'PDF_PAGE_EMPTY_TEXT',
+        message: `Page ${i} has no text layer content; OCR fallback required for strict extraction.`,
+      });
+      continue;
+    }
+
+    const lines: Array<{ text: string; x: number; y: number; width: number; height: number }> = [];
+    let currentY: number | null = null;
+    let currentLine: typeof items = [];
+
+    const flushLine = () => {
+      if (currentLine.length === 0) return;
+      const text = currentLine.map((line) => line.text).join(' ').trim();
+      const x = Math.min(...currentLine.map((line) => line.x));
+      const width = Math.max(...currentLine.map((line) => line.x + line.width)) - x;
+      const height = Math.max(...currentLine.map((line) => line.height));
+      lines.push({ text, x, y: currentLine[0].y, width, height });
+      currentLine = [];
+    };
+
+    for (const item of items) {
+      if (currentY === null || Math.abs(item.y - currentY) <= 2) {
+        currentY = currentY ?? item.y;
+        currentLine.push(item);
+      } else {
+        flushLine();
+        currentY = item.y;
+        currentLine = [item];
+      }
+    }
+    flushLine();
+
+    pages.push(lines.map((line) => line.text).join('\n'));
+
+    for (const line of lines) {
+      const type = classifyPdfLine(line.text);
+      const blockId = `pdf-block-${++blockCount}`;
+      blocks.push({
+        id: blockId,
+        type,
+        text: line.text,
+        page: i,
+        bbox: { x: line.x, y: line.y, width: line.width, height: line.height },
+        source: 'text-layer',
+        confidence: 0.9,
+        diagnostics: [],
+        suggestedSection: type === 'reference' ? 'References' : 'Content',
+      });
+
+      if (type === 'caption' && /^(fig(?:ure)?\.?\s*\d+|diagram\s*\d+)/i.test(line.text)) {
+        figures.push({
+          id: `fig-${++figureCount}`,
+          imageData: createFigurePlaceholder(line.text || `Figure ${figureCount}`),
+          caption: line.text,
+          page: i,
+          bbox: { x: line.x, y: line.y, width: line.width, height: line.height },
+          confidence: 0.65,
+          diagnostics: [
+            {
+              level: 'warning',
+              code: 'CAPTION_LINK_UNCERTAIN',
+              message: `Figure caption detected on page ${i}; review association before commit.`,
+            },
+          ],
+        });
+      }
+
+      if (type === 'table') {
+        const matrix = tableRowToMatrix(line.text);
+        tables.push({
+          id: `tbl-${++tableCount}`,
+          html: tableMatrixToHtml(matrix),
+          matrix,
+          caption: undefined,
+          page: i,
+          bbox: { x: line.x, y: line.y, width: line.width, height: line.height },
+          confidence: matrix.length > 0 && (matrix[0]?.length || 0) > 1 ? 0.72 : 0.5,
+          diagnostics: [
+            {
+              level: 'warning',
+              code: 'TABLE_GRID_UNCERTAIN',
+              message: `Table-like content detected on page ${i}; review required.`,
+            },
+          ],
+        });
+      }
+    }
   }
 
-  return pages.join('\n\n').replace(/\s+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim();
+  return {
+    text: pages.join('\n\n').replace(/\s+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim(),
+    blocks,
+    figures,
+    tables,
+    diagnostics,
+  };
 }
 
 async function parseLocally(file: File): Promise<RawParsedDocument> {
@@ -208,19 +372,24 @@ async function parseLocally(file: File): Promise<RawParsedDocument> {
   }
 
   if (extension === 'pdf') {
-    const text = await extractPdfTextInBrowser(await file.arrayBuffer());
+    const extracted = await extractPdfTextInBrowser(await file.arrayBuffer());
     return {
       fileTitle: file.name.replace(/\.pdf$/i, ''),
       format: 'pdf',
-      text,
-      diagnostics: text
-        ? []
+      text: extracted.text,
+      blocks: extracted.blocks,
+      figures: extracted.figures,
+      tables: extracted.tables,
+      links: [],
+      diagnostics: extracted.text
+        ? extracted.diagnostics
         : [
             {
               level: 'warning',
               code: 'PDF_EMPTY_TEXT',
               message: 'No extractable text was detected in this PDF.',
             },
+            ...extracted.diagnostics,
           ],
     };
   }
@@ -230,9 +399,9 @@ async function parseLocally(file: File): Promise<RawParsedDocument> {
     const bytes = new Uint8Array(await file.arrayBuffer());
     const chunkSize = 0x8000;
     let binary = '';
-    for (let i = 0; i < bytes.length; i += chunkSize) {
-      binary += String.fromCharCode(...bytes.subarray(i, i + chunkSize));
-    }
+  for (let i = 0; i < bytes.length; i += chunkSize) {
+    binary += String.fromCharCode(...Array.from(bytes.subarray(i, i + chunkSize)));
+  }
     const dataUrl = `data:${mime};base64,${btoa(binary)}`;
     return {
       fileTitle: file.name.replace(/\.[^.]+$/, ''),
@@ -293,6 +462,13 @@ async function importFile(file: File): Promise<ImportDocumentResult> {
     citations,
     diagnostics,
     totalWordCount: parsed.totalWordCount,
+    review: {
+      required: Boolean(parsed.reviewRequired),
+      blocks: parsed.blocks || [],
+      figures: parsed.figures || [],
+      tables: parsed.tables || [],
+      links: parsed.links || [],
+    },
   };
 }
 

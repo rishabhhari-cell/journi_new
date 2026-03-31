@@ -421,7 +421,8 @@ export default function Navbar() {
                     <p className="px-4 py-1 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
                       Journi
                     </p>
-                    {[
+                    {[ 
+                      { label: "Home", href: "/" },
                       { label: "Features", href: "/features" },
                       { label: "Pricing", href: "/pricing" },
                       { label: "About Us", href: "/about" },
@@ -633,6 +634,7 @@ export default function Navbar() {
                     Journi
                   </p>
                   {[
+                    { label: "Home", href: "/" },
                     { label: "Features", href: "/features" },
                     { label: "Pricing", href: "/pricing" },
                     { label: "About Us", href: "/about" },

@@ -355,6 +355,11 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
                       <CheckCircle2 size={13} />
                       <span>Ready to import</span>
                     </div>
+                    {importResult.review.required && (
+                      <p className="text-[11px] text-amber-600">
+                        PDF review is required before sections are committed. You can approve this in the editor import flow.
+                      </p>
+                    )}
                   </div>
                 ) : null}
               </motion.div>

@@ -259,7 +259,7 @@ function uint8ToBase64(bytes: Uint8Array): string {
   const chunkSize = 0x8000;
   for (let index = 0; index < bytes.length; index += chunkSize) {
     const chunk = bytes.subarray(index, index + chunkSize);
-    binary += String.fromCharCode(...chunk);
+    binary += String.fromCharCode(...Array.from(chunk));
   }
   return btoa(binary);
 }

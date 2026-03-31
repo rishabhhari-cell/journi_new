@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Journi Collaboration Workspace
  * Multi-document TipTap editor with citations, comments, word count, editable title,
  * images, tables, text-selection commenting, import/export, and "Everything" view.
@@ -40,7 +40,7 @@ import ReformatPanel from '@/components/collaboration/ReformatPanel';
 import { useManuscript } from '@/contexts/ManuscriptContext';
 import type { CitationFormData, CommentFormData, DocumentSection, ManuscriptType } from '@/types';
 import { format } from 'date-fns';
-import { exportToDocx, exportToPdf, importDocx, importPdf, importImage } from '@/lib/document-io';
+import { exportToDocx, exportToPdf, importDocx, importPdf, importImage, type ImportDocumentResult } from '@/lib/document-io';
 import { normalizeImportedHtml, normalizePlainImportedText } from '@/lib/import-normalization';
 import { toast } from 'sonner';
 import { countWordsFromHtml } from '@shared/word-count';
@@ -55,6 +55,12 @@ const sectionStatusConfig: Record<string, { color: string; icon: typeof CheckCir
 };
 
 type ViewTab = 'editor' | 'references' | 'comments';
+interface PendingImportReview {
+  result: ImportDocumentResult;
+  blockAssignments: Record<string, string>;
+  figureAssignments: Record<string, string>;
+  tableAssignments: Record<string, string>;
+}
 
 // Word limits per section for grant applications (words)
 const GRANT_SECTION_LIMITS: Record<string, number> = {
@@ -104,6 +110,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   const [titleDraft, setTitleDraft] = useState(manuscript.title);
   const [isExporting, setIsExporting] = useState<'docx' | 'pdf' | null>(null);
   const [isImporting, setIsImporting] = useState(false);
+  const [pendingImportReview, setPendingImportReview] = useState<PendingImportReview | null>(null);
   const [isInfoPanelOpen, setIsInfoPanelOpen] = useState<boolean>(() => {
     try {
       const raw = window.localStorage.getItem('journi.editor.info-panel.open');
@@ -147,12 +154,12 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   // OUP seed confirmation
   const [seedConfirmOpen, setSeedConfirmOpen] = useState(false);
 
-  // Literature review — search strategy tracker
+  // Literature review â€” search strategy tracker
   const [litSearchDbs, setLitSearchDbs] = useState<string[]>(['PubMed/MEDLINE']);
   const [litPrisma, setLitPrisma] = useState({ identified: 0, screened: 0, eligible: 0, included: 0 });
   const [litDateRange, setLitDateRange] = useState('');
 
-  // Grant application — budget tracker + agency
+  // Grant application â€” budget tracker + agency
   const [grantAgency, setGrantAgency] = useState('');
   const [grantBudgetItems, setGrantBudgetItems] = useState<{ name: string; amount: number }[]>([
     { name: 'Personnel', amount: 0 },
@@ -176,7 +183,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   // "Everything" view
   const isEverythingView = activeSection === '__everything__';
 
-  // Check if the manuscript is "empty" — no section has any actual prose.
+  // Check if the manuscript is "empty" â€” no section has any actual prose.
   // Template subheadings (h2/h3) count as content so templated documents
   // bypass the onboarding screen and open directly in the editor.
   const isManuscriptEmpty = useMemo(() => {
@@ -450,7 +457,157 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     }
   };
 
-  // Import handler — merges imported content into existing sections by matching titles
+  const applyImportedResult = (result: ImportDocumentResult) => {
+    if (!result.sections.length) {
+      toast.error('No content found in the file');
+      return;
+    }
+
+    if (result.title?.trim()) {
+      updateTitle(normalizePlainImportedText(result.title, { trim: true }));
+    }
+
+    if (result.citations.length > 0) {
+      addCitations(
+        result.citations.map((citation) => ({
+          ...citation,
+          authors: citation.authors.map((author) => normalizePlainImportedText(author, { trim: true })),
+          title: normalizePlainImportedText(citation.title, { trim: true }),
+          journal: citation.journal ? normalizePlainImportedText(citation.journal, { trim: true }) : undefined,
+          doi: citation.doi ? normalizePlainImportedText(citation.doi, { trim: true }) : undefined,
+          url: citation.url ? normalizePlainImportedText(citation.url, { trim: true }) : undefined,
+        })),
+      );
+    }
+
+    const existingSections = [...manuscript.sections];
+    let matchedCount = 0;
+    let addedCount = 0;
+    const unmatchedImported: Partial<DocumentSection>[] = [];
+
+    for (const imported of result.sections) {
+      const normalizedImportedTitle = normalizePlainImportedText(imported.title || '', { trim: true });
+      const importedTitle = normalizedImportedTitle.toLowerCase();
+      const match = existingSections.find((s) => s.title.trim().toLowerCase() === importedTitle);
+
+      if (match) {
+        updateSectionContent(match.id, normalizeImportedHtml(imported.content || '<p></p>'));
+        matchedCount++;
+      } else {
+        const genericTitles = ['content', 'untitled section'];
+        const isGeneric = genericTitles.includes(importedTitle);
+
+        if (isGeneric && result.sections.length === 1) {
+          const activeS = getSectionByTitle(activeSection);
+          if (activeS) {
+            updateSectionContent(activeS.id, normalizeImportedHtml(imported.content || '<p></p>'));
+            matchedCount++;
+          } else {
+            unmatchedImported.push(imported);
+          }
+        } else {
+          unmatchedImported.push(imported);
+        }
+      }
+    }
+
+    if (unmatchedImported.length > 0) {
+      const newSections: DocumentSection[] = [
+        ...existingSections,
+        ...unmatchedImported.map((s, i) => ({
+          id: `imported-${Date.now()}-${i}`,
+          title: normalizePlainImportedText(s.title || `Imported Section ${i + 1}`, { trim: true }) || `Imported Section ${i + 1}`,
+          content: normalizeImportedHtml(s.content || '<p></p>'),
+          status: 'draft' as const,
+          order: existingSections.length + i,
+          lastEditedBy: 'Imported',
+          lastEditedAt: new Date(),
+        })),
+      ];
+      replaceSections(newSections);
+      addedCount = unmatchedImported.length;
+    }
+
+    const parts: string[] = [];
+    if (matchedCount > 0) parts.push(`${matchedCount} section(s) updated`);
+    if (addedCount > 0) parts.push(`${addedCount} new section(s) added`);
+    if (result.citations.length > 0) parts.push(`${result.citations.length} citation(s) imported`);
+    toast.success(`Imported: ${parts.join(', ') || 'content loaded'}`);
+
+    const warnings = result.diagnostics.filter((d) => d.level !== 'info');
+    if (warnings.length > 0) toast.warning(warnings[0].message);
+  };
+
+  const buildReviewableSections = (
+    result: ImportDocumentResult,
+    blockAssignments: Record<string, string>,
+    figureAssignments: Record<string, string>,
+    tableAssignments: Record<string, string>,
+  ): Partial<DocumentSection>[] => {
+    const htmlBySection = new Map<string, string[]>();
+    const push = (sectionTitle: string, html: string) => {
+      const existing = htmlBySection.get(sectionTitle) || [];
+      existing.push(html);
+      htmlBySection.set(sectionTitle, existing);
+    };
+
+    for (const block of result.review.blocks) {
+      const sectionTitle = blockAssignments[block.id] || block.suggestedSection || 'Content';
+      const text = normalizePlainImportedText(block.text || '', { trim: true });
+      if (!text) continue;
+      if (block.type === 'caption') push(sectionTitle, `<p><em>${text}</em></p>`);
+      else if (block.type === 'table') push(sectionTitle, `<p>${text}</p>`);
+      else if (block.type === 'reference') push(sectionTitle, `<p>${text}</p>`);
+      else push(sectionTitle, `<p>${text}</p>`);
+    }
+
+    for (const figure of result.review.figures) {
+      const sectionTitle = figureAssignments[figure.id] || 'Results & Synthesis';
+      const caption = normalizePlainImportedText(figure.caption || '', { trim: true });
+      push(
+        sectionTitle,
+        `<figure><img src="${figure.imageData}" alt="${caption || 'Imported figure'}" style="max-width:100%" />${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>`,
+      );
+    }
+
+    for (const table of result.review.tables) {
+      const sectionTitle = tableAssignments[table.id] || 'Results & Synthesis';
+      push(sectionTitle, normalizeImportedHtml(table.html));
+      if (table.caption) push(sectionTitle, `<p><em>${normalizePlainImportedText(table.caption, { trim: true })}</em></p>`);
+    }
+
+    return Array.from(htmlBySection.entries()).map(([title, parts]) => ({
+      title,
+      content: normalizeImportedHtml(parts.join('\n')),
+    }));
+  };
+
+  const openPdfReview = (result: ImportDocumentResult) => {
+    const existingTitles = new Set(manuscript.sections.map((section) => section.title.trim()).filter(Boolean));
+    const defaultSection = existingTitles.has('Content') ? 'Content' : (manuscript.sections[0]?.title || 'Content');
+    const resolve = (suggested?: string) => (suggested && suggested.trim() ? suggested : defaultSection);
+
+    const blockAssignments: Record<string, string> = {};
+    for (const block of result.review.blocks) {
+      blockAssignments[block.id] = block.type === 'reference' ? resolve('References') : resolve(block.suggestedSection);
+    }
+    const figureAssignments: Record<string, string> = {};
+    for (const figure of result.review.figures) figureAssignments[figure.id] = resolve('Results & Synthesis');
+    const tableAssignments: Record<string, string> = {};
+    for (const table of result.review.tables) tableAssignments[table.id] = resolve('Results & Synthesis');
+
+    setPendingImportReview({ result, blockAssignments, figureAssignments, tableAssignments });
+  };
+
+  const handleAcceptImportReview = () => {
+    if (!pendingImportReview) return;
+    const { result, blockAssignments, figureAssignments, tableAssignments } = pendingImportReview;
+    const sections = buildReviewableSections(result, blockAssignments, figureAssignments, tableAssignments);
+    applyImportedResult({ ...result, sections: sections.length > 0 ? sections : result.sections });
+    setPendingImportReview(null);
+    toast.success('PDF review accepted and imported.');
+  };
+
   const handleImportFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -458,122 +615,23 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     setIsImporting(true);
     try {
       const ext = file.name.split('.').pop()?.toLowerCase();
-      let result: {
-        title: string;
-        sections: Partial<DocumentSection>[];
-        citations: CitationFormData[];
-        diagnostics: Array<{ level: 'info' | 'warning' | 'error'; code: string; message: string }>;
-        totalWordCount: number;
-      };
+      let result: ImportDocumentResult;
 
-      if (ext === 'docx') {
-        result = await importDocx(file);
-      } else if (ext === 'pdf') {
-        result = await importPdf(file);
-      } else if (ext === 'jpg' || ext === 'jpeg' || ext === 'png' || ext === 'gif' || ext === 'webp') {
-        result = await importImage(file);
-      } else {
+      if (ext === 'docx') result = await importDocx(file);
+      else if (ext === 'pdf') result = await importPdf(file);
+      else if (ext === 'jpg' || ext === 'jpeg' || ext === 'png' || ext === 'gif' || ext === 'webp') result = await importImage(file);
+      else {
         toast.error('Unsupported file type. Please use .docx, .pdf, or an image file.');
         return;
       }
 
-      if (!result.sections.length) {
-        toast.error('No content found in the file');
+      if (ext === 'pdf' && result.review.required) {
+        openPdfReview(result);
+        toast.message('Review required', { description: 'Approve section placement for extracted PDF content.' });
         return;
       }
 
-      if (result.title?.trim()) {
-        updateTitle(normalizePlainImportedText(result.title, { trim: true }));
-      }
-
-      if (result.citations.length > 0) {
-        addCitations(
-          result.citations.map((citation) => ({
-            ...citation,
-            authors: citation.authors.map((author) => normalizePlainImportedText(author, { trim: true })),
-            title: normalizePlainImportedText(citation.title, { trim: true }),
-            journal: citation.journal ? normalizePlainImportedText(citation.journal, { trim: true }) : undefined,
-            doi: citation.doi ? normalizePlainImportedText(citation.doi, { trim: true }) : undefined,
-            url: citation.url ? normalizePlainImportedText(citation.url, { trim: true }) : undefined,
-          })),
-        );
-      }
-
-      // Merge imported sections into existing sections by matching titles (case-insensitive)
-      const existingSections = [...manuscript.sections];
-      let matchedCount = 0;
-      let addedCount = 0;
-      const unmatchedImported: Partial<DocumentSection>[] = [];
-
-      for (const imported of result.sections) {
-        const normalizedImportedTitle = normalizePlainImportedText(imported.title || '', { trim: true });
-        const importedTitle = normalizedImportedTitle.toLowerCase();
-        const match = existingSections.find(
-          (s) => s.title.trim().toLowerCase() === importedTitle
-        );
-
-        if (match) {
-          updateSectionContent(match.id, normalizeImportedHtml(imported.content || '<p></p>'));
-          matchedCount++;
-        } else {
-          const genericTitles = ['content', 'untitled section'];
-          const isGeneric = genericTitles.includes(importedTitle);
-
-          if (isGeneric && result.sections.length === 1) {
-            const activeS = getSectionByTitle(activeSection);
-            if (activeS) {
-              updateSectionContent(activeS.id, normalizeImportedHtml(imported.content || '<p></p>'));
-              matchedCount++;
-            } else {
-              unmatchedImported.push(imported);
-            }
-          } else {
-            unmatchedImported.push(imported);
-          }
-        }
-      }
-
-      if (unmatchedImported.length > 0) {
-        const newSections: DocumentSection[] = [
-          ...existingSections,
-          ...unmatchedImported.map((s, i) => ({
-            id: `imported-${Date.now()}-${i}`,
-            title: normalizePlainImportedText(s.title || `Imported Section ${i + 1}`, { trim: true }) || `Imported Section ${i + 1}`,
-            content: normalizeImportedHtml(s.content || '<p></p>'),
-            status: 'draft' as const,
-            order: existingSections.length + i,
-            lastEditedBy: 'Imported',
-            lastEditedAt: new Date(),
-          })),
-        ];
-        replaceSections(newSections);
-        addedCount = unmatchedImported.length;
-      }
-
-      const parts: string[] = [];
-      if (matchedCount > 0) parts.push(`${matchedCount} section(s) updated`);
-      if (addedCount > 0) parts.push(`${addedCount} new section(s) added`);
-      if (result.citations.length > 0) parts.push(`${result.citations.length} citation(s) imported`);
-      toast.success(`Imported: ${parts.join(', ') || 'content loaded'}`);
-
-      const warnings = result.diagnostics.filter((d) => d.level !== 'info');
-      if (warnings.length > 0) {
-        toast.warning(warnings[0].message);
-      }
-
-      if (matchedCount > 0) {
-        const firstMatchTitle = result.sections.find((s) =>
-          existingSections.some((es) => es.title.trim().toLowerCase() === (s.title || '').trim().toLowerCase())
-        )?.title;
-        if (firstMatchTitle) {
-          const matched = existingSections.find(
-            (es) => es.title.trim().toLowerCase() === firstMatchTitle.trim().toLowerCase()
-          );
-          if (matched) setActiveSection(matched.title);
-        }
-      } else if (unmatchedImported.length > 0) {
-        setActiveSection(unmatchedImported[0].title || 'Content');
-      }
+      applyImportedResult(result);
     } catch (err) {
       console.error('Import failed:', err);
       toast.error('Failed to import file. Please try a different file.');
@@ -682,7 +740,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
       toast.success('Document imported!');
     } else {
       createManuscript(result.title, result.type);
-      toast.success('New document created — start writing!');
+      toast.success('New document created â€” start writing!');
     }
 
     if (result.journal) {
@@ -783,7 +841,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   // ========================================
   // Onboarding screen (when manuscript is empty)
   // ========================================
-  // Zero manuscripts — "Get Started" screen
+  // Zero manuscripts â€” "Get Started" screen
   // ========================================
   if (manuscripts.length === 0) {
     return (
@@ -945,7 +1003,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
       <Navbar />
 
       <div className="flex flex-1 pt-16">
-        {/* Document Outline Sidebar — fixed */}
+        {/* Document Outline Sidebar â€” fixed */}
         <aside className="hidden lg:flex flex-col w-56 bg-card border-r border-border pt-4 pb-4 shrink-0 fixed top-16 bottom-0 z-30">
           {/* Project Switcher */}
           <div className="px-3 mb-2">
@@ -1005,7 +1063,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                   ))}
                 </div>
 
-                {/* New document button — opens wizard */}
+                {/* New document button â€” opens wizard */}
                 <button
                   onClick={() => setShowWizard(true)}
                   className="w-full flex items-center gap-2 px-3 py-2 text-xs text-journi-green hover:bg-journi-green/5 transition-colors border-t border-border"
@@ -1082,7 +1140,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
             {manuscript.type === 'literature_review' && litPrisma.included > 0 && (
               <p className="text-[10px] text-blue-600 flex items-center gap-1 mt-0.5">
                 <Database size={9} />
-                {litPrisma.included} studies included · {litSearchDbs.length} databases
+                {litPrisma.included} studies included Â· {litSearchDbs.length} databases
               </p>
             )}
           </div>
@@ -1243,9 +1301,9 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
           </div>
         </aside>
 
-        {/* Main Editor Area — offset by sidebar width */}
+        {/* Main Editor Area â€” offset by sidebar width */}
         <main className="flex-1 flex flex-col overflow-hidden lg:ml-56">
-          {/* Toolbar — sticky below navbar */}
+          {/* Toolbar â€” sticky below navbar */}
           {!isEverythingView && (
             <>
               <div className="fixed top-16 left-0 right-0 lg:left-56 z-40 bg-card">
@@ -1349,7 +1407,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                                         </div>
                                         <span className="font-medium text-foreground">{comment.userName}</span>
                                         <span className="text-muted-foreground">{format(comment.timestamp, 'MMM d, h:mm a')}</span>
-                                        <span className="text-muted-foreground italic">— in &ldquo;{section.title}&rdquo;</span>
+                                        <span className="text-muted-foreground italic">â€” in &ldquo;{section.title}&rdquo;</span>
                                         {comment.resolved && (
                                           <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-status-completed/15 text-status-completed text-[10px] font-medium">
                                             <CheckCircle size={10} />
@@ -1600,7 +1658,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
               </div>
               <div className="p-4 space-y-4">
 
-                {/* ── Literature Review: Search Strategy Panel ── */}
+                {/* â”€â”€ Literature Review: Search Strategy Panel â”€â”€ */}
                 {manuscript.type === 'literature_review' && (
                   <div className="space-y-3">
                     <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
@@ -1639,7 +1697,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                         type="text"
                         value={litDateRange}
                         onChange={(e) => setLitDateRange(e.target.value)}
-                        placeholder="e.g. Jan 2015 – Dec 2024"
+                        placeholder="e.g. Jan 2015 â€“ Dec 2024"
                         className="w-full text-xs bg-muted text-foreground placeholder:text-muted-foreground rounded px-2 py-1.5 outline-none focus:ring-1 focus:ring-journi-green"
                       />
                     </div>
@@ -1673,7 +1731,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                   </div>
                 )}
 
-                {/* ── Grant Application: Budget & Limits Panel ── */}
+                {/* â”€â”€ Grant Application: Budget & Limits Panel â”€â”€ */}
                 {manuscript.type === 'grant_application' && (
                   <div className="space-y-3">
                     <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
@@ -1876,6 +1934,170 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
           </div>
         </main>
       </div>
+
+      {pendingImportReview && (
+        <div className="fixed inset-0 z-[70] flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/45" onClick={() => setPendingImportReview(null)} />
+          <div className="relative z-10 max-h-[90vh] w-full max-w-6xl overflow-hidden rounded-2xl border border-border bg-card shadow-2xl">
+            <div className="flex items-center justify-between border-b border-border px-5 py-3">
+              <div>
+                <h3 className="text-base font-semibold text-foreground">Review PDF import</h3>
+                <p className="text-xs text-muted-foreground">
+                  Confirm placement of extracted text, figures, tables, captions, and references.
+                </p>
+              </div>
+              <button
+                onClick={() => setPendingImportReview(null)}
+                className="rounded-md p-1 text-muted-foreground hover:bg-accent hover:text-foreground"
+                aria-label="Close review"
+              >
+                <X size={16} />
+              </button>
+            </div>
+
+            <div className="grid max-h-[72vh] grid-cols-1 gap-0 overflow-hidden lg:grid-cols-2">
+              <div className="overflow-y-auto border-r border-border p-4">
+                <h4 className="mb-3 text-xs font-bold uppercase tracking-wider text-muted-foreground">Text blocks</h4>
+                <div className="space-y-2">
+                  {pendingImportReview.result.review.blocks.filter((block) => block.type !== 'reference').map((block) => (
+                    <div key={block.id} className="rounded-lg border border-border bg-background p-2.5">
+                      <div className="mb-1 flex items-center gap-2 text-[10px] uppercase tracking-wider text-muted-foreground">
+                        <span>{block.type}</span>
+                        <span>Page {block.page}</span>
+                        <span>{Math.round((block.confidence || 0) * 100)}%</span>
+                      </div>
+                      <p className="text-xs text-foreground">{block.text || '(empty)'}</p>
+                      <select
+                        value={pendingImportReview.blockAssignments[block.id] || 'Content'}
+                        onChange={(e) =>
+                          setPendingImportReview((prev) =>
+                            prev
+                              ? {
+                                  ...prev,
+                                  blockAssignments: { ...prev.blockAssignments, [block.id]: e.target.value },
+                                }
+                              : prev,
+                          )
+                        }
+                        className="mt-2 w-full rounded-md border border-border bg-card px-2 py-1 text-xs focus:outline-none focus:ring-2 focus:ring-journi-green/40"
+                      >
+                        {Array.from(new Set([...manuscript.sections.map((s) => s.title), 'Content', 'Abstract', 'Search Strategy', 'Results & Synthesis', 'Discussion', 'References'])).map((title) => (
+                          <option key={`${block.id}-${title}`} value={title}>{title}</option>
+                        ))}
+                      </select>
+                    </div>
+                  ))}
+                </div>
+
+                <h4 className="mb-3 mt-5 text-xs font-bold uppercase tracking-wider text-muted-foreground">References</h4>
+                <div className="space-y-2">
+                  {pendingImportReview.result.review.blocks.filter((block) => block.type === 'reference').map((block) => (
+                    <div key={block.id} className="rounded-lg border border-border bg-background p-2.5">
+                      <div className="mb-1 flex items-center gap-2 text-[10px] uppercase tracking-wider text-muted-foreground">
+                        <span>reference</span>
+                        <span>Page {block.page}</span>
+                        <span>{Math.round((block.confidence || 0) * 100)}%</span>
+                      </div>
+                      <p className="text-xs text-foreground">{block.text || '(empty)'}</p>
+                      <select
+                        value={pendingImportReview.blockAssignments[block.id] || 'References'}
+                        onChange={(e) =>
+                          setPendingImportReview((prev) =>
+                            prev
+                              ? {
+                                  ...prev,
+                                  blockAssignments: { ...prev.blockAssignments, [block.id]: e.target.value },
+                                }
+                              : prev,
+                          )
+                        }
+                        className="mt-2 w-full rounded-md border border-border bg-card px-2 py-1 text-xs focus:outline-none focus:ring-2 focus:ring-journi-green/40"
+                      >
+                        {Array.from(new Set([...manuscript.sections.map((s) => s.title), 'References', 'Discussion', 'Content'])).map((title) => (
+                          <option key={`${block.id}-${title}`} value={title}>{title}</option>
+                        ))}
+                      </select>
+                    </div>
+                  ))}
+                  {pendingImportReview.result.review.blocks.filter((block) => block.type === 'reference').length === 0 && (
+                    <p className="text-xs text-muted-foreground/70">No reference blocks detected.</p>
+                  )}
+                </div>
+              </div>
+
+              <div className="overflow-y-auto p-4">
+                <h4 className="mb-3 text-xs font-bold uppercase tracking-wider text-muted-foreground">Figures & tables</h4>
+                <div className="space-y-3">
+                  {pendingImportReview.result.review.figures.map((figure) => (
+                    <div key={figure.id} className="rounded-lg border border-border bg-background p-2.5">
+                      <p className="text-xs font-medium text-foreground">{figure.caption || figure.id}</p>
+                      <img src={figure.imageData} alt={figure.caption || figure.id} className="mt-2 h-24 w-full rounded border border-border object-contain bg-white" />
+                      <select
+                        value={pendingImportReview.figureAssignments[figure.id] || 'Results & Synthesis'}
+                        onChange={(e) =>
+                          setPendingImportReview((prev) =>
+                            prev
+                              ? {
+                                  ...prev,
+                                  figureAssignments: { ...prev.figureAssignments, [figure.id]: e.target.value },
+                                }
+                              : prev,
+                          )
+                        }
+                        className="mt-2 w-full rounded-md border border-border bg-card px-2 py-1 text-xs focus:outline-none focus:ring-2 focus:ring-journi-green/40"
+                      >
+                        {Array.from(new Set([...manuscript.sections.map((s) => s.title), 'Results & Synthesis', 'Discussion', 'References'])).map((title) => (
+                          <option key={`${figure.id}-${title}`} value={title}>{title}</option>
+                        ))}
+                      </select>
+                    </div>
+                  ))}
+
+                  {pendingImportReview.result.review.tables.map((table) => (
+                    <div key={table.id} className="rounded-lg border border-border bg-background p-2.5">
+                      <p className="text-xs font-medium text-foreground">{table.caption || table.id}</p>
+                      <div className="mt-2 max-h-28 overflow-auto rounded border border-border bg-white p-2 text-[11px] text-foreground" dangerouslySetInnerHTML={{ __html: table.html }} />
+                      <select
+                        value={pendingImportReview.tableAssignments[table.id] || 'Results & Synthesis'}
+                        onChange={(e) =>
+                          setPendingImportReview((prev) =>
+                            prev
+                              ? {
+                                  ...prev,
+                                  tableAssignments: { ...prev.tableAssignments, [table.id]: e.target.value },
+                                }
+                              : prev,
+                          )
+                        }
+                        className="mt-2 w-full rounded-md border border-border bg-card px-2 py-1 text-xs focus:outline-none focus:ring-2 focus:ring-journi-green/40"
+                      >
+                        {Array.from(new Set([...manuscript.sections.map((s) => s.title), 'Results & Synthesis', 'Discussion', 'References'])).map((title) => (
+                          <option key={`${table.id}-${title}`} value={title}>{title}</option>
+                        ))}
+                      </select>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-end gap-2 border-t border-border px-5 py-3">
+              <button
+                onClick={() => setPendingImportReview(null)}
+                className="rounded-lg border border-border px-3 py-2 text-sm text-foreground hover:bg-accent"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleAcceptImportReview}
+                className="rounded-lg bg-journi-green px-4 py-2 text-sm font-semibold text-journi-slate hover:opacity-90"
+              >
+                Accept and import
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Hidden file input for import */}
       <input

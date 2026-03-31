@@ -1,5 +1,5 @@
 import mammoth from "mammoth";
-import type { ParseDiagnostic, RawParsedDocument } from "../../shared/document-parse";
+import type { ParseDiagnostic, ParsedBlock, ParsedBoundingBox, ParsedFigure, ParsedTable, RawParsedDocument } from "../../shared/document-parse";
 
 export interface ParseUploadInput {
   fileName: string;
@@ -111,6 +111,187 @@ async function extractPdfText(buffer: Buffer): Promise<string> {
   return normalizeText(pages.join("\n\n"));
 }
 
+interface ExtractedPdfPayload {
+  text: string;
+  blocks: ParsedBlock[];
+  figures: ParsedFigure[];
+  tables: ParsedTable[];
+  diagnostics: ParseDiagnostic[];
+}
+
+function makeBlockBbox(x: number, y: number, width: number, height: number): ParsedBoundingBox {
+  return { x, y, width, height };
+}
+
+function classifyLineType(line: string): ParsedBlock["type"] {
+  const trimmed = line.trim();
+  if (/^(fig(?:ure)?\.?\s*\d+|diagram\s*\d+)/i.test(trimmed)) return "caption";
+  if (/^table\s*\d+/i.test(trimmed)) return "caption";
+  if (/^(?:\[\d+\]|\d+[.)])\s+.+/.test(trimmed) && /\b(19|20)\d{2}\b/.test(trimmed)) return "reference";
+  if (/\|/.test(trimmed) || /\t/.test(trimmed) || /\S+\s{2,}\S+/.test(trimmed)) return "table";
+  return "text";
+}
+
+function tableLineToMatrix(line: string): string[][] {
+  const row = line
+    .split(/\||\t+|\s{2,}/g)
+    .map((cell) => cell.trim())
+    .filter(Boolean);
+  return row.length > 0 ? [row] : [];
+}
+
+function matrixToHtml(matrix: string[][]): string {
+  if (matrix.length === 0) return "<table><tbody></tbody></table>";
+  const rows = matrix
+    .map((row) => `<tr>${row.map((cell) => `<td>${cell}</td>`).join("")}</tr>`)
+    .join("");
+  return `<table><tbody>${rows}</tbody></table>`;
+}
+
+function createFigurePlaceholderData(label: string): string {
+  const safe = label.replace(/[<>&'"]/g, "");
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360"><rect width="100%" height="100%" fill="#f8fafc"/><rect x="10" y="10" width="620" height="340" rx="12" fill="#eef2ff" stroke="#c7d2fe"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="#475569" font-family="Arial" font-size="18">${safe}</text></svg>`;
+  return `data:image/svg+xml;base64,${Buffer.from(svg, "utf8").toString("base64")}`;
+}
+
+async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
+  const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
+  const loadingTask = (pdfjs as any).getDocument({
+    data: new Uint8Array(buffer),
+    useWorkerFetch: false,
+    isEvalSupported: false,
+    disableFontFace: true,
+  });
+
+  const pdf = await loadingTask.promise;
+  const pagesText: string[] = [];
+  const blocks: ParsedBlock[] = [];
+  const figures: ParsedFigure[] = [];
+  const tables: ParsedTable[] = [];
+  const diagnostics: ParseDiagnostic[] = [];
+
+  let blockCount = 0;
+  let figureCount = 0;
+  let tableCount = 0;
+
+  for (let pageNum = 1; pageNum <= pdf.numPages; pageNum += 1) {
+    const page = await pdf.getPage(pageNum);
+    const textContent = await page.getTextContent();
+    const items = (textContent.items as Array<{ str?: string; transform?: number[]; width?: number; height?: number }>)
+      .filter((item) => typeof item.str === "string" && item.str.trim().length > 0)
+      .map((item) => ({
+        text: item.str?.trim() || "",
+        x: item.transform?.[4] || 0,
+        y: item.transform?.[5] || 0,
+        width: item.width || 0,
+        height: Math.abs(item.height || 10),
+      }))
+      .sort((a, b) => (Math.abs(a.y - b.y) < 1 ? a.x - b.x : b.y - a.y));
+
+    const lines: Array<{ text: string; x: number; y: number; width: number; height: number }> = [];
+    let currentY: number | null = null;
+    let currentParts: typeof items = [];
+
+    const flushLine = () => {
+      if (currentParts.length === 0) return;
+      const text = currentParts.map((p) => p.text).join(" ").trim();
+      const x = Math.min(...currentParts.map((p) => p.x));
+      const y = currentParts[0].y;
+      const width = Math.max(...currentParts.map((p) => p.x + p.width)) - x;
+      const height = Math.max(...currentParts.map((p) => p.height));
+      lines.push({ text, x, y, width, height });
+      currentParts = [];
+    };
+
+    for (const item of items) {
+      if (currentY === null || Math.abs(item.y - currentY) <= 2) {
+        currentY = currentY ?? item.y;
+        currentParts.push(item);
+      } else {
+        flushLine();
+        currentY = item.y;
+        currentParts = [item];
+      }
+    }
+    flushLine();
+
+    if (lines.length === 0) {
+      diagnostics.push({
+        level: "warning",
+        code: "PDF_PAGE_EMPTY_TEXT",
+        message: `Page ${pageNum} has no text layer content; OCR fallback required for strict extraction.`,
+      });
+      continue;
+    }
+
+    pagesText.push(lines.map((line) => line.text).join("\n"));
+
+    for (const line of lines) {
+      const type = classifyLineType(line.text);
+      const blockId = `pdf-block-${++blockCount}`;
+      const bbox = makeBlockBbox(line.x, line.y, line.width, line.height);
+
+      blocks.push({
+        id: blockId,
+        type,
+        text: line.text,
+        page: pageNum,
+        bbox,
+        source: "text-layer",
+        confidence: 0.9,
+        diagnostics: [],
+        suggestedSection: type === "reference" ? "References" : "Content",
+      });
+
+      if (type === "caption" && /^(fig(?:ure)?\.?\s*\d+|diagram\s*\d+)/i.test(line.text)) {
+        figures.push({
+          id: `fig-${++figureCount}`,
+          imageData: createFigurePlaceholderData(line.text || `Figure ${figureCount}`),
+          caption: line.text,
+          page: pageNum,
+          bbox,
+          confidence: 0.65,
+          diagnostics: [
+            {
+              level: "warning",
+              code: "CAPTION_LINK_UNCERTAIN",
+              message: `Figure caption detected on page ${pageNum}; review association before commit.`,
+            },
+          ],
+        });
+      }
+
+      if (type === "table") {
+        const matrix = tableLineToMatrix(line.text);
+        tables.push({
+          id: `tbl-${++tableCount}`,
+          html: matrixToHtml(matrix),
+          matrix,
+          page: pageNum,
+          bbox,
+          caption: undefined,
+          confidence: matrix.length > 0 && (matrix[0]?.length || 0) > 1 ? 0.72 : 0.5,
+          diagnostics: [
+            {
+              level: "warning",
+              code: "TABLE_GRID_UNCERTAIN",
+              message: `Table-like content detected on page ${pageNum}; review required.`,
+            },
+          ],
+        });
+      }
+    }
+  }
+
+  return {
+    text: normalizeText(pagesText.join("\n\n")),
+    blocks,
+    figures,
+    tables,
+    diagnostics,
+  };
+}
+
 function extractReferencesFromOupHtml(html: string): string[] {
   const refs = Array.from(
     html.matchAll(/<div id="ref-auto-ref(\d+)"[\s\S]*?<p class="mixed-citation-compatibility">([\s\S]*?)<\/p>/g),
@@ -193,8 +374,8 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
 
   if (extension === "pdf") {
     try {
-      const text = await extractPdfText(input.buffer);
-      if (!text) {
+      const payload = await extractPdfPayload(input.buffer);
+      if (!payload.text) {
         diagnostics.push({
           level: "warning",
           code: "PDF_EMPTY_TEXT",
@@ -204,8 +385,12 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
       return {
         fileTitle,
         format: "pdf",
-        text,
-        diagnostics,
+        text: payload.text,
+        blocks: payload.blocks,
+        figures: payload.figures,
+        tables: payload.tables,
+        links: [],
+        diagnostics: [...diagnostics, ...payload.diagnostics],
       };
     } catch (error) {
       diagnostics.push({

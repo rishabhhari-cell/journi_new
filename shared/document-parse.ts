@@ -31,12 +31,69 @@ export interface ParsedSection {
   sourceTitle?: string;
 }
 
+export type ParsedBlockType = "text" | "figure" | "diagram" | "table" | "caption" | "reference";
+export type ParsedBlockSource = "text-layer" | "ocr" | "object-extract";
+
+export interface ParsedBoundingBox {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
+export interface ParsedBlock {
+  id: string;
+  type: ParsedBlockType;
+  text: string;
+  page: number;
+  bbox?: ParsedBoundingBox;
+  source: ParsedBlockSource;
+  confidence: number;
+  diagnostics: ParseDiagnostic[];
+  suggestedSection?: string;
+}
+
+export interface ParsedFigure {
+  id: string;
+  imageData: string;
+  caption?: string;
+  page: number;
+  bbox?: ParsedBoundingBox;
+  confidence: number;
+  diagnostics: ParseDiagnostic[];
+}
+
+export interface ParsedTable {
+  id: string;
+  html: string;
+  matrix: string[][];
+  caption?: string;
+  page: number;
+  bbox?: ParsedBoundingBox;
+  confidence: number;
+  diagnostics: ParseDiagnostic[];
+}
+
+export interface ParsedLink {
+  id: string;
+  sourceId: string;
+  targetId: string;
+  relation: "caption_to_figure" | "caption_to_table";
+  confidence: number;
+  diagnostics: ParseDiagnostic[];
+}
+
 export interface ParsedManuscript {
   fileTitle: string;
   sections: ParsedSection[];
   citations: ParsedCitation[];
   diagnostics: ParseDiagnostic[];
   totalWordCount: number;
+  reviewRequired?: boolean;
+  blocks?: ParsedBlock[];
+  figures?: ParsedFigure[];
+  tables?: ParsedTable[];
+  links?: ParsedLink[];
 }
 
 export interface RawParsedDocument {
@@ -47,6 +104,10 @@ export interface RawParsedDocument {
   imageDataUrl?: string;
   references?: string[];
   diagnostics?: ParseDiagnostic[];
+  blocks?: ParsedBlock[];
+  figures?: ParsedFigure[];
+  tables?: ParsedTable[];
+  links?: ParsedLink[];
 }
 
 interface IntermediateSection {
@@ -81,7 +142,7 @@ const CANONICAL_ALIASES: Array<[string, RegExp]> = [
 function normalizeHeading(raw: string): string {
   return raw
     .replace(/<[^>]*>/g, " ")
-    .replace(/[^\p{L}\p{N}\s&/-]+/gu, " ")
+    .replace(/[^A-Za-z0-9\s&/-]+/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -187,9 +248,9 @@ function mergeIntoCanonicalOrder(
     }
   }
 
-  for (const entry of map.values()) {
+  Array.from(map.values()).forEach((entry) => {
     ordered.push(entry);
-  }
+  });
 
   return ordered;
 }
@@ -352,9 +413,158 @@ function extractReferenceLines(contentHtml: string): string[] {
   return plain.split(/\n+/).map((line) => line.trim()).filter(Boolean);
 }
 
+function inferBlockTypeFromText(text: string): ParsedBlockType {
+  const trimmed = text.trim();
+  if (!trimmed) return "text";
+  if (/^(fig(?:ure)?\.?\s*\d+|diagram\s*\d+)/i.test(trimmed)) return "caption";
+  if (/^table\s*\d+/i.test(trimmed)) return "caption";
+  if (/^(?:\[\d+\]|\d+[.)])\s+.+/.test(trimmed) && /\b(19|20)\d{2}\b/.test(trimmed)) return "reference";
+  if (/\|/.test(trimmed) || /\t/.test(trimmed) || /\S+\s{2,}\S+/.test(trimmed)) return "table";
+  return "text";
+}
+
+function isLikelyReferencesHeading(text: string): boolean {
+  return /^(references|bibliography)\b/i.test(normalizeHeading(text));
+}
+
+function isLikelySectionHeading(text: string): boolean {
+  const normalized = normalizeHeading(text).toLowerCase();
+  if (!normalized) return false;
+  if (CANONICAL_ORDER.map((s) => s.toLowerCase()).includes(normalized)) return true;
+  return /^[A-Z][A-Z0-9\s&/-]{2,}$/.test(text.trim());
+}
+
+function createPlaceholderImageData(label: string): string {
+  const safe = label.replace(/[<>&'"]/g, "");
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360"><rect width="100%" height="100%" fill="#f8fafc"/><rect x="10" y="10" width="620" height="340" rx="12" fill="#eef2ff" stroke="#c7d2fe"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="#475569" font-family="Arial" font-size="18">${safe}</text></svg>`;
+  const encodeUtf8 = (value: string): string => {
+    if (typeof btoa === "function") {
+      return btoa(unescape(encodeURIComponent(value)));
+    }
+    const maybeBuffer = (globalThis as { Buffer?: { from: (value: string, encoding: string) => { toString: (encoding: string) => string } } }).Buffer;
+    if (maybeBuffer) {
+      return maybeBuffer.from(value, "utf8").toString("base64");
+    }
+    return "";
+  };
+  return `data:image/svg+xml;base64,${encodeUtf8(svg)}`;
+}
+
+function tableLinesToMatrix(lines: string[]): string[][] {
+  return lines
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .map((line) =>
+      line
+        .split(/\||\t+|\s{2,}/g)
+        .map((cell) => cell.trim())
+        .filter(Boolean),
+    )
+    .filter((row) => row.length > 0);
+}
+
+function matrixToHtml(matrix: string[][]): string {
+  if (matrix.length === 0) return "<table><tbody></tbody></table>";
+  const rows = matrix
+    .map((row) => `<tr>${row.map((cell) => `<td>${cell}</td>`).join("")}</tr>`)
+    .join("");
+  return `<table><tbody>${rows}</tbody></table>`;
+}
+
+function normalizePdfBlocks(rawBlocks: ParsedBlock[] | undefined): ParsedBlock[] {
+  if (!rawBlocks || rawBlocks.length === 0) return [];
+  return rawBlocks.map((block, index) => {
+    const text = block.text || "";
+    const inferredType = block.type || inferBlockTypeFromText(text);
+    const suggestedSection = block.suggestedSection
+      ? mapToCanonical(block.suggestedSection)
+      : isLikelySectionHeading(text)
+        ? mapToCanonical(text)
+        : inferredType === "reference"
+          ? "References"
+          : "Content";
+
+    return {
+      id: block.id || `pdf-block-${index + 1}`,
+      type: inferredType,
+      text,
+      page: block.page || 1,
+      bbox: block.bbox,
+      source: block.source || "text-layer",
+      confidence: typeof block.confidence === "number" ? block.confidence : 0.85,
+      diagnostics: block.diagnostics || [],
+      suggestedSection,
+    };
+  });
+}
+
+function buildSectionsFromBlocks(blocks: ParsedBlock[]): IntermediateSection[] {
+  if (blocks.length === 0) return [];
+
+  const sections: IntermediateSection[] = [];
+  let currentTitle = "Content";
+  let buffer: string[] = [];
+  let inReferences = false;
+
+  const flush = () => {
+    if (buffer.length === 0) return;
+    const content = buffer.map((line) => `<p>${line}</p>`).join("");
+    sections.push({ title: currentTitle, content });
+    buffer = [];
+  };
+
+  for (const block of blocks) {
+    const text = (block.text || "").trim();
+    if (!text) continue;
+
+    if (isLikelyReferencesHeading(text)) {
+      flush();
+      currentTitle = "References";
+      inReferences = true;
+      continue;
+    }
+
+    if (!inReferences && isLikelySectionHeading(text) && block.type !== "reference") {
+      flush();
+      currentTitle = mapToCanonical(text);
+      continue;
+    }
+
+    if (block.type === "reference") {
+      if (!inReferences) {
+        flush();
+        currentTitle = "References";
+        inReferences = true;
+      }
+      buffer.push(text);
+      continue;
+    }
+
+    if (block.type === "caption") {
+      buffer.push(`<em>${text}</em>`);
+      continue;
+    }
+
+    if (block.type === "table") {
+      const matrix = tableLinesToMatrix([text]);
+      buffer.push(matrixToHtml(matrix));
+      continue;
+    }
+
+    buffer.push(text);
+  }
+
+  flush();
+  return sections;
+}
+
 export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
   const diagnostics = [...(raw.diagnostics || [])];
   const fileTitle = raw.fileTitle || "Imported Manuscript";
+  const normalizedBlocks = raw.format === "pdf" ? normalizePdfBlocks(raw.blocks) : [];
+  const incomingFigures = raw.figures || [];
+  const incomingTables = raw.tables || [];
+  const incomingLinks = raw.links || [];
 
   // Image files are embedded directly as a figure section
   if (raw.format === "image" && raw.imageDataUrl) {
@@ -378,7 +588,12 @@ export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
 
   const sectionsFromHtml = raw.html ? parseSectionsFromHtml(raw.html) : [];
   const sectionsFromText = raw.text ? parseSectionsFromText(raw.text) : [];
-  const baseSections = sectionsFromHtml.length > 0 ? sectionsFromHtml : sectionsFromText;
+  const sectionsFromBlocks = normalizedBlocks.length > 0 ? buildSectionsFromBlocks(normalizedBlocks) : [];
+  const baseSections = sectionsFromHtml.length > 0
+    ? sectionsFromHtml
+    : sectionsFromBlocks.length > 0
+      ? sectionsFromBlocks
+      : sectionsFromText;
 
   if (baseSections.length === 0) {
     diagnostics.push({
@@ -404,7 +619,11 @@ export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
   }
 
   const referencesSection = canonicalSections.find((section) => section.title === "References");
-  const referencesLines = referencesSection ? extractReferenceLines(referencesSection.content) : [];
+  const referencesLines = referencesSection
+    ? extractReferenceLines(referencesSection.content)
+    : normalizedBlocks
+      .filter((block) => block.type === "reference")
+      .map((block) => block.text);
 
   const citations = dedupeCitations(parseCitationsFromReferences(referencesLines));
 
@@ -416,11 +635,103 @@ export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
     sourceTitle: section.title,
   }));
 
+  const inferredFiguresFromCaptions: ParsedFigure[] = normalizedBlocks
+    .filter((block) => block.type === "caption" && /^(fig(?:ure)?\.?\s*\d+|diagram\s*\d+)/i.test(block.text))
+    .map((block, index) => ({
+      id: `fig-${index + 1}`,
+      imageData: createPlaceholderImageData(block.text || `Figure ${index + 1}`),
+      caption: block.text,
+      page: block.page,
+      bbox: block.bbox,
+      confidence: Math.max(0.55, Math.min(0.95, block.confidence)),
+      diagnostics: [
+        {
+          level: "warning",
+          code: "FIGURE_PLACEHOLDER_RENDERED",
+          message: "Figure detected by caption; source image extraction needs confirmation.",
+        },
+        ...(block.diagnostics || []),
+      ],
+    }));
+
+  const inferredTablesFromBlocks: ParsedTable[] = normalizedBlocks
+    .filter((block) => block.type === "table")
+    .map((block, index) => {
+      const matrix = tableLinesToMatrix([block.text]);
+      const diagnosticsForTable = matrix.length <= 1
+        ? [
+            {
+              level: "warning" as const,
+              code: "TABLE_GRID_UNCERTAIN",
+              message: "Table structure may be incomplete and requires review.",
+            },
+          ]
+        : [];
+      return {
+        id: `tbl-${index + 1}`,
+        html: matrixToHtml(matrix),
+        matrix,
+        page: block.page,
+        bbox: block.bbox,
+        caption: undefined,
+        confidence: Math.max(0.5, Math.min(0.95, block.confidence)),
+        diagnostics: [...diagnosticsForTable, ...(block.diagnostics || [])],
+      };
+    });
+
+  const parsedFigures = incomingFigures.length > 0 ? incomingFigures : inferredFiguresFromCaptions;
+  const parsedTables = incomingTables.length > 0 ? incomingTables : inferredTablesFromBlocks;
+
+  const captionLinks: ParsedLink[] = [];
+  const captionBlocks = normalizedBlocks.filter((block) => block.type === "caption");
+  for (const caption of captionBlocks) {
+    const captionText = caption.text || "";
+    const figureMatch = captionText.match(/^(fig(?:ure)?\.?\s*(\d+)|diagram\s*(\d+))/i);
+    if (figureMatch) {
+      const figureIndex = Number(figureMatch[2] || figureMatch[3] || 1);
+      const target = parsedFigures[figureIndex - 1];
+      if (target) {
+        target.caption = target.caption || captionText;
+        captionLinks.push({
+          id: `link-caption-fig-${caption.id}`,
+          sourceId: caption.id,
+          targetId: target.id,
+          relation: "caption_to_figure",
+          confidence: 0.75,
+          diagnostics: [],
+        });
+      }
+    }
+    const tableMatch = captionText.match(/^table\s*(\d+)/i);
+    if (tableMatch) {
+      const tableIndex = Number(tableMatch[1] || 1);
+      const target = parsedTables[tableIndex - 1];
+      if (target) {
+        target.caption = target.caption || captionText;
+        captionLinks.push({
+          id: `link-caption-table-${caption.id}`,
+          sourceId: caption.id,
+          targetId: target.id,
+          relation: "caption_to_table",
+          confidence: 0.75,
+          diagnostics: [],
+        });
+      }
+    }
+  }
+
+  const needsReview = raw.format === "pdf";
+
   return {
     fileTitle,
     sections,
     citations,
     diagnostics,
     totalWordCount: sections.reduce((sum, section) => sum + section.wordCount, 0),
+    reviewRequired: needsReview,
+    blocks: normalizedBlocks,
+    figures: parsedFigures,
+    tables: parsedTables,
+    links: [...incomingLinks, ...captionLinks],
   };
 }
