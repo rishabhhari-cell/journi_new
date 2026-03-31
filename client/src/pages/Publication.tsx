@@ -88,7 +88,7 @@ function SubmissionCard({ submission }: { submission: Submission }) {
                           setMenuOpen(false);
                         }}
                         className={`w-full flex items-center gap-2 px-3 py-2 text-xs font-medium transition-colors hover:bg-accent ${
-                          submission.status === s ? 'text-[#8b86c4] font-semibold' : 'text-foreground'
+                          submission.status === s ? 'text-journi-green font-semibold' : 'text-foreground'
                         }`}
                       >
                         <span className={`w-2 h-2 rounded-full ${sc.dot}`} />
@@ -266,9 +266,9 @@ export default function Publication() {
                 <button
                   key={s}
                   onClick={() => setStatusFilter(s)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 ${
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/40 ${
                     statusFilter === s
-                      ? 'bg-[#9999cc] text-white font-semibold'
+                      ? 'bg-journi-green text-journi-slate font-semibold'
                       : 'bg-card border border-border text-muted-foreground hover:text-foreground hover:bg-accent'
                   }`}
                 >

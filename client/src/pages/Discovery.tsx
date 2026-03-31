@@ -144,7 +144,7 @@ export default function Discovery() {
                           </div>
                           <button
                             onClick={() => setSelectedJournal(journal)}
-                            className="text-xs font-semibold text-[#8b86c4] hover:underline shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 rounded-sm"
+                            className="text-xs font-semibold text-journi-green hover:underline shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/40 rounded-sm"
                           >
                             View details
                           </button>

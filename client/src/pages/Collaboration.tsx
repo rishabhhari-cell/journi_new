@@ -1416,9 +1416,9 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                     <div className="flex items-center gap-2 mb-6 border-b border-border">
                       <button
                         onClick={() => setActiveTab('editor')}
-                        className={`px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 ${
+                        className={`px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/40 ${
                           activeTab === 'editor'
-                            ? 'text-[#8b86c4] border-b-2 border-[#8b86c4]'
+                            ? 'text-journi-green border-b-2 border-journi-green'
                             : 'text-muted-foreground hover:text-foreground'
                         }`}
                       >
@@ -1426,23 +1426,23 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                       </button>
                       <button
                         onClick={() => setActiveTab('references')}
-                        className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 ${
+                        className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/40 ${
                           activeTab === 'references'
-                            ? 'text-[#8b86c4] border-b-2 border-[#8b86c4]'
+                            ? 'text-journi-green border-b-2 border-journi-green'
                             : 'text-muted-foreground hover:text-foreground'
                         }`}
                       >
                         <BookOpen size={16} />
                         References
-                        <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#9999cc]/20 text-[#8b86c4] text-[10px] font-bold">
+                        <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-journi-green/15 text-journi-green text-[10px] font-bold">
                           {manuscript.citations.length}
                         </span>
                       </button>
                       <button
                         onClick={() => setActiveTab('comments')}
-                        className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 ${
+                        className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/40 ${
                           activeTab === 'comments'
-                            ? 'text-[#8b86c4] border-b-2 border-[#8b86c4]'
+                            ? 'text-journi-green border-b-2 border-journi-green'
                             : 'text-muted-foreground hover:text-foreground'
                         }`}
                       >

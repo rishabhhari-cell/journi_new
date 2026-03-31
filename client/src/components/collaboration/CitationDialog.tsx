@@ -214,9 +214,9 @@ export default function CitationDialog({ isOpen, onClose, onSubmit }: CitationDi
           <div className="flex border-b border-border">
             <button
               onClick={() => setTab('smart')}
-              className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 ${
+              className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/40 ${
                 tab === 'smart'
-                  ? 'text-[#8b86c4] border-b-2 border-[#8b86c4]'
+                  ? 'text-journi-green border-b-2 border-journi-green'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
@@ -225,9 +225,9 @@ export default function CitationDialog({ isOpen, onClose, onSubmit }: CitationDi
             </button>
             <button
               onClick={() => setTab('manual')}
-              className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 ${
+              className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/40 ${
                 tab === 'manual'
-                  ? 'text-[#8b86c4] border-b-2 border-[#8b86c4]'
+                  ? 'text-journi-green border-b-2 border-journi-green'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
