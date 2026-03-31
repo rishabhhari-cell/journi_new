@@ -1,32 +1,29 @@
-/**
- * Profile — Account settings page
- * Accessible at /profile for any authenticated user.
- * Lets users update their display name.
- */
 import { useState, useEffect } from 'react';
 import { useLocation } from 'wouter';
-import { User, Mail, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { User, Mail, CheckCircle2, AlertCircle, Loader2, Settings2 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
+import ProjectSettingsPanel from '@/components/settings/ProjectSettingsPanel';
 import { useAuth } from '@/contexts/AuthContext';
 import { toast } from 'sonner';
+
+type ProfileTab = 'profile' | 'settings';
 
 export default function Profile() {
   const { user, updateProfile, isLoading } = useAuth();
   const [, navigate] = useLocation();
 
+  const [activeTab, setActiveTab] = useState<ProfileTab>('profile');
   const [name, setName] = useState('');
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
-  // Redirect unauthenticated users
   useEffect(() => {
     if (!isLoading && !user) {
       navigate('/');
     }
   }, [user, isLoading, navigate]);
 
-  // Pre-fill name when user loads
   useEffect(() => {
     if (user) setName(user.name);
   }, [user]);
@@ -66,83 +63,120 @@ export default function Profile() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <div className="max-w-lg mx-auto px-4 py-12 pt-24">
-        {/* Avatar */}
-        <div className="flex flex-col items-center mb-8">
-          <div className="w-20 h-20 rounded-full bg-journi-green text-journi-slate text-2xl font-bold flex items-center justify-center mb-4">
-            {user.initials}
+      <div className="mx-auto max-w-5xl px-4 py-12 pt-24">
+        <div className="mb-6 flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-extrabold text-foreground">Account</h1>
+            <p className="mt-1 text-sm text-muted-foreground">Manage your profile and workspace settings.</p>
           </div>
-          <h1 className="text-xl font-bold text-foreground">{user.name}</h1>
-          <span className={`mt-2 text-xs font-semibold px-2.5 py-1 rounded-full ${
-            user.provider === 'google'
-              ? 'bg-blue-100 text-blue-700 border border-blue-200'
-              : 'bg-muted text-muted-foreground border border-border'
-          }`}>
-            {user.provider === 'google' ? 'Google account' : 'Email & password'}
-          </span>
         </div>
 
-        {/* Edit form */}
-        <div className="bg-card border border-border rounded-2xl p-6">
-          <h2 className="text-sm font-semibold text-foreground mb-5">Edit profile</h2>
+        <div className="mb-5 inline-flex rounded-lg border border-border bg-card p-1">
+          <button
+            type="button"
+            onClick={() => setActiveTab('profile')}
+            className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${activeTab === 'profile' ? 'bg-[#9999cc] text-white' : 'text-muted-foreground hover:text-foreground'}`}
+          >
+            Profile
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveTab('settings')}
+            className={`inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${activeTab === 'settings' ? 'bg-[#9999cc] text-white' : 'text-muted-foreground hover:text-foreground'}`}
+          >
+            <Settings2 size={14} />
+            Settings
+          </button>
+        </div>
 
-          {error && (
-            <div className="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-red-500/10 text-red-500 text-xs mb-4">
-              <AlertCircle size={13} className="shrink-0" />
-              {error}
-            </div>
-          )}
-          {success && (
-            <div className="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-emerald-500/10 text-emerald-600 text-xs mb-4">
-              <CheckCircle2 size={13} className="shrink-0" />
-              {success}
-            </div>
-          )}
-
-          <form onSubmit={handleSave} className="space-y-4">
-            {/* Name field */}
-            <div>
-              <label className="block text-xs font-medium text-muted-foreground mb-1.5">
-                Display name
-              </label>
-              <div className="relative">
-                <User size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" aria-hidden="true" />
-                <input
-                  type="text"
-                  value={name}
-                  onChange={(e) => { setName(e.target.value); setError(''); setSuccess(''); }}
-                  placeholder="Your full name"
-                  className="w-full pl-9 pr-3 py-2.5 text-sm bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-journi-green transition-shadow"
-                />
+        {activeTab === 'profile' && (
+          <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
+            <div className="h-fit rounded-2xl border border-border bg-card p-6">
+              <div className="flex flex-col items-center">
+                <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-journi-green text-2xl font-bold text-journi-slate">
+                  {user.initials}
+                </div>
+                <h2 className="text-lg font-bold text-foreground text-center">{user.name}</h2>
+                <span
+                  className={`mt-2 rounded-full px-2.5 py-1 text-xs font-semibold ${
+                    user.provider === 'google'
+                      ? 'border border-blue-200 bg-blue-100 text-blue-700'
+                      : 'border border-border bg-muted text-muted-foreground'
+                  }`}
+                >
+                  {user.provider === 'google' ? 'Google account' : 'Email & password'}
+                </span>
               </div>
             </div>
 
-            {/* Email — read only */}
-            <div>
-              <label className="block text-xs font-medium text-muted-foreground mb-1.5">
-                Email address
-              </label>
-              <div className="relative">
-                <Mail size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" aria-hidden="true" />
-                <input
-                  type="email"
-                  value={user.email}
-                  readOnly
-                  className="w-full pl-9 pr-3 py-2.5 text-sm bg-muted border border-border rounded-lg text-muted-foreground cursor-not-allowed"
-                />
-              </div>
-              <p className="text-[11px] text-muted-foreground mt-1">Email cannot be changed here.</p>
-            </div>
+            <div className="rounded-2xl border border-border bg-card p-6">
+              <h2 className="mb-5 text-sm font-semibold text-foreground">Edit profile</h2>
 
-            <button
-              type="submit"
-              disabled={saving || !name.trim()}
-              className="w-full py-2.5 rounded-xl bg-journi-green text-journi-slate text-sm font-bold hover:opacity-90 transition-opacity disabled:opacity-60 mt-1"
-            >
-              {saving ? <span className="flex items-center justify-center gap-2"><Loader2 size={14} className="animate-spin" /> Saving…</span> : 'Save changes'}
-            </button>
-          </form>
-        </div>
+              {error && (
+                <div className="mb-4 flex items-center gap-2 rounded-lg bg-red-500/10 px-3 py-2.5 text-xs text-red-500">
+                  <AlertCircle size={13} className="shrink-0" />
+                  {error}
+                </div>
+              )}
+              {success && (
+                <div className="mb-4 flex items-center gap-2 rounded-lg bg-emerald-500/10 px-3 py-2.5 text-xs text-emerald-600">
+                  <CheckCircle2 size={13} className="shrink-0" />
+                  {success}
+                </div>
+              )}
+
+              <form onSubmit={handleSave} className="space-y-4">
+                <div>
+                  <label className="mb-1.5 block text-xs font-medium text-muted-foreground">Display name</label>
+                  <div className="relative">
+                    <User size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" aria-hidden="true" />
+                    <input
+                      type="text"
+                      value={name}
+                      onChange={(e) => {
+                        setName(e.target.value);
+                        setError('');
+                        setSuccess('');
+                      }}
+                      placeholder="Your full name"
+                      className="w-full rounded-lg border border-border bg-background py-2.5 pl-9 pr-3 text-sm focus:outline-none focus:ring-2 focus:ring-journi-green transition-shadow"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="mb-1.5 block text-xs font-medium text-muted-foreground">Email address</label>
+                  <div className="relative">
+                    <Mail size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" aria-hidden="true" />
+                    <input
+                      type="email"
+                      value={user.email}
+                      readOnly
+                      className="w-full cursor-not-allowed rounded-lg border border-border bg-muted py-2.5 pl-9 pr-3 text-sm text-muted-foreground"
+                    />
+                  </div>
+                  <p className="mt-1 text-[11px] text-muted-foreground">Email cannot be changed here.</p>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={saving || !name.trim()}
+                  className="mt-1 w-full rounded-xl bg-journi-green py-2.5 text-sm font-bold text-journi-slate transition-opacity hover:opacity-90 disabled:opacity-60"
+                >
+                  {saving ? (
+                    <span className="flex items-center justify-center gap-2">
+                      <Loader2 size={14} className="animate-spin" /> Saving...
+                    </span>
+                  ) : (
+                    'Save changes'
+                  )}
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'settings' && <ProjectSettingsPanel />}
       </div>
     </div>
   );

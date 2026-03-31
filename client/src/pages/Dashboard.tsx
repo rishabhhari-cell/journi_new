@@ -20,6 +20,7 @@ import {
   TrendingUp,
   Clock,
   ArrowRight,
+  Settings2,
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import ProjectSwitcher from '@/components/ProjectSwitcher';
@@ -27,6 +28,7 @@ import ListView from '@/components/dashboard/ListView';
 import TaskDialog from '@/components/dashboard/TaskDialog';
 import CollaboratorManager from '@/components/dashboard/CollaboratorManager';
 import ProjectOnboardingWizard from '@/components/dashboard/ProjectOnboardingWizard';
+import ProjectSettingsPanel from '@/components/settings/ProjectSettingsPanel';
 import { useProject } from '@/contexts/ProjectContext';
 import { useAuth } from '@/contexts/AuthContext';
 import { useSubmissions } from '@/contexts/SubmissionsContext';
@@ -34,7 +36,7 @@ import { useManuscript } from '@/contexts/ManuscriptContext';
 import type { Task, TaskFormData } from '@/types';
 import { format, differenceInDays } from 'date-fns';
 
-type DashboardTab = 'overview' | 'tasks' | 'team' | 'calendar' | 'publications';
+type DashboardTab = 'overview' | 'tasks' | 'team' | 'calendar' | 'publications' | 'settings';
 
 const sidebarItems: { icon: any; label: string; tab: DashboardTab }[] = [
   { icon: LayoutGrid,   label: 'Overview',      tab: 'overview'      },
@@ -42,6 +44,7 @@ const sidebarItems: { icon: any; label: string; tab: DashboardTab }[] = [
   { icon: Users,        label: 'Team',          tab: 'team'          },
   { icon: Calendar,     label: 'Calendar',      tab: 'calendar'      },
   { icon: BookOpen,     label: 'Publications',  tab: 'publications'  },
+  { icon: Settings2,    label: 'Settings',      tab: 'settings'      },
 ];
 
 const statusConfig: Record<string, { color: string; bg: string; label: string }> = {
@@ -173,6 +176,7 @@ export default function Dashboard() {
     team:         { title: 'Team',               subtitle: 'Manage collaborators and roles' },
     calendar:     { title: 'Calendar',           subtitle: 'Tasks and deadlines by date' },
     publications: { title: 'Publications',       subtitle: 'Track your journal submissions' },
+    settings:     { title: 'Settings',           subtitle: 'Project controls and preferences' },
   };
 
   if (isLoadingProjects && !isTrial) {
@@ -868,6 +872,17 @@ export default function Dashboard() {
                     </div>
                   )}
                 </div>
+              </motion.div>
+            )}
+
+            {activeTab === 'settings' && (
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="space-y-6"
+              >
+                <ProjectSettingsPanel />
               </motion.div>
             )}
           </div>

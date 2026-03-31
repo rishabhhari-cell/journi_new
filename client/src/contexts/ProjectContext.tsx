@@ -6,6 +6,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import {
   fetchProjects,
   createProject as createProjectApi,
+  patchProject,
   deleteProject as deleteProjectApi,
   patchProjectTasks,
   patchProjectCollaborators,
@@ -56,6 +57,9 @@ interface ProjectContextType {
   setActiveProjectId: (id: string) => void;
   createProject: (title: string, description?: string, dueDate?: string) => Promise<Project>;
   deleteProject: (id: string) => void;
+  renameProject: (projectId: string, title: string) => Promise<boolean>;
+  archiveProject: (projectId: string) => Promise<boolean>;
+  hardDeleteProject: (projectId: string) => Promise<boolean>;
   addTask: (task: TaskFormData) => void;
   updateTask: (taskId: string, updates: Partial<Task>) => void;
   deleteTask: (taskId: string) => void;
@@ -413,6 +417,80 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     }
   };
 
+  const renameProject = async (projectId: string, title: string): Promise<boolean> => {
+    const trimmedTitle = title.trim();
+    if (trimmedTitle.length < 2) return false;
+
+    const existingProject = projects.find((project) => project.id === projectId);
+    if (!existingProject) return false;
+
+    const previousProjects = projects;
+    const previousActiveId = activeId;
+    const updatedProjects = projects.map((project) =>
+      project.id === projectId
+        ? { ...project, title: trimmedTitle, updatedAt: new Date() }
+        : project,
+    );
+    setProjects(updatedProjects, previousActiveId);
+
+    if (!backendMode) return true;
+
+    try {
+      await patchProject(projectId, { title: trimmedTitle });
+      return true;
+    } catch {
+      setProjects(previousProjects, previousActiveId);
+      return false;
+    }
+  };
+
+  const archiveProject = async (projectId: string): Promise<boolean> => {
+    const existingProject = projects.find((project) => project.id === projectId);
+    if (!existingProject) return false;
+    if (existingProject.status === 'archived') return true;
+
+    const previousProjects = projects;
+    const previousActiveId = activeId;
+    const updatedProjects = projects.map((project) =>
+      project.id === projectId
+        ? { ...project, status: 'archived' as const, updatedAt: new Date() }
+        : project,
+    );
+    setProjects(updatedProjects, previousActiveId);
+
+    if (!backendMode) return true;
+
+    try {
+      await patchProject(projectId, { status: 'archived' });
+      return true;
+    } catch {
+      setProjects(previousProjects, previousActiveId);
+      return false;
+    }
+  };
+
+  const hardDeleteProject = async (projectId: string): Promise<boolean> => {
+    if (projects.length <= 1) return false;
+    const existingProject = projects.find((project) => project.id === projectId);
+    if (!existingProject) return false;
+
+    const previousProjects = projects;
+    const previousActiveId = activeId;
+    const updatedProjects = projects.filter((project) => project.id !== projectId);
+    const nextActiveId = projectId === previousActiveId ? updatedProjects[0]?.id : previousActiveId;
+    setProjects(updatedProjects, nextActiveId);
+
+    if (!backendMode) return true;
+
+    try {
+      await deleteProjectApi(projectId);
+      return true;
+    } catch {
+      setProjects(previousProjects, previousActiveId);
+      return false;
+    }
+  };
+
   const updateActive = (updater: (p: Project) => Project) => {
     const updated = projects.map((project) =>
       project.id === activeProject.id ? updater(project) : project,
@@ -514,6 +592,9 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
         setActiveProjectId,
         createProject,
         deleteProject,
+        renameProject,
+        archiveProject,
+        hardDeleteProject,
         addTask,
         updateTask,
         deleteTask,

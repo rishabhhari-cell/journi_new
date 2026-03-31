@@ -313,11 +313,13 @@ async function searchBackend(
       return null;
     }
 
-    return {
-      journals: payload.data.map((journal: any, index: number) => mapBackendJournal(journal, index)),
-      total: typeof payload.total === 'number' ? payload.total : payload.data.length,
-      source: 'backend',
-    };
+    const journals = payload.data.map((journal: any, index: number) => mapBackendJournal(journal, index));
+    const total = typeof payload.total === 'number' ? payload.total : payload.data.length;
+
+    // Backend has no data — fall through to external APIs / static fallback
+    if (journals.length === 0 && total === 0) return null;
+
+    return { journals, total, source: 'backend' };
   } catch {
     return null;
   }
