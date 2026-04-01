@@ -10,16 +10,39 @@ import { projectsRouter } from "./routes/projects";
 import { manuscriptsRouter } from "./routes/manuscripts";
 import { commentsRouter } from "./routes/comments";
 import { citationsRouter } from "./routes/citations";
+import { billingRouter, billingWebhookHandler } from "./routes/billing";
+import { submissionsRouter } from "./routes/submissions";
+
+function buildAllowedOrigins() {
+  const defaults = [env.CLIENT_BASE_URL];
+  const extras = (env.CORS_ALLOWED_ORIGINS ?? "")
+    .split(",")
+    .map((value) => value.trim())
+    .filter(Boolean);
+  return new Set([...defaults, ...extras]);
+}
 
 export function createApp() {
   const app = express();
+  const allowedOrigins = buildAllowedOrigins();
 
   app.use(
     cors({
-      origin: (origin, callback) => callback(null, true),
+      origin: (origin, callback) => {
+        // Allow server-to-server requests (no Origin header).
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.has(origin)) return callback(null, true);
+        // Reject with an error so the browser receives a proper CORS failure
+        // rather than a silent non-match — important when credentials are enabled.
+        return callback(new Error(`CORS: origin '${origin}' is not permitted`));
+      },
       credentials: true,
+      // Explicitly enumerate the headers the client is allowed to send/read.
+      allowedHeaders: ["Content-Type", "Authorization"],
+      exposedHeaders: [],
     }),
   );
+  app.post("/api/billing/webhook", express.raw({ type: "application/json" }), billingWebhookHandler);
   app.use(express.json({ limit: "25mb" }));
   app.use(express.urlencoded({ extended: true }));
 
@@ -41,6 +64,8 @@ export function createApp() {
   app.use("/api/manuscripts", manuscriptsRouter);
   app.use("/api/comments", commentsRouter);
   app.use("/api/citations", citationsRouter);
+  app.use("/api/billing", billingRouter);
+  app.use("/api/submissions", submissionsRouter);
 
   app.use("/api/*", notFoundHandler);
 

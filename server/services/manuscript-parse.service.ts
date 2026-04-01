@@ -238,8 +238,16 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
         page: pageNum,
         bbox,
         source: "text-layer",
-        confidence: 0.9,
-        diagnostics: [],
+        // 0.85: text-layer extraction is reliable but section/type classification
+        // uses heuristic keyword matching — not guaranteed accurate.
+        confidence: 0.85,
+        diagnostics: type !== "paragraph" ? [
+          {
+            level: "info" as const,
+            code: "BLOCK_TYPE_HEURISTIC",
+            message: `Block typed as "${type}" via keyword heuristic; review if misclassified.`,
+          },
+        ] : [],
         suggestedSection: type === "reference" ? "References" : "Content",
       });
 
@@ -345,11 +353,23 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
       message: message.message,
     }));
 
+    // Inform callers that complex Word formatting (tracked changes, embedded objects,
+    // custom styles) may not survive the HTML conversion faithfully.
+    const fidelityNote: typeof warnings = [
+      {
+        level: "info",
+        code: "DOCX_FIDELITY_NOTICE",
+        message:
+          "DOCX parsed via HTML conversion. Complex formatting (tracked changes, nested tables, " +
+          "custom styles, embedded objects) may not be fully preserved — review imported content.",
+      },
+    ];
+
     return {
       fileTitle,
       format: "docx",
       html: result.value,
-      diagnostics: [...diagnostics, ...warnings],
+      diagnostics: [...diagnostics, ...fidelityNote, ...warnings],
       references: extractReferencesFromOupHtml(result.value),
     };
   }
@@ -379,7 +399,9 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
         diagnostics.push({
           level: "warning",
           code: "PDF_EMPTY_TEXT",
-          message: "No text could be extracted from this PDF. It may be scanned-image only.",
+          message:
+            "No selectable text found in this PDF. It appears to be a scanned image. " +
+            "This service does not perform OCR — content will be empty until a text-layer PDF is uploaded.",
         });
       }
       return {

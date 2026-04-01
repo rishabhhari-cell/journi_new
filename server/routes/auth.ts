@@ -313,14 +313,23 @@ authRouter.post("/oauth", async (req, res, next) => {
     const input = oauthSchema.parse(req.body);
     const redirectTo = input.redirectTo ?? `${env.CLIENT_BASE_URL}/`;
 
-    // Construct implicit-flow URL directly (no PKCE code_challenge).
-    // Supabase's /auth/v1/authorize without PKCE params returns tokens in the
-    // hash fragment after auth, which the frontend parseOAuthHash() can read.
+    // PKCE flow: generate a random code_verifier, derive the code_challenge via
+    // S256, and include both in the authorize URL. The frontend must store the
+    // verifier (sessionStorage) and exchange it at /auth/v1/token after redirect.
+    const codeVerifier = crypto.randomBytes(64).toString("base64url");
+    const codeChallenge = crypto
+      .createHash("sha256")
+      .update(codeVerifier)
+      .digest("base64url");
+
     const authorizeUrl = new URL(`${env.SUPABASE_URL}/auth/v1/authorize`);
     authorizeUrl.searchParams.set("provider", input.provider);
     authorizeUrl.searchParams.set("redirect_to", redirectTo);
+    authorizeUrl.searchParams.set("code_challenge", codeChallenge);
+    authorizeUrl.searchParams.set("code_challenge_method", "S256");
+    authorizeUrl.searchParams.set("response_type", "code");
 
-    res.json({ url: authorizeUrl.toString() });
+    res.json({ url: authorizeUrl.toString(), codeVerifier });
   } catch (error) {
     next(error);
   }
@@ -482,6 +491,12 @@ authRouter.post("/invites/accept", requireAuth, async (req, res, next) => {
 
     if (new Date(invite.expires_at).getTime() < Date.now()) {
       throw new HttpError(400, "Invite token has expired", "INVITE_EXPIRED");
+    }
+
+    const inviteEmail = String(invite.email ?? "").trim().toLowerCase();
+    const authedEmail = String(authReq.auth.email ?? "").trim().toLowerCase();
+    if (!inviteEmail || !authedEmail || inviteEmail !== authedEmail) {
+      throw new HttpError(403, "Invite email does not match authenticated user", "INVITE_EMAIL_MISMATCH");
     }
 
     await supabaseAdmin.from("organization_members").upsert({

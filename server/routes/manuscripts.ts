@@ -4,6 +4,7 @@ import { assertAnyOrganizationRole, assertManuscriptAccess, assertProjectEditabl
 import { HttpError } from "../lib/http-error";
 import { supabaseAdmin } from "../lib/supabase";
 import { requireAuth, type AuthedRequest } from "../middleware/auth";
+import { requireProAccess } from "../middleware/billing";
 import { writeAuditEvent } from "../services/audit.service";
 import { parseUploadedDocument } from "../services/manuscript-parse.service";
 import { reformatManuscript } from "../services/reformat.service";
@@ -303,7 +304,7 @@ const reformatSchema = z.object({
 // POST /manuscripts/:manuscriptId/reformat
 // Analyses the manuscript against a journal's submission requirements and returns
 // a list of minimal suggested edits (track-changes style). Does NOT auto-save.
-manuscriptsRouter.post("/:manuscriptId/reformat", async (req, res, next) => {
+manuscriptsRouter.post("/:manuscriptId/reformat", requireProAccess, async (req, res, next) => {
   try {
     const authReq = req as unknown as AuthedRequest;
     const manuscriptId = req.params.manuscriptId;

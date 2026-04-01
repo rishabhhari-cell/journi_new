@@ -180,7 +180,7 @@ organizationsRouter.post("/:organizationId/invite", async (req, res, next) => {
 
     res.status(201).json({
       data: {
-        inviteToken,
+        inviteId: data.id,
         role: input.role as OrgRole,
         expiresAt,
       },

@@ -106,7 +106,7 @@ commentsRouter.patch("/:commentId", async (req, res, next) => {
 
     const { data: existing, error: existingError } = await supabaseAdmin
       .from("comments")
-      .select("id, manuscript_id")
+      .select("id, manuscript_id, author_user_id, resolved")
       .eq("id", commentId)
       .maybeSingle();
     if (existingError) {
@@ -116,7 +116,22 @@ commentsRouter.patch("/:commentId", async (req, res, next) => {
       throw new HttpError(404, "Comment not found", "COMMENT_NOT_FOUND");
     }
 
-    const context = await assertManuscriptAccess(authReq.auth.userId, existing.manuscript_id, false);
+    // Require edit access (editor+) for the manuscript.
+    const context = await assertManuscriptAccess(authReq.auth.userId, existing.manuscript_id, true);
+
+    const isAuthor = existing.author_user_id === authReq.auth.userId;
+    const isAdminOrOwner =
+      context.access.orgRole === "admin" || context.access.orgRole === "owner";
+
+    // Content edits: only the comment author may change the text.
+    if (input.content !== undefined && !isAuthor) {
+      throw new HttpError(403, "Only the comment author can edit its content", "COMMENT_EDIT_FORBIDDEN");
+    }
+
+    // Resolution toggle: author, admin, or owner.
+    if (input.resolved !== undefined && !isAuthor && !isAdminOrOwner) {
+      throw new HttpError(403, "Only the author, an admin, or an owner can resolve comments", "COMMENT_RESOLVE_FORBIDDEN");
+    }
 
     const { data, error } = await supabaseAdmin
       .from("comments")

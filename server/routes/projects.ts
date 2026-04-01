@@ -24,11 +24,11 @@ const patchProjectSchema = z.object({
 });
 
 const patchTasksSchema = z.object({
-  tasks: z.array(z.record(z.unknown())),
+  tasks: z.array(z.record(z.string(), z.unknown())),
 });
 
 const patchCollaboratorsSchema = z.object({
-  collaborators: z.array(z.record(z.unknown())),
+  collaborators: z.array(z.record(z.string(), z.unknown())),
 });
 
 const querySchema = z.object({
