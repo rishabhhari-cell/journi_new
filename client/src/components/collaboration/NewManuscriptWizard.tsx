@@ -293,7 +293,7 @@ export default function NewManuscriptWizard({ open, onClose, onComplete, manuscr
                       <Wand2 size={20} className="text-muted-foreground group-hover:text-journi-green" />
                     </div>
                     <div>
-                      <p className="font-semibold text-foreground text-sm">Let Journi choose for me</p>
+                      <p className="font-semibold text-foreground text-sm">Let Journie choose for me</p>
                       <p className="text-xs text-muted-foreground mt-0.5">Set preferences, get matched journals</p>
                     </div>
                     <ChevronRight size={16} className="ml-auto text-muted-foreground group-hover:text-journi-green" />

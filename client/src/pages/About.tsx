@@ -91,7 +91,7 @@ export default function About() {
                   },
                   {
                     title: "Builders inside the workflow",
-                    desc: "We&apos;re not designing from the outside looking in. Journi is built from within real research and clinical environments, for the people working in them.",
+                    desc: "We&apos;re not designing from the outside looking in. Journie is built from within real research and clinical environments, for the people working in them.",
                   },
                 ].map((item, i) => (
                   <motion.div

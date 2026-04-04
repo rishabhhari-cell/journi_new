@@ -58,7 +58,7 @@ const PLANS: Plan[] = [
   {
     id: "free",
     tagline: "Free",
-    name: "Journi Starter",
+    name: "Journie Starter",
     price: "Free",
     billingNote: "No credit card required",
     description:
@@ -70,7 +70,7 @@ const PLANS: Plan[] = [
       "Structured workspace — sections, notes & progress status",
       "Basic manuscript timeline and deadline reminders",
       "Journal finder with limited monthly runs",
-      "Export to Word / PDF (Journi default format)",
+      "Export to Word / PDF (Journie default format)",
     ],
     cta: "Get started",
     ctaHref: "/signup?plan=free",
@@ -79,7 +79,7 @@ const PLANS: Plan[] = [
   {
     id: "pro",
     tagline: "Individual Pro",
-    name: "Journi Pro",
+    name: "Journie Pro",
     price: "$18 / month",
     priceAlt: "$15 / month billed annually",
     billingNote: "Cancel anytime",
@@ -105,7 +105,7 @@ const PLANS: Plan[] = [
   {
     id: "team",
     tagline: "Group / Lab",
-    name: "Journi Team",
+    name: "Journie Team",
     price: "$10–12 / user / month",
     billingNote: "Billed annually · minimum 5 users",
     description:
@@ -128,7 +128,7 @@ const PLANS: Plan[] = [
   {
     id: "enterprise",
     tagline: "Institutional / CRO",
-    name: "Journi Enterprise",
+    name: "Journie Enterprise",
     price: "Custom pricing",
     priceAlt: "From $5,000–10,000 / year + per‑seat",
     billingNote: "Tailored to your organisation",
@@ -369,7 +369,7 @@ function ComparisonTable() {
     <div className="overflow-x-auto rounded-2xl border border-border">
       <table
         className="w-full text-sm"
-        aria-label="Feature comparison across all Journi plans"
+        aria-label="Feature comparison across all Journie plans"
       >
         <thead>
           <tr className="border-b border-border bg-muted/40">
@@ -461,7 +461,7 @@ export default function PricingSection() {
             id="pricing-heading"
             className="text-3xl md:text-4xl font-extrabold text-foreground mb-4"
           >
-            Choose the Journi plan that's right for your research
+            Choose the Journie plan that's right for your research
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
             Start free, then scale from individual projects to labs, institutions, and CROs.

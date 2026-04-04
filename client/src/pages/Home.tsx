@@ -98,7 +98,7 @@ export default function Home() {
                 animate={phase >= 3 ? { opacity: 1, y: 0 } : undefined}
                 transition={{ duration: 0.5, ease: [0, 0, 0.2, 1] }}
               >
-                Journi removes friction from manuscript submission — so you can focus on your research.
+                Journie removes friction from manuscript submission — so you can focus on your research.
               </motion.p>
               <motion.div
                 className="flex flex-wrap gap-3"
@@ -232,7 +232,7 @@ export default function Home() {
                 Built for individuals.<br />Designed for teams.
               </h2>
               <p className="text-muted-foreground text-base leading-relaxed mb-8">
-                Journi helps clinician-researchers move their work forward — while giving teams and institutions visibility across projects, submissions, and outputs.
+                Journie helps clinician-researchers move their work forward — while giving teams and institutions visibility across projects, submissions, and outputs.
               </p>
               <ul className="space-y-3">
                 {[
@@ -303,7 +303,7 @@ export default function Home() {
               {
                 step: "02", icon: Search,
                 title: "Find the right journal and prepare",
-                desc: "Search for journals yourself or use Journi's recommendations, then format your manuscript to their requirements automatically.",
+                desc: "Search for journals yourself or use Journie's recommendations, then format your manuscript to their requirements automatically.",
               },
               {
                 step: "03", icon: Send,

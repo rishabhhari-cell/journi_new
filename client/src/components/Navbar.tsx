@@ -84,10 +84,10 @@ const aboutItems: FeatureItem[] = [
     title: "Our Team",
     href: "/about#team",
     icon: Users,
-    description: "Meet the clinicians and builders behind Journi",
+    description: "Meet the clinicians and builders behind Journie",
   },
   {
-    title: "Why Journi",
+    title: "Why Journie",
     href: "/about#why-us",
     icon: FlaskConical,
     description: "See the mission and values guiding the product",
@@ -250,7 +250,7 @@ export default function Navbar() {
         {/* Logo + Nav — left-aligned group */}
         <div className="flex items-center gap-5">
           <Link href={isAuthenticated ? "/dashboard" : "/"} className="flex items-center shrink-0 ml-8">
-            <img src={LOGO_URL} alt="Journi" className="h-11 w-auto" />
+            <img src={LOGO_URL} alt="Journie" className="h-11 w-auto" />
           </Link>
 
           {/* Desktop Nav */}
@@ -419,7 +419,7 @@ export default function Navbar() {
                   </div>
                   <div className="py-1 border-t border-border">
                     <p className="px-4 py-1 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
-                      Journi
+                      Journie
                     </p>
                     {[ 
                       { label: "Home", href: "/" },
@@ -631,7 +631,7 @@ export default function Navbar() {
               {isAppRoute && (
                 <>
                   <p className="px-3 pt-1 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
-                    Journi
+                    Journie
                   </p>
                   {[
                     { label: "Home", href: "/" },

@@ -150,7 +150,7 @@ export default function AuthModal() {
         setSuccess('Verification email sent. Please verify your email, then sign in.');
         openModal('signin');
       } else {
-        toast.success('Account created — welcome to Journi!');
+        toast.success('Account created — welcome to Journie!');
         closeModal();
         navigate('/dashboard');
       }
@@ -298,7 +298,7 @@ export default function AuthModal() {
                       <p>
                         Sign up or sign in using your institutional email address (e.g.{' '}
                         <span className="font-mono text-journi-green">name@ucl.ac.uk</span>). You'll be
-                        automatically added to your institution's Journi workspace.
+                        automatically added to your institution's Journie workspace.
                       </p>
                       <p className="mt-2">Use the email &amp; password form below — no separate login is needed.</p>
                     </div>

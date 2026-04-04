@@ -175,21 +175,21 @@ const SCENARIO_STEPS: ScenarioStep[] = [
     step: "01",
     icon: FileText,
     title: "Start with structure",
-    body: "Sarah opens Journi and selects the RCT template. Her manuscript is already divided into IMRAD sections: Background, Methods, Results, Discussion. The CONSORT checklist is pre-loaded — she can see at a glance which items she still needs to address.",
+    body: "Sarah opens Journie and selects the RCT template. Her manuscript is already divided into IMRAD sections: Background, Methods, Results, Discussion. The CONSORT checklist is pre-loaded — she can see at a glance which items she still needs to address.",
     tags: ["CONSORT checklist", "RCT template", "Structured sections"],
   },
   {
     step: "02",
     icon: Users,
     title: "Collaborate with co-authors",
-    body: "She invites her supervisor, Dr Lee, and her statistical co-author Michael. Michael drafts the Methods and Results sections directly in Journi. Dr Lee leaves structured comments in the margin — no tracked-changes emails, no version confusion.",
+    body: "She invites her supervisor, Dr Lee, and her statistical co-author Michael. Michael drafts the Methods and Results sections directly in Journie. Dr Lee leaves structured comments in the margin — no tracked-changes emails, no version confusion.",
     tags: ["Role-based access", "Inline comments", "Activity feed"],
   },
   {
     step: "03",
     icon: Search,
     title: "Choose the right journal",
-    body: "Before spending time reformatting, Sarah runs the journal finder. Journi returns a ranked list based on her abstract and study design — with acceptance rates, median review times, and open-access options. She shortlists two and compares them side by side.",
+    body: "Before spending time reformatting, Sarah runs the journal finder. Journie returns a ranked list based on her abstract and study design — with acceptance rates, median review times, and open-access options. She shortlists two and compares them side by side.",
     tags: ["Match score", "Acceptance rate", "Side-by-side comparison"],
     comingSoon: true,
   },
@@ -197,14 +197,14 @@ const SCENARIO_STEPS: ScenarioStep[] = [
     step: "04",
     icon: Send,
     title: "Submit, formatted correctly",
-    body: "She selects BMJ Open as her target. Journi auto-applies the journal's word limits, heading structure, and Vancouver referencing. She exports a submission-ready DOCX in one click. Journi logs the submission and sets a reminder for 6 weeks out.",
+    body: "She selects BMJ Open as her target. Journie auto-applies the journal's word limits, heading structure, and Vancouver referencing. She exports a submission-ready DOCX in one click. Journie logs the submission and sets a reminder for 6 weeks out.",
     tags: ["Auto-formatting", "DOCX export", "Submission tracker"],
   },
   {
     step: "05",
     icon: RefreshCw,
     title: "Manage revision and resubmit",
-    body: "The reviewer report arrives. Sarah opens the revision workspace in Journi — each reviewer comment is listed, and she types her response point by point. She resubmits with the updated manuscript and cover letter attached. Three months later: accepted.",
+    body: "The reviewer report arrives. Sarah opens the revision workspace in Journie — each reviewer comment is listed, and she types her response point by point. She resubmits with the updated manuscript and cover letter attached. Three months later: accepted.",
     tags: ["Reviewer response workspace", "Resubmission", "Submission history"],
     comingSoon: true,
   },
@@ -249,7 +249,7 @@ export default function Features() {
                 <span className="text-journi-green">manuscript submission</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl mx-auto">
-                No general-purpose writing tool, no project tracker bolted on. Journi is built
+                No general-purpose writing tool, no project tracker bolted on. Journie is built
                 specifically for the manuscript submission lifecycle — from draft to accepted.
               </p>
               <div className="flex flex-wrap justify-center gap-3">
@@ -349,7 +349,7 @@ export default function Features() {
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 Most clinician-researchers piece together a submission workflow from tools that weren't
-                designed for it. Journi replaces all of them.
+                designed for it. Journie replaces all of them.
               </p>
             </motion.div>
 
@@ -361,11 +361,11 @@ export default function Features() {
               <div className="grid grid-cols-2 divide-x divide-border">
                 <div className="px-6 py-4 bg-red-50 dark:bg-red-950/30 flex items-center gap-2">
                   <span aria-hidden="true" className="text-base">❌</span>
-                  <span className="text-sm font-bold text-red-700 dark:text-red-400">Without Journi</span>
+                  <span className="text-sm font-bold text-red-700 dark:text-red-400">Without Journie</span>
                 </div>
                 <div className="px-6 py-4 bg-journi-green/10 flex items-center gap-2">
                   <CheckCircle2 size={16} className="text-journi-green shrink-0" aria-hidden="true" />
-                  <span className="text-sm font-bold text-journi-green">With Journi</span>
+                  <span className="text-sm font-bold text-journi-green">With Journie</span>
                 </div>
               </div>
 
@@ -398,7 +398,7 @@ export default function Features() {
                 See it in action: a clinical trial paper from draft to accepted
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Dr Sarah Chen is a registrar co-authoring her first RCT paper. Here's how Journi
+                Dr Sarah Chen is a registrar co-authoring her first RCT paper. Here's how Journie
                 moves her from blank page to publication.
               </p>
             </motion.div>

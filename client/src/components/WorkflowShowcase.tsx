@@ -222,7 +222,7 @@ export default function WorkflowShowcase({
       animate={animateWhen ? { opacity: 1, y: 0 } : undefined}
       transition={{ delay: entranceDelay, duration: 0.5, ease: [0, 0, 0.2, 1] }}
     >
-      <div className="mb-2.5 flex flex-wrap gap-1.5" role="tablist" aria-label="Journi workflow showcase">
+      <div className="mb-2.5 flex flex-wrap gap-1.5" role="tablist" aria-label="Journie workflow showcase">
         {WORKFLOW_TABS.map((tab) => (
           <button
             key={tab.key}

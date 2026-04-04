@@ -76,7 +76,7 @@ const footerData = {
     { href: "#", label: "LinkedIn", icon: Linkedin },
   ],
   subtitle: "Your research, simplified.",
-  copyright: "©2026 Journi. All rights reserved.",
+  copyright: "©2026 Journie. All rights reserved.",
 }
 
 const NavSection = ({ title, links, index }: { title: string; links: string[]; index: number }) => (
@@ -210,7 +210,7 @@ export default function StickyFooter() {
                   }}
                   className="w-fit rounded-2xl border border-white/70 bg-white/80 px-5 py-3 shadow-sm"
                 >
-                  <img src="/logos/Journi_new.svg" alt="Journi" className="h-20 w-auto md:h-24 lg:h-28" />
+                  <img src="/logos/Journie_logo.svg" alt="Journie" className="h-20 w-auto md:h-24 lg:h-28" />
                 </motion.div>
 
                 <motion.div
