@@ -9,6 +9,7 @@ import {
   setStoredSession,
 } from '@/lib/api/client';
 import { acceptOrganizationInvite, requestPasswordReset } from '@/lib/api/backend';
+import { supabaseBrowser } from '@/lib/supabase-browser';
 
 export interface AuthUser {
   id: string;
@@ -26,7 +27,6 @@ interface AuthContextType {
   setActiveOrganizationId: (organizationId: string) => void;
   isLoading: boolean;
   isAuthenticating: boolean;
-  isTransitioning: boolean;
   isTrial: boolean;
   signIn: (email: string, password: string) => Promise<void>;
   signUp: (name: string, email: string, password: string) => Promise<{ requiresEmailVerification: boolean }>;
@@ -34,7 +34,7 @@ interface AuthContextType {
   startOAuth: (provider?: 'google') => Promise<void>;
   updateProfile: (name: string) => Promise<void>;
   signInAsGuest: () => void;
-  signOut: () => Promise<void>;
+  signOut: () => void;
   openModal: (view?: 'signin' | 'signup' | 'forgot') => void;
   closeModal: () => void;
   modalOpen: boolean;
@@ -115,7 +115,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Start not-loading if we already have a persisted user — bootstrap will silently re-validate
   const [isLoading, setIsLoading] = useState(() => readPersistedUser() === null);
   const [isAuthenticating, setIsAuthenticating] = useState(false);
-  const [isTransitioning, setIsTransitioning] = useState(false);
   const [isTrial, setIsTrial] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalView, setModalView] = useState<'signin' | 'signup' | 'forgot'>('signin');
@@ -289,7 +288,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signUp = useCallback(async (name: string, email: string, password: string) => {
     setIsAuthenticating(true);
-    setIsTransitioning(true);
     try {
       const response = await apiFetchNoAuth<{
         user: ApiUser;
@@ -311,31 +309,66 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       return { requiresEmailVerification: false };
     } finally {
       setIsAuthenticating(false);
-      setIsTransitioning(false);
     }
   }, [acceptPendingInvite, applyAuthResponse]);
 
   const signIn = useCallback(async (email: string, password: string) => {
-    setIsAuthenticating(true);
-    setIsTransitioning(true);
-    try {
-      const response = await apiFetchNoAuth<{
-        user: ApiUser;
-        session: ApiSession | null;
-        memberships?: OrganizationMembershipDTO[];
-        projects?: any[];
-      }>('/auth/signin', {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
-      });
-
-      applyAuthResponse(toAuthUser(response.user), response.session, response.memberships, response.projects);
-      await acceptPendingInvite();
-    } finally {
-      setIsAuthenticating(false);
-      setIsTransitioning(false);
+    // Call Supabase directly from the browser — no Railway round-trip.
+    // This completes in ~150ms vs 1-3s through the backend.
+    const { data, error } = await supabaseBrowser.auth.signInWithPassword({ email, password });
+    if (error || !data.session || !data.user) {
+      throw new Error(error?.message ?? 'Invalid credentials');
     }
-  }, [acceptPendingInvite, applyAuthResponse]);
+
+    const { user: sbUser, session: sbSession } = data;
+    const fullName: string =
+      sbUser.user_metadata?.full_name ??
+      sbUser.user_metadata?.name ??
+      sbUser.email ??
+      'User';
+
+    const nextUser = toAuthUser({
+      id: sbUser.id,
+      email: sbUser.email!,
+      fullName,
+      initials: makeInitials(fullName),
+      provider: (sbUser.app_metadata?.provider === 'google' ? 'google' : 'local') as ApiUser['provider'],
+    });
+
+    const session: ApiSession = {
+      accessToken: sbSession.access_token,
+      refreshToken: sbSession.refresh_token,
+      expiresAt: sbSession.expires_at ?? null,
+    };
+
+    // Set user + session immediately — the caller navigates right after this returns.
+    setStoredSession(session);
+    setUser(nextUser);
+    persistUser(nextUser);
+    setIsTrial(false);
+    setIsLoading(false);
+
+    // Hydrate memberships in the background so the dashboard can show the correct org.
+    // ProjectContext uses the cached org ID from localStorage in the meantime.
+    apiFetch<{ user: ApiUser; memberships?: OrganizationMembershipDTO[] }>('/auth/me', {
+      method: 'GET',
+      token: session.accessToken,
+    }).then((me) => {
+      const nextMemberships = me.memberships ?? [];
+      setMemberships(nextMemberships);
+      const storedOrgId = localStorage.getItem(ORG_STORAGE_KEY);
+      const preferredOrgId =
+        storedOrgId && nextMemberships.some((m) => m.organizationId === storedOrgId)
+          ? storedOrgId
+          : nextMemberships[0]?.organizationId ?? null;
+      setActiveOrganizationIdState(preferredOrgId);
+      if (preferredOrgId) localStorage.setItem(ORG_STORAGE_KEY, preferredOrgId);
+    }).catch(() => {
+      // If /auth/me fails the user can still use the app with the cached org ID.
+    });
+
+    await acceptPendingInvite();
+  }, [acceptPendingInvite]);
 
   const startOAuth = useCallback(async (provider: 'google' = 'google') => {
     const response = await apiFetchNoAuth<{ url: string; codeVerifier: string }>('/auth/oauth', {
@@ -381,27 +414,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     persistUser(guest);
   }, []);
 
-  const signOut = useCallback(async () => {
-    setIsTransitioning(true);
-    try {
-      await apiFetch('/auth/signout', { method: 'POST' });
-    } catch {
-      // Ignore network/signout failures and clear local state.
-    } finally {
-      clearStoredSession();
-      persistUser(null);
-      setUser(null);
-      setMemberships([]);
-      setActiveOrganizationIdState(null);
-      localStorage.removeItem(ORG_STORAGE_KEY);
-      localStorage.removeItem('journi_preloaded_api_projects');
-      localStorage.removeItem('journi_projects');
-      localStorage.removeItem('journi_active_project_id');
-      localStorage.removeItem('journi_activities');
-      localStorage.removeItem('journi_project_overlays');
-      setIsTrial(false);
-      setIsTransitioning(false);
-    }
+  const signOut = useCallback(() => {
+    // Clear all local state synchronously — navigation happens immediately.
+    clearStoredSession();
+    persistUser(null);
+    setUser(null);
+    setMemberships([]);
+    setActiveOrganizationIdState(null);
+    localStorage.removeItem(ORG_STORAGE_KEY);
+    localStorage.removeItem('journi_preloaded_api_projects');
+    localStorage.removeItem('journi_projects');
+    localStorage.removeItem('journi_active_project_id');
+    localStorage.removeItem('journi_activities');
+    localStorage.removeItem('journi_project_overlays');
+    setIsTrial(false);
+
+    // Invalidate the session on the server in the background.
+    apiFetch('/auth/signout', { method: 'POST' }).catch(() => {});
   }, []);
 
   const setActiveOrganizationId = useCallback((organizationId: string) => {
@@ -431,7 +460,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setActiveOrganizationId,
         isLoading,
         isAuthenticating,
-        isTransitioning,
         isTrial,
         signIn,
         signUp,

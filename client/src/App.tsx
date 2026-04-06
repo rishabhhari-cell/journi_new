@@ -4,9 +4,8 @@ import { Route, Switch, useLocation } from "wouter";
 import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { AuthProvider, useAuth } from "./contexts/AuthContext";
+import { AuthProvider } from "./contexts/AuthContext";
 import AuthModal from "./components/auth/AuthModal";
-import LoadingScreen from "./components/LoadingScreen";
 import { ProjectProvider } from "./contexts/ProjectContext";
 import { JournalsProvider } from "./contexts/JournalsContext";
 import { ManuscriptProvider } from "./contexts/ManuscriptContext";
@@ -84,36 +83,24 @@ function Router() {
   );
 }
 
-function AuthGate({ children }: { children: React.ReactNode }) {
-  const { isTransitioning } = useAuth();
-  return (
-    <>
-      {isTransitioning && <LoadingScreen />}
-      {children}
-    </>
-  );
-}
-
 function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
         <AuthProvider>
-          <AuthGate>
-            <ProjectProvider>
-              <JournalsProvider>
-                <ManuscriptProvider>
-                  <SubmissionsProvider>
-                    <TooltipProvider>
-                      <Toaster />
-                      <AuthModal />
-                      <Router />
-                    </TooltipProvider>
-                  </SubmissionsProvider>
-                </ManuscriptProvider>
-              </JournalsProvider>
-            </ProjectProvider>
-          </AuthGate>
+          <ProjectProvider>
+            <JournalsProvider>
+              <ManuscriptProvider>
+                <SubmissionsProvider>
+                  <TooltipProvider>
+                    <Toaster />
+                    <AuthModal />
+                    <Router />
+                  </TooltipProvider>
+                </SubmissionsProvider>
+              </ManuscriptProvider>
+            </JournalsProvider>
+          </ProjectProvider>
         </AuthProvider>
       </ThemeProvider>
     </ErrorBoundary>

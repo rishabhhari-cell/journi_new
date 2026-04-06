@@ -215,10 +215,10 @@ export default function Navbar() {
     setMobileOpen(false);
   }, [location]);
 
-  const handleSignOut = async () => {
+  const handleSignOut = () => {
     setUserMenuOpen(false);
     setMobileOpen(false);
-    await signOut();
+    signOut();
     navigate("/");
   };
 
