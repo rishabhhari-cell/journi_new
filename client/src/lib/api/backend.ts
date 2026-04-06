@@ -532,3 +532,36 @@ export async function acceptOrganizationInvite(token: string) {
     body: JSON.stringify({ token }),
   });
 }
+
+// --- Billing ---
+
+export interface BillingSubscription {
+  userId: string;
+  stripeCustomerId: string | null;
+  stripeSubscriptionId: string | null;
+  status: string;
+  currentPeriodEnd: string | null;
+  planCode: string;
+  cancelAtPeriodEnd: boolean;
+}
+
+export async function createCheckoutSession(billingInterval: 'monthly' | 'yearly') {
+  return apiFetch<{ data: { checkoutUrl: string; sessionId: string } }>('/billing/checkout-session', {
+    method: 'POST',
+    body: JSON.stringify({ billingInterval }),
+  });
+}
+
+export async function fetchBillingStatus() {
+  return apiFetch<{ data: { subscription: BillingSubscription | null; hasProAccess: boolean } }>(
+    '/billing/me',
+    { method: 'GET' },
+  );
+}
+
+export async function createCustomerPortalSession() {
+  return apiFetch<{ data: { url: string } }>('/billing/customer-portal', {
+    method: 'POST',
+    body: JSON.stringify({}),
+  });
+}

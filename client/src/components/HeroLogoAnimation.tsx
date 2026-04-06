@@ -1,8 +1,8 @@
-const LOGO_URL = "/logos/Journie_logo.svg"
+const LOGO_URL = "/logos/Journie_logo-cropped.svg"
 
 export default function HeroLogoAnimation() {
   return (
-    <div className="w-[67.5%]">
+    <div className="w-[78.4%]">
       <img
         src={LOGO_URL}
         alt="Journie"

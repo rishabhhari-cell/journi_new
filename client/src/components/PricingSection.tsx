@@ -9,10 +9,11 @@
  * to keep the table in sync with plan features without touching JSX.
  */
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   CheckCircle2, Minus, Star, ArrowRight,
-  Zap, Users, Building2,
+  Zap, Users, Building2, Loader2,
 } from "lucide-react";
 
 const fadeUp = {
@@ -37,7 +38,8 @@ interface Plan {
   description: string;
   features: string[];
   cta: string;
-  ctaHref: string;
+  /** href used for non-checkout plans (free, team, enterprise) */
+  ctaHref?: string;
   recommended?: boolean;
   icon: React.ComponentType<{ size?: number; className?: string }>;
 }
@@ -98,7 +100,6 @@ const PLANS: Plan[] = [
       "Standard email support",
     ],
     cta: "Get started",
-    ctaHref: "/signup?plan=pro",
     recommended: true,
     icon: Star,
   },
@@ -270,8 +271,19 @@ function PlanFeatureList({ features }: { features: string[] }) {
 
 // ─── PlanCard ────────────────────────────────────────────────────────────────
 
-function PlanCard({ plan, index }: { plan: Plan; index: number }) {
+function PlanCard({
+  plan,
+  index,
+  onCheckout,
+  checkoutLoading,
+}: {
+  plan: Plan;
+  index: number;
+  onCheckout?: () => void;
+  checkoutLoading?: boolean;
+}) {
   const Icon = plan.icon;
+  const isCheckoutPlan = plan.id === "pro";
 
   return (
     <motion.article
@@ -334,21 +346,33 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
       </div>
 
       {/* CTA button */}
-      <a
-        href={plan.ctaHref}
-        className={`inline-flex items-center justify-center gap-2 w-full mt-8 px-5 py-3 rounded-lg text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 ${
-          plan.recommended
-            ? "bg-journi-green text-journi-slate hover:opacity-90"
-            : plan.id === "enterprise"
-            ? "bg-[#9999cc] text-white hover:bg-[#9999cc] hover:text-white hover:font-bold"
-            : "border border-[#9999cc] text-foreground hover:bg-[#9999cc] hover:text-white hover:font-bold"
-        }`}
-      >
-        {plan.cta}
-        {(plan.id === "free" || plan.id === "pro") && (
-          <ArrowRight size={15} aria-hidden="true" />
-        )}
-      </a>
+      {isCheckoutPlan ? (
+        <button
+          type="button"
+          onClick={onCheckout}
+          disabled={checkoutLoading}
+          className={`inline-flex items-center justify-center gap-2 w-full mt-8 px-5 py-3 rounded-lg text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/40 disabled:opacity-70 disabled:cursor-not-allowed bg-journi-green text-journi-slate hover:opacity-90`}
+        >
+          {checkoutLoading ? (
+            <Loader2 size={15} className="animate-spin" aria-hidden="true" />
+          ) : (
+            <ArrowRight size={15} aria-hidden="true" />
+          )}
+          {checkoutLoading ? "Redirecting…" : plan.cta}
+        </button>
+      ) : (
+        <a
+          href={plan.ctaHref}
+          className={`inline-flex items-center justify-center gap-2 w-full mt-8 px-5 py-3 rounded-lg text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9999cc]/40 ${
+            plan.id === "enterprise"
+              ? "bg-[#9999cc] text-white hover:bg-[#9999cc] hover:text-white hover:font-bold"
+              : "border border-[#9999cc] text-foreground hover:bg-[#9999cc] hover:text-white hover:font-bold"
+          }`}
+        >
+          {plan.cta}
+          {plan.id === "free" && <ArrowRight size={15} aria-hidden="true" />}
+        </a>
+      )}
     </motion.article>
   );
 }
@@ -441,7 +465,12 @@ function ComparisonTable() {
 
 // ─── PricingSection ───────────────────────────────────────────────────────────
 
-export default function PricingSection() {
+interface PricingSectionProps {
+  onCheckout?: () => void;
+  checkoutLoading?: boolean;
+}
+
+export default function PricingSection({ onCheckout, checkoutLoading }: PricingSectionProps) {
   return (
     <section
       className="py-20 md:py-28 bg-muted/30"
@@ -471,7 +500,13 @@ export default function PricingSection() {
         {/* Plan cards — 4 across on xl, 2×2 on md, stacked on mobile */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-start">
           {PLANS.map((plan, i) => (
-            <PlanCard key={plan.id} plan={plan} index={i + 1} />
+            <PlanCard
+              key={plan.id}
+              plan={plan}
+              index={i + 1}
+              onCheckout={plan.id === "pro" ? onCheckout : undefined}
+              checkoutLoading={plan.id === "pro" ? checkoutLoading : undefined}
+            />
           ))}
         </div>
 

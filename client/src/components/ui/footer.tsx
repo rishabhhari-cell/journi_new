@@ -152,16 +152,16 @@ export default function StickyFooter() {
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-gradient-to-br from-[#eef8ef] via-[#f5fbf5] to-[#e8f3ea] px-4 py-6 md:px-12 md:py-12"
+            className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-gradient-to-br from-[#f6fcf7] via-[#fbfefb] to-[#f1f8f2] px-4 py-6 md:px-12 md:py-12"
           >
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-black/5" />
 
             <motion.div
               variants={backgroundVariants}
-              className="absolute right-0 top-0 h-52 w-52 rounded-full bg-journi-green/15 blur-3xl md:h-96 md:w-96"
+              className="absolute right-0 top-0 h-52 w-52 rounded-full bg-journi-green/12 blur-3xl md:h-96 md:w-96"
               animate={{
                 scale: [1, 1.1, 1],
-                opacity: [0.08, 0.18, 0.08],
+                opacity: [0.05, 0.12, 0.05],
               }}
               transition={{
                 duration: 4,
@@ -172,10 +172,10 @@ export default function StickyFooter() {
 
             <motion.div
               variants={backgroundVariants}
-              className="absolute bottom-0 left-0 h-52 w-52 rounded-full bg-[#7B71C7]/15 blur-3xl md:h-96 md:w-96"
+              className="absolute bottom-0 left-0 h-52 w-52 rounded-full bg-[#7B71C7]/12 blur-3xl md:h-96 md:w-96"
               animate={{
                 scale: [1, 1.2, 1],
-                opacity: [0.06, 0.14, 0.06],
+                opacity: [0.04, 0.1, 0.04],
               }}
               transition={{
                 duration: 5,
@@ -208,9 +208,13 @@ export default function StickyFooter() {
                     scale: 1.01,
                     transition: { type: "spring" as const, stiffness: 300, damping: 20 },
                   }}
-                  className="w-fit rounded-2xl border border-white/70 bg-white/80 px-5 py-3 shadow-sm"
+                  className="w-fit"
                 >
-                  <img src="/logos/Journie_logo.svg" alt="Journie" className="h-20 w-auto md:h-24 lg:h-28" />
+                  <img
+                    src="/logos/Journie_logo-cropped.svg"
+                    alt="Journie"
+                    className="h-20 w-auto drop-shadow-[0_1px_0_rgba(255,255,255,0.35)] md:h-24 lg:h-28"
+                  />
                 </motion.div>
 
                 <motion.div
@@ -220,7 +224,7 @@ export default function StickyFooter() {
                   className="mt-3 flex items-center gap-3 md:mt-4 md:gap-4"
                 >
                   <motion.div
-                    className="h-0.5 w-8 bg-gradient-to-r from-journi-slate/70 to-journi-slate/40 md:w-12"
+                    className="h-0.5 w-8 bg-gradient-to-r from-[#7B71C7] to-[#685FB4] md:w-12"
                     animate={{
                       scaleX: [1, 1.2, 1],
                     }}
@@ -236,7 +240,8 @@ export default function StickyFooter() {
                     transition={{ delay: 1.4, duration: 0.5 }}
                     className="text-xs text-journi-slate/80 transition-colors duration-300 hover:text-journi-slate md:text-sm"
                   >
-                    {footerData.subtitle}
+                    <span>Your research, </span>
+                    <span className="text-journi-green">simplified.</span>
                   </motion.p>
                 </motion.div>
               </div>
@@ -275,4 +280,3 @@ export default function StickyFooter() {
     </div>
   )
 }
-
