@@ -46,11 +46,20 @@ export default function Pricing() {
     }
   }, [billingResult]);
 
+  // If user just logged in via the modal with a pending checkout, fire immediately
+  useEffect(() => {
+    if (user && localStorage.getItem("pending_checkout") === "true") {
+      localStorage.removeItem("pending_checkout");
+      handleCheckout();
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user]);
+
   async function handleCheckout() {
     setCheckoutError(null);
 
     if (!user) {
-      // Store intent so we could resume after login if desired
+      localStorage.setItem("pending_checkout", "true");
       openModal("signin");
       return;
     }
