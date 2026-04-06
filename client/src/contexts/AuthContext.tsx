@@ -303,18 +303,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       });
 
       if (response.requiresEmailVerification || !response.session) {
-        setIsTransitioning(false);
         return { requiresEmailVerification: true };
       }
 
       applyAuthResponse(toAuthUser(response.user), response.session, response.memberships, response.projects);
       await acceptPendingInvite();
       return { requiresEmailVerification: false };
-    } catch (err) {
-      setIsTransitioning(false);
-      throw err;
     } finally {
       setIsAuthenticating(false);
+      setIsTransitioning(false);
     }
   }, [acceptPendingInvite, applyAuthResponse]);
 
@@ -334,11 +331,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
       applyAuthResponse(toAuthUser(response.user), response.session, response.memberships, response.projects);
       await acceptPendingInvite();
-    } catch (err) {
-      setIsTransitioning(false);
-      throw err;
     } finally {
       setIsAuthenticating(false);
+      setIsTransitioning(false);
     }
   }, [acceptPendingInvite, applyAuthResponse]);
 
