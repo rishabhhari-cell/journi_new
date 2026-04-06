@@ -126,9 +126,9 @@ export default function AuthModal() {
     try {
       await signIn(siEmail, siPassword);
       toast.success('Welcome back!');
-      closeModal();
       const hasPendingCheckout = localStorage.getItem('pending_checkout') === 'true';
       navigate(hasPendingCheckout ? '/pricing' : '/dashboard');
+      closeModal();
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Sign in failed.');
     } finally {
@@ -152,9 +152,9 @@ export default function AuthModal() {
         openModal('signin');
       } else {
         toast.success('Account created — welcome to Journie!');
-        closeModal();
         const hasPendingCheckout = localStorage.getItem('pending_checkout') === 'true';
         navigate(hasPendingCheckout ? '/pricing' : '/dashboard');
+        closeModal();
       }
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Sign up failed.');
