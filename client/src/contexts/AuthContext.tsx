@@ -25,6 +25,7 @@ interface AuthContextType {
   activeOrganizationId: string | null;
   setActiveOrganizationId: (organizationId: string) => void;
   isLoading: boolean;
+  isAuthenticating: boolean;
   isTrial: boolean;
   signIn: (email: string, password: string) => Promise<void>;
   signUp: (name: string, email: string, password: string) => Promise<{ requiresEmailVerification: boolean }>;
@@ -112,6 +113,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   });
   // Start not-loading if we already have a persisted user — bootstrap will silently re-validate
   const [isLoading, setIsLoading] = useState(() => readPersistedUser() === null);
+  const [isAuthenticating, setIsAuthenticating] = useState(false);
   const [isTrial, setIsTrial] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalView, setModalView] = useState<'signin' | 'signup' | 'forgot'>('signin');
@@ -284,39 +286,49 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   );
 
   const signUp = useCallback(async (name: string, email: string, password: string) => {
-    const response = await apiFetchNoAuth<{
-      user: ApiUser;
-      session: ApiSession | null;
-      memberships?: OrganizationMembershipDTO[];
-      projects?: any[];
-      requiresEmailVerification?: boolean;
-    }>('/auth/signup', {
-      method: 'POST',
-      body: JSON.stringify({ fullName: name, email, password }),
-    });
+    setIsAuthenticating(true);
+    try {
+      const response = await apiFetchNoAuth<{
+        user: ApiUser;
+        session: ApiSession | null;
+        memberships?: OrganizationMembershipDTO[];
+        projects?: any[];
+        requiresEmailVerification?: boolean;
+      }>('/auth/signup', {
+        method: 'POST',
+        body: JSON.stringify({ fullName: name, email, password }),
+      });
 
-    if (response.requiresEmailVerification || !response.session) {
-      return { requiresEmailVerification: true };
+      if (response.requiresEmailVerification || !response.session) {
+        return { requiresEmailVerification: true };
+      }
+
+      applyAuthResponse(toAuthUser(response.user), response.session, response.memberships, response.projects);
+      await acceptPendingInvite();
+      return { requiresEmailVerification: false };
+    } finally {
+      setIsAuthenticating(false);
     }
-
-    applyAuthResponse(toAuthUser(response.user), response.session, response.memberships, response.projects);
-    await acceptPendingInvite();
-    return { requiresEmailVerification: false };
   }, [acceptPendingInvite, applyAuthResponse]);
 
   const signIn = useCallback(async (email: string, password: string) => {
-    const response = await apiFetchNoAuth<{
-      user: ApiUser;
-      session: ApiSession | null;
-      memberships?: OrganizationMembershipDTO[];
-      projects?: any[];
-    }>('/auth/signin', {
-      method: 'POST',
-      body: JSON.stringify({ email, password }),
-    });
+    setIsAuthenticating(true);
+    try {
+      const response = await apiFetchNoAuth<{
+        user: ApiUser;
+        session: ApiSession | null;
+        memberships?: OrganizationMembershipDTO[];
+        projects?: any[];
+      }>('/auth/signin', {
+        method: 'POST',
+        body: JSON.stringify({ email, password }),
+      });
 
-    applyAuthResponse(toAuthUser(response.user), response.session, response.memberships, response.projects);
-    await acceptPendingInvite();
+      applyAuthResponse(toAuthUser(response.user), response.session, response.memberships, response.projects);
+      await acceptPendingInvite();
+    } finally {
+      setIsAuthenticating(false);
+    }
   }, [acceptPendingInvite, applyAuthResponse]);
 
   const startOAuth = useCallback(async (provider: 'google' = 'google') => {
@@ -411,6 +423,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         activeOrganizationId: activeOrganization?.organizationId ?? activeOrganizationId ?? null,
         setActiveOrganizationId,
         isLoading,
+        isAuthenticating,
         isTrial,
         signIn,
         signUp,
