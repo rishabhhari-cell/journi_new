@@ -123,19 +123,15 @@ export default function AuthModal() {
     setError('');
     if (!siEmail || !siPassword) return setError('Please fill in all fields.');
     setLoading(true);
-    // Navigate and close modal immediately — dashboard shows a loading state while auth completes
-    const hasPendingCheckout = localStorage.getItem('pending_checkout') === 'true';
-    const destination = hasPendingCheckout ? '/pricing' : '/dashboard';
-    navigate(destination);
-    closeModal();
     try {
       await signIn(siEmail, siPassword);
+      closeModal();
+      const hasPendingCheckout = localStorage.getItem('pending_checkout') === 'true';
+      navigate(hasPendingCheckout ? '/pricing' : '/dashboard');
       toast.success('Welcome back!');
     } catch (err: unknown) {
-      // Auth failed — send back to home and reopen modal with error
-      navigate('/');
-      openModal('signin');
       setError(err instanceof Error ? err.message : 'Sign in failed.');
+    } finally {
       setLoading(false);
     }
   };
@@ -154,16 +150,15 @@ export default function AuthModal() {
         toast.success('Account created. Check your email to verify your account.');
         setSuccess('Verification email sent. Please verify your email, then sign in.');
         openModal('signin');
-        setLoading(false);
       } else {
-        // Navigate and close immediately — dashboard shows loading state while auth settles
+        closeModal();
         const hasPendingCheckout = localStorage.getItem('pending_checkout') === 'true';
         navigate(hasPendingCheckout ? '/pricing' : '/dashboard');
-        closeModal();
         toast.success('Account created — welcome to Journie!');
       }
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Sign up failed.');
+    } finally {
       setLoading(false);
     }
   };

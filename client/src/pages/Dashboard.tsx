@@ -78,7 +78,7 @@ export default function Dashboard() {
     removeCollaborator,
     updateCollaborator,
   } = useProject();
-  const { isTrial, isAuthenticating } = useAuth();
+  const { isTrial } = useAuth();
   const { submissions } = useSubmissions();
   const { manuscripts } = useManuscript();
 
@@ -179,16 +179,14 @@ export default function Dashboard() {
     settings:     { title: 'Settings',           subtitle: 'Project controls and preferences' },
   };
 
-  if (isAuthenticating || (isLoadingProjects && !isTrial)) {
+  if (isLoadingProjects && !isTrial) {
     return (
       <div className="min-h-screen flex flex-col bg-muted/30">
         <Navbar />
         <div className="flex flex-1 items-center justify-center pt-16">
           <div className="flex flex-col items-center gap-3">
             <div className="h-8 w-8 animate-spin rounded-full border-2 border-muted-foreground/20 border-t-journi-green" />
-            <p className="text-sm text-muted-foreground">
-              {isAuthenticating ? 'Signing you in…' : 'Loading your projects…'}
-            </p>
+            <p className="text-sm text-muted-foreground">Loading your projects…</p>
           </div>
         </div>
       </div>

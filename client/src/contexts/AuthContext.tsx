@@ -26,6 +26,7 @@ interface AuthContextType {
   setActiveOrganizationId: (organizationId: string) => void;
   isLoading: boolean;
   isAuthenticating: boolean;
+  isTransitioning: boolean;
   isTrial: boolean;
   signIn: (email: string, password: string) => Promise<void>;
   signUp: (name: string, email: string, password: string) => Promise<{ requiresEmailVerification: boolean }>;
@@ -114,6 +115,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Start not-loading if we already have a persisted user — bootstrap will silently re-validate
   const [isLoading, setIsLoading] = useState(() => readPersistedUser() === null);
   const [isAuthenticating, setIsAuthenticating] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const [isTrial, setIsTrial] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalView, setModalView] = useState<'signin' | 'signup' | 'forgot'>('signin');
@@ -287,6 +289,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signUp = useCallback(async (name: string, email: string, password: string) => {
     setIsAuthenticating(true);
+    setIsTransitioning(true);
     try {
       const response = await apiFetchNoAuth<{
         user: ApiUser;
@@ -300,12 +303,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       });
 
       if (response.requiresEmailVerification || !response.session) {
+        setIsTransitioning(false);
         return { requiresEmailVerification: true };
       }
 
       applyAuthResponse(toAuthUser(response.user), response.session, response.memberships, response.projects);
       await acceptPendingInvite();
       return { requiresEmailVerification: false };
+    } catch (err) {
+      setIsTransitioning(false);
+      throw err;
     } finally {
       setIsAuthenticating(false);
     }
@@ -313,6 +320,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signIn = useCallback(async (email: string, password: string) => {
     setIsAuthenticating(true);
+    setIsTransitioning(true);
     try {
       const response = await apiFetchNoAuth<{
         user: ApiUser;
@@ -326,6 +334,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
       applyAuthResponse(toAuthUser(response.user), response.session, response.memberships, response.projects);
       await acceptPendingInvite();
+    } catch (err) {
+      setIsTransitioning(false);
+      throw err;
     } finally {
       setIsAuthenticating(false);
     }
@@ -376,6 +387,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const signOut = useCallback(async () => {
+    setIsTransitioning(true);
     try {
       await apiFetch('/auth/signout', { method: 'POST' });
     } catch {
@@ -388,12 +400,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setActiveOrganizationIdState(null);
       localStorage.removeItem(ORG_STORAGE_KEY);
       localStorage.removeItem('journi_preloaded_api_projects');
-      // Clear project data so next session starts fresh
       localStorage.removeItem('journi_projects');
       localStorage.removeItem('journi_active_project_id');
       localStorage.removeItem('journi_activities');
       localStorage.removeItem('journi_project_overlays');
       setIsTrial(false);
+      setIsTransitioning(false);
     }
   }, []);
 
@@ -424,6 +436,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setActiveOrganizationId,
         isLoading,
         isAuthenticating,
+        isTransitioning,
         isTrial,
         signIn,
         signUp,

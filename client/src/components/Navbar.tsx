@@ -180,11 +180,11 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const userMenuRef = useRef<HTMLDivElement>(null);
-  const { user, isTrial, isAuthenticating, signOut, openModal, signInAsGuest } = useAuth();
+  const { user, isTrial, signOut, openModal, signInAsGuest } = useAuth();
   const scrolled = useScroll(10);
 
   const isAppRoute = APP_ROUTES.some((r) => location.startsWith(r));
-  const isAuthenticated = !!(user || isTrial) || isAuthenticating;
+  const isAuthenticated = !!(user || isTrial);
 
   // Always show glass on app routes; on public routes, show only when scrolled
   const showGlass = isAppRoute || scrolled;
@@ -215,10 +215,10 @@ export default function Navbar() {
     setMobileOpen(false);
   }, [location]);
 
-  const handleSignOut = () => {
-    signOut();
+  const handleSignOut = async () => {
     setUserMenuOpen(false);
     setMobileOpen(false);
+    await signOut();
     navigate("/");
   };
 
@@ -383,12 +383,10 @@ export default function Navbar() {
                 aria-expanded={userMenuOpen}
               >
                 <div className="w-7 h-7 rounded-full bg-journi-green text-journi-slate text-xs font-bold flex items-center justify-center shrink-0">
-                  {isAuthenticating ? (
-                    <div className="w-3 h-3 rounded-full border-2 border-journi-slate/30 border-t-journi-slate animate-spin" />
-                  ) : (user?.initials ?? "?")}
+                  {user?.initials ?? "?"}
                 </div>
                 <span className="text-sm font-medium text-foreground max-w-[120px] truncate">
-                  {isAuthenticating ? 'Signing in…' : (user?.name ?? "Trial User")}
+                  {user?.name ?? "Trial User"}
                 </span>
                 <ChevronDown
                   size={14}
