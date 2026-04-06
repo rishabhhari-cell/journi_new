@@ -255,9 +255,41 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
       return;
     }
 
+    // --- FAST PATH: If sign-in pre-fetched projects are waiting, apply them synchronously ---
+    // This avoids the loading spinner entirely for the common sign-in case.
+    const preloadedRawSync = localStorage.getItem('journi_preloaded_api_projects');
+    if (preloadedRawSync) {
+      let fastPathSucceeded = false;
+      try {
+        localStorage.removeItem('journi_preloaded_api_projects');
+        const parsed = JSON.parse(preloadedRawSync) as ApiProject[];
+        const mapped = parsed.map(mapApiProjectToUi);
+        if (mapped.length === 0) {
+          setShowOnboarding(true);
+          localStorage.removeItem(PROJECTS_KEY);
+          localStorage.removeItem(ACTIVITIES_KEY);
+          setState({ projects: [], activeId: '' });
+          setAllActivities([]);
+        } else {
+          const preferred = localStorage.getItem(ACTIVE_PROJECT_KEY) || mapped[0].id;
+          const resolved = mapped.some((p) => p.id === preferred) ? preferred : mapped[0].id;
+          setState({ projects: mapped, activeId: resolved });
+          localStorage.setItem(PROJECTS_KEY, JSON.stringify(mapped));
+          localStorage.setItem(ACTIVE_PROJECT_KEY, resolved);
+        }
+        fastPathSucceeded = true;
+      } catch {
+        // Corrupted preloaded data — fall through to network fetch below
+      }
+      if (fastPathSucceeded) {
+        setIsLoadingProjects(false);
+        return;
+      }
+    }
+
     // Immediately clear any stale sample/trial data so it never flashes on screen
     setState((prev) => {
-      if (prev.projects.length > 0 && !localStorage.getItem('journi_preloaded_api_projects')) {
+      if (prev.projects.length > 0) {
         return { projects: [], activeId: '' };
       }
       return prev;

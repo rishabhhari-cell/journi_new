@@ -110,7 +110,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [activeOrganizationId, setActiveOrganizationIdState] = useState<string | null>(() => {
     return localStorage.getItem(ORG_STORAGE_KEY);
   });
-  const [isLoading, setIsLoading] = useState(true);
+  // Start not-loading if we already have a persisted user — bootstrap will silently re-validate
+  const [isLoading, setIsLoading] = useState(() => readPersistedUser() === null);
   const [isTrial, setIsTrial] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalView, setModalView] = useState<'signin' | 'signup' | 'forgot'>('signin');
@@ -254,6 +255,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setUser(nextUser);
       persistUser(nextUser);
       setIsTrial(false);
+      setIsLoading(false);
 
       if (session) {
         setStoredSession(session);

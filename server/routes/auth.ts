@@ -101,16 +101,8 @@ function mapUser(user: any, fullName?: string | null): ApiUser {
 }
 
 /** Fetch memberships for a user, auto-creating a personal workspace if none exist. */
-async function fetchMembershipsWithAutoOrg(
-  userId: string,
-  fullName: string,
-): Promise<OrganizationMembershipDTO[]> {
-  const { data: memberships } = await supabaseAdmin
-    .from("organization_members")
-    .select("organization_id, role, organizations(id, name, slug, created_at)")
-    .eq("user_id", userId);
-
-  let dtos: OrganizationMembershipDTO[] = (memberships ?? [])
+function mapMembershipRows(rows: any[]): OrganizationMembershipDTO[] {
+  return (rows ?? [])
     .map((m: any) => {
       const org = Array.isArray(m.organizations) ? m.organizations[0] : m.organizations;
       if (!org) return null;
@@ -121,37 +113,50 @@ async function fetchMembershipsWithAutoOrg(
       };
     })
     .filter(Boolean) as OrganizationMembershipDTO[];
+}
 
-  if (dtos.length === 0) {
-    const wsName = `${fullName}'s Workspace`;
-    const slug =
-      wsName.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 48) +
-      "-" +
-      crypto.randomBytes(2).toString("hex");
+async function autoCreateOrg(userId: string, fullName: string): Promise<OrganizationMembershipDTO[]> {
+  const wsName = `${fullName}'s Workspace`;
+  const slug =
+    wsName.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 48) +
+    "-" +
+    crypto.randomBytes(2).toString("hex");
 
-    const { data: newOrg } = await supabaseAdmin
-      .from("organizations")
-      .insert({ name: wsName, slug, created_by: userId })
-      .select("id, name, slug, created_at")
-      .single();
+  const { data: newOrg } = await supabaseAdmin
+    .from("organizations")
+    .insert({ name: wsName, slug, created_by: userId })
+    .select("id, name, slug, created_at")
+    .single();
 
-    if (newOrg) {
-      await supabaseAdmin.from("organization_members").upsert({
-        organization_id: newOrg.id,
-        user_id: userId,
-        role: "owner",
-        invited_by: userId,
-      });
-      dtos = [
-        {
-          organizationId: newOrg.id,
-          role: "owner",
-          organization: { id: newOrg.id, name: newOrg.name, slug: newOrg.slug, createdAt: newOrg.created_at },
-        },
-      ];
-    }
-  }
+  if (!newOrg) return [];
 
+  await supabaseAdmin.from("organization_members").upsert({
+    organization_id: newOrg.id,
+    user_id: userId,
+    role: "owner",
+    invited_by: userId,
+  });
+
+  return [
+    {
+      organizationId: newOrg.id,
+      role: "owner",
+      organization: { id: newOrg.id, name: newOrg.name, slug: newOrg.slug, createdAt: newOrg.created_at },
+    },
+  ];
+}
+
+async function fetchMembershipsWithAutoOrg(
+  userId: string,
+  fullName: string,
+): Promise<OrganizationMembershipDTO[]> {
+  const { data: rows } = await supabaseAdmin
+    .from("organization_members")
+    .select("organization_id, role, organizations(id, name, slug, created_at)")
+    .eq("user_id", userId);
+
+  const dtos = mapMembershipRows(rows ?? []);
+  if (dtos.length === 0) return autoCreateOrg(userId, fullName);
   return dtos;
 }
 
@@ -277,9 +282,13 @@ authRouter.post("/signin", async (req, res, next) => {
       throw new HttpError(401, error?.message ?? "Invalid credentials", "SIGNIN_FAILED");
     }
 
-    // Run profile fetch + audit in parallel (profile provides fullName for workspace naming)
-    const [{ data: profile }] = await Promise.all([
+    // Run profile + membership SELECT + audit in parallel (saves one sequential round-trip)
+    const [{ data: profile }, { data: membershipRows }] = await Promise.all([
       supabaseAdmin.from("profiles").select("full_name").eq("id", data.user.id).maybeSingle(),
+      supabaseAdmin
+        .from("organization_members")
+        .select("organization_id, role, organizations(id, name, slug, created_at)")
+        .eq("user_id", data.user.id),
       writeAuditEvent({
         actorUserId: data.user.id,
         eventType: "auth.signin",
@@ -290,11 +299,12 @@ authRouter.post("/signin", async (req, res, next) => {
 
     const fullName = profile?.full_name ?? null;
 
-    // Fetch memberships (may auto-create workspace for new users), then projects
-    const membershipDtos = await fetchMembershipsWithAutoOrg(
-      data.user.id,
-      fullName ?? data.user.email ?? "User",
-    );
+    // Process membership rows; auto-create workspace only if user has none (rare for returning users)
+    let membershipDtos = mapMembershipRows(membershipRows ?? []);
+    if (membershipDtos.length === 0) {
+      membershipDtos = await autoCreateOrg(data.user.id, fullName ?? data.user.email ?? "User");
+    }
+
     const initialProjects = await fetchInitialProjects(membershipDtos[0]?.organizationId);
 
     res.json({
