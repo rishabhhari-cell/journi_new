@@ -335,6 +335,46 @@ authRouter.post("/oauth", async (req, res, next) => {
   }
 });
 
+authRouter.post("/oauth/callback", async (req, res, next) => {
+  try {
+    const { code, codeVerifier } = z
+      .object({ code: z.string().min(1), codeVerifier: z.string().min(1) })
+      .parse(req.body);
+
+    // Exchange PKCE code + verifier directly with Supabase's token endpoint
+    const tokenRes = await fetch(`${env.SUPABASE_URL}/auth/v1/token?grant_type=pkce`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: env.SUPABASE_ANON_KEY,
+      },
+      body: JSON.stringify({ auth_code: code, code_verifier: codeVerifier }),
+    });
+
+    if (!tokenRes.ok) {
+      const err = await tokenRes.json().catch(() => ({})) as Record<string, unknown>;
+      throw new HttpError(400, String(err.message ?? "OAuth code exchange failed"), "OAUTH_EXCHANGE_FAILED");
+    }
+
+    const tokenData = await tokenRes.json() as {
+      access_token: string;
+      refresh_token: string;
+      expires_at?: number;
+      user?: { id?: string };
+    };
+
+    const session: ApiSession = {
+      accessToken: tokenData.access_token,
+      refreshToken: tokenData.refresh_token,
+      expiresAt: tokenData.expires_at ?? null,
+    };
+
+    res.json({ session });
+  } catch (error) {
+    next(error);
+  }
+});
+
 authRouter.post("/refresh", async (req, res, next) => {
   try {
     const input = refreshSchema.parse(req.body);

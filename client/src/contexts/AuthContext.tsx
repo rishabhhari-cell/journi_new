@@ -169,6 +169,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const bootstrap = async () => {
       try {
         stashInviteTokenFromUrl();
+
+        // PKCE OAuth callback — Supabase redirects back with ?code=
+        const urlParams = new URLSearchParams(window.location.search);
+        const oauthCode = urlParams.get('code');
+        const codeVerifier = sessionStorage.getItem('oauth_code_verifier');
+        if (oauthCode && codeVerifier) {
+          sessionStorage.removeItem('oauth_code_verifier');
+          // Clear code from URL immediately
+          window.history.replaceState({}, document.title, window.location.pathname);
+          const exchanged = await apiFetchNoAuth<{ session: ApiSession }>('/auth/oauth/callback', {
+            method: 'POST',
+            body: JSON.stringify({ code: oauthCode, codeVerifier }),
+          });
+          await hydrateFromSession(exchanged.session);
+          await acceptPendingInvite();
+          window.location.replace('/dashboard');
+          return;
+        }
+
         const oauthHash = parseOAuthHash();
         if (oauthHash) {
           await hydrateFromSession(oauthHash.session);
@@ -299,13 +318,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [acceptPendingInvite, applyAuthResponse]);
 
   const startOAuth = useCallback(async (provider: 'google' = 'google') => {
-    const response = await apiFetchNoAuth<{ url: string }>('/auth/oauth', {
+    const response = await apiFetchNoAuth<{ url: string; codeVerifier: string }>('/auth/oauth', {
       method: 'POST',
       body: JSON.stringify({
         provider,
         redirectTo: `${window.location.origin}/`,
       }),
     });
+    // Store verifier so the callback can exchange the PKCE code for a session
+    sessionStorage.setItem('oauth_code_verifier', response.codeVerifier);
     window.location.assign(response.url);
   }, []);
 
