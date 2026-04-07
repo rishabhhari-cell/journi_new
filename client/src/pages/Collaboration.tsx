@@ -37,6 +37,7 @@ import ReferencesSection from '@/components/collaboration/ReferencesSection';
 import CommentThread from '@/components/collaboration/CommentThread';
 import SubmitToJournalDialog from '@/components/publication/SubmitToJournalDialog';
 import ReformatPanel from '@/components/collaboration/ReformatPanel';
+import JLoadingGlyph from '@/components/JLoadingGlyph';
 import { useManuscript } from '@/contexts/ManuscriptContext';
 import type { CitationFormData, CommentFormData, DocumentSection, ManuscriptType } from '@/types';
 import { format } from 'date-fns';
@@ -166,6 +167,7 @@ export default function Collaboration() {
     getSectionByTitle,
     replaceSections,
     replaceManuscriptContent,
+    isHydrating,
   } = useManuscript();
 
   const project = { collaborators: [] as { id: string; name: string; initials: string; online: boolean; role?: string }[] };
@@ -176,6 +178,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   const [titleDraft, setTitleDraft] = useState(manuscript.title);
   const [isExporting, setIsExporting] = useState<'docx' | 'pdf' | null>(null);
   const [isImporting, setIsImporting] = useState(false);
+  const [isReformatting, setIsReformatting] = useState(false);
   const [pendingImportReview, setPendingImportReview] = useState<PendingImportReview | null>(null);
   const [isInfoPanelOpen, setIsInfoPanelOpen] = useState<boolean>(() => {
     try {
@@ -186,6 +189,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     }
   });
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const reformatOverlayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Text selection comment state
   const [selectedText, setSelectedText] = useState('');
@@ -245,6 +249,14 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
       // Ignore storage failures.
     }
   }, [isInfoPanelOpen]);
+
+  useEffect(() => {
+    return () => {
+      if (reformatOverlayTimerRef.current) {
+        clearTimeout(reformatOverlayTimerRef.current);
+      }
+    };
+  }, []);
 
   // "Everything" view
   const isEverythingView = activeSection === '__everything__';
@@ -728,6 +740,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     });
 
     void (async () => {
+      setIsImporting(true);
       try {
         await patchImportSession(session.id, {
           status: 'ready_to_commit',
@@ -746,6 +759,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         console.error('Import session commit failed:', err);
         toast.error('Failed to commit reviewed import. Your review choices were not applied.');
       } finally {
+        setIsImporting(false);
         setPendingImportReview(null);
       }
     })();
@@ -823,6 +837,16 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   };
 
   const handleApplyFormatAction = (action: FormatCheckSafeActionDTO) => {
+    setIsReformatting(true);
+    if (reformatOverlayTimerRef.current) {
+      clearTimeout(reformatOverlayTimerRef.current);
+    }
+    const finishReformat = () => {
+      reformatOverlayTimerRef.current = setTimeout(() => {
+        setIsReformatting(false);
+      }, 550);
+    };
+
     if (action.type === 'rename_heading' && action.sectionId && action.details?.toTitle) {
       replaceSections(
         manuscript.sections.map((section) =>
@@ -831,12 +855,14 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
             : section,
         ),
       );
+      finishReformat();
       return;
     }
 
     if (action.type === 'insert_missing_section' && action.details?.targetTitle) {
       const title = String(action.details.targetTitle);
       if (manuscript.sections.some((section) => section.title.trim().toLowerCase() === title.trim().toLowerCase())) {
+        finishReformat();
         return;
       }
       replaceSections([
@@ -851,11 +877,13 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
           lastEditedAt: new Date(),
         },
       ]);
+      finishReformat();
       return;
     }
 
     if (action.type === 'apply_structured_abstract_template' && action.sectionId && action.details?.templateHtml) {
       updateSectionContent(action.sectionId, String(action.details.templateHtml));
+      finishReformat();
       return;
     }
 
@@ -863,7 +891,10 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
       const orderedTitles = Array.isArray(action.details?.orderedTitles)
         ? action.details?.orderedTitles.map((title) => String(title).trim().toLowerCase())
         : [];
-      if (orderedTitles.length === 0) return;
+      if (orderedTitles.length === 0) {
+        finishReformat();
+        return;
+      }
 
       const withIndex = manuscript.sections.map((section, index) => ({ section, index }));
       withIndex.sort((a, b) => {
@@ -881,6 +912,8 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         })),
       );
     }
+
+    finishReformat();
   };
 
   const handleConfirmSeedImport = () => {
@@ -1542,6 +1575,20 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
           )}
 
           <div className="relative flex flex-1 overflow-hidden">
+            {(isImporting || isReformatting || isHydrating) && (
+              <div className="absolute inset-0 z-[120] flex items-center justify-center bg-white/75 backdrop-blur-[1px]">
+                <div className="flex flex-col items-center gap-2">
+                  <JLoadingGlyph size={56} />
+                  <p className="text-xs font-medium text-muted-foreground">
+                    {isHydrating
+                      ? "Loading manuscript..."
+                      : isReformatting
+                        ? "Applying reformat..."
+                        : "Parsing manuscript..."}
+                  </p>
+                </div>
+              </div>
+            )}
             <button
               type="button"
               onClick={() => setIsInfoPanelOpen((prev) => !prev)}

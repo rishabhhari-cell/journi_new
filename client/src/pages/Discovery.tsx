@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { ExternalLink, FileUp, Loader2, Search, SlidersHorizontal, X } from 'lucide-react';
+import { ExternalLink, FileUp, Search, SlidersHorizontal, X } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import SearchBar from '@/components/discovery/SearchBar';
 import FilterPanel from '@/components/discovery/FilterPanel';
@@ -7,6 +7,7 @@ import Pagination from '@/components/discovery/Pagination';
 import JournalDetailDrawer from '@/components/discovery/JournalDetailDrawer';
 import JournalMarquee from '@/components/discovery/JournalMarquee';
 import OAPolicyBadge from '@/components/discovery/OAPolicyBadge';
+import JLoadingGlyph from '@/components/JLoadingGlyph';
 import { useJournals } from '@/contexts/JournalsContext';
 import type { SortBy } from '@/contexts/JournalsContext';
 import type { Journal } from '@/types';
@@ -149,7 +150,7 @@ export default function Discovery() {
           <section className="space-y-4">
             {isLoading && (
               <div className="flex items-center justify-center gap-2 py-16 text-muted-foreground">
-                <Loader2 size={18} className="animate-spin" />
+                <JLoadingGlyph size={24} />
                 Loading journals...
               </div>
             )}

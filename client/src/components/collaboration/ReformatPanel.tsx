@@ -3,6 +3,7 @@ import {
   X, Wand2, Loader2, CheckCircle2, ChevronDown, ChevronUp,
   BookOpen, AlertTriangle, CheckCheck, ListChecks, CircleHelp,
 } from 'lucide-react';
+import JLoadingGlyph from '@/components/JLoadingGlyph';
 import {
   fetchFormatCheck,
   fetchJournals,
@@ -202,7 +203,7 @@ export default function ReformatPanel({
             >
               {isChecking ? (
                 <>
-                  <Loader2 size={15} className="animate-spin" />
+                  <JLoadingGlyph size={18} />
                   Running format check…
                 </>
               ) : (

@@ -23,6 +23,7 @@ import {
   Settings2,
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
+import JLoadingGlyph from '@/components/JLoadingGlyph';
 import ProjectSwitcher from '@/components/ProjectSwitcher';
 import ListView from '@/components/dashboard/ListView';
 import TaskDialog from '@/components/dashboard/TaskDialog';
@@ -185,7 +186,7 @@ export default function Dashboard() {
         <Navbar />
         <div className="flex flex-1 items-center justify-center pt-16">
           <div className="flex flex-col items-center gap-3">
-            <div className="h-8 w-8 animate-spin rounded-full border-2 border-muted-foreground/20 border-t-journi-green" />
+            <JLoadingGlyph size={44} />
             <p className="text-sm text-muted-foreground">Loading your projects…</p>
           </div>
         </div>

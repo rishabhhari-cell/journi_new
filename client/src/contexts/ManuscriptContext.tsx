@@ -293,6 +293,7 @@ interface ManuscriptContextType {
     sections?: DocumentSection[];
     citations?: Citation[];
   }) => void;
+  isHydrating: boolean;
   addCitation: (citation: CitationFormData) => void;
   addCitations: (citations: CitationFormData[]) => void;
   removeCitation: (citationId: string) => void;
@@ -329,6 +330,7 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
 
   const [activeManuscriptId, setActiveManuscriptId] = useState<string>(() => manuscripts[0]?.id || '');
   const [activeSection, setActiveSection] = useState<string>('Methods');
+  const [hydrationPendingCount, setHydrationPendingCount] = useState(0);
 
   const fallbackManuscript = useMemo(
     () => createEmptyManuscript(activeProject?.id ?? 'mvp-project', 'Untitled Manuscript', 'full_paper'),
@@ -339,6 +341,15 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
     manuscripts.find((doc) => doc.id === activeManuscriptId) ||
     manuscripts[0] ||
     fallbackManuscript;
+  const isHydrating = hydrationPendingCount > 0;
+
+  const beginHydration = useCallback(() => {
+    setHydrationPendingCount((count) => count + 1);
+  }, []);
+
+  const endHydration = useCallback(() => {
+    setHydrationPendingCount((count) => Math.max(0, count - 1));
+  }, []);
 
   const syncSectionsFromYDoc = useCallback((manuscriptId: string) => {
     const yDoc = yDocRef.current;
@@ -395,6 +406,7 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
     if (!backendMode || !activeProject?.id) return;
 
     (async () => {
+      beginHydration();
       try {
         const response = await fetchManuscripts(activeProject.id);
         if (cancelled) return;
@@ -429,6 +441,10 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
         });
       } catch {
         // Keep local fallback if backend fetch fails.
+      } finally {
+        if (!cancelled) {
+          endHydration();
+        }
       }
     })();
 
@@ -442,6 +458,7 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
     if (!backendMode || !manuscript?.id) return;
 
     (async () => {
+      beginHydration();
       try {
         const response = await fetchComments(manuscript.id);
         if (cancelled) return;
@@ -455,6 +472,10 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
         );
       } catch {
         // Keep local comments if backend fetch fails.
+      } finally {
+        if (!cancelled) {
+          endHydration();
+        }
       }
     })();
 
@@ -468,6 +489,7 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
     if (!backendMode || !manuscript?.id) return;
 
     (async () => {
+      beginHydration();
       try {
         const response = await fetchCitations(manuscript.id);
         if (cancelled) return;
@@ -481,6 +503,10 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
         );
       } catch {
         // Keep local citations if backend fetch fails.
+      } finally {
+        if (!cancelled) {
+          endHydration();
+        }
       }
     })();
 
@@ -907,6 +933,7 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
     getSectionByTitle,
     replaceSections,
     replaceManuscriptContent,
+    isHydrating,
     addCitation,
     addCitations,
     removeCitation,
