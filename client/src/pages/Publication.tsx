@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import {
   Plus,
   Send,
@@ -16,7 +16,7 @@ import SubmissionDialog from '@/components/publication/SubmissionDialog';
 import { useSubmissions } from '@/contexts/SubmissionsContext';
 import type { SubmissionStatus, Submission } from '@/types';
 
-// ── Status config ──────────────────────────────────────────────────────────────
+// â”€â”€ Status config â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const STATUS_CONFIG: Record<
   SubmissionStatus,
@@ -35,13 +35,13 @@ const ALL_STATUSES: SubmissionStatus[] = [
 ];
 
 function formatDate(date?: Date) {
-  if (!date) return '—';
+  if (!date) return 'â€”';
   return new Date(date).toLocaleDateString('en-GB', {
     day: 'numeric', month: 'short', year: 'numeric',
   });
 }
 
-// ── Submission Card ────────────────────────────────────────────────────────────
+// â”€â”€ Submission Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function SubmissionCard({ submission }: { submission: Submission }) {
   const { updateSubmissionStatus, deleteSubmission } = useSubmissions();
@@ -142,7 +142,7 @@ function SubmissionCard({ submission }: { submission: Submission }) {
                   ? 'border-blue-400 bg-blue-50 text-blue-500'
                   : 'border-border bg-background text-muted-foreground'
               }`}>
-                {step.done ? '✓' : i + 1}
+                {step.done ? 'âœ“' : i + 1}
               </div>
               <span className="mt-1 text-[9px] text-muted-foreground whitespace-nowrap">{step.step}</span>
             </div>
@@ -176,7 +176,7 @@ function SubmissionCard({ submission }: { submission: Submission }) {
   );
 }
 
-// ── Main Page ──────────────────────────────────────────────────────────────────
+// â”€â”€ Main Page â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 export default function Publication() {
   const { submissions, stats, addSubmission } = useSubmissions();
@@ -193,15 +193,23 @@ export default function Publication() {
       <Navbar />
 
       <div className="min-h-screen bg-muted/20 pt-16">
-        {/* ── Page Header ───────────────────────────────────────────────── */}
-        <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-4 py-10">
-          <div className="container max-w-5xl">
+        {/* â”€â”€ Page Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        <div className="relative overflow-hidden px-4 py-10">
+          <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <MeshGradient
+              className="absolute inset-0 w-full h-full opacity-50"
+              colors={["#FFFFFF", "#D7F0DD", "#BFE5C8", "#D6CFF5", "#E8E2F6"]}
+              speed={0.2}
+            />
+          </div>
+
+          <div className="container relative z-10 max-w-5xl rounded-2xl border border-border/80 bg-white/88 backdrop-blur-sm shadow-lg p-5 md:p-6">
             <div className="flex items-start justify-between gap-4 flex-wrap">
               <div>
-                <h1 className="text-2xl font-extrabold text-white tracking-tight">
+                <h1 className="text-2xl font-extrabold text-foreground tracking-tight">
                   Submission Tracker
                 </h1>
-                <p className="mt-1 text-sm text-white/60">
+                <p className="mt-1 text-sm text-muted-foreground">
                   Manage and monitor your manuscript submissions across journals.
                 </p>
               </div>
@@ -220,12 +228,12 @@ export default function Publication() {
                 {
                   label: 'Total Submissions',
                   value: stats.total,
-                  icon: <FileText size={18} className="text-white/60" />,
+                  icon: <FileText size={18} className="text-muted-foreground" />,
                 },
                 {
                   label: 'Under Review',
                   value: stats.underReview,
-                  icon: <Send size={18} className="text-blue-400" />,
+                  icon: <Send size={18} className="text-blue-600" />,
                 },
                 {
                   label: 'Accepted',
@@ -234,36 +242,27 @@ export default function Publication() {
                 },
                 {
                   label: 'Avg. Review Time',
-                  value: stats.avgReviewTime > 0 ? `${stats.avgReviewTime}d` : '—',
-                  icon: <TrendingUp size={18} className="text-white/60" />,
+                  value: stats.avgReviewTime > 0 ? `${stats.avgReviewTime}d` : 'â€”',
+                  icon: <TrendingUp size={18} className="text-muted-foreground" />,
                 },
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-xl bg-white/5 border border-white/10 px-4 py-3 backdrop-blur-sm"
+                  className="rounded-xl bg-white border border-border px-4 py-3 shadow-sm"
                 >
                   <div className="flex items-center justify-between">
-                    <p className="text-xs text-white/50">{stat.label}</p>
+                    <p className="text-xs text-muted-foreground">{stat.label}</p>
                     {stat.icon}
                   </div>
-                  <p className="mt-1.5 text-2xl font-bold text-white">{stat.value}</p>
+                  <p className="mt-1.5 text-2xl font-bold text-foreground">{stat.value}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* ── Content ───────────────────────────────────────────────────── */}
-        <main className="container max-w-5xl py-8 relative overflow-hidden rounded-2xl">
-          <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-            <MeshGradient
-              className="absolute inset-0 w-full h-full opacity-50"
-              colors={["#FFFFFF", "#D7F0DD", "#BFE5C8", "#D6CFF5", "#E8E2F6"]}
-              speed={0.2}
-            />
-          </div>
-
-          <div className="relative z-10 space-y-5">
+        {/* â”€â”€ Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        <main className="container max-w-5xl py-8 space-y-5">
           {/* Filter tabs */}
           <div className="flex items-center gap-2 flex-wrap">
             {(['all', ...ALL_STATUSES] as const).map((s) => {
@@ -318,7 +317,6 @@ export default function Publication() {
               ))}
             </div>
           )}
-          </div>
         </main>
       </div>
 
@@ -330,3 +328,5 @@ export default function Publication() {
     </>
   );
 }
+
+

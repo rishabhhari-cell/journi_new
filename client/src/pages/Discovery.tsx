@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+﻿import { useMemo, useState } from 'react';
 import { ExternalLink, FileUp, Search, SlidersHorizontal, X } from 'lucide-react';
 import { MeshGradient } from "@paper-design/shaders-react";
 import Navbar from '@/components/Navbar';
@@ -63,13 +63,21 @@ export default function Discovery() {
     <div className="min-h-screen bg-muted/20">
       <Navbar />
 
-      {/* ── Hero Section ──────────────────────────────────────────────────── */}
+      {/* â”€â”€ Hero Section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div
         className={`relative overflow-hidden motion-safe:transition-all motion-safe:duration-500 motion-safe:ease-in-out
           ${isIdle ? 'h-[560px]' : 'h-[120px]'}`}
-        style={{ background: 'linear-gradient(135deg, #eef6ee 0%, #e2f0e2 45%, #eaf5ea 100%)' }}
       >
-        {/* Scattered journal covers — behind everything */}
+        {/* Shader base behind journal covers */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <MeshGradient
+            className="absolute inset-0 w-full h-full opacity-50"
+            colors={["#FFFFFF", "#D7F0DD", "#BFE5C8", "#D6CFF5", "#E8E2F6"]}
+            speed={0.2}
+          />
+        </div>
+
+        {/* Scattered journal covers â€” behind everything */}
         {allJournals.length > 0 && isIdle && (
           <JournalMarquee
             journals={allJournals.slice(0, 40)}
@@ -87,33 +95,35 @@ export default function Discovery() {
 
         {/* Centered hero content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full pt-20 pb-10 px-4">
-          {isIdle && (
-            <div className="text-center mb-8 animate-in fade-in duration-300">
-              <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tight drop-shadow-sm">
-                Find Your Journal
-              </h1>
-              <p className="mt-3 text-base text-muted-foreground max-w-md mx-auto">
-                Search{' '}
-                <span className="font-semibold text-foreground">
-                  {isLoading ? '…' : totalResults.toLocaleString()}
-                </span>{' '}
-                indexed medical journals and shortlist with confidence.
-              </p>
-            </div>
-          )}
+          <div className="w-full max-w-3xl rounded-2xl border border-border/80 bg-white/88 backdrop-blur-sm shadow-lg px-5 py-5 md:px-7 md:py-6">
+            {isIdle && (
+              <div className="text-center mb-6 animate-in fade-in duration-300">
+                <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tight">
+                  Find Your Journal
+                </h1>
+                <p className="mt-3 text-base text-muted-foreground max-w-md mx-auto">
+                  Search{' '}
+                  <span className="font-semibold text-foreground">
+                    {isLoading ? '…' : totalResults.toLocaleString()}
+                  </span>{' '}
+                  indexed medical journals and shortlist with confidence.
+                </p>
+              </div>
+            )}
 
-          {/* Search bar — always visible in hero */}
-          <div className="w-full max-w-2xl">
-            <SearchBar onSearch={setSearchQuery} />
+            {/* Search bar — always visible in hero */}
+            <div className="w-full max-w-2xl mx-auto">
+              <SearchBar onSearch={setSearchQuery} />
+            </div>
           </div>
         </div>
       </div>
 
-      {/* ── Below-hero content ─────────────────────────────────────────────── */}
+      {/* â”€â”€ Below-hero content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <main className="pb-16">
         <section className="container space-y-4 pt-6">
 
-          {/* ── Filter toggle row ───────────────────────────────────────────── */}
+          {/* â”€â”€ Filter toggle row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div className="flex items-center gap-3">
             <button
               onClick={() => setShowFilters((v) => !v)}
@@ -143,21 +153,12 @@ export default function Discovery() {
             )}
           </div>
 
-          {/* Filter panel — shown when toggled */}
+          {/* Filter panel â€” shown when toggled */}
           {showFilters && (
             <FilterPanel filters={filters} onFiltersChange={setFilters} />
           )}
 
-          <section className="relative space-y-4 overflow-hidden rounded-2xl">
-            <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-              <MeshGradient
-                className="absolute inset-0 w-full h-full opacity-50"
-                colors={["#FFFFFF", "#D7F0DD", "#BFE5C8", "#D6CFF5", "#E8E2F6"]}
-                speed={0.2}
-              />
-            </div>
-
-            <div className="relative z-10 space-y-4">
+          <section className="space-y-4">
             {isLoading && (
               <div className="relative min-h-[400px]">
                 <LoadingScreen fullscreen={false} />
@@ -180,7 +181,7 @@ export default function Discovery() {
 
             {!isLoading && cards.length > 0 && (
               <>
-                {/* ── Sort row ──────────────────────────────────────────────── */}
+                {/* â”€â”€ Sort row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
                 <div className="flex items-center justify-between">
                   <p className="text-xs text-muted-foreground">
                     {totalResults.toLocaleString()} result{totalResults !== 1 ? 's' : ''}
@@ -203,7 +204,7 @@ export default function Discovery() {
                   </div>
                 </div>
 
-                {/* ── Journal cards ─────────────────────────────────────────── */}
+                {/* â”€â”€ Journal cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                   {cards.map((journal) => {
                     const ifStr = formatImpactFactor(journal.impactFactor);
@@ -240,7 +241,7 @@ export default function Discovery() {
                                 </p>
                               </div>
                               <span className="text-[11px] text-journi-green shrink-0 opacity-0 group-hover:opacity-100 transition-opacity font-medium pt-0.5">
-                                Details →
+                                Details â†’
                               </span>
                             </div>
 
@@ -248,7 +249,7 @@ export default function Discovery() {
                             <div className="mt-2.5 flex items-baseline gap-3 flex-wrap">
                               <div className="flex items-baseline gap-1 shrink-0">
                                 <span className="text-lg font-extrabold text-foreground leading-none">
-                                  {ifStr ?? '—'}
+                                  {ifStr ?? 'â€”'}
                                 </span>
                                 <span className="text-[9px] text-muted-foreground uppercase tracking-widest font-semibold">
                                   IF
@@ -311,7 +312,6 @@ export default function Discovery() {
               onPageChange={setCurrentPage}
               onResultsPerPageChange={setResultsPerPage}
             />
-            </div>
           </section>
         </section>
       </main>
@@ -320,3 +320,5 @@ export default function Discovery() {
     </div>
   );
 }
+
+
