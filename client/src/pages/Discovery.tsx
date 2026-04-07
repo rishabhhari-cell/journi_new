@@ -1,4 +1,4 @@
-﻿import { useMemo, useState } from 'react';
+﻿import { useMemo, useState, useEffect, useRef } from 'react';
 import { ExternalLink, FileUp, Search, SlidersHorizontal, X } from 'lucide-react';
 import { MeshGradient } from "@paper-design/shaders-react";
 import Navbar from '@/components/Navbar';
@@ -48,6 +48,20 @@ export default function Discovery() {
   const [showFilters, setShowFilters] = useState(false);
 
   const isIdle = !searchQuery.trim();
+
+  // Burst overlay: shown briefly when a search completes (isLoading true → false).
+  const [searchProgress, setSearchProgress] = useState<number | undefined>(undefined);
+  const prevLoadingRef = useRef(isLoading);
+  useEffect(() => {
+    const wasLoading = prevLoadingRef.current;
+    prevLoadingRef.current = isLoading;
+    // Only burst on a real search completing, not the initial idle load.
+    if (wasLoading && !isLoading && !isIdle) {
+      setSearchProgress(100);
+      const hide = setTimeout(() => setSearchProgress(undefined), 1500);
+      return () => clearTimeout(hide);
+    }
+  }, [isLoading, isIdle]);
   const cards = useMemo(() => paginatedJournals, [paginatedJournals]);
 
   const activeFilterCount = [
@@ -71,7 +85,7 @@ export default function Discovery() {
         {/* Shader base behind journal covers */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <MeshGradient
-            className="absolute inset-0 w-full h-full opacity-50"
+            className="absolute inset-0 w-full h-full opacity-[38%]"
             colors={["#FFFFFF", "#D7F0DD", "#BFE5C8", "#D6CFF5", "#E8E2F6"]}
             speed={0.2}
           />
@@ -95,15 +109,15 @@ export default function Discovery() {
 
         {/* Centered hero content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full pt-20 pb-10 px-4">
-          <div className="w-full max-w-3xl rounded-2xl border border-border/80 bg-white/88 backdrop-blur-sm shadow-lg px-5 py-5 md:px-7 md:py-6">
+          <div className="w-full max-w-3xl px-2 md:px-0">
             {isIdle && (
               <div className="text-center mb-6 animate-in fade-in duration-300">
-                <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tight">
+                <h1 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight tracking-tight">
                   Find Your Journal
                 </h1>
-                <p className="mt-3 text-base text-muted-foreground max-w-md mx-auto">
+                <p className="mt-3 text-base text-slate-800 max-w-md mx-auto font-semibold">
                   Search{' '}
-                  <span className="font-semibold text-foreground">
+                  <span className="font-bold text-slate-900">
                     {isLoading ? '…' : totalResults.toLocaleString()}
                   </span>{' '}
                   indexed medical journals and shortlist with confidence.
@@ -159,9 +173,13 @@ export default function Discovery() {
           )}
 
           <section className="space-y-4">
+            {/* Burst overlay when search finishes — all-purple dashes, no J fill */}
+            {searchProgress === 100 && (
+              <LoadingScreen fullscreen={false} progress={searchProgress} hideJFill />
+            )}
             {isLoading && (
               <div className="relative min-h-[400px]">
-                <LoadingScreen fullscreen={false} />
+                <LoadingScreen fullscreen={false} hideJFill />
               </div>
             )}
 

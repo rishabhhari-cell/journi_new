@@ -5,6 +5,8 @@ import { useEffect, useRef, useState } from "react";
 type LoadingScreenProps = {
   progress?: number;
   fullscreen?: boolean;
+  /** Hide the J fill entirely — only the dashes ring + burst are shown. */
+  hideJFill?: boolean;
 };
 
 // J letter path (coordinates relative to translate(643.872746, 940.874899))
@@ -25,7 +27,7 @@ function clampProgress(value: number) {
   return Math.min(100, Math.max(0, value));
 }
 
-export default function LoadingScreen({ progress, fullscreen = true }: LoadingScreenProps) {
+export default function LoadingScreen({ progress, fullscreen = true, hideJFill = false }: LoadingScreenProps) {
   const [internalProgress, setInternalProgress] = useState(0);
   const controlled = typeof progress === "number";
   const safeProgress = clampProgress(controlled ? progress : internalProgress);
@@ -102,41 +104,53 @@ export default function LoadingScreen({ progress, fullscreen = true }: LoadingSc
       >
         {/* Dashes ring with J progress bar overlaid in center */}
         <motion.div animate={burstControls} className="relative h-28 w-28">
-          {/* Dashes ring — color wave + burst animations baked into SVG CSS */}
-          <img
+          {/* Animated color-wave dashes — fades out when burst fires */}
+          <motion.img
             src="/logos/journi_dashes.svg"
             aria-hidden="true"
-            className="h-28 w-28"
+            className="absolute inset-0 h-28 w-28"
+            animate={{ opacity: controlled && safeProgress >= 100 ? 0 : 1 }}
+            transition={{ duration: 0 }}
+          />
+          {/* All-purple dashes — fades in exactly when burst fires */}
+          <motion.img
+            src="/logos/journi_dashes_purple.svg"
+            aria-hidden="true"
+            className="absolute inset-0 h-28 w-28"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: controlled && safeProgress >= 100 ? 1 : 0 }}
+            transition={{ duration: 0 }}
           />
 
-          {/* J progress bar — centered over the ring */}
+          {/* J — green base always visible; purple rising fill shown unless hideJFill */}
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
             <svg
               viewBox={`${J_VB_X} ${J_VB_Y} ${J_VB_W} ${J_VB_H}`}
               className="h-14 w-12"
-              aria-label={`Loading ${Math.round(safeProgress)}%`}
+              aria-label="Loading"
               role="img"
             >
-              <defs>
-                {/* Clip rect rises from bottom to top as progress increases */}
-                <clipPath id="j-fill-clip">
-                  <rect x={J_VB_X} y={fillY} width={J_VB_W} height={fillHeight} />
-                </clipPath>
-              </defs>
-
+              {!hideJFill && (
+                <defs>
+                  <clipPath id="j-fill-clip">
+                    <rect x={J_VB_X} y={fillY} width={J_VB_W} height={fillHeight} />
+                  </clipPath>
+                </defs>
+              )}
               {/* Green J — always visible as base */}
               <g fill="#4fb151" fillOpacity="0.35">
                 <g transform={`translate(${J_TX}, ${J_TY})`}>
                   <path d={J_PATH} />
                 </g>
               </g>
-
-              {/* Purple J — clipped to reveal from bottom as progress rises */}
-              <g fill="#7B71C7" fillOpacity="1" clipPath="url(#j-fill-clip)">
-                <g transform={`translate(${J_TX}, ${J_TY})`}>
-                  <path d={J_PATH} />
+              {/* Purple rising fill — hidden when hideJFill=true */}
+              {!hideJFill && (
+                <g fill="#7B71C7" fillOpacity="1" clipPath="url(#j-fill-clip)">
+                  <g transform={`translate(${J_TX}, ${J_TY})`}>
+                    <path d={J_PATH} />
+                  </g>
                 </g>
-              </g>
+              )}
             </svg>
           </div>
         </motion.div>

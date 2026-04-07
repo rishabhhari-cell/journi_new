@@ -62,6 +62,13 @@ interface CardLayout {
   objectPosition: 'top' | 'center' | 'bottom';
 }
 
+interface Rect {
+  left: number;
+  right: number;
+  top: number;
+  bottom: number;
+}
+
 // ─── Collision detection (axis-aligned bounding boxes + padding) ───────────────
 function overlaps(a: CardLayout, b: CardLayout, pad = 18): boolean {
   return !(
@@ -69,6 +76,20 @@ function overlaps(a: CardLayout, b: CardLayout, pad = 18): boolean {
     a.cx - a.w / 2 - pad > b.cx + b.w / 2 ||
     a.cy + a.h / 2 + pad < b.cy - b.h / 2 ||
     a.cy - a.h / 2 - pad > b.cy + b.h / 2
+  );
+}
+
+function intersectsRect(card: CardLayout, rect: Rect, pad = 10): boolean {
+  const cardLeft = card.cx - card.w / 2 - pad;
+  const cardRight = card.cx + card.w / 2 + pad;
+  const cardTop = card.cy - card.h / 2 - pad;
+  const cardBottom = card.cy + card.h / 2 + pad;
+
+  return !(
+    cardRight < rect.left ||
+    cardLeft > rect.right ||
+    cardBottom < rect.top ||
+    cardTop > rect.bottom
   );
 }
 
@@ -88,6 +109,16 @@ function computeLayout(
   const xMax = containerW - W * 0.05;
   const yMin = -H * 0.15;
   const yMax = containerH + H * 0.15;
+
+  // Keep only the central heading/subtitle lane clear with a guaranteed minimum gap.
+  const textSafeZoneWidth = Math.min(containerW * 0.56, 620);
+  const textSafeZoneHeight = Math.min(containerH * 0.18, 110);
+  const textSafeZone: Rect = {
+    left: containerW / 2 - textSafeZoneWidth / 2,
+    right: containerW / 2 + textSafeZoneWidth / 2,
+    top: containerH * 0.36,
+    bottom: containerH * 0.36 + textSafeZoneHeight,
+  };
 
   const placed: CardLayout[] = [];
   const MAX_ATTEMPTS = 400;
@@ -112,6 +143,10 @@ function computeLayout(
         zIndex: idx,
         objectPosition: positions[Math.floor(Math.random() * positions.length)],
       };
+
+      if (intersectsRect(candidate, textSafeZone, 5)) {
+        continue;
+      }
 
       if (!placed.some(p => overlaps(p, candidate))) {
         placed.push(candidate);
@@ -277,6 +312,8 @@ interface JournalMarqueeProps {
 }
 
 export default function JournalMarquee({ journals, totalAvailable, rows = 4, variant = 'default' }: JournalMarqueeProps) {
+  if (!journals || journals.length === 0) return null;
+
   const effectiveRows = variant === 'hero' ? 1 : rows;
 
   const rowData = useMemo(() => {

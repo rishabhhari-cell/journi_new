@@ -203,7 +203,7 @@ export default function Publication() {
             />
           </div>
 
-          <div className="container relative z-10 max-w-5xl rounded-2xl border border-border/80 bg-white/88 backdrop-blur-sm shadow-lg p-5 md:p-6">
+          <div className="container relative z-10 max-w-5xl">
             <div className="flex items-start justify-between gap-4 flex-wrap">
               <div>
                 <h1 className="text-2xl font-extrabold text-foreground tracking-tight">
