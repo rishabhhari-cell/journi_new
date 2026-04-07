@@ -148,6 +148,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       method: 'GET',
       token: session.accessToken,
     });
+    // If signOut was called while the request was in-flight, discard the result.
+    if (!getStoredSession()) return;
     const nextUser = toAuthUser(me.user);
     const nextMemberships = me.memberships ?? [];
     const storedOrgId = localStorage.getItem(ORG_STORAGE_KEY);
@@ -354,6 +356,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       method: 'GET',
       token: session.accessToken,
     }).then((me) => {
+      if (!getStoredSession()) return; // signOut called while in-flight — discard
       const nextMemberships = me.memberships ?? [];
       setMemberships(nextMemberships);
       const storedOrgId = localStorage.getItem(ORG_STORAGE_KEY);

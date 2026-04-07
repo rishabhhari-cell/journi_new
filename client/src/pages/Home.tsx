@@ -33,13 +33,6 @@ export default function Home() {
   const [, navigate] = useLocation();
   const isAuthenticated = !!(user || isTrial);
 
-  // Authenticated users should never see the landing page — send them straight to the app
-  useEffect(() => {
-    if (isAuthenticated) {
-      navigate('/dashboard', { replace: true });
-    }
-  }, [isAuthenticated, navigate]);
-
   const [animate] = useState(() => {
     try { return !sessionStorage.getItem(HERO_SEEN_KEY); } catch { return false; }
   });
@@ -57,9 +50,6 @@ export default function Home() {
       try { sessionStorage.setItem(HERO_SEEN_KEY, "1"); } catch {}
     }
   }, [phase, animate]);
-
-  // Don't render landing page content while redirect is pending
-  if (isAuthenticated) return null;
 
   return (
     <div className="min-h-screen flex flex-col bg-background">

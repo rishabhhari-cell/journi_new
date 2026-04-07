@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { TimelineContent } from "@/components/ui/timeline-animation";
 import { VerticalCutReveal } from "@/components/ui/vertical-cut-reveal";
 import { cn } from "@/lib/utils";
@@ -12,7 +13,6 @@ import {
   Users,
   Building2,
 } from "lucide-react";
-import { motion } from "motion/react";
 import { useRef, useState } from "react";
 
 // ─── Plan data ────────────────────────────────────────────────────────────────
@@ -214,49 +214,32 @@ const PricingSwitch = ({
 
   return (
     <div className={cn("flex justify-center", className)}>
-      <div className="relative z-10 mx-auto flex w-fit rounded-xl bg-muted border border-border p-1">
-        <button
+      <div className="mx-auto inline-flex items-center gap-2 rounded-lg border border-border bg-muted/40 p-1">
+        <Button
+          type="button"
           onClick={() => handleSwitch("0")}
-          className={cn(
-            "relative z-10 w-fit cursor-pointer h-12 rounded-xl sm:px-6 px-3 sm:py-2 py-1 font-medium transition-colors sm:text-base text-sm",
-            selected === "0"
-              ? "text-white"
-              : "text-muted-foreground hover:text-foreground"
-          )}
+          variant={selected === "0" ? "default" : "outline"}
+          className={cn("h-10 rounded-md px-4 sm:px-6 text-sm sm:text-base", selected !== "0" && "border-transparent bg-transparent")}
         >
-          {selected === "0" && (
-            <motion.span
-              layoutId={"switch"}
-              className="absolute top-0 left-0 h-12 w-full rounded-xl border-4 shadow-sm shadow-journi-green/40 border-journi-green bg-gradient-to-t from-journi-green-dark via-journi-green to-journi-green-light"
-              transition={{ type: "spring", stiffness: 500, damping: 30 }}
-            />
-          )}
-          <span className="relative">Monthly</span>
-        </button>
+          Monthly
+        </Button>
 
-        <button
+        <Button
+          type="button"
           onClick={() => handleSwitch("1")}
+          variant={selected === "1" ? "purple" : "purpleOutline"}
           className={cn(
-            "relative z-10 w-fit cursor-pointer h-12 flex-shrink-0 rounded-xl sm:px-6 px-3 sm:py-2 py-1 font-medium transition-colors sm:text-base text-sm",
-            selected === "1"
-              ? "text-white"
-              : "text-muted-foreground hover:text-foreground"
+            "h-10 rounded-md px-4 sm:px-6 text-sm sm:text-base",
+            selected !== "1" && "border-transparent text-muted-foreground hover:text-white"
           )}
         >
-          {selected === "1" && (
-            <motion.span
-              layoutId={"switch"}
-              className="absolute top-0 left-0 h-12 w-full rounded-xl border-4 shadow-sm shadow-journi-green/40 border-journi-green bg-gradient-to-t from-journi-green-dark via-journi-green to-journi-green-light"
-              transition={{ type: "spring", stiffness: 500, damping: 30 }}
-            />
-          )}
-          <span className="relative flex items-center gap-2">
-            Annually
-            <span className="rounded-full bg-journi-green/15 px-2 py-0.5 text-xs font-medium text-foreground">
+          <span className="flex items-center gap-2">
+            Annual
+            <span className="rounded-full bg-white/60 px-2 py-0.5 text-xs font-medium text-[#685FB4]">
               Save 20%
             </span>
           </span>
-        </button>
+        </Button>
       </div>
     </div>
   );
@@ -495,6 +478,11 @@ export default function PricingSection5({ onCheckout, checkoutLoading }: Pricing
                         )}
                       </div>
                     )}
+                    {isYearly && plan.id === "pro" && plan.yearlyPrice ? (
+                      <p className="text-xs text-[#7B71C7] font-semibold mt-1">
+                        ${plan.yearlyPrice * 12}/m
+                      </p>
+                    ) : null}
                     <p className="text-xs text-muted-foreground mt-1">{plan.billingNote}</p>
                   </div>
 
