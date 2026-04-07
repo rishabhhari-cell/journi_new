@@ -360,31 +360,33 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     };
 
     clearLocalWorkspaceData();
-    // Set user + session immediately — the caller navigates right after this returns.
     setStoredSession(session);
     setUser(nextUser);
     persistUser(nextUser);
     setIsLoading(false);
 
-    // Hydrate memberships in the background so the dashboard can show the correct org.
-    // ProjectContext uses the cached org ID from localStorage in the meantime.
-    apiFetch<{ user: ApiUser; memberships?: OrganizationMembershipDTO[] }>('/auth/me', {
-      method: 'GET',
-      token: session.accessToken,
-    }).then((me) => {
-      if (!getStoredSession()) return; // signOut called while in-flight — discard
-      const nextMemberships = me.memberships ?? [];
-      setMemberships(nextMemberships);
-      const storedOrgId = localStorage.getItem(ORG_STORAGE_KEY);
-      const preferredOrgId =
-        storedOrgId && nextMemberships.some((m) => m.organizationId === storedOrgId)
-          ? storedOrgId
-          : nextMemberships[0]?.organizationId ?? null;
-      setActiveOrganizationIdState(preferredOrgId);
-      if (preferredOrgId) localStorage.setItem(ORG_STORAGE_KEY, preferredOrgId);
-    }).catch(() => {
-      // If /auth/me fails the user can still use the app with the cached org ID.
-    });
+    // Await memberships so activeOrganizationId is set before isAuthenticating→false.
+    // Without this, ProjectContext sees backendMode=false on the first render and the
+    // GlobalLoadingOverlay completes prematurely, then restarts when the org ID arrives.
+    try {
+      const me = await apiFetch<{ user: ApiUser; memberships?: OrganizationMembershipDTO[] }>('/auth/me', {
+        method: 'GET',
+        token: session.accessToken,
+      });
+      if (getStoredSession()) {
+        const nextMemberships = me.memberships ?? [];
+        setMemberships(nextMemberships);
+        const storedOrgId = localStorage.getItem(ORG_STORAGE_KEY);
+        const preferredOrgId =
+          storedOrgId && nextMemberships.some((m) => m.organizationId === storedOrgId)
+            ? storedOrgId
+            : nextMemberships[0]?.organizationId ?? null;
+        setActiveOrganizationIdState(preferredOrgId);
+        if (preferredOrgId) localStorage.setItem(ORG_STORAGE_KEY, preferredOrgId);
+      }
+    } catch {
+      // If /auth/me fails the user can still use the app with the cached org ID from localStorage.
+    }
 
     await acceptPendingInvite();
     } finally {
