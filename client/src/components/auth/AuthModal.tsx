@@ -6,9 +6,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Eye, EyeOff, Mail, Lock, User, AlertCircle, CheckCircle2, Building2, ChevronDown } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
-import { useLocation } from 'wouter';
 import { toast } from 'sonner';
-import LoadingScreen from '@/components/LoadingScreen';
 
 // ── Google icon SVG ───────────────────────────────────────────────────────────
 function GoogleIcon() {
@@ -95,7 +93,6 @@ function Field({
 // ── Main modal ────────────────────────────────────────────────────────────────
 export default function AuthModal() {
   const { modalOpen, modalView, closeModal, signIn, signUp, requestPasswordReset, openModal, startOAuth } = useAuth();
-  const [, navigate] = useLocation();
 
   // Sign-in fields
   const [siEmail, setSiEmail] = useState('');
@@ -128,7 +125,7 @@ export default function AuthModal() {
       await signIn(siEmail, siPassword);
       closeModal();
       const hasPendingCheckout = localStorage.getItem('pending_checkout') === 'true';
-      navigate(hasPendingCheckout ? '/pricing' : '/dashboard');
+      window.dispatchEvent(new CustomEvent('journi:navigate', { detail: { path: hasPendingCheckout ? '/pricing' : '/dashboard' } }));
       toast.success('Welcome back!');
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Sign in failed.');
@@ -154,8 +151,8 @@ export default function AuthModal() {
       } else {
         closeModal();
         const hasPendingCheckout = localStorage.getItem('pending_checkout') === 'true';
-        navigate(hasPendingCheckout ? '/pricing' : '/dashboard');
-        toast.success('Account created — welcome to Journie!');
+        window.dispatchEvent(new CustomEvent('journi:navigate', { detail: { path: hasPendingCheckout ? '/pricing' : '/dashboard' } }));
+        toast.success('Account created — welcome to Journi!');
       }
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Sign up failed.');
@@ -188,8 +185,6 @@ export default function AuthModal() {
   };
 
   return (
-    <>
-      {loading && <LoadingScreen />}
     <AnimatePresence>
       {modalOpen && (
         <motion.div
@@ -490,6 +485,5 @@ export default function AuthModal() {
         </motion.div>
       )}
     </AnimatePresence>
-    </>
   );
 }

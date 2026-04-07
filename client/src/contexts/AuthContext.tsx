@@ -193,11 +193,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const bootstrap = async () => {
-      // When doing a hard redirect to /dashboard, we must NOT call setIsLoading(false)
-      // before the navigation fires — that would briefly un-cover the landing page.
-      // The sessionStorage flag keeps GlobalLoadingOverlay alive across the page reload.
-      let redirecting = false;
-
       try {
         stashInviteTokenFromUrl();
 
@@ -215,10 +210,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           });
           await hydrateFromSession(exchanged.session);
           await acceptPendingInvite();
-          redirecting = true;
-          // Keep GlobalLoadingOverlay visible across the hard page reload
-          sessionStorage.setItem('journi_loading', 'true');
-          window.location.replace('/dashboard');
+          // Client-side navigation — keeps React tree (and GlobalLoadingOverlay) mounted.
+          window.dispatchEvent(new CustomEvent('journi:navigate', { detail: { path: '/dashboard' } }));
           return;
         }
 
@@ -231,9 +224,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             window.history.replaceState({}, document.title, '/reset-password');
             return;
           }
-          redirecting = true;
-          sessionStorage.setItem('journi_loading', 'true');
-          window.location.replace('/dashboard');
+          window.dispatchEvent(new CustomEvent('journi:navigate', { detail: { path: '/dashboard' } }));
           return;
         }
 
@@ -269,10 +260,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setActiveOrganizationIdState(null);
         localStorage.removeItem(ORG_STORAGE_KEY);
       } finally {
-        // Don't call setIsLoading(false) when we're about to hard-navigate — the
-        // finally block fires before the browser actually leaves the page and would
-        // briefly un-cover the landing page underneath.
-        if (!redirecting) setIsLoading(false);
+        setIsLoading(false);
       }
     };
 
@@ -341,6 +329,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [acceptPendingInvite, applyAuthResponse]);
 
   const signIn = useCallback(async (email: string, password: string) => {
+    setIsAuthenticating(true);
+    try {
     // Call Supabase directly from the browser — no Railway round-trip.
     // This completes in ~150ms vs 1-3s through the backend.
     const { data, error } = await supabaseBrowser.auth.signInWithPassword({ email, password });
@@ -397,6 +387,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
 
     await acceptPendingInvite();
+    } finally {
+      setIsAuthenticating(false);
+    }
   }, [acceptPendingInvite]);
 
   const startOAuth = useCallback(async (provider: 'google' = 'google') => {

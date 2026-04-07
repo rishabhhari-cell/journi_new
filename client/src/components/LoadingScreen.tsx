@@ -52,20 +52,18 @@ export default function LoadingScreen({ progress, fullscreen = true }: LoadingSc
     return () => cancelAnimationFrame(frame);
   }, [controlled]);
 
-  // Burst: scale pop when progress nears completion
+  // Burst: fires ONLY when the caller explicitly passes progress=100.
+  // In uncontrolled (looping) mode this never triggers.
   useEffect(() => {
-    if (safeProgress >= 95) {
-      if (!hasBurst.current) {
-        hasBurst.current = true;
-        burstControls.start({
-          scale: [1, 1.15, 1],
-          transition: { duration: 0.45, ease: "easeOut" },
-        });
-      }
-    } else {
-      hasBurst.current = false;
+    if (controlled && safeProgress >= 100 && !hasBurst.current) {
+      hasBurst.current = true;
+      burstControls.start({
+        scale: [1, 1.22, 0.96, 1.08, 1],
+        transition: { duration: 0.7, ease: "easeOut" },
+      });
     }
-  }, [safeProgress, burstControls]);
+    if (!controlled) hasBurst.current = false;
+  }, [controlled, safeProgress, burstControls]);
 
   // Purple J fill: rises from bottom as progress increases
   const fillHeight = (safeProgress / 100) * J_VB_H;

@@ -60,10 +60,31 @@ function NotFound() {
   );
 }
 
+/** Listens for the 'journi:navigate' custom event from AuthContext bootstrap
+ *  and performs a client-side navigation so the React tree (and loading overlay)
+ *  stays mounted across the OAuth → dashboard transition. */
+function PostAuthNavigator() {
+  const [, navigate] = useLocation();
+  const navigateRef = useRef(navigate);
+  useEffect(() => { navigateRef.current = navigate; }, [navigate]);
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const path = (e as CustomEvent<{ path: string }>).detail.path;
+      navigateRef.current(path, { replace: true });
+    };
+    window.addEventListener('journi:navigate', handler);
+    return () => window.removeEventListener('journi:navigate', handler);
+  }, []);
+
+  return null;
+}
+
 function Router() {
   return (
     <>
       <ScrollToTop />
+      <PostAuthNavigator />
       <Switch>
       <Route path="/" component={Home} />
       <Route path="/features" component={Features} />
@@ -85,12 +106,15 @@ function Router() {
 }
 
 /**
- * Fullscreen loading overlay that covers:
+ * Fullscreen loading overlay covering:
  *  1. Initial auth bootstrap (isLoading / isAuthenticating)
- *  2. Project fetch after login (isLoadingProjects)
- *  3. The OAuth→dashboard hard-page-reload gap (sessionStorage 'journi_loading' flag)
+ *  2. Project fetch that runs immediately after OAuth login (isLoadingProjects)
  *
- * When all loading is done, snaps to progress=100 (triggers burst), waits 1 s, then unmounts.
+ * Client-side navigation (PostAuthNavigator) keeps this component mounted across
+ * the OAuth → /dashboard transition, so there is no double-flash.
+ *
+ * Sequence when loading finishes:
+ *   all loading stops → 200 ms settle → progress=100 → burst animation → 2 s → unmount
  */
 function GlobalLoadingOverlay() {
   const { isLoading, isAuthenticating } = useAuth();
@@ -98,14 +122,11 @@ function GlobalLoadingOverlay() {
 
   const isAnyLoading = isLoading || isAuthenticating || isLoadingProjects;
 
-  // Visible if auth is loading now OR the sessionStorage flag was set before a hard redirect.
-  const [visible, setVisible] = useState(
-    () => isLoading || isAuthenticating || sessionStorage.getItem('journi_loading') === 'true',
-  );
+  const [visible, setVisible] = useState(() => isLoading || isAuthenticating);
   const [progress, setProgress] = useState<number | undefined>(undefined);
   const completingRef = useRef(false);
 
-  // If a new auth loading phase starts while overlay is hidden, re-show it.
+  // Re-show if auth loading starts while overlay is hidden (e.g. token refresh).
   useEffect(() => {
     if ((isLoading || isAuthenticating) && !visible) {
       setVisible(true);
@@ -114,36 +135,32 @@ function GlobalLoadingOverlay() {
     }
   }, [isLoading, isAuthenticating, visible]);
 
-  // Drive completion: once all loading stops, snap to 100 % → burst → hide after 1 s.
-  // Use a 200 ms debounce so transient false→true flips (React mount settling) don't
-  // trigger premature completion.
+  // Drive completion. 200 ms debounce absorbs the one-frame gap between
+  // isLoading→false and isLoadingProjects→true (ProjectContext useEffect fires
+  // after the first render of Dashboard, not synchronously).
   useEffect(() => {
     if (!visible) return;
 
     if (isAnyLoading) {
-      // Loading resumed — cancel any in-progress completion sequence.
+      // Loading (re)started — cancel any pending completion.
       completingRef.current = false;
       setProgress(undefined);
       return;
     }
 
-    // Loading appears done — wait briefly to let React settle (ProjectContext useEffect
-    // fires after first render, so isLoadingProjects may not be true yet).
     const settle = setTimeout(() => {
       if (completingRef.current) return;
       completingRef.current = true;
-      sessionStorage.removeItem('journi_loading');
-      setProgress(100);
+      setProgress(100); // snap J to full → burst fires in LoadingScreen
     }, 200);
 
     return () => clearTimeout(settle);
   }, [isAnyLoading, visible]);
 
-  // Separate hide timer: after progress reaches 100 (burst plays for ~450 ms),
-  // keep overlay for the full 1 s then unmount.
+  // Hide overlay 2 s after reaching 100 % (gives burst time to play out).
   useEffect(() => {
     if (progress !== 100) return;
-    const hide = setTimeout(() => setVisible(false), 1000);
+    const hide = setTimeout(() => setVisible(false), 2000);
     return () => clearTimeout(hide);
   }, [progress]);
 
