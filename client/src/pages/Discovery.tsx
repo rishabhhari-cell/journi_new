@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { ExternalLink, FileUp, Search, SlidersHorizontal, X } from 'lucide-react';
+import { MeshGradient } from "@paper-design/shaders-react";
 import Navbar from '@/components/Navbar';
 import SearchBar from '@/components/discovery/SearchBar';
 import FilterPanel from '@/components/discovery/FilterPanel';
@@ -147,7 +148,16 @@ export default function Discovery() {
             <FilterPanel filters={filters} onFiltersChange={setFilters} />
           )}
 
-          <section className="space-y-4">
+          <section className="relative space-y-4 overflow-hidden rounded-2xl">
+            <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+              <MeshGradient
+                className="absolute inset-0 w-full h-full opacity-50"
+                colors={["#FFFFFF", "#D7F0DD", "#BFE5C8", "#D6CFF5", "#E8E2F6"]}
+                speed={0.2}
+              />
+            </div>
+
+            <div className="relative z-10 space-y-4">
             {isLoading && (
               <div className="relative min-h-[400px]">
                 <LoadingScreen fullscreen={false} />
@@ -301,6 +311,7 @@ export default function Discovery() {
               onPageChange={setCurrentPage}
               onResultsPerPageChange={setResultsPerPage}
             />
+            </div>
           </section>
         </section>
       </main>

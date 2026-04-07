@@ -135,14 +135,17 @@ function GlobalLoadingOverlay() {
     }
   }, [isLoading, isAuthenticating, visible]);
 
-  // Drive completion. 200 ms debounce absorbs the one-frame gap between
+  // Drive completion. 400 ms debounce absorbs the React rendering gap between
   // isLoading→false and isLoadingProjects→true (ProjectContext useEffect fires
   // after the first render of Dashboard, not synchronously).
   useEffect(() => {
     if (!visible) return;
 
     if (isAnyLoading) {
-      // Loading (re)started — cancel any pending completion.
+      // Once progress has reached 100 the burst is playing — don't reset it
+      // if a late loading spike arrives (e.g. project fetch starts after settle).
+      if (progress === 100) return;
+      // Loading (re)started before completion — cancel any pending settle.
       completingRef.current = false;
       setProgress(undefined);
       return;
@@ -152,15 +155,15 @@ function GlobalLoadingOverlay() {
       if (completingRef.current) return;
       completingRef.current = true;
       setProgress(100); // snap J to full → burst fires in LoadingScreen
-    }, 200);
+    }, 400);
 
     return () => clearTimeout(settle);
-  }, [isAnyLoading, visible]);
+  }, [isAnyLoading, visible, progress]);
 
-  // Hide overlay 2 s after reaching 100 % (gives burst time to play out).
+  // Hide overlay when burst reaches its peak (1 500 ms matches the burst animation duration).
   useEffect(() => {
     if (progress !== 100) return;
-    const hide = setTimeout(() => setVisible(false), 2000);
+    const hide = setTimeout(() => setVisible(false), 1500);
     return () => clearTimeout(hide);
   }, [progress]);
 

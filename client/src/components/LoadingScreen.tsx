@@ -33,17 +33,20 @@ export default function LoadingScreen({ progress, fullscreen = true }: LoadingSc
   const burstControls = useAnimationControls();
   const hasBurst = useRef(false);
 
-  // Uncontrolled: loop 0→100 repeatedly
+  // Uncontrolled: sine-wave oscillation between 20 % and 75 % so the bar never
+  // appears to "complete" (reach 100 %) and reset — that looked like a double-load.
   useEffect(() => {
     if (controlled) return;
 
     const start = performance.now();
-    const duration = 3200;
+    const duration = 2600; // one full oscillation cycle
     let frame = 0;
 
     const tick = (now: number) => {
       const elapsed = (now - start) % duration;
-      const next = (elapsed / duration) * 100;
+      const t = elapsed / duration; // 0 → 1
+      // Sine wave: starts at minimum (20 %), peaks at 75 %, returns to 20 %
+      const next = 47.5 - 27.5 * Math.cos(2 * Math.PI * t);
       setInternalProgress(next);
       frame = requestAnimationFrame(tick);
     };
@@ -53,13 +56,14 @@ export default function LoadingScreen({ progress, fullscreen = true }: LoadingSc
   }, [controlled]);
 
   // Burst: fires ONLY when the caller explicitly passes progress=100.
-  // In uncontrolled (looping) mode this never triggers.
+  // Slow single expansion — page reveals at the peak (1 500 ms, matching App.tsx hide timer).
+  // In uncontrolled (oscillating) mode this never triggers.
   useEffect(() => {
     if (controlled && safeProgress >= 100 && !hasBurst.current) {
       hasBurst.current = true;
       burstControls.start({
-        scale: [1, 1.22, 0.96, 1.08, 1],
-        transition: { duration: 0.7, ease: "easeOut" },
+        scale: [1, 1.8],
+        transition: { duration: 1.5, ease: [0.16, 1, 0.3, 1] },
       });
     }
     if (!controlled) hasBurst.current = false;
@@ -137,9 +141,12 @@ export default function LoadingScreen({ progress, fullscreen = true }: LoadingSc
           </div>
         </motion.div>
 
-        <p className="text-xs font-semibold text-[#685FB4]">
-          Loading {Math.round(safeProgress)}%
-        </p>
+        {/* No text during burst (progress=100) to keep the animation clean */}
+        {(!controlled || safeProgress < 100) && (
+          <p className="text-xs font-semibold text-[#685FB4]">
+            {controlled ? `Loading ${Math.round(safeProgress)}%` : 'Loading…'}
+          </p>
+        )}
       </motion.div>
     </div>
   );

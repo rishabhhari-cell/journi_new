@@ -10,6 +10,7 @@ import {
   CalendarDays,
   TrendingUp,
 } from 'lucide-react';
+import { MeshGradient } from "@paper-design/shaders-react";
 import Navbar from '@/components/Navbar';
 import SubmissionDialog from '@/components/publication/SubmissionDialog';
 import { useSubmissions } from '@/contexts/SubmissionsContext';
@@ -253,7 +254,16 @@ export default function Publication() {
         </div>
 
         {/* ── Content ───────────────────────────────────────────────────── */}
-        <main className="container max-w-5xl py-8 space-y-5">
+        <main className="container max-w-5xl py-8 relative overflow-hidden rounded-2xl">
+          <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <MeshGradient
+              className="absolute inset-0 w-full h-full opacity-50"
+              colors={["#FFFFFF", "#D7F0DD", "#BFE5C8", "#D6CFF5", "#E8E2F6"]}
+              speed={0.2}
+            />
+          </div>
+
+          <div className="relative z-10 space-y-5">
           {/* Filter tabs */}
           <div className="flex items-center gap-2 flex-wrap">
             {(['all', ...ALL_STATUSES] as const).map((s) => {
@@ -308,6 +318,7 @@ export default function Publication() {
               ))}
             </div>
           )}
+          </div>
         </main>
       </div>
 
