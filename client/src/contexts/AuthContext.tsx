@@ -72,13 +72,14 @@ function persistUser(user: AuthUser | null) {
 }
 
 function clearLocalWorkspaceData() {
-  localStorage.removeItem('journi_projects');
-  localStorage.removeItem('journi_active_project_id');
+  // journi_projects is no longer cached in localStorage — projects always load from backend.
+  // journi_active_project_id is kept intentionally so the last-selected project survives a refresh.
   localStorage.removeItem('journi_activities');
   localStorage.removeItem('journi_manuscripts');
   localStorage.removeItem('journi_manuscript');
   localStorage.removeItem('journi_submissions');
   localStorage.removeItem('journi_project_overlays');
+  localStorage.removeItem('journi_preloaded_api_projects');
 }
 
 function readPersistedUser(): AuthUser | null {
@@ -181,6 +182,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       localStorage.removeItem(ORG_STORAGE_KEY);
     }
     persistUser(nextUser);
+  }, []);
+
+  useEffect(() => {
+    // One-time migration: remove the old project localStorage cache that is no longer used.
+    localStorage.removeItem('journi_projects');
   }, []);
 
   useEffect(() => {

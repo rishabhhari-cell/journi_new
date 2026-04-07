@@ -12,7 +12,6 @@ import {
   type ApiProject,
 } from '@/lib/api/backend';
 
-const PROJECTS_KEY = 'journi_projects';
 const ACTIVE_PROJECT_KEY = 'journi_active_project_id';
 const ACTIVITIES_KEY = 'journi_activities';
 
@@ -66,25 +65,6 @@ interface ProjectContextType {
 
 const ProjectContext = createContext<ProjectContextType | undefined>(undefined);
 
-// Deterministic ORCID backfill for collaborators that predate the ORCID field
-function backfillOrcid(c: Collaborator): Collaborator {
-  if (c.orcidId) return c;
-  const hash = c.id.split('').reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
-  if (hash % 4 === 0) return c;
-  const seg = (n: number) => String(1000 + (Math.abs(n) % 9000)).padStart(4, '0');
-  return { ...c, orcidId: `${seg(hash)}-${seg(hash * 7)}-${seg(hash * 13)}-${seg(hash * 19)}` };
-}
-
-function rehydrateProject(p: Project): Project {
-  return {
-    ...p,
-    createdAt: p.createdAt ? new Date(p.createdAt) : new Date(),
-    updatedAt: p.updatedAt ? new Date(p.updatedAt) : new Date(),
-    dueDate: p.dueDate ? new Date(p.dueDate) : undefined,
-    tasks: (p.tasks || []).map((t) => normalizeTask(t)),
-    collaborators: (p.collaborators || []).map(backfillOrcid),
-  };
-}
 
 function rehydrateActivities(acts: Activity[]): Activity[] {
   return acts.map((a) => ({ ...a, timestamp: a.timestamp ? new Date(a.timestamp) : new Date() }));
@@ -129,20 +109,10 @@ function mapApiProjectToUi(apiProject: ApiProject): Project {
 }
 
 function initProjects(): { projects: Project[]; activeId: string } {
-  try {
-    const stored = localStorage.getItem(PROJECTS_KEY);
-    if (stored) {
-      const parsed: Project[] = JSON.parse(stored);
-      if (parsed.length > 0) {
-        const projects = parsed.map(rehydrateProject);
-        const activeId = localStorage.getItem(ACTIVE_PROJECT_KEY) || projects[0].id;
-        return { projects, activeId };
-      }
-    }
-  } catch {
-    // ignore corrupted storage
-  }
-  return { projects: [], activeId: '' };
+  // Never read stale project data from localStorage — always fetch fresh from the backend.
+  // Only remember which project was last active so the selection survives a refresh.
+  const activeId = localStorage.getItem(ACTIVE_PROJECT_KEY) ?? '';
+  return { projects: [], activeId };
 }
 
 export function ProjectProvider({ children }: { children: ReactNode }) {
@@ -171,6 +141,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     return [];
   });
 
+
   const activities = useMemo(
     () => allActivities.filter((activity) => activity.metadata?.projectId === activeId),
     [allActivities, activeId],
@@ -188,19 +159,11 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
 
     setState({ projects: nextProjects, activeId: resolvedActiveId });
     if (nextProjects.length === 0) {
-      localStorage.removeItem(PROJECTS_KEY);
       localStorage.removeItem(ACTIVE_PROJECT_KEY);
       return;
     }
-    localStorage.setItem(PROJECTS_KEY, JSON.stringify(nextProjects));
     localStorage.setItem(ACTIVE_PROJECT_KEY, resolvedActiveId);
   }, [activeId]);
-
-  // Persist once on mount to save any backfilled fields (e.g. ORCID migration)
-  useEffect(() => {
-    localStorage.setItem(PROJECTS_KEY, JSON.stringify(projects));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   useEffect(() => {
     localStorage.setItem(ACTIVITIES_KEY, JSON.stringify(allActivities));
@@ -213,74 +176,10 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
       return;
     }
 
-    // --- FAST PATH: If sign-in pre-fetched projects are waiting, apply them synchronously ---
-    // This avoids the loading spinner entirely for the common sign-in case.
-    const preloadedRawSync = localStorage.getItem('journi_preloaded_api_projects');
-    if (preloadedRawSync) {
-      let fastPathSucceeded = false;
-      try {
-        localStorage.removeItem('journi_preloaded_api_projects');
-        const parsed = JSON.parse(preloadedRawSync) as ApiProject[];
-        const mapped = parsed.map(mapApiProjectToUi);
-        if (mapped.length === 0) {
-          setShowOnboarding(true);
-          localStorage.removeItem(PROJECTS_KEY);
-          localStorage.removeItem(ACTIVITIES_KEY);
-          setState({ projects: [], activeId: '' });
-          setAllActivities([]);
-        } else {
-          const preferred = localStorage.getItem(ACTIVE_PROJECT_KEY) || mapped[0].id;
-          const resolved = mapped.some((p) => p.id === preferred) ? preferred : mapped[0].id;
-          setState({ projects: mapped, activeId: resolved });
-          localStorage.setItem(PROJECTS_KEY, JSON.stringify(mapped));
-          localStorage.setItem(ACTIVE_PROJECT_KEY, resolved);
-        }
-        fastPathSucceeded = true;
-      } catch {
-        // Corrupted preloaded data — fall through to network fetch below
-      }
-      if (fastPathSucceeded) {
-        setIsLoadingProjects(false);
-        return;
-      }
-    }
-
-    // Immediately clear stale local project data so it never flashes on screen
-    setState((prev) => {
-      if (prev.projects.length > 0) {
-        return { projects: [], activeId: '' };
-      }
-      return prev;
-    });
     setIsLoadingProjects(true);
 
     (async () => {
       try {
-        // --- FAST PATH: Eagerly load pre-fetched projects from Auth Context ---
-        const preloadedRaw = localStorage.getItem('journi_preloaded_api_projects');
-        if (preloadedRaw) {
-          localStorage.removeItem('journi_preloaded_api_projects');
-          const parsed = JSON.parse(preloadedRaw) as ApiProject[];
-          const mapped = parsed.map(mapApiProjectToUi);
-
-          if (mapped.length === 0) {
-            setShowOnboarding(true);
-            localStorage.removeItem(PROJECTS_KEY);
-            localStorage.removeItem(ACTIVITIES_KEY);
-            setState({ projects: [], activeId: '' });
-            setAllActivities([]);
-          } else {
-            const preferred = localStorage.getItem(ACTIVE_PROJECT_KEY) || mapped[0].id;
-            const resolved = mapped.some((p) => p.id === preferred) ? preferred : mapped[0].id;
-            setState({ projects: mapped, activeId: resolved });
-            localStorage.setItem(PROJECTS_KEY, JSON.stringify(mapped));
-            localStorage.setItem(ACTIVE_PROJECT_KEY, resolved);
-          }
-          if (!cancelled) setIsLoadingProjects(false);
-          return;
-        }
-
-        // --- SLOW PATH: Standard Network Fetch ---
         const response = await fetchProjects(activeOrganizationId);
         if (cancelled) return;
 
@@ -289,7 +188,6 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
         if (mapped.length === 0) {
           // New user — show onboarding wizard instead of auto-creating
           setShowOnboarding(true);
-          localStorage.removeItem(PROJECTS_KEY);
           localStorage.removeItem(ACTIVITIES_KEY);
           setState({ projects: [], activeId: '' });
           setAllActivities([]);
@@ -299,10 +197,9 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
         const preferred = localStorage.getItem(ACTIVE_PROJECT_KEY) || mapped[0].id;
         const resolved = mapped.some((p) => p.id === preferred) ? preferred : mapped[0].id;
         setState({ projects: mapped, activeId: resolved });
-        localStorage.setItem(PROJECTS_KEY, JSON.stringify(mapped));
         localStorage.setItem(ACTIVE_PROJECT_KEY, resolved);
       } catch {
-        // Keep local state if backend fetch fails.
+        // Keep in-memory state if backend fetch fails — do not show stale localStorage data.
       } finally {
         if (!cancelled) setIsLoadingProjects(false);
       }
@@ -358,7 +255,6 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     // Use functional state update to avoid stale closures
     setState((prev) => {
       const nextProjects = [...prev.projects, optimisticProject];
-      localStorage.setItem(PROJECTS_KEY, JSON.stringify(nextProjects));
       localStorage.setItem(ACTIVE_PROJECT_KEY, optimisticProject.id);
       return { projects: nextProjects, activeId: optimisticProject.id };
     });
@@ -381,7 +277,6 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
             );
             const nextActiveId = prev.activeId === optimisticProject.id ? mapped.id : prev.activeId;
 
-            localStorage.setItem(PROJECTS_KEY, JSON.stringify(nextProjects));
             localStorage.setItem(ACTIVE_PROJECT_KEY, nextActiveId);
             return { projects: nextProjects, activeId: nextActiveId };
           });

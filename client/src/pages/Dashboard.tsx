@@ -2,7 +2,8 @@
  * Journi Project Dashboard
  * Sidebar nav (Linear-style) with Overview, Tasks, Team, Calendar, Publications
  */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'wouter';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   LayoutGrid,
@@ -34,6 +35,7 @@ import ProjectSettingsPanel from '@/components/settings/ProjectSettingsPanel';
 import { useProject } from '@/contexts/ProjectContext';
 import { useSubmissions } from '@/contexts/SubmissionsContext';
 import { useManuscript } from '@/contexts/ManuscriptContext';
+import { useAuth } from '@/contexts/AuthContext';
 import type { Task, TaskFormData } from '@/types';
 import { format, differenceInDays } from 'date-fns';
 
@@ -66,6 +68,8 @@ const submissionStatusConfig: Record<string, { label: string; text: string; bg: 
 };
 
 export default function Dashboard() {
+  const { user, isLoading: isAuthLoading } = useAuth();
+  const [, navigate] = useLocation();
   const {
     project,
     activities,
@@ -81,6 +85,13 @@ export default function Dashboard() {
   } = useProject();
   const { submissions } = useSubmissions();
   const { manuscripts } = useManuscript();
+
+  // Redirect to home if not authenticated (once bootstrap has settled)
+  useEffect(() => {
+    if (!isAuthLoading && !user) {
+      navigate('/', { replace: true });
+    }
+  }, [isAuthLoading, user, navigate]);
 
   const [activeTab, setActiveTab] = useState<DashboardTab>('overview');
   const [isTaskDialogOpen, setIsTaskDialogOpen] = useState(false);
@@ -180,7 +191,14 @@ export default function Dashboard() {
   };
 
   if (isLoadingProjects) {
-    return <LoadingScreen />;
+    return (
+      <div className="min-h-screen bg-muted/30">
+        <Navbar />
+        <div className="relative mt-16 h-[calc(100vh-4rem)]">
+          <LoadingScreen fullscreen={false} />
+        </div>
+      </div>
+    );
   }
 
   return (
