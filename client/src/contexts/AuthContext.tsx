@@ -158,6 +158,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const hydrateFromSession = useCallback(async (session: ApiSession) => {
+    // Store the session first so the signOut guard below works correctly even on
+    // fresh OAuth logins where no session was previously stored.
+    setStoredSession(session);
     const me = await apiFetch<{ user: ApiUser; memberships?: OrganizationMembershipDTO[] }>('/auth/me', {
       method: 'GET',
       token: session.accessToken,
@@ -172,7 +175,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         ? storedOrgId
         : nextMemberships[0]?.organizationId ?? null;
 
-    setStoredSession(session);
     setUser(nextUser);
     setMemberships(nextMemberships);
     setActiveOrganizationIdState(preferredOrgId);
