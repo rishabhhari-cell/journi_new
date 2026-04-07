@@ -214,27 +214,29 @@ const PricingSwitch = ({
 
   return (
     <div className={cn("flex justify-center", className)}>
-      <div className="mx-auto inline-flex items-center gap-2 rounded-lg border border-border bg-muted/40 p-1">
+      <div className="mx-auto inline-flex items-center gap-2">
         <Button
           type="button"
           onClick={() => handleSwitch("0")}
           variant={selected === "0" ? "default" : "outline"}
-          className={cn("h-10 rounded-md px-4 sm:px-6 text-sm sm:text-base", selected !== "0" && "border-transparent bg-transparent")}
+          size="sm"
+          className={cn("rounded-md px-4 sm:px-6")}
         >
-          Monthly
+          Monthly billing
         </Button>
 
         <Button
           type="button"
           onClick={() => handleSwitch("1")}
           variant={selected === "1" ? "purple" : "purpleOutline"}
+          size="sm"
           className={cn(
-            "h-10 rounded-md px-4 sm:px-6 text-sm sm:text-base",
-            selected !== "1" && "border-transparent text-muted-foreground hover:text-white"
+            "rounded-md px-4 sm:px-6",
+            selected !== "1" && "text-[#685FB4]"
           )}
         >
           <span className="flex items-center gap-2">
-            Annual
+            Annual billing
             <span className="rounded-full bg-white/60 px-2 py-0.5 text-xs font-medium text-[#685FB4]">
               Save 20%
             </span>
@@ -479,8 +481,8 @@ export default function PricingSection5({ onCheckout, checkoutLoading }: Pricing
                       </div>
                     )}
                     {isYearly && plan.id === "pro" && plan.yearlyPrice ? (
-                      <p className="text-xs text-[#7B71C7] font-semibold mt-1">
-                        ${plan.yearlyPrice * 12}/m
+                      <p className="text-sm text-[#7B71C7] font-semibold mt-1">
+                        Billed annually: ${plan.yearlyPrice * 12}/year
                       </p>
                     ) : null}
                     <p className="text-xs text-muted-foreground mt-1">{plan.billingNote}</p>
