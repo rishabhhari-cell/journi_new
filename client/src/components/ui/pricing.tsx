@@ -4,6 +4,7 @@ import { TimelineContent } from "@/components/ui/timeline-animation";
 import { VerticalCutReveal } from "@/components/ui/vertical-cut-reveal";
 import { cn } from "@/lib/utils";
 import NumberFlow from "@number-flow/react";
+import { motion } from "framer-motion";
 import {
   CheckCircle2,
   Minus,
@@ -214,30 +215,54 @@ const PricingSwitch = ({
 
   return (
     <div className={cn("flex justify-center", className)}>
-      <div className="mx-auto inline-flex items-center gap-2">
+      <div className="mx-auto inline-flex items-center rounded-lg border border-border bg-muted/40 p-1">
         <Button
           type="button"
           onClick={() => handleSwitch("0")}
-          variant={selected === "0" ? "default" : "outline"}
+          variant="ghost"
           size="sm"
-          className={cn("rounded-md px-4 sm:px-6")}
+          className={cn(
+            "relative rounded-md px-4 sm:px-6 text-sm font-medium",
+            selected === "0" ? "text-white hover:text-white" : "text-foreground"
+          )}
         >
-          Monthly billing
+          {selected === "0" && (
+            <motion.span
+              layoutId="billing-switch-pill"
+              className="absolute inset-0 z-0 rounded-md bg-primary"
+              transition={{ type: "spring", stiffness: 450, damping: 32 }}
+            />
+          )}
+          <span className="relative z-10">Monthly billing</span>
         </Button>
 
         <Button
           type="button"
           onClick={() => handleSwitch("1")}
-          variant={selected === "1" ? "purple" : "purpleOutline"}
+          variant="ghost"
           size="sm"
           className={cn(
-            "rounded-md px-4 sm:px-6",
-            selected !== "1" && "text-[#685FB4]"
+            "relative rounded-md px-4 sm:px-6 text-sm font-medium",
+            selected === "1" ? "text-white hover:text-white" : "text-[#685FB4]"
           )}
-        >
-          <span className="flex items-center gap-2">
-            Annual billing
-            <span className="rounded-full bg-white/60 px-2 py-0.5 text-xs font-medium text-[#685FB4]">
+          >
+            {selected === "1" && (
+              <motion.span
+                layoutId="billing-switch-pill"
+                className="absolute inset-0 z-0 rounded-md bg-[#7B71C7]"
+                transition={{ type: "spring", stiffness: 450, damping: 32 }}
+              />
+            )}
+            <span className="relative z-10 flex items-center gap-2">
+              Annual billing
+              <span
+                className={cn(
+                "rounded-full px-2 py-0.5 text-xs font-medium",
+                selected === "1"
+                  ? "bg-white/25 text-white"
+                  : "bg-white/60 text-[#685FB4]"
+              )}
+            >
               Save 20%
             </span>
           </span>
@@ -482,7 +507,10 @@ export default function PricingSection5({ onCheckout, checkoutLoading }: Pricing
                     )}
                     {isYearly && plan.id === "pro" && plan.yearlyPrice ? (
                       <p className="text-sm text-[#7B71C7] font-semibold mt-1">
-                        Billed annually: ${plan.yearlyPrice * 12}/year
+                        Billed annually: ${plan.yearlyPrice * 12}/year{" "}
+                        <span className="text-[#7B71C7]/70 line-through font-medium">
+                          $216/yr
+                        </span>
                       </p>
                     ) : null}
                     <p className="text-xs text-muted-foreground mt-1">{plan.billingNote}</p>

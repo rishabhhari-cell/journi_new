@@ -12,7 +12,7 @@ export default function HeroShader({ children, className = "" }: HeroShaderProps
       {/* White base */}
       <div className="absolute inset-0 bg-white" />
 
-      {/* White-first mesh with green-forward streaks + soft purple accent */}
+      {/* White-first mesh with green-forward streaks + slightly stronger purple accents */}
       <motion.div
         className="absolute inset-0"
         initial={{ opacity: 0 }}
@@ -21,8 +21,8 @@ export default function HeroShader({ children, className = "" }: HeroShaderProps
       >
         <MeshGradient
           className="absolute inset-0 w-full h-full opacity-55"
-          colors={["#FFFFFF", "#D7F0DD", "#BFE5C8", "#DAD5F3", "#E9F7EC"]}
-          speed={0.21}
+          colors={["#FFFFFF", "#D7F0DD", "#BFE5C8", "#D6CFF5", "#E8E2F6"]}
+          speed={0.25}
         />
       </motion.div>
 

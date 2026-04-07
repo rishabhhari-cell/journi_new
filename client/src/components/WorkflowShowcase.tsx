@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Link } from "wouter";
 import type { LucideIcon } from "lucide-react";
 import {
   FileText,
@@ -23,8 +22,6 @@ interface WorkflowTab {
   routeLabel: string;
   headline: string;
   supportingCopy: string;
-  ctaLabel: string;
-  ctaHref: string;
   previewVariant: PreviewVariant;
 }
 
@@ -37,8 +34,6 @@ const WORKFLOW_TABS: WorkflowTab[] = [
     headline: "Find the best-fit journal in one ranked view",
     supportingCopy:
       "Match score, review speed, and requirements are surfaced together so you can choose confidently.",
-    ctaLabel: "Open Journal Finder",
-    ctaHref: "/discovery",
     previewVariant: "journal-ranking",
   },
   {
@@ -49,8 +44,6 @@ const WORKFLOW_TABS: WorkflowTab[] = [
     headline: "Write in a structured editor built for submissions",
     supportingCopy:
       "Keep sections and compliance checks aligned while co-authors contribute in one shared workspace.",
-    ctaLabel: "Open Manuscript Editor",
-    ctaHref: "/collaboration",
     previewVariant: "editor-structure",
   },
   {
@@ -61,8 +54,6 @@ const WORKFLOW_TABS: WorkflowTab[] = [
     headline: "Track submissions and revisions without spreadsheet overhead",
     supportingCopy:
       "See statuses at a glance and keep your revision workflow moving from review to resubmission.",
-    ctaLabel: "Open Submission Tracker",
-    ctaHref: "/publication",
     previewVariant: "submission-pipeline",
   },
 ];
@@ -269,14 +260,7 @@ export default function WorkflowShowcase({
           <p className="mt-1 max-w-[54ch] text-xs leading-relaxed text-muted-foreground">
             {currentTab.supportingCopy}
           </p>
-          <div className="mt-2.5">
-            <Link
-              href={currentTab.ctaHref}
-              className="inline-flex items-center gap-1 text-xs font-semibold text-journi-green hover:underline"
-            >
-              {currentTab.ctaLabel}
-            </Link>
-          </div>
+          <div className="mt-2.5 h-[23px]" aria-hidden="true" />
         </div>
       </div>
     </motion.div>
