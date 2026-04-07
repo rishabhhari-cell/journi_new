@@ -193,6 +193,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const bootstrap = async () => {
+      // When doing a hard redirect to /dashboard, we must NOT call setIsLoading(false)
+      // before the navigation fires — that would briefly un-cover the landing page.
+      // The sessionStorage flag keeps GlobalLoadingOverlay alive across the page reload.
+      let redirecting = false;
+
       try {
         stashInviteTokenFromUrl();
 
@@ -210,6 +215,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           });
           await hydrateFromSession(exchanged.session);
           await acceptPendingInvite();
+          redirecting = true;
+          // Keep GlobalLoadingOverlay visible across the hard page reload
+          sessionStorage.setItem('journi_loading', 'true');
           window.location.replace('/dashboard');
           return;
         }
@@ -221,10 +229,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           const isRecovery = oauthHash.type === 'recovery';
           if (isRecovery) {
             window.history.replaceState({}, document.title, '/reset-password');
-            setIsLoading(false);
             return;
           }
-          // Session stored — redirect to dashboard (clears the hash fragment too)
+          redirecting = true;
+          sessionStorage.setItem('journi_loading', 'true');
           window.location.replace('/dashboard');
           return;
         }
@@ -261,7 +269,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setActiveOrganizationIdState(null);
         localStorage.removeItem(ORG_STORAGE_KEY);
       } finally {
-        setIsLoading(false);
+        // Don't call setIsLoading(false) when we're about to hard-navigate — the
+        // finally block fires before the browser actually leaves the page and would
+        // briefly un-cover the landing page underneath.
+        if (!redirecting) setIsLoading(false);
       }
     };
 

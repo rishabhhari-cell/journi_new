@@ -189,6 +189,8 @@ export default function Dashboard() {
     settings:     { title: 'Settings',           subtitle: 'Project controls and preferences' },
   };
 
+  // On first login the GlobalLoadingOverlay (App.tsx) covers this state.
+  // On direct refresh the overlay isn't shown, so keep this bounded screen.
   if (isLoadingProjects) {
     return (
       <div className="min-h-screen bg-muted/30">
