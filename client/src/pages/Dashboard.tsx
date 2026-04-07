@@ -26,7 +26,6 @@ import {
 import Navbar from '@/components/Navbar';
 import LoadingScreen from '@/components/LoadingScreen';
 import JLoadingGlyph from '@/components/JLoadingGlyph';
-import ProjectSwitcher from '@/components/ProjectSwitcher';
 import ListView from '@/components/dashboard/ListView';
 import TaskDialog from '@/components/dashboard/TaskDialog';
 import CollaboratorManager from '@/components/dashboard/CollaboratorManager';
@@ -226,10 +225,9 @@ export default function Dashboard() {
           transition-transform duration-200
           ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         `}>
-          {/* Project switcher + stats */}
+          {/* Project stats */}
           <div className="px-4 mb-4">
-            <ProjectSwitcher variant="sidebar" onSwitch={() => setSidebarOpen(false)} />
-            <div className="mt-3 flex items-center gap-2">
+            <div className="flex items-center gap-2">
               <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-status-progress/15 text-status-progress text-xs font-medium">
                 <span className="w-1.5 h-1.5 rounded-full bg-status-progress" />
                 In Progress

@@ -28,7 +28,6 @@ import TableCell from '@tiptap/extension-table-cell';
 import TableHeader from '@tiptap/extension-table-header';
 import { EditorContent } from '@tiptap/react';
 import Navbar from '@/components/Navbar';
-import ProjectSwitcher from '@/components/ProjectSwitcher';
 import NewManuscriptWizard from '@/components/collaboration/NewManuscriptWizard';
 import type { WizardResult } from '@/components/collaboration/NewManuscriptWizard';
 import EditorToolbar from '@/components/collaboration/EditorToolbar';
@@ -1264,11 +1263,6 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
       <div className="flex flex-1 pt-16">
         {/* Document Outline Sidebar â€” fixed */}
         <aside className="hidden lg:flex flex-col w-56 bg-card border-r border-border pt-4 pb-4 shrink-0 fixed top-16 bottom-0 z-30">
-          {/* Project Switcher */}
-          <div className="px-3 mb-2">
-            <ProjectSwitcher variant="compact" />
-          </div>
-
           {/* Document Switcher */}
           <div className="px-3 mb-3">
             <button
