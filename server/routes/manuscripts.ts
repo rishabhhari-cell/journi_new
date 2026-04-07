@@ -6,8 +6,15 @@ import { supabaseAdmin } from "../lib/supabase";
 import { requireAuth, type AuthedRequest } from "../middleware/auth";
 import { requireProAccess } from "../middleware/billing";
 import { writeAuditEvent } from "../services/audit.service";
+import { buildManuscriptFormatCheck } from "../services/format-check.service";
+import {
+  commitImportSession,
+  createImportSession,
+  getImportSession,
+  updateImportSession,
+} from "../services/import-session.service";
+import { toJournalGuidelinesDto } from "../services/journal-guidelines.service";
 import { parseUploadedDocument } from "../services/manuscript-parse.service";
-import { reformatManuscript } from "../services/reformat.service";
 import { getJournalById } from "../services/journals/search.service";
 
 export const manuscriptsRouter = Router();
@@ -57,6 +64,61 @@ const parseUploadSchema = z.object({
   base64: z.string().min(1),
 });
 
+const importSessionItemSchema = z.object({
+  id: z.string().min(1),
+  type: z.enum(["section", "text_block", "reference", "table_candidate", "figure_caption", "manual_only"]),
+  sourceFormat: z.enum(["docx", "pdf", "image"]),
+  title: z.string().nullable().optional(),
+  text: z.string().nullable().optional(),
+  html: z.string().nullable().optional(),
+  page: z.number().int().nullable().optional(),
+  bbox: z
+    .object({
+      x: z.number(),
+      y: z.number(),
+      width: z.number(),
+      height: z.number(),
+    })
+    .nullable()
+    .optional(),
+  confidence: z.number(),
+  diagnostics: z.array(
+    z.object({
+      level: z.enum(["info", "warning", "error"]),
+      code: z.string(),
+      message: z.string(),
+    }),
+  ),
+  proposedSectionTitle: z.string().nullable().optional(),
+  assignedSectionTitle: z.string().nullable().optional(),
+  decision: z.enum(["pending", "accepted", "rejected"]),
+  metadata: z.record(z.string(), z.unknown()).optional(),
+});
+
+const createImportSessionSchema = z.object({
+  manuscriptId: z.string().uuid().nullable().optional(),
+  fileName: z.string().min(1),
+  fileTitle: z.string().min(1),
+  sourceFormat: z.enum(["docx", "pdf", "image"]),
+  reviewRequired: z.boolean(),
+  status: z.enum(["pending_review", "ready_to_commit", "manual_only", "unsupported"]),
+  unsupportedReason: z.string().nullable().optional(),
+  diagnostics: z.array(
+    z.object({
+      level: z.enum(["info", "warning", "error"]),
+      code: z.string(),
+      message: z.string(),
+    }),
+  ),
+  items: z.array(importSessionItemSchema),
+});
+
+const updateImportSessionSchema = z.object({
+  status: z.enum(["pending_review", "ready_to_commit", "manual_only", "unsupported"]).optional(),
+  unsupportedReason: z.string().nullable().optional(),
+  items: z.array(importSessionItemSchema).optional(),
+});
+
 manuscriptsRouter.use(requireAuth);
 
 manuscriptsRouter.post("/parse", async (req, res, next) => {
@@ -73,6 +135,125 @@ manuscriptsRouter.post("/parse", async (req, res, next) => {
     });
 
     res.json({ data: parsed });
+  } catch (error) {
+    next(error);
+  }
+});
+
+manuscriptsRouter.post("/import-sessions", async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    const input = createImportSessionSchema.parse(req.body);
+
+    let organizationId: string | null = null;
+    if (input.manuscriptId) {
+      const context = await assertManuscriptAccess(authReq.auth.userId, input.manuscriptId, true);
+      organizationId = context.access.organizationId;
+    } else {
+      await assertAnyOrganizationRole(authReq.auth.userId, "viewer");
+    }
+
+    const session = await createImportSession({
+      manuscriptId: input.manuscriptId ?? null,
+      fileName: input.fileName,
+      fileTitle: input.fileTitle,
+      sourceFormat: input.sourceFormat,
+      reviewRequired: input.reviewRequired,
+      status: input.status,
+      unsupportedReason: input.unsupportedReason ?? null,
+      diagnostics: input.diagnostics,
+      items: input.items,
+      actorUserId: authReq.auth.userId,
+    });
+
+    await writeAuditEvent({
+      organizationId,
+      actorUserId: authReq.auth.userId,
+      eventType: "manuscript.import_session.created",
+      entityType: "manuscript_import_session",
+      entityId: session.id,
+      payload: {
+        manuscriptId: input.manuscriptId ?? null,
+        sourceFormat: input.sourceFormat,
+        status: input.status,
+      },
+    });
+
+    res.status(201).json({ data: session });
+  } catch (error) {
+    next(error);
+  }
+});
+
+manuscriptsRouter.get("/import-sessions/:sessionId", async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    const session = await getImportSession(req.params.sessionId);
+    if (!session) {
+      throw new HttpError(404, "Import session not found", "IMPORT_SESSION_NOT_FOUND");
+    }
+
+    if (session.manuscriptId) {
+      await assertManuscriptAccess(authReq.auth.userId, session.manuscriptId, false);
+    } else {
+      await assertAnyOrganizationRole(authReq.auth.userId, "viewer");
+    }
+
+    res.json({ data: session });
+  } catch (error) {
+    next(error);
+  }
+});
+
+manuscriptsRouter.patch("/import-sessions/:sessionId", async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    const existing = await getImportSession(req.params.sessionId);
+    if (!existing) {
+      throw new HttpError(404, "Import session not found", "IMPORT_SESSION_NOT_FOUND");
+    }
+
+    if (existing.manuscriptId) {
+      await assertManuscriptAccess(authReq.auth.userId, existing.manuscriptId, true);
+    } else {
+      await assertAnyOrganizationRole(authReq.auth.userId, "viewer");
+    }
+
+    const input = updateImportSessionSchema.parse(req.body);
+    const updated = await updateImportSession(req.params.sessionId, input);
+    res.json({ data: updated });
+  } catch (error) {
+    next(error);
+  }
+});
+
+manuscriptsRouter.post("/import-sessions/:sessionId/commit", async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    const existing = await getImportSession(req.params.sessionId);
+    if (!existing) {
+      throw new HttpError(404, "Import session not found", "IMPORT_SESSION_NOT_FOUND");
+    }
+    if (!existing.manuscriptId) {
+      throw new HttpError(400, "Import session does not target a manuscript", "IMPORT_SESSION_MANUSCRIPT_REQUIRED");
+    }
+
+    const context = await assertManuscriptAccess(authReq.auth.userId, existing.manuscriptId, true);
+    const committed = await commitImportSession(req.params.sessionId);
+
+    await writeAuditEvent({
+      organizationId: context.access.organizationId,
+      actorUserId: authReq.auth.userId,
+      eventType: "manuscript.import_session.committed",
+      entityType: "manuscript_import_session",
+      entityId: req.params.sessionId,
+      payload: {
+        manuscriptId: existing.manuscriptId,
+        acceptedItems: existing.items.filter((item) => item.decision === "accepted").length,
+      },
+    });
+
+    res.json({ data: committed });
   } catch (error) {
     next(error);
   }
@@ -297,22 +478,18 @@ manuscriptsRouter.get("/:manuscriptId/versions", async (req, res, next) => {
   }
 });
 
-const reformatSchema = z.object({
+const formatCheckSchema = z.object({
   journalId: z.string().uuid(),
 });
 
-// POST /manuscripts/:manuscriptId/reformat
-// Analyses the manuscript against a journal's submission requirements and returns
-// a list of minimal suggested edits (track-changes style). Does NOT auto-save.
-manuscriptsRouter.post("/:manuscriptId/reformat", requireProAccess, async (req, res, next) => {
+manuscriptsRouter.post("/:manuscriptId/format-check", requireProAccess, async (req, res, next) => {
   try {
     const authReq = req as unknown as AuthedRequest;
     const manuscriptId = req.params.manuscriptId;
-    const input = reformatSchema.parse(req.body);
+    const input = formatCheckSchema.parse(req.body);
 
     await assertManuscriptAccess(authReq.auth.userId, manuscriptId, false);
 
-    // Fetch manuscript sections
     const { data: sections, error: sectionsError } = await supabaseAdmin
       .from("manuscript_sections")
       .select("id, title, content_html, sort_order")
@@ -326,35 +503,34 @@ manuscriptsRouter.post("/:manuscriptId/reformat", requireProAccess, async (req, 
       throw new HttpError(400, "Manuscript has no sections to reformat", "MANUSCRIPT_EMPTY");
     }
 
-    // Fetch journal guidelines
+    const { data: citations, error: citationsError } = await supabaseAdmin
+      .from("citations")
+      .select("id")
+      .eq("manuscript_id", manuscriptId);
+
+    if (citationsError) {
+      throw new HttpError(500, citationsError.message, "CITATIONS_LIST_FAILED");
+    }
+
     const journal = await getJournalById(input.journalId);
     if (!journal) {
       throw new HttpError(404, "Journal not found", "JOURNAL_NOT_FOUND");
     }
 
-    const raw = (journal as any).submission_requirements_json as Record<string, unknown> | null;
-
-    const suggestions = await reformatManuscript({
+    const formatCheck = buildManuscriptFormatCheck({
+      manuscriptId,
+      journalId: journal.id,
+      journalName: journal.name,
       manuscriptSections: sections.map((s: any) => ({
         id: s.id,
         title: s.title,
         contentHtml: s.content_html ?? "<p></p>",
       })),
-      journalGuidelines: {
-        journalName: journal.name,
-        wordLimits: (raw?.word_limits as any) ?? null,
-        sectionsRequired: (raw?.sections_required as string[]) ?? null,
-        citationStyle: (raw?.citation_style as string) ?? null,
-        structuredAbstract: (raw?.structured_abstract as boolean) ?? null,
-        figuresMax: (raw?.figures_max as number) ?? null,
-        tablesMax: (raw?.tables_max as number) ?? null,
-        notes: (raw?.notes as string) ?? null,
-        acceptanceRate: (journal as any).acceptance_rate ?? null,
-        avgDecisionDays: (journal as any).avg_decision_days ?? null,
-      },
+      manuscriptCitations: citations ?? [],
+      journalGuidelines: toJournalGuidelinesDto(journal),
     });
 
-    res.json({ data: suggestions });
+    res.json({ data: formatCheck });
   } catch (error) {
     next(error);
   }

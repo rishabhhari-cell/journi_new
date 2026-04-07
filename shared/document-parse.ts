@@ -720,7 +720,15 @@ export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
     }
   }
 
-  const needsReview = raw.format === "pdf";
+  const hasWarnings = diagnostics.some((item) => item.level === "warning" || item.level === "error");
+  const hasLowConfidenceFigures = parsedFigures.some((figure) => figure.confidence < 0.9);
+  const hasLowConfidenceTables = parsedTables.some((table) => table.confidence < 0.9);
+  const needsReview =
+    raw.format === "image" ||
+    hasWarnings ||
+    hasLowConfidenceFigures ||
+    hasLowConfidenceTables ||
+    normalizedBlocks.some((block) => block.confidence < 0.9 || block.diagnostics.length > 0);
 
   return {
     fileTitle,

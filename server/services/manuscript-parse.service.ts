@@ -241,7 +241,7 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
         // 0.85: text-layer extraction is reliable but section/type classification
         // uses heuristic keyword matching — not guaranteed accurate.
         confidence: 0.85,
-        diagnostics: type !== "paragraph" ? [
+        diagnostics: type !== "text" ? [
           {
             level: "info" as const,
             code: "BLOCK_TYPE_HEURISTIC",
@@ -355,7 +355,7 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
 
     // Inform callers that complex Word formatting (tracked changes, embedded objects,
     // custom styles) may not survive the HTML conversion faithfully.
-    const fidelityNote: typeof warnings = [
+    const fidelityNote: ParseDiagnostic[] = [
       {
         level: "info",
         code: "DOCX_FIDELITY_NOTICE",

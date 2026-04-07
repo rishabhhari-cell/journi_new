@@ -41,6 +41,13 @@ import { useManuscript } from '@/contexts/ManuscriptContext';
 import type { CitationFormData, CommentFormData, DocumentSection, ManuscriptType } from '@/types';
 import { format } from 'date-fns';
 import { exportToDocx, exportToPdf, importDocx, importPdf, importImage, type ImportDocumentResult } from '@/lib/document-io';
+import {
+  commitImportSession,
+  createImportSession,
+  patchImportSession,
+  type FormatCheckSafeActionDTO,
+  type ManuscriptImportSessionDTO,
+} from '@/lib/api/backend';
 import { normalizeImportedHtml, normalizePlainImportedText } from '@/lib/import-normalization';
 import { toast } from 'sonner';
 import { countWordsFromHtml } from '@shared/word-count';
@@ -57,6 +64,7 @@ const sectionStatusConfig: Record<string, { color: string; icon: typeof CheckCir
 type ViewTab = 'editor' | 'references' | 'comments';
 interface PendingImportReview {
   result: ImportDocumentResult;
+  session: ManuscriptImportSessionDTO | null;
   blockAssignments: Record<string, string>;
   figureAssignments: Record<string, string>;
   tableAssignments: Record<string, string>;
@@ -77,6 +85,63 @@ const LIT_DATABASES = ['PubMed/MEDLINE', 'Cochrane Library', 'Embase', 'Web of S
 
 function countWords(html: string): number {
   return countWordsFromHtml(html);
+}
+
+function mapCommittedSection(section: {
+  id: string;
+  title: string;
+  content_html: string;
+  status: 'complete' | 'active' | 'draft' | 'pending';
+  sort_order: number;
+  last_edited_by?: string | null;
+  last_edited_at?: string | null;
+}): DocumentSection {
+  return {
+    id: section.id,
+    title: section.title,
+    content: section.content_html || '<p></p>',
+    status: section.status,
+    order: section.sort_order,
+    lastEditedBy: section.last_edited_by ?? undefined,
+    lastEditedAt: section.last_edited_at ? new Date(section.last_edited_at) : undefined,
+  };
+}
+
+function mapCommittedCitation(citation: {
+  id: string;
+  authors: string[];
+  title: string;
+  publication_year: number | null;
+  doi: string | null;
+  url: string | null;
+  citation_type: 'article' | 'book' | 'website' | 'conference';
+  metadata: Record<string, unknown> | null;
+}): CitationFormData & { id: string } {
+  const metadata = (citation.metadata ?? {}) as Record<string, unknown>;
+  return {
+    id: citation.id,
+    authors: citation.authors ?? [],
+    title: citation.title,
+    year: citation.publication_year ?? new Date().getFullYear(),
+    journal: typeof metadata.journal === 'string' ? metadata.journal : undefined,
+    doi: citation.doi ?? undefined,
+    url: citation.url ?? undefined,
+    type: citation.citation_type,
+    volume: typeof metadata.volume === 'string' ? metadata.volume : undefined,
+    issue: typeof metadata.issue === 'string' ? metadata.issue : undefined,
+    pages: typeof metadata.pages === 'string' ? metadata.pages : undefined,
+    publisher: typeof metadata.publisher === 'string' ? metadata.publisher : undefined,
+    metadata,
+    freePdfUrl: typeof metadata.freePdfUrl === 'string' ? metadata.freePdfUrl : undefined,
+    oaStatus:
+      metadata.oaStatus === 'gold' ||
+      metadata.oaStatus === 'hybrid' ||
+      metadata.oaStatus === 'bronze' ||
+      metadata.oaStatus === 'green' ||
+      metadata.oaStatus === 'closed'
+        ? metadata.oaStatus
+        : undefined,
+  };
 }
 
 export default function Collaboration() {
@@ -100,6 +165,7 @@ export default function Collaboration() {
     resolveComment,
     getSectionByTitle,
     replaceSections,
+    replaceManuscriptContent,
   } = useManuscript();
 
   const project = { collaborators: [] as { id: string; name: string; initials: string; online: boolean; role?: string }[] };
@@ -538,6 +604,25 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     if (warnings.length > 0) toast.warning(warnings[0].message);
   };
 
+  const createServerImportSession = async (result: ImportDocumentResult): Promise<ManuscriptImportSessionDTO | null> => {
+    try {
+      const response = await createImportSession({
+        manuscriptId: manuscript.id,
+        fileName: result.fileName,
+        fileTitle: result.title,
+        sourceFormat: result.sourceFormat,
+        reviewRequired: result.review.required,
+        status: result.status === 'committed' ? 'ready_to_commit' : result.status,
+        unsupportedReason: result.unsupportedReason,
+        diagnostics: result.diagnostics,
+        items: result.items,
+      });
+      return response.data;
+    } catch {
+      return null;
+    }
+  };
+
   const buildReviewableSections = (
     result: ImportDocumentResult,
     blockAssignments: Record<string, string>,
@@ -555,9 +640,8 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
       const sectionTitle = blockAssignments[block.id] || block.suggestedSection || 'Content';
       const text = normalizePlainImportedText(block.text || '', { trim: true });
       if (!text) continue;
-      if (block.type === 'caption') push(sectionTitle, `<p><em>${text}</em></p>`);
-      else if (block.type === 'table') push(sectionTitle, `<p>${text}</p>`);
-      else if (block.type === 'reference') push(sectionTitle, `<p>${text}</p>`);
+      if (block.type === 'caption' || block.type === 'table') continue;
+      if (block.type === 'reference') push(sectionTitle, `<p>${text}</p>`);
       else push(sectionTitle, `<p>${text}</p>`);
     }
 
@@ -582,7 +666,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     }));
   };
 
-  const openPdfReview = (result: ImportDocumentResult) => {
+  const openImportReview = (result: ImportDocumentResult, session: ManuscriptImportSessionDTO | null) => {
     const existingTitles = new Set(manuscript.sections.map((section) => section.title.trim()).filter(Boolean));
     const defaultSection = existingTitles.has('Content') ? 'Content' : (manuscript.sections[0]?.title || 'Content');
     const resolve = (suggested?: string) => (suggested && suggested.trim() ? suggested : defaultSection);
@@ -596,16 +680,75 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     const tableAssignments: Record<string, string> = {};
     for (const table of result.review.tables) tableAssignments[table.id] = resolve('Results & Synthesis');
 
-    setPendingImportReview({ result, blockAssignments, figureAssignments, tableAssignments });
+    setPendingImportReview({ result, session, blockAssignments, figureAssignments, tableAssignments });
   };
 
   const handleAcceptImportReview = () => {
     if (!pendingImportReview) return;
-    const { result, blockAssignments, figureAssignments, tableAssignments } = pendingImportReview;
+    const { result, session, blockAssignments, figureAssignments, tableAssignments } = pendingImportReview;
     const sections = buildReviewableSections(result, blockAssignments, figureAssignments, tableAssignments);
-    applyImportedResult({ ...result, sections: sections.length > 0 ? sections : result.sections });
-    setPendingImportReview(null);
-    toast.success('PDF review accepted and imported.');
+
+    if (!session) {
+      applyImportedResult({ ...result, sections: sections.length > 0 ? sections : result.sections });
+      setPendingImportReview(null);
+      toast.success('Import review accepted and applied locally.');
+      return;
+    }
+
+    const nextItems = session.items.map((item) => {
+      if (item.type === 'reference') {
+        return {
+          ...item,
+          assignedSectionTitle: 'References',
+          decision: 'accepted' as const,
+        };
+      }
+
+      if (item.type === 'figure_caption') {
+        return {
+          ...item,
+          assignedSectionTitle: figureAssignments[item.id] || item.assignedSectionTitle || 'Results & Synthesis',
+          decision: 'accepted' as const,
+        };
+      }
+
+      if (item.type === 'table_candidate') {
+        return {
+          ...item,
+          assignedSectionTitle: tableAssignments[item.id] || item.assignedSectionTitle || 'Results & Synthesis',
+          decision: 'accepted' as const,
+        };
+      }
+
+      return {
+        ...item,
+        assignedSectionTitle: blockAssignments[item.id] || item.assignedSectionTitle || item.proposedSectionTitle || 'Content',
+        decision: item.type === 'manual_only' ? 'rejected' as const : 'accepted' as const,
+      };
+    });
+
+    void (async () => {
+      try {
+        await patchImportSession(session.id, {
+          status: 'ready_to_commit',
+          items: nextItems,
+        });
+        const committed = await commitImportSession(session.id);
+        if (result.title?.trim()) {
+          updateTitle(normalizePlainImportedText(result.title, { trim: true }));
+        }
+        replaceManuscriptContent({
+          sections: committed.data.sections.map(mapCommittedSection),
+          citations: committed.data.citations.map(mapCommittedCitation),
+        });
+        toast.success('Import review accepted and committed.');
+      } catch (err) {
+        console.error('Import session commit failed:', err);
+        toast.error('Failed to commit reviewed import. Your review choices were not applied.');
+      } finally {
+        setPendingImportReview(null);
+      }
+    })();
   };
 
   const handleImportFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -625,10 +768,44 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         return;
       }
 
-      if (ext === 'pdf' && result.review.required) {
-        openPdfReview(result);
-        toast.message('Review required', { description: 'Approve section placement for extracted PDF content.' });
+      if (result.status === 'unsupported' || result.status === 'manual_only') {
+        toast.error(result.unsupportedReason || 'This file requires manual handling in the deterministic import flow.');
         return;
+      }
+
+      const session = await createServerImportSession(result);
+
+      if (result.review.required) {
+        openImportReview(result, session);
+        toast.message('Review required', { description: 'Approve extracted content before it is committed.' });
+        return;
+      }
+
+      if (session) {
+        const nextItems = session.items.map((item) => ({
+          ...item,
+          decision: item.type === 'manual_only' ? 'rejected' as const : 'accepted' as const,
+        }));
+
+        try {
+          await patchImportSession(session.id, {
+            status: 'ready_to_commit',
+            items: nextItems,
+          });
+          const committed = await commitImportSession(session.id);
+          if (result.title?.trim()) {
+            updateTitle(normalizePlainImportedText(result.title, { trim: true }));
+          }
+          replaceManuscriptContent({
+            sections: committed.data.sections.map(mapCommittedSection),
+            citations: committed.data.citations.map(mapCommittedCitation),
+          });
+          toast.success('Imported and committed.');
+          return;
+        } catch (err) {
+          console.error('Import session auto-commit failed:', err);
+          toast.error('Automatic commit failed. Falling back to local import preview.');
+        }
       }
 
       applyImportedResult(result);
@@ -645,17 +822,65 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     setSeedConfirmOpen(true);
   };
 
-  const handleReformatAccept = (
-    acceptedSectionId: string,
-    _newHtml: string,
-    _currentHtml: string,
-    originalText: string,
-    suggestedText: string,
-  ) => {
-    const section = manuscript.sections.find((s) => s.id === acceptedSectionId);
-    if (!section) return;
-    const newHtml = section.content.replace(originalText, suggestedText);
-    updateSectionContent(acceptedSectionId, newHtml);
+  const handleApplyFormatAction = (action: FormatCheckSafeActionDTO) => {
+    if (action.type === 'rename_heading' && action.sectionId && action.details?.toTitle) {
+      replaceSections(
+        manuscript.sections.map((section) =>
+          section.id === action.sectionId
+            ? { ...section, title: String(action.details?.toTitle) }
+            : section,
+        ),
+      );
+      return;
+    }
+
+    if (action.type === 'insert_missing_section' && action.details?.targetTitle) {
+      const title = String(action.details.targetTitle);
+      if (manuscript.sections.some((section) => section.title.trim().toLowerCase() === title.trim().toLowerCase())) {
+        return;
+      }
+      replaceSections([
+        ...manuscript.sections,
+        {
+          id: `format-${Date.now()}-${title.toLowerCase().replace(/\s+/g, '-')}`,
+          title,
+          content: '<p></p>',
+          status: 'pending',
+          order: manuscript.sections.length,
+          lastEditedBy: 'Format Check',
+          lastEditedAt: new Date(),
+        },
+      ]);
+      return;
+    }
+
+    if (action.type === 'apply_structured_abstract_template' && action.sectionId && action.details?.templateHtml) {
+      updateSectionContent(action.sectionId, String(action.details.templateHtml));
+      return;
+    }
+
+    if (action.type === 'reorder_sections') {
+      const orderedTitles = Array.isArray(action.details?.orderedTitles)
+        ? action.details?.orderedTitles.map((title) => String(title).trim().toLowerCase())
+        : [];
+      if (orderedTitles.length === 0) return;
+
+      const withIndex = manuscript.sections.map((section, index) => ({ section, index }));
+      withIndex.sort((a, b) => {
+        const aIndex = orderedTitles.indexOf(a.section.title.trim().toLowerCase());
+        const bIndex = orderedTitles.indexOf(b.section.title.trim().toLowerCase());
+        const left = aIndex === -1 ? Number.MAX_SAFE_INTEGER : aIndex;
+        const right = bIndex === -1 ? Number.MAX_SAFE_INTEGER : bIndex;
+        return left === right ? a.index - b.index : left - right;
+      });
+
+      replaceSections(
+        withIndex.map(({ section }, index) => ({
+          ...section,
+          order: index,
+        })),
+      );
+    }
   };
 
   const handleConfirmSeedImport = () => {
@@ -2136,7 +2361,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         isOpen={isReformatOpen}
         onClose={() => setIsReformatOpen(false)}
         manuscriptId={manuscript.id}
-        onAcceptChange={handleReformatAccept}
+        onApplySafeAction={handleApplyFormatAction}
       />
 
       {/* OUP Seed import confirmation */}

@@ -5,6 +5,7 @@ import { HttpError } from "../lib/http-error";
 import { supabaseAdmin } from "../lib/supabase";
 import { requireAuth, type AuthedRequest } from "../middleware/auth";
 import { writeAuditEvent } from "../services/audit.service";
+import { toJournalGuidelinesDto } from "../services/journal-guidelines.service";
 import { ingestJournals } from "../services/journals/ingest.service";
 import { getJournalById, searchJournals } from "../services/journals/search.service";
 import { syncJournals } from "../services/journals/sync.service";
@@ -217,26 +218,7 @@ journalsRouter.get("/:journalId/guidelines", async (req, res, next) => {
       throw new HttpError(404, "Journal not found", "JOURNAL_NOT_FOUND");
     }
 
-    const raw = (journal as any).submission_requirements_json as Record<string, unknown> | null;
-
-    // Return structured guidelines with sensible defaults for null fields
-    const guidelines = {
-      journalId: journal.id,
-      journalName: journal.name,
-      submissionPortalUrl: (journal as any).submission_portal_url ?? null,
-      wordLimits: (raw?.word_limits as Record<string, unknown>) ?? null,
-      sectionsRequired: (raw?.sections_required as string[]) ?? null,
-      citationStyle: (raw?.citation_style as string) ?? null,
-      figuresMax: (raw?.figures_max as number) ?? null,
-      tablesMax: (raw?.tables_max as number) ?? null,
-      structuredAbstract: (raw?.structured_abstract as boolean) ?? null,
-      notes: (raw?.notes as string) ?? null,
-      acceptanceRate: (journal as any).acceptance_rate ?? null,
-      avgDecisionDays: (journal as any).avg_decision_days ?? null,
-      raw: raw ?? null,
-    };
-
-    res.json({ data: guidelines });
+    res.json({ data: toJournalGuidelinesDto(journal) });
   } catch (error) {
     next(error);
   }

@@ -1,5 +1,11 @@
 import type {
+  FormatCheckManualActionDTO,
+  FormatCheckSafeActionDTO,
+  FormatCheckUnsupportedDTO,
   JournalDTO,
+  JournalGuidelinesDTO,
+  ManuscriptFormatCheckDTO,
+  ManuscriptImportSessionDTO,
   OrgRole,
   OrganizationDTO,
   PaginatedResult,
@@ -436,45 +442,75 @@ export async function fetchCitationsFormatted(manuscriptId: string, format: 'van
   );
 }
 
-// --- Journal guidelines ---
-
-export interface JournalGuidelinesDTO {
-  journalId: string;
-  journalName: string;
-  submissionPortalUrl: string | null;
-  wordLimits: { abstract?: number | null; main_text?: number | null; total?: number | null } | null;
-  sectionsRequired: string[] | null;
-  citationStyle: string | null;
-  figuresMax: number | null;
-  tablesMax: number | null;
-  structuredAbstract: boolean | null;
-  notes: string | null;
-  acceptanceRate: number | null;
-  avgDecisionDays: number | null;
-  raw: Record<string, unknown> | null;
-}
-
 export async function fetchJournalGuidelines(journalId: string) {
   return apiFetch<{ data: JournalGuidelinesDTO }>(`/journals/${journalId}/guidelines`, {
     method: 'GET',
   });
 }
 
-// --- Reformatter ---
-
-export interface ReformatSuggestion {
-  sectionId: string;
-  sectionTitle: string;
-  type: 'word_trim' | 'section_add' | 'citation_style' | 'heading_rename' | 'structure';
-  originalText: string;
-  suggestedText: string;
-  reason: string;
-}
-
-export async function reformatManuscript(manuscriptId: string, journalId: string) {
-  return apiFetch<{ data: ReformatSuggestion[] }>(`/manuscripts/${manuscriptId}/reformat`, {
+export async function fetchFormatCheck(manuscriptId: string, journalId: string) {
+  return apiFetch<{ data: ManuscriptFormatCheckDTO }>(`/manuscripts/${manuscriptId}/format-check`, {
     method: 'POST',
     body: JSON.stringify({ journalId }),
+  });
+}
+
+export type {
+  JournalGuidelinesDTO,
+  ManuscriptImportSessionDTO,
+  ManuscriptFormatCheckDTO,
+  FormatCheckSafeActionDTO,
+  FormatCheckManualActionDTO,
+  FormatCheckUnsupportedDTO,
+};
+
+export async function createImportSession(input: {
+  manuscriptId?: string | null;
+  fileName: string;
+  fileTitle: string;
+  sourceFormat: 'docx' | 'pdf' | 'image';
+  reviewRequired: boolean;
+  status: 'pending_review' | 'ready_to_commit' | 'manual_only' | 'unsupported';
+  unsupportedReason?: string | null;
+  diagnostics: Array<{ level: 'info' | 'warning' | 'error'; code: string; message: string }>;
+  items: ManuscriptImportSessionDTO['items'];
+}) {
+  return apiFetch<{ data: ManuscriptImportSessionDTO }>('/manuscripts/import-sessions', {
+    method: 'POST',
+    body: JSON.stringify(input),
+  });
+}
+
+export async function fetchImportSession(sessionId: string) {
+  return apiFetch<{ data: ManuscriptImportSessionDTO }>(`/manuscripts/import-sessions/${sessionId}`, {
+    method: 'GET',
+  });
+}
+
+export async function patchImportSession(
+  sessionId: string,
+  input: {
+    status?: 'pending_review' | 'ready_to_commit' | 'manual_only' | 'unsupported';
+    unsupportedReason?: string | null;
+    items?: ManuscriptImportSessionDTO['items'];
+  },
+) {
+  return apiFetch<{ data: ManuscriptImportSessionDTO }>(`/manuscripts/import-sessions/${sessionId}`, {
+    method: 'PATCH',
+    body: JSON.stringify(input),
+  });
+}
+
+export async function commitImportSession(sessionId: string) {
+  return apiFetch<{
+    data: {
+      session: ManuscriptImportSessionDTO;
+      sections: ApiManuscriptSection[];
+      citations: ApiCitation[];
+    };
+  }>(`/manuscripts/import-sessions/${sessionId}/commit`, {
+    method: 'POST',
+    body: JSON.stringify({}),
   });
 }
 

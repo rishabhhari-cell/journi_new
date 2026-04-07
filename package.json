@@ -16,7 +16,6 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.80.0",
     "@hookform/resolvers": "^5.2.2",
     "@number-flow/react": "^0.6.0",
     "@paper-design/shaders-react": "^0.0.72",

@@ -288,6 +288,11 @@ interface ManuscriptContextType {
   getSection: (sectionId: string) => DocumentSection | undefined;
   getSectionByTitle: (title: string) => DocumentSection | undefined;
   replaceSections: (sections: DocumentSection[]) => void;
+  replaceManuscriptContent: (input: {
+    title?: string;
+    sections?: DocumentSection[];
+    citations?: Citation[];
+  }) => void;
   addCitation: (citation: CitationFormData) => void;
   addCitations: (citations: CitationFormData[]) => void;
   removeCitation: (citationId: string) => void;
@@ -722,6 +727,20 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
     }
   }, [updateManuscript, backendMode, manuscript?.id]);
 
+  const replaceManuscriptContent = useCallback((input: {
+    title?: string;
+    sections?: DocumentSection[];
+    citations?: Citation[];
+  }) => {
+    updateManuscript((doc) => ({
+      ...doc,
+      title: input.title ?? doc.title,
+      sections: input.sections ?? doc.sections,
+      citations: input.citations ?? doc.citations,
+      updatedAt: new Date(),
+    }));
+  }, [updateManuscript]);
+
   const addCitation = (citation: CitationFormData) => {
     const next: Citation = { id: nanoid(), ...citation };
     updateManuscript((doc) => ({
@@ -887,6 +906,7 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
     getSection,
     getSectionByTitle,
     replaceSections,
+    replaceManuscriptContent,
     addCitation,
     addCitations,
     removeCitation,

@@ -13,6 +13,7 @@ import type {
   ParsedTable,
   RawParsedDocument,
 } from '@shared/document-parse';
+import type { ImportSessionItemDTO as ImportSessionItemApiDTO, ImportSessionStatus } from '@shared/backend';
 import { parseManuscriptUpload } from '@/lib/api/backend';
 import {
   containsLikelyEncodingArtifacts,
@@ -21,11 +22,16 @@ import {
 } from '@/lib/import-normalization';
 
 export interface ImportDocumentResult {
+  fileName: string;
+  sourceFormat: 'docx' | 'pdf' | 'image';
   title: string;
   sections: Partial<DocumentSection>[];
   citations: CitationFormData[];
   diagnostics: ParseDiagnostic[];
   totalWordCount: number;
+  status: ImportSessionStatus;
+  unsupportedReason: string | null;
+  items: ImportSessionItemApiDTO[];
   review: {
     required: boolean;
     blocks: ParsedBlock[];
@@ -37,6 +43,175 @@ export interface ImportDocumentResult {
 
 function sanitizeFilename(name: string): string {
   return name.replace(/[^a-zA-Z0-9\s-_]/g, '').trim() || 'manuscript';
+}
+
+function deriveImportStatus(
+  raw: RawParsedDocument,
+  diagnostics: ParseDiagnostic[],
+  reviewRequired: boolean,
+): { status: ImportSessionStatus; unsupportedReason: string | null } {
+  if (raw.format === 'image') {
+    return {
+      status: 'manual_only',
+      unsupportedReason: 'Image and scanned-document imports require manual handling until an OCR/layout engine is added.',
+    };
+  }
+
+  const emptyPdf = raw.format === 'pdf' && !raw.text?.trim();
+  if (emptyPdf) {
+    return {
+      status: 'unsupported',
+      unsupportedReason: 'This PDF has no text layer. OCR/layout extraction is not implemented in the deterministic path.',
+    };
+  }
+
+  if (reviewRequired || diagnostics.some((item) => item.level !== 'info')) {
+    return { status: 'pending_review', unsupportedReason: null };
+  }
+
+  return { status: 'ready_to_commit', unsupportedReason: null };
+}
+
+function buildDocxImportItems(
+  raw: RawParsedDocument,
+  parsed: ParsedManuscript,
+): ImportSessionItemApiDTO[] {
+  const items: ImportSessionItemApiDTO[] = parsed.sections.map((section, index) => ({
+    id: `section-${index + 1}`,
+    type: 'section',
+    sourceFormat: 'docx',
+    title: section.title,
+    text: null,
+    html: normalizeImportedHtml(section.content),
+    page: null,
+    bbox: null,
+    confidence: 0.98,
+    diagnostics: [],
+    proposedSectionTitle: section.title,
+    assignedSectionTitle: section.title,
+    decision: 'pending',
+    metadata: { sourceTitle: section.sourceTitle ?? null },
+  }));
+
+  parsed.citations.forEach((citation, index) => {
+    items.push({
+      id: `reference-${index + 1}`,
+      type: 'reference',
+      sourceFormat: 'docx',
+      title: citation.title,
+      text: citation.metadata?.raw ? String(citation.metadata.raw) : citation.title,
+      html: null,
+      page: null,
+      bbox: null,
+      confidence: 0.95,
+      diagnostics: [],
+      proposedSectionTitle: 'References',
+      assignedSectionTitle: 'References',
+      decision: 'pending',
+      metadata: {
+        authors: citation.authors,
+        doi: citation.doi ?? null,
+        url: citation.url ?? null,
+        year: citation.year,
+      },
+    });
+  });
+
+  return items;
+}
+
+function buildPdfImportItems(parsed: ParsedManuscript): ImportSessionItemApiDTO[] {
+  const items: ImportSessionItemApiDTO[] = [];
+
+  for (const block of parsed.blocks || []) {
+    if (block.type === 'table' || block.type === 'caption') continue;
+
+    const type: ImportSessionItemApiDTO['type'] = block.type === 'reference' ? 'reference' : 'text_block';
+
+    items.push({
+      id: block.id,
+      type,
+      sourceFormat: 'pdf',
+      title: null,
+      text: normalizePlainImportedText(block.text || '', { trim: true }),
+      html: null,
+      page: block.page,
+      bbox: block.bbox ?? null,
+      confidence: block.confidence,
+      diagnostics: block.diagnostics,
+      proposedSectionTitle: block.type === 'reference' ? 'References' : (block.suggestedSection || 'Content'),
+      assignedSectionTitle: block.type === 'reference' ? 'References' : (block.suggestedSection || 'Content'),
+      decision: 'pending',
+      metadata: { source: block.source, blockType: block.type },
+    });
+  }
+
+  for (const figure of parsed.figures || []) {
+    items.push({
+      id: figure.id,
+      type: 'figure_caption',
+      sourceFormat: 'pdf',
+      title: figure.caption ?? null,
+      text: normalizePlainImportedText(figure.caption || 'Figure caption', { trim: true }),
+      html: null,
+      page: figure.page,
+      bbox: figure.bbox ?? null,
+      confidence: figure.confidence,
+      diagnostics: figure.diagnostics,
+      proposedSectionTitle: 'Results & Synthesis',
+      assignedSectionTitle: 'Results & Synthesis',
+      decision: 'pending',
+      metadata: {
+        previewImageData: figure.imageData,
+        placeholderOnly: true,
+      },
+    });
+  }
+
+  for (const table of parsed.tables || []) {
+    items.push({
+      id: table.id,
+      type: 'table_candidate',
+      sourceFormat: 'pdf',
+      title: table.caption ?? null,
+      text: null,
+      html: normalizeImportedHtml(table.html),
+      page: table.page,
+      bbox: table.bbox ?? null,
+      confidence: table.confidence,
+      diagnostics: table.diagnostics,
+      proposedSectionTitle: 'Results & Synthesis',
+      assignedSectionTitle: 'Results & Synthesis',
+      decision: 'pending',
+      metadata: {
+        caption: table.caption ?? null,
+        matrix: table.matrix,
+      },
+    });
+  }
+
+  return items;
+}
+
+function buildImageImportItems(raw: RawParsedDocument): ImportSessionItemApiDTO[] {
+  return [
+    {
+      id: 'manual-image-1',
+      type: 'manual_only',
+      sourceFormat: 'image',
+      title: raw.fileTitle,
+      text: 'Image/scanned documents require manual handling until OCR and layout extraction are implemented.',
+      html: raw.imageDataUrl ? `<p><img src="${raw.imageDataUrl}" alt="${raw.fileTitle}" style="max-width:100%" /></p>` : null,
+      page: 1,
+      bbox: null,
+      confidence: 0,
+      diagnostics: raw.diagnostics ?? [],
+      proposedSectionTitle: null,
+      assignedSectionTitle: null,
+      decision: 'pending',
+      metadata: {},
+    },
+  ];
 }
 
 function hasAnyEncodingArtifacts(values: string[]): boolean {
@@ -456,12 +631,25 @@ async function importFile(file: File): Promise<ImportDocumentResult> {
     });
   }
 
+  const statusInfo = deriveImportStatus(raw, diagnostics, Boolean(parsed.reviewRequired));
+  const items =
+    raw.format === 'docx'
+      ? buildDocxImportItems(raw, parsed)
+      : raw.format === 'pdf'
+        ? buildPdfImportItems(parsed)
+        : buildImageImportItems(raw);
+
   return {
+    fileName: file.name,
+    sourceFormat: raw.format,
     title,
     sections,
     citations,
     diagnostics,
     totalWordCount: parsed.totalWordCount,
+    status: statusInfo.status,
+    unsupportedReason: statusInfo.unsupportedReason,
+    items,
     review: {
       required: Boolean(parsed.reviewRequired),
       blocks: parsed.blocks || [],

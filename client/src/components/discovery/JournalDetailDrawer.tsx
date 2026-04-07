@@ -347,7 +347,7 @@ export default function JournalDetailDrawer({ journal, onClose }: JournalDetailD
                   <div className="pt-1.5">
                     <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-1.5">Required sections</p>
                     <div className="flex flex-wrap gap-1">
-                      {guidelines.sectionsRequired.map((s) => (
+                      {guidelines.sectionsRequired.map((s: string) => (
                         <span key={s} className="px-2 py-0.5 rounded-full bg-accent text-foreground text-[10px]">{s}</span>
                       ))}
                     </div>

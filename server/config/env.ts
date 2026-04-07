@@ -26,8 +26,6 @@ const envSchema = z.object({
   MAIL_REPLY_TO: z.string().email().default("support@journi.com"),
   SUPPORT_EMAIL: z.string().email().default("support@journi.com"),
   RESET_PASSWORD_REDIRECT_URL: z.string().url().optional(),
-  // Optional - required only when the reformatter feature is used
-  ANTHROPIC_API_KEY: z.string().min(1).optional(),
 });
 
 const parsed = envSchema.safeParse(process.env);

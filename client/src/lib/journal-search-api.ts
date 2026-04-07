@@ -13,6 +13,7 @@ import {
   type OpenAlexJournal,
 } from '@/lib/openalex-api';
 import { batchEnrichFromDoaj } from '@/lib/doaj-api';
+import { toFormattingRequirements } from '@/lib/journal-submission-requirements';
 
 // ============================================================================
 // Static database lookup index (for metric enrichment of NLM results)
@@ -84,7 +85,8 @@ function openAlexToJournal(oa: OpenAlexJournal, index: number): Journal {
     issnOnline: oa.issns.find((i) => i !== oa.issnL) ?? undefined,
     isMedlineIndexed: staticMatch?.isMedlineIndexed ?? false,
     website: oa.homepageUrl ?? staticMatch?.website,
-    formattingRequirements: staticMatch?.formattingRequirements,
+    submissionRequirements: staticMatch?.submissionRequirements ?? null,
+    formattingRequirements: toFormattingRequirements(staticMatch?.submissionRequirements) ?? staticMatch?.formattingRequirements,
     openAlexId: oa.openAlexId,
     apcCostUsd: oa.apcUsd,
     citationsCount: oa.citationsCount,
@@ -117,7 +119,8 @@ function nlmToJournal(nlm: NlmJournal, index: number): Journal {
     issnOnline: nlm.issnOnline ?? undefined,
     isMedlineIndexed: nlm.isMedlineIndexed,
     website: staticMatch?.website,
-    formattingRequirements: staticMatch?.formattingRequirements,
+    submissionRequirements: staticMatch?.submissionRequirements ?? null,
+    formattingRequirements: toFormattingRequirements(staticMatch?.submissionRequirements) ?? staticMatch?.formattingRequirements,
   };
 }
 
@@ -276,7 +279,7 @@ function mapBackendJournal(raw: any, index: number): Journal {
     peerReviewType: raw.peerReviewType ?? null,
     provenance: raw.provenance ?? undefined,
     lastVerifiedAt: raw.lastVerifiedAt ?? undefined,
-    formattingRequirements: raw.formattingRequirements ?? undefined,
+    formattingRequirements: toFormattingRequirements(raw.submissionRequirements) ?? raw.formattingRequirements ?? undefined,
   };
 }
 

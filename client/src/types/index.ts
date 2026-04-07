@@ -116,7 +116,7 @@ export interface Manuscript {
 // Journal Discovery
 // ============================================================================
 
-export type ReferenceStyle = 'vancouver' | 'apa' | 'harvard' | 'nlm' | 'ama' | 'ieee';
+export type ReferenceStyle = 'vancouver' | 'apa' | 'mla' | 'harvard' | 'nlm' | 'ama' | 'ieee';
 export type AbstractStructure = 'structured' | 'unstructured';
 
 export interface JournalFormattingRequirements {

@@ -1,69 +1,61 @@
-/**
- * ReformatPanel
- * Slide-in panel that lets users reformat their manuscript to meet a target journal's
- * submission requirements. Claude returns minimal word-change suggestions displayed as
- * track-changes (strikethrough original, green proposed). Users accept or reject each
- * change individually; accepted changes are written back via the section PATCH endpoint.
- */
-import { useState, useCallback } from 'react';
+import { useState, useCallback, type ReactNode } from 'react';
 import {
-  X, Wand2, Loader2, CheckCircle2, XCircle, ChevronDown, ChevronUp,
-  BookOpen, AlertTriangle, CheckCheck, Trash2,
+  X, Wand2, Loader2, CheckCircle2, ChevronDown, ChevronUp,
+  BookOpen, AlertTriangle, CheckCheck, ListChecks, CircleHelp,
 } from 'lucide-react';
 import {
+  fetchFormatCheck,
   fetchJournals,
-  reformatManuscript,
-  patchManuscriptSection,
-  type ReformatSuggestion,
+  type FormatCheckManualActionDTO,
+  type FormatCheckSafeActionDTO,
+  type FormatCheckUnsupportedDTO,
 } from '@/lib/api/backend';
-import type { JournalDTO } from '@shared/backend';
+import type { JournalDTO, ManuscriptFormatCheckDTO } from '@shared/backend';
 
-const TYPE_LABELS: Record<ReformatSuggestion['type'], string> = {
-  word_trim: 'Trim words',
-  section_add: 'Add section',
-  citation_style: 'Citation style',
-  heading_rename: 'Rename heading',
-  structure: 'Structure',
+const SAFE_LABELS: Record<FormatCheckSafeActionDTO['type'], string> = {
+  rename_heading: 'Rename heading',
+  reorder_sections: 'Reorder sections',
+  insert_missing_section: 'Insert section',
+  apply_structured_abstract_template: 'Abstract template',
 };
 
-const TYPE_COLORS: Record<ReformatSuggestion['type'], string> = {
-  word_trim: 'bg-amber-500/10 text-amber-600 border-amber-500/20',
-  section_add: 'bg-blue-500/10 text-blue-600 border-blue-500/20',
-  citation_style: 'bg-purple-500/10 text-purple-600 border-purple-500/20',
-  heading_rename: 'bg-orange-500/10 text-orange-600 border-orange-500/20',
-  structure: 'bg-slate-500/10 text-slate-600 border-slate-500/20',
+const MANUAL_LABELS: Record<FormatCheckManualActionDTO['type'], string> = {
+  word_limit_overrun: 'Word limit',
+  citation_style_review: 'Citation review',
+  figure_limit_exceeded: 'Figure limit',
+  table_limit_exceeded: 'Table limit',
+  keywords_required: 'Keywords',
+  required_declaration_missing: 'Declaration',
 };
 
 interface ReformatPanelProps {
   isOpen: boolean;
   onClose: () => void;
   manuscriptId: string;
-  /** Called with (sectionId, newHtml) when user accepts a suggestion */
-  onAcceptChange: (sectionId: string, newHtml: string, currentHtml: string, originalText: string, suggestedText: string) => void;
+  onApplySafeAction: (action: FormatCheckSafeActionDTO) => void;
 }
 
-interface SuggestionState {
-  suggestion: ReformatSuggestion;
-  status: 'pending' | 'accepted' | 'rejected';
-  isExpanded: boolean;
+interface ExpandedState {
+  safe: Record<string, boolean>;
+  manual: Record<string, boolean>;
 }
 
 export default function ReformatPanel({
   isOpen,
   onClose,
   manuscriptId,
-  onAcceptChange,
+  onApplySafeAction,
 }: ReformatPanelProps) {
   const [journalQuery, setJournalQuery] = useState('');
   const [journalResults, setJournalResults] = useState<JournalDTO[]>([]);
   const [selectedJournal, setSelectedJournal] = useState<JournalDTO | null>(null);
   const [isSearching, setIsSearching] = useState(false);
-  const [isAnalysing, setIsAnalysing] = useState(false);
-  const [suggestions, setSuggestions] = useState<SuggestionState[]>([]);
+  const [isChecking, setIsChecking] = useState(false);
+  const [result, setResult] = useState<ManuscriptFormatCheckDTO | null>(null);
   const [error, setError] = useState('');
-  const [acceptingId, setAcceptingId] = useState<string | null>(null);
+  const [expanded, setExpanded] = useState<ExpandedState>({ safe: {}, manual: {} });
+  const [appliedActionIds, setAppliedActionIds] = useState<string[]>([]);
 
-  // --- Journal search ---
   const handleJournalSearch = useCallback(async (q: string) => {
     setJournalQuery(q);
     if (!q.trim() || q.length < 2) {
@@ -85,124 +77,79 @@ export default function ReformatPanel({
     setSelectedJournal(journal);
     setJournalResults([]);
     setJournalQuery(journal.name);
-    setSuggestions([]);
+    setResult(null);
     setError('');
+    setAppliedActionIds([]);
   };
 
-  // --- Run analysis ---
-  const handleAnalyse = async () => {
+  const handleCheck = async () => {
     if (!selectedJournal) return;
-    setIsAnalysing(true);
+    setIsChecking(true);
     setError('');
-    setSuggestions([]);
+    setResult(null);
 
     try {
-      const res = await reformatManuscript(manuscriptId, selectedJournal.id);
-      if (!res.data || res.data.length === 0) {
-        setError('No changes needed — your manuscript already meets this journal\'s requirements.');
-        return;
-      }
-      setSuggestions(
-        res.data.map((s) => ({ suggestion: s, status: 'pending', isExpanded: true })),
-      );
+      const response = await fetchFormatCheck(manuscriptId, selectedJournal.id);
+      setResult(response.data);
+      setExpanded({
+        safe: Object.fromEntries(response.data.safeAutoActions.map((action) => [action.id, true])),
+        manual: Object.fromEntries(response.data.manualActions.map((action) => [action.id, true])),
+      });
     } catch (err: any) {
-      setError(
-        err?.message?.includes('ANTHROPIC_API_KEY')
-          ? 'ANTHROPIC_API_KEY is not configured on the server. Add it to your .env file.'
-          : err?.message || 'Analysis failed. Please try again.',
-      );
+      setError(err?.message || 'Format check failed. Please try again.');
     } finally {
-      setIsAnalysing(false);
+      setIsChecking(false);
     }
   };
 
-  // --- Accept a suggestion ---
-  const handleAccept = async (index: number) => {
-    const item = suggestions[index];
-    if (!item || item.status !== 'pending') return;
-    const { suggestion } = item;
+  const applyAction = (action: FormatCheckSafeActionDTO) => {
+    onApplySafeAction(action);
+    setAppliedActionIds((prev) => (prev.includes(action.id) ? prev : [...prev, action.id]));
+  };
 
-    setAcceptingId(`${index}`);
-    try {
-      onAcceptChange(
-        suggestion.sectionId,
-        '', // placeholder — parent builds new HTML
-        '', // currentHtml fetched by parent
-        suggestion.originalText,
-        suggestion.suggestedText,
-      );
-      setSuggestions((prev) =>
-        prev.map((s, i) => (i === index ? { ...s, status: 'accepted' } : s)),
-      );
-    } finally {
-      setAcceptingId(null);
+  const applyAllSafeActions = () => {
+    for (const action of result?.safeAutoActions ?? []) {
+      if (appliedActionIds.includes(action.id)) continue;
+      applyAction(action);
     }
   };
 
-  const handleReject = (index: number) => {
-    setSuggestions((prev) =>
-      prev.map((s, i) => (i === index ? { ...s, status: 'rejected' } : s)),
-    );
+  const toggleSafe = (id: string) => {
+    setExpanded((prev) => ({ ...prev, safe: { ...prev.safe, [id]: !prev.safe[id] } }));
   };
 
-  const handleToggleExpand = (index: number) => {
-    setSuggestions((prev) =>
-      prev.map((s, i) => (i === index ? { ...s, isExpanded: !s.isExpanded } : s)),
-    );
-  };
-
-  const pendingCount = suggestions.filter((s) => s.status === 'pending').length;
-  const acceptedCount = suggestions.filter((s) => s.status === 'accepted').length;
-
-  const handleAcceptAll = () => {
-    suggestions.forEach((s, i) => {
-      if (s.status === 'pending') handleAccept(i);
-    });
-  };
-
-  const handleRejectAll = () => {
-    setSuggestions((prev) => prev.map((s) => (s.status === 'pending' ? { ...s, status: 'rejected' } : s)));
+  const toggleManual = (id: string) => {
+    setExpanded((prev) => ({ ...prev, manual: { ...prev.manual, [id]: !prev.manual[id] } }));
   };
 
   if (!isOpen) return null;
 
   return (
     <>
-      {/* Backdrop */}
       <div className="fixed inset-0 bg-black/40 z-40 backdrop-blur-sm" onClick={onClose} />
 
-      {/* Panel */}
       <div className="fixed right-0 top-0 h-full w-full max-w-lg bg-card border-l border-border z-50 flex flex-col shadow-2xl">
-        {/* Header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-border shrink-0">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-lg bg-journi-green/15 flex items-center justify-center">
               <Wand2 size={18} className="text-journi-green" />
             </div>
             <div>
-              <h2 className="font-bold text-sm text-foreground">Reformat for Journal</h2>
+              <h2 className="font-bold text-sm text-foreground">Journal Format Check</h2>
               <p className="text-[11px] text-muted-foreground">
-                Minimal edits only — you accept each change individually
+                Deterministic actions only. No generated prose rewrites.
               </p>
             </div>
           </div>
-          <button
-            onClick={onClose}
-            className="p-1.5 rounded-lg hover:bg-accent transition-colors text-muted-foreground"
-          >
+          <button onClick={onClose} className="p-1.5 rounded-lg hover:bg-accent transition-colors text-muted-foreground">
             <X size={16} />
           </button>
         </div>
 
-        {/* Scrollable body */}
         <div className="flex-1 overflow-y-auto">
-          {/* Journal selector */}
           <div className="p-5 border-b border-border space-y-3">
             <div className="relative">
-              <BookOpen
-                size={15}
-                className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
-              />
+              <BookOpen size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
               <input
                 type="text"
                 value={journalQuery}
@@ -211,26 +158,20 @@ export default function ReformatPanel({
                 className="w-full pl-9 pr-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-journi-green"
               />
               {isSearching && (
-                <Loader2
-                  size={14}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 animate-spin text-muted-foreground"
-                />
+                <Loader2 size={14} className="absolute right-3 top-1/2 -translate-y-1/2 animate-spin text-muted-foreground" />
               )}
             </div>
 
-            {/* Dropdown results */}
             {journalResults.length > 0 && (
               <div className="border border-border rounded-lg overflow-hidden bg-card shadow-md">
-                {journalResults.map((j) => (
+                {journalResults.map((journal) => (
                   <button
-                    key={j.id}
-                    onClick={() => handleSelectJournal(j)}
+                    key={journal.id}
+                    onClick={() => handleSelectJournal(journal)}
                     className="w-full text-left px-4 py-2.5 hover:bg-accent transition-colors border-b border-border last:border-0"
                   >
-                    <p className="text-sm font-medium text-foreground">{j.name}</p>
-                    {j.publisher && (
-                      <p className="text-[11px] text-muted-foreground">{j.publisher}</p>
-                    )}
+                    <p className="text-sm font-medium text-foreground">{journal.name}</p>
+                    {journal.publisher && <p className="text-[11px] text-muted-foreground">{journal.publisher}</p>}
                   </button>
                 ))}
               </div>
@@ -239,11 +180,14 @@ export default function ReformatPanel({
             {selectedJournal && (
               <div className="flex items-center gap-2 px-3 py-2 bg-journi-green/5 border border-journi-green/20 rounded-lg">
                 <CheckCircle2 size={14} className="text-journi-green shrink-0" />
-                <span className="text-sm text-foreground font-medium truncate">
-                  {selectedJournal.name}
-                </span>
+                <span className="text-sm text-foreground font-medium truncate">{selectedJournal.name}</span>
                 <button
-                  onClick={() => { setSelectedJournal(null); setJournalQuery(''); setSuggestions([]); }}
+                  onClick={() => {
+                    setSelectedJournal(null);
+                    setJournalQuery('');
+                    setResult(null);
+                    setAppliedActionIds([]);
+                  }}
                   className="ml-auto text-muted-foreground hover:text-foreground shrink-0"
                 >
                   <X size={13} />
@@ -252,19 +196,19 @@ export default function ReformatPanel({
             )}
 
             <button
-              onClick={handleAnalyse}
-              disabled={!selectedJournal || isAnalysing}
+              onClick={handleCheck}
+              disabled={!selectedJournal || isChecking}
               className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-journi-green text-journi-slate text-sm font-semibold rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isAnalysing ? (
+              {isChecking ? (
                 <>
                   <Loader2 size={15} className="animate-spin" />
-                  Analysing with Claude…
+                  Running format check…
                 </>
               ) : (
                 <>
-                  <Wand2 size={15} />
-                  Analyse &amp; Suggest Edits
+                  <ListChecks size={15} />
+                  Run Format Check
                 </>
               )}
             </button>
@@ -277,46 +221,97 @@ export default function ReformatPanel({
             )}
           </div>
 
-          {/* Suggestions list */}
-          {suggestions.length > 0 && (
-            <div className="p-5 space-y-3">
-              {/* Summary + bulk actions */}
-              <div className="flex items-center justify-between">
-                <p className="text-xs text-muted-foreground">
-                  {pendingCount} pending · {acceptedCount} accepted ·{' '}
-                  {suggestions.length - pendingCount - acceptedCount} rejected
-                </p>
-                {pendingCount > 0 && (
-                  <div className="flex gap-2">
-                    <button
-                      onClick={handleAcceptAll}
-                      className="flex items-center gap-1 text-[11px] font-medium text-journi-green hover:opacity-80 transition-opacity"
-                    >
-                      <CheckCheck size={12} />
-                      Accept all
-                    </button>
-                    <button
-                      onClick={handleRejectAll}
-                      className="flex items-center gap-1 text-[11px] font-medium text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <Trash2 size={12} />
-                      Reject all
-                    </button>
-                  </div>
-                )}
+          {result && (
+            <div className="p-5 space-y-5">
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <SummaryCard label="Total words" value={result.summary.totalWordCount.toLocaleString()} />
+                <SummaryCard label="Main text" value={result.summary.mainTextWordCount.toLocaleString()} />
+                <SummaryCard label="Abstract" value={result.summary.abstractWordCount.toLocaleString()} />
+                <SummaryCard label="Figures / Tables" value={`${result.summary.figureCount} / ${result.summary.tableCount}`} />
               </div>
 
-              {suggestions.map((item, index) => (
-                <SuggestionCard
-                  key={index}
-                  item={item}
-                  index={index}
-                  isAccepting={acceptingId === String(index)}
-                  onAccept={() => handleAccept(index)}
-                  onReject={() => handleReject(index)}
-                  onToggle={() => handleToggleExpand(index)}
-                />
-              ))}
+              <section className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-sm font-semibold text-foreground">Safe auto-actions</h3>
+                    <p className="text-xs text-muted-foreground">Structured changes that can be applied directly.</p>
+                  </div>
+                  {result.safeAutoActions.length > 0 && (
+                    <button
+                      onClick={applyAllSafeActions}
+                      className="text-[11px] font-medium text-journi-green hover:opacity-80 transition-opacity"
+                    >
+                      <CheckCheck size={12} className="inline mr-1" />
+                      Apply all
+                    </button>
+                  )}
+                </div>
+
+                {result.safeAutoActions.length === 0 && (
+                  <EmptyState text="No safe structural changes are needed." />
+                )}
+
+                {result.safeAutoActions.map((action) => (
+                  <ActionCard
+                    key={action.id}
+                    label={SAFE_LABELS[action.type]}
+                    description={action.description}
+                    severity={action.severity}
+                    expanded={expanded.safe[action.id]}
+                    onToggle={() => toggleSafe(action.id)}
+                    body={action.details ? JSON.stringify(action.details, null, 2) : null}
+                    footer={
+                      <button
+                        onClick={() => applyAction(action)}
+                        disabled={appliedActionIds.includes(action.id)}
+                        className="px-3 py-1.5 rounded-lg bg-journi-green text-journi-slate text-xs font-semibold disabled:opacity-40"
+                      >
+                        {appliedActionIds.includes(action.id) ? 'Applied' : 'Apply'}
+                      </button>
+                    }
+                  />
+                ))}
+              </section>
+
+              <section className="space-y-3">
+                <div>
+                  <h3 className="text-sm font-semibold text-foreground">Manual actions</h3>
+                  <p className="text-xs text-muted-foreground">These need author judgment or content edits.</p>
+                </div>
+
+                {result.manualActions.length === 0 && <EmptyState text="No manual actions flagged." />}
+
+                {result.manualActions.map((action) => (
+                  <ActionCard
+                    key={action.id}
+                    label={MANUAL_LABELS[action.type]}
+                    description={action.description}
+                    severity={action.severity}
+                    expanded={expanded.manual[action.id]}
+                    onToggle={() => toggleManual(action.id)}
+                    body={action.details ? JSON.stringify(action.details, null, 2) : null}
+                  />
+                ))}
+              </section>
+
+              <section className="space-y-3">
+                <div>
+                  <h3 className="text-sm font-semibold text-foreground">Unsupported checks</h3>
+                  <p className="text-xs text-muted-foreground">These still need future deterministic support.</p>
+                </div>
+
+                {result.unsupportedChecks.length === 0 && <EmptyState text="No unsupported checks for this journal." />}
+
+                {result.unsupportedChecks.map((check) => (
+                  <div key={check.id} className="rounded-lg border border-border p-4 space-y-1">
+                    <div className="flex items-center gap-2 text-xs text-amber-600 font-semibold">
+                      <CircleHelp size={12} />
+                      {check.code}
+                    </div>
+                    <p className="text-sm text-foreground">{check.description}</p>
+                  </div>
+                ))}
+              </section>
             </div>
           )}
         </div>
@@ -325,119 +320,58 @@ export default function ReformatPanel({
   );
 }
 
-function SuggestionCard({
-  item,
-  index,
-  isAccepting,
-  onAccept,
-  onReject,
-  onToggle,
-}: {
-  item: SuggestionState;
-  index: number;
-  isAccepting: boolean;
-  onAccept: () => void;
-  onReject: () => void;
-  onToggle: () => void;
-}) {
-  const { suggestion, status, isExpanded } = item;
-  const typeColor = TYPE_COLORS[suggestion.type] ?? TYPE_COLORS.structure;
-  const typeLabel = TYPE_LABELS[suggestion.type] ?? suggestion.type;
+function SummaryCard({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-lg border border-border bg-muted/30 p-3">
+      <p className="text-[11px] uppercase tracking-wider text-muted-foreground">{label}</p>
+      <p className="mt-1 text-sm font-semibold text-foreground">{value}</p>
+    </div>
+  );
+}
 
-  const cardClass =
-    status === 'accepted'
-      ? 'border-journi-green/30 bg-journi-green/5 opacity-70'
-      : status === 'rejected'
-        ? 'border-border opacity-40'
-        : 'border-border bg-card hover:border-journi-green/30';
+function EmptyState({ text }: { text: string }) {
+  return <div className="rounded-lg border border-dashed border-border p-4 text-sm text-muted-foreground">{text}</div>;
+}
+
+function ActionCard({
+  label,
+  description,
+  severity,
+  expanded,
+  onToggle,
+  body,
+  footer,
+}: {
+  label: string;
+  description: string;
+  severity: 'info' | 'warning' | 'required';
+  expanded: boolean;
+  onToggle: () => void;
+  body?: string | null;
+  footer?: ReactNode;
+}) {
+  const severityColor =
+    severity === 'required'
+      ? 'text-red-600 bg-red-500/10 border-red-500/20'
+      : severity === 'warning'
+        ? 'text-amber-600 bg-amber-500/10 border-amber-500/20'
+        : 'text-blue-600 bg-blue-500/10 border-blue-500/20';
 
   return (
-    <div className={`rounded-lg border transition-colors ${cardClass}`}>
-      {/* Card header */}
-      <button
-        onClick={onToggle}
-        className="w-full flex items-center gap-2 px-4 py-3 text-left"
-      >
-        <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border ${typeColor}`}>
-          {typeLabel}
-        </span>
-        <span className="text-xs text-muted-foreground flex-1 truncate">
-          {suggestion.sectionTitle}
-        </span>
-        {status === 'accepted' && (
-          <CheckCircle2 size={13} className="text-journi-green shrink-0" />
-        )}
-        {status === 'rejected' && (
-          <XCircle size={13} className="text-muted-foreground shrink-0" />
-        )}
-        {isExpanded ? (
-          <ChevronUp size={13} className="text-muted-foreground shrink-0" />
-        ) : (
-          <ChevronDown size={13} className="text-muted-foreground shrink-0" />
-        )}
+    <div className="rounded-lg border border-border bg-card">
+      <button onClick={onToggle} className="w-full flex items-center gap-2 px-4 py-3 text-left">
+        <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border ${severityColor}`}>{label}</span>
+        <span className="flex-1 text-sm text-foreground">{description}</span>
+        {expanded ? <ChevronUp size={13} className="text-muted-foreground" /> : <ChevronDown size={13} className="text-muted-foreground" />}
       </button>
-
-      {/* Expanded body */}
-      {isExpanded && (
+      {expanded && (
         <div className="px-4 pb-4 space-y-3">
-          {/* Track changes diff */}
-          <div className="bg-muted/40 rounded-lg p-3 text-[12px] leading-relaxed space-y-2">
-            {suggestion.originalText && (
-              <p>
-                <span className="text-muted-foreground text-[10px] uppercase font-semibold tracking-wider block mb-1">
-                  Original
-                </span>
-                <span className="line-through text-red-500/80 font-mono">
-                  {suggestion.originalText}
-                </span>
-              </p>
-            )}
-            <p>
-              <span className="text-muted-foreground text-[10px] uppercase font-semibold tracking-wider block mb-1">
-                Suggested
-              </span>
-              <span className="text-emerald-600 font-mono">
-                {suggestion.suggestedText || '(remove this text)'}
-              </span>
-            </p>
-          </div>
-
-          {/* Reason */}
-          <p className="text-[11px] text-muted-foreground italic">{suggestion.reason}</p>
-
-          {/* Actions */}
-          {status === 'pending' && (
-            <div className="flex gap-2 pt-1">
-              <button
-                onClick={onAccept}
-                disabled={isAccepting}
-                className="flex-1 flex items-center justify-center gap-1.5 py-1.5 bg-journi-green text-journi-slate text-xs font-semibold rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
-              >
-                {isAccepting ? (
-                  <Loader2 size={12} className="animate-spin" />
-                ) : (
-                  <CheckCircle2 size={12} />
-                )}
-                Accept
-              </button>
-              <button
-                onClick={onReject}
-                className="flex-1 flex items-center justify-center gap-1.5 py-1.5 border border-border text-xs font-medium text-foreground rounded-lg hover:bg-accent transition-colors"
-              >
-                <XCircle size={12} />
-                Reject
-              </button>
-            </div>
+          {body && (
+            <pre className="rounded-lg bg-muted/40 p-3 text-[11px] whitespace-pre-wrap break-words text-muted-foreground">
+              {body}
+            </pre>
           )}
-
-          {status === 'accepted' && (
-            <p className="text-[11px] text-journi-green font-medium">
-              ✓ Change accepted
-            </p>
-          )}
-          {status === 'rejected' && (
-            <p className="text-[11px] text-muted-foreground">Rejected</p>
-          )}
+          {footer && <div className="flex justify-end">{footer}</div>}
         </div>
       )}
     </div>

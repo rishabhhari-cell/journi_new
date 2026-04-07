@@ -1,4 +1,5 @@
 import type { JournalDTO, JournalSubmissionRequirements } from "../../../shared/backend";
+import { normalizeJournalSubmissionRequirements } from "../../../shared/journal-requirements";
 
 export interface JournalImportInput {
   externalId?: string;
@@ -60,7 +61,7 @@ export function mapJournalRow(row: JournalRow): JournalDTO {
     openAccess: row.open_access,
     websiteUrl: row.website_url,
     submissionPortalUrl: row.submission_portal_url,
-    submissionRequirements: row.submission_requirements_json,
+    submissionRequirements: normalizeJournalSubmissionRequirements(row.submission_requirements_json),
     publisher: row.publisher,
     subjectAreas: row.subject_areas ?? [],
     geographicLocation: row.geographic_location,
