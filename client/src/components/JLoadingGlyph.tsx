@@ -12,7 +12,7 @@ export default function JLoadingGlyph({ className, size = 28 }: JLoadingGlyphPro
       alt="Loading"
       width={size}
       height={size}
-      className={cn("select-none", className)}
+      className={cn("select-none animate-spin", className)}
       draggable={false}
     />
   );

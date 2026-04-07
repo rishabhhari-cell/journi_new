@@ -3,7 +3,7 @@ import {
   X, Wand2, Loader2, CheckCircle2, ChevronDown, ChevronUp,
   BookOpen, AlertTriangle, CheckCheck, ListChecks, CircleHelp,
 } from 'lucide-react';
-import JLoadingGlyph from '@/components/JLoadingGlyph';
+import LoadingScreen from '@/components/LoadingScreen';
 import {
   fetchFormatCheck,
   fetchJournals,
@@ -129,7 +129,8 @@ export default function ReformatPanel({
     <>
       <div className="fixed inset-0 bg-black/40 z-40 backdrop-blur-sm" onClick={onClose} />
 
-      <div className="fixed right-0 top-0 h-full w-full max-w-lg bg-card border-l border-border z-50 flex flex-col shadow-2xl">
+      <div className="fixed right-0 top-0 h-full w-full max-w-lg bg-card border-l border-border z-50 flex flex-col shadow-2xl relative">
+        {isChecking && <LoadingScreen fullscreen={false} />}
         <div className="flex items-center justify-between px-5 py-4 border-b border-border shrink-0">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-lg bg-journi-green/15 flex items-center justify-center">
@@ -201,17 +202,8 @@ export default function ReformatPanel({
               disabled={!selectedJournal || isChecking}
               className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-journi-green text-journi-slate text-sm font-semibold rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isChecking ? (
-                <>
-                  <JLoadingGlyph size={18} />
-                  Running format check…
-                </>
-              ) : (
-                <>
-                  <ListChecks size={15} />
-                  Run Format Check
-                </>
-              )}
+              <ListChecks size={15} />
+              {isChecking ? 'Running format check…' : 'Run Format Check'}
             </button>
 
             {error && (

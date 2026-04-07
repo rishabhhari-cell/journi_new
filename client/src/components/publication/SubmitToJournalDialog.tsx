@@ -9,7 +9,7 @@ import { useLocation } from 'wouter';
 import { useJournals } from '@/contexts/JournalsContext';
 import { useSubmissions } from '@/contexts/SubmissionsContext';
 import type { Journal } from '@/types';
-import JLoadingGlyph from '@/components/JLoadingGlyph';
+import LoadingScreen from '@/components/LoadingScreen';
 
 interface Props {
   isOpen: boolean;
@@ -111,6 +111,7 @@ export default function SubmitToJournalDialog({ isOpen, onClose, manuscriptTitle
 
       {/* Dialog */}
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        {isSubmitting && <LoadingScreen />}
         <div className="bg-card rounded-2xl border border-border shadow-xl w-full max-w-lg overflow-hidden">
 
           {/* Header */}
@@ -268,7 +269,7 @@ export default function SubmitToJournalDialog({ isOpen, onClose, manuscriptTitle
                   disabled={!selected || isSubmitting}
                   className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-journi-green text-journi-slate rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity disabled:opacity-40 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? <JLoadingGlyph size={16} /> : <Send size={14} />}
+                  <Send size={14} />
                   {isSubmitting ? 'Submitting...' : 'Submit Paper'}
                 </button>
               </div>

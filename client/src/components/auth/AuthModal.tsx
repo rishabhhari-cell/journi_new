@@ -8,6 +8,7 @@ import { X, Eye, EyeOff, Mail, Lock, User, AlertCircle, CheckCircle2, Building2,
 import { useAuth } from '@/contexts/AuthContext';
 import { useLocation } from 'wouter';
 import { toast } from 'sonner';
+import LoadingScreen from '@/components/LoadingScreen';
 
 // ── Google icon SVG ───────────────────────────────────────────────────────────
 function GoogleIcon() {
@@ -187,6 +188,8 @@ export default function AuthModal() {
   };
 
   return (
+    <>
+      {loading && <LoadingScreen />}
     <AnimatePresence>
       {modalOpen && (
         <motion.div
@@ -487,5 +490,6 @@ export default function AuthModal() {
         </motion.div>
       )}
     </AnimatePresence>
+    </>
   );
 }

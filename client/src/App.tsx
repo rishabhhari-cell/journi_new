@@ -4,8 +4,9 @@ import { Route, Switch, useLocation } from "wouter";
 import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { AuthProvider } from "./contexts/AuthContext";
+import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import AuthModal from "./components/auth/AuthModal";
+import LoadingScreen from "./components/LoadingScreen";
 import { ProjectProvider } from "./contexts/ProjectContext";
 import { JournalsProvider } from "./contexts/JournalsContext";
 import { ManuscriptProvider } from "./contexts/ManuscriptContext";
@@ -83,6 +84,13 @@ function Router() {
   );
 }
 
+/** Fullscreen loading screen during OAuth bootstrap or sign-up */
+function GlobalLoadingOverlay() {
+  const { isLoading, isAuthenticating } = useAuth();
+  if (!isLoading && !isAuthenticating) return null;
+  return <LoadingScreen />;
+}
+
 function App() {
   return (
     <ErrorBoundary>
@@ -93,6 +101,7 @@ function App() {
               <ManuscriptProvider>
                 <SubmissionsProvider>
                   <TooltipProvider>
+                    <GlobalLoadingOverlay />
                     <Toaster />
                     <AuthModal />
                     <Router />

@@ -37,6 +37,7 @@ import ReferencesSection from '@/components/collaboration/ReferencesSection';
 import CommentThread from '@/components/collaboration/CommentThread';
 import SubmitToJournalDialog from '@/components/publication/SubmitToJournalDialog';
 import ReformatPanel from '@/components/collaboration/ReformatPanel';
+import LoadingScreen from '@/components/LoadingScreen';
 import JLoadingGlyph from '@/components/JLoadingGlyph';
 import { useManuscript } from '@/contexts/ManuscriptContext';
 import type { CitationFormData, CommentFormData, DocumentSection, ManuscriptType } from '@/types';
@@ -1576,18 +1577,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
 
           <div className="relative flex flex-1 overflow-hidden">
             {(isImporting || isReformatting || isHydrating) && (
-              <div className="absolute inset-0 z-[120] flex items-center justify-center bg-white/75 backdrop-blur-[1px]">
-                <div className="flex flex-col items-center gap-2">
-                  <JLoadingGlyph size={56} />
-                  <p className="text-xs font-medium text-muted-foreground">
-                    {isHydrating
-                      ? "Loading manuscript..."
-                      : isReformatting
-                        ? "Applying reformat..."
-                        : "Parsing manuscript..."}
-                  </p>
-                </div>
-              </div>
+              <LoadingScreen fullscreen={false} />
             )}
             <button
               type="button"
