@@ -23,7 +23,7 @@ import {
   ClipboardList, CheckSquare, Award, Shield, Building2,
   Star, CheckCircle2,
 } from "lucide-react";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { useAuth } from "@/contexts/AuthContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -214,8 +214,7 @@ const SCENARIO_STEPS: ScenarioStep[] = [
 
 export default function Features() {
   const [activeCategory, setActiveCategory] = useState<string>("manuscript");
-  const { openModal, signInAsGuest } = useAuth();
-  const [, navigate] = useLocation();
+  const { openModal } = useAuth();
 
   useEffect(() => {
     const syncCategoryFromHash = () => {
@@ -254,7 +253,7 @@ export default function Features() {
               </p>
               <div className="flex flex-wrap justify-center gap-3">
                 <button
-                  onClick={() => { signInAsGuest(); navigate("/collaboration"); }}
+                  onClick={() => openModal("signup")}
                   className="inline-flex items-center gap-2 bg-journi-green text-journi-slate font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
                 >
                   Try it free
@@ -467,7 +466,7 @@ export default function Features() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <button
-                  onClick={() => { signInAsGuest(); navigate("/collaboration"); }}
+                  onClick={() => openModal("signup")}
                   className="inline-flex items-center gap-2 bg-journi-green text-journi-slate font-semibold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity"
                 >
                   Try it with your manuscript

@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from 'react';
 import { ChevronDown, Plus, Check, FolderOpen } from 'lucide-react';
 import { useProject } from '@/contexts/ProjectContext';
 import { useLocation } from 'wouter';
-import { useAuth } from '@/contexts/AuthContext';
 
 interface Props {
   /** 'sidebar' = full width block used in Dashboard sidebar; 'compact' = small inline pill */
@@ -12,7 +11,6 @@ interface Props {
 
 export default function ProjectSwitcher({ variant = 'sidebar', onSwitch }: Props) {
   const { projects, activeProject, setActiveProjectId, createProject, isLoadingProjects } = useProject();
-  const { isTrial } = useAuth();
   const [open, setOpen] = useState(false);
   const [creating, setCreating] = useState(false);
   const [newName, setNewName] = useState('');
@@ -55,7 +53,7 @@ export default function ProjectSwitcher({ variant = 'sidebar', onSwitch }: Props
   };
 
   // Don't render during backend loading — avoids showing fallback "Tetraplan" project
-  if (isLoadingProjects && !isTrial) return null;
+  if (isLoadingProjects) return null;
 
   if (variant === 'compact') {
     return (

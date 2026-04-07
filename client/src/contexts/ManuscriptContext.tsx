@@ -10,7 +10,6 @@ import type {
   CommentFormData,
 } from '@/types';
 import { saveToStorage, loadFromStorage, STORAGE_KEYS } from '@/lib/storage';
-import { generateSampleManuscript } from '@/data/generators';
 import { useAuth } from '@/contexts/AuthContext';
 import { useProject } from '@/contexts/ProjectContext';
 import {
@@ -309,9 +308,9 @@ interface ManuscriptProviderProps {
 }
 
 export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
-  const { user, isTrial } = useAuth();
+  const { user } = useAuth();
   const { activeProject } = useProject();
-  const backendMode = Boolean(user && !isTrial && activeProject?.id);
+  const backendMode = Boolean(user && activeProject?.id);
   const sectionSaveTimers = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
   const socketRef = useRef<WebSocket | null>(null);
   const yDocRef = useRef<Y.Doc | null>(null);
@@ -324,8 +323,7 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
     if (oldManuscript) {
       return [ensureTitleSection({ ...oldManuscript, type: oldManuscript.type || 'full_paper' })];
     }
-    const sample = generateSampleManuscript('mvp-project', []);
-    return [ensureTitleSection({ ...sample, type: 'full_paper' as ManuscriptType })];
+    return [createEmptyManuscript('mvp-project', 'Untitled Manuscript', 'full_paper')];
   });
 
   const [activeManuscriptId, setActiveManuscriptId] = useState<string>(() => manuscripts[0]?.id || '');

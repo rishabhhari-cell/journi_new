@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { CheckIcon, ChevronsUpDownIcon, Plus } from "lucide-react";
 import { useLocation } from "wouter";
-import { useAuth } from "@/contexts/AuthContext";
 import { useProject } from "@/contexts/ProjectContext";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -43,13 +42,12 @@ function WorkspaceScienceAvatar({
 
 export default function ProjectWorkspaceManager() {
   const { projects, activeProject, setActiveProjectId, createProject, isLoadingProjects } = useProject();
-  const { isTrial } = useAuth();
   const [, navigate] = useLocation();
   const [open, setOpen] = useState(false);
   const [creating, setCreating] = useState(false);
   const [newName, setNewName] = useState("");
 
-  if (isLoadingProjects && !isTrial) return null;
+  if (isLoadingProjects) return null;
   if (projects.length === 0) return null;
 
   const workspaces: ProjectWorkspace[] = projects.map((project) => ({

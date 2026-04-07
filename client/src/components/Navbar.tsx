@@ -34,7 +34,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
-const LOGO_URL = "/logos/Journi_tab.svg";
+const LOGO_URL = "/logos/Journi_tab_final.svg";
 
 const APP_ROUTES = ["/dashboard", "/collaboration", "/discovery", "/publication", "/format"];
 
@@ -180,11 +180,11 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const userMenuRef = useRef<HTMLDivElement>(null);
-  const { user, isTrial, signOut, openModal, signInAsGuest } = useAuth();
+  const { user, signOut, openModal } = useAuth();
   const scrolled = useScroll(10);
 
   const isAppRoute = APP_ROUTES.some((r) => location.startsWith(r));
-  const isAuthenticated = !!(user || isTrial);
+  const isAuthenticated = !!user;
 
   // Always show glass on app routes; on public routes, show only when scrolled
   const showGlass = isAppRoute || scrolled;
@@ -371,11 +371,6 @@ export default function Navbar() {
                 </Button>
               )}
               <div className="relative flex items-center gap-2" ref={userMenuRef}>
-              {isTrial && (
-                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 border border-amber-200">
-                  Trial
-                </span>
-              )}
               <button
                 onClick={() => setUserMenuOpen(!userMenuOpen)}
                 className="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-accent transition-colors"
@@ -386,7 +381,7 @@ export default function Navbar() {
                   {user?.initials ?? "?"}
                 </div>
                 <span className="text-sm font-medium text-foreground max-w-[120px] truncate">
-                  {user?.name ?? "Trial User"}
+                  {user?.name ?? "Account"}
                 </span>
                 <ChevronDown
                   size={14}
@@ -401,7 +396,7 @@ export default function Navbar() {
                 <div className="absolute right-0 top-full mt-1.5 w-52 bg-card border border-border rounded-xl shadow-lg py-1.5 z-10">
                   <div className="px-4 py-2.5 border-b border-border">
                     <p className="text-xs font-semibold text-foreground truncate">
-                      {user?.name ?? "Trial User"}
+                      {user?.name ?? "Account"}
                     </p>
                     {user?.email && (
                       <p className="text-xs text-muted-foreground truncate">{user.email}</p>
@@ -458,17 +453,6 @@ export default function Navbar() {
               </Button>
               <Button variant="purpleOutline" size="sm" onClick={() => openModal("signup")}>
                 Sign Up
-              </Button>
-              <Button
-                size="sm"
-                onClick={() => {
-                  signInAsGuest();
-                  navigate("/dashboard");
-                }}
-                className="bg-journi-green text-journi-slate hover:bg-journi-green/90 font-semibold"
-              >
-                <FlaskConical size={14} />
-                Trial
               </Button>
             </div>
           )}
@@ -613,7 +597,7 @@ export default function Navbar() {
                 </div>
                 <div className="min-w-0">
                   <p className="text-sm font-medium text-foreground truncate">
-                    {user?.name ?? "Trial User"}
+                    {user?.name ?? "Account"}
                   </p>
                   {user?.email && (
                     <p className="text-xs text-muted-foreground truncate">{user.email}</p>
@@ -680,17 +664,6 @@ export default function Navbar() {
                 }}
               >
                 Sign Up
-              </Button>
-              <Button
-                className="w-full justify-center bg-journi-green text-journi-slate hover:bg-journi-green/90 font-semibold"
-                onClick={() => {
-                  signInAsGuest();
-                  navigate("/dashboard");
-                  closeMobile();
-                }}
-              >
-                <FlaskConical size={14} />
-                Trial
               </Button>
             </div>
           )}

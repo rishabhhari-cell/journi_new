@@ -1,7 +1,6 @@
 import { createContext, useContext, useState, useEffect, useRef, ReactNode, useMemo, useCallback } from 'react';
 import { nanoid } from 'nanoid';
 import type { Project, Task, Collaborator, Activity, TaskFormData, CollaboratorFormData } from '@/types';
-import { generateSampleProject, generateSampleProject2, generateActivities } from '@/data/generators';
 import { useAuth } from '@/contexts/AuthContext';
 import {
   fetchProjects,
@@ -16,12 +15,6 @@ import {
 const PROJECTS_KEY = 'journi_projects';
 const ACTIVE_PROJECT_KEY = 'journi_active_project_id';
 const ACTIVITIES_KEY = 'journi_activities';
-const OVERLAYS_KEY = 'journi_project_overlays';
-
-interface ProjectOverlay {
-  tasks: Task[];
-  collaborators: Collaborator[];
-}
 
 function inferCompletionPct(task: Partial<Task>): number {
   if (typeof task.completionPct === 'number') {
@@ -73,7 +66,7 @@ interface ProjectContextType {
 
 const ProjectContext = createContext<ProjectContextType | undefined>(undefined);
 
-// Deterministic fake ORCID for sample collaborators that predate the ORCID field
+// Deterministic ORCID backfill for collaborators that predate the ORCID field
 function backfillOrcid(c: Collaborator): Collaborator {
   if (c.orcidId) return c;
   const hash = c.id.split('').reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
@@ -98,34 +91,17 @@ function rehydrateActivities(acts: Activity[]): Activity[] {
 }
 
 function createFallbackProject(): Project {
-  return generateSampleProject();
-}
-
-// localStorage overlays — used only for trial users
-function loadOverlays(): Record<string, ProjectOverlay> {
-  try {
-    const raw = localStorage.getItem(OVERLAYS_KEY);
-    if (!raw) return {};
-    const parsed = JSON.parse(raw) as Record<string, ProjectOverlay>;
-    const next: Record<string, ProjectOverlay> = {};
-    for (const [projectId, overlay] of Object.entries(parsed)) {
-      next[projectId] = {
-        tasks: (overlay.tasks ?? []).map((task) => normalizeTask(task)),
-        collaborators: overlay.collaborators ?? [],
-      };
-    }
-    return next;
-  } catch {
-    return {};
-  }
-}
-
-function saveOverlays(projects: Project[]) {
-  const payload: Record<string, ProjectOverlay> = {};
-  for (const project of projects) {
-    payload[project.id] = { tasks: project.tasks, collaborators: project.collaborators };
-  }
-  localStorage.setItem(OVERLAYS_KEY, JSON.stringify(payload));
+  const now = new Date();
+  return {
+    id: 'empty-project',
+    title: 'Untitled Project',
+    description: '',
+    status: 'active',
+    createdAt: now,
+    updatedAt: now,
+    tasks: [],
+    collaborators: [],
+  };
 }
 
 function rehydrateTasks(raw: unknown[]): Task[] {
@@ -152,18 +128,6 @@ function mapApiProjectToUi(apiProject: ApiProject): Project {
   };
 }
 
-function hasRealSession(): boolean {
-  try {
-    const userRaw = localStorage.getItem('journi_auth_user');
-    if (!userRaw) return false;
-    const user = JSON.parse(userRaw);
-    // Trial/guest users don't count as real
-    return user && user.id !== 'guest';
-  } catch {
-    return false;
-  }
-}
-
 function initProjects(): { projects: Project[]; activeId: string } {
   try {
     const stored = localStorage.getItem(PROJECTS_KEY);
@@ -178,18 +142,12 @@ function initProjects(): { projects: Project[]; activeId: string } {
   } catch {
     // ignore corrupted storage
   }
-  // Real authenticated users start empty — backend fetch will supply their projects
-  if (hasRealSession()) {
-    return { projects: [], activeId: '' };
-  }
-  const p1 = generateSampleProject();
-  const p2 = generateSampleProject2();
-  return { projects: [p1, p2], activeId: p1.id };
+  return { projects: [], activeId: '' };
 }
 
 export function ProjectProvider({ children }: { children: ReactNode }) {
-  const { user, isTrial, activeOrganizationId } = useAuth();
-  const backendMode = Boolean(user && !isTrial && activeOrganizationId);
+  const { user, activeOrganizationId } = useAuth();
+  const backendMode = Boolean(user && activeOrganizationId);
 
   const fallbackProject = useMemo(() => createFallbackProject(), []);
   const [{ projects, activeId }, setState] = useState(initProjects);
@@ -210,13 +168,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     } catch {
       // ignore corrupted storage
     }
-    const initial = initProjects();
-    const active = initial.projects.find((p) => p.id === initial.activeId) || initial.projects[0];
-    if (!active || active.collaborators.length === 0) return [];
-    return generateActivities(active.collaborators).map((activity) => ({
-      ...activity,
-      metadata: { ...(activity.metadata ?? {}), projectId: active.id },
-    }));
+    return [];
   });
 
   const activities = useMemo(
@@ -225,22 +177,28 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
   );
 
   const setProjects = useCallback((updated: Project[], newActiveId?: string) => {
-    const nextProjects = updated.length > 0 ? updated : [fallbackProject];
+    const nextProjects = updated;
     const preferredActiveId = newActiveId ?? activeId;
-    const resolvedActiveId = nextProjects.some((project) => project.id === preferredActiveId)
-      ? preferredActiveId
-      : nextProjects[0].id;
+    const resolvedActiveId =
+      nextProjects.length === 0
+        ? ''
+        : nextProjects.some((project) => project.id === preferredActiveId)
+          ? preferredActiveId
+          : nextProjects[0].id;
 
     setState({ projects: nextProjects, activeId: resolvedActiveId });
+    if (nextProjects.length === 0) {
+      localStorage.removeItem(PROJECTS_KEY);
+      localStorage.removeItem(ACTIVE_PROJECT_KEY);
+      return;
+    }
     localStorage.setItem(PROJECTS_KEY, JSON.stringify(nextProjects));
     localStorage.setItem(ACTIVE_PROJECT_KEY, resolvedActiveId);
-    if (isTrial) saveOverlays(nextProjects);
-  }, [activeId, fallbackProject, isTrial]);
+  }, [activeId]);
 
   // Persist once on mount to save any backfilled fields (e.g. ORCID migration)
   useEffect(() => {
     localStorage.setItem(PROJECTS_KEY, JSON.stringify(projects));
-    if (isTrial) saveOverlays(projects);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -287,7 +245,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
       }
     }
 
-    // Immediately clear any stale sample/trial data so it never flashes on screen
+    // Immediately clear stale local project data so it never flashes on screen
     setState((prev) => {
       if (prev.projects.length > 0) {
         return { projects: [], activeId: '' };
@@ -402,7 +360,6 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
       const nextProjects = [...prev.projects, optimisticProject];
       localStorage.setItem(PROJECTS_KEY, JSON.stringify(nextProjects));
       localStorage.setItem(ACTIVE_PROJECT_KEY, optimisticProject.id);
-      if (isTrial) saveOverlays(nextProjects);
       return { projects: nextProjects, activeId: optimisticProject.id };
     });
 
@@ -426,7 +383,6 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
 
             localStorage.setItem(PROJECTS_KEY, JSON.stringify(nextProjects));
             localStorage.setItem(ACTIVE_PROJECT_KEY, nextActiveId);
-            if (isTrial) saveOverlays(nextProjects);
             return { projects: nextProjects, activeId: nextActiveId };
           });
         })
@@ -436,7 +392,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     }
 
     return optimisticProject;
-  }, [backendMode, activeOrganizationId, isTrial]);
+  }, [backendMode, activeOrganizationId]);
 
   const deleteProject = (id: string) => {
     if (projects.length <= 1) return;

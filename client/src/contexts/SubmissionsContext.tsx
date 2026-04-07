@@ -3,7 +3,6 @@ import { nanoid } from 'nanoid';
 import type { Submission, SubmissionStats, SubmissionFormData, SubmissionStatus } from '@/types';
 import { saveToStorage, loadFromStorage, STORAGE_KEYS } from '@/lib/storage';
 import { getDaysDifference } from '@/lib/date-utils';
-import { generateSampleSubmissions } from '@/data/generators';
 import { useJournals } from './JournalsContext';
 import { useManuscript } from './ManuscriptContext';
 
@@ -38,15 +37,10 @@ export function SubmissionsProvider({ children }: SubmissionsProviderProps) {
   const { allJournals } = useJournals();
   const { manuscript } = useManuscript();
 
-  // Load initial data from localStorage or generate sample data
+  // Load initial data from localStorage
   const [submissions, setSubmissions] = useState<Submission[]>(() => {
     const stored = loadFromStorage<Submission[] | null>(STORAGE_KEYS.SUBMISSIONS, null);
-    if (stored && stored.length > 0) {
-      return stored;
-    }
-    const generated = generateSampleSubmissions(manuscript.id, allJournals.slice(0, 3));
-    saveToStorage(STORAGE_KEYS.SUBMISSIONS, generated);
-    return generated;
+    return stored ?? [];
   });
 
   // Save to localStorage whenever submissions change

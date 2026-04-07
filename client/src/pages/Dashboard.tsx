@@ -32,7 +32,6 @@ import CollaboratorManager from '@/components/dashboard/CollaboratorManager';
 import ProjectOnboardingWizard from '@/components/dashboard/ProjectOnboardingWizard';
 import ProjectSettingsPanel from '@/components/settings/ProjectSettingsPanel';
 import { useProject } from '@/contexts/ProjectContext';
-import { useAuth } from '@/contexts/AuthContext';
 import { useSubmissions } from '@/contexts/SubmissionsContext';
 import { useManuscript } from '@/contexts/ManuscriptContext';
 import type { Task, TaskFormData } from '@/types';
@@ -80,7 +79,6 @@ export default function Dashboard() {
     removeCollaborator,
     updateCollaborator,
   } = useProject();
-  const { isTrial } = useAuth();
   const { submissions } = useSubmissions();
   const { manuscripts } = useManuscript();
 
@@ -181,7 +179,7 @@ export default function Dashboard() {
     settings:     { title: 'Settings',           subtitle: 'Project controls and preferences' },
   };
 
-  if (isLoadingProjects && !isTrial) {
+  if (isLoadingProjects) {
     return <LoadingScreen />;
   }
 
@@ -190,7 +188,7 @@ export default function Dashboard() {
       <Navbar />
 
       {/* Onboarding wizard for new real users */}
-      {showOnboarding && !isTrial && (
+      {showOnboarding && (
         <ProjectOnboardingWizard onComplete={dismissOnboarding} />
       )}
 

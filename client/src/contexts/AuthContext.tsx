@@ -27,13 +27,11 @@ interface AuthContextType {
   setActiveOrganizationId: (organizationId: string) => void;
   isLoading: boolean;
   isAuthenticating: boolean;
-  isTrial: boolean;
   signIn: (email: string, password: string) => Promise<void>;
   signUp: (name: string, email: string, password: string) => Promise<{ requiresEmailVerification: boolean }>;
   requestPasswordReset: (email: string) => Promise<void>;
   startOAuth: (provider?: 'google') => Promise<void>;
   updateProfile: (name: string) => Promise<void>;
-  signInAsGuest: () => void;
   signOut: () => void;
   openModal: (view?: 'signin' | 'signup' | 'forgot') => void;
   closeModal: () => void;
@@ -73,11 +71,27 @@ function persistUser(user: AuthUser | null) {
   localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(user));
 }
 
+function clearLocalWorkspaceData() {
+  localStorage.removeItem('journi_projects');
+  localStorage.removeItem('journi_active_project_id');
+  localStorage.removeItem('journi_activities');
+  localStorage.removeItem('journi_manuscripts');
+  localStorage.removeItem('journi_manuscript');
+  localStorage.removeItem('journi_submissions');
+  localStorage.removeItem('journi_project_overlays');
+}
+
 function readPersistedUser(): AuthUser | null {
   try {
     const value = localStorage.getItem(USER_STORAGE_KEY);
     if (!value) return null;
-    return JSON.parse(value) as AuthUser;
+    const parsed = JSON.parse(value) as AuthUser;
+    if (parsed?.id === 'guest' || parsed?.email === 'trial@journi.app') {
+      localStorage.removeItem(USER_STORAGE_KEY);
+      clearLocalWorkspaceData();
+      return null;
+    }
+    return parsed;
   } catch {
     return null;
   }
@@ -115,7 +129,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Start not-loading if we already have a persisted user — bootstrap will silently re-validate
   const [isLoading, setIsLoading] = useState(() => readPersistedUser() === null);
   const [isAuthenticating, setIsAuthenticating] = useState(false);
-  const [isTrial, setIsTrial] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalView, setModalView] = useState<'signin' | 'signup' | 'forgot'>('signin');
 
@@ -168,7 +181,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       localStorage.removeItem(ORG_STORAGE_KEY);
     }
     persistUser(nextUser);
-    setIsTrial(false);
   }, []);
 
   useEffect(() => {
@@ -252,14 +264,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const applyAuthResponse = useCallback(
     (nextUser: AuthUser, session: ApiSession | null, responseMemberships?: OrganizationMembershipDTO[], responseProjects?: any[]) => {
       // Clear stale trial/sample project data so Dashboard never flashes old content
-      localStorage.removeItem('journi_projects');
-      localStorage.removeItem('journi_active_project_id');
-      localStorage.removeItem('journi_activities');
-      localStorage.removeItem('journi_project_overlays');
-
+      clearLocalWorkspaceData();
       setUser(nextUser);
       persistUser(nextUser);
-      setIsTrial(false);
       setIsLoading(false);
 
       if (session) {
@@ -343,11 +350,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       expiresAt: sbSession.expires_at ?? null,
     };
 
+    clearLocalWorkspaceData();
     // Set user + session immediately — the caller navigates right after this returns.
     setStoredSession(session);
     setUser(nextUser);
     persistUser(nextUser);
-    setIsTrial(false);
     setIsLoading(false);
 
     // Hydrate memberships in the background so the dashboard can show the correct org.
@@ -400,23 +407,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     persistUser(nextUser);
   }, []);
 
-  const signInAsGuest = useCallback(() => {
-    const guest: AuthUser = {
-      id: 'guest',
-      name: 'Trial User',
-      email: 'trial@journi.app',
-      initials: 'TU',
-      provider: 'local',
-    };
-    clearStoredSession();
-    setUser(guest);
-    setMemberships([]);
-    setActiveOrganizationIdState(null);
-    localStorage.removeItem(ORG_STORAGE_KEY);
-    setIsTrial(true);
-    persistUser(guest);
-  }, []);
-
   const signOut = useCallback(() => {
     // Clear all local state synchronously — navigation happens immediately.
     clearStoredSession();
@@ -426,11 +416,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setActiveOrganizationIdState(null);
     localStorage.removeItem(ORG_STORAGE_KEY);
     localStorage.removeItem('journi_preloaded_api_projects');
-    localStorage.removeItem('journi_projects');
-    localStorage.removeItem('journi_active_project_id');
-    localStorage.removeItem('journi_activities');
-    localStorage.removeItem('journi_project_overlays');
-    setIsTrial(false);
+    clearLocalWorkspaceData();
 
     // Invalidate the session on the server in the background.
     apiFetch('/auth/signout', { method: 'POST' }).catch(() => {});
@@ -463,13 +449,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setActiveOrganizationId,
         isLoading,
         isAuthenticating,
-        isTrial,
         signIn,
         signUp,
         requestPasswordReset: requestPasswordResetAction,
         startOAuth,
         updateProfile,
-        signInAsGuest,
         signOut,
         openModal,
         closeModal,

@@ -29,9 +29,9 @@ const fadeUp = {
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function Home() {
-  const { user, isTrial, openModal, signInAsGuest } = useAuth();
+  const { user, openModal } = useAuth();
   const [, navigate] = useLocation();
-  const isAuthenticated = !!(user || isTrial);
+  const isAuthenticated = !!user;
 
   const [animate] = useState(() => {
     try { return !sessionStorage.getItem(HERO_SEEN_KEY); } catch { return false; }
@@ -117,7 +117,7 @@ export default function Home() {
                   </button>
                 ) : (
                   <button
-                    onClick={() => { signInAsGuest(); navigate("/collaboration"); }}
+                    onClick={() => openModal("signup")}
                     className="inline-flex items-center gap-2 bg-journi-green text-journi-slate font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
                   >
                     Try it with your manuscript
@@ -356,7 +356,7 @@ export default function Home() {
               ) : (
                 <>
                   <button
-                    onClick={() => { signInAsGuest(); navigate("/collaboration"); }}
+                    onClick={() => openModal("signup")}
                     className="inline-flex items-center gap-2 bg-journi-green text-journi-slate font-semibold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity"
                   >
                     Try it with your manuscript
