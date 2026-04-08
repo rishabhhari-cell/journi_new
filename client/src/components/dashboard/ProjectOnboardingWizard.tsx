@@ -42,19 +42,21 @@ const MANUSCRIPT_TYPES: { value: ManuscriptType; label: string }[] = [
 const STEP_LABELS = ["Project", "Import", "Team"];
 
 const ui = {
-  stepBody: "mx-auto w-full max-w-[560px] space-y-5",
+  stepBody: "mx-auto w-full max-w-[640px] space-y-6",
   label: "block text-[13px] leading-5 font-semibold tracking-[0.005em] text-foreground/95 mb-1.5",
   control:
-    "h-11 w-full rounded-xl border border-border/80 bg-background px-3.5 text-sm leading-[1.45] font-medium text-foreground placeholder:text-muted-foreground/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/35 focus-visible:border-journi-green/55 transition-colors",
+    "h-12 w-full rounded-xl border border-border/80 bg-background px-4 text-[15px] leading-[1.45] font-medium text-foreground placeholder:text-muted-foreground/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/35 focus-visible:border-journi-green/55 transition-colors",
   textarea:
-    "w-full min-h-[92px] rounded-xl border border-border/80 bg-background px-3.5 py-3 text-sm leading-[1.5] font-medium text-foreground placeholder:text-muted-foreground/85 resize-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/35 focus-visible:border-journi-green/55 transition-colors",
+    "w-full min-h-[108px] rounded-xl border border-border/80 bg-background px-4 py-3 text-[15px] leading-[1.55] font-medium text-foreground placeholder:text-muted-foreground/85 resize-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/35 focus-visible:border-journi-green/55 transition-colors",
   dropzone:
-    "rounded-xl border border-dashed border-border/80 bg-background px-6 py-9 text-center cursor-pointer hover:border-journi-green/35 hover:bg-journi-green/5 transition-colors",
-  card: "rounded-xl border border-border/75 bg-background",
+    "rounded-2xl border border-dashed border-border/80 bg-background px-8 py-12 text-center cursor-pointer hover:border-journi-green/35 hover:bg-journi-green/5 transition-colors",
+  card: "rounded-2xl border border-border/75 bg-background",
   mutedButton:
     "text-sm text-muted-foreground hover:text-foreground transition-colors px-3 py-2 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/25",
   primaryButton:
     "flex items-center gap-1.5 bg-journi-green text-journi-slate text-sm font-semibold tracking-[0.01em] px-5 h-11 rounded-xl hover:opacity-90 transition-opacity disabled:opacity-40 disabled:cursor-not-allowed",
+  introCard:
+    "w-full rounded-2xl border border-border/75 bg-background px-7 py-7 shadow-sm",
 };
 
 export default function ProjectOnboardingWizard({ onComplete }: Props) {
@@ -188,14 +190,14 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
         initial={{ opacity: 0, scale: 0.96, y: 12 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.16 }}
-        className="relative z-10 bg-card border border-border/80 rounded-2xl shadow-2xl w-full max-w-xl overflow-hidden"
+        className="relative z-10 bg-card border border-border/80 rounded-3xl shadow-2xl w-full max-w-2xl overflow-hidden"
       >
         {/* Progress bar */}
-        <div className="flex gap-1 px-7 pt-6 pb-2">
+        <div className="flex gap-2 px-8 pt-7 pb-2">
           {[1, 2, 3].map((s) => (
             <div key={s} className="flex-1 flex flex-col items-center gap-1">
               <div
-                className={`h-1 w-full rounded-full transition-colors ${s <= step ? "bg-journi-green" : "bg-muted"}`}
+                className={`h-1.5 w-full rounded-full transition-colors ${s <= step ? "bg-journi-green" : "bg-muted"}`}
               />
               <span className={`text-[10px] font-medium ${s <= step ? "text-journi-green" : "text-muted-foreground"}`}>
                 {STEP_LABELS[s - 1]}
@@ -205,13 +207,13 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
         </div>
 
         {/* Header */}
-        <div className="px-7 pt-2 pb-5 border-b border-border/80">
-          <h2 className="text-[22px] leading-[1.15] font-semibold tracking-[-0.01em] text-foreground">
+        <div className="px-8 pt-3 pb-6 border-b border-border/80">
+          <h2 className="text-[26px] leading-[1.12] font-semibold tracking-[-0.015em] text-foreground">
             {step === 1 && "Set up your project"}
             {step === 2 && "Import your work"}
             {step === 3 && "Invite your team"}
           </h2>
-          <p className="text-[14px] leading-6 text-muted-foreground mt-1.5">
+          <p className="text-[15px] leading-7 text-muted-foreground mt-2">
             {step === 1 && "Give your research project a name to get started."}
             {step === 2 && "Upload an existing document or start from scratch."}
             {step === 3 && "Add co-authors so you can collaborate."}
@@ -219,7 +221,7 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
         </div>
 
         {/* Body */}
-        <div className="px-7 py-6 min-h-[320px]">
+        <div className="px-8 py-7 min-h-[360px]">
           <AnimatePresence mode="wait">
             {step === 1 && (
               <motion.div
@@ -230,77 +232,79 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
                 transition={{ duration: 0.12 }}
                 className={`relative ${ui.stepBody}`}
               >
-                {showWelcomeIntro && (
-                  <div className="absolute inset-0 z-10 flex items-start justify-center rounded-xl bg-card/90 backdrop-blur-[1px] p-2">
-                    <div className="w-full rounded-xl border border-border/75 bg-background px-5 py-5 shadow-sm">
-                      <p className="text-[19px] leading-[1.25] font-semibold tracking-[-0.005em] text-foreground mb-4">Welcome to the start of your journie</p>
-                      <button
-                        type="button"
-                        onClick={() => setShowWelcomeIntro(false)}
-                        className="inline-flex items-center gap-1.5 bg-journi-green text-journi-slate text-sm font-semibold px-4 h-10 rounded-xl hover:opacity-90 transition-opacity"
-                      >
-                        <FolderPlus size={14} />
-                        Start setup
-                      </button>
-                    </div>
-                  </div>
-                )}
-
-                <div>
-                  <label className={ui.label}>
-                    Project name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    value={projectName}
-                    onChange={(e) => setProjectName(e.target.value)}
-                    placeholder="e.g. Phase III Clinical Trial Analysis"
-                    className={ui.control}
-                    autoFocus
-                  />
-                </div>
-
-                <div>
-                  <label className={ui.label}>
-                    Description <span className="text-muted-foreground font-normal">(optional)</span>
-                  </label>
-                  <textarea
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    placeholder="Brief description of your research..."
-                    rows={2}
-                    className={ui.textarea}
-                  />
-                </div>
-
-                <div className="flex gap-3">
-                  <div className="flex-1">
-                    <label className={ui.label}>
-                      Submission deadline <span className="text-muted-foreground font-normal">(optional)</span>
-                    </label>
-                    <input
-                      type="date"
-                      value={dueDate}
-                      onChange={(e) => setDueDate(e.target.value)}
-                      className={ui.control}
-                    />
-                  </div>
-
-                  <div className="flex-1">
-                    <label className={ui.label}>Manuscript type</label>
-                    <select
-                      value={manuscriptType}
-                      onChange={(e) => setManuscriptType(e.target.value as ManuscriptType)}
-                      className={ui.control}
+                {showWelcomeIntro ? (
+                  <div className={ui.introCard}>
+                    <p className="text-[19px] leading-[1.25] font-semibold tracking-[-0.005em] text-foreground mb-4">
+                      Welcome to the start of your journie
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setShowWelcomeIntro(false)}
+                      className="inline-flex items-center gap-1.5 bg-journi-green text-journi-slate text-sm font-semibold px-5 h-11 rounded-xl hover:opacity-90 transition-opacity"
                     >
-                      {MANUSCRIPT_TYPES.map((t) => (
-                        <option key={t.value} value={t.value}>
-                          {t.label}
-                        </option>
-                      ))}
-                    </select>
+                      <FolderPlus size={14} />
+                      Start setup
+                    </button>
                   </div>
-                </div>
+                ) : (
+                  <>
+                    <div>
+                      <label className={ui.label}>
+                        Project name <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        value={projectName}
+                        onChange={(e) => setProjectName(e.target.value)}
+                        placeholder="e.g. Phase III Clinical Trial Analysis"
+                        className={ui.control}
+                        autoFocus
+                      />
+                    </div>
+
+                    <div>
+                      <label className={ui.label}>
+                        Description <span className="text-muted-foreground font-normal">(optional)</span>
+                      </label>
+                      <textarea
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                        placeholder="Brief description of your research..."
+                        rows={2}
+                        className={ui.textarea}
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="flex-1">
+                        <label className={ui.label}>
+                          Submission deadline <span className="text-muted-foreground font-normal">(optional)</span>
+                        </label>
+                        <input
+                          type="date"
+                          value={dueDate}
+                          onChange={(e) => setDueDate(e.target.value)}
+                          className={ui.control}
+                        />
+                      </div>
+
+                      <div className="flex-1">
+                        <label className={ui.label}>Manuscript type</label>
+                        <select
+                          value={manuscriptType}
+                          onChange={(e) => setManuscriptType(e.target.value as ManuscriptType)}
+                          className={ui.control}
+                        >
+                          {MANUSCRIPT_TYPES.map((t) => (
+                            <option key={t.value} value={t.value}>
+                              {t.label}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                  </>
+                )}
               </motion.div>
             )}
 
@@ -339,7 +343,7 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
                     <p className="text-[14px] leading-6 text-muted-foreground">Parsing your document...</p>
                   </div>
                 ) : importResult ? (
-                  <div className={`${ui.card} p-4 space-y-3`}>
+                  <div className={`${ui.card} p-5 space-y-3`}>
                     <div className="flex items-start gap-3">
                       <div className="p-2 bg-journi-green/10 rounded-lg shrink-0">
                         <FileText size={20} className="text-journi-green" />
@@ -383,7 +387,7 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
                 className={ui.stepBody}
               >
                 {collaborators.map((collab, idx) => (
-                  <div key={idx} className={`${ui.card} p-3 flex items-center gap-2`}>
+                  <div key={idx} className={`${ui.card} p-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-2`}>
                     <input
                       type="text"
                       value={collab.name}
@@ -401,7 +405,7 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
                     {collaborators.length > 1 && (
                       <button
                         onClick={() => removeCollaboratorRow(idx)}
-                        className="h-11 w-11 inline-flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-accent rounded-xl transition-colors shrink-0"
+                        className="h-12 w-12 inline-flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-accent rounded-xl transition-colors shrink-0 self-end sm:self-auto"
                         aria-label="Remove"
                       >
                         <Trash2 size={14} />
@@ -425,7 +429,7 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
         </div>
 
         {/* Footer */}
-        <div className="px-7 py-4 border-t border-border/80 flex items-center justify-between">
+        <div className="px-8 py-5 border-t border-border/80 flex items-center justify-between">
           <div>
             {step > 1 && (
               <button
@@ -460,7 +464,7 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
             {step === 1 && (
               <button
                 onClick={() => setStep(2)}
-                disabled={!canProceedStep1}
+                disabled={showWelcomeIntro || !canProceedStep1}
                 className={ui.primaryButton}
               >
                 Next
