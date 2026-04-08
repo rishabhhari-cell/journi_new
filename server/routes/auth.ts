@@ -264,6 +264,27 @@ async function resendPendingSignupEmail(email: string): Promise<boolean> {
   return true;
 }
 
+function queueSignupVerificationRetry(input: { email: string; userId: string; delayMs?: number }) {
+  const delayMs = input.delayMs ?? 65_000;
+
+  setTimeout(() => {
+    void (async () => {
+      const sent = await resendPendingSignupEmail(input.email);
+
+      await writeAuditEvent({
+        actorUserId: input.userId,
+        eventType: sent ? "email.signup_verification.resent" : "email.signup_verification.failed",
+        entityType: "user",
+        entityId: input.userId,
+        payload: {
+          email: input.email,
+          source: "delayed_retry",
+        },
+      });
+    })();
+  }, delayMs);
+}
+
 async function findExistingUserByEmail(email: string): Promise<{ fullName: string; user: any | null }> {
   const { data: profile, error: profileError } = await supabaseAdmin
     .from("profiles")
@@ -313,7 +334,7 @@ async function sendSignupVerificationEmail(input: {
   email: string;
   fullName: string;
   verificationUrl: string;
-}): Promise<boolean> {
+}): Promise<{ sent: boolean; retryScheduled: boolean }> {
   const customSent = await maybeSendWelcomeEmail({
     userId: input.userId,
     to: input.email,
@@ -322,24 +343,27 @@ async function sendSignupVerificationEmail(input: {
   });
 
   if (customSent) {
-    return true;
+    return { sent: true, retryScheduled: false };
   }
 
-  const fallbackSent = await resendPendingSignupEmail(input.email);
+  queueSignupVerificationRetry({
+    email: input.email,
+    userId: input.userId,
+  });
 
-  if (!fallbackSent) {
-    await writeAuditEvent({
-      actorUserId: input.userId,
-      eventType: "email.signup_verification.failed",
-      entityType: "user",
-      entityId: input.userId,
-      payload: {
-        email: input.email,
-      },
-    });
-  }
+  await writeAuditEvent({
+    actorUserId: input.userId,
+    eventType: "email.signup_verification.failed",
+    entityType: "user",
+    entityId: input.userId,
+    payload: {
+      email: input.email,
+      source: "initial_signup_send",
+      retryScheduled: true,
+    },
+  });
 
-  return fallbackSent;
+  return { sent: false, retryScheduled: true };
 }
 
 authRouter.post("/signup", async (req, res, next) => {
@@ -454,7 +478,7 @@ authRouter.post("/signup", async (req, res, next) => {
     ]);
     const initialProjects = await fetchInitialProjects(membershipDtos[0]?.organizationId);
 
-    const verificationEmailSent = await sendSignupVerificationEmail({
+    const verificationResult = await sendSignupVerificationEmail({
       userId: data.user.id,
       email: input.email,
       fullName: input.fullName,
@@ -467,7 +491,8 @@ authRouter.post("/signup", async (req, res, next) => {
       memberships: membershipDtos,
       projects: initialProjects,
       requiresEmailVerification: true,
-      verificationEmailSent,
+      verificationEmailSent: verificationResult.sent,
+      verificationRetryScheduled: verificationResult.retryScheduled,
     });
   } catch (error) {
     next(error);

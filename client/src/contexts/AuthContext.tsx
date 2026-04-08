@@ -32,7 +32,7 @@ interface AuthContextType {
     name: string,
     email: string,
     password: string,
-  ) => Promise<{ requiresEmailVerification: boolean; verificationEmailSent: boolean }>;
+  ) => Promise<{ requiresEmailVerification: boolean; verificationEmailSent: boolean; verificationRetryScheduled: boolean }>;
   requestPasswordReset: (email: string) => Promise<void>;
   resendVerificationEmail: (email: string) => Promise<{ sent: boolean; alreadyVerified: boolean }>;
   startOAuth: (provider?: 'google') => Promise<void>;
@@ -331,6 +331,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         projects?: any[];
         requiresEmailVerification?: boolean;
         verificationEmailSent?: boolean;
+        verificationRetryScheduled?: boolean;
       }>('/auth/signup', {
         method: 'POST',
         body: JSON.stringify({ fullName: name, email, password }),
@@ -340,12 +341,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         return {
           requiresEmailVerification: true,
           verificationEmailSent: response.verificationEmailSent ?? true,
+          verificationRetryScheduled: response.verificationRetryScheduled ?? false,
         };
       }
 
       applyAuthResponse(toAuthUser(response.user), response.session, response.memberships, response.projects);
       await acceptPendingInvite();
-      return { requiresEmailVerification: false, verificationEmailSent: true };
+      return { requiresEmailVerification: false, verificationEmailSent: true, verificationRetryScheduled: false };
     } finally {
       setIsAuthenticating(false);
     }

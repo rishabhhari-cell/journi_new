@@ -108,6 +108,17 @@ export interface RawParsedDocument {
   figures?: ParsedFigure[];
   tables?: ParsedTable[];
   links?: ParsedLink[];
+  llmParsed?: {
+    sections: Array<{ title: string; content: string }>;
+    citations: Array<{
+      authors: string[];
+      title: string;
+      year: number;
+      journal?: string;
+      doi?: string;
+      url?: string;
+    }>;
+  };
 }
 
 interface IntermediateSection {
@@ -589,11 +600,20 @@ export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
   const sectionsFromHtml = raw.html ? parseSectionsFromHtml(raw.html) : [];
   const sectionsFromText = raw.text ? parseSectionsFromText(raw.text) : [];
   const sectionsFromBlocks = normalizedBlocks.length > 0 ? buildSectionsFromBlocks(normalizedBlocks) : [];
-  const baseSections = sectionsFromHtml.length > 0
+  
+  let baseSections = sectionsFromHtml.length > 0
     ? sectionsFromHtml
     : sectionsFromBlocks.length > 0
       ? sectionsFromBlocks
       : sectionsFromText;
+
+  // OVERRIDE heuristics with LLM parsed data if present
+  if (raw.llmParsed && raw.llmParsed.sections.length > 0) {
+    baseSections = raw.llmParsed.sections.map((sec) => ({
+      title: sec.title,
+      content: ensureParagraph(sec.content),
+    }));
+  }
 
   if (baseSections.length === 0) {
     diagnostics.push({
@@ -625,7 +645,13 @@ export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
       .filter((block) => block.type === "reference")
       .map((block) => block.text);
 
-  const citations = dedupeCitations(parseCitationsFromReferences(referencesLines));
+  const citations = raw.llmParsed && raw.llmParsed.citations.length > 0
+    ? dedupeCitations(raw.llmParsed.citations.map(c => ({
+        ...c,
+        type: c.journal ? "article" : c.url ? "website" : "conference",
+        metadata: { source: "llm" }
+      })))
+    : dedupeCitations(parseCitationsFromReferences(referencesLines));
 
   const sections: ParsedSection[] = canonicalSections.map((section, index) => ({
     title: section.title,

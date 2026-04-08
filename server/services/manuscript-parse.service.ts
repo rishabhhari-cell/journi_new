@@ -1,5 +1,6 @@
 import mammoth from "mammoth";
 import type { ParseDiagnostic, ParsedBlock, ParsedBoundingBox, ParsedFigure, ParsedTable, RawParsedDocument } from "../../shared/document-parse";
+import { parseDocumentWithLLM } from "./ollama.service";
 
 export interface ParseUploadInput {
   fileName: string;
@@ -365,12 +366,27 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
       },
     ];
 
+    let llmParsed;
+    try {
+      const textResult = await mammoth.extractRawText({ buffer: input.buffer });
+      if (textResult.value.trim().length > 0) {
+        llmParsed = await parseDocumentWithLLM(textResult.value);
+      }
+    } catch (error) {
+      diagnostics.push({
+        level: "warning",
+        code: "LLM_PARSE_FAILED",
+        message: error instanceof Error ? error.message : "Local LLM parsing failed, falling back to heuristics.",
+      });
+    }
+
     return {
       fileTitle,
       format: "docx",
       html: result.value,
       diagnostics: [...diagnostics, ...fidelityNote, ...warnings],
       references: extractReferencesFromOupHtml(result.value),
+      llmParsed,
     };
   }
 
@@ -395,6 +411,20 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
   if (extension === "pdf") {
     try {
       const payload = await extractPdfPayload(input.buffer);
+      
+      let llmParsed;
+      try {
+        if (payload.text.trim().length > 0) {
+          llmParsed = await parseDocumentWithLLM(payload.text);
+        }
+      } catch (error) {
+        diagnostics.push({
+          level: "warning",
+          code: "LLM_PARSE_FAILED",
+          message: error instanceof Error ? error.message : "Local LLM parsing failed, falling back to heuristics.",
+        });
+      }
+
       if (!payload.text) {
         diagnostics.push({
           level: "warning",
@@ -413,6 +443,7 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
         tables: payload.tables,
         links: [],
         diagnostics: [...diagnostics, ...payload.diagnostics],
+        llmParsed,
       };
     } catch (error) {
       diagnostics.push({

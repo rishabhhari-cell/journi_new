@@ -633,7 +633,7 @@ async function importFile(file: File): Promise<ImportDocumentResult> {
 
   const statusInfo = deriveImportStatus(raw, diagnostics, Boolean(parsed.reviewRequired));
   const items =
-    raw.format === 'docx'
+    raw.format === 'docx' || (raw.llmParsed && raw.llmParsed.sections.length > 0)
       ? buildDocxImportItems(raw, parsed)
       : raw.format === 'pdf'
         ? buildPdfImportItems(parsed)
