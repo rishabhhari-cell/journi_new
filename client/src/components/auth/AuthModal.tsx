@@ -92,7 +92,7 @@ function Field({
 
 // ── Main modal ────────────────────────────────────────────────────────────────
 export default function AuthModal() {
-  const { user, modalOpen, modalView, closeModal, signIn, signUp, requestPasswordReset, openModal, startOAuth } = useAuth();
+  const { user, modalOpen, modalView, closeModal, signIn, signUp, requestPasswordReset, resendVerificationEmail, openModal, startOAuth } = useAuth();
 
   // Sign-in fields
   const [siEmail, setSiEmail] = useState('');
@@ -110,6 +110,8 @@ export default function AuthModal() {
   const [loading, setLoading] = useState(false);
   const [institutionalExpanded, setInstitutionalExpanded] = useState(false);
   const [verificationEmail, setVerificationEmail] = useState('');
+  const [verificationEmailSent, setVerificationEmailSent] = useState(true);
+  const [resendingVerification, setResendingVerification] = useState(false);
 
   // Clear errors when switching views
   useEffect(() => {
@@ -153,7 +155,12 @@ export default function AuthModal() {
       const result = await signUp(suName, suEmail, suPassword);
       if (result.requiresEmailVerification) {
         setVerificationEmail(suEmail.trim());
-        toast.success('Account created. Check your email to verify your account.');
+        setVerificationEmailSent(result.verificationEmailSent);
+        if (result.verificationEmailSent) {
+          toast.success('Account created. Check your email to verify your account.');
+        } else {
+          toast.error("Account created, but the verification email didn't send. Use resend below.");
+        }
         openModal('verify');
       } else {
         closeModal();
@@ -165,6 +172,30 @@ export default function AuthModal() {
       setError(err instanceof Error ? err.message : 'Sign up failed.');
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleResendVerification = async () => {
+    if (!verificationEmail.trim()) return;
+    setResendingVerification(true);
+    try {
+      const result = await resendVerificationEmail(verificationEmail.trim());
+      if (result.alreadyVerified) {
+        toast.success('This email is already verified. You can sign in now.');
+        openModal('signin');
+        return;
+      }
+
+      if (result.sent) {
+        setVerificationEmailSent(true);
+        toast.success('Verification email sent. Please check your inbox.');
+      } else {
+        toast.error("We still couldn't send the verification email. Please try again.");
+      }
+    } catch (err: unknown) {
+      toast.error(err instanceof Error ? err.message : 'Failed to resend verification email.');
+    } finally {
+      setResendingVerification(false);
     }
   };
 
@@ -267,8 +298,9 @@ export default function AuthModal() {
                     <div>
                       <p className="text-sm font-semibold text-foreground">Please verify your email</p>
                       <p className="mt-1 text-xs text-muted-foreground">
-                        We sent a verification link to {verificationEmail || 'your email address'}.
-                        Click the link to verify your account.
+                        {verificationEmailSent
+                          ? `We sent a verification link to ${verificationEmail || 'your email address'}. Click the link to verify your account.`
+                          : `We couldn't confirm delivery to ${verificationEmail || 'your email address'} yet. Use resend below, then verify your account.`}
                       </p>
                     </div>
                   </div>
@@ -278,17 +310,18 @@ export default function AuthModal() {
                   <div className="flex gap-2">
                     <button
                       type="button"
-                      onClick={() => openModal('signin')}
-                      className="flex-1 rounded-xl border border-border px-4 py-2.5 text-sm font-medium text-foreground hover:bg-accent transition-colors"
+                      onClick={handleResendVerification}
+                      disabled={resendingVerification}
+                      className="flex-1 rounded-xl border border-border px-4 py-2.5 text-sm font-medium text-foreground hover:bg-accent transition-colors disabled:opacity-60"
                     >
-                      Back to Sign In
+                      {resendingVerification ? 'Sending…' : 'Resend email'}
                     </button>
                     <button
                       type="button"
-                      onClick={closeModal}
+                      onClick={() => openModal('signin')}
                       className="flex-1 rounded-xl bg-journi-green px-4 py-2.5 text-sm font-bold text-journi-slate hover:opacity-90 transition-opacity"
                     >
-                      Done
+                      Back to Sign In
                     </button>
                   </div>
                 </motion.div>

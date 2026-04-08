@@ -555,6 +555,13 @@ export async function requestPasswordReset(email: string) {
   });
 }
 
+export async function resendVerificationEmail(email: string) {
+  return apiFetchNoAuth<{ ok: boolean; sent: boolean; alreadyVerified: boolean }>('/auth/signup/resend-verification', {
+    method: 'POST',
+    body: JSON.stringify({ email }),
+  });
+}
+
 export async function updatePassword(password: string) {
   return apiFetch<{ ok: boolean }>('/auth/update-password', {
     method: 'POST',

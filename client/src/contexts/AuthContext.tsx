@@ -8,7 +8,7 @@ import {
   getStoredSession,
   setStoredSession,
 } from '@/lib/api/client';
-import { acceptOrganizationInvite, requestPasswordReset } from '@/lib/api/backend';
+import { acceptOrganizationInvite, requestPasswordReset, resendVerificationEmail } from '@/lib/api/backend';
 import { supabaseBrowser } from '@/lib/supabase-browser';
 
 export interface AuthUser {
@@ -28,8 +28,13 @@ interface AuthContextType {
   isLoading: boolean;
   isAuthenticating: boolean;
   signIn: (email: string, password: string) => Promise<void>;
-  signUp: (name: string, email: string, password: string) => Promise<{ requiresEmailVerification: boolean }>;
+  signUp: (
+    name: string,
+    email: string,
+    password: string,
+  ) => Promise<{ requiresEmailVerification: boolean; verificationEmailSent: boolean }>;
   requestPasswordReset: (email: string) => Promise<void>;
+  resendVerificationEmail: (email: string) => Promise<{ sent: boolean; alreadyVerified: boolean }>;
   startOAuth: (provider?: 'google') => Promise<void>;
   updateProfile: (name: string) => Promise<void>;
   signOut: () => void;
@@ -325,18 +330,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         memberships?: OrganizationMembershipDTO[];
         projects?: any[];
         requiresEmailVerification?: boolean;
+        verificationEmailSent?: boolean;
       }>('/auth/signup', {
         method: 'POST',
         body: JSON.stringify({ fullName: name, email, password }),
       });
 
       if (response.requiresEmailVerification || !response.session) {
-        return { requiresEmailVerification: true };
+        return {
+          requiresEmailVerification: true,
+          verificationEmailSent: response.verificationEmailSent ?? true,
+        };
       }
 
       applyAuthResponse(toAuthUser(response.user), response.session, response.memberships, response.projects);
       await acceptPendingInvite();
-      return { requiresEmailVerification: false };
+      return { requiresEmailVerification: false, verificationEmailSent: true };
     } finally {
       setIsAuthenticating(false);
     }
@@ -425,6 +434,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     await requestPasswordReset(email);
   }, []);
 
+  const resendVerificationEmailAction = useCallback(async (email: string) => {
+    const response = await resendVerificationEmail(email);
+    return {
+      sent: response.sent,
+      alreadyVerified: response.alreadyVerified,
+    };
+  }, []);
+
   const updateProfile = useCallback(async (name: string) => {
     const response = await apiFetch<{ user: ApiUser }>('/auth/profile', {
       method: 'PATCH',
@@ -480,6 +497,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         signIn,
         signUp,
         requestPasswordReset: requestPasswordResetAction,
+        resendVerificationEmail: resendVerificationEmailAction,
         startOAuth,
         updateProfile,
         signOut,

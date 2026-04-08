@@ -9,6 +9,13 @@ interface SendEmailInput {
   text?: string;
 }
 
+const EMAIL_SEND_MAX_ATTEMPTS = 3;
+const EMAIL_SEND_RETRY_DELAYS_MS = [250, 750];
+
+function wait(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 function hasEmailProviderConfigured(): boolean {
   return Boolean(env.RESEND_API_KEY);
 }
@@ -41,21 +48,41 @@ export async function sendTransactionalEmail(input: SendEmailInput): Promise<boo
     return false;
   }
 
-  try {
-    await sendViaResend(input);
-    logger.info("Transactional email sent", {
-      to: input.to,
-      subject: input.subject,
-    });
-    return true;
-  } catch (error) {
-    logger.error("Failed to send transactional email", {
-      to: input.to,
-      subject: input.subject,
-      error: error instanceof Error ? error.message : String(error),
-    });
-    return false;
+  for (let attempt = 1; attempt <= EMAIL_SEND_MAX_ATTEMPTS; attempt += 1) {
+    try {
+      await sendViaResend(input);
+      logger.info("Transactional email sent", {
+        to: input.to,
+        subject: input.subject,
+        attempt,
+      });
+      return true;
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      const isLastAttempt = attempt === EMAIL_SEND_MAX_ATTEMPTS;
+
+      if (isLastAttempt) {
+        logger.error("Failed to send transactional email", {
+          to: input.to,
+          subject: input.subject,
+          attempt,
+          error: message,
+        });
+        return false;
+      }
+
+      logger.warn("Transactional email send attempt failed; retrying", {
+        to: input.to,
+        subject: input.subject,
+        attempt,
+        error: message,
+      });
+
+      await wait(EMAIL_SEND_RETRY_DELAYS_MS[attempt - 1] ?? 1000);
+    }
   }
+
+  return false;
 }
 
 export async function sendWelcomeEmail(input: { to: string; fullName: string; verificationUrl?: string }): Promise<boolean> {

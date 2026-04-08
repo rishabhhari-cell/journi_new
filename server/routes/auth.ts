@@ -61,6 +61,10 @@ const updatePasswordSchema = z.object({
   password: z.string().min(8),
 });
 
+const resendVerificationSchema = z.object({
+  email: z.string().email(),
+});
+
 const oauthSchema = z.object({
   provider: z.enum(["google", "github", "gitlab", "azure", "bitbucket", "discord", "notion"]),
   redirectTo: z.string().url().optional(),
@@ -78,6 +82,10 @@ function toInitials(fullName: string): string {
     .slice(0, 2)
     .join("")
     .toUpperCase();
+}
+
+function normalizeEmail(email: string): string {
+  return email.trim().toLowerCase();
 }
 
 function mapSession(session: any): ApiSession | null {
@@ -166,7 +174,7 @@ async function upsertProfile(params: { userId: string; fullName: string; email: 
     {
       id: params.userId,
       full_name: params.fullName,
-      email: params.email,
+      email: normalizeEmail(params.email),
       initials: toInitials(params.fullName),
       updated_at: new Date().toISOString(),
     },
@@ -209,18 +217,18 @@ async function maybeSendWelcomeEmail(input: {
   to: string;
   fullName: string;
   verificationUrl?: string;
-}): Promise<void> {
-  if (!input.to) return;
+}): Promise<boolean> {
+  if (!input.to) return false;
 
   const alreadySent = await hasWelcomeEmailBeenSent(input.userId);
-  if (alreadySent) return;
+  if (alreadySent) return false;
 
   const sent = await sendWelcomeEmail({
     to: input.to,
     fullName: input.fullName,
     verificationUrl: input.verificationUrl,
   });
-  if (!sent) return;
+  if (!sent) return false;
 
   await writeAuditEvent({
     actorUserId: input.userId,
@@ -232,11 +240,117 @@ async function maybeSendWelcomeEmail(input: {
       mode: input.verificationUrl ? "verification" : "welcome",
     },
   });
+
+  return true;
+}
+
+async function resendPendingSignupEmail(email: string): Promise<boolean> {
+  const { error } = await supabasePublic.auth.resend({
+    type: "signup",
+    email,
+    options: {
+      emailRedirectTo: `${env.CLIENT_BASE_URL}/`,
+    },
+  });
+
+  if (error) {
+    logger.warn("Failed to resend Supabase signup confirmation email", {
+      email,
+      error: error.message,
+    });
+    return false;
+  }
+
+  return true;
+}
+
+async function findExistingUserByEmail(email: string): Promise<{ fullName: string; user: any | null }> {
+  const { data: profile, error: profileError } = await supabaseAdmin
+    .from("profiles")
+    .select("id, full_name")
+    .ilike("email", email)
+    .maybeSingle();
+
+  if (profileError) {
+    logger.warn("Failed to look up existing profile by email", {
+      email,
+      error: profileError.message,
+    });
+    return {
+      fullName: email.split("@")[0] ?? "User",
+      user: null,
+    };
+  }
+
+  if (!profile?.id) {
+    return {
+      fullName: email.split("@")[0] ?? "User",
+      user: null,
+    };
+  }
+
+  const { data: authUserResult, error: authUserError } = await supabaseAdmin.auth.admin.getUserById(profile.id);
+  if (authUserError) {
+    logger.warn("Failed to load existing auth user by profile email", {
+      email,
+      userId: profile.id,
+      error: authUserError.message,
+    });
+  }
+
+  return {
+    fullName: profile.full_name ?? email.split("@")[0] ?? "User",
+    user: authUserResult?.user ?? null,
+  };
+}
+
+function isAlreadyRegisteredError(message: string | undefined): boolean {
+  return /already registered/i.test(message ?? "");
+}
+
+async function sendSignupVerificationEmail(input: {
+  userId: string;
+  email: string;
+  fullName: string;
+  verificationUrl: string;
+}): Promise<boolean> {
+  const customSent = await maybeSendWelcomeEmail({
+    userId: input.userId,
+    to: input.email,
+    fullName: input.fullName,
+    verificationUrl: input.verificationUrl,
+  });
+
+  if (customSent) {
+    return true;
+  }
+
+  const fallbackSent = await resendPendingSignupEmail(input.email);
+
+  if (!fallbackSent) {
+    await writeAuditEvent({
+      actorUserId: input.userId,
+      eventType: "email.signup_verification.failed",
+      entityType: "user",
+      entityId: input.userId,
+      payload: {
+        email: input.email,
+      },
+    });
+  }
+
+  return fallbackSent;
 }
 
 authRouter.post("/signup", async (req, res, next) => {
   try {
-    const input = signUpSchema.parse(req.body);
+    const parsedInput = signUpSchema.parse(req.body);
+    const input = {
+      ...parsedInput,
+      email: normalizeEmail(parsedInput.email),
+      fullName: parsedInput.fullName.trim(),
+      organizationName: parsedInput.organizationName?.trim(),
+    };
 
     const { data, error } = await supabaseAdmin.auth.admin.generateLink({
       type: "signup",
@@ -251,6 +365,37 @@ authRouter.post("/signup", async (req, res, next) => {
     });
 
     if (error) {
+      if (isAlreadyRegisteredError(error.message)) {
+        const existing = await findExistingUserByEmail(input.email);
+        const existingUser = existing.user;
+        const alreadyVerified = Boolean(existingUser?.email_confirmed_at || existingUser?.confirmed_at);
+
+        if (alreadyVerified) {
+          throw new HttpError(409, "An account with this email already exists. Please sign in instead.", "USER_ALREADY_EXISTS");
+        }
+
+        const verificationEmailSent = await resendPendingSignupEmail(input.email);
+
+        res.status(200).json({
+          user: existingUser
+            ? mapUser(existingUser, existing.fullName)
+            : {
+                id: "",
+                email: input.email,
+                fullName: existing.fullName,
+                initials: toInitials(existing.fullName),
+                provider: "local" as const,
+              },
+          session: null,
+          memberships: [],
+          projects: [],
+          requiresEmailVerification: true,
+          verificationEmailSent,
+          existingAccount: true,
+        });
+        return;
+      }
+
       throw new HttpError(400, error.message, "SIGNUP_FAILED");
     }
     if (!data.user) {
@@ -309,9 +454,9 @@ authRouter.post("/signup", async (req, res, next) => {
     ]);
     const initialProjects = await fetchInitialProjects(membershipDtos[0]?.organizationId);
 
-    void maybeSendWelcomeEmail({
+    const verificationEmailSent = await sendSignupVerificationEmail({
       userId: data.user.id,
-      to: input.email,
+      email: input.email,
       fullName: input.fullName,
       verificationUrl: data.properties.action_link,
     });
@@ -322,6 +467,7 @@ authRouter.post("/signup", async (req, res, next) => {
       memberships: membershipDtos,
       projects: initialProjects,
       requiresEmailVerification: true,
+      verificationEmailSent,
     });
   } catch (error) {
     next(error);
@@ -595,7 +741,7 @@ authRouter.get("/me", requireAuth, async (req, res, next) => {
       provider,
     };
 
-    void maybeSendWelcomeEmail({
+    await maybeSendWelcomeEmail({
       userId,
       to: user.email,
       fullName,
@@ -605,6 +751,39 @@ authRouter.get("/me", requireAuth, async (req, res, next) => {
       user,
       memberships: membershipDtos,
     });
+  } catch (error) {
+    next(error);
+  }
+});
+
+authRouter.post("/signup/resend-verification", async (req, res, next) => {
+  try {
+    const input = resendVerificationSchema.parse(req.body);
+    const email = normalizeEmail(input.email);
+    const existing = await findExistingUserByEmail(email);
+    const authUser = existing.user;
+    const alreadyVerified = Boolean(authUser?.email_confirmed_at || authUser?.confirmed_at);
+
+    if (alreadyVerified) {
+      res.json({ ok: true, sent: false, alreadyVerified: true });
+      return;
+    }
+
+    const sent = await resendPendingSignupEmail(email);
+
+    if (sent && authUser?.id) {
+      await writeAuditEvent({
+        actorUserId: authUser.id,
+        eventType: "email.signup_verification.resent",
+        entityType: "user",
+        entityId: authUser.id,
+        payload: {
+          email,
+        },
+      });
+    }
+
+    res.json({ ok: true, sent, alreadyVerified: false });
   } catch (error) {
     next(error);
   }
