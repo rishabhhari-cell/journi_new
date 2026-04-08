@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #f0ede6; font-family: "Plus Jakarta Sans", Arial, sans-serif; }
-  .wrap { padding: 2rem 1rem; background: #f0ede6; }
-  .shell { max-width: 600px; margin: 0 auto; background: #fff; border-radius: 4px; overflow: hidden; border: 1px solid #ddd; }
-  .header { background: #fff; padding: 2.5rem 2.5rem 1.5rem; text-align: center; border-bottom: 1px solid #e8e4dc; }
-  .logo-img { display: block; margin: 0 auto; width: 180px; max-width: 100%; height: auto; }
-  .body { padding: 2.5rem 3rem 2rem; color: #2c2c2a; }
-  .greeting { font-size: 1.25rem; font-weight: 800; color: #1a6b1a; margin-bottom: 1rem; }
-  .title { font-size: 1.2rem; font-weight: 700; color: #1f2d1f; margin-bottom: 0.9rem; }
-  .p { font-size: 0.97rem; line-height: 1.75; color: #3a3a38; margin-bottom: 1rem; }
-  .cta { text-align: center; margin: 1.8rem 0 1.2rem; }
-  .btn { display: inline-block; background: #1a6b1a; color: #fff; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.85rem 2.5rem; text-decoration: none; border-radius: 2px; font-weight: 600; }
-  .footer { background: #1a6b1a; padding: 1.5rem 2.5rem; text-align: center; }
-  .footer-logo-img { display: block; margin: 0 auto 0.4rem; width: 120px; max-width: 100%; height: auto; }
-  .footer-tag { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 0.8rem; }
-  .footer-links { font-size: 0.72rem; color: rgba(255,255,255,0.55); }
-  .footer-links a { color: rgba(255,255,255,0.7); margin: 0 0.5rem; text-decoration: none; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-<div class="wrap">
-  <div class="shell">
-    <div class="header">
-      <img src="https://www.journie.io/logos/journie_logo.jpg" alt="Journie logo" class="logo-img" />
-    </div>
-    <div class="body" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">
-      <p class="greeting" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">Hi {{{GIVEN_NAME}}},</p>
-      <p class="title" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">{{{INFO_TITLE}}}</p>
-      <p class="p" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">{{{INFO_BODY}}}</p>
-      <div class="cta">
-        <a href="{{{INFO_URL}}}" class="btn">{{{INFO_CTA_LABEL}}}</a>
-      </div>
-    </div>
-    <div class="footer">
-      <img src="https://www.journie.io/logos/journie_invert.jpg" alt="Journie logo" class="footer-logo-img" />
-      <div class="footer-tag">Your research, simplified.</div>
-      <div class="footer-links">
-        <a href="https://www.journie.io">journie.io</a> &middot;
-        <a href="mailto:{{{SUPPORT_EMAIL}}}">{{{SUPPORT_EMAIL}}}</a>
-      </div>
-    </div>
-  </div>
-</div>
+<body style="margin:0; padding:0; background-color:#f0ede6;">
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#f0ede6; margin:0; padding:24px 12px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="width:600px; max-width:600px; background-color:#ffffff; border:1px solid #ddd; border-radius:4px; overflow:hidden;">
+          <tr>
+            <td align="center" style="padding:32px 24px 20px; border-bottom:1px solid #e8e4dc;">
+              <a href="https://www.journie.io" target="_blank" rel="noopener noreferrer">
+                <img src="https://www.journie.io/logos/Journie_logo.jpg" alt="Journie logo" width="144" style="display:block; width:144px; max-width:144px; height:auto; border:0; outline:none; text-decoration:none;">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:36px 38px 10px; font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif; color:#2c2c2a;">
+              <p style="margin:0 0 22px; font-size:27px; line-height:1.32; font-weight:800; color:#1a6b1a; font-family:'Carelia','Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif;">Hi {{{GIVEN_NAME}}},</p>
+              <p style="margin:0 0 16px; font-size:28px; line-height:1.38; font-weight:800; color:#1f2d1f;">{{{INFO_TITLE}}}</p>
+              <p style="margin:0 0 30px; font-size:16px; line-height:2.01; color:#3a3a38;">{{{INFO_BODY}}}</p>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding:2px 38px 30px;">
+              <a href="{{{INFO_URL}}}" style="display:inline-block; background-color:#1a6b1a; color:#ffffff; font-family:'Carelia','Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; font-weight:700; text-decoration:none; padding:15px 34px; border-radius:2px;">{{{INFO_CTA_LABEL}}}</a>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="background-color:#1a6b1a; padding:24px 18px 20px;">
+              <a href="https://www.journie.io" target="_blank" rel="noopener noreferrer">
+                <img src="https://www.journie.io/logos/journie_invert.jpg" alt="Journie logo" width="120" style="display:block; width:120px; max-width:120px; height:auto; border:0; outline:none; text-decoration:none; margin:0 auto 10px;">
+              </a>
+              <p style="margin:0 0 12px; font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif; font-size:10px; line-height:1.5; letter-spacing:0.04em;"><span style="color:#ffffff;">your research, </span><span style="color:#9999cc;">simplified.</span></p>
+              <p style="margin:0; font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif; font-size:10px; line-height:1.72; color:rgba(255,255,255,0.72);">
+                <a href="https://www.journie.io" style="color:rgba(255,255,255,0.9); text-decoration:none;">journie.io</a>
+                <span style="padding:0 8px; color:rgba(255,255,255,0.5);">&middot;</span>
+                <a href="mailto:{{{SUPPORT_EMAIL}}}" style="color:rgba(255,255,255,0.9); text-decoration:none;">{{{SUPPORT_EMAIL}}}</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
-

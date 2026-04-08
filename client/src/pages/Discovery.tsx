@@ -99,14 +99,14 @@ export default function Discovery() {
             {isIdle && (
               <div className="text-center mb-6 animate-in fade-in duration-300">
                 <h1 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight tracking-tight">
-                  Find Your Journal
+                  Find Your <span className="text-journi-green">Journal</span>
                 </h1>
                 <p className="mt-3 text-base text-slate-800 max-w-md mx-auto font-semibold">
                   Search{' '}
-                  <span className="font-bold text-slate-900">
+                  <span className="font-bold text-[#7f7fb3]">
                     {isLoading ? '…' : totalResults.toLocaleString()}
                   </span>{' '}
-                  indexed medical journals and shortlist with confidence.
+                  indexed medical journals
                 </p>
               </div>
             )}
@@ -321,5 +321,3 @@ export default function Discovery() {
     </div>
   );
 }
-
-

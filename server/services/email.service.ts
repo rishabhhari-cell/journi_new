@@ -112,7 +112,7 @@ export async function sendWelcomeEmail(input: { to: string; fullName: string; ve
   .wrap { padding:2rem 1rem; background:#f0ede6; }
   .shell { max-width:600px; margin:0 auto; background:#fff; border-radius:4px; overflow:hidden; border:1px solid #ddd; }
   .header { background:#fff; padding:2.5rem 2.5rem 1.5rem; text-align:center; border-bottom:1px solid #e8e4dc; }
-  .logo-img { display:block; margin:0 auto; width:180px; max-width:100%; height:auto; }
+  .logo-img { display:block; margin:0 auto; width: 144px; max-width:100%; height:auto; }
   .body { padding:2.5rem 3rem 2rem; color:#2c2c2a; }
   .greeting { font-family:"Plus Jakarta Sans",Arial,sans-serif; font-size:1.35rem; font-weight:800; color:#1a6b1a; margin-bottom:1.4rem; }
   .p { font-family:"Plus Jakarta Sans",Arial,sans-serif; font-size:0.97rem; line-height:1.75; color:#3a3a38; margin-bottom:1.3rem; }
@@ -121,8 +121,8 @@ export async function sendWelcomeEmail(input: { to: string; fullName: string; ve
   .sign { margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid #e8e4dc; font-family:"Plus Jakarta Sans",Arial,sans-serif; font-size:0.95rem; color:#3a3a38; line-height:1.7; }
   .sign-name { font-weight:800; color:#1a6b1a; margin-top:0.8rem; }
   .footer { background:#1a6b1a; padding:1.5rem 2.5rem; text-align:center; }
-  .footer-logo-img { display:block; margin:0 auto 0.4rem; width:120px; max-width:100%; height:auto; }
-  .footer-tag { font-family:"Plus Jakarta Sans",Arial,sans-serif; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.65); margin-bottom:0.8rem; }
+  .footer-logo-img { display:block; margin:0 auto 0.4rem; width: 120px; max-width:100%; height:auto; }
+  .footer-tag { font-family:"Plus Jakarta Sans",Arial,sans-serif; font-size:0.72rem; letter-spacing:0.04em; color:rgba(255,255,255,0.65); margin-bottom:0.8rem; }
   .footer-links { font-size:0.72rem; font-family:"Plus Jakarta Sans",Arial,sans-serif; color:rgba(255,255,255,0.55); }
   .footer-links a { color:rgba(255,255,255,0.7); margin:0 0.5rem; text-decoration:none; }
 </style>
@@ -131,23 +131,27 @@ export async function sendWelcomeEmail(input: { to: string; fullName: string; ve
 <div class="wrap">
 <div class="shell">
   <div class="header">
-    <img src="https://www.journie.io/logos/journie_logo.jpg" alt="Journie logo" class="logo-img" />
+    <a href="https://www.journie.io" target="_blank" rel="noopener noreferrer">
+      <img src="https://www.journie.io/logos/Journie_logo.jpg" alt="Journie logo" class="logo-img" />
+    </a>
   </div>
 
   <div class="body" style="font-family:'Plus Jakarta Sans',Arial,sans-serif;">
-    <p class="greeting" style="font-family:'Plus Jakarta Sans',Arial,sans-serif;">Dear ${firstName},</p>
+    <p class="greeting" style="font-family:'Carelia','Plus Jakarta Sans',Arial,sans-serif; font-size:1.16rem;">Dear ${firstName},</p>
     <p class="p" style="font-family:'Plus Jakarta Sans',Arial,sans-serif;">Welcome to Journie, and congratulations on taking a meaningful step forward in your research career! We are genuinely thrilled to have you with us.</p>
     <p class="p" style="font-family:'Plus Jakarta Sans',Arial,sans-serif;">We built Journie because we know first-hand how much time researchers waste navigating the administrative maze of scientific publishing: the reformatting, the resubmissions, the endless searching for the right conference or journal. That time belongs to your science - and we intend to give it back.</p>
-    <div class="cta"><a href="${ctaUrl}" class="btn">${ctaLabel}</a></div>
+    <div class="cta"><a href="${ctaUrl}" class="btn" style="font-family:'Carelia','Plus Jakarta Sans',Arial,sans-serif;">${ctaLabel}</a></div>
     <div class="sign">
       <p>Should you have any questions, we are always here to help. We look forward to seeing where your research takes you.</p>
-      <p class="sign-name">Yuri &amp; Rish<br><span style="font-weight:400;font-size:0.88rem;color:#666;">Co-Founders, Journie</span></p>
+      <p class="sign-name" style="font-family:'Carelia','Plus Jakarta Sans',Arial,sans-serif;">Yuri &amp; Rish<br><span style="font-weight:400;font-size:0.88rem;color:#666; font-family:'Plus Jakarta Sans',Arial,sans-serif;">Co-Founders, Journie</span></p>
     </div>
   </div>
 
   <div class="footer">
-    <img src="https://www.journie.io/logos/journie_invert.jpg" alt="Journie logo" class="footer-logo-img" />
-    <div class="footer-tag">Your research, simplified.</div>
+    <a href="https://www.journie.io" target="_blank" rel="noopener noreferrer">
+      <img src="https://www.journie.io/logos/journie_invert.jpg" alt="Journie logo" class="footer-logo-img" />
+    </a>
+    <div class="footer-tag"><span style="color:#ffffff;">your research, </span><span style="color:#9999cc;">simplified.</span></div>
     <div class="footer-links">
       <a href="#">Unsubscribe</a> &middot; <a href="#">Privacy Policy</a> &middot; <a href="https://www.journie.io">journie.io</a>
     </div>
@@ -170,7 +174,12 @@ export async function sendOrganizationInviteEmail(input: {
   role: string;
   inviteUrl: string;
 }) {
-  const subject = `You're invited to ${input.organizationName} on Journi`;
+  const subject = `${input.inviterName} invited you to ${input.organizationName}`;
+  const emailLocalPart = input.to.split("@")[0] ?? "";
+  const inferredGivenNameRaw = emailLocalPart.split(/[._-]/)[0] ?? "";
+  const inferredGivenName = inferredGivenNameRaw
+    ? inferredGivenNameRaw.charAt(0).toUpperCase() + inferredGivenNameRaw.slice(1).toLowerCase()
+    : "there";
 
   if (env.RESEND_ORG_INVITE_TEMPLATE_ID) {
     await sendTransactionalEmail({
@@ -179,6 +188,7 @@ export async function sendOrganizationInviteEmail(input: {
       template: {
         id: env.RESEND_ORG_INVITE_TEMPLATE_ID,
         variables: {
+          GIVEN_NAME: inferredGivenName,
           INVITER_NAME: input.inviterName,
           ORGANIZATION_NAME: input.organizationName,
           ROLE: input.role,
@@ -283,4 +293,7 @@ export async function sendPasswordResetEmail(input: {
   const text = `Hi ${firstName}, reset your Journie password here: ${input.resetUrl}. If you did not request this, you can ignore this email.`;
   await sendTransactionalEmail({ to: input.to, subject, html, text });
 }
+
+
+
 

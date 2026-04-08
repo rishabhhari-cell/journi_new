@@ -107,61 +107,72 @@ export default function LoadingScreen({ progress, fullscreen = true, hideJFill =
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.15 }}
       >
-        {/* Dashes ring with J progress bar overlaid in center */}
-        <div className="relative h-28 w-28">
-          {/* Burst applies only to the dashes ring, not the J */}
-          <motion.div animate={burstControls} className="absolute inset-0">
-            {/* Animated color-wave dashes — fades out when burst fires */}
-            <motion.img
-              src="/logos/journi_dashes.svg"
-              aria-hidden="true"
-              className="absolute inset-0 h-28 w-28"
-              animate={{ opacity: controlled && safeProgress >= 100 ? 0 : 1 }}
-              transition={{ duration: 0 }}
-            />
-            {/* All-purple dashes — fades in exactly when burst fires */}
-            <motion.img
-              src="/logos/journi_dashes_purple.svg"
-              aria-hidden="true"
-              className="absolute inset-0 h-28 w-28"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: controlled && safeProgress >= 100 ? 1 : 0 }}
-              transition={{ duration: 0 }}
-            />
-          </motion.div>
+        {/* Center widget — two modes */}
+        {!controlled ? (
+          /* Uncontrolled: cycling purple keys + solid green J, no fill animation */
+          <img
+            src="/logos/journi_search_loading.svg"
+            alt="Loading"
+            className="h-28 w-28"
+            draggable={false}
+          />
+        ) : (
+          /* Controlled: dashes ring with burst + J fill progress */
+          <div className="relative h-28 w-28">
+            {/* Burst applies only to the dashes ring, not the J */}
+            <motion.div animate={burstControls} className="absolute inset-0">
+              {/* Animated color-wave dashes — fades out when burst fires */}
+              <motion.img
+                src="/logos/journi_dashes.svg"
+                aria-hidden="true"
+                className="absolute inset-0 h-28 w-28"
+                animate={{ opacity: safeProgress >= 100 ? 0 : 1 }}
+                transition={{ duration: 0 }}
+              />
+              {/* All-purple dashes — fades in exactly when burst fires */}
+              <motion.img
+                src="/logos/journi_dashes_purple.svg"
+                aria-hidden="true"
+                className="absolute inset-0 h-28 w-28"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: safeProgress >= 100 ? 1 : 0 }}
+                transition={{ duration: 0 }}
+              />
+            </motion.div>
 
-          {/* J — green base always visible; purple rising fill shown unless hideJFill */}
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-            <svg
-              viewBox={`${J_VB_X} ${J_VB_Y} ${J_VB_W} ${J_VB_H}`}
-              className="h-14 w-12"
-              aria-label="Loading"
-              role="img"
-            >
-              {!hideJFill && (
-                <defs>
-                  <clipPath id="j-fill-clip">
-                    <rect x={J_VB_X} y={fillY} width={J_VB_W} height={fillHeight} />
-                  </clipPath>
-                </defs>
-              )}
-              {/* Green J — always visible as base */}
-              <g fill="#4fb151" fillOpacity="0.35">
-                <g transform={`translate(${J_TX}, ${J_TY})`}>
-                  <path d={J_PATH} />
-                </g>
-              </g>
-              {/* Purple rising fill — hidden when hideJFill=true */}
-              {!hideJFill && (
-                <g fill="#7B71C7" fillOpacity="1" clipPath="url(#j-fill-clip)">
+            {/* J — green base always visible; purple rising fill shown unless hideJFill */}
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+              <svg
+                viewBox={`${J_VB_X} ${J_VB_Y} ${J_VB_W} ${J_VB_H}`}
+                className="h-14 w-12"
+                aria-label="Loading"
+                role="img"
+              >
+                {!hideJFill && (
+                  <defs>
+                    <clipPath id="j-fill-clip">
+                      <rect x={J_VB_X} y={fillY} width={J_VB_W} height={fillHeight} />
+                    </clipPath>
+                  </defs>
+                )}
+                {/* Green J — always visible as base */}
+                <g fill="#4fb151" fillOpacity="0.35">
                   <g transform={`translate(${J_TX}, ${J_TY})`}>
                     <path d={J_PATH} />
                   </g>
                 </g>
-              )}
-            </svg>
+                {/* Purple rising fill — hidden when hideJFill=true */}
+                {!hideJFill && (
+                  <g fill="#7B71C7" fillOpacity="1" clipPath="url(#j-fill-clip)">
+                    <g transform={`translate(${J_TX}, ${J_TY})`}>
+                      <path d={J_PATH} />
+                    </g>
+                  </g>
+                )}
+              </svg>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* No text during burst (progress=100) to keep the animation clean */}
         {(!controlled || safeProgress < 100) && (
