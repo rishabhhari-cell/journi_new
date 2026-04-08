@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f0ede6; font-family: "Plus Jakarta Sans", Arial, sans-serif; }
+  .wrap { padding: 2rem 1rem; background: #f0ede6; }
+  .shell { max-width: 600px; margin: 0 auto; background: #fff; border-radius: 4px; overflow: hidden; border: 1px solid #ddd; }
+  .header { background: #fff; padding: 2.5rem 2.5rem 1.5rem; text-align: center; border-bottom: 1px solid #e8e4dc; }
+  .logo-img { display: block; margin: 0 auto; width: 180px; max-width: 100%; height: auto; }
+  .body { padding: 2.5rem 3rem 2rem; color: #2c2c2a; }
+  .greeting { font-size: 1.25rem; font-weight: 800; color: #1a6b1a; margin-bottom: 1rem; }
+  .title { font-size: 1.2rem; font-weight: 700; color: #1f2d1f; margin-bottom: 0.9rem; }
+  .p { font-size: 0.97rem; line-height: 1.75; color: #3a3a38; margin-bottom: 1rem; }
+  .cta { text-align: center; margin: 1.8rem 0 1.2rem; }
+  .btn { display: inline-block; background: #1a6b1a; color: #fff; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.85rem 2.5rem; text-decoration: none; border-radius: 2px; font-weight: 600; }
+  .footer { background: #1a6b1a; padding: 1.5rem 2.5rem; text-align: center; }
+  .footer-logo-img { display: block; margin: 0 auto 0.4rem; width: 120px; max-width: 100%; height: auto; }
+  .footer-tag { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 0.8rem; }
+  .footer-links { font-size: 0.72rem; color: rgba(255,255,255,0.55); }
+  .footer-links a { color: rgba(255,255,255,0.7); margin: 0 0.5rem; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="shell">
+    <div class="header">
+      <img src="https://www.journie.io/logos/journie_logo.jpg" alt="Journie logo" class="logo-img" />
+    </div>
+    <div class="body" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">
+      <p class="greeting" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">Hi {{{GIVEN_NAME}}},</p>
+      <p class="title" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">{{{INFO_TITLE}}}</p>
+      <p class="p" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">{{{INFO_BODY}}}</p>
+      <div class="cta">
+        <a href="{{{INFO_URL}}}" class="btn">{{{INFO_CTA_LABEL}}}</a>
+      </div>
+    </div>
+    <div class="footer">
+      <img src="https://www.journie.io/logos/journie_invert.jpg" alt="Journie logo" class="footer-logo-img" />
+      <div class="footer-tag">Your research, simplified.</div>
+      <div class="footer-links">
+        <a href="https://www.journie.io">journie.io</a> &middot;
+        <a href="mailto:{{{SUPPORT_EMAIL}}}">{{{SUPPORT_EMAIL}}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

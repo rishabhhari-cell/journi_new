@@ -1,4 +1,4 @@
-﻿import { useMemo, useState, useEffect, useRef } from 'react';
+﻿import { useMemo, useState } from 'react';
 import { ExternalLink, FileUp, Search, SlidersHorizontal, X } from 'lucide-react';
 import { MeshGradient } from "@paper-design/shaders-react";
 import Navbar from '@/components/Navbar';
@@ -8,7 +8,6 @@ import Pagination from '@/components/discovery/Pagination';
 import JournalDetailDrawer from '@/components/discovery/JournalDetailDrawer';
 import JournalMarquee from '@/components/discovery/JournalMarquee';
 import OAPolicyBadge from '@/components/discovery/OAPolicyBadge';
-import LoadingScreen from '@/components/LoadingScreen';
 import { useJournals } from '@/contexts/JournalsContext';
 import type { SortBy } from '@/contexts/JournalsContext';
 import type { Journal } from '@/types';
@@ -49,19 +48,6 @@ export default function Discovery() {
 
   const isIdle = !searchQuery.trim();
 
-  // Burst overlay: shown briefly when a search completes (isLoading true → false).
-  const [searchProgress, setSearchProgress] = useState<number | undefined>(undefined);
-  const prevLoadingRef = useRef(isLoading);
-  useEffect(() => {
-    const wasLoading = prevLoadingRef.current;
-    prevLoadingRef.current = isLoading;
-    // Only burst on a real search completing, not the initial idle load.
-    if (wasLoading && !isLoading && !isIdle) {
-      setSearchProgress(100);
-      const hide = setTimeout(() => setSearchProgress(undefined), 1500);
-      return () => clearTimeout(hide);
-    }
-  }, [isLoading, isIdle]);
   const cards = useMemo(() => paginatedJournals, [paginatedJournals]);
 
   const activeFilterCount = [
@@ -173,31 +159,28 @@ export default function Discovery() {
           )}
 
           <section className="space-y-4">
-            {/* Burst overlay when search finishes — all-purple dashes, no J fill */}
-            {searchProgress === 100 && (
-              <LoadingScreen fullscreen={false} progress={searchProgress} hideJFill />
-            )}
-            {isLoading && (
-              <div className="relative min-h-[400px]">
-                <LoadingScreen fullscreen={false} hideJFill />
-              </div>
+            {/* Subtle loading hint — shown while fetching, does not block cards */}
+            {isLoading && !isIdle && (
+              <p className="text-xs text-muted-foreground animate-pulse text-center py-1">
+                Finding your dream journal…
+              </p>
             )}
 
-            {!isLoading && !isIdle && cards.length === 0 && (
+            {!isIdle && cards.length === 0 && !isLoading && (
               <div className="text-center py-16 border border-dashed border-border rounded-xl bg-card">
                 <p className="text-foreground font-medium">No journals match the current filters.</p>
                 <p className="text-sm text-muted-foreground mt-1">Try broadening the search criteria.</p>
               </div>
             )}
 
-            {!isLoading && isIdle && cards.length === 0 && (
+            {isIdle && cards.length === 0 && (
               <div className="text-center py-16 text-muted-foreground">
                 <Search size={32} className="mx-auto mb-3 opacity-30" />
                 <p className="text-sm">Start typing above to search journals</p>
               </div>
             )}
 
-            {!isLoading && cards.length > 0 && (
+            {cards.length > 0 && (
               <>
                 {/* â”€â”€ Sort row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
                 <div className="flex items-center justify-between">

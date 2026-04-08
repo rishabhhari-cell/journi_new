@@ -64,8 +64,13 @@ export default function LoadingScreen({ progress, fullscreen = true, hideJFill =
     if (controlled && safeProgress >= 100 && !hasBurst.current) {
       hasBurst.current = true;
       burstControls.start({
-        scale: [1, 1.8],
-        transition: { duration: 1.5, ease: [0.16, 1, 0.3, 1] },
+        scale: [1, 0.72, 2.4],
+        opacity: [1, 1, 0],
+        transition: {
+          duration: 0.7,
+          times: [0, 0.22, 1],
+          ease: ["easeOut", [0.16, 1, 0.3, 1]],
+        },
       });
     }
     if (!controlled) hasBurst.current = false;
@@ -103,24 +108,27 @@ export default function LoadingScreen({ progress, fullscreen = true, hideJFill =
         transition={{ duration: 0.4, delay: 0.15 }}
       >
         {/* Dashes ring with J progress bar overlaid in center */}
-        <motion.div animate={burstControls} className="relative h-28 w-28">
-          {/* Animated color-wave dashes — fades out when burst fires */}
-          <motion.img
-            src="/logos/journi_dashes.svg"
-            aria-hidden="true"
-            className="absolute inset-0 h-28 w-28"
-            animate={{ opacity: controlled && safeProgress >= 100 ? 0 : 1 }}
-            transition={{ duration: 0 }}
-          />
-          {/* All-purple dashes — fades in exactly when burst fires */}
-          <motion.img
-            src="/logos/journi_dashes_purple.svg"
-            aria-hidden="true"
-            className="absolute inset-0 h-28 w-28"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: controlled && safeProgress >= 100 ? 1 : 0 }}
-            transition={{ duration: 0 }}
-          />
+        <div className="relative h-28 w-28">
+          {/* Burst applies only to the dashes ring, not the J */}
+          <motion.div animate={burstControls} className="absolute inset-0">
+            {/* Animated color-wave dashes — fades out when burst fires */}
+            <motion.img
+              src="/logos/journi_dashes.svg"
+              aria-hidden="true"
+              className="absolute inset-0 h-28 w-28"
+              animate={{ opacity: controlled && safeProgress >= 100 ? 0 : 1 }}
+              transition={{ duration: 0 }}
+            />
+            {/* All-purple dashes — fades in exactly when burst fires */}
+            <motion.img
+              src="/logos/journi_dashes_purple.svg"
+              aria-hidden="true"
+              className="absolute inset-0 h-28 w-28"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: controlled && safeProgress >= 100 ? 1 : 0 }}
+              transition={{ duration: 0 }}
+            />
+          </motion.div>
 
           {/* J — green base always visible; purple rising fill shown unless hideJFill */}
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
@@ -153,7 +161,7 @@ export default function LoadingScreen({ progress, fullscreen = true, hideJFill =
               )}
             </svg>
           </div>
-        </motion.div>
+        </div>
 
         {/* No text during burst (progress=100) to keep the animation clean */}
         {(!controlled || safeProgress < 100) && (

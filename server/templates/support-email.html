@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f0ede6; font-family: "Plus Jakarta Sans", Arial, sans-serif; }
+  .wrap { padding: 2rem 1rem; background: #f0ede6; }
+  .shell { max-width: 600px; margin: 0 auto; background: #fff; border-radius: 4px; overflow: hidden; border: 1px solid #ddd; }
+  .header { background: #fff; padding: 2.5rem 2.5rem 1.5rem; text-align: center; border-bottom: 1px solid #e8e4dc; }
+  .logo-img { display: block; margin: 0 auto; width: 180px; max-width: 100%; height: auto; }
+  .body { padding: 2.5rem 3rem 2rem; color: #2c2c2a; }
+  .greeting { font-size: 1.3rem; font-weight: 800; color: #1a6b1a; margin-bottom: 1.2rem; }
+  .p { font-size: 0.97rem; line-height: 1.75; color: #3a3a38; margin-bottom: 1rem; }
+  .box { margin: 1rem 0 1.2rem; padding: 1rem; border-radius: 8px; border: 1px solid #ece9df; background: #faf9f6; }
+  .label { font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase; color: #7b7a74; margin-bottom: 0.3rem; font-weight: 700; }
+  .value { font-size: 0.92rem; color: #2e2d29; }
+  .footer { background: #1a6b1a; padding: 1.5rem 2.5rem; text-align: center; }
+  .footer-logo-img { display: block; margin: 0 auto 0.4rem; width: 120px; max-width: 100%; height: auto; }
+  .footer-tag { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 0.8rem; }
+  .footer-links { font-size: 0.72rem; color: rgba(255,255,255,0.55); }
+  .footer-links a { color: rgba(255,255,255,0.7); margin: 0 0.5rem; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="shell">
+    <div class="header">
+      <img src="https://www.journie.io/logos/journie_logo.jpg" alt="Journie logo" class="logo-img" />
+    </div>
+    <div class="body" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">
+      <p class="greeting" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">Hi {{{GIVEN_NAME}}},</p>
+      <p class="p" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">Thanks for contacting Journie Support. We’ve received your message and our team will follow up shortly.</p>
+      <div class="box">
+        <p class="label">Ticket ID</p>
+        <p class="value">{{{TICKET_ID}}}</p>
+      </div>
+      <div class="box">
+        <p class="label">Topic</p>
+        <p class="value">{{{SUPPORT_TOPIC}}}</p>
+      </div>
+      <div class="box">
+        <p class="label">Message Summary</p>
+        <p class="value">{{{SUPPORT_MESSAGE_SUMMARY}}}</p>
+      </div>
+      <p class="p" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">Expected response time: <strong>{{{SUPPORT_RESPONSE_SLA}}}</strong></p>
+    </div>
+    <div class="footer">
+      <img src="https://www.journie.io/logos/journie_invert.jpg" alt="Journie logo" class="footer-logo-img" />
+      <div class="footer-tag">Your research, simplified.</div>
+      <div class="footer-links">
+        <a href="mailto:{{{SUPPORT_EMAIL}}}">{{{SUPPORT_EMAIL}}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

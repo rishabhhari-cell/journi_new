@@ -33,10 +33,10 @@ interface AuthContextType {
   startOAuth: (provider?: 'google') => Promise<void>;
   updateProfile: (name: string) => Promise<void>;
   signOut: () => void;
-  openModal: (view?: 'signin' | 'signup' | 'forgot') => void;
+  openModal: (view?: 'signin' | 'signup' | 'forgot' | 'verify') => void;
   closeModal: () => void;
   modalOpen: boolean;
-  modalView: 'signin' | 'signup' | 'forgot';
+  modalView: 'signin' | 'signup' | 'forgot' | 'verify';
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -131,7 +131,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(() => readPersistedUser() === null);
   const [isAuthenticating, setIsAuthenticating] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalView, setModalView] = useState<'signin' | 'signup' | 'forgot'>('signin');
+  const [modalView, setModalView] = useState<'signin' | 'signup' | 'forgot' | 'verify'>('signin');
 
   const stashInviteTokenFromUrl = useCallback(() => {
     const url = new URL(window.location.href);
@@ -446,7 +446,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     memberships[0] ??
     null;
 
-  const openModal = useCallback((view: 'signin' | 'signup' | 'forgot' = 'signin') => {
+  const openModal = useCallback((view: 'signin' | 'signup' | 'forgot' | 'verify' = 'signin') => {
     setModalView(view);
     setModalOpen(true);
   }, []);

@@ -8,7 +8,7 @@ import { HttpError } from "../lib/http-error";
 import { createUserScopedSupabase, supabaseAdmin, supabasePublic } from "../lib/supabase";
 import { requireAuth, type AuthedRequest } from "../middleware/auth";
 import { writeAuditEvent } from "../services/audit.service";
-import { sendWelcomeEmail } from "../services/email.service";
+import { sendPasswordResetEmail, sendWelcomeEmail } from "../services/email.service";
 
 export const authRouter = Router();
 
@@ -187,10 +187,12 @@ authRouter.post("/signup", async (req, res, next) => {
   try {
     const input = signUpSchema.parse(req.body);
 
-    const { data, error } = await supabasePublic.auth.signUp({
+    const { data, error } = await supabaseAdmin.auth.admin.generateLink({
+      type: "signup",
       email: input.email,
       password: input.password,
       options: {
+        redirectTo: `${env.CLIENT_BASE_URL}/`,
         data: {
           full_name: input.fullName,
         },
@@ -202,6 +204,9 @@ authRouter.post("/signup", async (req, res, next) => {
     }
     if (!data.user) {
       throw new HttpError(500, "Sign-up did not return a user", "SIGNUP_NO_USER");
+    }
+    if (!data.properties?.action_link) {
+      throw new HttpError(500, "Sign-up verification link was not generated", "SIGNUP_NO_VERIFICATION_LINK");
     }
 
     await upsertProfile({
@@ -256,14 +261,15 @@ authRouter.post("/signup", async (req, res, next) => {
     void sendWelcomeEmail({
       to: input.email,
       fullName: input.fullName,
+      verificationUrl: data.properties.action_link,
     });
 
     res.status(201).json({
       user: mapUser(data.user, input.fullName),
-      session: mapSession(data.session),
+      session: null,
       memberships: membershipDtos,
       projects: initialProjects,
-      requiresEmailVerification: !data.session,
+      requiresEmailVerification: true,
     });
   } catch (error) {
     next(error);
@@ -410,15 +416,28 @@ authRouter.post("/forgot-password", async (req, res, next) => {
     const input = forgotPasswordSchema.parse(req.body);
     const redirectTo = env.RESET_PASSWORD_REDIRECT_URL ?? `${env.CLIENT_BASE_URL}/reset-password`;
 
-    const { error } = await supabasePublic.auth.resetPasswordForEmail(input.email, {
-      redirectTo,
+    const { data, error } = await supabaseAdmin.auth.admin.generateLink({
+      type: "recovery",
+      email: input.email,
+      options: {
+        redirectTo,
+      },
     });
 
-    if (error) {
-      throw new HttpError(400, error.message, "FORGOT_PASSWORD_FAILED");
+    // Keep response generic so we don't reveal whether the email exists.
+    if (!error && data?.properties?.action_link) {
+      const fullName =
+        data.user?.user_metadata?.full_name ??
+        data.user?.user_metadata?.name ??
+        undefined;
+
+      void sendPasswordResetEmail({
+        to: input.email,
+        fullName,
+        resetUrl: data.properties.action_link,
+      });
     }
 
-    // Generic success response - do not disclose whether email exists.
     res.json({ ok: true });
   } catch (error) {
     next(error);
@@ -494,6 +513,10 @@ authRouter.get("/me", requireAuth, async (req, res, next) => {
       const oauthEmail = rawAuthUser?.email ?? authReq.auth.email;
       await upsertProfile({ userId, fullName: oauthName, email: oauthEmail });
       await autoEnrollInstitutionMember(userId, oauthEmail);
+      void sendWelcomeEmail({
+        to: oauthEmail,
+        fullName: oauthName,
+      });
       profile = { full_name: oauthName, initials: toInitials(oauthName), email: oauthEmail };
     }
 

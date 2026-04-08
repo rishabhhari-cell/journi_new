@@ -1,9 +1,12 @@
 /**
  * SearchBar Component
- * Debounced search input for journal discovery
+ * Debounced search input for journal discovery.
+ * Shows the J animated glyph while the debounce timer is running,
+ * then a static Search icon when idle.
  */
 import { Search, X } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
+import JSearchGlyph from './JSearchGlyph';
 
 interface SearchBarProps {
   onSearch: (query: string) => void;
@@ -12,23 +15,39 @@ interface SearchBarProps {
 
 export default function SearchBar({ onSearch, dark = false }: SearchBarProps) {
   const [searchQuery, setSearchQuery] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
   const onSearchRef = useRef(onSearch);
   onSearchRef.current = onSearch;
 
   useEffect(() => {
+    if (searchQuery) {
+      setIsTyping(true);
+    }
     const handler = setTimeout(() => {
       onSearchRef.current(searchQuery);
+      setIsTyping(false);
     }, 300);
 
     return () => clearTimeout(handler);
   }, [searchQuery]);
 
+  const showGlyph = isTyping && !!searchQuery;
+
   return (
     <div className="relative max-w-xl mx-auto">
-      <Search
-        size={18}
-        className={`absolute left-4 top-1/2 -translate-y-1/2 ${dark ? 'text-white/50' : 'text-muted-foreground'}`}
-      />
+      {/* Left icon: animated J glyph while debouncing, static Search otherwise */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+        {showGlyph ? (
+          <JSearchGlyph size={18} />
+        ) : (
+          <Search
+            size={18}
+            className={dark ? 'text-white/50' : 'text-muted-foreground'}
+            aria-hidden="true"
+          />
+        )}
+      </div>
+
       <input
         type="text"
         value={searchQuery}
@@ -42,6 +61,7 @@ export default function SearchBar({ onSearch, dark = false }: SearchBarProps) {
             : 'bg-card border-border text-foreground placeholder:text-muted-foreground'
           }`}
       />
+
       {searchQuery && (
         <button
           onClick={() => setSearchQuery('')}

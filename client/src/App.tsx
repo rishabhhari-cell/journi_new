@@ -160,10 +160,10 @@ function GlobalLoadingOverlay() {
     return () => clearTimeout(settle);
   }, [isAnyLoading, visible, progress]);
 
-  // Hide overlay when burst reaches its peak (1 500 ms matches the burst animation duration).
+  // Hide overlay when burst reaches its peak (1 000 ms matches the burst animation duration).
   useEffect(() => {
     if (progress !== 100) return;
-    const hide = setTimeout(() => setVisible(false), 1500);
+    const hide = setTimeout(() => setVisible(false), 1000);
     return () => clearTimeout(hide);
   }, [progress]);
 

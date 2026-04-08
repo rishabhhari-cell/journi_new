@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f0ede6; font-family: "Plus Jakarta Sans", Arial, sans-serif; }
+  .wrap { padding: 2rem 1rem; background: #f0ede6; }
+  .shell { max-width: 600px; margin: 0 auto; background: #fff; border-radius: 4px; overflow: hidden; border: 1px solid #ddd; }
+  .header { background: #fff; padding: 2.5rem 2.5rem 1.5rem; text-align: center; border-bottom: 1px solid #e8e4dc; }
+  .logo-img { display: block; margin: 0 auto; width: 180px; max-width: 100%; height: auto; }
+  .body { padding: 2.5rem 3rem 2rem; color: #2c2c2a; }
+  .greeting { font-size: 1.3rem; font-weight: 800; color: #1a6b1a; margin-bottom: 1.2rem; }
+  .p { font-size: 0.97rem; line-height: 1.75; color: #3a3a38; margin-bottom: 1rem; }
+  .highlight { margin: 1rem 0 1.4rem; padding: 0.9rem 1rem; border-radius: 8px; background: #f7fbf6; border: 1px solid #d7ead5; }
+  .highlight p { margin: 0.2rem 0; font-size: 0.9rem; color: #2f4f2f; }
+  .highlight strong { color: #1a6b1a; }
+  .cta { text-align: center; margin: 1.8rem 0 1.5rem; }
+  .btn { display: inline-block; background: #1a6b1a; color: #fff; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.85rem 2.5rem; text-decoration: none; border-radius: 2px; font-weight: 600; }
+  .footer { background: #1a6b1a; padding: 1.5rem 2.5rem; text-align: center; }
+  .footer-logo-img { display: block; margin: 0 auto 0.4rem; width: 120px; max-width: 100%; height: auto; }
+  .footer-tag { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 0.8rem; }
+  .footer-links { font-size: 0.72rem; color: rgba(255,255,255,0.55); }
+  .footer-links a { color: rgba(255,255,255,0.7); margin: 0 0.5rem; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="shell">
+    <div class="header">
+      <img src="https://www.journie.io/logos/journie_logo.jpg" alt="Journie logo" class="logo-img" />
+    </div>
+    <div class="body" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">
+      <p class="greeting" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">Hi {{{GIVEN_NAME}}},</p>
+      <p class="p" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;"><strong>{{{INVITER_NAME}}}</strong> has invited you to join <strong>{{{ORGANIZATION_NAME}}}</strong> on Journie.</p>
+      <div class="highlight">
+        <p><strong>Workspace:</strong> {{{ORGANIZATION_NAME}}}</p>
+        <p><strong>Your role:</strong> {{{ROLE}}}</p>
+      </div>
+      <p class="p" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">Accept the invite to collaborate on manuscripts, track submissions, and keep your team aligned in one place.</p>
+      <div class="cta">
+        <a href="{{{INVITE_URL}}}" class="btn">Accept Invite &rarr;</a>
+      </div>
+      <p class="p" style="font-family: 'Plus Jakarta Sans', Arial, sans-serif;">If the button does not work, open this link directly:<br><a href="{{{INVITE_URL}}}">{{{INVITE_URL}}}</a></p>
+    </div>
+    <div class="footer">
+      <img src="https://www.journie.io/logos/journie_invert.jpg" alt="Journie logo" class="footer-logo-img" />
+      <div class="footer-tag">Your research, simplified.</div>
+      <div class="footer-links">
+        Need help? <a href="mailto:{{{SUPPORT_EMAIL}}}">{{{SUPPORT_EMAIL}}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

@@ -92,7 +92,7 @@ function Field({
 
 // ── Main modal ────────────────────────────────────────────────────────────────
 export default function AuthModal() {
-  const { modalOpen, modalView, closeModal, signIn, signUp, requestPasswordReset, openModal, startOAuth } = useAuth();
+  const { user, modalOpen, modalView, closeModal, signIn, signUp, requestPasswordReset, openModal, startOAuth } = useAuth();
 
   // Sign-in fields
   const [siEmail, setSiEmail] = useState('');
@@ -109,12 +109,19 @@ export default function AuthModal() {
   const [success, setSuccess] = useState('');
   const [loading, setLoading] = useState(false);
   const [institutionalExpanded, setInstitutionalExpanded] = useState(false);
+  const [verificationEmail, setVerificationEmail] = useState('');
 
   // Clear errors when switching views
   useEffect(() => {
     setError('');
     setSuccess('');
   }, [modalView, modalOpen]);
+
+  useEffect(() => {
+    if (modalOpen && user) {
+      closeModal();
+    }
+  }, [modalOpen, user, closeModal]);
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -145,9 +152,9 @@ export default function AuthModal() {
     try {
       const result = await signUp(suName, suEmail, suPassword);
       if (result.requiresEmailVerification) {
+        setVerificationEmail(suEmail.trim());
         toast.success('Account created. Check your email to verify your account.');
-        setSuccess('Verification email sent. Please verify your email, then sign in.');
-        openModal('signin');
+        openModal('verify');
       } else {
         closeModal();
         const hasPendingCheckout = localStorage.getItem('pending_checkout') === 'true';
@@ -202,38 +209,91 @@ export default function AuthModal() {
             transition={{ duration: 0.22 }}
           >
             {/* Tab bar */}
-            <div className="flex border-b border-border">
-              <button
-                onClick={() => openModal('signin')}
-                className={`flex-1 py-4 text-sm font-semibold transition-colors ${
-                  modalView === 'signin'
-                    ? 'text-foreground border-b-2 border-journi-green'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-              >
-                Sign In
-              </button>
-              <button
-                onClick={() => openModal('signup')}
-                className={`flex-1 py-4 text-sm font-semibold transition-colors ${
-                  modalView === 'signup'
-                    ? 'text-foreground border-b-2 border-journi-green'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-              >
-                Create Account
-              </button>
-              <button
-                onClick={closeModal}
-                aria-label="Close"
-                className="px-4 text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <X size={16} aria-hidden="true" />
-              </button>
-            </div>
+            {modalView === 'verify' ? (
+              <div className="flex items-center justify-between border-b border-border px-4 py-4">
+                <h3 className="text-sm font-semibold text-foreground">Verify your email</h3>
+                <button
+                  onClick={closeModal}
+                  aria-label="Close"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <X size={16} aria-hidden="true" />
+                </button>
+              </div>
+            ) : (
+              <div className="flex border-b border-border">
+                <button
+                  onClick={() => openModal('signin')}
+                  className={`flex-1 py-4 text-sm font-semibold transition-colors ${
+                    modalView === 'signin'
+                      ? 'text-foreground border-b-2 border-journi-green'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  Sign In
+                </button>
+                <button
+                  onClick={() => openModal('signup')}
+                  className={`flex-1 py-4 text-sm font-semibold transition-colors ${
+                    modalView === 'signup'
+                      ? 'text-foreground border-b-2 border-journi-green'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  Create Account
+                </button>
+                <button
+                  onClick={closeModal}
+                  aria-label="Close"
+                  className="px-4 text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <X size={16} aria-hidden="true" />
+                </button>
+              </div>
+            )}
 
             {/* Body */}
             <div className="p-6">
+              {modalView === 'verify' ? (
+                <motion.div
+                  key="verify"
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.18 }}
+                  className="space-y-4"
+                >
+                  <div className="flex items-start gap-3 rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4 text-emerald-700">
+                    <CheckCircle2 size={18} className="mt-0.5 shrink-0" />
+                    <div>
+                      <p className="text-sm font-semibold text-foreground">Please verify your email</p>
+                      <p className="mt-1 text-xs text-muted-foreground">
+                        We sent a verification link to {verificationEmail || 'your email address'}.
+                        Click the link to verify your account.
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    After verification, you will be signed in and redirected to your dashboard automatically.
+                  </p>
+                  <div className="flex gap-2">
+                    <button
+                      type="button"
+                      onClick={() => openModal('signin')}
+                      className="flex-1 rounded-xl border border-border px-4 py-2.5 text-sm font-medium text-foreground hover:bg-accent transition-colors"
+                    >
+                      Back to Sign In
+                    </button>
+                    <button
+                      type="button"
+                      onClick={closeModal}
+                      className="flex-1 rounded-xl bg-journi-green px-4 py-2.5 text-sm font-bold text-journi-slate hover:opacity-90 transition-opacity"
+                    >
+                      Done
+                    </button>
+                  </div>
+                </motion.div>
+              ) : (
+                <>
               {/* Google button */}
               <button
                 onClick={handleGoogle}
@@ -480,6 +540,8 @@ export default function AuthModal() {
                   </motion.form>
                 )}
               </AnimatePresence>
+                </>
+              )}
             </div>
           </motion.div>
         </motion.div>
