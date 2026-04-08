@@ -26,7 +26,6 @@ These templates are intended for Resend Dashboard template mode.
 - `TICKET_ID`
 - `SUPPORT_TOPIC`
 - `SUPPORT_MESSAGE_SUMMARY`
-- `SUPPORT_RESPONSE_SLA`
 - `SUPPORT_EMAIL`
 
 ## `info-update-email.html`

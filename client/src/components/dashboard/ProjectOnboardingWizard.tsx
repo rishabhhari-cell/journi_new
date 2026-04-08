@@ -52,6 +52,7 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
   // Step navigation
   const [step, setStep] = useState<Step>(1);
   const [isCreating, setIsCreating] = useState(false);
+  const [showWelcomeIntro, setShowWelcomeIntro] = useState(true);
 
   // Step 1 — project info
   const [projectName, setProjectName] = useState("");
@@ -225,8 +226,24 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.15 }}
-                className="space-y-4"
+                className="relative space-y-4"
               >
+                {showWelcomeIntro && (
+                  <div className="absolute inset-0 z-10 flex items-start justify-center bg-card/92 rounded-lg px-3 pt-3">
+                    <div className="w-full rounded-xl border border-border bg-background p-4 shadow-sm">
+                      <p className="text-base font-semibold text-foreground mb-3">welcome to the start of your journie</p>
+                      <button
+                        type="button"
+                        onClick={() => setShowWelcomeIntro(false)}
+                        className="inline-flex items-center gap-1.5 bg-journi-green text-journi-slate text-sm font-semibold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+                      >
+                        <FolderPlus size={14} />
+                        Start setup
+                      </button>
+                    </div>
+                  </div>
+                )}
+
                 {/* Project name */}
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-1.5">

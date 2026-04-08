@@ -5,6 +5,7 @@ import type { ApiSession, ApiUser, OrganizationMembershipDTO } from "../../share
 import { env } from "../config/env";
 import { assertAnyOrganizationRole } from "../lib/access";
 import { HttpError } from "../lib/http-error";
+import { logger } from "../lib/logger";
 import { createUserScopedSupabase, supabaseAdmin, supabasePublic } from "../lib/supabase";
 import { requireAuth, type AuthedRequest } from "../middleware/auth";
 import { writeAuditEvent } from "../services/audit.service";
@@ -183,6 +184,56 @@ async function fetchInitialProjects(organizationId: string | undefined) {
   return data ?? [];
 }
 
+async function hasWelcomeEmailBeenSent(userId: string): Promise<boolean> {
+  const { data, error } = await supabaseAdmin
+    .from("audit_events")
+    .select("id")
+    .eq("actor_user_id", userId)
+    .eq("event_type", "email.welcome.sent")
+    .limit(1)
+    .maybeSingle();
+
+  if (error) {
+    logger.warn("Failed to query welcome-email audit event", {
+      userId,
+      error: error.message,
+    });
+    return false;
+  }
+
+  return Boolean(data?.id);
+}
+
+async function maybeSendWelcomeEmail(input: {
+  userId: string;
+  to: string;
+  fullName: string;
+  verificationUrl?: string;
+}): Promise<void> {
+  if (!input.to) return;
+
+  const alreadySent = await hasWelcomeEmailBeenSent(input.userId);
+  if (alreadySent) return;
+
+  const sent = await sendWelcomeEmail({
+    to: input.to,
+    fullName: input.fullName,
+    verificationUrl: input.verificationUrl,
+  });
+  if (!sent) return;
+
+  await writeAuditEvent({
+    actorUserId: input.userId,
+    eventType: "email.welcome.sent",
+    entityType: "user",
+    entityId: input.userId,
+    payload: {
+      email: input.to,
+      mode: input.verificationUrl ? "verification" : "welcome",
+    },
+  });
+}
+
 authRouter.post("/signup", async (req, res, next) => {
   try {
     const input = signUpSchema.parse(req.body);
@@ -258,7 +309,8 @@ authRouter.post("/signup", async (req, res, next) => {
     ]);
     const initialProjects = await fetchInitialProjects(membershipDtos[0]?.organizationId);
 
-    void sendWelcomeEmail({
+    void maybeSendWelcomeEmail({
+      userId: data.user.id,
       to: input.email,
       fullName: input.fullName,
       verificationUrl: data.properties.action_link,
@@ -431,11 +483,25 @@ authRouter.post("/forgot-password", async (req, res, next) => {
         data.user?.user_metadata?.name ??
         undefined;
 
-      void sendPasswordResetEmail({
-        to: input.email,
-        fullName,
-        resetUrl: data.properties.action_link,
-      });
+      void (async () => {
+        const sent = await sendPasswordResetEmail({
+          to: input.email,
+          fullName,
+          resetUrl: data.properties.action_link,
+        });
+
+        if (!sent || !data.user?.id) return;
+
+        await writeAuditEvent({
+          actorUserId: data.user.id,
+          eventType: "email.password_reset.sent",
+          entityType: "user",
+          entityId: data.user.id,
+          payload: {
+            email: input.email,
+          },
+        });
+      })();
     }
 
     res.json({ ok: true });
@@ -513,10 +579,6 @@ authRouter.get("/me", requireAuth, async (req, res, next) => {
       const oauthEmail = rawAuthUser?.email ?? authReq.auth.email;
       await upsertProfile({ userId, fullName: oauthName, email: oauthEmail });
       await autoEnrollInstitutionMember(userId, oauthEmail);
-      void sendWelcomeEmail({
-        to: oauthEmail,
-        fullName: oauthName,
-      });
       profile = { full_name: oauthName, initials: toInitials(oauthName), email: oauthEmail };
     }
 
@@ -532,6 +594,12 @@ authRouter.get("/me", requireAuth, async (req, res, next) => {
       initials: profile?.initials ?? toInitials(fullName),
       provider,
     };
+
+    void maybeSendWelcomeEmail({
+      userId,
+      to: user.email,
+      fullName,
+    });
 
     res.json({
       user,
@@ -637,6 +705,103 @@ authRouter.get("/admin/health", requireAuth, async (req, res, next) => {
   }
 });
 
+// GET /auth/admin/email-debug — inspect email config + recent email/auth audit events
+authRouter.get("/admin/email-debug", requireAuth, async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    await assertAnyOrganizationRole(authReq.auth.userId, "admin");
+    const query = emailDebugQuerySchema.parse(req.query);
+
+    const config = {
+      resendApiKeyConfigured: Boolean(env.RESEND_API_KEY),
+      mailFrom: env.MAIL_FROM,
+      mailReplyTo: env.MAIL_REPLY_TO,
+      supportEmail: env.SUPPORT_EMAIL,
+      templateIds: {
+        welcome: env.RESEND_WELCOME_TEMPLATE_ID ?? null,
+        organizationInvite: env.RESEND_ORG_INVITE_TEMPLATE_ID ?? null,
+        mention: env.RESEND_MENTION_TEMPLATE_ID ?? null,
+        passwordReset: env.RESEND_PASSWORD_RESET_TEMPLATE_ID ?? null,
+      },
+      resetPasswordRedirectUrl: env.RESET_PASSWORD_REDIRECT_URL ?? `${env.CLIENT_BASE_URL}/reset-password`,
+    };
+
+    const { data: rows, error } = await supabaseAdmin
+      .from("audit_events")
+      .select("id, created_at, event_type, actor_user_id, entity_type, entity_id, payload")
+      .order("created_at", { ascending: false })
+      .limit(Math.max(query.limit * 3, 60));
+
+    if (error) {
+      throw new HttpError(500, error.message, "EMAIL_DEBUG_FETCH_FAILED");
+    }
+
+    const filtered = (rows ?? [])
+      .filter((row: any) => {
+        const eventType = String(row.event_type ?? "");
+        return eventType.startsWith("email.") || eventType.startsWith("auth.");
+      })
+      .slice(0, query.limit);
+
+    const actorIds = Array.from(
+      new Set(
+        filtered
+          .map((row: any) => row.actor_user_id)
+          .filter((id: unknown): id is string => typeof id === "string" && id.length > 0),
+      ),
+    );
+
+    let profileMap = new Map<string, { fullName: string | null; email: string | null }>();
+    if (actorIds.length > 0) {
+      const { data: profiles } = await supabaseAdmin
+        .from("profiles")
+        .select("id, full_name, email")
+        .in("id", actorIds);
+      profileMap = new Map(
+        (profiles ?? []).map((profile: any) => [
+          profile.id,
+          { fullName: profile.full_name ?? null, email: profile.email ?? null },
+        ]),
+      );
+    }
+
+    const recentEvents = filtered.map((row: any) => {
+      const actor = row.actor_user_id ? profileMap.get(row.actor_user_id) : null;
+      return {
+        id: row.id,
+        createdAt: row.created_at,
+        eventType: row.event_type,
+        actorUserId: row.actor_user_id ?? null,
+        actorFullName: actor?.fullName ?? null,
+        actorEmail: actor?.email ?? null,
+        entityType: row.entity_type ?? null,
+        entityId: row.entity_id ?? null,
+        payload: row.payload ?? {},
+      };
+    });
+
+    const warnings: string[] = [];
+    if (!config.resendApiKeyConfigured) warnings.push("RESEND_API_KEY is not configured.");
+    if (!config.templateIds.welcome) warnings.push("RESEND_WELCOME_TEMPLATE_ID is not configured.");
+    if (!config.templateIds.organizationInvite) warnings.push("RESEND_ORG_INVITE_TEMPLATE_ID is not configured.");
+    if (!config.templateIds.passwordReset) warnings.push("RESEND_PASSWORD_RESET_TEMPLATE_ID is not configured.");
+    if (recentEvents.length === 0) warnings.push("No recent auth/email audit events found.");
+    if (!recentEvents.some((event) => event.eventType.startsWith("email."))) {
+      warnings.push("No recent email.* events found. Emails may not be triggering or may be failing before audit write.");
+    }
+
+    res.json({
+      ok: true,
+      generatedAt: new Date().toISOString(),
+      config,
+      warnings,
+      recentEvents,
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+
 const institutionDomainSchema = z.object({
   domain: z
     .string()
@@ -644,6 +809,10 @@ const institutionDomainSchema = z.object({
     .transform((d) => d.toLowerCase().replace(/^@/, "")),
   organizationId: z.string().uuid(),
   defaultRole: z.enum(["viewer", "editor", "admin"]).default("viewer"),
+});
+
+const emailDebugQuerySchema = z.object({
+  limit: z.coerce.number().int().min(1).max(200).default(50),
 });
 
 // POST /auth/admin/institution-domains — register an email domain → org mapping

@@ -13,8 +13,77 @@ interface SendEmailInput {
   };
 }
 
+interface TemplateValidationResult {
+  checkedAt: number;
+  isUsable: boolean;
+}
+
+const TEMPLATE_VALIDATION_TTL_MS = 5 * 60 * 1000;
+const templateValidationCache = new Map<string, TemplateValidationResult>();
+
 function hasEmailProviderConfigured(): boolean {
   return Boolean(env.RESEND_API_KEY);
+}
+
+async function fetchTemplateVariableKeys(templateId: string): Promise<string[] | null> {
+  if (!env.RESEND_API_KEY) return null;
+  try {
+    const response = await fetch(`https://api.resend.com/templates/${templateId}`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      },
+    });
+    if (!response.ok) {
+      logger.warn("Failed to fetch Resend template metadata", {
+        templateId,
+        status: response.status,
+      });
+      return null;
+    }
+
+    const body = (await response.json()) as {
+      variables?: Array<{ key?: string }>;
+    };
+    return (body.variables ?? [])
+      .map((variable) => variable.key?.trim())
+      .filter((key): key is string => Boolean(key));
+  } catch (error) {
+    logger.warn("Error while fetching Resend template metadata", {
+      templateId,
+      error: error instanceof Error ? error.message : String(error),
+    });
+    return null;
+  }
+}
+
+async function isTemplateUsable(templateId: string, requiredKeys: string[]): Promise<boolean> {
+  const now = Date.now();
+  const cached = templateValidationCache.get(templateId);
+  if (cached && now - cached.checkedAt < TEMPLATE_VALIDATION_TTL_MS) {
+    return cached.isUsable;
+  }
+
+  const keys = await fetchTemplateVariableKeys(templateId);
+  if (!keys || keys.length === 0) {
+    templateValidationCache.set(templateId, { checkedAt: now, isUsable: false });
+    logger.warn("Resend template has no detected variables; falling back to HTML sender", {
+      templateId,
+    });
+    return false;
+  }
+
+  const missingKeys = requiredKeys.filter((key) => !keys.includes(key));
+  const isUsable = missingKeys.length === 0;
+  templateValidationCache.set(templateId, { checkedAt: now, isUsable });
+  if (!isUsable) {
+    logger.warn("Resend template missing expected variables; falling back to HTML sender", {
+      templateId,
+      missingKeys,
+      detectedKeys: keys,
+    });
+  }
+  return isUsable;
 }
 
 async function sendViaResend(input: SendEmailInput): Promise<void> {
@@ -51,27 +120,34 @@ async function sendViaResend(input: SendEmailInput): Promise<void> {
   }
 }
 
-export async function sendTransactionalEmail(input: SendEmailInput): Promise<void> {
+export async function sendTransactionalEmail(input: SendEmailInput): Promise<boolean> {
   if (!hasEmailProviderConfigured()) {
     logger.info("Email send skipped (no provider configured)", {
       to: input.to,
       subject: input.subject,
     });
-    return;
+    return false;
   }
 
   try {
     await sendViaResend(input);
+    logger.info("Transactional email sent", {
+      to: input.to,
+      subject: input.subject,
+      templateId: input.template?.id ?? null,
+    });
+    return true;
   } catch (error) {
     logger.error("Failed to send transactional email", {
       to: input.to,
       subject: input.subject,
       error: error instanceof Error ? error.message : String(error),
     });
+    return false;
   }
 }
 
-export async function sendWelcomeEmail(input: { to: string; fullName: string; verificationUrl?: string }) {
+export async function sendWelcomeEmail(input: { to: string; fullName: string; verificationUrl?: string }): Promise<boolean> {
   const firstName = input.fullName.trim().split(/\s+/)[0] || "there";
   const ctaUrl = input.verificationUrl ?? "https://www.journie.io/dashboard";
   const ctaLabel = input.verificationUrl
@@ -79,8 +155,11 @@ export async function sendWelcomeEmail(input: { to: string; fullName: string; ve
     : "Begin Your Journie &rarr;";
   const subject = `Welcome to Journie, ${firstName} - your research journey begins here`;
 
-  if (env.RESEND_WELCOME_TEMPLATE_ID) {
-    await sendTransactionalEmail({
+  if (
+    env.RESEND_WELCOME_TEMPLATE_ID &&
+    (await isTemplateUsable(env.RESEND_WELCOME_TEMPLATE_ID, ["GIVEN_NAME", "CTA_URL", "CTA_LABEL"]))
+  ) {
+    return sendTransactionalEmail({
       to: input.to,
       subject,
       template: {
@@ -96,7 +175,6 @@ export async function sendWelcomeEmail(input: { to: string; fullName: string; ve
         ? `Welcome to Journie, ${firstName}. Verify your email and get started: ${ctaUrl}. Need help? Email ${env.SUPPORT_EMAIL}.`
         : `Welcome to Journie, ${firstName}. Your account is ready. Start here: ${ctaUrl}. Need help? Email ${env.SUPPORT_EMAIL}.`,
     });
-    return;
   }
 
   const html = `
@@ -164,7 +242,7 @@ export async function sendWelcomeEmail(input: { to: string; fullName: string; ve
   const text = input.verificationUrl
     ? `Welcome to Journie, ${firstName}. Verify your email and get started: ${ctaUrl}. Need help? Email ${env.SUPPORT_EMAIL}.`
     : `Welcome to Journie, ${firstName}. Your account is ready. Start here: ${ctaUrl}. Need help? Email ${env.SUPPORT_EMAIL}.`;
-  await sendTransactionalEmail({ to: input.to, subject, html, text });
+  return sendTransactionalEmail({ to: input.to, subject, html, text });
 }
 
 export async function sendOrganizationInviteEmail(input: {
@@ -173,7 +251,7 @@ export async function sendOrganizationInviteEmail(input: {
   organizationName: string;
   role: string;
   inviteUrl: string;
-}) {
+}): Promise<boolean> {
   const subject = `${input.inviterName} invited you to ${input.organizationName}`;
   const emailLocalPart = input.to.split("@")[0] ?? "";
   const inferredGivenNameRaw = emailLocalPart.split(/[._-]/)[0] ?? "";
@@ -181,8 +259,18 @@ export async function sendOrganizationInviteEmail(input: {
     ? inferredGivenNameRaw.charAt(0).toUpperCase() + inferredGivenNameRaw.slice(1).toLowerCase()
     : "there";
 
-  if (env.RESEND_ORG_INVITE_TEMPLATE_ID) {
-    await sendTransactionalEmail({
+  if (
+    env.RESEND_ORG_INVITE_TEMPLATE_ID &&
+    (await isTemplateUsable(env.RESEND_ORG_INVITE_TEMPLATE_ID, [
+      "GIVEN_NAME",
+      "INVITER_NAME",
+      "ORGANIZATION_NAME",
+      "ROLE",
+      "INVITE_URL",
+      "SUPPORT_EMAIL",
+    ]))
+  ) {
+    return sendTransactionalEmail({
       to: input.to,
       subject,
       template: {
@@ -198,7 +286,6 @@ export async function sendOrganizationInviteEmail(input: {
       },
       text: `${input.inviterName} invited you to ${input.organizationName} on Journi as ${input.role}. Accept invite: ${input.inviteUrl}`,
     });
-    return;
   }
 
   const html = `
@@ -210,7 +297,7 @@ export async function sendOrganizationInviteEmail(input: {
     </div>
   `;
   const text = `${input.inviterName} invited you to ${input.organizationName} on Journi as ${input.role}. Accept invite: ${input.inviteUrl}`;
-  await sendTransactionalEmail({ to: input.to, subject, html, text });
+  return sendTransactionalEmail({ to: input.to, subject, html, text });
 }
 
 export async function sendMentionEmail(input: {
@@ -220,11 +307,20 @@ export async function sendMentionEmail(input: {
   manuscriptTitle: string;
   commentPreview: string;
   linkUrl: string;
-}) {
+}): Promise<boolean> {
   const subject = `${input.actorName} mentioned you in ${input.manuscriptTitle}`;
 
-  if (env.RESEND_MENTION_TEMPLATE_ID) {
-    await sendTransactionalEmail({
+  if (
+    env.RESEND_MENTION_TEMPLATE_ID &&
+    (await isTemplateUsable(env.RESEND_MENTION_TEMPLATE_ID, [
+      "RECIPIENT_NAME",
+      "ACTOR_NAME",
+      "MANUSCRIPT_TITLE",
+      "COMMENT_PREVIEW",
+      "LINK_URL",
+    ]))
+  ) {
+    return sendTransactionalEmail({
       to: input.to,
       subject,
       template: {
@@ -240,7 +336,6 @@ export async function sendMentionEmail(input: {
       },
       text: `Hi ${input.recipientName}, ${input.actorName} mentioned you in ${input.manuscriptTitle}. ${input.commentPreview} Open: ${input.linkUrl}`,
     });
-    return;
   }
 
   const html = `
@@ -253,19 +348,26 @@ export async function sendMentionEmail(input: {
     </div>
   `;
   const text = `Hi ${input.recipientName}, ${input.actorName} mentioned you in ${input.manuscriptTitle}. ${input.commentPreview} Open: ${input.linkUrl}`;
-  await sendTransactionalEmail({ to: input.to, subject, html, text });
+  return sendTransactionalEmail({ to: input.to, subject, html, text });
 }
 
 export async function sendPasswordResetEmail(input: {
   to: string;
   fullName?: string;
   resetUrl: string;
-}) {
+}): Promise<boolean> {
   const firstName = input.fullName?.trim().split(/\s+/)[0] || "there";
   const subject = "Reset your Journie password";
 
-  if (env.RESEND_PASSWORD_RESET_TEMPLATE_ID) {
-    await sendTransactionalEmail({
+  if (
+    env.RESEND_PASSWORD_RESET_TEMPLATE_ID &&
+    (await isTemplateUsable(env.RESEND_PASSWORD_RESET_TEMPLATE_ID, [
+      "GIVEN_NAME",
+      "RESET_URL",
+      "SUPPORT_EMAIL",
+    ]))
+  ) {
+    return sendTransactionalEmail({
       to: input.to,
       subject,
       template: {
@@ -278,7 +380,6 @@ export async function sendPasswordResetEmail(input: {
       },
       text: `Hi ${firstName}, reset your Journie password here: ${input.resetUrl}. If you did not request this, you can ignore this email.`,
     });
-    return;
   }
 
   const html = `
@@ -291,7 +392,7 @@ export async function sendPasswordResetEmail(input: {
     </div>
   `;
   const text = `Hi ${firstName}, reset your Journie password here: ${input.resetUrl}. If you did not request this, you can ignore this email.`;
-  await sendTransactionalEmail({ to: input.to, subject, html, text });
+  return sendTransactionalEmail({ to: input.to, subject, html, text });
 }
 
 

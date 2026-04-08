@@ -146,12 +146,26 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const inviteToken = localStorage.getItem(PENDING_INVITE_KEY);
     if (!inviteToken) return;
     try {
-      await acceptOrganizationInvite(inviteToken);
+      const accepted = await acceptOrganizationInvite(inviteToken);
       localStorage.removeItem(PENDING_INVITE_KEY);
       const me = await apiFetch<{ user: ApiUser; memberships?: OrganizationMembershipDTO[] }>('/auth/me', {
         method: 'GET',
       });
-      setMemberships(me.memberships ?? []);
+      const nextMemberships = me.memberships ?? [];
+      setMemberships(nextMemberships);
+
+      const invitedOrgId = accepted.organizationId;
+      const resolvedOrgId =
+        invitedOrgId && nextMemberships.some((membership) => membership.organizationId === invitedOrgId)
+          ? invitedOrgId
+          : nextMemberships[0]?.organizationId ?? null;
+
+      setActiveOrganizationIdState(resolvedOrgId);
+      if (resolvedOrgId) {
+        localStorage.setItem(ORG_STORAGE_KEY, resolvedOrgId);
+      } else {
+        localStorage.removeItem(ORG_STORAGE_KEY);
+      }
     } catch {
       // Keep token for later retry after next authenticated bootstrap.
     }
