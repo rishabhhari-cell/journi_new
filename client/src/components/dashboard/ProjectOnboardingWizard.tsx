@@ -1,20 +1,17 @@
 /**
  * ProjectOnboardingWizard
  * 3-step onboarding modal for new users:
- *   Step 1 — Project details (name, description, deadline, manuscript type)
- *   Step 2 — Import existing doc (optional)
- *   Step 3 — Invite collaborators (optional)
+ *   Step 1 - Project details (name, description, deadline, manuscript type)
+ *   Step 2 - Import existing doc (optional)
+ *   Step 3 - Invite collaborators (optional)
  */
 import { useState, useRef, useCallback } from "react";
 import { useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FolderPlus,
-  FileUp,
-  Users,
   ChevronRight,
   ChevronLeft,
-  X,
   Loader2,
   FileText,
   Upload,
@@ -44,6 +41,22 @@ const MANUSCRIPT_TYPES: { value: ManuscriptType; label: string }[] = [
 
 const STEP_LABELS = ["Project", "Import", "Team"];
 
+const ui = {
+  stepBody: "mx-auto w-full max-w-[560px] space-y-5",
+  label: "block text-[13px] leading-5 font-semibold tracking-[0.005em] text-foreground/95 mb-1.5",
+  control:
+    "h-11 w-full rounded-xl border border-border/80 bg-background px-3.5 text-sm leading-[1.45] font-medium text-foreground placeholder:text-muted-foreground/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/35 focus-visible:border-journi-green/55 transition-colors",
+  textarea:
+    "w-full min-h-[92px] rounded-xl border border-border/80 bg-background px-3.5 py-3 text-sm leading-[1.5] font-medium text-foreground placeholder:text-muted-foreground/85 resize-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/35 focus-visible:border-journi-green/55 transition-colors",
+  dropzone:
+    "rounded-xl border border-dashed border-border/80 bg-background px-6 py-9 text-center cursor-pointer hover:border-journi-green/35 hover:bg-journi-green/5 transition-colors",
+  card: "rounded-xl border border-border/75 bg-background",
+  mutedButton:
+    "text-sm text-muted-foreground hover:text-foreground transition-colors px-3 py-2 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-journi-green/25",
+  primaryButton:
+    "flex items-center gap-1.5 bg-journi-green text-journi-slate text-sm font-semibold tracking-[0.01em] px-5 h-11 rounded-xl hover:opacity-90 transition-opacity disabled:opacity-40 disabled:cursor-not-allowed",
+};
+
 export default function ProjectOnboardingWizard({ onComplete }: Props) {
   const [, navigate] = useLocation();
   const { createProject, addCollaborator } = useProject();
@@ -54,19 +67,19 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
   const [isCreating, setIsCreating] = useState(false);
   const [showWelcomeIntro, setShowWelcomeIntro] = useState(true);
 
-  // Step 1 — project info
+  // Step 1 - project info
   const [projectName, setProjectName] = useState("");
   const [description, setDescription] = useState("");
   const [dueDate, setDueDate] = useState("");
   const [manuscriptType, setManuscriptType] = useState<ManuscriptType>("full_paper");
 
-  // Step 2 — file import
+  // Step 2 - file import
   const [importFile, setImportFile] = useState<File | null>(null);
   const [importResult, setImportResult] = useState<ImportDocumentResult | null>(null);
   const [isParsing, setIsParsing] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Step 3 — collaborators
+  // Step 3 - collaborators
   const [collaborators, setCollaborators] = useState<{ name: string; email: string }[]>([
     { name: "", email: "" },
   ]);
@@ -99,7 +112,6 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
       toast.error("Please drop a .docx or .pdf file");
       return;
     }
-    // Create a synthetic change event
     const dt = new DataTransfer();
     dt.items.add(file);
     const syntheticEvent = { target: { files: dt.files } } as unknown as React.ChangeEvent<HTMLInputElement>;
@@ -122,9 +134,7 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
   };
 
   const updateCollaboratorRow = (idx: number, field: "name" | "email", value: string) => {
-    setCollaborators((prev) =>
-      prev.map((c, i) => (i === idx ? { ...c, [field]: value } : c)),
-    );
+    setCollaborators((prev) => prev.map((c, i) => (i === idx ? { ...c, [field]: value } : c)));
   };
 
   const handleFinish = async () => {
@@ -132,11 +142,7 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
     setIsCreating(true);
 
     try {
-      const project = await createProject(
-        projectName.trim(),
-        description.trim(),
-        dueDate || undefined,
-      );
+      await createProject(projectName.trim(), description.trim(), dueDate || undefined);
 
       // Create manuscript
       const msTitle = importResult?.title || "Untitled Manuscript";
@@ -158,8 +164,6 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
       // If they imported a doc, go to editor; otherwise stay on dashboard
       if (importResult && importFile) {
         navigate("/collaboration");
-        // The Collaboration page handles the actual section import via its own wizard/import flow
-        // We'll trigger re-import there since the manuscript was just created
       }
 
       onComplete();
@@ -183,17 +187,15 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
       <motion.div
         initial={{ opacity: 0, scale: 0.96, y: 12 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.2 }}
-        className="relative z-10 bg-card border border-border rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden"
+        transition={{ duration: 0.16 }}
+        className="relative z-10 bg-card border border-border/80 rounded-2xl shadow-2xl w-full max-w-xl overflow-hidden"
       >
         {/* Progress bar */}
-        <div className="flex gap-1 px-6 pt-5 pb-2">
+        <div className="flex gap-1 px-7 pt-6 pb-2">
           {[1, 2, 3].map((s) => (
             <div key={s} className="flex-1 flex flex-col items-center gap-1">
               <div
-                className={`h-1 w-full rounded-full transition-colors ${
-                  s <= step ? "bg-journi-green" : "bg-muted"
-                }`}
+                className={`h-1 w-full rounded-full transition-colors ${s <= step ? "bg-journi-green" : "bg-muted"}`}
               />
               <span className={`text-[10px] font-medium ${s <= step ? "text-journi-green" : "text-muted-foreground"}`}>
                 {STEP_LABELS[s - 1]}
@@ -203,13 +205,13 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
         </div>
 
         {/* Header */}
-        <div className="px-6 pt-2 pb-4 border-b border-border">
-          <h2 className="text-lg font-semibold text-foreground">
+        <div className="px-7 pt-2 pb-5 border-b border-border/80">
+          <h2 className="text-[22px] leading-[1.15] font-semibold tracking-[-0.01em] text-foreground">
             {step === 1 && "Set up your project"}
             {step === 2 && "Import your work"}
             {step === 3 && "Invite your team"}
           </h2>
-          <p className="text-sm text-muted-foreground mt-0.5">
+          <p className="text-[14px] leading-6 text-muted-foreground mt-1.5">
             {step === 1 && "Give your research project a name to get started."}
             {step === 2 && "Upload an existing document or start from scratch."}
             {step === 3 && "Add co-authors so you can collaborate."}
@@ -217,25 +219,25 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
         </div>
 
         {/* Body */}
-        <div className="px-6 py-5 min-h-[260px]">
+        <div className="px-7 py-6 min-h-[320px]">
           <AnimatePresence mode="wait">
             {step === 1 && (
               <motion.div
                 key="step1"
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 12 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.15 }}
-                className="relative space-y-4"
+                exit={{ opacity: 0, x: -12 }}
+                transition={{ duration: 0.12 }}
+                className={`relative ${ui.stepBody}`}
               >
                 {showWelcomeIntro && (
-                  <div className="absolute inset-0 z-10 flex items-start justify-center bg-card/92 rounded-lg px-3 pt-3">
-                    <div className="w-full rounded-xl border border-border bg-background p-4 shadow-sm">
-                      <p className="text-base font-semibold text-foreground mb-3">welcome to the start of your journie</p>
+                  <div className="absolute inset-0 z-10 flex items-start justify-center rounded-xl bg-card/90 backdrop-blur-[1px] p-2">
+                    <div className="w-full rounded-xl border border-border/75 bg-background px-5 py-5 shadow-sm">
+                      <p className="text-[19px] leading-[1.25] font-semibold tracking-[-0.005em] text-foreground mb-4">Welcome to the start of your journie</p>
                       <button
                         type="button"
                         onClick={() => setShowWelcomeIntro(false)}
-                        className="inline-flex items-center gap-1.5 bg-journi-green text-journi-slate text-sm font-semibold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+                        className="inline-flex items-center gap-1.5 bg-journi-green text-journi-slate text-sm font-semibold px-4 h-10 rounded-xl hover:opacity-90 transition-opacity"
                       >
                         <FolderPlus size={14} />
                         Start setup
@@ -244,9 +246,8 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
                   </div>
                 )}
 
-                {/* Project name */}
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">
+                  <label className={ui.label}>
                     Project name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -254,14 +255,13 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
                     value={projectName}
                     onChange={(e) => setProjectName(e.target.value)}
                     placeholder="e.g. Phase III Clinical Trial Analysis"
-                    className="w-full px-3 py-2 bg-muted border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-journi-green/50 focus:border-journi-green"
+                    className={ui.control}
                     autoFocus
                   />
                 </div>
 
-                {/* Description */}
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">
+                  <label className={ui.label}>
                     Description <span className="text-muted-foreground font-normal">(optional)</span>
                   </label>
                   <textarea
@@ -269,33 +269,29 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
                     onChange={(e) => setDescription(e.target.value)}
                     placeholder="Brief description of your research..."
                     rows={2}
-                    className="w-full px-3 py-2 bg-muted border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground resize-none focus:outline-none focus:ring-2 focus:ring-journi-green/50 focus:border-journi-green"
+                    className={ui.textarea}
                   />
                 </div>
 
                 <div className="flex gap-3">
-                  {/* Deadline */}
                   <div className="flex-1">
-                    <label className="block text-sm font-medium text-foreground mb-1.5">
+                    <label className={ui.label}>
                       Submission deadline <span className="text-muted-foreground font-normal">(optional)</span>
                     </label>
                     <input
                       type="date"
                       value={dueDate}
                       onChange={(e) => setDueDate(e.target.value)}
-                      className="w-full px-3 py-2 bg-muted border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-journi-green/50 focus:border-journi-green"
+                      className={ui.control}
                     />
                   </div>
 
-                  {/* Manuscript type */}
                   <div className="flex-1">
-                    <label className="block text-sm font-medium text-foreground mb-1.5">
-                      Manuscript type
-                    </label>
+                    <label className={ui.label}>Manuscript type</label>
                     <select
                       value={manuscriptType}
                       onChange={(e) => setManuscriptType(e.target.value as ManuscriptType)}
-                      className="w-full px-3 py-2 bg-muted border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-journi-green/50 focus:border-journi-green"
+                      className={ui.control}
                     >
                       {MANUSCRIPT_TYPES.map((t) => (
                         <option key={t.value} value={t.value}>
@@ -311,28 +307,23 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
             {step === 2 && (
               <motion.div
                 key="step2"
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 12 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.15 }}
-                className="space-y-4"
+                exit={{ opacity: 0, x: -12 }}
+                transition={{ duration: 0.12 }}
+                className={ui.stepBody}
               >
                 {!importFile ? (
                   <>
-                    {/* Drop zone */}
                     <div
                       onDragOver={(e) => e.preventDefault()}
                       onDrop={handleDrop}
                       onClick={() => fileInputRef.current?.click()}
-                      className="border-2 border-dashed border-border hover:border-journi-green/40 hover:bg-journi-green/5 rounded-xl p-8 text-center cursor-pointer transition-colors"
+                      className={ui.dropzone}
                     >
                       <Upload size={32} className="mx-auto mb-3 text-muted-foreground" />
-                      <p className="text-sm font-medium text-foreground mb-1">
-                        Drop your file here or click to browse
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        Supports .docx and .pdf
-                      </p>
+                      <p className="text-[15px] leading-6 font-semibold text-foreground mb-1">Drop your file here or click to browse</p>
+                      <p className="text-[13px] leading-5 text-muted-foreground">Supports .docx and .pdf</p>
                     </div>
                     <input
                       ref={fileInputRef}
@@ -343,32 +334,32 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
                     />
                   </>
                 ) : isParsing ? (
-                  <div className="flex flex-col items-center justify-center py-10">
+                  <div className={`${ui.card} flex flex-col items-center justify-center py-14`}>
                     <Loader2 size={28} className="animate-spin text-journi-green mb-3" />
-                    <p className="text-sm text-muted-foreground">Parsing your document...</p>
+                    <p className="text-[14px] leading-6 text-muted-foreground">Parsing your document...</p>
                   </div>
                 ) : importResult ? (
-                  <div className="border border-border rounded-xl p-4 space-y-3">
+                  <div className={`${ui.card} p-4 space-y-3`}>
                     <div className="flex items-start gap-3">
                       <div className="p-2 bg-journi-green/10 rounded-lg shrink-0">
                         <FileText size={20} className="text-journi-green" />
                       </div>
                       <div className="min-w-0 flex-1">
-                        <p className="text-sm font-medium text-foreground truncate">{importFile.name}</p>
-                        <p className="text-xs text-muted-foreground mt-0.5">
-                          {importResult.sections.length} section{importResult.sections.length !== 1 ? "s" : ""} &middot;{" "}
+                        <p className="text-[14px] leading-6 font-semibold text-foreground truncate">{importFile.name}</p>
+                        <p className="text-[12px] leading-5 text-muted-foreground mt-0.5">
+                          {importResult.sections.length} section{importResult.sections.length !== 1 ? "s" : ""} &middot; {" "}
                           {importResult.totalWordCount.toLocaleString()} words
                         </p>
                       </div>
                       <button
                         onClick={clearImport}
-                        className="p-1.5 text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
+                        className="p-2 text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-colors"
                         aria-label="Remove file"
                       >
                         <Trash2 size={14} />
                       </button>
                     </div>
-                    <div className="flex items-center gap-1.5 text-xs text-journi-green">
+                    <div className="flex items-center gap-1.5 text-[12px] leading-5 font-medium text-journi-green">
                       <CheckCircle2 size={13} />
                       <span>Ready to import</span>
                     </div>
@@ -385,32 +376,32 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
             {step === 3 && (
               <motion.div
                 key="step3"
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 12 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.15 }}
-                className="space-y-3"
+                exit={{ opacity: 0, x: -12 }}
+                transition={{ duration: 0.12 }}
+                className={ui.stepBody}
               >
                 {collaborators.map((collab, idx) => (
-                  <div key={idx} className="flex items-center gap-2">
+                  <div key={idx} className={`${ui.card} p-3 flex items-center gap-2`}>
                     <input
                       type="text"
                       value={collab.name}
                       onChange={(e) => updateCollaboratorRow(idx, "name", e.target.value)}
                       placeholder="Name"
-                      className="flex-1 px-3 py-2 bg-muted border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-journi-green/50 focus:border-journi-green"
+                      className={`flex-1 ${ui.control}`}
                     />
                     <input
                       type="email"
                       value={collab.email}
                       onChange={(e) => updateCollaboratorRow(idx, "email", e.target.value)}
                       placeholder="Email"
-                      className="flex-1 px-3 py-2 bg-muted border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-journi-green/50 focus:border-journi-green"
+                      className={`flex-1 ${ui.control}`}
                     />
                     {collaborators.length > 1 && (
                       <button
                         onClick={() => removeCollaboratorRow(idx)}
-                        className="p-1.5 text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors shrink-0"
+                        className="h-11 w-11 inline-flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-accent rounded-xl transition-colors shrink-0"
                         aria-label="Remove"
                       >
                         <Trash2 size={14} />
@@ -422,7 +413,7 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
                 {collaborators.length < 5 && (
                   <button
                     onClick={addCollaboratorRow}
-                    className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-journi-green transition-colors"
+                    className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-journi-green transition-colors px-1 py-1"
                   >
                     <UserPlus size={14} />
                     Add another
@@ -434,12 +425,12 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-4 border-t border-border flex items-center justify-between">
+        <div className="px-7 py-4 border-t border-border/80 flex items-center justify-between">
           <div>
             {step > 1 && (
               <button
                 onClick={() => setStep((step - 1) as Step)}
-                className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className={ui.mutedButton}
               >
                 <ChevronLeft size={16} />
                 Back
@@ -448,31 +439,29 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
           </div>
 
           <div className="flex items-center gap-2">
-            {/* Skip button on steps 2 & 3 */}
             {step === 2 && (
               <button
                 onClick={() => setStep(3)}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors px-3 py-2"
+                className={ui.mutedButton}
               >
-                Skip — start from scratch
+                Skip - start from scratch
               </button>
             )}
             {step === 3 && (
               <button
                 onClick={handleFinish}
                 disabled={isCreating}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors px-3 py-2"
+                className={ui.mutedButton}
               >
                 Skip for now
               </button>
             )}
 
-            {/* Primary action */}
             {step === 1 && (
               <button
                 onClick={() => setStep(2)}
                 disabled={!canProceedStep1}
-                className="flex items-center gap-1.5 bg-journi-green text-journi-slate text-sm font-semibold px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-40 disabled:cursor-not-allowed"
+                className={ui.primaryButton}
               >
                 Next
                 <ChevronRight size={16} />
@@ -481,7 +470,7 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
             {step === 2 && (
               <button
                 onClick={() => setStep(3)}
-                className="flex items-center gap-1.5 bg-journi-green text-journi-slate text-sm font-semibold px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity"
+                className={ui.primaryButton}
               >
                 {importFile ? "Next" : "Next"}
                 <ChevronRight size={16} />
@@ -491,12 +480,12 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
               <button
                 onClick={handleFinish}
                 disabled={isCreating}
-                className="flex items-center gap-1.5 bg-journi-green text-journi-slate text-sm font-semibold px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-40"
+                className={ui.primaryButton}
               >
                 {isCreating ? (
                   <>
                     <Loader2 size={14} className="animate-spin" />
-                    Creating…
+                    Creating...
                   </>
                 ) : (
                   <>

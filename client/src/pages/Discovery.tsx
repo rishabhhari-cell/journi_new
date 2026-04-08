@@ -1,4 +1,4 @@
-﻿import { useMemo, useState } from 'react';
+﻿import { useEffect, useMemo, useState } from 'react';
 import { ExternalLink, FileUp, Search, SlidersHorizontal, X } from 'lucide-react';
 import { MeshGradient } from "@paper-design/shaders-react";
 import Navbar from '@/components/Navbar';
@@ -23,6 +23,7 @@ const SORT_OPTIONS: { value: SortBy; label: string }[] = [
   { value: 'acceptanceRate', label: 'Acceptance' },
   { value: 'name', label: 'Name' },
 ];
+const HERO_SHADER_COLORS = ["#FFFFFF", "#D7F0DD", "#BFE5C8", "#D6CFF5", "#E8E2F6"];
 
 export default function Discovery() {
   const {
@@ -45,10 +46,17 @@ export default function Discovery() {
 
   const [selectedJournal, setSelectedJournal] = useState<Journal | null>(null);
   const [showFilters, setShowFilters] = useState(false);
+  const [heroJournals, setHeroJournals] = useState<Journal[]>([]);
 
   const isIdle = !searchQuery.trim();
 
   const cards = useMemo(() => paginatedJournals, [paginatedJournals]);
+
+  useEffect(() => {
+    if (heroJournals.length === 0 && allJournals.length > 0) {
+      setHeroJournals(allJournals.slice(0, 40));
+    }
+  }, [allJournals, heroJournals.length]);
 
   const activeFilterCount = [
     filters.impactFactorMin !== undefined,
@@ -72,15 +80,15 @@ export default function Discovery() {
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <MeshGradient
             className="absolute inset-0 w-full h-full opacity-[38%]"
-            colors={["#FFFFFF", "#D7F0DD", "#BFE5C8", "#D6CFF5", "#E8E2F6"]}
+            colors={HERO_SHADER_COLORS}
             speed={0.2}
           />
         </div>
 
         {/* Scattered journal covers â€” behind everything */}
-        {allJournals.length > 0 && isIdle && (
+        {heroJournals.length > 0 && isIdle && (
           <JournalMarquee
-            journals={allJournals.slice(0, 40)}
+            journals={heroJournals}
             variant="hero"
           />
         )}
