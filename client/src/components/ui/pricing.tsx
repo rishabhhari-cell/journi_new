@@ -398,6 +398,7 @@ export default function PricingSection5({ onCheckout, checkoutLoading }: Pricing
             staggerFrom="first"
             reverse={true}
             containerClassName="justify-start"
+            wordLevelClassName="pb-[5px]"
             transition={{ type: "spring", stiffness: 250, damping: 40, delay: 0 }}
           >
             Choose the plan that's right for your research

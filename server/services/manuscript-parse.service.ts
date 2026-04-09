@@ -1,6 +1,6 @@
 import mammoth from "mammoth";
 import type { ParseDiagnostic, ParsedBlock, ParsedBoundingBox, ParsedFigure, ParsedTable, RawParsedDocument } from "../../shared/document-parse";
-import { parseDocumentWithLLM } from "./ollama.service";
+import { parseDocumentWithLLM } from "./llm.service";
 
 export interface ParseUploadInput {
   fileName: string;

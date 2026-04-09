@@ -4,7 +4,10 @@
       "Edit",
       "Bash(*)",
       "Read(//c/Users/risha/Journi/JourniMVP/**)",
-      "Bash(sed -i 's/  const onlineMembers = project\\\\.collaborators\\\\.filter\\(\\(c\\) => c\\\\.online\\);/  const onlineMembers: never[] = [];/' client/src/pages/Collaboration.tsx)"
+      "Bash(sed -i 's/  const onlineMembers = project\\\\.collaborators\\\\.filter\\(\\(c\\) => c\\\\.online\\);/  const onlineMembers: never[] = [];/' client/src/pages/Collaboration.tsx)",
+      "WebSearch",
+      "WebFetch(domain:docs.openalex.org)",
+      "WebFetch(domain:developers.openalex.org)"
     ]
   }
 }
