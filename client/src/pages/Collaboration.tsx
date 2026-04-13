@@ -96,13 +96,17 @@ function mapCommittedSection(section: {
   last_edited_by?: string | null;
   last_edited_at?: string | null;
 }): DocumentSection {
+  // last_edited_by can be a UUID, 'Imported', 'Format Check', or a user name
+  // UUIDs are 36 chars with hyphens (e.g., "550e8400-e29b-41d4-a716-446655440000")
+  const isUuid = section.last_edited_by && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(section.last_edited_by);
+
   return {
     id: section.id,
     title: section.title,
     content: section.content_html || '<p></p>',
     status: section.status,
     order: section.sort_order,
-    lastEditedBy: section.last_edited_by ?? undefined,
+    lastEditedBy: isUuid ? 'Unknown' : (section.last_edited_by ?? undefined),
     lastEditedAt: section.last_edited_at ? new Date(section.last_edited_at) : undefined,
   };
 }
@@ -532,11 +536,13 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   };
 
   const applyImportedResult = (result: ImportDocumentResult) => {
+    // This should never happen now due to fallback in document-io.ts, but handle gracefully
     if (!result.sections.length) {
-      toast.error('No content found in the file');
+      toast.error('No content found in the file. The file may be empty or corrupted.');
       return;
     }
 
+    // Always update title from import result
     if (result.title?.trim()) {
       updateTitle(normalizePlainImportedText(result.title, { trim: true }));
     }
@@ -555,6 +561,32 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     }
 
     const existingSections = [...manuscript.sections];
+    const isManuscriptCurrentlyEmpty = existingSections.every((s) => !s.content || s.content.trim() === '<p></p>' || s.content.trim() === '');
+
+    // If manuscript is empty, directly replace with imported sections (preserves structure)
+    if (isManuscriptCurrentlyEmpty) {
+      const importedSections: DocumentSection[] = result.sections.map((s, i) => ({
+        id: `imported-${Date.now()}-${i}`,
+        title: normalizePlainImportedText(s.title || `Section ${i + 1}`, { trim: true }) || `Section ${i + 1}`,
+        content: normalizeImportedHtml(s.content || '<p></p>'),
+        status: 'draft' as const,
+        order: i,
+        lastEditedBy: 'Imported',
+        lastEditedAt: new Date(),
+      }));
+      replaceSections(importedSections);
+      toast.success(`Imported ${result.sections.length} section(s) from ${result.fileName}`);
+
+      if (result.citations.length > 0) {
+        toast.success(`${result.citations.length} citation(s) imported`);
+      }
+
+      const warnings = result.diagnostics.filter((d) => d.level !== 'info');
+      if (warnings.length > 0) toast.warning(warnings[0].message);
+      return;
+    }
+
+    // Manuscript has content - do section matching
     let matchedCount = 0;
     let addedCount = 0;
     const unmatchedImported: Partial<DocumentSection>[] = [];
@@ -928,17 +960,29 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     setShowDocSwitcher(false);
 
     if (result.action === 'import' && result.file) {
-      // Create the manuscript first, then import the file into it
-      createManuscript(result.title, result.type);
-      // Trigger file import via a synthetic event
-      const dt = new DataTransfer();
-      dt.items.add(result.file);
-      const fakeEvent = { target: { files: dt.files } } as unknown as React.ChangeEvent<HTMLInputElement>;
-      await handleImportFile(fakeEvent);
-      toast.success('Document imported!');
+      // Parse the file first, then create the manuscript and apply content.
+      // This avoids a race condition where createManuscript fires an async backend
+      // call in the background and the import session ends up using a stale optimistic ID.
+      setIsImporting(true);
+      try {
+        const ext = result.file.name.split('.').pop()?.toLowerCase();
+        let importResult: ImportDocumentResult;
+        if (ext === 'docx') importResult = await importDocx(result.file);
+        else if (ext === 'pdf') importResult = await importPdf(result.file);
+        else importResult = await importImage(result.file);
+
+        const derivedTitle = importResult.title || result.title;
+        createManuscript(derivedTitle, result.type);
+        applyImportedResult(importResult);
+      } catch (err) {
+        console.error('Import failed:', err);
+        toast.error('Failed to import file. Please try a different file.');
+      } finally {
+        setIsImporting(false);
+      }
     } else {
       createManuscript(result.title, result.type);
-      toast.success('New document created â€” start writing!');
+      toast.success('New document created \u2014 start writing!');
     }
 
     if (result.journal) {

@@ -42,7 +42,27 @@ export interface ImportDocumentResult {
 }
 
 function sanitizeFilename(name: string): string {
-  return name.replace(/[^a-zA-Z0-9\s-_]/g, '').trim() || 'manuscript';
+  if (!name || typeof name !== 'string') {
+    return `Imported Manuscript - ${new Date().toISOString().split('T')[0]}`;
+  }
+
+  // Remove file extension first
+  const withoutExt = name.replace(/\.[^.]+$/, '');
+
+  // Strip special characters but keep spaces, dashes, underscores
+  const sanitized = withoutExt.replace(/[^a-zA-Z0-9\s-_]/g, '').trim();
+
+  // If sanitization results in empty string, use date-based fallback
+  if (!sanitized || sanitized.length < 2) {
+    return `Imported Manuscript - ${new Date().toISOString().split('T')[0]}`;
+  }
+
+  // Truncate very long filenames
+  if (sanitized.length > 100) {
+    return sanitized.slice(0, 97) + '...';
+  }
+
+  return sanitized;
 }
 
 function deriveImportStatus(
@@ -594,11 +614,29 @@ async function importFile(file: File): Promise<ImportDocumentResult> {
   const parsed = await parseWithWorker(raw);
   const diagnostics = [...parsed.diagnostics];
 
-  const title = normalizePlainImportedText(parsed.fileTitle, { trim: true });
-  const sections = parsed.sections.map((section) => ({
+  // Use sanitized filename as title, with date-based fallback for empty names
+  const rawTitle = parsed.fileTitle || file.name || `Imported Manuscript - ${new Date().toISOString().split('T')[0]}`;
+  const title = sanitizeFilename(rawTitle);
+
+  // Ensure we always have at least one section
+  let sections = parsed.sections.map((section) => ({
     title: normalizePlainImportedText(section.title, { trim: true }),
     content: normalizeImportedHtml(section.content),
   }));
+
+  // If no sections were parsed, create a default section with all available content
+  if (sections.length === 0) {
+    const fallbackContent = raw.html || (raw.text ? `<p>${normalizePlainImportedText(raw.text)}</p>` : '<p></p>');
+    sections = [{
+      title: 'Content',
+      content: fallbackContent,
+    }];
+    diagnostics.push({
+      level: 'info',
+      code: 'NO_SECTIONS_PARSED',
+      message: 'No section headings were detected. All content has been placed in a single "Content" section.',
+    });
+  }
 
   const citations: CitationFormData[] = parsed.citations.map((citation) => ({
     authors: citation.authors.map((author) => normalizePlainImportedText(author, { trim: true })),
@@ -632,9 +670,12 @@ async function importFile(file: File): Promise<ImportDocumentResult> {
   }
 
   const statusInfo = deriveImportStatus(raw, diagnostics, Boolean(parsed.reviewRequired));
+  // Pass the final `sections` (which includes the fallback "Content" section if none were parsed)
+  // rather than `parsed.sections` which may be empty before the fallback is applied.
+  const parsedWithFinalSections = { ...parsed, sections };
   const items =
     raw.format === 'docx' || (raw.llmParsed && raw.llmParsed.sections.length > 0)
-      ? buildDocxImportItems(raw, parsed)
+      ? buildDocxImportItems(raw, parsedWithFinalSections)
       : raw.format === 'pdf'
         ? buildPdfImportItems(parsed)
         : buildImageImportItems(raw);

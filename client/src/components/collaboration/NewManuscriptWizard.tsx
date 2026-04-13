@@ -117,7 +117,9 @@ export default function NewManuscriptWizard({ open, onClose, onComplete, manuscr
     const f = e.target.files?.[0];
     if (!f) return;
     setFile(f);
-    if (!title) setTitle(f.name.replace(/\.(docx|pdf)$/i, ""));
+    // Always update title from filename for imports, with fallback to sanitized name
+    const baseName = f.name.replace(/\.(docx|pdf|png|jpg|jpeg|gif|webp)$/i, "").trim();
+    setTitle(baseName || `Imported Manuscript - ${new Date().toISOString().split('T')[0]}`);
     setAction("import");
     setStep(2);
   }
@@ -148,7 +150,19 @@ export default function NewManuscriptWizard({ open, onClose, onComplete, manuscr
   }
 
   function finish(journal: SuggestedJournal | null) {
-    const derivedTitle = title.trim() || (file ? file.name.replace(/\.(docx|pdf)$/i, "") : "Untitled Manuscript");
+    // Derive title with proper fallbacks
+    let derivedTitle = title.trim();
+    if (!derivedTitle && file) {
+      derivedTitle = file.name.replace(/\.(docx|pdf|png|jpg|jpeg|gif|webp)$/i, "").trim();
+    }
+    if (!derivedTitle || derivedTitle.length < 2) {
+      derivedTitle = `Imported Manuscript - ${new Date().toISOString().split('T')[0]}`;
+    }
+    // Truncate very long titles
+    if (derivedTitle.length > 150) {
+      derivedTitle = derivedTitle.slice(0, 147) + "...";
+    }
+
     onComplete({
       action: action!,
       file: file ?? undefined,
