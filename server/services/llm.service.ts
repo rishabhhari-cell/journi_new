@@ -13,7 +13,7 @@ export interface OllamaParsedDocument {
 // Ollama configuration - prefers Railway internal URL in production
 const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL
   ?? (process.env.NODE_ENV === 'production' ? 'http://ollama.railway.internal:11434' : 'http://127.0.0.1:11434');
-const OLLAMA_MODEL = process.env.OLLAMA_MODEL ?? "qwen3:4b";
+const OLLAMA_MODEL = process.env.OLLAMA_MODEL ?? "qwen2.5:3b";
 
 interface LLMResponse {
   sections: Array<{ title: string; content: string }>;
