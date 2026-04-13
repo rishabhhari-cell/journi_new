@@ -86,7 +86,33 @@ function parseJsonResponse(raw: string): LLMResponse {
   };
 }
 
+// Polls /api/tags until the target model appears or the timeout (ms) is exceeded.
+// This handles the first-boot case where the model is still being pulled.
+async function waitForOllamaModel(timeoutMs = 600_000): Promise<void> {
+  const deadline = Date.now() + timeoutMs;
+  while (Date.now() < deadline) {
+    try {
+      const res = await fetch(`${OLLAMA_BASE_URL}/api/tags`, {
+        signal: AbortSignal.timeout(5_000),
+      });
+      if (res.ok) {
+        const data = await res.json() as { models?: Array<{ name: string }> };
+        const loaded = (data.models ?? []).some((m) => m.name.startsWith(OLLAMA_MODEL.split(":")[0]));
+        if (loaded) return;
+      }
+    } catch {
+      // Ollama not yet reachable — keep polling
+    }
+    await new Promise((resolve) => setTimeout(resolve, 5_000));
+  }
+  throw new Error(`Ollama model ${OLLAMA_MODEL} was not ready within ${timeoutMs / 1000}s`);
+}
+
 async function invokeOllama(textChunk: string): Promise<LLMResponse> {
+  // Wait for the model to be loaded before attempting inference.
+  // On first deploy the model is pulled at container startup — this blocks until ready.
+  await waitForOllamaModel(600_000);
+
   const res = await fetch(`${OLLAMA_BASE_URL}/api/generate`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -97,7 +123,7 @@ async function invokeOllama(textChunk: string): Promise<LLMResponse> {
       stream: false,
       options: { temperature: 0.0 },
     }),
-    signal: AbortSignal.timeout(120_000), // 2 min max per chunk on CPU
+    signal: AbortSignal.timeout(120_000),
   });
 
   if (!res.ok) {
