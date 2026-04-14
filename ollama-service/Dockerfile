@@ -12,6 +12,7 @@ RUN chmod +x /entrypoint.sh
 
 # Bind on all interfaces (IPv4 + IPv6) — required for Railway's internal networking
 ENV OLLAMA_HOST=::
+ENV PORT=11434
 
 EXPOSE 11434
 

@@ -88,7 +88,7 @@ function parseJsonResponse(raw: string): LLMResponse {
 
 // Polls /api/tags until the target model appears or the timeout (ms) is exceeded.
 // This handles the first-boot case where the model is still being pulled.
-async function waitForOllamaModel(timeoutMs = 600_000): Promise<void> {
+async function waitForOllamaModel(timeoutMs = 15_000): Promise<void> {
   const deadline = Date.now() + timeoutMs;
   while (Date.now() < deadline) {
     try {
@@ -105,13 +105,13 @@ async function waitForOllamaModel(timeoutMs = 600_000): Promise<void> {
     }
     await new Promise((resolve) => setTimeout(resolve, 5_000));
   }
-  throw new Error(`Ollama model ${OLLAMA_MODEL} was not ready within ${timeoutMs / 1000}s`);
+  throw new Error(`Ollama model ${OLLAMA_MODEL} was not ready within ${timeoutMs / 1000}s — falling back to Anthropic`);
 }
 
 async function invokeOllama(textChunk: string): Promise<LLMResponse> {
   // Wait for the model to be loaded before attempting inference.
   // On first deploy the model is pulled at container startup — this blocks until ready.
-  await waitForOllamaModel(600_000);
+  await waitForOllamaModel(15_000);
 
   const res = await fetch(`${OLLAMA_BASE_URL}/api/generate`, {
     method: "POST",

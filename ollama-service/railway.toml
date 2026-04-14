@@ -7,3 +7,6 @@ healthcheckPath = "/api/tags"
 healthcheckTimeout = 300
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3
+
+[[services]]
+internalPort = 11434
