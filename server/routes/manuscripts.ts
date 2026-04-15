@@ -254,6 +254,30 @@ manuscriptsRouter.post("/import-sessions/:sessionId/commit", async (req, res, ne
     });
 
     res.json({ data: committed });
+
+    // Fire-and-forget: embed the abstract for journal recommendation.
+    // Runs after response is sent — never blocks the commit.
+    const manuscriptId = existing.manuscriptId;
+    if (manuscriptId) {
+      supabaseAdmin
+        .from("manuscript_sections")
+        .select("content_html")
+        .eq("manuscript_id", manuscriptId)
+        .ilike("title", "abstract")
+        .limit(1)
+        .then(async ({ data: sections }) => {
+          const html = sections?.[0]?.content_html;
+          if (!html) return;
+          const { embedSingle } = await import("../services/embed.service");
+          const embedding = await embedSingle(html.replace(/<[^>]+>/g, " ").trim());
+          if (!embedding) return;
+          await supabaseAdmin
+            .from("manuscripts")
+            .update({ abstract_embedding: embedding })
+            .eq("id", manuscriptId);
+        })
+        .catch(() => {/* non-critical */});
+    }
   } catch (error) {
     next(error);
   }
@@ -415,6 +439,26 @@ manuscriptsRouter.patch("/:manuscriptId/sections/:sectionId", async (req, res, n
     });
 
     res.json({ data });
+
+    // Re-embed abstract if that section was just edited — fire-and-forget.
+    if (
+      data.title?.toLowerCase() === "abstract" &&
+      input.contentHtml
+    ) {
+      const plainText = input.contentHtml.replace(/<[^>]+>/g, " ").trim();
+      if (plainText) {
+        import("../services/embed.service")
+          .then(({ embedSingle }) => embedSingle(plainText))
+          .then(async (embedding) => {
+            if (!embedding) return;
+            await supabaseAdmin
+              .from("manuscripts")
+              .update({ abstract_embedding: embedding })
+              .eq("id", manuscriptId);
+          })
+          .catch(() => {/* non-critical */});
+      }
+    }
   } catch (error) {
     next(error);
   }
