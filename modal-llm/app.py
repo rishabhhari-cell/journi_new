@@ -23,9 +23,8 @@ volume = modal.Volume.from_name("journi-model-weights", create_if_missing=True)
 image = (
     modal.Image.debian_slim(python_version="3.11")
     .pip_install(
-        "vllm==0.11.1",
-        "transformers==4.56.1",
-        "huggingface_hub==1.10.2",
+        "vllm==0.19.0",
+        "huggingface_hub[hf_transfer]",
     )
     .env({"HF_HUB_ENABLE_HF_TRANSFER": "1"})
 )
