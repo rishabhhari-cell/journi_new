@@ -634,4 +634,52 @@ manuscriptsRouter.get("/:manuscriptId/recommend-journals", requireProAccess, asy
   }
 });
 
+manuscriptsRouter.post("/:manuscriptId/reformat", requireProAccess, async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    const { manuscriptId } = req.params;
+    const { journalId } = req.body as { journalId?: string };
+
+    if (!journalId) {
+      throw new HttpError(400, "journalId is required", "JOURNAL_ID_REQUIRED");
+    }
+
+    await assertManuscriptAccess(authReq.auth.userId, manuscriptId, false);
+
+    // Fetch sections
+    const { data: sectionsData, error: sectionsError } = await supabaseAdmin
+      .from("manuscript_sections")
+      .select("id, title, content_html, position")
+      .eq("manuscript_id", manuscriptId)
+      .order("position");
+
+    if (sectionsError) throw new HttpError(500, sectionsError.message, "SECTIONS_FETCH_FAILED");
+
+    const sections = (sectionsData ?? []).map((s: { id: string; title: string; content_html: string; position: number }) => ({
+      id: s.id,
+      title: s.title,
+      contentHtml: s.content_html,
+    }));
+
+    // Fetch journal guidelines
+    const journalData = await getJournalById(journalId);
+    if (!journalData) throw new HttpError(404, "Journal not found", "JOURNAL_NOT_FOUND");
+
+    const guidelines = toJournalGuidelinesDto(journalData);
+
+    // Run deterministic + LLM in parallel
+    const { buildDeterministicChanges, buildLlmSuggestions } = await import(
+      "../services/reformat.service"
+    );
+    const [deterministicChanges, llmSuggestions] = await Promise.all([
+      Promise.resolve(buildDeterministicChanges(sections, guidelines, manuscriptId)),
+      buildLlmSuggestions(sections, guidelines),
+    ]);
+
+    res.json({ deterministicChanges, llmSuggestions });
+  } catch (err) {
+    next(err);
+  }
+});
+
 
