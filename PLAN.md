@@ -1,384 +1,269 @@
-# Journi Backend Migration Plan — Runpod Private LLM Stack
+# Journi LLM Plan — Deterministic-First, Privacy by Default
 
-## Overview
+## The Privacy Problem
 
-Migrate Journi's backend from Railway (Ollama + Supabase-as-DB) to a fully private Runpod deployment. The end state is a self-contained stack where all manuscript data, LLM inference, object storage, and async processing live inside Runpod-controlled infrastructure. Supabase stays for authentication only. The migration is broken into five phases that can be executed sequentially without breaking the running application at each phase boundary.
+The current code sends **verbatim manuscript text** to external APIs. Looking at `llm.service.ts` line 30–55, the prompt literally says "Copy content VERBATIM from the source" and passes raw 1000-word chunks of the full document text.
+
+For Journi's users — academic researchers — this is the most sensitive data at the worst possible moment:
+- Pre-publication findings that have not yet been peer-reviewed
+- Novel methodologies that could be scooped
+- Clinical trial data, patient-adjacent information
+- Government or industry-funded research with IP obligations
+- Institutional policies that explicitly prohibit sending unpublished work to third-party AI
+
+**"No training on API data" policies do not resolve this.** The data still transits Google's and Anthropic's infrastructure, is subject to their data retention windows (days to weeks), is accessible to their staff under certain conditions, and is subject to subpoenas in their jurisdictions. For many researchers and institutions, this is a non-starter regardless of policy language.
+
+The right architectural principle for Journi: **manuscript text never leaves your infrastructure by default.** External APIs are used only for tasks where the data sent is non-sensitive.
 
 ---
 
-## Architecture — Target State
+## What Data Each Task Actually Sends
+
+| Task | Data sent to external API | Sensitivity |
+|---|---|---|
+| Section extraction | Full verbatim manuscript text (1000-word chunks) | **Critical** — entire unpublished paper |
+| Citation rescue | Raw reference lines from the paper | **Medium** — bibliographic metadata only, not novel content |
+| Guideline normalization | Journal author-instructions page text (public web content) | **None** — public data |
+| Journal recommendation | Abstract + keywords only | **Medium** — summarises findings, not full text |
+| Cover letter drafting | Title + abstract + journal name | **Medium** — summarises findings |
+| Section semantic validation | Full section content | **High** — unpublished prose |
+
+This analysis changes the architecture significantly:
+- **Section extraction** must stay on-device/on-server — no exceptions
+- **Guideline normalization** is fine with any API — it's public data
+- **Journal recommendation and cover letters** — abstract/title only, acceptable with user consent
+- **Citation rescue** — reference lines only, acceptable
+
+---
+
+## Revised Architecture
 
 ```
 Browser
-  │  HTTPS
+  │
   ▼
-journi-api        (Runpod CPU pod — public ingress)
-  │  private networking
-  ├──► journi-db      (Runpod Postgres pod — private)
-  ├──► journi-objects (Runpod MinIO pod — private)
-  ├──► journi-worker  (Runpod CPU pod — private, job consumer)
-  │       │
-  │       └──► journi-llm  (Runpod GPU pod L4 24GB — private)
-  └──► Supabase Auth (JWT verification only — external)
+Express API (Railway)
+  │
+  ├── Deterministic parser (always runs first)     ← manuscript text never leaves
+  │     shared/document-parse.ts
+  │     Mammoth (DOCX) + pdfjs (PDF)
+  │
+  ├── Local fallback LLM (section extraction only) ← manuscript text stays on-server
+  │     Ollama on the same Railway service
+  │     or: llama.cpp sidecar (smaller, cheaper)
+  │
+  ├── Gemini 2.0 Flash (non-sensitive tasks only)  ← no manuscript text
+  │     - Guideline normalization (public journal pages)
+  │     - Journal recommendation (abstract only, user opt-in)
+  │     - Cover letter drafting (abstract + title only, user opt-in)
+  │
+  └── pgvector (Supabase)                          ← journal similarity search
+        journals table already exists
 ```
 
-**Runpod pod specs:**
-- `journi-api`: 4 vCPU / 8 GB RAM, CPU-only, public endpoint enabled
-- `journi-worker`: 4 vCPU / 8 GB RAM, CPU-only, private
-- `journi-db`: 4 vCPU / 16 GB RAM, CPU-only, private (Postgres 16)
-- `journi-objects`: 2 vCPU / 8 GB RAM, CPU-only, private (MinIO)
-- `journi-llm`: 1× NVIDIA L4 24 GB, persistent pod (see §GPU Strategy), private
-- `journi-train` (ephemeral): 1× A40 48 GB, launched only for fine-tuning runs
-
-**Shared storage:** Runpod Network Volume mounted at `/workspace` across journi-llm and journi-train.
+**Key constraint**: `parseDocumentWithLLM()` — the function that sends manuscript text — must only ever call a local model. Never Gemini, never Anthropic.
 
 ---
 
-## Phase 1 — Provision Runpod Infrastructure
+## Core Parsing Strategy
 
-**Goal:** All pods running, networked, and reachable from each other. No app code changes.
+The codebase already has a substantial deterministic parsing engine in `shared/document-parse.ts`:
+- `parseSectionsFromHtml()` — parses `<h1>`/`<h2>`/`<h3>` + bold-only headings from Mammoth DOCX output
+- `parseSectionsFromText()` / `buildSectionsFromBlocks()` — heading detection from plain text / PDF blocks
+- `parseCitationsFromReferences()` — regex-based citation extraction (DOI, URL, year, author, title)
+- `mergeIntoCanonicalOrder()` — maps headings to canonical sections via `CANONICAL_ALIASES`
 
-### Tasks
+**The current logic is backwards.** `parseRawDocument()` line 611: if `raw.llmParsed` has sections, it overrides the deterministic result entirely — the LLM is called unconditionally on every document even when deterministic parsing would have worked perfectly.
 
-1. Create a Runpod Network Volume (`/workspace`, ≥200 GB).
-2. Launch `journi-db` pod:
-   - Use `postgres:16` Docker image.
-   - Expose port 5432 on private networking only.
-   - Set `POSTGRES_PASSWORD` via Runpod secret.
-   - Run all 5 SQL migrations (see §Schema Migration below).
-3. Launch `journi-objects` pod:
-   - Use `minio/minio` Docker image.
-   - Expose port 9000 (S3 API) on private networking only.
-   - Create bucket `journi-manuscripts` with server-side encryption enabled.
-   - Store `MINIO_ROOT_USER` / `MINIO_ROOT_PASSWORD` as Runpod secrets.
-4. Launch `journi-llm` pod:
-   - Use `vllm/vllm-openai:latest` — **pin the exact image tag after verifying LoRA works** (see §Pre-flight Check).
-   - Mount `/workspace` network volume.
-   - Start command:
-     ```bash
-     vllm serve Qwen/Qwen3-4B \
-       --host 0.0.0.0 \
-       --port 8000 \
-       --gpu-memory-utilization 0.85 \
-       --max-model-len 16384 \
-       --dtype auto \
-       --enable-lora \
-       --max-loras 1
-     ```
-   - No LoRA module at first boot — add `--lora-modules` after the first adapter is trained.
-   - Model cache path: `/workspace/models/Qwen3-4B`.
-5. Verify internal DNS resolution between pods using Runpod's `.runpod.internal` naming.
+**Fix**: run deterministic first, call the local LLM only when confidence is genuinely low.
 
-### Schema Migration
+Expected fallback rates:
+- DOCX with heading styles → deterministic handles ~95% → local LLM needed ~5%
+- DOCX with bold-only headings → deterministic handles ~80% → local LLM needed ~20%
+- PDF with text layer → deterministic handles ~60% → local LLM needed ~40%
+- PDF scanned / no text layer → `manual_only` (LLM cannot help regardless)
 
-Translate all 5 existing SQL migration files for plain Postgres (no Supabase extensions, no `auth` schema):
-
-**Key changes required across all migrations:**
-- Replace every `references auth.users(id)` with `references users(id)`.
-- Add a `users` table as the first migration:
-  ```sql
-  CREATE TABLE users (
-    id          uuid PRIMARY KEY,
-    email       text NOT NULL UNIQUE,
-    created_at  timestamptz NOT NULL DEFAULT now()
-  );
-  ```
-  This table is populated via a Supabase Auth webhook (see §Auth Sync below).
-- Remove all `CREATE POLICY` / `ALTER TABLE ... ENABLE ROW LEVEL SECURITY` statements — authorization is handled entirely in application code via `server/lib/access.ts`.
-- Remove all `CREATE OR REPLACE FUNCTION` PL/pgSQL helpers (`is_org_member`, etc.) — these are already re-implemented in TypeScript in `server/lib/access.ts`.
-- Remove all `CREATE EXTENSION` calls that are Supabase-specific (e.g., `pg_graphql`, `pg_stat_statements` is fine to keep).
-- Keep all indexes, constraints, and `CREATE TRIGGER` statements that are not auth-dependent.
-
-**File mapping:**
-- `server/sql/001_initial_schema.sql` → `server/sql/runpod/001_users_and_core.sql`
-- `server/sql/002_institution_domains.sql` → `server/sql/runpod/002_institution_domains.sql`
-- `server/sql/003_project_tasks_collaborators.sql` → `server/sql/runpod/003_project_tasks.sql`
-- `server/sql/004_billing_and_submissions.sql` → `server/sql/runpod/004_billing_and_submissions.sql`
-- `server/sql/005_import_sessions.sql` → `server/sql/runpod/005_import_sessions.sql`
-
-### Auth Sync
-
-To keep the `users` table in sync with Supabase Auth:
-- In Supabase Dashboard → Auth → Webhooks: add a webhook on `user.created` and `user.deleted` events pointing to a new route on journi-api: `POST /internal/auth-sync`.
-- `POST /internal/auth-sync` verifies a shared secret header (`X-Auth-Sync-Secret`) and upserts/deletes from the `users` table.
-- This route is the only way new user UUIDs enter the Runpod Postgres.
+Effective local LLM call rate for a typical manuscript mix (60% DOCX / 40% PDF): **~20% of uploads**.
 
 ---
 
-## Phase 2 — Wire API to Runpod Postgres
+## Model Choice for Local Fallback
 
-**Goal:** journi-api reads/writes from Runpod Postgres instead of Supabase DB. Supabase is used only for JWT verification.
+The local model only needs to do one thing: given unstructured text, return `{ sections: [...], citations: [...] }` JSON. This is a structured extraction task, not a reasoning or generation task.
 
-### New env vars (add to `server/config/env.ts`)
+**Recommendation: [Qwen2.5:3b](https://ollama.com/library/qwen2.5)** (already in use) via Ollama on the same Railway service.
 
-```
-RUNPOD_DB_URL         postgres://user:pass@journi-db.runpod.internal:5432/journi
-VLLM_BASE_URL         http://journi-llm.runpod.internal:8000
-MINIO_ENDPOINT        journi-objects.runpod.internal:9000
-MINIO_ACCESS_KEY      ...
-MINIO_SECRET_KEY      ...
-MINIO_BUCKET          journi-manuscripts
-AUTH_SYNC_SECRET      ...   (shared secret for /internal/auth-sync webhook)
-```
+- 3B parameters, ~2GB VRAM / ~3GB RAM in 4-bit quantisation
+- Fits on a Railway service with 4–8GB RAM (CPU inference, no GPU required)
+- Fast enough for 1000-word chunks: ~5–15s on CPU at this size
+- Already wired in `llm.service.ts` — minimal code change
 
-Remove from `server/config/env.ts` (after migration):
-```
-OLLAMA_BASE_URL
-OLLAMA_MODEL
-ANTHROPIC_API_KEY
-```
+Alternative if Railway RAM is constrained: **Qwen2.5:1.5b** (~1.5GB) — slightly lower quality but usable for structured extraction.
 
-### New files
-
-**`server/lib/db.ts`** — Postgres connection pool using the `pg` package (already in `package.json`):
-```typescript
-import { Pool } from "pg";
-import { env } from "../config/env";
-
-export const db = new Pool({ connectionString: env.RUNPOD_DB_URL, max: 20 });
-```
-
-**`server/lib/object-storage.ts`** — MinIO S3-compatible client:
-```typescript
-import * as Minio from "minio";
-// initialise client from env vars
-// export: uploadFile(key, buffer, contentType), getSignedUrl(key), deleteFile(key)
-```
-
-**`server/repositories/`** — One file per domain, replacing all `supabaseAdmin.from(...)` calls:
-- `organizations.repository.ts`
-- `projects.repository.ts`
-- `manuscripts.repository.ts`
-- `citations.repository.ts`
-- `submissions.repository.ts`
-- `import-sessions.repository.ts`
-- `journals.repository.ts`
-
-Each repository exports typed async functions (e.g., `getManuscriptById(id: string, userId: string)`). Use parameterized queries only — no string interpolation.
-
-### Auth middleware update
-
-`server/middleware/auth.ts` — `requireAuth` currently calls `supabaseAdmin.auth.getUser(token)`. This call stays on Supabase (JWT verification is a Supabase Auth concern). No change needed here.
-
-### Route rewiring
-
-Replace all `supabaseAdmin.from(...)` calls in every route file with repository calls. Work route-by-route:
-
-1. `server/routes/manuscripts.ts` — highest priority (core feature)
-2. `server/routes/projects.ts`
-3. `server/routes/organizations.ts`
-4. `server/routes/citations.ts`
-5. `server/routes/submissions.ts`
-6. `server/routes/journals.ts`
-7. `server/routes/comments.ts`
-8. `server/routes/auth.ts` — last; profile creation on signup must write to both Supabase Auth and Runpod Postgres `users` table
-
-### Data migration (existing production data)
-
-Run once during cutover window:
-1. Export from Supabase: use `supabase db dump` or `pg_dump` on the Supabase Postgres.
-2. Strip all Supabase-specific objects (policies, `auth` schema references, extensions).
-3. Import into Runpod Postgres via `psql`.
-4. Backfill the `users` table from Supabase's `auth.users` export.
-5. Validate row counts match across all tables.
+**What changes**: instead of Ollama being a separate Railway service (current setup), embed it as a sidecar in the main API service. This eliminates the internal network hop, the separate Dockerfile, and the startup race condition that the current `waitForOllamaModel()` works around.
 
 ---
 
-## Phase 3 — Replace LLM Service with vLLM
+## Cost Model
 
-**Goal:** `server/services/llm.service.ts` points to journi-llm (vLLM) instead of Ollama/Anthropic.
+| Component | Cost |
+|---|---|
+| Ollama sidecar (CPU inference, same Railway dyno) | $0 marginal — included in API service cost |
+| Gemini 2.0 Flash (guideline normalization, ~700K input tokens/month) | ~$0.05/month |
+| Gemini 2.0 Flash (journal recommendation, abstract only, 500/day) | ~$1.50/month |
+| Claude Haiku 3.5 (cover letters, ~1.8M input tokens/month) | ~$1.50/month |
+| **Total external API cost** | **~$3–5/month** |
 
-### Pre-flight Check (do this before writing any code)
+The vast majority of work (section extraction, citation rescue, format checking) never touches a paid API. External APIs are used only for tasks where the input is non-sensitive metadata.
 
-1. SSH into journi-llm pod.
-2. Start vLLM with `--enable-lora`.
-3. Create a trivial LoRA adapter (rank 1, random weights) using PEFT.
-4. Load it via the vLLM `/v1/completions` endpoint with `lora_request`.
-5. Confirm a successful response. If this fails, the vLLM version needs updating before proceeding.
+---
 
-### Changes to `server/services/llm.service.ts`
+## Implementation Plan
 
-**Replace `invokeOllama` with `invokeVLLM`:**
+### Phase 1 — Fix the override logic; make deterministic the winner [1 day]
+
+**File: `shared/document-parse.ts`** line 611
+
+Change from LLM-always-wins to deterministic-wins-when-capable:
 
 ```typescript
-const VLLM_BASE_URL = process.env.VLLM_BASE_URL ?? "http://localhost:8000";
-const VLLM_MODEL = process.env.VLLM_MODEL ?? "Qwen/Qwen3-4B";
+// Current (bad): LLM always overrides deterministic result
+if (raw.llmParsed && raw.llmParsed.sections.length > 0) {
+  baseSections = raw.llmParsed.sections.map(...)
+}
 
-async function invokeVLLM(textChunk: string): Promise<LLMResponse> {
-  await waitForVLLM();
+// Fixed: LLM only fills in when deterministic produced nothing useful
+const deterministicProducedSections = baseSections.length >= 2 &&
+  !baseSections.every(s => s.title === "Content");
 
-  const res = await fetch(`${VLLM_BASE_URL}/v1/chat/completions`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      model: VLLM_MODEL,
-      messages: [
-        { role: "system", content: "Return only valid JSON matching the schema. /no_think" },
-        { role: "user", content: buildPrompt(textChunk) },
-      ],
-      temperature: 0.0,
-      max_tokens: 4096,
-    }),
-    signal: AbortSignal.timeout(120_000),
-  });
-
-  if (!res.ok) throw new Error(`vLLM returned ${res.status} ${res.statusText}`);
-  const data = await res.json();
-  return parseJsonResponse(data.choices[0].message.content);
+if (!deterministicProducedSections && raw.llmParsed && raw.llmParsed.sections.length > 0) {
+  baseSections = raw.llmParsed.sections.map((sec) => ({
+    title: sec.title,
+    content: ensureParagraph(sec.content),
+  }));
 }
 ```
 
-**Critical: disable thinking mode.** Qwen3-4B defaults to prepending `<think>...</think>` blocks. The `/no_think` token in the system prompt disables this. Without it, `JSON.parse()` will fail on every response. Alternatively, add `chat_template_kwargs: { enable_thinking: false }` to the vLLM request body if the model version supports it.
+Same fix for citations (line 648): use `parseCitationsFromReferences()` first; fall back to `raw.llmParsed.citations` only if regex found nothing.
 
-**Replace `waitForOllamaModel` with `waitForVLLM`:**
+**File: `server/services/manuscript-parse.service.ts`**
 
+Gate the `parseDocumentWithLLM()` call behind a confidence check:
+
+For DOCX:
 ```typescript
-async function waitForVLLM(timeoutMs = 30_000): Promise<void> {
-  const deadline = Date.now() + timeoutMs;
-  while (Date.now() < deadline) {
-    try {
-      const res = await fetch(`${VLLM_BASE_URL}/health`, {
-        signal: AbortSignal.timeout(5_000),
-      });
-      if (res.ok) return;
-    } catch { /* not ready yet */ }
-    await new Promise((r) => setTimeout(r, 3_000));
-  }
-  throw new Error(`vLLM not ready within ${timeoutMs / 1000}s`);
+const headingCount = (result.value.match(/<h[1-3][^>]*>/gi) || []).length;
+const boldHeadingCount = (result.value.match(/<p><strong>[A-Z][^<]{2,60}<\/strong><\/p>/gi) || []).length;
+const deterministicLooksGood = (headingCount + boldHeadingCount) >= 3;
+
+let llmParsed;
+if (!deterministicLooksGood) {
+  try {
+    const textResult = await mammoth.extractRawText({ buffer: input.buffer });
+    if (textResult.value.trim().length > 0) {
+      llmParsed = await parseDocumentWithLLM(textResult.value);
+      diagnostics.push({ level: "info", code: "LLM_FALLBACK_USED",
+        message: "Heading structure unclear; local AI-assisted parsing used." });
+    }
+  } catch (err) { /* add LLM_PARSE_FAILED diagnostic, continue */ }
 }
 ```
 
-**Remove Anthropic fallback entirely** — delete `invokeAnthropic` and the fallback branch in `invokeLLM`. Replace the top-level error with a structured response that sets `reviewRequired: true` and returns a parse result with empty sections/citations rather than throwing. This lets the import session flow continue with a "manual review required" state rather than a hard failure.
-
-**Updated `parseJsonResponse`** — add stripping of any stray `<think>` blocks as a safety net:
-
-```typescript
-function parseJsonResponse(raw: string): LLMResponse {
-  let text = raw.trim();
-  text = text.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-  text = text.replace(/^```json\s*/m, "").replace(/^```\s*/m, "").replace(/```$/m, "").trim();
-  const parsed = JSON.parse(text);
-  return {
-    sections: Array.isArray(parsed.sections) ? parsed.sections : [],
-    citations: Array.isArray(parsed.citations) ? parsed.citations : [],
-  };
-}
-```
-
-### GPU Pod Strategy
-
-Run journi-llm as a **persistent pod** (not on-demand). Document parsing is triggered synchronously during user upload — a 30–120s cold start is unacceptable. The L4 24GB runs ~$0.44/hr. For MVP, keep it running 24/7. Optionally implement a keep-warm cron (ping `/health` every 5 minutes) to prevent Runpod from hibernating the pod.
-
-### Remove Railway Ollama service
-
-After Phase 3 is live and validated:
-- Remove `ollama-service/` directory from the repo.
-- Remove `Dockerfile.ollama` from the root (if present).
-- Remove `OLLAMA_BASE_URL` and `OLLAMA_MODEL` from `server/config/env.ts` and all `.env` files.
+For PDF: use `structureRatio` (fraction of blocks with `suggestedSection !== "Content"`) as the confidence gate, threshold ~0.15.
 
 ---
 
-## Phase 4 — Async Job Queue (journi-worker)
+### Phase 2 — Move Ollama to sidecar; harden local LLM path [1–2 days]
 
-**Goal:** Heavy document parsing runs off the API request cycle via an async queue.
+**Remove** `ollama-service/` as a separate Railway service.
 
-### Queue mechanism
+**Add** Ollama as a process launched within the main API container:
+- In the main `Dockerfile` (or Railway's start command): run `ollama serve &` before starting the Node process
+- Pull the model at container startup: `ollama pull qwen2.5:3b`
+- Update `OLLAMA_BASE_URL` default to `http://127.0.0.1:11434` (localhost, not internal DNS)
+- Remove the `waitForOllamaModel()` race condition — replace with a startup check that blocks the Express server from accepting requests until Ollama is ready
 
-Use **`pg-boss`** (no extra broker needed — uses the existing Runpod Postgres as queue storage). Add to `package.json`:
-```
-pg-boss: ^10.x
-```
+**`server/services/llm.service.ts`** — enforce privacy boundary:
+- `parseDocumentWithLLM()` must **only** call `invokeOllama()` — remove Anthropic fallback from this function entirely
+- Add a comment explicitly documenting why: `// Manuscript text must not leave this server. No external API fallback.`
+- On Ollama failure: return `{ sections: [], citations: [] }` and set `reviewRequired: true` — never route manuscript text to an external API as a fallback
 
-**`server/lib/queue.ts`** — shared PgBoss instance:
-```typescript
-import PgBoss from "pg-boss";
-import { env } from "../config/env";
-
-export const queue = new PgBoss(env.RUNPOD_DB_URL);
-```
-
-**Job names:**
-- `parse-document` — payload: `{ importSessionId, fileKey, userId }`
-- `format-check` — payload: `{ manuscriptId, journalId, userId }`
-
-### API side (journi-api)
-
-Change `POST /api/manuscripts/parse` from synchronous to async:
-1. Validate upload, write encrypted file to MinIO via `server/lib/object-storage.ts`.
-2. Create an import session row with `status: 'pending'`.
-3. Enqueue a `parse-document` job with the session ID and MinIO object key.
-4. Return `{ importSessionId, status: 'pending' }` immediately (HTTP 202).
-
-Add `GET /api/manuscripts/import-sessions/:sessionId/status` — polls session status from DB. Frontend polls this until `status` is not `pending`.
-
-### Worker side (journi-worker)
-
-New entry point: `worker/index.ts`
-- Connects to the same `pg-boss` queue instance.
-- Subscribes to `parse-document` jobs.
-- For each job:
-  1. Download file from MinIO.
-  2. Run `parseUploadedDocument()` (deterministic parse first).
-  3. If low-confidence, call journi-llm via `parseDocumentWithLLM()`.
-  4. Write results to Postgres (update import session with `items_json`, `diagnostics_json`, `status: 'ready_to_commit'`).
-  5. If LLM is unavailable, set `status: 'manual_only'` with diagnostic explaining the reason.
+Remove `invokeAnthropic()` from `llm.service.ts` — move it to a separate `server/services/external-llm.service.ts` that is only imported by non-manuscript services (guideline normalization, recommendations, cover letters). This enforces the boundary at the import level.
 
 ---
 
-## Phase 5 — Fine-Tuning (journi-docops-lora-v1)
+### Phase 3 — Guideline normalization via Gemini [1–2 days]
 
-**Goal:** Train a LoRA adapter on `Qwen3-4B` for Journi's four document-ops tasks.
+**New file: `server/services/external-llm.service.ts`**
 
-### Training tasks (JSONL format)
+Houses all external API calls. Only imported by services that handle non-sensitive data.
 
-Each example follows the chat template:
-```json
-{
-  "messages": [
-    { "role": "system", "content": "Return only valid JSON matching the schema. /no_think" },
-    { "role": "user", "content": "<task-specific prompt>" },
-    { "role": "assistant", "content": "{...}" }
-  ],
-  "metadata": { "task": "parse_blocks_to_sections", "study_type": "rct", "source": "pmc_oa", "license": "CC-BY-4.0" }
-}
+```typescript
+// This service must NEVER receive manuscript text.
+// It handles: journal metadata, abstracts, cover letter inputs only.
+export async function invokeGemini(prompt: string): Promise<string> { ... }
+export async function invokeAnthropic(prompt: string): Promise<string> { ... }
 ```
 
-**Task A — `parse_blocks_to_sections`**: Map extracted text blocks to canonical manuscript sections.
-**Task B — `article_to_canonical_section_json`**: Full article text → structured section JSON.
-**Task C — `guideline_text_to_requirements_json`**: Author instructions page → journal requirements JSON.
-**Task D — `manuscript_plus_requirements_to_format_action_labels`**: Produce bounded suggestion labels.
+**New file: `server/services/guideline-normalize.service.ts`**
 
-### Dataset
+Input: raw text of a journal's author-instructions page (fetched from public `website_url`)
+Output: `submission_requirements_json` matching the existing schema in the `journals` table
 
-- **Target size**: ~1,500 open-access papers from PMC OA Subset and Europe PMC OA.
-- **Gold labels**: Manually review 200–300 papers across all study types before training.
-- **License requirement**: Store license metadata with every training example; use only CC-BY or CC0.
-- Dataset stored at `/workspace/datasets/` on the network volume.
+This is entirely public data — no privacy concern. Runs once per journal on sync, result cached in DB.
 
-### LoRA configs (two configs, not one)
+Route: wire into existing `POST /api/journals/sync` admin endpoint.
 
-**Config A — generative tasks** (Task B, C — citation rescue, guideline normalization):
-```python
-LoraConfig(r=16, lora_alpha=32, lora_dropout=0.05,
-  target_modules=["q_proj","k_proj","v_proj","o_proj","gate_proj","up_proj","down_proj"])
+---
+
+### Phase 4 — Journal recommendation [2–3 days]
+
+Two-stage approach:
+1. **pgvector similarity** (pre-filter): embed the manuscript **abstract only** (not full text) using Gemini's embedding API (`text-embedding-004`). Store journal embeddings in a `vector(768)` column on `journals`. Retrieve top-20 candidates by cosine similarity.
+2. **Gemini reranker**: send abstract + top-20 journal summaries → ranked list with rationale.
+
+**UI requirement**: user must explicitly trigger this. Display a clear notice: "Your abstract will be sent to Google's API to find matching journals. No other manuscript content is shared." This is the opt-in moment — users who have privacy concerns can skip it and search manually.
+
+**Schema addition:**
+```sql
+ALTER TABLE journals ADD COLUMN embedding vector(768);
+CREATE INDEX ON journals USING ivfflat (embedding vector_cosine_ops);
 ```
 
-**Config B — classification tasks** (Task A, D — section labeling, format action labels):
-```python
-LoraConfig(r=8, lora_alpha=16, lora_dropout=0.05,
-  target_modules=["q_proj","k_proj","v_proj","o_proj"])
-```
+Route: `POST /api/manuscripts/:manuscriptId/recommend-journals` — Pro only.
 
-### Training script location
+---
 
-`scripts/train/finetune.py` — uses `transformers`, `peft`, `trl` (SFTTrainer), `bitsandbytes`, `accelerate`. Run on `journi-train` (A40 48GB). Saves adapter to `/workspace/adapters/journi-docops-lora-v1`.
+### Phase 5 — Cover letter drafting [1–2 days]
 
-### Deploying the adapter
+**New file: `server/services/cover-letter.service.ts`**
 
-After eval passes thresholds:
-1. Copy adapter to `/workspace/adapters/journi-docops-lora-v1`.
-2. Restart journi-llm with `--lora-modules journi-docops=/workspace/adapters/journi-docops-lora-v1`.
-3. Update `invokeVLLM` to pass `extra_body: { lora_request: { lora_name: "journi-docops", ... } }`.
+Input sent to API: manuscript title + abstract + journal name + scope. **No full manuscript text.**
+
+Same opt-in notice pattern as journal recommendation.
+
+Uses Claude Haiku 3.5 (better prose than Gemini for this task).
+
+Route: `POST /api/manuscripts/:manuscriptId/cover-letter` with body `{ journalId }`.
+
+---
+
+## Privacy Boundaries Summary
+
+| What happens | Where it runs | Data leaves server? |
+|---|---|---|
+| DOCX → HTML (Mammoth) | On-server | No |
+| PDF → text blocks (pdfjs) | On-server | No |
+| Section heading detection | On-server | No |
+| Citation regex parsing | On-server | No |
+| Format checking vs journal rules | On-server | No |
+| Section extraction fallback (low-confidence docs) | Ollama sidecar (localhost) | No |
+| Citation rescue fallback | Ollama sidecar (localhost) | No |
+| Guideline normalization | Gemini API | No (public journal pages) |
+| Journal recommendation | Gemini API | Abstract + keywords only, opt-in |
+| Cover letter drafting | Anthropic API | Title + abstract only, opt-in |
+
+Manuscript prose **never** leaves the server. The only things that touch external APIs are: public journal metadata, and user-triggered features where the user explicitly sends their abstract.
 
 ---
 
@@ -386,85 +271,65 @@ After eval passes thresholds:
 
 | File | Purpose |
 |---|---|
-| `server/lib/db.ts` | pg connection pool to Runpod Postgres |
-| `server/lib/object-storage.ts` | MinIO S3 client |
-| `server/lib/queue.ts` | pg-boss queue instance |
-| `server/repositories/organizations.repository.ts` | Org DB queries |
-| `server/repositories/projects.repository.ts` | Project DB queries |
-| `server/repositories/manuscripts.repository.ts` | Manuscript DB queries |
-| `server/repositories/citations.repository.ts` | Citation DB queries |
-| `server/repositories/submissions.repository.ts` | Submission DB queries |
-| `server/repositories/import-sessions.repository.ts` | Import session queries |
-| `server/repositories/journals.repository.ts` | Journal queries |
-| `server/routes/internal/auth-sync.ts` | Supabase Auth webhook handler |
-| `worker/index.ts` | Worker pod entry point |
-| `worker/jobs/parse-document.ts` | Parse job handler |
-| `server/sql/runpod/001_users_and_core.sql` | Translated schema (no RLS, no auth.users) |
-| `server/sql/runpod/002_institution_domains.sql` | Translated |
-| `server/sql/runpod/003_project_tasks.sql` | Translated |
-| `server/sql/runpod/004_billing_and_submissions.sql` | Translated |
-| `server/sql/runpod/005_import_sessions.sql` | Translated |
-| `scripts/train/finetune.py` | QLoRA fine-tuning script |
+| `server/services/external-llm.service.ts` | All external API calls (Gemini, Anthropic) — never receives manuscript text |
+| `server/services/guideline-normalize.service.ts` | Journal guidelines extraction from public pages |
+| `server/services/journal-recommend.service.ts` | pgvector + Gemini journal recommendation |
+| `server/services/cover-letter.service.ts` | Cover letter generation (abstract only) |
 
 ## Files to Modify
 
 | File | Change |
 |---|---|
-| `server/services/llm.service.ts` | Replace Ollama/Anthropic with vLLM; add thinking-mode strip; graceful degradation |
-| `server/config/env.ts` | Add RUNPOD_DB_URL, VLLM_BASE_URL, MINIO_*, AUTH_SYNC_SECRET; remove OLLAMA_*, ANTHROPIC_API_KEY |
-| `server/routes/manuscripts.ts` | Replace supabaseAdmin calls with repository; make parse async (202 + poll) |
-| `server/routes/projects.ts` | Replace supabaseAdmin calls with repository |
-| `server/routes/organizations.ts` | Replace supabaseAdmin calls with repository |
-| `server/routes/citations.ts` | Replace supabaseAdmin calls with repository |
-| `server/routes/submissions.ts` | Replace supabaseAdmin calls with repository |
-| `server/routes/journals.ts` | Replace supabaseAdmin calls with repository |
-| `server/routes/comments.ts` | Replace supabaseAdmin calls with repository |
-| `server/app.ts` | Mount `/internal/auth-sync` route; init pg-boss queue on startup |
+| `shared/document-parse.ts` | Fix LLM override logic — deterministic wins when it produces ≥2 named sections |
+| `server/services/manuscript-parse.service.ts` | Gate LLM call behind confidence check; add `LLM_FALLBACK_USED` diagnostic |
+| `server/services/llm.service.ts` | Remove Anthropic fallback; add privacy comment; local Ollama only |
+| `server/config/env.ts` | Add `GEMINI_API_KEY` (optional); update `OLLAMA_BASE_URL` default to localhost |
+| `server/routes/manuscripts.ts` | Add `recommend-journals`, `cover-letter` endpoints |
+| `server/routes/journals.ts` | Wire guideline normalization into sync flow |
 
-## Files to Delete (after Phase 3 validation)
+## Files to Remove
 
-- `ollama-service/` (entire directory)
-- Root `Dockerfile.ollama` (if present)
+- `ollama-service/` (entire directory — Ollama moves to sidecar in main service)
+- `ollama-service/railway.toml`
 
 ---
 
-## Constraints for Codex
+## When to Revisit the Architecture
 
-- **Do not modify `server/middleware/auth.ts`**. The `supabaseAdmin.auth.getUser(token)` call in `requireAuth` stays — JWT verification remains Supabase's responsibility.
-- **Do not modify `server/routes/auth.ts`**. Auth routes (signup, login, password reset) remain fully Supabase-managed and are addressed in a later phase.
-- **Do not modify `server/services/manuscript-parse.service.ts`** except to wire it into the async worker job. Deterministic parsing logic is preserved unchanged.
-- **Do not modify `server/services/format-check.service.ts`**. It is already deterministic and not LLM-dependent.
-- **All SQL queries must use parameterized placeholders** (`$1`, `$2`, etc.) — never string interpolation.
-- **No ORM**. Use the `pg` Pool directly with typed repository functions.
-- **Preserve the `billing_events` unique constraint** on `stripe_event_id` in the migrated schema — Stripe deduplication depends on it.
+**Move to a dedicated GPU pod (Runpod or similar) when:**
+- Ollama CPU inference becomes a latency bottleneck (typically when >200 concurrent fallback requests/day)
+- PDF-heavy workloads push the fallback rate above 40%
+- An enterprise customer requires a dedicated isolated inference environment
+
+**Move to a fine-tuned adapter when:**
+- You have ≥500 real production failure cases with labeled corrections
+- The fallback rate on a specific document type exceeds 30% consistently
+- A specific task (e.g. citation rescue for a particular citation format) has measurable error rates
+
+Neither of these applies at MVP launch. Ship deterministic-first, measure the real fallback rate, then optimize from data.
 
 ---
 
 ## Verification Checklist
 
-### Infrastructure
-- [ ] journi-llm responds to `GET /health` from journi-api's private network
-- [ ] journi-db is reachable at `RUNPOD_DB_URL` from journi-api and journi-worker
-- [ ] journi-objects MinIO is reachable from journi-api and journi-worker
-- [ ] journi-llm is NOT reachable from the public internet
+### Privacy enforcement
+- [ ] Upload a full manuscript DOCX → no outbound HTTP requests to Gemini or Anthropic (verify in network logs)
+- [ ] Kill Ollama sidecar → parse fails gracefully with `manual_only` status, no external API fallback triggered
+- [ ] `external-llm.service.ts` is NOT imported anywhere in `manuscript-parse.service.ts` or `llm.service.ts`
 
-### LLM
-- [ ] `POST /v1/chat/completions` with a test document chunk returns valid JSON (no `<think>` blocks)
-- [ ] LoRA attach/detach verified with a dummy adapter before fine-tuning begins
-- [ ] `waitForVLLM()` resolves correctly when pod is ready
+### Deterministic-first parsing
+- [ ] Well-structured DOCX (heading styles) → no `LLM_FALLBACK_USED` diagnostic, Ollama not called
+- [ ] DOCX with bold-only headings → deterministic extracts sections, Ollama not called
+- [ ] DOCX with no heading structure → `LLM_FALLBACK_USED` present, Ollama called
+- [ ] PDF with detectable section headings → deterministic handles it, Ollama not called
+- [ ] `shared/document-parse.ts` preserves deterministic sections when ≥2 named sections found
 
-### Parsing flow
-- [ ] Upload DOCX → 202 response with `importSessionId`
-- [ ] Poll `/import-sessions/:id/status` transitions from `pending` → `ready_to_commit`
-- [ ] Commit endpoint applies sections and citations to manuscript correctly
-- [ ] If journi-llm is unreachable, session status becomes `manual_only` (not a 500)
+### External features (non-sensitive only)
+- [ ] Journal recommendation sends only abstract (verify request payload in logs)
+- [ ] Cover letter sends only title + abstract + journal name (verify request payload)
+- [ ] Both features show opt-in notice in UI before making API call
+- [ ] Guideline normalization only fetches and sends public journal page content
 
-### Data integrity
-- [ ] Row counts in Runpod Postgres match Supabase export after migration
-- [ ] `users` table populated correctly from Supabase Auth export
-- [ ] Auth sync webhook creates new users in Runpod Postgres on signup
-
-### Billing
-- [ ] Stripe webhook reaches journi-api at its public endpoint
-- [ ] `billing_events.stripe_event_id` unique constraint is present in new schema
-- [ ] Duplicate Stripe events are silently deduplicated (test with replayed event)
+### Cost monitoring
+- [ ] Ollama CPU inference latency logged per-document (p50/p95 target: <15s for 1000-word chunk)
+- [ ] External API cost tracked; alert at $20/month

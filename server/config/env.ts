@@ -21,6 +21,8 @@ const envSchema = z.object({
   JOURNAL_SYNC_STALE_HOURS: z.coerce.number().int().min(1).default(168),
   WS_SNAPSHOT_DEBOUNCE_MS: z.coerce.number().int().min(1000).default(15000),
   INVITE_TOKEN_TTL_HOURS: z.coerce.number().int().min(1).default(168),
+  MODAL_LLM_URL: z.string().url().optional(),
+  MODAL_TOKEN_SECRET: z.string().min(1).optional(),
   RESEND_API_KEY: z.string().min(1).optional(),
   RESEND_WELCOME_TEMPLATE_ID: z.string().min(1).optional(),
   RESEND_ORG_INVITE_TEMPLATE_ID: z.string().min(1).optional(),

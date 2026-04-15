@@ -10,11 +10,6 @@ export interface OllamaParsedDocument {
   }>;
 }
 
-// Ollama configuration - prefers Railway internal URL in production
-const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL
-  ?? (process.env.NODE_ENV === 'production' ? 'http://ollama.railway.internal:11434' : 'http://127.0.0.1:11434');
-const OLLAMA_MODEL = process.env.OLLAMA_MODEL ?? "qwen2.5:3b";
-
 interface LLMResponse {
   sections: Array<{ title: string; content: string }>;
   citations: Array<{
@@ -77,6 +72,8 @@ function chunkText(text: string, maxWords = 1000): string[] {
 
 function parseJsonResponse(raw: string): LLMResponse {
   let text = raw.trim();
+  // Strip Qwen3 thinking blocks (safety net even with thinking mode disabled)
+  text = text.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
   // Strip markdown fences if the model ignores instructions
   text = text.replace(/^```json\s*/m, "").replace(/^```\s*/m, "").replace(/```$/m, "").trim();
   const parsed = JSON.parse(text);
@@ -86,110 +83,40 @@ function parseJsonResponse(raw: string): LLMResponse {
   };
 }
 
-// Polls /api/tags until the target model appears or the timeout (ms) is exceeded.
-// This handles the first-boot case where the model is still being pulled.
-async function waitForOllamaModel(timeoutMs = 15_000): Promise<void> {
-  const deadline = Date.now() + timeoutMs;
-  while (Date.now() < deadline) {
-    try {
-      const res = await fetch(`${OLLAMA_BASE_URL}/api/tags`, {
-        signal: AbortSignal.timeout(5_000),
-      });
-      if (res.ok) {
-        const data = await res.json() as { models?: Array<{ name: string }> };
-        const loaded = (data.models ?? []).some((m) => m.name.startsWith(OLLAMA_MODEL.split(":")[0]));
-        if (loaded) return;
-      }
-    } catch {
-      // Ollama not yet reachable — keep polling
-    }
-    await new Promise((resolve) => setTimeout(resolve, 5_000));
-  }
-  throw new Error(`Ollama model ${OLLAMA_MODEL} was not ready within ${timeoutMs / 1000}s — falling back to Anthropic`);
-}
+// Manuscript text must not leave this server. No external API fallback.
+// This function only ever calls the Modal endpoint (private, on-infrastructure GPU).
+async function invokeModal(textChunk: string): Promise<LLMResponse> {
+  const url = process.env.MODAL_LLM_URL;
+  if (!url) throw new Error("MODAL_LLM_URL not set — cannot call LLM fallback");
 
-async function invokeOllama(textChunk: string): Promise<LLMResponse> {
-  // Wait for the model to be loaded before attempting inference.
-  // On first deploy the model is pulled at container startup — this blocks until ready.
-  await waitForOllamaModel(15_000);
-
-  const res = await fetch(`${OLLAMA_BASE_URL}/api/generate`, {
+  const res = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: OLLAMA_MODEL,
       prompt: buildPrompt(textChunk),
-      format: "json",
-      stream: false,
-      options: { temperature: 0.0 },
+      _auth: process.env.MODAL_TOKEN_SECRET,
     }),
-    signal: AbortSignal.timeout(120_000),
+    signal: AbortSignal.timeout(60_000),
   });
 
   if (!res.ok) {
-    throw new Error(`Ollama returned ${res.status} ${res.statusText}`);
+    const body = await res.text().catch(() => "");
+    throw new Error(`Modal LLM returned ${res.status}: ${body}`);
   }
 
   const data = await res.json();
   return parseJsonResponse(data.response);
 }
 
-async function invokeAnthropic(textChunk: string): Promise<LLMResponse> {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) throw new Error("ANTHROPIC_API_KEY not set");
-
-  const res = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "x-api-key": apiKey,
-      "anthropic-version": "2023-06-01",
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      model: "claude-haiku-4-5-20251001", // Cheapest Claude model — ~$0.25/1M input tokens
-      max_tokens: 4096,
-      messages: [{ role: "user", content: buildPrompt(textChunk) }],
-    }),
-    signal: AbortSignal.timeout(60_000),
-  });
-
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`Anthropic returned ${res.status}: ${body}`);
-  }
-
-  const data = await res.json();
-  return parseJsonResponse(data.content[0].text);
-}
-
-async function invokeLLM(textChunk: string): Promise<LLMResponse> {
-  // Try Ollama first (self-hosted, zero data exposure)
-  if (OLLAMA_BASE_URL) {
-    try {
-      return await invokeOllama(textChunk);
-    } catch (ollamaError) {
-      console.warn(
-        "[llm.service] Ollama unavailable, falling back to Anthropic:",
-        ollamaError instanceof Error ? ollamaError.message : ollamaError
-      );
-    }
-  }
-
-  // Fall back to Anthropic (no data retention on API, already have the key)
-  if (process.env.ANTHROPIC_API_KEY) {
-    return await invokeAnthropic(textChunk);
-  }
-
-  throw new Error("No LLM available: Ollama is unreachable and ANTHROPIC_API_KEY is not set.");
-}
-
 export async function parseDocumentWithLLM(text: string): Promise<OllamaParsedDocument> {
   const chunks = chunkText(text, 1000);
+
+  // Process all chunks in parallel — Modal handles concurrent requests on the same GPU.
+  const chunkResults = await Promise.all(chunks.map((chunk) => invokeModal(chunk)));
+
   const result: OllamaParsedDocument = { sections: [], citations: [] };
 
-  for (const chunk of chunks) {
-    const chunkParsed = await invokeLLM(chunk);
-
+  for (const chunkParsed of chunkResults) {
     // Stitch sections across chunks — merge if same title or continuation
     for (const section of chunkParsed.sections) {
       const last = result.sections[result.sections.length - 1];

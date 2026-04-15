@@ -51,6 +51,8 @@ export interface ParsedBlock {
   confidence: number;
   diagnostics: ParseDiagnostic[];
   suggestedSection?: string;
+  /** True when this block's font height is significantly larger than the median body text height on the page — strong heading signal for PDFs. */
+  isLargeFont?: boolean;
 }
 
 export interface ParsedFigure {
@@ -136,18 +138,22 @@ const CANONICAL_ORDER = [
   "Limitations",
   "Conclusions",
   "References",
+  "Acknowledgements",
+  "Appendix",
 ];
 
 const CANONICAL_ALIASES: Array<[string, RegExp]> = [
-  ["Title", /^(title|title page)$/i],
-  ["Abstract", /^(abstract|summary)$/i],
-  ["Introduction", /^(introduction|background)$/i],
-  ["Search Strategy", /^(search strategy|sources of data|method|methods|methodology)$/i],
-  ["Results & Synthesis", /^(results|results and synthesis|results & synthesis|benefits|findings)$/i],
-  ["Discussion", /^(discussion|drawbacks|analysis)$/i],
-  ["Limitations", /^(limitations|constraints)$/i],
-  ["Conclusions", /^(conclusion|conclusions|final remarks)$/i],
-  ["References", /^(references|bibliography)$/i],
+  ["Title",               /^(title|title page|cover page|front matter)$/i],
+  ["Abstract",            /^(abstract|summary|synopsis|overview|executive summary|precis)$/i],
+  ["Introduction",        /^(introduction|background|rationale|background and context|motivation|problem statement|literature review|related work|prior work|related literature)$/i],
+  ["Search Strategy",     /^(search strategy|sources of data|method|methods|methodology|materials and methods|materials and methods|study design|research design|experimental design|data collection|data sources|objectives|protocol|search methods|inclusion criteria|eligibility criteria|participants|subjects)$/i],
+  ["Results & Synthesis", /^(results|results and synthesis|results and synthesis|findings|key findings|outcomes|empirical results|statistical analysis|quantitative results|qualitative results|case results)$/i],
+  ["Discussion",          /^(discussion|drawbacks|analysis|interpretation|implications|key takeaways|strengths and weaknesses|critique|evaluation|commentary|reflection)$/i],
+  ["Limitations",         /^(limitations|constraints|study limitations|weaknesses|strengths and limitations|limitations and future work)$/i],
+  ["Conclusions",         /^(conclusion|conclusions|final remarks|summary and conclusions|closing remarks|recommendations|future work|future directions|conclusion and future work)$/i],
+  ["References",          /^(references|bibliography|cited works|sources|literature cited|further reading|citations|works cited)$/i],
+  ["Acknowledgements",    /^(acknowledgements|acknowledgments|acknowledgement|acknowledgment|funding|funding sources|financial disclosure|conflicts of interest|author contributions)$/i],
+  ["Appendix",            /^(appendix|appendices|supplementary|supplemental|supplementary material|supplementary materials|supplementary data|additional information)$/i],
 ];
 
 function normalizeHeading(raw: string): string {
@@ -282,11 +288,15 @@ function isBoldOnlyHeading(node: Element): boolean {
 
   if (!isBold) return false;
 
-  // Only treat as heading if text matches a known canonical section name or looks like ALL-CAPS heading
+  // Only treat as heading if text matches a known canonical section name,
+  // looks like ALL-CAPS heading, or is title-case without sentence punctuation
   for (const [, matcher] of CANONICAL_ALIASES) {
     if (matcher.test(text)) return true;
   }
-  return /^[A-Z][A-Z\s&/\-0-9]{2,}$/.test(text);
+  if (/^[A-Z][A-Z\s&/\-0-9]{2,}$/.test(text)) return true;
+  // Accept title-case mixed headings ("Study Design", "Key Findings") — guard against
+  // bolded body sentences by rejecting text containing a period mid-string
+  return /^[A-Z][A-Za-z0-9\s&/\-]{2,}$/.test(text) && !text.includes(".");
 }
 
 function parseSectionsFromHtml(html: string): IntermediateSection[] {
@@ -372,13 +382,25 @@ function parseSectionsFromText(text: string): IntermediateSection[] {
 
     const normalized = normalizeHeading(trimmed).toLowerCase();
     const isKnownHeading = headingCandidates.has(normalized);
+
+    // Strip leading number/outline prefix (e.g. "1. ", "4.2 ", "I. ", "II. ") and test the remainder
+    const strippedNumbered = trimmed.replace(/^[\dIVXivx]+(?:\.\d+)*[.)]\s+/, "");
+    const normalizedStripped = normalizeHeading(strippedNumbered).toLowerCase();
+    const isNumberedHeading =
+      strippedNumbered !== trimmed &&
+      strippedNumbered.length > 2 &&
+      strippedNumbered.length <= 80 &&
+      (headingCandidates.has(normalizedStripped) || /^[A-Z][A-Z\s&/-]{2,}$/.test(strippedNumbered));
+
     const looksLikeHeading =
       normalized.length <= 80 &&
-      (isKnownHeading || (/^[A-Z0-9\s&/-]+$/.test(trimmed) && trimmed.length > 2));
+      (isKnownHeading ||
+        isNumberedHeading ||
+        (/^[A-Z0-9\s&/-]+$/.test(trimmed) && trimmed.length > 2));
 
     if (looksLikeHeading) {
       flush();
-      currentTitle = toTitleCase(normalized);
+      currentTitle = toTitleCase(isNumberedHeading ? normalizedStripped : normalized);
       continue;
     }
 
@@ -439,10 +461,25 @@ function isLikelyReferencesHeading(text: string): boolean {
 }
 
 function isLikelySectionHeading(text: string): boolean {
-  const normalized = normalizeHeading(text).toLowerCase();
+  const trimmed = text.trim();
+  const normalized = normalizeHeading(trimmed).toLowerCase();
   if (!normalized) return false;
   if (CANONICAL_ORDER.map((s) => s.toLowerCase()).includes(normalized)) return true;
-  return /^[A-Z][A-Z0-9\s&/-]{2,}$/.test(text.trim());
+  for (const [, matcher] of CANONICAL_ALIASES) {
+    if (matcher.test(normalized)) return true;
+  }
+  // ALL-CAPS heading
+  if (/^[A-Z][A-Z0-9\s&/-]{2,}$/.test(trimmed)) return true;
+  // Strip numbered prefix and test remainder
+  const stripped = trimmed.replace(/^[\dIVXivx]+(?:\.\d+)*[.)]\s+/, "");
+  if (stripped !== trimmed && stripped.length > 2 && stripped.length <= 80) {
+    const strippedNorm = normalizeHeading(stripped).toLowerCase();
+    for (const [, matcher] of CANONICAL_ALIASES) {
+      if (matcher.test(strippedNorm)) return true;
+    }
+    if (/^[A-Z][A-Z0-9\s&/-]{2,}$/.test(stripped)) return true;
+  }
+  return false;
 }
 
 function createPlaceholderImageData(label: string): string {
@@ -505,6 +542,7 @@ function normalizePdfBlocks(rawBlocks: ParsedBlock[] | undefined): ParsedBlock[]
       confidence: typeof block.confidence === "number" ? block.confidence : 0.85,
       diagnostics: block.diagnostics || [],
       suggestedSection,
+      isLargeFont: block.isLargeFont,
     };
   });
 }
@@ -535,7 +573,9 @@ function buildSectionsFromBlocks(blocks: ParsedBlock[]): IntermediateSection[] {
       continue;
     }
 
-    if (!inReferences && isLikelySectionHeading(text) && block.type !== "reference") {
+    if (!inReferences &&
+        (isLikelySectionHeading(text) || (block.isLargeFont && text.length <= 100)) &&
+        block.type !== "reference") {
       flush();
       currentTitle = mapToCanonical(text);
       continue;
@@ -607,8 +647,12 @@ export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
       ? sectionsFromBlocks
       : sectionsFromText;
 
-  // OVERRIDE heuristics with LLM parsed data if present
-  if (raw.llmParsed && raw.llmParsed.sections.length > 0) {
+  // Use LLM result only when deterministic parsing produced nothing useful.
+  // "Useful" = at least 2 sections where not all are titled "Content".
+  const deterministicProducedSections =
+    baseSections.length >= 2 && !baseSections.every((s) => s.title === "Content");
+
+  if (!deterministicProducedSections && raw.llmParsed && raw.llmParsed.sections.length > 0) {
     baseSections = raw.llmParsed.sections.map((sec) => ({
       title: sec.title,
       content: ensureParagraph(sec.content),
@@ -645,13 +689,20 @@ export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
       .filter((block) => block.type === "reference")
       .map((block) => block.text);
 
-  const citations = raw.llmParsed && raw.llmParsed.citations.length > 0
-    ? dedupeCitations(raw.llmParsed.citations.map(c => ({
-        ...c,
-        type: c.journal ? "article" : c.url ? "website" : "conference",
-        metadata: { source: "llm" }
-      })))
-    : dedupeCitations(parseCitationsFromReferences(referencesLines));
+  // Prefer deterministic citation extraction; fall back to LLM only when regex found nothing.
+  const deterministicCitations = dedupeCitations(parseCitationsFromReferences(referencesLines));
+  const citations =
+    deterministicCitations.length > 0
+      ? deterministicCitations
+      : raw.llmParsed && raw.llmParsed.citations.length > 0
+        ? dedupeCitations(
+            raw.llmParsed.citations.map((c) => ({
+              ...c,
+              type: (c.journal ? "article" : c.url ? "website" : "conference") as ParsedCitation["type"],
+              metadata: { source: "llm" },
+            })),
+          )
+        : [];
 
   const sections: ParsedSection[] = canonicalSections.map((section, index) => ({
     title: section.title,

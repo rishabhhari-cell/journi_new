@@ -128,7 +128,10 @@ function classifyLineType(line: string): ParsedBlock["type"] {
   const trimmed = line.trim();
   if (/^(fig(?:ure)?\.?\s*\d+|diagram\s*\d+)/i.test(trimmed)) return "caption";
   if (/^table\s*\d+/i.test(trimmed)) return "caption";
+  // Numbered references: [1], 1., 1)
   if (/^(?:\[\d+\]|\d+[.)])\s+.+/.test(trimmed) && /\b(19|20)\d{2}\b/.test(trimmed)) return "reference";
+  // Author-year references: "Smith J. (2020)." or "Smith J, et al. 2020"
+  if (/^[A-Z][a-z]+\s+[A-Z]/.test(trimmed) && /\b(19|20)\d{2}\b/.test(trimmed) && trimmed.length > 30) return "reference";
   if (/\|/.test(trimmed) || /\t/.test(trimmed) || /\S+\s{2,}\S+/.test(trimmed)) return "table";
   return "text";
 }
@@ -225,12 +228,18 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
       continue;
     }
 
+    // Compute median body font height for this page to identify large-font headings.
+    const pageHeights = lines.map((l) => l.height).filter((h) => h > 4 && h < 50);
+    const sortedHeights = [...pageHeights].sort((a, b) => a - b);
+    const medianBodySize = sortedHeights[Math.floor(sortedHeights.length / 2)] || 10;
+
     pagesText.push(lines.map((line) => line.text).join("\n"));
 
     for (const line of lines) {
       const type = classifyLineType(line.text);
       const blockId = `pdf-block-${++blockCount}`;
       const bbox = makeBlockBbox(line.x, line.y, line.width, line.height);
+      const isLargeFont = line.height > medianBodySize * 1.2;
 
       blocks.push({
         id: blockId,
@@ -250,6 +259,7 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
           },
         ] : [],
         suggestedSection: type === "reference" ? "References" : "Content",
+        isLargeFont,
       });
 
       if (type === "caption" && /^(fig(?:ure)?\.?\s*\d+|diagram\s*\d+)/i.test(line.text)) {
@@ -366,18 +376,30 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
       },
     ];
 
+    // Only call LLM when the HTML doesn't have enough heading structure for deterministic parsing.
+    const headingCount = (result.value.match(/<h[1-3][^>]*>/gi) || []).length;
+    const boldHeadingCount = (result.value.match(/<p><strong>[A-Z][^<]{2,60}<\/strong><\/p>/gi) || []).length;
+    const deterministicLooksGood = (headingCount + boldHeadingCount) >= 3;
+
     let llmParsed;
-    try {
-      const textResult = await mammoth.extractRawText({ buffer: input.buffer });
-      if (textResult.value.trim().length > 0) {
-        llmParsed = await parseDocumentWithLLM(textResult.value);
+    if (!deterministicLooksGood) {
+      try {
+        const textResult = await mammoth.extractRawText({ buffer: input.buffer });
+        if (textResult.value.trim().length > 0) {
+          llmParsed = await parseDocumentWithLLM(textResult.value);
+          diagnostics.push({
+            level: "info",
+            code: "LLM_FALLBACK_USED",
+            message: "Heading structure unclear; AI-assisted parsing used.",
+          });
+        }
+      } catch (error) {
+        diagnostics.push({
+          level: "warning",
+          code: "LLM_PARSE_FAILED",
+          message: error instanceof Error ? error.message : "AI-assisted parsing failed; manual review required.",
+        });
       }
-    } catch (error) {
-      diagnostics.push({
-        level: "warning",
-        code: "LLM_PARSE_FAILED",
-        message: error instanceof Error ? error.message : "Local LLM parsing failed, falling back to heuristics.",
-      });
     }
 
     return {
@@ -412,17 +434,30 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
     try {
       const payload = await extractPdfPayload(input.buffer);
       
+      // Only call LLM when the PDF block structure suggests poor deterministic coverage.
+      // structureRatio = fraction of blocks whose text matches a canonical section heading.
+      const nonContentBlocks = payload.blocks.filter(
+        (b) => b.suggestedSection && b.suggestedSection !== "Content",
+      ).length;
+      const structureRatio = payload.blocks.length > 0 ? nonContentBlocks / payload.blocks.length : 0;
+      const pdfDeterministicLooksGood = structureRatio >= 0.15;
+
       let llmParsed;
-      try {
-        if (payload.text.trim().length > 0) {
+      if (!pdfDeterministicLooksGood && payload.text.trim().length > 0) {
+        try {
           llmParsed = await parseDocumentWithLLM(payload.text);
+          diagnostics.push({
+            level: "info",
+            code: "LLM_FALLBACK_USED",
+            message: "PDF section structure unclear; AI-assisted parsing used.",
+          });
+        } catch (error) {
+          diagnostics.push({
+            level: "warning",
+            code: "LLM_PARSE_FAILED",
+            message: error instanceof Error ? error.message : "AI-assisted parsing failed; manual review required.",
+          });
         }
-      } catch (error) {
-        diagnostics.push({
-          level: "warning",
-          code: "LLM_PARSE_FAILED",
-          message: error instanceof Error ? error.message : "Local LLM parsing failed, falling back to heuristics.",
-        });
       }
 
       if (!payload.text) {
