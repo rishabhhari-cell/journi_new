@@ -120,6 +120,7 @@ export interface JournalDTO {
   acceptanceRate?: number | null;
   avgDecisionDays?: number | null;
   apcCostUsd?: number | null;
+  meanTimeToPublicationDays?: number | null;
   provenance?: Record<string, string>;
   lastVerifiedAt?: string | null;
   createdAt?: string;

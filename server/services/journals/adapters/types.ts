@@ -1,4 +1,4 @@
-export type JournalSource = "manual" | "openalex" | "doaj" | "crossref";
+export type JournalSource = "manual" | "openalex" | "doaj" | "crossref" | "scraper";
 
 export interface JournalEnrichment {
   source: JournalSource;
