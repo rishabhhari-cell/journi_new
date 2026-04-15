@@ -12,6 +12,7 @@ const sourcePriority: Record<JournalSource, number> = {
   crossref: 70,
   openalex: 60,
   doaj: 50,
+  scraper: 55,
 };
 
 const writableColumns = new Set([
