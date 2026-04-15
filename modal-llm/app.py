@@ -108,7 +108,7 @@ class JourniLLM:
         outputs = self.llm.generate([prompt], params)
         return {"response": outputs[0].outputs[0].text}
 
-    @modal.fastapi_endpoint(method="POST", path="/reformat")
+    @modal.fastapi_endpoint(method="POST")
     def reformat_section(self, body: dict) -> dict:
         import json
         import os
