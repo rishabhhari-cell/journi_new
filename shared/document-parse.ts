@@ -139,6 +139,7 @@ const CANONICAL_ORDER = [
   "Conclusions",
   "References",
   "Acknowledgements",
+  "Figures and Tables",
   "Appendix",
 ];
 
@@ -153,8 +154,37 @@ const CANONICAL_ALIASES: Array<[string, RegExp]> = [
   ["Conclusions",         /^(conclusion|conclusions|final remarks|summary and conclusions|closing remarks|recommendations|future work|future directions|conclusion and future work)$/i],
   ["References",          /^(references|bibliography|cited works|sources|literature cited|further reading|citations|works cited)$/i],
   ["Acknowledgements",    /^(acknowledgements|acknowledgments|acknowledgement|acknowledgment|funding|funding sources|financial disclosure|conflicts of interest|author contributions)$/i],
+  ["Figures and Tables",  /^(figures?( and | & )tables?|tables?( and | & )figures?|figures|tables)$/i],
   ["Appendix",            /^(appendix|appendices|supplementary|supplemental|supplementary material|supplementary materials|supplementary data|additional information)$/i],
 ];
+
+const ABSTRACT_SUBSECTION_KEYS = new Set([
+  "introduction",
+  "background",
+  "objectives",
+  "methods",
+  "results",
+  "discussion",
+  "conclusions",
+]);
+
+export function normalizeSectionMatchKey(title: string): string {
+  const cleaned = normalizeHeading(title).toLowerCase();
+  if (!cleaned) return "content";
+  if (/^(title|title page|cover page|front matter)$/.test(cleaned)) return "title";
+  if (/^(abstract|summary|synopsis|overview|executive summary|precis)$/.test(cleaned)) return "abstract";
+  if (/^(introduction|background|rationale|motivation|problem statement|literature review|related work|prior work|related literature)$/.test(cleaned)) return "introduction";
+  if (/^(methods?|methodology|materials (and|&) methods|search strategy|sources of data|study design|research design|experimental design|data collection|data sources|objectives|protocol|search methods|inclusion criteria|eligibility criteria|participants|subjects)$/.test(cleaned)) return "methods";
+  if (/^(results|results (and|&) synthesis|findings|key findings|outcomes|empirical results|statistical analysis|quantitative results|qualitative results|case results)$/.test(cleaned)) return "results";
+  if (/^(discussion|drawbacks|analysis|interpretation|implications|key takeaways|strengths and weaknesses|critique|evaluation|commentary|reflection)$/.test(cleaned)) return "discussion";
+  if (/^(limitations|constraints|study limitations|weaknesses|strengths and limitations|limitations and future work)$/.test(cleaned)) return "limitations";
+  if (/^(conclusion|conclusions|final remarks|summary and conclusions|closing remarks|recommendations|future work|future directions|conclusion and future work)$/.test(cleaned)) return "conclusions";
+  if (/^(references|bibliography|cited works|sources|literature cited|further reading|citations|works cited)$/.test(cleaned)) return "references";
+  if (/^(acknowledgements|acknowledgments|acknowledgement|acknowledgment|funding|funding sources|financial disclosure|conflicts of interest|author contributions)$/.test(cleaned)) return "acknowledgements";
+  if (/^(figures?( and | & )tables?|tables?( and | & )figures?|figures|tables)$/.test(cleaned)) return "figures_and_tables";
+  if (/^(appendix|appendices|supplementary|supplemental|supplementary material|supplementary materials|supplementary data|additional information)$/.test(cleaned)) return "appendix";
+  return cleaned;
+}
 
 function normalizeHeading(raw: string): string {
   return raw
@@ -513,6 +543,90 @@ function parseSectionsFromText(text: string): IntermediateSection[] {
   return sections;
 }
 
+function foldStructuredAbstractSections(sections: IntermediateSection[]): IntermediateSection[] {
+  const abstractIndex = sections.findIndex((section) => normalizeSectionMatchKey(section.title) === "abstract");
+  if (abstractIndex === -1) return sections;
+
+  const abstractSection = sections[abstractIndex];
+  const abstractWordCount = countWordsFromHtml(abstractSection.content);
+  const captured: IntermediateSection[] = [];
+  const seen = new Set<string>();
+
+  for (let index = abstractIndex + 1; index < sections.length; index += 1) {
+    const section = sections[index];
+    const key = normalizeSectionMatchKey(section.title);
+    if (!ABSTRACT_SUBSECTION_KEYS.has(key)) break;
+    if (seen.has(key)) break;
+    captured.push(section);
+    seen.add(key);
+  }
+
+  if ((abstractWordCount > 25 && abstractSection.content.trim() !== "<p></p>") || captured.length < 2) {
+    return sections;
+  }
+
+  const abstractParts: string[] = [];
+  if (abstractSection.content.trim() && abstractSection.content.trim() !== "<p></p>") {
+    abstractParts.push(abstractSection.content);
+  }
+  for (const section of captured) {
+    abstractParts.push(`<h3>${section.title}</h3>${ensureParagraph(section.content)}`);
+  }
+
+  return [
+    ...sections.slice(0, abstractIndex),
+    {
+      title: abstractSection.title,
+      content: abstractParts.join(""),
+    },
+    ...sections.slice(abstractIndex + 1 + captured.length),
+  ];
+}
+
+function promoteDocxFrontMatter(sections: IntermediateSection[]): IntermediateSection[] {
+  if (sections.length === 0) return sections;
+
+  const first = sections[0];
+  const firstKey = normalizeSectionMatchKey(first.title);
+  const knownFrontMatterKeys = new Set([
+    "content",
+    "title",
+    "abstract",
+    "introduction",
+    "methods",
+    "results",
+    "discussion",
+    "conclusions",
+    "references",
+  ]);
+
+  const nextKey = normalizeSectionMatchKey(sections[1]?.title || "");
+  if (nextKey !== "abstract" && nextKey !== "introduction" && nextKey !== "methods") {
+    return sections;
+  }
+
+  if (firstKey !== "content" && knownFrontMatterKeys.has(firstKey)) {
+    return sections;
+  }
+
+  const titleParagraph =
+    firstKey === "content" ? "" : `<p>${first.title}</p>`;
+
+  return [
+    {
+      title: "Title",
+      content: `${titleParagraph}${ensureParagraph(first.content)}`,
+    },
+    ...sections.slice(1),
+  ];
+}
+
+function extractFigureCaptionsFromContent(contentHtml: string): string[] {
+  return Array.from(contentHtml.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi))
+    .map((match) => sanitizeReferenceLine(match[1]))
+    .filter((line) => /^(figure|fig\.?)\s*\d+\s*[:.]/i.test(line));
+}
+
 function dedupeCitations(citations: ParsedCitation[]): ParsedCitation[] {
   const seen = new Set<string>();
   const deduped: ParsedCitation[] = [];
@@ -763,10 +877,23 @@ export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
       ? sectionsFromBlocks
       : sectionsFromText;
 
-  // Use LLM result only when deterministic parsing produced nothing useful.
-  // "Useful" = at least 2 sections where not all are titled "Content".
-  const deterministicProducedSections =
-    baseSections.length >= 2 && !baseSections.every((s) => s.title === "Content");
+  if (raw.format === "docx" && baseSections.length > 0) {
+    baseSections = promoteDocxFrontMatter(baseSections);
+    baseSections = foldStructuredAbstractSections(baseSections);
+  }
+
+  // High-confidence threshold: ≥3 sections with canonical titles, none titled "Content" exclusively.
+  // Below this threshold the LLM result is preferred when available.
+  const canonicalNames = new Set([
+    "title", "abstract", "introduction", "background", "methods",
+    "materials and methods", "search strategy", "results",
+    "results & synthesis", "discussion", "conclusion", "conclusions",
+    "references", "data availability", "ethics statement",
+  ]);
+  const canonicalCount = baseSections.filter(
+    (s) => canonicalNames.has(s.title.trim().toLowerCase()),
+  ).length;
+  const deterministicProducedSections = canonicalCount >= 3;
 
   if (!deterministicProducedSections && raw.llmParsed && raw.llmParsed.sections.length > 0) {
     baseSections = raw.llmParsed.sections.map((sec) => ({
@@ -798,6 +925,29 @@ export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
     }
   }
 
+  const docxFigureCaptions =
+    raw.format === "docx"
+      ? canonicalSections.flatMap((section) =>
+          section.title === "References" ? [] : extractFigureCaptionsFromContent(section.content),
+        )
+      : [];
+
+  if (docxFigureCaptions.length > 0 && incomingFigures.length === 0) {
+    const figuresHtml = docxFigureCaptions
+      .map((caption, index) => {
+        const imageData = createPlaceholderImageData(caption || `Figure ${index + 1}`);
+        return `<figure><img src="${imageData}" alt="${caption}" style="max-width:100%" />${caption ? `<figcaption>${caption}</figcaption>` : ""}</figure>`;
+      })
+      .join("");
+
+    const existingFigures = canonicalSections.find((section) => section.title === "Figures and Tables");
+    if (existingFigures) {
+      existingFigures.content = `${existingFigures.content}${figuresHtml}`;
+    } else {
+      canonicalSections.push({ title: "Figures and Tables", content: figuresHtml });
+    }
+  }
+
   const referencesSection = canonicalSections.find((section) => section.title === "References");
   const referencesLines = referencesSection
     ? extractReferenceLines(referencesSection.content)
@@ -819,14 +969,6 @@ export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
             })),
           )
         : [];
-
-  const sections: ParsedSection[] = canonicalSections.map((section, index) => ({
-    title: section.title,
-    content: ensureParagraph(section.content),
-    order: index,
-    wordCount: countWordsFromHtml(section.content),
-    sourceTitle: section.title,
-  }));
 
   const inferredFiguresFromCaptions: ParsedFigure[] = normalizedBlocks
     .filter((block) => block.type === "caption" && /^(fig(?:ure)?\.?\s*\d+|diagram\s*\d+)/i.test(block.text))
@@ -872,8 +1014,51 @@ export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
       };
     });
 
-  const parsedFigures = incomingFigures.length > 0 ? incomingFigures : inferredFiguresFromCaptions;
+  const inferredFiguresFromDocx = raw.format === "docx"
+    ? docxFigureCaptions.map((caption, index) => ({
+        id: `docx-fig-${index + 1}`,
+        imageData: createPlaceholderImageData(caption || `Figure ${index + 1}`),
+        caption,
+        page: 1,
+        confidence: 0.92,
+        diagnostics: [],
+      }))
+    : [];
+
+  const parsedFigures =
+    incomingFigures.length > 0
+      ? incomingFigures.map((figure, index) => ({
+          ...figure,
+          caption: figure.caption || docxFigureCaptions[index],
+        }))
+      : inferredFiguresFromCaptions.length > 0
+        ? inferredFiguresFromCaptions
+        : inferredFiguresFromDocx;
   const parsedTables = incomingTables.length > 0 ? incomingTables : inferredTablesFromBlocks;
+
+  if (parsedFigures.length > 0) {
+    const figuresHtml = parsedFigures
+      .map((figure, index) => {
+        const caption = figure.caption || docxFigureCaptions[index] || "";
+        return `<figure><img src="${figure.imageData}" alt="${caption || `Figure ${index + 1}`}" style="max-width:100%" />${caption ? `<figcaption>${caption}</figcaption>` : ""}</figure>`;
+      })
+      .join("");
+
+    const existingFigures = canonicalSections.find((section) => section.title === "Figures and Tables");
+    if (existingFigures) {
+      existingFigures.content = figuresHtml;
+    } else {
+      canonicalSections.push({ title: "Figures and Tables", content: figuresHtml });
+    }
+  }
+
+  const sections: ParsedSection[] = canonicalSections.map((section, index) => ({
+    title: section.title,
+    content: ensureParagraph(section.content),
+    order: index,
+    wordCount: countWordsFromHtml(section.content),
+    sourceTitle: section.title,
+  }));
 
   const captionLinks: ParsedLink[] = [];
   const captionBlocks = normalizedBlocks.filter((block) => block.type === "caption");

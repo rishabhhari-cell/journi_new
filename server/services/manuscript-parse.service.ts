@@ -1,6 +1,9 @@
 import mammoth from "mammoth";
+import { XMLParser } from "fast-xml-parser";
 import type { ParseDiagnostic, ParsedBlock, ParsedBoundingBox, ParsedFigure, ParsedTable, RawParsedDocument } from "../../shared/document-parse";
+import { parseRawDocument } from "../../shared/document-parse";
 import { parseDocumentWithLLM } from "./llm.service";
+import { runDeterministicErrorChecks } from "./parse-error-detection.service";
 
 export interface ParseUploadInput {
   fileName: string;
@@ -120,6 +123,234 @@ interface ExtractedPdfPayload {
   diagnostics: ParseDiagnostic[];
 }
 
+const DOCX_IMAGE_REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image";
+const DOCX_CHART_REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart";
+
+const xmlParser = new XMLParser({
+  ignoreAttributes: false,
+  attributeNamePrefix: "",
+  removeNSPrefix: true,
+  parseTagValue: false,
+  parseAttributeValue: false,
+});
+
+function ensureArray<T>(value: T | T[] | undefined | null): T[] {
+  if (Array.isArray(value)) return value;
+  return value == null ? [] : [value];
+}
+
+function textFromXmlNode(node: unknown): string {
+  if (node == null) return "";
+  if (typeof node === "string") return node;
+  if (typeof node === "number" || typeof node === "boolean") return String(node);
+  if (Array.isArray(node)) return node.map((entry) => textFromXmlNode(entry)).join("");
+  if (typeof node === "object") {
+    return Object.entries(node as Record<string, unknown>)
+      .filter(([key]) => key !== "#text")
+      .map(([, value]) => textFromXmlNode(value))
+      .join("") || String((node as Record<string, unknown>)["#text"] ?? "");
+  }
+  return "";
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function pathToDocxMime(target: string): string {
+  const lower = target.toLowerCase();
+  if (lower.endsWith(".png")) return "image/png";
+  if (lower.endsWith(".jpg") || lower.endsWith(".jpeg")) return "image/jpeg";
+  if (lower.endsWith(".gif")) return "image/gif";
+  if (lower.endsWith(".webp")) return "image/webp";
+  if (lower.endsWith(".svg")) return "image/svg+xml";
+  if (lower.endsWith(".bmp")) return "image/bmp";
+  return "application/octet-stream";
+}
+
+function absoluteDocxPath(basePath: string, target: string): string {
+  if (!target) return basePath;
+  if (target.startsWith("/")) return target.replace(/^\/+/, "");
+  const baseParts = basePath.split("/").slice(0, -1);
+  for (const part of target.split("/")) {
+    if (!part || part === ".") continue;
+    if (part === "..") baseParts.pop();
+    else baseParts.push(part);
+  }
+  return baseParts.join("/");
+}
+
+interface DocxChartSpec {
+  title: string;
+  type: "bar" | "pie" | "unsupported";
+  categories: string[];
+  series: Array<{ name: string; values: number[] }>;
+}
+
+function readChartCachePoints(cache: any): string[] {
+  const points = ensureArray(cache?.pt)
+    .sort((a, b) => Number(a?.idx ?? 0) - Number(b?.idx ?? 0))
+    .map((point) => textFromXmlNode(point?.v).trim())
+    .filter(Boolean);
+  return points;
+}
+
+function parseDocxChartSpec(xml: string): DocxChartSpec | null {
+  const parsed = xmlParser.parse(xml);
+  const chart = parsed?.chartSpace?.chart;
+  const plotArea = chart?.plotArea;
+  if (!chart || !plotArea) return null;
+
+  const title = textFromXmlNode(chart?.title?.tx?.rich).replace(/\s+/g, " ").trim() || "Imported chart";
+  const barChart = ensureArray(plotArea?.barChart)[0];
+  const pieChart = ensureArray(plotArea?.pieChart)[0];
+
+  if (barChart) {
+    const series = ensureArray(barChart.ser).map((ser: any, index) => ({
+      name: textFromXmlNode(ser?.tx?.strRef?.strCache).replace(/\s+/g, " ").trim() || `Series ${index + 1}`,
+      values: readChartCachePoints(ser?.val?.numRef?.numCache).map((value) => Number(value)),
+    }));
+    const categories = readChartCachePoints(series.length > 0 ? barChart.ser?.[0]?.cat?.strRef?.strCache ?? barChart.ser?.cat?.strRef?.strCache : null);
+    return { title, type: "bar", categories, series };
+  }
+
+  if (pieChart) {
+    const series = ensureArray(pieChart.ser).map((ser: any, index) => ({
+      name: textFromXmlNode(ser?.tx?.strRef?.strCache).replace(/\s+/g, " ").trim() || `Series ${index + 1}`,
+      values: readChartCachePoints(ser?.val?.numRef?.numCache).map((value) => Number(value)),
+    }));
+    const categories = readChartCachePoints(pieChart.ser?.cat?.strRef?.strCache);
+    return { title, type: "pie", categories, series };
+  }
+
+  return {
+    title,
+    type: "unsupported",
+    categories: [],
+    series: [],
+  };
+}
+
+function createSvgDataUrl(svg: string): string {
+  return `data:image/svg+xml;base64,${Buffer.from(svg, "utf8").toString("base64")}`;
+}
+
+function renderDocxBarChartSvg(spec: DocxChartSpec): string {
+  const width = 720;
+  const height = 420;
+  const margin = { top: 48, right: 24, bottom: 90, left: 180 };
+  const plotWidth = width - margin.left - margin.right;
+  const categories = spec.categories.length > 0 ? spec.categories : spec.series[0]?.values.map((_, index) => `Item ${index + 1}`) ?? [];
+  const values = spec.series[0]?.values ?? [];
+  const maxValue = Math.max(1, ...values, 1);
+  const barHeight = Math.max(16, Math.floor((height - margin.top - margin.bottom) / Math.max(categories.length, 1) * 0.65));
+  const gap = Math.max(8, Math.floor((height - margin.top - margin.bottom) / Math.max(categories.length, 1) * 0.35));
+  const palette = ["#2f6fed", "#18a77a", "#d97706", "#b83280"];
+
+  const bars = categories.map((label, index) => {
+    const value = values[index] ?? 0;
+    const y = margin.top + index * (barHeight + gap);
+    const barWidth = Math.max(2, (value / maxValue) * plotWidth);
+    return `
+      <text x="${margin.left - 12}" y="${y + barHeight / 2 + 4}" text-anchor="end" font-family="Arial" font-size="13" fill="#334155">${escapeHtml(label)}</text>
+      <rect x="${margin.left}" y="${y}" width="${barWidth}" height="${barHeight}" rx="6" fill="${palette[index % palette.length]}" opacity="0.9" />
+      <text x="${margin.left + barWidth + 8}" y="${y + barHeight / 2 + 4}" font-family="Arial" font-size="12" fill="#0f172a">${Number.isFinite(value) ? value : ""}</text>
+    `;
+  }).join("");
+
+  const grid = [0, 0.25, 0.5, 0.75, 1].map((ratio) => {
+    const x = margin.left + plotWidth * ratio;
+    const label = Math.round(maxValue * ratio);
+    return `
+      <line x1="${x}" y1="${margin.top - 8}" x2="${x}" y2="${height - margin.bottom + 8}" stroke="#cbd5e1" stroke-dasharray="4 4" />
+      <text x="${x}" y="${height - margin.bottom + 28}" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748b">${label}</text>
+    `;
+  }).join("");
+
+  return createSvgDataUrl(`
+    <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+      <rect width="100%" height="100%" fill="#ffffff" />
+      <text x="${margin.left}" y="28" font-family="Arial" font-size="18" font-weight="700" fill="#0f172a">${escapeHtml(spec.title)}</text>
+      ${grid}
+      ${bars}
+    </svg>
+  `.trim());
+}
+
+function renderDocxPieChartSvg(spec: DocxChartSpec): string {
+  const width = 720;
+  const height = 420;
+  const cx = 230;
+  const cy = 220;
+  const radius = 120;
+  const palette = ["#2f6fed", "#18a77a", "#d97706", "#b83280", "#0ea5e9", "#7c3aed", "#dc2626"];
+  const categories = spec.categories.length > 0 ? spec.categories : spec.series[0]?.values.map((_, index) => `Item ${index + 1}`) ?? [];
+  const values = spec.series[0]?.values ?? [];
+  const total = Math.max(1, values.reduce((sum, value) => sum + (Number.isFinite(value) ? value : 0), 0));
+
+  let angle = -Math.PI / 2;
+  const slices = values.map((value, index) => {
+    const safeValue = Number.isFinite(value) ? value : 0;
+    const nextAngle = angle + (safeValue / total) * Math.PI * 2;
+    const x1 = cx + Math.cos(angle) * radius;
+    const y1 = cy + Math.sin(angle) * radius;
+    const x2 = cx + Math.cos(nextAngle) * radius;
+    const y2 = cy + Math.sin(nextAngle) * radius;
+    const largeArc = nextAngle - angle > Math.PI ? 1 : 0;
+    const path = `M ${cx} ${cy} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z`;
+    angle = nextAngle;
+    return `<path d="${path}" fill="${palette[index % palette.length]}" stroke="#ffffff" stroke-width="2" />`;
+  }).join("");
+
+  const legend = categories.map((label, index) => {
+    const y = 110 + index * 28;
+    const value = values[index] ?? 0;
+    const pct = Math.round(((Number.isFinite(value) ? value : 0) / total) * 100);
+    return `
+      <rect x="430" y="${y - 12}" width="14" height="14" rx="3" fill="${palette[index % palette.length]}" />
+      <text x="452" y="${y}" font-family="Arial" font-size="13" fill="#334155">${escapeHtml(label)} (${pct}%)</text>
+    `;
+  }).join("");
+
+  return createSvgDataUrl(`
+    <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+      <rect width="100%" height="100%" fill="#ffffff" />
+      <text x="40" y="36" font-family="Arial" font-size="18" font-weight="700" fill="#0f172a">${escapeHtml(spec.title)}</text>
+      ${slices}
+      ${legend}
+    </svg>
+  `.trim());
+}
+
+function createDocxChartFigure(spec: DocxChartSpec, id: string): ParsedFigure {
+  const imageData =
+    spec.type === "bar"
+      ? renderDocxBarChartSvg(spec)
+      : spec.type === "pie"
+        ? renderDocxPieChartSvg(spec)
+        : createFigurePlaceholderData(spec.title || id);
+
+  return {
+    id,
+    imageData,
+    caption: undefined,
+    page: 1,
+    confidence: spec.type === "unsupported" ? 0.75 : 0.96,
+    diagnostics: spec.type === "unsupported"
+      ? [{
+          level: "warning",
+          code: "DOCX_CHART_RENDER_FALLBACK",
+          message: "Embedded chart format is unsupported for full SVG rendering; placeholder used.",
+        }]
+      : [],
+  };
+}
+
 function makeBlockBbox(x: number, y: number, width: number, height: number): ParsedBoundingBox {
   return { x, y, width, height };
 }
@@ -158,6 +389,190 @@ function createFigurePlaceholderData(label: string): string {
   return `data:image/svg+xml;base64,${Buffer.from(svg, "utf8").toString("base64")}`;
 }
 
+async function extractDocxFigures(buffer: Buffer): Promise<{ figures: ParsedFigure[]; diagnostics: ParseDiagnostic[] }> {
+  const { default: JSZip } = await import("jszip");
+  const zip = await JSZip.loadAsync(buffer);
+  const diagnostics: ParseDiagnostic[] = [];
+  const figures: ParsedFigure[] = [];
+
+  const relsXml = await zip.file("word/_rels/document.xml.rels")?.async("string");
+  const documentXml = await zip.file("word/document.xml")?.async("string");
+  if (!relsXml || !documentXml) {
+    return { figures, diagnostics };
+  }
+
+  const relsParsed = xmlParser.parse(relsXml);
+  const relationships = ensureArray(relsParsed?.Relationships?.Relationship);
+  const relMap = new Map<string, { target: string; type: string }>();
+  for (const rel of relationships) {
+    if (!rel?.Id || !rel?.Target) continue;
+    relMap.set(String(rel.Id), { target: String(rel.Target), type: String(rel.Type ?? "") });
+  }
+
+  const drawingRefs = Array.from(
+    documentXml.matchAll(/<(?:a:blip|c:chart)\b[^>]*r:(?:embed|id)="([^"]+)"/g),
+  ).map((match) => match[1]);
+
+  let figureCount = 0;
+  for (const relId of drawingRefs) {
+    const rel = relMap.get(relId);
+    if (!rel) continue;
+
+    if (rel.type === DOCX_IMAGE_REL) {
+      const absolutePath = absoluteDocxPath("word/document.xml", rel.target);
+      const file = zip.file(absolutePath);
+      if (!file) continue;
+      const bytes = await file.async("uint8array");
+      figures.push({
+        id: `docx-figure-${++figureCount}`,
+        imageData: `data:${pathToDocxMime(absolutePath)};base64,${Buffer.from(bytes).toString("base64")}`,
+        page: 1,
+        confidence: 0.99,
+        diagnostics: [],
+      });
+      continue;
+    }
+
+    if (rel.type === DOCX_CHART_REL) {
+      const absolutePath = absoluteDocxPath("word/document.xml", rel.target);
+      const file = zip.file(absolutePath);
+      if (!file) continue;
+      const chartXml = await file.async("string");
+      const spec = parseDocxChartSpec(chartXml);
+      if (!spec) {
+        diagnostics.push({
+          level: "warning",
+          code: "DOCX_CHART_PARSE_FAILED",
+          message: `Embedded chart ${absolutePath} could not be parsed deterministically.`,
+        });
+        continue;
+      }
+      figures.push(createDocxChartFigure(spec, `docx-figure-${++figureCount}`));
+    }
+  }
+
+  return { figures, diagnostics };
+}
+
+function multiplyTransform(a: number[], b: number[]): number[] {
+  return [
+    a[0] * b[0] + a[2] * b[1],
+    a[1] * b[0] + a[3] * b[1],
+    a[0] * b[2] + a[2] * b[3],
+    a[1] * b[2] + a[3] * b[3],
+    a[0] * b[4] + a[2] * b[5] + a[4],
+    a[1] * b[4] + a[3] * b[5] + a[5],
+  ];
+}
+
+function applyTransform(matrix: number[], x: number, y: number): { x: number; y: number } {
+  return {
+    x: matrix[0] * x + matrix[2] * y + matrix[4],
+    y: matrix[1] * x + matrix[3] * y + matrix[5],
+  };
+}
+
+function bboxFromTransform(matrix: number[]): ParsedBoundingBox {
+  const points = [
+    applyTransform(matrix, 0, 0),
+    applyTransform(matrix, 1, 0),
+    applyTransform(matrix, 0, 1),
+    applyTransform(matrix, 1, 1),
+  ];
+  const xs = points.map((point) => point.x);
+  const ys = points.map((point) => point.y);
+  const minX = Math.min(...xs);
+  const maxX = Math.max(...xs);
+  const minY = Math.min(...ys);
+  const maxY = Math.max(...ys);
+  return {
+    x: minX,
+    y: minY,
+    width: Math.max(0, maxX - minX),
+    height: Math.max(0, maxY - minY),
+  };
+}
+
+function normalizePdfImageBytes(imgData: any, imageKind: Record<string, number>): Uint8Array {
+  const width = Number(imgData?.width || 0);
+  const height = Number(imgData?.height || 0);
+  const source = imgData?.data instanceof Uint8Array ? imgData.data : new Uint8Array(imgData?.data || []);
+  const rgba = new Uint8Array(width * height * 4);
+
+  if (imgData?.kind === imageKind.RGBA_32BPP) {
+    return source;
+  }
+
+  if (imgData?.kind === imageKind.RGB_24BPP) {
+    for (let i = 0, j = 0; i < source.length; i += 3, j += 4) {
+      rgba[j] = source[i] ?? 0;
+      rgba[j + 1] = source[i + 1] ?? 0;
+      rgba[j + 2] = source[i + 2] ?? 0;
+      rgba[j + 3] = 255;
+    }
+    return rgba;
+  }
+
+  if (imgData?.kind === imageKind.GRAYSCALE_1BPP) {
+    const rowBytes = Math.ceil(width / 8);
+    for (let y = 0; y < height; y += 1) {
+      for (let x = 0; x < width; x += 1) {
+        const byte = source[y * rowBytes + Math.floor(x / 8)] ?? 0;
+        const bit = (byte >> (7 - (x % 8))) & 1;
+        const value = bit ? 0 : 255;
+        const idx = (y * width + x) * 4;
+        rgba[idx] = value;
+        rgba[idx + 1] = value;
+        rgba[idx + 2] = value;
+        rgba[idx + 3] = 255;
+      }
+    }
+    return rgba;
+  }
+
+  return rgba;
+}
+
+async function pdfImageDataToDataUrl(imgData: any, imageKind: Record<string, number>): Promise<string | null> {
+  if (!imgData?.width || !imgData?.height || !imgData?.data) return null;
+  const { encode } = await import("fast-png");
+  const rgba = normalizePdfImageBytes(imgData, imageKind);
+  const png = encode({
+    width: imgData.width,
+    height: imgData.height,
+    data: rgba,
+    depth: 8,
+    channels: 4,
+  } as any);
+  return `data:image/png;base64,${Buffer.from(png).toString("base64")}`;
+}
+
+async function waitForPdfObject(
+  objs: { has: (id: string) => boolean; get: (id: string, callback?: (value: any) => void) => any },
+  objId: string,
+): Promise<any | null> {
+  if (objs.has(objId)) {
+    try {
+      return objs.get(objId);
+    } catch {
+      return null;
+    }
+  }
+
+  return new Promise((resolve) => {
+    const timeout = setTimeout(() => resolve(null), 1500);
+    try {
+      objs.get(objId, (value: any) => {
+        clearTimeout(timeout);
+        resolve(value);
+      });
+    } catch {
+      clearTimeout(timeout);
+      resolve(null);
+    }
+  });
+}
+
 async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
   const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
   const loadingTask = (pdfjs as any).getDocument({
@@ -180,6 +595,7 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
 
   for (let pageNum = 1; pageNum <= pdf.numPages; pageNum += 1) {
     const page = await pdf.getPage(pageNum);
+    const viewport = page.getViewport({ scale: 1 });
     const textContent = await page.getTextContent();
     const items = (textContent.items as Array<{ str?: string; transform?: number[]; width?: number; height?: number }>)
       .filter((item) => typeof item.str === "string" && item.str.trim().length > 0)
@@ -300,6 +716,96 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
         });
       }
     }
+
+    const operatorList = await page.getOperatorList();
+    const stack: number[][] = [];
+    let currentTransform = [1, 0, 0, 1, 0, 0];
+    const minFigureWidth = Math.max(24, viewport.width * 0.06);
+    const minFigureHeight = Math.max(24, viewport.height * 0.06);
+
+    for (let opIndex = 0; opIndex < operatorList.fnArray.length; opIndex += 1) {
+      const fn = operatorList.fnArray[opIndex];
+      const args = operatorList.argsArray[opIndex] || [];
+
+      if (fn === (pdfjs as any).OPS.save) {
+        stack.push([...currentTransform]);
+        continue;
+      }
+
+      if (fn === (pdfjs as any).OPS.restore) {
+        currentTransform = stack.pop() || [1, 0, 0, 1, 0, 0];
+        continue;
+      }
+
+      if (fn === (pdfjs as any).OPS.transform) {
+        currentTransform = multiplyTransform(currentTransform, args as number[]);
+        continue;
+      }
+
+      const isImageOp =
+        fn === (pdfjs as any).OPS.paintImageXObject ||
+        fn === (pdfjs as any).OPS.paintInlineImageXObject ||
+        fn === (pdfjs as any).OPS.paintImageXObjectRepeat;
+
+      if (!isImageOp) continue;
+
+      const bbox = bboxFromTransform(currentTransform);
+      if (bbox.width < minFigureWidth || bbox.height < minFigureHeight) {
+        continue;
+      }
+
+      let imageData: any = null;
+      let imageId = `pdf-figure-${pageNum}-${opIndex}`;
+
+      if (fn === (pdfjs as any).OPS.paintInlineImageXObject) {
+        imageData = args[0];
+      } else {
+        const objId = String(args[0]);
+        imageId = objId;
+        imageData = await waitForPdfObject(page.objs as any, objId);
+      }
+
+      const dataUrl = await pdfImageDataToDataUrl(imageData, (pdfjs as any).ImageKind);
+      if (!dataUrl) {
+        diagnostics.push({
+          level: "warning",
+          code: "PDF_IMAGE_EXTRACTION_FAILED",
+          message: `An embedded image on page ${pageNum} could not be converted into a deterministic figure asset.`,
+        });
+        continue;
+      }
+
+      figures.push({
+        id: `fig-${++figureCount}`,
+        imageData: dataUrl,
+        page: pageNum,
+        bbox,
+        confidence: 0.95,
+        diagnostics: [],
+      });
+    }
+
+    const captionBlocks = blocks.filter((block) => block.page === pageNum && block.type === "caption");
+    const usedCaptionIds = new Set<string>();
+    for (const figure of figures.filter((item) => item.page === pageNum)) {
+      const match = captionBlocks
+        .filter((block) => !usedCaptionIds.has(block.id))
+        .map((block) => {
+          const sameColumnPenalty = figure.bbox ? Math.abs((block.bbox?.x || 0) - figure.bbox.x) : 0;
+          const verticalDelta = figure.bbox ? Math.abs((block.bbox?.y || 0) - figure.bbox.y) : 0;
+          const isBelow = figure.bbox && block.bbox ? block.bbox.y <= figure.bbox.y : true;
+          return {
+            block,
+            score: verticalDelta + sameColumnPenalty + (isBelow ? 0 : 120),
+          };
+        })
+        .sort((a, b) => a.score - b.score)[0];
+
+      if (match && match.score < Math.max(viewport.height * 0.35, 220)) {
+        figure.caption = match.block.text;
+        usedCaptionIds.add(match.block.id);
+      }
+    }
   }
 
   return {
@@ -354,12 +860,13 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
       "p[style-name='Section Heading'] => h2:fresh",
     ];
 
-    const [result, textResult] = await Promise.all([
+    const [result, textResult, extractedFigures] = await Promise.all([
       mammoth.convertToHtml({
         buffer: input.buffer,
         styleMap: mammothStyleMap,
       } as any),
       mammoth.extractRawText({ buffer: input.buffer } as any),
+      extractDocxFigures(input.buffer),
     ]);
     const warnings = (result.messages || []).map((message) => ({
       level: "warning" as const,
@@ -382,7 +889,7 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
     // Only call LLM when the HTML doesn't have enough heading structure for deterministic parsing.
     const headingCount = (result.value.match(/<h[1-3][^>]*>/gi) || []).length;
     const boldHeadingCount = (result.value.match(/<p><strong>[A-Z][^<]{2,60}<\/strong><\/p>/gi) || []).length;
-    const deterministicLooksGood = (headingCount + boldHeadingCount) >= 3;
+    const deterministicLooksGood = (headingCount + boldHeadingCount) >= 4;
 
     let llmParsed;
     if (!deterministicLooksGood) {
@@ -404,15 +911,19 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
       }
     }
 
-    return {
+    const rawDocx: RawParsedDocument = {
       fileTitle,
       format: "docx",
       html: result.value,
       text: normalizeText(textResult.value),
-      diagnostics: [...diagnostics, ...fidelityNote, ...warnings],
+      diagnostics: [...diagnostics, ...fidelityNote, ...warnings, ...extractedFigures.diagnostics],
+      figures: extractedFigures.figures,
       references: extractReferencesFromOupHtml(result.value),
       llmParsed,
     };
+    const parsedDocx = parseRawDocument(rawDocx);
+    const errorDiagsDocx = runDeterministicErrorChecks(parsedDocx);
+    return { ...rawDocx, diagnostics: [...(rawDocx.diagnostics ?? []), ...errorDiagsDocx] };
   }
 
   if (extension === "jpg" || extension === "jpeg" || extension === "png" || extension === "gif" || extension === "webp") {
@@ -443,7 +954,7 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
         (b) => b.suggestedSection && b.suggestedSection !== "Content",
       ).length;
       const structureRatio = payload.blocks.length > 0 ? nonContentBlocks / payload.blocks.length : 0;
-      const pdfDeterministicLooksGood = structureRatio >= 0.15;
+      const pdfDeterministicLooksGood = structureRatio >= 0.25;
 
       let llmParsed;
       if (!pdfDeterministicLooksGood && payload.text.trim().length > 0) {
@@ -472,7 +983,7 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
             "This service does not perform OCR — content will be empty until a text-layer PDF is uploaded.",
         });
       }
-      return {
+      const rawPdf: RawParsedDocument = {
         fileTitle,
         format: "pdf",
         text: payload.text,
@@ -483,6 +994,9 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
         diagnostics: [...diagnostics, ...payload.diagnostics],
         llmParsed,
       };
+      const parsedPdf = parseRawDocument(rawPdf);
+      const errorDiagsPdf = runDeterministicErrorChecks(parsedPdf);
+      return { ...rawPdf, diagnostics: [...(rawPdf.diagnostics ?? []), ...errorDiagsPdf] };
     } catch (error) {
       diagnostics.push({
         level: "error",
