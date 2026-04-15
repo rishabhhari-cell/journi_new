@@ -177,6 +177,26 @@ export default function Collaboration() {
   const project = { collaborators: [] as { id: string; name: string; initials: string; online: boolean; role?: string }[] };
 
 const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
+
+  const isPlaceholderSectionContent = (html?: string | null) => {
+    const value = (html || '').trim();
+    if (!value || value === '<p></p>') return true;
+    if (/<img\b|<table\b|<ol\b|<ul\b|<li\b|<figure\b/i.test(value)) return false;
+
+    const withoutComments = value.replace(/<!--[\s\S]*?-->/g, '');
+    const withoutHeadings = withoutComments.replace(/<h[1-6]\b[^>]*>[\s\S]*?<\/h[1-6]>/gi, '');
+    const withoutEmptyParagraphs = withoutHeadings.replace(/<p\b[^>]*>(?:\s|&nbsp;|<br\s*\/?>)*<\/p>/gi, '');
+    const text = withoutEmptyParagraphs
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/&nbsp;/gi, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    return text.length === 0;
+  };
+
+  const nonBlockingImportWarnings = (result: ImportDocumentResult) =>
+    result.diagnostics.filter((d) => d.level !== 'info' && !(result.sourceFormat === 'docx' && d.code === 'DOCX_PARSE_WARNING'));
   const [activeTab, setActiveTab] = useState<ViewTab>('editor');
   const [isEditingTitle, setIsEditingTitle] = useState(false);
   const [titleDraft, setTitleDraft] = useState(manuscript.title);
@@ -562,7 +582,8 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     }
 
     const existingSections = [...manuscript.sections];
-    const isManuscriptCurrentlyEmpty = existingSections.every((s) => !s.content || s.content.trim() === '<p></p>' || s.content.trim() === '');
+    const contentSections = existingSections.filter((s) => normalizeSectionMatchKey(s.title) !== 'title');
+    const isManuscriptCurrentlyEmpty = contentSections.every((s) => isPlaceholderSectionContent(s.content));
 
     // If manuscript is empty, directly replace with imported sections (preserves structure)
     if (isManuscriptCurrentlyEmpty) {
@@ -582,7 +603,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         toast.success(`${result.citations.length} citation(s) imported`);
       }
 
-      const warnings = result.diagnostics.filter((d) => d.level !== 'info');
+      const warnings = nonBlockingImportWarnings(result);
       if (warnings.length > 0) toast.warning(warnings[0].message);
       return;
     }
@@ -649,7 +670,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     if (result.citations.length > 0) parts.push(`${result.citations.length} citation(s) imported`);
     toast.success(`Imported: ${parts.join(', ') || 'content loaded'}`);
 
-    const warnings = result.diagnostics.filter((d) => d.level !== 'info');
+    const warnings = nonBlockingImportWarnings(result);
     if (warnings.length > 0) toast.warning(warnings[0].message);
   };
 

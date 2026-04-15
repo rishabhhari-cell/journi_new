@@ -86,6 +86,23 @@ function wrapImportedHtml(sessionId: string, item: ImportSessionItemDTO, html: s
   return `${marker}${html}`;
 }
 
+function isPlaceholderSectionHtml(html: string | null | undefined): boolean {
+  const value = (html || "").trim();
+  if (!value || value === "<p></p>") return true;
+  if (/<img\b|<table\b|<ol\b|<ul\b|<li\b|<figure\b/i.test(value)) return false;
+
+  const withoutComments = value.replace(/<!--[\s\S]*?-->/g, "");
+  const withoutHeadings = withoutComments.replace(/<h[1-6]\b[^>]*>[\s\S]*?<\/h[1-6]>/gi, "");
+  const withoutEmptyParagraphs = withoutHeadings.replace(/<p\b[^>]*>(?:\s|&nbsp;|<br\s*\/?>)*<\/p>/gi, "");
+  const text = withoutEmptyParagraphs
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return text.length === 0;
+}
+
 function itemToHtml(sessionId: string, item: ImportSessionItemDTO): string {
   if (item.html?.trim()) return wrapImportedHtml(sessionId, item, item.html);
 
@@ -258,7 +275,7 @@ export async function commitImportSession(sessionId: string) {
     if (existing) {
       const existingHtml = existing.content_html || "<p></p>";
       existing.content_html =
-        existingHtml.trim() === "<p></p>" || existingHtml.trim() === ""
+        isPlaceholderSectionHtml(existingHtml)
           ? contentHtml
           : `${existingHtml}\n${contentHtml}`;
       existing.status = existing.status === "pending" ? "draft" : existing.status;
