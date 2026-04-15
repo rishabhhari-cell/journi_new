@@ -663,6 +663,9 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     }
   };
 
+  const hasReviewableImportContent = (result: ImportDocumentResult) =>
+    result.review.blocks.length > 0 || result.review.figures.length > 0 || result.review.tables.length > 0;
+
   const buildReviewableSections = (
     result: ImportDocumentResult,
     blockAssignments: Record<string, string>,
@@ -817,7 +820,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
 
       const session = await createServerImportSession(result);
 
-      if (result.review.required) {
+      if (result.review.required && hasReviewableImportContent(result)) {
         openImportReview(result, session);
         toast.message('Review required', { description: 'Approve extracted content before it is committed.' });
         return;
@@ -2173,9 +2176,11 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
           <div className="relative z-10 max-h-[90vh] w-full max-w-6xl overflow-hidden rounded-2xl border border-border bg-card shadow-2xl">
             <div className="flex items-center justify-between border-b border-border px-5 py-3">
               <div>
-                <h3 className="text-base font-semibold text-foreground">Review PDF import</h3>
+                <h3 className="text-base font-semibold text-foreground">
+                  Review {pendingImportReview.result.sourceFormat === 'docx' ? 'Word' : pendingImportReview.result.sourceFormat.toUpperCase()} import
+                </h3>
                 <p className="text-xs text-muted-foreground">
-                  Confirm placement of extracted text, figures, tables, captions, and references.
+                  Confirm placement of extracted content before it is committed.
                 </p>
               </div>
               <button

@@ -299,12 +299,114 @@ function isBoldOnlyHeading(node: Element): boolean {
   return /^[A-Z][A-Za-z0-9\s&/\-]{2,}$/.test(text) && !text.includes(".");
 }
 
+function stripHtmlToText(html: string): string {
+  return html
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/p>/gi, "\n")
+    .replace(/<\/h[1-6]>/gi, "\n")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/\s+\n/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .replace(/[ \t]{2,}/g, " ")
+    .trim();
+}
+
+function isBoldOnlyHeadingHtml(blockHtml: string, text: string): boolean {
+  if (!text || text.length > 80) return false;
+
+  const innerHtml = blockHtml
+    .replace(/^<p\b[^>]*>/i, "")
+    .replace(/<\/p>$/i, "")
+    .trim();
+
+  const isEntireParagraphBold =
+    /^<(strong|b)\b[^>]*>[\s\S]*<\/\1>$/i.test(innerHtml) &&
+    stripHtmlToText(innerHtml) === text;
+
+  if (!isEntireParagraphBold) return false;
+
+  for (const [, matcher] of CANONICAL_ALIASES) {
+    if (matcher.test(text)) return true;
+  }
+  if (/^[A-Z][A-Z\s&/\-0-9]{2,}$/.test(text)) return true;
+  return /^[A-Z][A-Za-z0-9\s&/\-]{2,}$/.test(text) && !text.includes(".");
+}
+
+function extractHtmlBlocks(html: string): Array<{ tag: string; html: string; text: string }> {
+  const blocks = Array.from(
+    html.matchAll(/<(p|h1|h2|h3)\b[^>]*>[\s\S]*?<\/\1>/gi),
+  ).map((match) => {
+    const blockHtml = match[0];
+    return {
+      tag: match[1].toLowerCase(),
+      html: blockHtml,
+      text: stripHtmlToText(blockHtml),
+    };
+  });
+
+  return blocks;
+}
+
+function parseSectionsFromHtmlWithoutDom(html: string): IntermediateSection[] {
+  const blocks = extractHtmlBlocks(html);
+  if (blocks.length === 0) {
+    return html.trim() ? [{ title: "Content", content: ensureParagraph(html) }] : [];
+  }
+
+  const sections: IntermediateSection[] = [];
+  let currentTitle = "";
+  let currentContent = "";
+
+  for (const block of blocks) {
+    const isHeading =
+      block.tag === "h1" ||
+      block.tag === "h2" ||
+      block.tag === "h3" ||
+      (block.tag === "p" && isBoldOnlyHeadingHtml(block.html, block.text));
+
+    if (isHeading) {
+      if (currentTitle || currentContent.trim()) {
+        sections.push({
+          title: currentTitle || "Content",
+          content: ensureParagraph(currentContent.trim()),
+        });
+      }
+      currentTitle = normalizeHeading(block.text) || "Content";
+      currentContent = "";
+      continue;
+    }
+
+    currentContent += block.html;
+  }
+
+  if (currentTitle || currentContent.trim()) {
+    sections.push({
+      title: currentTitle || "Content",
+      content: ensureParagraph(currentContent.trim()),
+    });
+  }
+
+  if (sections.length === 0 && html.trim()) {
+    sections.push({ title: "Content", content: ensureParagraph(html) });
+  }
+
+  return sections;
+}
+
 function parseSectionsFromHtml(html: string): IntermediateSection[] {
-  if (typeof DOMParser === "undefined") return [];
+  if (typeof DOMParser === "undefined") {
+    return parseSectionsFromHtmlWithoutDom(html);
+  }
   const parser = new DOMParser();
   const doc = parser.parseFromString(`<div id="root">${html}</div>`, "text/html");
   const root = doc.getElementById("root");
-  if (!root) return [];
+  if (!root) {
+    return parseSectionsFromHtmlWithoutDom(html);
+  }
 
   const sections: IntermediateSection[] = [];
   let currentTitle = "";
@@ -496,6 +598,20 @@ function createPlaceholderImageData(label: string): string {
     return "";
   };
   return `data:image/svg+xml;base64,${encodeUtf8(svg)}`;
+}
+
+function isReviewBlockingDiagnostic(
+  diagnostic: ParseDiagnostic,
+  format: RawParsedDocument["format"],
+): boolean {
+  if (diagnostic.level === "info") return false;
+  if (diagnostic.level === "error") return true;
+
+  if (format === "docx") {
+    return diagnostic.code !== "DOCX_PARSE_WARNING";
+  }
+
+  return true;
 }
 
 function tableLinesToMatrix(lines: string[]): string[][] {
@@ -797,7 +913,7 @@ export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
     }
   }
 
-  const hasWarnings = diagnostics.some((item) => item.level === "warning" || item.level === "error");
+  const hasWarnings = diagnostics.some((item) => isReviewBlockingDiagnostic(item, raw.format));
   const hasLowConfidenceFigures = parsedFigures.some((figure) => figure.confidence < 0.9);
   const hasLowConfidenceTables = parsedTables.some((table) => table.confidence < 0.9);
   const needsReview =

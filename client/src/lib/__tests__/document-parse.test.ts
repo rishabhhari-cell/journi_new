@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { countWordsFromHtml, countWordsFromText } from '@shared/word-count';
 import { parseRawDocument } from '@shared/document-parse';
 import { OUP_AI_REVIEW_SEED } from '@/data/seeded-ou-paper';
@@ -47,6 +47,49 @@ describe('section mapping', () => {
     expect(titles).toContain('References');
     expect(parsed.citations).toHaveLength(1);
     expect(parsed.citations[0].doi).toBe('10.1000/xyz123');
+  });
+
+  it('parses docx-style html even when DOMParser is unavailable', () => {
+    vi.stubGlobal('DOMParser', undefined);
+
+    try {
+      const parsed = parseRawDocument({
+        fileTitle: 'Digital Health Survey',
+        format: 'docx',
+        html: [
+          '<p><strong>Digital health in the undergraduate medical curriculum</strong></p>',
+          '<p><strong>Abstract</strong></p>',
+          '<p>Short abstract text.</p>',
+          '<p><strong>Introduction</strong></p>',
+          '<p>Intro body text.</p>',
+          '<p><strong>Methods</strong></p>',
+          '<p>Methods body text.</p>',
+          '<p><strong>Results</strong></p>',
+          '<p>Results body text.</p>',
+          '<p><strong>Discussion</strong></p>',
+          '<p>Discussion body text.</p>',
+        ].join(''),
+        diagnostics: [
+          {
+            level: 'warning',
+            code: 'DOCX_PARSE_WARNING',
+            message: 'Unrecognised paragraph style: Normal (Web)',
+          },
+        ],
+      });
+
+      const titles = parsed.sections.map((section) => section.title);
+      expect(titles).toContain('Title');
+      expect(titles).toContain('Abstract');
+      expect(titles).toContain('Introduction');
+      expect(titles).toContain('Search Strategy');
+      expect(titles).toContain('Results & Synthesis');
+      expect(titles).toContain('Discussion');
+      expect(parsed.sections.find((section) => section.title === 'Introduction')?.content).toContain('Intro body text.');
+      expect(parsed.reviewRequired).toBe(false);
+    } finally {
+      vi.unstubAllGlobals();
+    }
   });
 });
 

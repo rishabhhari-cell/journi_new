@@ -10,6 +10,7 @@ import type {
   ParsedFigure,
   ParsedLink,
   ParsedManuscript,
+  ParsedSection,
   ParsedTable,
   RawParsedDocument,
 } from '@shared/document-parse';
@@ -70,6 +71,13 @@ function deriveImportStatus(
   diagnostics: ParseDiagnostic[],
   reviewRequired: boolean,
 ): { status: ImportSessionStatus; unsupportedReason: string | null } {
+  const hasReviewBlockingDiagnostics = diagnostics.some((item) => {
+    if (item.level === 'info') return false;
+    if (item.level === 'error') return true;
+    if (raw.format === 'docx') return item.code !== 'DOCX_PARSE_WARNING';
+    return true;
+  });
+
   if (raw.format === 'image') {
     return {
       status: 'manual_only',
@@ -85,7 +93,7 @@ function deriveImportStatus(
     };
   }
 
-  if (reviewRequired || diagnostics.some((item) => item.level !== 'info')) {
+  if (reviewRequired || hasReviewBlockingDiagnostics) {
     return { status: 'pending_review', unsupportedReason: null };
   }
 
@@ -94,7 +102,10 @@ function deriveImportStatus(
 
 function buildDocxImportItems(
   raw: RawParsedDocument,
-  parsed: ParsedManuscript,
+  parsed: {
+    sections: Array<Pick<ParsedSection, 'title' | 'content' | 'sourceTitle'>>;
+    citations: ParsedManuscript['citations'];
+  },
 ): ImportSessionItemApiDTO[] {
   const items: ImportSessionItemApiDTO[] = parsed.sections.map((section, index) => ({
     id: `section-${index + 1}`,
@@ -552,11 +563,16 @@ async function parseLocally(file: File): Promise<RawParsedDocument> {
 
   if (extension === 'docx') {
     const mammoth = await import('mammoth');
-    const result = await mammoth.convertToHtml({ arrayBuffer: await file.arrayBuffer() });
+    const arrayBuffer = await file.arrayBuffer();
+    const [result, textResult] = await Promise.all([
+      mammoth.convertToHtml({ arrayBuffer }),
+      mammoth.extractRawText({ arrayBuffer }),
+    ]);
     return {
       fileTitle: file.name.replace(/\.docx$/i, ''),
       format: 'docx',
       html: result.value,
+      text: textResult.value,
       references: extractReferencesFromOupHtml(result.value),
       diagnostics: (result.messages || []).map((item) => ({
         level: 'warning' as const,

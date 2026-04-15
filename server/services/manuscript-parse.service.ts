@@ -354,10 +354,13 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
       "p[style-name='Section Heading'] => h2:fresh",
     ];
 
-    const result = await mammoth.convertToHtml({
-      buffer: input.buffer,
-      styleMap: mammothStyleMap,
-    } as any);
+    const [result, textResult] = await Promise.all([
+      mammoth.convertToHtml({
+        buffer: input.buffer,
+        styleMap: mammothStyleMap,
+      } as any),
+      mammoth.extractRawText({ buffer: input.buffer } as any),
+    ]);
     const warnings = (result.messages || []).map((message) => ({
       level: "warning" as const,
       code: "DOCX_PARSE_WARNING",
@@ -384,7 +387,6 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
     let llmParsed;
     if (!deterministicLooksGood) {
       try {
-        const textResult = await mammoth.extractRawText({ buffer: input.buffer });
         if (textResult.value.trim().length > 0) {
           llmParsed = await parseDocumentWithLLM(textResult.value);
           diagnostics.push({
@@ -406,6 +408,7 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
       fileTitle,
       format: "docx",
       html: result.value,
+      text: normalizeText(textResult.value),
       diagnostics: [...diagnostics, ...fidelityNote, ...warnings],
       references: extractReferencesFromOupHtml(result.value),
       llmParsed,
