@@ -6,6 +6,7 @@ import { fetchCrossrefEnrichment } from "./adapters/crossref.adapter";
 import { fetchDoajEnrichment } from "./adapters/doaj.adapter";
 import { fetchOpenAlexEnrichment } from "./adapters/openalex.adapter";
 import type { JournalEnrichment, JournalSource } from "./adapters/types";
+import { extractGuidelinesFromHtml, extractLogoFromHtml } from "./scrape.service";
 
 const sourcePriority: Record<JournalSource, number> = {
   manual: 100,
@@ -28,7 +29,43 @@ const writableColumns = new Set([
   "submission_portal_url",
   "submission_requirements_json",
   "logo_url",
+  "acceptance_rate",
+  "avg_decision_days",
+  "mean_time_to_publication_days",
 ]);
+
+async function fetchPageText(url: string): Promise<{ html: string; text: string } | null> {
+  try {
+    const res = await fetch(url, {
+      headers: { "User-Agent": "Journi/1.0 (journal metadata bot; contact support@journi.com)" },
+      signal: AbortSignal.timeout(15_000),
+    });
+    if (!res.ok) return null;
+    const html = await res.text();
+    const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+    return { html, text };
+  } catch {
+    return null;
+  }
+}
+
+async function callModalScraper(pageText: string): Promise<Record<string, unknown> | null> {
+  const url = process.env.MODAL_SCRAPER_URL;
+  if (!url) return null;
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ page_text: pageText, _auth: process.env.MODAL_TOKEN_SECRET }),
+      signal: AbortSignal.timeout(60_000),
+    });
+    if (!res.ok) return null;
+    const data = (await res.json()) as { guidelines?: Record<string, unknown> };
+    return data.guidelines ?? null;
+  } catch {
+    return null;
+  }
+}
 
 function shouldOverwrite(
   currentValue: unknown,
@@ -40,7 +77,13 @@ function shouldOverwrite(
 }
 
 function normalizeSource(source: string | undefined): JournalSource | "manual" {
-  if (source === "crossref" || source === "openalex" || source === "doaj" || source === "manual") {
+  if (
+    source === "crossref" ||
+    source === "openalex" ||
+    source === "doaj" ||
+    source === "manual" ||
+    source === "scraper"
+  ) {
     return source;
   }
   return "manual";
@@ -86,6 +129,56 @@ async function enrichRow(row: JournalRow) {
       if (shouldOverwrite(currentValue, currentSource, source)) {
         updates[field] = value;
         currentProvenance[field] = source;
+      }
+    }
+  }
+
+  // ── Scrape submission guidelines and logo from journal website ──────────────
+  const websiteUrl = (updates.website_url as string | undefined) ?? row.website_url;
+  if (websiteUrl) {
+    const page = await fetchPageText(websiteUrl);
+    if (page) {
+      // Logo
+      const logo = extractLogoFromHtml(page.html, websiteUrl);
+      if (logo && !row.logo_url && !updates.logo_url) {
+        updates.logo_url = logo;
+        currentProvenance.logo_url = "scraper";
+      }
+
+      // Guidelines
+      const ruleResult = extractGuidelinesFromHtml(page.html);
+      let guidelinesFields = ruleResult.fields;
+
+      if (ruleResult.confidence < 3) {
+        const llmResult = await callModalScraper(page.text);
+        if (llmResult) {
+          // Rule-based takes precedence for fields it already extracted
+          guidelinesFields = { ...llmResult, ...guidelinesFields };
+        }
+      }
+
+      if (Object.keys(guidelinesFields).length > 0) {
+        const {
+          acceptance_rate,
+          mean_time_to_publication_days,
+          ...submissionFields
+        } = guidelinesFields as Record<string, unknown>;
+
+        if (Object.keys(submissionFields).length > 0) {
+          updates.submission_requirements_json = {
+            ...(row.submission_requirements_json ?? {}),
+            ...submissionFields,
+          };
+          currentProvenance.submission_requirements_json = "scraper";
+        }
+        if (acceptance_rate != null && row.acceptance_rate == null) {
+          updates.acceptance_rate = acceptance_rate;
+          currentProvenance.acceptance_rate = "scraper";
+        }
+        if (mean_time_to_publication_days != null && row.mean_time_to_publication_days == null) {
+          updates.mean_time_to_publication_days = mean_time_to_publication_days;
+          currentProvenance.mean_time_to_publication_days = "scraper";
+        }
       }
     }
   }

@@ -247,4 +247,18 @@ journalsRouter.post("/sync", requireAuth, async (req, res, next) => {
   }
 });
 
+// Called by Modal monthly_journal_sync scheduled function — not user-facing.
+journalsRouter.post("/sync-scrape", async (req, res, next) => {
+  try {
+    const secret = req.headers["x-scraper-secret"];
+    if (!secret || secret !== process.env.JOURNI_SCRAPER_SECRET) {
+      return res.status(401).json({ error: "unauthorized" });
+    }
+    const result = await syncJournals({ staleHours: 720 }); // 30 days
+    res.json(result);
+  } catch (err) {
+    next(err);
+  }
+});
+
 
