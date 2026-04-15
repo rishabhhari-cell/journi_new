@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import { countWordsFromHtml, countWordsFromText } from '@shared/word-count';
-import { parseRawDocument } from '@shared/document-parse';
+import { normalizeSectionMatchKey, parseRawDocument } from '@shared/document-parse';
 import { OUP_AI_REVIEW_SEED } from '@/data/seeded-ou-paper';
 
 describe('word count tokenizer', () => {
@@ -81,15 +81,61 @@ describe('section mapping', () => {
       const titles = parsed.sections.map((section) => section.title);
       expect(titles).toContain('Title');
       expect(titles).toContain('Abstract');
-      expect(titles).toContain('Introduction');
-      expect(titles).toContain('Search Strategy');
-      expect(titles).toContain('Results & Synthesis');
-      expect(titles).toContain('Discussion');
-      expect(parsed.sections.find((section) => section.title === 'Introduction')?.content).toContain('Intro body text.');
+      expect(parsed.sections.find((section) => section.title === 'Abstract')?.content).toContain('Intro body text.');
+      expect(parsed.sections.find((section) => section.title === 'Abstract')?.content).toContain('<h3>Results</h3>');
       expect(parsed.reviewRequired).toBe(false);
     } finally {
       vi.unstubAllGlobals();
     }
+  });
+
+  it('folds docx front matter and structured abstract into the right sections', () => {
+    const parsed = parseRawDocument({
+      fileTitle: 'Import Test',
+      format: 'docx',
+      html: [
+        '<p><strong>Digital health in the undergraduate medical curriculum</strong></p>',
+        '<p><strong>Authors:</strong></p>',
+        '<p>Yuri Aung, Example Author</p>',
+        '<p><strong>Abstract</strong></p>',
+        '<p><strong>Introduction</strong></p>',
+        '<p>Abstract introduction text.</p>',
+        '<p><strong>Methods</strong></p>',
+        '<p>Abstract methods text.</p>',
+        '<p><strong>Results</strong></p>',
+        '<p>Abstract results text.</p>',
+        '<p><strong>Discussion</strong></p>',
+        '<p>Abstract discussion text.</p>',
+        '<p><strong>Introduction</strong></p>',
+        '<p>Main introduction text.</p>',
+        '<p><strong>Results</strong></p>',
+        '<p>Main results text.</p>',
+        '<p>Figure 1: Example figure caption.</p>',
+      ].join(''),
+    });
+
+    const title = parsed.sections.find((section) => section.title === 'Title');
+    const abstract = parsed.sections.find((section) => section.title === 'Abstract');
+    const introduction = parsed.sections.find((section) => section.title === 'Introduction');
+    const results = parsed.sections.find((section) => section.title === 'Results & Synthesis');
+    const figures = parsed.sections.find((section) => section.title === 'Figures and Tables');
+
+    expect(title?.content).toContain('Authors:');
+    expect(abstract?.content).toContain('<h3>Introduction</h3>');
+    expect(abstract?.content).toContain('Abstract methods text.');
+    expect(introduction?.content).toContain('Main introduction text.');
+    expect(results?.content).toContain('Main results text.');
+    expect(figures?.content).toContain('Figure 1: Example figure caption.');
+  });
+});
+
+describe('section match keys', () => {
+  it('maps imported full-paper aliases onto existing manuscript sections', () => {
+    expect(normalizeSectionMatchKey('Results & Synthesis')).toBe('results');
+    expect(normalizeSectionMatchKey('Results')).toBe('results');
+    expect(normalizeSectionMatchKey('Search Strategy')).toBe('methods');
+    expect(normalizeSectionMatchKey('Materials and Methods')).toBe('methods');
+    expect(normalizeSectionMatchKey('Figures and Tables')).toBe('figures_and_tables');
   });
 });
 

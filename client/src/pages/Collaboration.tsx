@@ -42,6 +42,7 @@ import { useManuscript } from '@/contexts/ManuscriptContext';
 import type { CitationFormData, CommentFormData, DocumentSection, ManuscriptType } from '@/types';
 import { format } from 'date-fns';
 import { exportToDocx, exportToPdf, importDocx, importPdf, importImage, type ImportDocumentResult } from '@/lib/document-io';
+import { normalizeSectionMatchKey } from '@shared/document-parse';
 import {
   commitImportSession,
   createImportSession,
@@ -590,11 +591,19 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     let matchedCount = 0;
     let addedCount = 0;
     const unmatchedImported: Partial<DocumentSection>[] = [];
+    const findMatchingSection = (title: string) => {
+      const trimmedTitle = title.trim().toLowerCase();
+      const exact = existingSections.find((s) => s.title.trim().toLowerCase() === trimmedTitle);
+      if (exact) return exact;
+
+      const importedKey = normalizeSectionMatchKey(title);
+      return existingSections.find((s) => normalizeSectionMatchKey(s.title) === importedKey);
+    };
 
     for (const imported of result.sections) {
       const normalizedImportedTitle = normalizePlainImportedText(imported.title || '', { trim: true });
       const importedTitle = normalizedImportedTitle.toLowerCase();
-      const match = existingSections.find((s) => s.title.trim().toLowerCase() === importedTitle);
+      const match = findMatchingSection(normalizedImportedTitle);
 
       if (match) {
         updateSectionContent(match.id, normalizeImportedHtml(imported.content || '<p></p>'));

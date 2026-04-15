@@ -2,6 +2,7 @@ import type {
   ImportSessionItemDTO,
   ManuscriptImportSessionDTO,
 } from "../../shared/backend";
+import { normalizeSectionMatchKey } from "../../shared/document-parse";
 import { HttpError } from "../lib/http-error";
 import { supabaseAdmin } from "../lib/supabase";
 
@@ -232,6 +233,7 @@ export async function commitImportSession(sessionId: string) {
 
   const sectionRows = [...(existingSections ?? [])];
   const sectionByTitle = new Map(sectionRows.map((row) => [row.title.trim().toLowerCase(), row]));
+  const sectionByKey = new Map(sectionRows.map((row) => [normalizeSectionMatchKey(row.title), row]));
   let maxSortOrder = sectionRows.reduce((max, row) => Math.max(max, row.sort_order ?? 0), -1);
 
   const sectionItems = acceptedItems.filter((item) =>
@@ -252,7 +254,7 @@ export async function commitImportSession(sessionId: string) {
     if (!contentHtml) continue;
 
     const key = sectionTitle.toLowerCase();
-    const existing = sectionByTitle.get(key);
+    const existing = sectionByTitle.get(key) ?? sectionByKey.get(normalizeSectionMatchKey(sectionTitle));
     if (existing) {
       const existingHtml = existing.content_html || "<p></p>";
       existing.content_html =
@@ -276,6 +278,7 @@ export async function commitImportSession(sessionId: string) {
       updated_at: new Date().toISOString(),
     });
     sectionByTitle.set(key, sectionRows[sectionRows.length - 1]);
+    sectionByKey.set(normalizeSectionMatchKey(sectionTitle), sectionRows[sectionRows.length - 1]);
   }
 
   const upsertPayload = sectionRows.map((row, index) => ({
