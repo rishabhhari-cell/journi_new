@@ -61,7 +61,7 @@ Page text:
 @app.cls(
     gpu="A10G",
     image=image,
-    volumes={{"/models": volume}},
+    volumes={"/models": volume},
     min_containers=0,
     timeout=120,
     secrets=[modal.Secret.from_name("journi-llm-token")],
