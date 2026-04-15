@@ -259,14 +259,16 @@ manuscriptsRouter.post("/import-sessions/:sessionId/commit", async (req, res, ne
     // Runs after response is sent — never blocks the commit.
     const manuscriptId = existing.manuscriptId;
     if (manuscriptId) {
-      supabaseAdmin
-        .from("manuscript_sections")
-        .select("content_html")
-        .eq("manuscript_id", manuscriptId)
-        .ilike("title", "abstract")
-        .limit(1)
+      Promise.resolve(
+        supabaseAdmin
+          .from("manuscript_sections")
+          .select("content_html")
+          .eq("manuscript_id", manuscriptId)
+          .ilike("title", "abstract")
+          .limit(1),
+      )
         .then(async ({ data: sections }) => {
-          const html = sections?.[0]?.content_html;
+          const html = (sections as Array<{ content_html?: string }> | null)?.[0]?.content_html;
           if (!html) return;
           const { embedSingle } = await import("../services/embed.service");
           const embedding = await embedSingle(html.replace(/<[^>]+>/g, " ").trim());
@@ -602,6 +604,33 @@ manuscriptsRouter.delete("/:manuscriptId", async (req, res, next) => {
     res.json({ ok: true });
   } catch (error) {
     next(error);
+  }
+});
+
+manuscriptsRouter.get("/:manuscriptId/recommend-journals", requireProAccess, async (req, res, next) => {
+  try {
+    const { manuscriptId } = req.params;
+    const mode =
+      req.query.mode === "impact" ? "impact" : req.query.mode === "odds" ? "odds" : "auto";
+    const openAccess =
+      req.query.openAccess === "true" ? true : req.query.openAccess === "false" ? false : undefined;
+
+    const { data: ms } = await supabaseAdmin
+      .from("manuscripts")
+      .select("word_count")
+      .eq("id", manuscriptId)
+      .single();
+
+    const { recommendJournals } = await import("../services/journal-recommend.service");
+    const recommendations = await recommendJournals({
+      manuscriptId,
+      manuscriptWordCount: (ms as { word_count?: number } | null)?.word_count ?? 0,
+      filters: { mode, openAccess },
+    });
+
+    res.json({ journals: recommendations });
+  } catch (err) {
+    next(err);
   }
 });
 
