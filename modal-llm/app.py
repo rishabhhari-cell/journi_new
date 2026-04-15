@@ -25,6 +25,7 @@ image = (
     .pip_install(
         "vllm==0.19.0",
         "huggingface_hub[hf_transfer]",
+        "fastapi[standard]",
     )
     .env({"HF_HUB_ENABLE_HF_TRANSFER": "1"})
 )
@@ -106,3 +107,63 @@ class JourniLLM:
 
         outputs = self.llm.generate([prompt], params)
         return {"response": outputs[0].outputs[0].text}
+
+    @modal.fastapi_endpoint(method="POST", path="/reformat")
+    def reformat_section(self, body: dict) -> dict:
+        import json
+        import os
+        from vllm import SamplingParams
+
+        if body.get("_auth") != os.environ.get("MODAL_TOKEN_SECRET"):
+            return {"error": "unauthorized"}
+
+        section_title = body.get("section_title", "")
+        section_content = body.get("section_content", "")
+        guidelines_summary = body.get("guidelines_summary", "")
+
+        if not section_content:
+            return {"error": "section_content is required"}
+
+        prompt = f"""You are helping reformat a section of an academic manuscript to meet journal submission requirements.
+
+Journal requirements:
+{guidelines_summary}
+
+Section: {section_title}
+Content:
+---
+{section_content[:2000]}
+---
+
+Return a JSON array of suggestions. Each suggestion:
+{{
+  "type": "trim" or "restructure",
+  "original": "<exact quote from the content that needs changing>",
+  "suggested": "<replacement text>",
+  "reason": "<one sentence explanation>"
+}}
+
+Rules:
+- Only suggest changes that are required by the journal guidelines above.
+- For trim: identify specific overlong paragraphs. Quote the exact text in "original".
+- For restructure: only if the section structure clearly violates guidelines.
+- If no changes are needed, return an empty array [].
+- Return ONLY a valid JSON array. No markdown fences, no commentary."""
+
+        params = SamplingParams(
+            temperature=0.0,
+            max_tokens=2048,
+            extra_body={"chat_template_kwargs": {"enable_thinking": False}},
+        )
+
+        outputs = self.llm.generate([prompt], params)
+        raw = outputs[0].outputs[0].text.strip()
+        raw = raw.replace("```json", "").replace("```", "").strip()
+
+        try:
+            parsed = json.loads(raw)
+            if not isinstance(parsed, list):
+                parsed = []
+            return {"suggestions": parsed}
+        except json.JSONDecodeError:
+            return {"suggestions": [], "parse_error": raw[:200]}

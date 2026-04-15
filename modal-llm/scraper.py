@@ -26,6 +26,7 @@ image = (
         "vllm==0.19.0",
         "huggingface_hub[hf_transfer]",
         "httpx",
+        "fastapi[standard]",
     )
     .env({"HF_HUB_ENABLE_HF_TRANSFER": "1"})
 )
