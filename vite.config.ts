@@ -185,10 +185,14 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
     root: ".",
-    include: ["client/src/**/__tests__/**/*.test.ts"],
+    include: [
+      "client/src/**/__tests__/**/*.test.ts",
+      "server/**/__tests__/**/*.test.ts",
+    ],
     resolve: {
       alias: {
         "@": path.resolve(import.meta.dirname, "client", "src"),
+        "@shared": path.resolve(import.meta.dirname, "shared"),
       },
     },
   },
