@@ -15,6 +15,8 @@ import {
 } from "../services/import-session.service";
 import { toJournalGuidelinesDto } from "../services/journal-guidelines.service";
 import { parseUploadedDocument } from "../services/manuscript-parse.service";
+import { enrichCitations } from "../services/citation-enrich.service";
+import { parseRawDocument } from "../../shared/document-parse";
 import { getJournalById } from "../services/journals/search.service";
 
 export const manuscriptsRouter = Router();
@@ -135,6 +137,24 @@ manuscriptsRouter.post("/parse", async (req, res, next) => {
     });
 
     res.json({ data: parsed });
+
+    // Fire-and-forget: enrich citations async after response is sent
+    // enrichCitations only sends DOIs/titles/authors — no manuscript text leaves the server
+    const parsedMs = parseRawDocument(parsed);
+    if (parsedMs.citations.length > 0) {
+      enrichCitations(parsedMs.citations)
+        .then(async (enriched) => {
+          // Best-effort: log enrichment completion (no DB patch in parse endpoint — no manuscriptId here)
+          // Enrichment result is available for the next import session commit
+          const enrichedCount = enriched.filter((c) => (c.metadata as any)?.enriched).length;
+          if (enrichedCount > 0) {
+            console.info(`[citation-enrich] Enriched ${enrichedCount}/${enriched.length} citations`);
+          }
+        })
+        .catch(() => {
+          // Never let enrichment crash the server
+        });
+    }
   } catch (error) {
     next(error);
   }
