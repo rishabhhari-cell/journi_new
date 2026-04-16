@@ -243,30 +243,86 @@ function parseCitationsFromReferences(lines: string[]): ParsedCitation[] {
     const raw = sanitizeReferenceLine(rawLine);
     if (!raw) continue;
 
+    // Always extract DOI and URL first — these are format-independent
     const doiMatch = raw.match(/\b10\.\d{4,9}\/[-._;()/:A-Za-z0-9]+\b/);
     const urlMatch = raw.match(/https?:\/\/[^\s)]+/i);
     const yearMatch = raw.match(/\b(19|20)\d{2}\b/);
-    const sentenceParts = raw.split(".").map((part) => part.trim()).filter(Boolean);
+    const year = yearMatch ? Number(yearMatch[0]) : new Date().getFullYear();
+    const doi = doiMatch ? doiMatch[0] : undefined;
+    const url = urlMatch ? urlMatch[0] : undefined;
 
-    let title = sentenceParts.length > 1 ? sentenceParts[1] : sentenceParts[0];
-    if (!title) title = raw;
-    const authorPart = sentenceParts[0] || "";
-    const authors = authorPart
-      .split(/,| and /i)
-      .map((name) => name.trim())
-      .filter(Boolean)
-      .slice(0, 5);
-    const journal = sentenceParts.length > 2 ? sentenceParts[2] : undefined;
+    // ── Vancouver / numbered: [1] ... or 1. ... or 1) ...
+    // Author list ends before first ". [A-Z][a-z]" that isn't an initial
+    const vancouverMatch = raw.match(
+      /^(?:\[?\d+\]?[.)]\s*)([^.]+(?:\.[A-Z]\b[^.]*)*)\.\s+(.+?)\.\s+([^.]+?)\.\s*(?:\d{4}|;)/
+    );
+    if (vancouverMatch) {
+      const authorRaw = vancouverMatch[1];
+      const title = vancouverMatch[2].trim();
+      const journal = vancouverMatch[3].trim();
+      const authors = authorRaw
+        .split(/,\s*(?=[A-Z])/)
+        .map((a) => a.trim())
+        .filter(Boolean)
+        .slice(0, 8);
+      citations.push({
+        authors: authors.length > 0 ? authors : ["Unknown"],
+        title,
+        year,
+        journal,
+        doi,
+        url,
+        type: "article",
+        metadata: { raw, format: "vancouver" },
+      });
+      continue;
+    }
 
+    // ── APA / Harvard: Authors (YYYY). Title. Journal, vol(issue), pages.
+    const apaMatch = raw.match(
+      /^([^(]+)\((\d{4})\)\.\s+(.+?)\.\s+([A-Z][^,\d]+?)(?:,\s*\d|\.\s*$|$)/
+    );
+    if (apaMatch) {
+      const authorRaw = apaMatch[1];
+      const title = apaMatch[3].trim();
+      const journal = apaMatch[4].trim();
+      const authors = authorRaw
+        .split(/,\s*(?:&\s*)?(?=[A-Z])/)
+        .map((a) => a.trim())
+        .filter(Boolean)
+        .slice(0, 8);
+      citations.push({
+        authors: authors.length > 0 ? authors : ["Unknown"],
+        title,
+        year: Number(apaMatch[2]),
+        journal,
+        doi,
+        url,
+        type: "article",
+        metadata: { raw, format: "apa" },
+      });
+      continue;
+    }
+
+    // ── Fallback: keep raw line as title, never corrupt
+    const fallbackYear = yearMatch ? Number(yearMatch[0]) : new Date().getFullYear();
+    // Best-effort author: text before first comma or bracket
+    // Must be short (≤40 chars) and look like a name (≤4 words) to avoid using full sentences
+    const beforeComma = raw.split(/[,(]/)[0].trim();
+    const looksLikeName =
+      beforeComma.length > 0 &&
+      beforeComma.length <= 40 &&
+      beforeComma.split(/\s+/).length <= 4 &&
+      /[A-Za-z]/.test(beforeComma);
+    const fallbackAuthors = looksLikeName ? [beforeComma] : ["Unknown"];
     citations.push({
-      authors: authors.length > 0 ? authors : ["Unknown"],
-      title,
-      year: yearMatch ? Number(yearMatch[0]) : new Date().getFullYear(),
-      journal,
-      doi: doiMatch ? doiMatch[0] : undefined,
-      url: urlMatch ? urlMatch[0] : undefined,
-      type: journal ? "article" : urlMatch ? "website" : "conference",
-      metadata: { raw },
+      authors: fallbackAuthors,
+      title: raw,
+      year: fallbackYear,
+      doi,
+      url,
+      type: url ? "website" : "article",
+      metadata: { raw, format: "fallback" },
     });
   }
 
