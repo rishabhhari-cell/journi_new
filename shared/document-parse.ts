@@ -1,5 +1,14 @@
 import { countWordsFromHtml } from "./word-count";
 
+export const CANONICAL_SECTION_NAMES = new Set([
+  "title", "abstract", "introduction", "background",
+  "methods", "materials and methods", "search strategy",
+  "results", "results & synthesis", "discussion",
+  "conclusion", "conclusions", "references",
+  "data availability", "ethics statement", "acknowledgements",
+  "funding", "conflicts of interest",
+]);
+
 export type ParseDiagnosticLevel = "info" | "warning" | "error";
 
 export interface ParseDiagnostic {
@@ -884,12 +893,7 @@ export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
 
   // High-confidence threshold: ≥3 sections with canonical titles, none titled "Content" exclusively.
   // Below this threshold the LLM result is preferred when available.
-  const canonicalNames = new Set([
-    "title", "abstract", "introduction", "background", "methods",
-    "materials and methods", "search strategy", "results",
-    "results & synthesis", "discussion", "conclusion", "conclusions",
-    "references", "data availability", "ethics statement",
-  ]);
+  const canonicalNames = CANONICAL_SECTION_NAMES;
   const canonicalCount = baseSections.filter(
     (s) => canonicalNames.has(s.title.trim().toLowerCase()),
   ).length;

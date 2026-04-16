@@ -1,13 +1,5 @@
+import { CANONICAL_SECTION_NAMES } from "../../shared/document-parse";
 import type { ParseDiagnostic, ParsedManuscript } from "../../shared/document-parse";
-
-const CANONICAL_SECTION_NAMES = new Set([
-  "title", "abstract", "introduction", "background",
-  "methods", "materials and methods", "search strategy",
-  "results", "results & synthesis", "discussion",
-  "conclusion", "conclusions", "references",
-  "data availability", "ethics statement", "acknowledgements",
-  "funding", "conflicts of interest",
-]);
 
 function isCanonical(title: string): boolean {
   return CANONICAL_SECTION_NAMES.has(title.trim().toLowerCase());

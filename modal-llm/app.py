@@ -124,6 +124,9 @@ class JourniLLM:
         if not section_content:
             return {"error": "section_content is required"}
 
+        words = section_content.split()
+        truncated_content = " ".join(words[:400])  # ~2000 chars, word-boundary safe
+
         prompt = f"""You are helping reformat a section of an academic manuscript to meet journal submission requirements.
 
 Journal requirements:
@@ -132,7 +135,7 @@ Journal requirements:
 Section: {section_title}
 Content:
 ---
-{section_content[:2000]}
+{truncated_content}
 ---
 
 Return a JSON array of suggestions. Each suggestion:

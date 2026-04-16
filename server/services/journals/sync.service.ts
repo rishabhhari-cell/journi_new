@@ -73,7 +73,7 @@ function shouldOverwrite(
   incomingSource: JournalSource,
 ): boolean {
   if (currentValue === null || currentValue === undefined) return true;
-  return sourcePriority[incomingSource] >= sourcePriority[currentSource];
+  return sourcePriority[incomingSource] > sourcePriority[currentSource];
 }
 
 function normalizeSource(source: string | undefined): JournalSource | "manual" {

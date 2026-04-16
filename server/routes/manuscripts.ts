@@ -255,30 +255,41 @@ manuscriptsRouter.post("/import-sessions/:sessionId/commit", async (req, res, ne
 
     res.json({ data: committed });
 
-    // Fire-and-forget: embed the abstract for journal recommendation.
+    // Fire-and-forget: embed abstract + compute word count after commit.
     // Runs after response is sent — never blocks the commit.
     const manuscriptId = existing.manuscriptId;
     if (manuscriptId) {
       Promise.resolve(
         supabaseAdmin
           .from("manuscript_sections")
-          .select("content_html")
-          .eq("manuscript_id", manuscriptId)
-          .ilike("title", "abstract")
-          .limit(1),
+          .select("title, content_html")
+          .eq("manuscript_id", manuscriptId),
       )
         .then(async ({ data: sections }) => {
-          const html = (sections as Array<{ content_html?: string }> | null)?.[0]?.content_html;
-          if (!html) return;
+          const rows = sections as Array<{ title: string; content_html: string }> | null ?? [];
+
+          // Compute total word count across all sections
+          const wordCount = rows.reduce((sum, s) => {
+            const text = s.content_html.replace(/<[^>]+>/g, " ").trim();
+            return sum + text.split(/\s+/).filter(Boolean).length;
+          }, 0);
+
+          // Embed abstract
+          const abstractHtml = rows.find((s) => s.title.toLowerCase() === "abstract")?.content_html;
           const { embedSingle } = await import("../services/embed.service");
-          const embedding = await embedSingle(html.replace(/<[^>]+>/g, " ").trim());
-          if (!embedding) return;
+          const embedding = abstractHtml
+            ? await embedSingle(abstractHtml.replace(/<[^>]+>/g, " ").trim())
+            : null;
+
           await supabaseAdmin
             .from("manuscripts")
-            .update({ abstract_embedding: embedding })
+            .update({
+              word_count: wordCount,
+              ...(embedding ? { abstract_embedding: embedding } : {}),
+            })
             .eq("id", manuscriptId);
         })
-        .catch(() => {/* non-critical */});
+        .catch((err) => console.error("[commit] word-count/embed fire-and-forget failed:", err));
     }
   } catch (error) {
     next(error);
@@ -458,7 +469,7 @@ manuscriptsRouter.patch("/:manuscriptId/sections/:sectionId", async (req, res, n
               .update({ abstract_embedding: embedding })
               .eq("id", manuscriptId);
           })
-          .catch(() => {/* non-critical */});
+          .catch((err) => console.error("[embed] abstract re-embed failed:", err));
       }
     }
   } catch (error) {
@@ -634,17 +645,15 @@ manuscriptsRouter.get("/:manuscriptId/recommend-journals", requireProAccess, asy
   }
 });
 
+const reformatSchema = z.object({ journalId: z.string().uuid() });
+
 manuscriptsRouter.post("/:manuscriptId/reformat", requireProAccess, async (req, res, next) => {
   try {
     const authReq = req as unknown as AuthedRequest;
     const { manuscriptId } = req.params;
-    const { journalId } = req.body as { journalId?: string };
+    const { journalId } = reformatSchema.parse(req.body);
 
-    if (!journalId) {
-      throw new HttpError(400, "journalId is required", "JOURNAL_ID_REQUIRED");
-    }
-
-    await assertManuscriptAccess(authReq.auth.userId, manuscriptId, false);
+    const context = await assertManuscriptAccess(authReq.auth.userId, manuscriptId, false);
 
     // Fetch sections
     const { data: sectionsData, error: sectionsError } = await supabaseAdmin
@@ -675,6 +684,15 @@ manuscriptsRouter.post("/:manuscriptId/reformat", requireProAccess, async (req, 
       Promise.resolve(buildDeterministicChanges(sections, guidelines, manuscriptId)),
       buildLlmSuggestions(sections, guidelines),
     ]);
+
+    await writeAuditEvent({
+      organizationId: context.access.organizationId,
+      actorUserId: authReq.auth.userId,
+      eventType: "manuscript.reformat.requested",
+      entityType: "manuscript",
+      entityId: manuscriptId,
+      payload: { journalId },
+    });
 
     res.json({ deterministicChanges, llmSuggestions });
   } catch (err) {
