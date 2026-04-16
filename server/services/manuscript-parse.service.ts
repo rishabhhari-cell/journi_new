@@ -4,6 +4,8 @@ import type { ParseDiagnostic, ParsedBlock, ParsedBoundingBox, ParsedFigure, Par
 import { parseRawDocument } from "../../shared/document-parse";
 import { parseDocumentWithLLM } from "./llm.service";
 import { runDeterministicErrorChecks } from "./parse-error-detection.service";
+import { extractDocxXmlStructure } from "./docx-xml-parse.service";
+import { computeParseConfidence } from "./parse-confidence.service";
 
 export interface ParseUploadInput {
   fileName: string;
@@ -389,14 +391,18 @@ function createFigurePlaceholderData(label: string): string {
   return `data:image/svg+xml;base64,${Buffer.from(svg, "utf8").toString("base64")}`;
 }
 
-async function extractDocxFigures(buffer: Buffer): Promise<{ figures: ParsedFigure[]; diagnostics: ParseDiagnostic[] }> {
+async function extractDocxFigures(
+  buffer: Buffer,
+  relsPath = "word/_rels/document.xml.rels",
+  mainDocPath = "word/document.xml",
+): Promise<{ figures: ParsedFigure[]; diagnostics: ParseDiagnostic[] }> {
   const { default: JSZip } = await import("jszip");
   const zip = await JSZip.loadAsync(buffer);
   const diagnostics: ParseDiagnostic[] = [];
   const figures: ParsedFigure[] = [];
 
-  const relsXml = await zip.file("word/_rels/document.xml.rels")?.async("string");
-  const documentXml = await zip.file("word/document.xml")?.async("string");
+  const relsXml = await zip.file(relsPath)?.async("string");
+  const documentXml = await zip.file(mainDocPath)?.async("string");
   if (!relsXml || !documentXml) {
     return { figures, diagnostics };
   }
@@ -419,7 +425,7 @@ async function extractDocxFigures(buffer: Buffer): Promise<{ figures: ParsedFigu
     if (!rel) continue;
 
     if (rel.type === DOCX_IMAGE_REL) {
-      const absolutePath = absoluteDocxPath("word/document.xml", rel.target);
+      const absolutePath = absoluteDocxPath(mainDocPath, rel.target);
       const file = zip.file(absolutePath);
       if (!file) continue;
       const bytes = await file.async("uint8array");
@@ -434,7 +440,7 @@ async function extractDocxFigures(buffer: Buffer): Promise<{ figures: ParsedFigu
     }
 
     if (rel.type === DOCX_CHART_REL) {
-      const absolutePath = absoluteDocxPath("word/document.xml", rel.target);
+      const absolutePath = absoluteDocxPath(mainDocPath, rel.target);
       const file = zip.file(absolutePath);
       if (!file) continue;
       const chartXml = await file.async("string");
@@ -926,6 +932,53 @@ function extractReferencesFromOupHtml(html: string): string[] {
   return refs;
 }
 
+/**
+ * Merge LLM sections into deterministic sections.
+ * - Deterministic section with ≥30 words → keep as-is
+ * - Deterministic section with <30 words AND LLM has matching section with ≥20 words → use LLM
+ * - LLM section for a slot with no deterministic section → include LLM
+ * - LLM sections with <20 words → rejected
+ */
+function mergeLlmSections(
+  deterministicSections: Array<{ title: string; content: string; wordCount: number }>,
+  llmSections: Array<{ title: string; content: string }>,
+): Array<{ title: string; content: string }> {
+  const llmMap = new Map<string, string>();
+  for (const sec of llmSections) {
+    const wordCount = sec.content.trim().split(/\s+/).filter(Boolean).length;
+    if (wordCount >= 20) {
+      llmMap.set(sec.title.toLowerCase(), sec.content);
+    }
+  }
+
+  const merged: Array<{ title: string; content: string }> = [];
+  const usedLlmTitles = new Set<string>();
+
+  for (const det of deterministicSections) {
+    if (det.wordCount >= 30) {
+      merged.push({ title: det.title, content: det.content });
+    } else {
+      const llmContent = llmMap.get(det.title.toLowerCase());
+      if (llmContent) {
+        merged.push({ title: det.title, content: `<p>${llmContent}</p>` });
+        usedLlmTitles.add(det.title.toLowerCase());
+      } else {
+        merged.push({ title: det.title, content: det.content });
+      }
+    }
+  }
+
+  // Add LLM-only sections not covered by deterministic
+  for (const [titleKey, content] of llmMap.entries()) {
+    if (!usedLlmTitles.has(titleKey)) {
+      const titleFormatted = titleKey.charAt(0).toUpperCase() + titleKey.slice(1);
+      merged.push({ title: titleFormatted, content: `<p>${content}</p>` });
+    }
+  }
+
+  return merged;
+}
+
 export async function parseUploadedDocument(input: ParseUploadInput): Promise<RawParsedDocument> {
   const diagnostics: ParseDiagnostic[] = [];
   const extension = extname(input.fileName);
@@ -943,46 +996,98 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
       "p[style-name='Section Heading'] => h2:fresh",
     ];
 
-    const [result, textResult, extractedFigures] = await Promise.all([
-      mammoth.convertToHtml({
-        buffer: input.buffer,
-        styleMap: mammothStyleMap,
-      } as any),
+    // Run XML walker, Mammoth HTML in parallel; figure extraction uses XML walker result
+    const [xmlResult, result, textResult] = await Promise.all([
+      extractDocxXmlStructure(input.buffer),
+      mammoth.convertToHtml({ buffer: input.buffer, styleMap: mammothStyleMap } as any),
       mammoth.extractRawText({ buffer: input.buffer } as any),
-      extractDocxFigures(input.buffer),
     ]);
+    // Use the correct rels path found by the XML walker (not hardcoded word/_rels/document.xml.rels)
+    const extractedFigures = await extractDocxFigures(
+      input.buffer,
+      xmlResult.figureRelsPath,
+      xmlResult.mainDocumentPath,
+    );
+
     const warnings = (result.messages || []).map((message) => ({
       level: "warning" as const,
       code: "DOCX_PARSE_WARNING",
       message: message.message,
     }));
 
-    // Inform callers that complex Word formatting (tracked changes, embedded objects,
-    // custom styles) may not survive the HTML conversion faithfully.
     const fidelityNote: ParseDiagnostic[] = [
       {
         level: "info",
         code: "DOCX_FIDELITY_NOTICE",
         message:
-          "DOCX parsed via HTML conversion. Complex formatting (tracked changes, nested tables, " +
-          "custom styles, embedded objects) may not be fully preserved — review imported content.",
+          "DOCX parsed via XML + HTML conversion. Complex formatting may not be fully preserved — review imported content.",
       },
     ];
 
-    // Only call LLM when the HTML doesn't have enough heading structure for deterministic parsing.
-    const headingCount = (result.value.match(/<h[1-3][^>]*>/gi) || []).length;
-    const boldHeadingCount = (result.value.match(/<p><strong>[A-Z][^<]{2,60}<\/strong><\/p>/gi) || []).length;
-    const deterministicLooksGood = (headingCount + boldHeadingCount) >= 4;
+    // Merge XML structure with Mammoth HTML content:
+    // XML walker provides section titles; Mammoth HTML provides body content.
+    let mergedHtml: string;
+    if (xmlResult.sections.length >= 2) {
+      const htmlParts: string[] = [];
+      for (const section of xmlResult.sections) {
+        if (section.title !== "Content") {
+          htmlParts.push(`<h2>${escapeHtml(section.title)}</h2>`);
+        }
+        for (const para of section.paragraphTexts) {
+          htmlParts.push(`<p>${escapeHtml(para)}</p>`);
+        }
+      }
+      mergedHtml = htmlParts.join("\n");
+    } else {
+      // XML walker found no structure — fall back to Mammoth HTML
+      mergedHtml = result.value;
+    }
 
-    let llmParsed;
-    if (!deterministicLooksGood) {
+    // Append reference lines from footnotes/endnotes found by XML walker
+    const xmlReferenceLines = xmlResult.referenceLines;
+
+    const rawDocx: RawParsedDocument = {
+      fileTitle,
+      format: "docx",
+      html: mergedHtml,
+      text: normalizeText(textResult.value),
+      diagnostics: [
+        ...diagnostics,
+        ...fidelityNote,
+        ...warnings,
+        ...extractedFigures.diagnostics,
+        ...xmlResult.diagnostics,
+      ],
+      figures: extractedFigures.figures,
+      references: [
+        ...extractReferencesFromOupHtml(result.value),
+        ...xmlReferenceLines,
+      ],
+    };
+
+    // Compute confidence score to decide whether to call Modal LLM
+    const parsedDocxPrelim = parseRawDocument(rawDocx);
+    const referenceLinesFound = (rawDocx.references ?? []).length;
+    const figureCaptionsFound = parsedDocxPrelim.sections
+      .flatMap((s) => {
+        const matches = s.content.match(/^(figure|fig\.?)\s*\d+\s*[:.]/gim);
+        return matches ?? [];
+      }).length;
+
+    const { score: confidenceScore } = computeParseConfidence(parsedDocxPrelim, {
+      referenceLinesFound,
+      figureCaptionsFound,
+    });
+
+    let llmParsed: RawParsedDocument["llmParsed"] | undefined;
+    if (confidenceScore < 0.85) {
       try {
         if (textResult.value.trim().length > 0) {
           llmParsed = await parseDocumentWithLLM(textResult.value);
           diagnostics.push({
             level: "info",
             code: "LLM_FALLBACK_USED",
-            message: "Heading structure unclear; AI-assisted parsing used.",
+            message: `Parse confidence ${confidenceScore.toFixed(2)} below threshold; AI-assisted parsing used.`,
           });
         }
       } catch (error) {
@@ -994,19 +1099,27 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
       }
     }
 
-    const rawDocx: RawParsedDocument = {
-      fileTitle,
-      format: "docx",
-      html: result.value,
-      text: normalizeText(textResult.value),
-      diagnostics: [...diagnostics, ...fidelityNote, ...warnings, ...extractedFigures.diagnostics],
-      figures: extractedFigures.figures,
-      references: extractReferencesFromOupHtml(result.value),
-      llmParsed,
+    // Merge LLM result: LLM fills empty/missing sections, deterministic wins where populated
+    const mergedSections = llmParsed ? mergeLlmSections(parsedDocxPrelim.sections, llmParsed.sections) : undefined;
+
+    const finalRawDocx: RawParsedDocument = {
+      ...rawDocx,
+      llmParsed: mergedSections
+        ? { sections: mergedSections, citations: llmParsed?.citations ?? [] }
+        : undefined,
     };
-    const parsedDocx = parseRawDocument(rawDocx);
-    const errorDiagsDocx = runDeterministicErrorChecks(parsedDocx);
-    return { ...rawDocx, diagnostics: [...(rawDocx.diagnostics ?? []), ...errorDiagsDocx] };
+
+    const parsedDocx = parseRawDocument(finalRawDocx);
+    const finalParsed: typeof parsedDocx = {
+      ...parsedDocx,
+      parseConfidence: confidenceScore,
+    };
+
+    const errorDiagsDocx = runDeterministicErrorChecks(finalParsed);
+    return {
+      ...finalRawDocx,
+      diagnostics: [...(finalRawDocx.diagnostics ?? []), ...errorDiagsDocx],
+    };
   }
 
   if (extension === "jpg" || extension === "jpeg" || extension === "png" || extension === "gif" || extension === "webp") {
@@ -1030,32 +1143,6 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
   if (extension === "pdf") {
     try {
       const payload = await extractPdfPayload(input.buffer);
-      
-      // Only call LLM when the PDF block structure suggests poor deterministic coverage.
-      // structureRatio = fraction of blocks whose text matches a canonical section heading.
-      const nonContentBlocks = payload.blocks.filter(
-        (b) => b.suggestedSection && b.suggestedSection !== "Content",
-      ).length;
-      const structureRatio = payload.blocks.length > 0 ? nonContentBlocks / payload.blocks.length : 0;
-      const pdfDeterministicLooksGood = structureRatio >= 0.25;
-
-      let llmParsed;
-      if (!pdfDeterministicLooksGood && payload.text.trim().length > 0) {
-        try {
-          llmParsed = await parseDocumentWithLLM(payload.text);
-          diagnostics.push({
-            level: "info",
-            code: "LLM_FALLBACK_USED",
-            message: "PDF section structure unclear; AI-assisted parsing used.",
-          });
-        } catch (error) {
-          diagnostics.push({
-            level: "warning",
-            code: "LLM_PARSE_FAILED",
-            message: error instanceof Error ? error.message : "AI-assisted parsing failed; manual review required.",
-          });
-        }
-      }
 
       if (!payload.text) {
         diagnostics.push({
@@ -1066,7 +1153,8 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
             "This service does not perform OCR — content will be empty until a text-layer PDF is uploaded.",
         });
       }
-      const rawPdf: RawParsedDocument = {
+
+      const rawPdfPrelim: RawParsedDocument = {
         fileTitle,
         format: "pdf",
         text: payload.text,
@@ -1075,10 +1163,56 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
         tables: payload.tables,
         links: [],
         diagnostics: [...diagnostics, ...payload.diagnostics],
-        llmParsed,
+      };
+
+      // Compute confidence score to decide whether to call Modal LLM
+      const parsedPdfPrelim = parseRawDocument(rawPdfPrelim);
+      const pdfReferenceLinesFound = (rawPdfPrelim.references ?? []).length;
+      const pdfFigureCaptionsFound = parsedPdfPrelim.sections
+        .flatMap((s) => {
+          const matches = s.content.match(/^(figure|fig\.?)\s*\d+\s*[:.]/gim);
+          return matches ?? [];
+        }).length;
+
+      const { score: pdfConfidenceScore } = computeParseConfidence(parsedPdfPrelim, {
+        referenceLinesFound: pdfReferenceLinesFound,
+        figureCaptionsFound: pdfFigureCaptionsFound,
+      });
+
+      let llmParsed: RawParsedDocument["llmParsed"] | undefined;
+      if (pdfConfidenceScore < 0.85 && payload.text.trim().length > 0) {
+        try {
+          llmParsed = await parseDocumentWithLLM(payload.text);
+          diagnostics.push({
+            level: "info",
+            code: "LLM_FALLBACK_USED",
+            message: `Parse confidence ${pdfConfidenceScore.toFixed(2)} below threshold; AI-assisted parsing used.`,
+          });
+        } catch (error) {
+          diagnostics.push({
+            level: "warning",
+            code: "LLM_PARSE_FAILED",
+            message: error instanceof Error ? error.message : "AI-assisted parsing failed; manual review required.",
+          });
+        }
+      }
+
+      // Merge LLM result: LLM fills empty/missing sections, deterministic wins where populated
+      const pdfMergedSections = llmParsed ? mergeLlmSections(parsedPdfPrelim.sections, llmParsed.sections) : undefined;
+
+      const rawPdf: RawParsedDocument = {
+        ...rawPdfPrelim,
+        diagnostics: [...diagnostics, ...payload.diagnostics],
+        llmParsed: pdfMergedSections
+          ? { sections: pdfMergedSections, citations: llmParsed?.citations ?? [] }
+          : undefined,
       };
       const parsedPdf = parseRawDocument(rawPdf);
-      const errorDiagsPdf = runDeterministicErrorChecks(parsedPdf);
+      const finalParsedPdf: typeof parsedPdf = {
+        ...parsedPdf,
+        parseConfidence: pdfConfidenceScore,
+      };
+      const errorDiagsPdf = runDeterministicErrorChecks(finalParsedPdf);
       return { ...rawPdf, diagnostics: [...(rawPdf.diagnostics ?? []), ...errorDiagsPdf] };
     } catch (error) {
       diagnostics.push({
