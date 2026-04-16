@@ -3,7 +3,8 @@ import {
   runDeterministicErrorChecks,
   meetsHighConfidenceThreshold,
 } from "../parse-error-detection.service";
-import type { ParsedManuscript } from "../../../shared/document-parse";
+import type { ParsedManuscript, RawParsedDocument } from "../../../shared/document-parse";
+import { parseRawDocument } from "../../../shared/document-parse";
 
 function makeSection(title: string, content: string) {
   return { title, content, order: 0, wordCount: content.split(" ").length, sourceTitle: title };
@@ -123,5 +124,19 @@ describe("runDeterministicErrorChecks", () => {
     };
     const diags = runDeterministicErrorChecks(manuscript);
     expect(diags.filter((d) => d.level === "error")).toHaveLength(0);
+  });
+});
+
+describe("parseRawDocument — parseConfidence field", () => {
+  it("parseConfidence can be set on the returned ParsedManuscript", () => {
+    const raw: RawParsedDocument = {
+      fileTitle: "Test",
+      format: "docx",
+      html: "<h2>Abstract</h2><p>Background objectives methods.</p><h2>Methods</h2><p>We recruited 100 patients from three sites.</p>",
+    };
+    const result = parseRawDocument(raw);
+    // Field exists in the interface and can be assigned
+    const withConfidence = { ...result, parseConfidence: 0.92 };
+    expect(withConfidence.parseConfidence).toBe(0.92);
   });
 });

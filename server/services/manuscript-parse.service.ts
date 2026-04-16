@@ -1119,6 +1119,7 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
     return {
       ...finalRawDocx,
       diagnostics: [...(finalRawDocx.diagnostics ?? []), ...errorDiagsDocx],
+      parseConfidence: confidenceScore,
     };
   }
 
@@ -1213,7 +1214,7 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
         parseConfidence: pdfConfidenceScore,
       };
       const errorDiagsPdf = runDeterministicErrorChecks(finalParsedPdf);
-      return { ...rawPdf, diagnostics: [...(rawPdf.diagnostics ?? []), ...errorDiagsPdf] };
+      return { ...rawPdf, diagnostics: [...(rawPdf.diagnostics ?? []), ...errorDiagsPdf], parseConfidence: pdfConfidenceScore };
     } catch (error) {
       diagnostics.push({
         level: "error",

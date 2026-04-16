@@ -120,6 +120,7 @@ export interface RawParsedDocument {
   figures?: ParsedFigure[];
   tables?: ParsedTable[];
   links?: ParsedLink[];
+  parseConfidence?: number;
   llmParsed?: {
     sections: Array<{ title: string; content: string }>;
     citations: Array<{
