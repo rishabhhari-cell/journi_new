@@ -374,24 +374,32 @@ function isBoldOnlyHeading(node: Element): boolean {
   const text = (node.textContent || "").trim();
   if (!text || text.length > 80) return false;
 
-  // Paragraph whose entire content is a single <strong> or <b> element
-  const children = Array.from(node.children);
-  const soleChild = children.length === 1 ? children[0] : null;
-  const isBold =
-    soleChild !== null &&
-    (soleChild.tagName.toLowerCase() === "strong" || soleChild.tagName.toLowerCase() === "b") &&
-    (soleChild.textContent || "").trim() === text;
+  // Accept paragraph where ALL non-whitespace content is wrapped in <strong> or <b>
+  // — even if there are trailing whitespace-only text nodes.
+  const children = Array.from(node.childNodes);
+  const meaningfulChildren = children.filter(
+    (child) =>
+      !(child.nodeType === Node.TEXT_NODE && (child.textContent || "").trim() === "")
+  );
+  const hasBoldContent = meaningfulChildren.every((child) => {
+    if (child.nodeType === Node.TEXT_NODE) {
+      return (child.textContent || "").trim() === "";
+    }
+    const el = child as Element;
+    return el.tagName.toLowerCase() === "strong" || el.tagName.toLowerCase() === "b";
+  });
+  const boldText = meaningfulChildren
+    .filter((child) => child.nodeType === Node.ELEMENT_NODE)
+    .map((child) => (child.textContent || "").trim())
+    .join(" ")
+    .trim();
 
-  if (!isBold) return false;
+  if (!hasBoldContent || boldText !== text) return false;
 
-  // Only treat as heading if text matches a known canonical section name,
-  // looks like ALL-CAPS heading, or is title-case without sentence punctuation
   for (const [, matcher] of CANONICAL_ALIASES) {
     if (matcher.test(text)) return true;
   }
   if (/^[A-Z][A-Z\s&/\-0-9]{2,}$/.test(text)) return true;
-  // Accept title-case mixed headings ("Study Design", "Key Findings") — guard against
-  // bolded body sentences by rejecting text containing a period mid-string
   return /^[A-Z][A-Za-z0-9\s&/\-]{2,}$/.test(text) && !text.includes(".");
 }
 
@@ -419,11 +427,16 @@ function isBoldOnlyHeadingHtml(blockHtml: string, text: string): boolean {
     .replace(/<\/p>$/i, "")
     .trim();
 
+  // Accept: whole content bold, OR starts with a bold run followed by plain text
+  // that together equal the full paragraph text (e.g. numbered headings "1. Methods")
   const isEntireParagraphBold =
-    /^<(strong|b)\b[^>]*>[\s\S]*<\/\1>$/i.test(innerHtml) &&
+    /^<(strong|b)\b[^>]*>[\s\S]*<\/\1>\s*$/i.test(innerHtml);
+
+  const startsWithBold =
+    /^<(strong|b)\b[^>]*>[\s\S]*?<\/\1>/i.test(innerHtml) &&
     stripHtmlToText(innerHtml) === text;
 
-  if (!isEntireParagraphBold) return false;
+  if (!isEntireParagraphBold && !startsWithBold) return false;
 
   for (const [, matcher] of CANONICAL_ALIASES) {
     if (matcher.test(text)) return true;
