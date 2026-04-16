@@ -79,7 +79,9 @@ function parseJsonResponse(raw: string): LLMResponse {
   text = text.replace(/^```json\s*/m, "").replace(/^```\s*/m, "").replace(/```$/m, "").trim();
   const parsed = JSON.parse(text);
   return {
-    sections: Array.isArray(parsed.sections) ? parsed.sections : [],
+    sections: Array.isArray(parsed.sections)
+      ? parsed.sections.filter((s: any) => typeof s.content === "string" && typeof s.title === "string")
+      : [],
     citations: Array.isArray(parsed.citations) ? parsed.citations : [],
   };
 }
@@ -143,7 +145,7 @@ export async function parseDocumentWithLLM(text: string): Promise<OllamaParsedDo
   // Post-parse validation: reject any LLM section with <20 words of content.
   // Guards against the LLM producing the same empty-heading problem as the deterministic parser.
   result.sections = result.sections.filter((section) => {
-    const wordCount = section.content.trim().split(/\s+/).filter(Boolean).length;
+    const wordCount = (section.content ?? "").trim().split(/\s+/).filter(Boolean).length;
     return wordCount >= 20;
   });
 
