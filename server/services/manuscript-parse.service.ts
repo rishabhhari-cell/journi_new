@@ -800,14 +800,18 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
       if (fn === (pdfjs as any).OPS.paintXObject) {
         const xobjId = String(args[0] || "");
         if (xobjId) {
-          const viewport = page.getViewport({ scale: 1 });
-          const minFigW = Math.max(24, viewport.width * 0.06);
-          const minFigH = Math.max(24, viewport.height * 0.06);
           const xobjImages = await extractImagesFromXObject(page, xobjId, currentTransform, 0);
           for (const { imageData, bbox } of xobjImages) {
-            if (bbox.width < minFigW || bbox.height < minFigH) continue;
+            if (bbox.width < minFigureWidth || bbox.height < minFigureHeight) continue;
             const dataUrl = await pdfImageDataToDataUrl(imageData, (pdfjs as any).ImageKind);
-            if (!dataUrl) continue;
+            if (!dataUrl) {
+              diagnostics.push({
+                level: "warning",
+                code: "PDF_XOBJECT_IMAGE_CONVERSION_FAILED",
+                message: `Form XObject image in ${xobjId} could not be converted to data URL.`,
+              });
+              continue;
+            }
             figures.push({
               id: `fig-${++figureCount}`,
               imageData: dataUrl,
