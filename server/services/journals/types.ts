@@ -45,6 +45,7 @@ export interface JournalRow {
   avg_decision_days: number | null;
   apc_cost_usd: number | null;
   mean_time_to_publication_days: number | null;
+  scope_embedding: number[] | null;
   provenance: Record<string, string> | null;
   last_verified_at: string | null;
   created_at: string;

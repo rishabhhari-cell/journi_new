@@ -245,8 +245,33 @@ export async function syncJournals(params: {
   const journals = (data ?? []) as JournalRow[];
   let updated = 0;
 
+  const { embedSingle } = await import("../embed.service");
+
   for (const journal of journals) {
     const update = await enrichRow(journal);
+
+    // Generate scope embedding for journals that don't have one yet.
+    // Uses name + subject areas + publisher as the embedding text.
+    if (!journal.scope_embedding) {
+      const u = update as Record<string, unknown> | null;
+      const name = (u?.name as string | undefined) ?? journal.name ?? "";
+      const subjects = (journal.subject_areas ?? []).join(", ");
+      const publisher = (u?.publisher as string | undefined) ?? journal.publisher ?? "";
+      const text = [name, subjects, publisher].filter(Boolean).join(". ");
+      const embedding = await embedSingle(text).catch(() => null);
+      if (embedding) {
+        if (!update) {
+          await supabaseAdmin
+            .from("journals")
+            .update({ scope_embedding: embedding })
+            .eq("id", journal.id);
+          updated += 1;
+          continue;
+        }
+        (update as Record<string, unknown>).scope_embedding = embedding;
+      }
+    }
+
     if (!update) continue;
     const { error: updateError } = await supabaseAdmin
       .from("journals")
