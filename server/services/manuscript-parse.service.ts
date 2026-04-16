@@ -573,6 +573,57 @@ async function waitForPdfObject(
   });
 }
 
+async function extractImagesFromXObject(
+  page: any,
+  xobjId: string,
+  parentTransform: number[],
+  depth: number,
+): Promise<Array<{ imageData: any; bbox: ParsedBoundingBox }>> {
+  if (depth > 2) return []; // cap recursion — figures never nest deeper in practice
+
+  const xobj = await waitForPdfObject(page.commonObjs as any, xobjId)
+    ?? await waitForPdfObject(page.objs as any, xobjId);
+  if (!xobj?.operatorList) return [];
+
+  const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
+  const results: Array<{ imageData: any; bbox: ParsedBoundingBox }> = [];
+  let localTransform = [...parentTransform];
+  const stack: number[][] = [];
+
+  for (let i = 0; i < xobj.operatorList.fnArray.length; i += 1) {
+    const fn = xobj.operatorList.fnArray[i];
+    const fnArgs = xobj.operatorList.argsArray[i] || [];
+
+    if (fn === (pdfjs as any).OPS.save) { stack.push([...localTransform]); continue; }
+    if (fn === (pdfjs as any).OPS.restore) { localTransform = stack.pop() || localTransform; continue; }
+    if (fn === (pdfjs as any).OPS.transform) {
+      localTransform = multiplyTransform(localTransform, fnArgs as number[]);
+      continue;
+    }
+    if (fn === (pdfjs as any).OPS.paintXObject) {
+      const nested = await extractImagesFromXObject(page, String(fnArgs[0] || ""), localTransform, depth + 1);
+      results.push(...nested);
+      continue;
+    }
+    if (
+      fn === (pdfjs as any).OPS.paintImageXObject ||
+      fn === (pdfjs as any).OPS.paintInlineImageXObject ||
+      fn === (pdfjs as any).OPS.paintImageXObjectRepeat
+    ) {
+      let imgData: any = null;
+      if (fn === (pdfjs as any).OPS.paintInlineImageXObject) {
+        imgData = fnArgs[0];
+      } else {
+        imgData = await waitForPdfObject(page.objs as any, String(fnArgs[0] || ""));
+      }
+      if (imgData) {
+        results.push({ imageData: imgData, bbox: bboxFromTransform(localTransform) });
+      }
+    }
+  }
+  return results;
+}
+
 async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
   const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
   const loadingTask = (pdfjs as any).getDocument({
@@ -599,13 +650,17 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
     const textContent = await page.getTextContent();
     const items = (textContent.items as Array<{ str?: string; transform?: number[]; width?: number; height?: number }>)
       .filter((item) => typeof item.str === "string" && item.str.trim().length > 0)
-      .map((item) => ({
-        text: item.str?.trim() || "",
-        x: item.transform?.[4] || 0,
-        y: item.transform?.[5] || 0,
-        width: item.width || 0,
-        height: Math.abs(item.height || 10),
-      }))
+      .map((item) => {
+        const t = item.transform || [1, 0, 0, 1, 0, 0];
+        const fontSize = Math.sqrt(t[0] * t[0] + t[1] * t[1]) || Math.abs(item.height || 10);
+        return {
+          text: item.str?.trim() || "",
+          x: t[4] || 0,
+          y: t[5] || 0,
+          width: item.width || 0,
+          height: fontSize,
+        };
+      })
       .sort((a, b) => (Math.abs(a.y - b.y) < 1 ? a.x - b.x : b.y - a.y));
 
     const lines: Array<{ text: string; x: number; y: number; width: number; height: number }> = [];
@@ -624,7 +679,7 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
     };
 
     for (const item of items) {
-      if (currentY === null || Math.abs(item.y - currentY) <= 2) {
+      if (currentY === null || Math.abs(item.y - currentY) <= 5) {
         currentY = currentY ?? item.y;
         currentParts.push(item);
       } else {
@@ -739,6 +794,30 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
 
       if (fn === (pdfjs as any).OPS.transform) {
         currentTransform = multiplyTransform(currentTransform, args as number[]);
+        continue;
+      }
+
+      if (fn === (pdfjs as any).OPS.paintXObject) {
+        const xobjId = String(args[0] || "");
+        if (xobjId) {
+          const viewport = page.getViewport({ scale: 1 });
+          const minFigW = Math.max(24, viewport.width * 0.06);
+          const minFigH = Math.max(24, viewport.height * 0.06);
+          const xobjImages = await extractImagesFromXObject(page, xobjId, currentTransform, 0);
+          for (const { imageData, bbox } of xobjImages) {
+            if (bbox.width < minFigW || bbox.height < minFigH) continue;
+            const dataUrl = await pdfImageDataToDataUrl(imageData, (pdfjs as any).ImageKind);
+            if (!dataUrl) continue;
+            figures.push({
+              id: `fig-${++figureCount}`,
+              imageData: dataUrl,
+              page: pageNum,
+              bbox,
+              confidence: 0.92,
+              diagnostics: [],
+            });
+          }
+        }
         continue;
       }
 
