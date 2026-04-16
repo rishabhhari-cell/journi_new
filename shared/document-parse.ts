@@ -101,6 +101,7 @@ export interface ParsedManuscript {
   diagnostics: ParseDiagnostic[];
   totalWordCount: number;
   reviewRequired?: boolean;
+  parseConfidence?: number;
   blocks?: ParsedBlock[];
   figures?: ParsedFigure[];
   tables?: ParsedTable[];
