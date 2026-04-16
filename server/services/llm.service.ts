@@ -31,6 +31,7 @@ RULES — follow exactly:
 3. Do not invent content. If a section boundary is unclear, include the text under the nearest prior heading.
 4. If you are unsure which section text belongs to, output it under the section title "Unknown" (title field = "Unknown").
 5. Return ONLY a valid JSON object. No markdown fences, no commentary, no explanations.
+6. NEVER output a section with an empty or near-empty content field. Every section you output MUST contain at least 20 words of verbatim content from the source. If a heading appears but has no body text in this chunk, omit that section entirely rather than outputting it with empty content.
 
 Schema:
 {
@@ -138,6 +139,13 @@ export async function parseDocumentWithLLM(text: string): Promise<OllamaParsedDo
       }
     }
   }
+
+  // Post-parse validation: reject any LLM section with <20 words of content.
+  // Guards against the LLM producing the same empty-heading problem as the deterministic parser.
+  result.sections = result.sections.filter((section) => {
+    const wordCount = section.content.trim().split(/\s+/).filter(Boolean).length;
+    return wordCount >= 20;
+  });
 
   return result;
 }
