@@ -51,6 +51,7 @@ export function buildFitReasons(input: {
   wordCountInRange: boolean;
   openAccess: boolean;
   mode: RecommendMode;
+  avgDecisionDaysNorm?: number;
 }): string[] {
   const reasons: string[] = [];
 
@@ -66,6 +67,8 @@ export function buildFitReasons(input: {
   if (input.openAccess) reasons.push("Open access");
   if (input.mode === "impact") reasons.push("High impact factor");
   if (input.mode === "odds") reasons.push("Above-average acceptance rate");
+  if (input.mode === "auto" && (input.avgDecisionDaysNorm ?? 0) >= 0.7)
+    reasons.push("Fast decision turnaround");
 
   return reasons;
 }
@@ -146,6 +149,7 @@ export async function recommendJournals(params: {
       wordCountInRange,
       openAccess: j.open_access === true,
       mode: params.filters.mode,
+      avgDecisionDaysNorm: decisionNorm[i],
     });
 
     return { journal: mapJournalRow(j), fitScore, fitReasons };

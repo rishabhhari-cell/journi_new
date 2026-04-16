@@ -16,6 +16,16 @@ const sourcePriority: Record<JournalSource, number> = {
   scraper: 55,
 };
 
+// Submission-specific fields: scraper is the authoritative source, so it wins
+// over openalex (60) and doaj (50) even though general scraper priority is 55.
+const scraperSubmissionPriority = 65;
+const scraperSubmissionFields = new Set([
+  "submission_requirements_json",
+  "acceptance_rate",
+  "avg_decision_days",
+  "mean_time_to_publication_days",
+]);
+
 const writableColumns = new Set([
   "name",
   "publisher",
@@ -55,8 +65,11 @@ async function callModalScraper(pageText: string): Promise<Record<string, unknow
   try {
     const res = await fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ page_text: pageText, _auth: process.env.MODAL_TOKEN_SECRET }),
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.MODAL_TOKEN_SECRET ?? ""}`,
+      },
+      body: JSON.stringify({ page_text: pageText }),
       signal: AbortSignal.timeout(60_000),
     });
     if (!res.ok) return null;
@@ -71,9 +84,14 @@ function shouldOverwrite(
   currentValue: unknown,
   currentSource: JournalSource | "manual",
   incomingSource: JournalSource,
+  field?: string,
 ): boolean {
   if (currentValue === null || currentValue === undefined) return true;
-  return sourcePriority[incomingSource] > sourcePriority[currentSource];
+  const incomingPriority =
+    incomingSource === "scraper" && field && scraperSubmissionFields.has(field)
+      ? scraperSubmissionPriority
+      : sourcePriority[incomingSource];
+  return incomingPriority > sourcePriority[currentSource];
 }
 
 function normalizeSource(source: string | undefined): JournalSource | "manual" {
@@ -126,7 +144,7 @@ async function enrichRow(row: JournalRow) {
 
       const currentValue = (row as unknown as Record<string, unknown>)[field];
       const currentSource = normalizeSource(currentProvenance[field]);
-      if (shouldOverwrite(currentValue, currentSource, source)) {
+      if (shouldOverwrite(currentValue, currentSource, source, field)) {
         updates[field] = value;
         currentProvenance[field] = source;
       }

@@ -159,12 +159,14 @@ async function callModalReformat(
   try {
     const res = await fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.MODAL_TOKEN_SECRET ?? ""}`,
+      },
       body: JSON.stringify({
         section_title: sectionTitle,
         section_content: sectionContent.replace(/<[^>]+>/g, " ").trim(),
         guidelines_summary: guidelinesSummary,
-        _auth: process.env.MODAL_TOKEN_SECRET,
       }),
       signal: AbortSignal.timeout(60_000),
     });

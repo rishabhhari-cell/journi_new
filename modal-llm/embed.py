@@ -35,9 +35,10 @@ class JourniEmbed:
         self.model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
     @modal.fastapi_endpoint(method="POST")
-    def embed(self, body: dict) -> dict:
+    def embed(self, body: dict, authorization: str = "") -> dict:
         import os
-        if body.get("_auth") != os.environ.get("MODAL_TOKEN_SECRET"):
+        expected = f"Bearer {os.environ.get('MODAL_TOKEN_SECRET', '')}"
+        if authorization != expected:
             return {"error": "unauthorized"}
 
         texts = body.get("texts")

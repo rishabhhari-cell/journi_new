@@ -86,12 +86,12 @@ class JourniLLM:
         self.llm = LLM(model=MODEL_DIR, dtype="float16")
 
     @modal.fastapi_endpoint(method="POST")
-    def infer(self, body: dict) -> dict:
+    def infer(self, body: dict, authorization: str = "") -> dict:
         import os
         from vllm import SamplingParams
 
-        # Verify bearer token
-        if body.get("_auth") != os.environ.get("MODAL_TOKEN_SECRET"):
+        expected = f"Bearer {os.environ.get('MODAL_TOKEN_SECRET', '')}"
+        if authorization != expected:
             return {"error": "unauthorized"}
 
         prompt = body.get("prompt", "")
@@ -109,12 +109,13 @@ class JourniLLM:
         return {"response": outputs[0].outputs[0].text}
 
     @modal.fastapi_endpoint(method="POST")
-    def reformat_section(self, body: dict) -> dict:
+    def reformat_section(self, body: dict, authorization: str = "") -> dict:
         import json
         import os
         from vllm import SamplingParams
 
-        if body.get("_auth") != os.environ.get("MODAL_TOKEN_SECRET"):
+        expected = f"Bearer {os.environ.get('MODAL_TOKEN_SECRET', '')}"
+        if authorization != expected:
             return {"error": "unauthorized"}
 
         section_title = body.get("section_title", "")

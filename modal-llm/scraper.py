@@ -75,12 +75,13 @@ class JourniScraper:
         self.llm = LLM(model=MODEL_DIR, dtype="float16")
 
     @modal.fastapi_endpoint(method="POST")
-    def extract_guidelines(self, body: dict) -> dict:
+    def extract_guidelines(self, body: dict, authorization: str = "") -> dict:
         import json
         import os
         from vllm import SamplingParams
 
-        if body.get("_auth") != os.environ.get("MODAL_TOKEN_SECRET"):
+        expected = f"Bearer {os.environ.get('MODAL_TOKEN_SECRET', '')}"
+        if authorization != expected:
             return {"error": "unauthorized"}
 
         page_text = body.get("page_text", "")

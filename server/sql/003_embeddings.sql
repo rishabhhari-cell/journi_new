@@ -8,11 +8,13 @@ alter table manuscripts
 alter table journals
   add column if not exists scope_embedding vector(384);
 
--- IVFFlat index for fast cosine similarity on journals (primary query target)
+-- IVFFlat index for fast cosine similarity on journals (primary query target).
+-- lists=10 is appropriate for small corpora (<1000 journals).
+-- Increase to sqrt(row_count) once the table grows past ~10k rows.
 create index if not exists journals_scope_embedding_idx
   on journals
   using ivfflat (scope_embedding vector_cosine_ops)
-  with (lists = 100);
+  with (lists = 10);
 
 -- pgvector RPC function for journal recommendation
 create or replace function match_journals_by_embedding(

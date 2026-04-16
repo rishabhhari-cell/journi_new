@@ -11,8 +11,11 @@ export async function embedTexts(texts: string[]): Promise<number[][] | null> {
   try {
     const res = await fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ texts, _auth: process.env.MODAL_TOKEN_SECRET }),
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.MODAL_TOKEN_SECRET ?? ""}`,
+      },
+      body: JSON.stringify({ texts }),
       signal: AbortSignal.timeout(30_000),
     });
     if (!res.ok) return null;
