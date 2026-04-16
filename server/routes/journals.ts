@@ -254,8 +254,12 @@ journalsRouter.post("/sync-scrape", async (req, res, next) => {
     if (!secret || secret !== process.env.JOURNI_SCRAPER_SECRET) {
       return res.status(401).json({ error: "unauthorized" });
     }
-    const result = await syncJournals({ staleHours: 720 }); // 30 days
-    res.json(result);
+    // Fire-and-forget — sync can take many minutes, return immediately so
+    // the Modal caller doesn't time out waiting for a response.
+    syncJournals({ staleHours: 720 }).catch((err) =>
+      console.error("[sync-scrape] syncJournals failed:", err),
+    );
+    res.status(202).json({ ok: true, status: "sync started" });
   } catch (err) {
     next(err);
   }

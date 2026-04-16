@@ -186,23 +186,31 @@ export async function buildLlmSuggestions(
   const skipSections = new Set(["references", "title"]);
   const eligible = sections.filter((s) => !skipSections.has(normalizeTitle(s.title)));
 
-  const results = await Promise.all(
-    eligible.map(async (section) => {
-      const raw = await callModalReformat(section.title, section.contentHtml, guidelinesSummary);
-      return raw.map(
-        (r): ReformatSuggestion => ({
-          id: makeId(),
-          type: r.type === "trim" || r.type === "restructure" ? r.type : "trim",
-          sectionId: section.id,
-          original: r.original ?? "",
-          suggested: r.suggested ?? "",
-          reason: r.reason ?? "",
-          source: "llm",
-          autoAccepted: false,
-        }),
-      );
-    }),
-  );
+  // Process sections in batches of 3 to avoid overwhelming the Modal endpoint
+  // and timing out the HTTP connection on long manuscripts.
+  const CONCURRENCY = 3;
+  const allSuggestions: ReformatSuggestion[] = [];
+  for (let i = 0; i < eligible.length; i += CONCURRENCY) {
+    const batch = eligible.slice(i, i + CONCURRENCY);
+    const batchResults = await Promise.all(
+      batch.map(async (section) => {
+        const raw = await callModalReformat(section.title, section.contentHtml, guidelinesSummary);
+        return raw.map(
+          (r): ReformatSuggestion => ({
+            id: makeId(),
+            type: r.type === "trim" || r.type === "restructure" ? r.type : "trim",
+            sectionId: section.id,
+            original: r.original ?? "",
+            suggested: r.suggested ?? "",
+            reason: r.reason ?? "",
+            source: "llm",
+            autoAccepted: false,
+          }),
+        );
+      }),
+    );
+    allSuggestions.push(...batchResults.flat());
+  }
 
-  return results.flat();
+  return allSuggestions;
 }
