@@ -5,9 +5,6 @@ Uses sentence-transformers/all-MiniLM-L6-v2.
 Deploy:
   modal deploy modal-llm/embed.py
 
-Required Modal secret: "journi-llm-token"
-  MODAL_TOKEN_SECRET=<same value as journi-llm>
-
 After deploying, set MODAL_EMBED_URL in Railway env vars to the printed endpoint URL.
 """
 import modal
@@ -26,7 +23,6 @@ image = (
     memory=1024,
     min_containers=0,
     timeout=60,
-    secrets=[modal.Secret.from_name("journi-llm-token")],
 )
 class JourniEmbed:
     @modal.enter()
@@ -35,12 +31,7 @@ class JourniEmbed:
         self.model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
     @modal.fastapi_endpoint(method="POST")
-    def embed(self, body: dict, authorization: str = "") -> dict:
-        import os
-        expected = f"Bearer {os.environ.get('MODAL_TOKEN_SECRET', '')}"
-        if authorization != expected:
-            return {"error": "unauthorized"}
-
+    def embed(self, body: dict) -> dict:
         texts = body.get("texts")
         if not texts or not isinstance(texts, list):
             return {"error": "texts must be a non-empty list of strings"}
