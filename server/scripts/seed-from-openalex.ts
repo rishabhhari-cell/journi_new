@@ -25,6 +25,9 @@ const supabase = createClient(
 );
 
 const SEED_LIMIT = parseInt(process.env.SEED_LIMIT ?? "50000", 10);
+// language: is not a valid filter on /sources. Instead we sort by works_count
+// (most-cited/active journals first) and skip rows whose names contain
+// non-Latin script characters at map time.
 const SEED_FILTER = process.env.SEED_FILTER ?? "type:journal";
 const BATCH_SIZE = 200; // OpenAlex max per_page
 const UPSERT_BATCH = 500; // rows per Supabase upsert
@@ -51,7 +54,20 @@ interface OAPage {
   meta: { count: number; per_page: number; next_cursor?: string };
 }
 
-function mapSource(src: OASource): JournalImportInput {
+// Regex that matches any character outside Basic Latin + Latin Extended blocks.
+// Used to skip journals whose names are primarily in Chinese, Arabic, Cyrillic, etc.
+const NON_LATIN_RE = /[^\u0000-\u024F\s\d\p{P}]/u;
+
+function isLatinName(name: string): boolean {
+  // Allow names that are mostly Latin (up to 2 non-Latin chars tolerated for symbols)
+  const nonLatin = [...name].filter((c) => NON_LATIN_RE.test(c));
+  return nonLatin.length <= 2;
+}
+
+function mapSource(src: OASource): JournalImportInput | null {
+  // Skip non-Latin-script journals (Chinese, Arabic, Cyrillic, etc.)
+  if (!isLatinName(src.display_name)) return null;
+
   const issnList = src.issn ?? [];
   const issnPrint = issnList[0] ?? src.issn_l;
   const issnOnline = issnList[1];
@@ -86,6 +102,7 @@ async function fetchPage(filter: string, cursor: string): Promise<OAPage> {
   url.searchParams.set("per_page", String(BATCH_SIZE));
   url.searchParams.set("cursor", cursor);
   url.searchParams.set("select", "id,display_name,abbreviated_title,issn_l,issn,host_organization_name,homepage_url,apc_prices,is_oa,is_in_doaj,x_concepts,type");
+  url.searchParams.set("sort", "works_count:desc"); // most-active journals first
   url.searchParams.set("mailto", "support@journi.ai");
 
   const urlStr = url.toString();
@@ -177,7 +194,9 @@ async function main() {
 
     for (const src of page.results) {
       if (totalFetched >= SEED_LIMIT) break;
-      buffer.push(mapSource(src));
+      const mapped = mapSource(src);
+      if (!mapped) continue; // skip non-Latin journals
+      buffer.push(mapped);
       totalFetched++;
     }
 

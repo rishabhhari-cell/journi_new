@@ -33,11 +33,18 @@ export async function searchJournals(filters: JournalSearchFilters) {
   const cached = cache.get(key);
   if (cached) return cached;
 
-  let query = supabaseAdmin.from("journals").select("*", { count: "exact" });
+  let query = supabaseAdmin.from("journals").select("*", { count: "estimated" });
 
   if (filters.q?.trim()) {
     const q = safeSearchTerm(filters.q);
-    query = query.or(`name.ilike.%${q}%,publisher.ilike.%${q}%,abbreviation.ilike.%${q}%`);
+    // Use full-text search on the pre-built tsvector column (GIN index → fast).
+    // For short terms (< 3 chars) fall back to a prefix match on name only.
+    if (q.length >= 3) {
+      // websearch mode: supports quoted phrases, AND/OR, prefix with :*
+      query = query.textSearch("search_vector", q, { type: "websearch", config: "english" });
+    } else {
+      query = query.ilike("name", `${q}%`);
+    }
   }
 
   if (typeof filters.openAccess === "boolean") {

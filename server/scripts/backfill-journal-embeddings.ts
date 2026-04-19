@@ -5,8 +5,11 @@
  * Run:
  *   npx tsx server/scripts/backfill-journal-embeddings.ts
  *
- * Requires MODAL_EMBED_URL and MODAL_TOKEN_SECRET in environment (or .env).
- * Processes journals in batches of 10 to stay within the embed endpoint limits.
+ * Requires MODAL_EMBED_URL in environment (or .env).
+ *
+ * Speed knobs (env vars):
+ *   EMBED_BATCH_SIZE   — texts per Modal request (default: 64)
+ *   EMBED_CONCURRENCY  — parallel in-flight Modal requests (default: 4)
  */
 import { config as loadEnv } from "dotenv";
 loadEnv();
@@ -17,6 +20,9 @@ const supabase = createClient(
   process.env.SUPABASE_URL!,
   process.env.SUPABASE_SERVICE_ROLE_KEY!,
 );
+
+const EMBED_BATCH_SIZE = parseInt(process.env.EMBED_BATCH_SIZE ?? "64", 10);
+const EMBED_CONCURRENCY = parseInt(process.env.EMBED_CONCURRENCY ?? "4", 10);
 
 async function embedTexts(texts: string[]): Promise<number[][] | null> {
   const url = process.env.MODAL_EMBED_URL;
@@ -47,72 +53,90 @@ async function embedTexts(texts: string[]): Promise<number[][] | null> {
   return null;
 }
 
-async function main() {
-  console.log("Fetching journals without scope_embedding...");
+type JournalRow = { id: string; name: string; subject_areas: string[] | null; publisher: string | null };
 
-  // Paginate through all journals since Supabase caps at 1000 rows per query
-  const PAGE = 1000;
+function toEmbedText(j: JournalRow): string {
+  const subjects = (j.subject_areas ?? []).join(", ");
+  return [j.name, subjects, j.publisher].filter(Boolean).join(". ");
+}
+
+async function processBatch(batch: JournalRow[]): Promise<number> {
+  const texts = batch.map(toEmbedText);
+  const embeddings = await embedTexts(texts);
+  if (!embeddings) {
+    console.warn(`Batch of ${batch.length}: embed returned null, skipping`);
+    return 0;
+  }
+
+  // Write in small parallel chunks to avoid overwhelming Supabase
+  const WRITE_CHUNK = 10;
+  let saved = 0;
+  for (let w = 0; w < batch.length; w += WRITE_CHUNK) {
+    const chunk = batch.slice(w, w + WRITE_CHUNK);
+    const results = await Promise.all(
+      chunk.map((j, k) =>
+        supabase
+          .from("journals")
+          .update({ scope_embedding: embeddings[w + k] })
+          .eq("id", j.id)
+          .then(({ error }) => {
+            if (error) {
+              console.error(`Update failed for ${j.id}: ${error.message}`);
+              return 0;
+            }
+            return 1;
+          }),
+      ),
+    );
+    saved += results.reduce<number>((a, b) => a + b, 0);
+  }
+  return saved;
+}
+
+async function main() {
+  console.log(`Settings: batch=${EMBED_BATCH_SIZE}, concurrency=${EMBED_CONCURRENCY}`);
+
+  // Fetch one page at a time, embed it, then move on — avoids loading all rows into memory
+  // and keeps individual Supabase queries small enough to avoid statement timeouts.
+  const PAGE = EMBED_BATCH_SIZE * EMBED_CONCURRENCY; // fetch exactly what we'll process per round
   let offset = 0;
-  let allJournals: Array<{ id: string; name: string; subject_areas: string[] | null; publisher: string | null }> = [];
+  let done = 0;
+  let grandTotal = 0;
 
   while (true) {
-    const { data, error } = await supabase
+    const { data, error, count } = await supabase
       .from("journals")
-      .select("id, name, subject_areas, publisher")
+      .select("id, name, subject_areas, publisher", { count: "estimated" })
       .is("scope_embedding", null)
       .order("name")
       .range(offset, offset + PAGE - 1);
 
     if (error) throw new Error(`Failed to fetch journals: ${error.message}`);
     if (!data || data.length === 0) break;
-    allJournals = allJournals.concat(data);
-    console.log(`Fetched ${allJournals.length} journals so far...`);
+
+    if (grandTotal === 0) {
+      grandTotal = count ?? 0;
+      console.log(`~${grandTotal.toLocaleString()} journals need embeddings.`);
+    }
+
+    const page = data as JournalRow[];
+
+    // Split page into embed-sized batches and process concurrently
+    const batches: JournalRow[][] = [];
+    for (let i = 0; i < page.length; i += EMBED_BATCH_SIZE) {
+      batches.push(page.slice(i, i + EMBED_BATCH_SIZE));
+    }
+
+    const results = await Promise.all(batches.map(processBatch));
+    done += results.reduce<number>((a, b) => a + b, 0);
+    console.log(`Progress: ${done.toLocaleString()} embedded so far...`);
+
     if (data.length < PAGE) break;
-    offset += PAGE;
+    // Don't advance offset — rows that got embedded are no longer returned by
+    // .is("scope_embedding", null), so the next query starts from the new front.
   }
 
-  if (allJournals.length === 0) {
-    console.log("All journals already have embeddings. Nothing to do.");
-    return;
-  }
-
-  console.log(`Found ${allJournals.length} journals to embed.`);
-
-  const BATCH = 10;
-  let done = 0;
-
-  for (let i = 0; i < allJournals.length; i += BATCH) {
-    const batch = allJournals.slice(i, i + BATCH);
-    const texts = batch.map((j) => {
-      const subjects = (j.subject_areas ?? []).join(", ");
-      return [j.name, subjects, j.publisher].filter(Boolean).join(". ");
-    });
-
-    const embeddings = await embedTexts(texts);
-    if (!embeddings) {
-      console.warn(`Batch ${i}–${i + batch.length - 1}: embed returned null, skipping`);
-      continue;
-    }
-
-    for (let k = 0; k < batch.length; k++) {
-      const { error: updateError } = await supabase
-        .from("journals")
-        .update({ scope_embedding: embeddings[k] })
-        .eq("id", batch[k].id);
-
-      if (updateError) {
-        console.error(`Failed to update journal ${batch[k].id}: ${updateError.message}`);
-      } else {
-        done++;
-      }
-    }
-
-    if ((i + BATCH) % 100 === 0 || i + BATCH >= allJournals.length) {
-      console.log(`Progress: ${Math.min(i + BATCH, allJournals.length)} / ${allJournals.length}`);
-    }
-  }
-
-  console.log(`Done. Embedded ${done} / ${allJournals.length} journals.`);
+  console.log(`\nDone. Embedded ${done.toLocaleString()} journals.`);
 }
 
 main().catch((err) => {
