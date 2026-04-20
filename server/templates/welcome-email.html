@@ -1,67 +1,118 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body style="margin:0; padding:0; background-color:#f0ede6;">
-  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#f0ede6; margin:0; padding:24px 12px;">
-    <tr>
-      <td align="center">
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="width:600px; max-width:600px; background-color:#ffffff; border:1px solid #ddd; border-radius:4px; overflow:hidden;">
-          <tr>
-            <td align="center" style="padding:32px 24px 20px; border-bottom:1px solid #e8e4dc;">
-              <a href="https://www.journie.io" target="_blank" rel="noopener noreferrer">
-                <img src="https://www.journie.io/logos/Journie_logo.jpg" alt="Journie logo" width="144" style="display:block; width:144px; max-width:144px; height:auto; border:0; outline:none; text-decoration:none;">
-              </a>
-            </td>
-          </tr>
-
-          <tr>
-            <td style="padding:36px 38px 10px; font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif; color:#2c2c2a;">
-              <p style="margin:0 0 22px; font-size:27px; line-height:1.32; font-weight:800; color:#1a6b1a; font-family:'Carelia','Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif;">Dear {{GIVEN_NAME}},</p>
-              <p style="margin:0 0 22px; font-size:16px; line-height:2.01; color:#3a3a38;">Welcome to Journie, and congratulations on taking a meaningful step forward in your research career. We are genuinely thrilled to have you with us.</p>
-              <p style="margin:0 0 30px; font-size:16px; line-height:2.01; color:#3a3a38;">We built Journie because we know first-hand how much time researchers waste navigating the administrative maze of scientific publishing: the reformatting, the resubmissions, and the endless searching for the right conference or journal. That time belongs to your science, and we intend to give it back.</p>
-            </td>
-          </tr>
-
-          <tr>
-            <td align="center" style="padding:2px 38px 30px;">
-              <a href="{{CTA_URL}}" style="display:inline-block; background-color:#1a6b1a; color:#ffffff; font-family:'Carelia','Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; font-weight:700; text-decoration:none; padding:15px 34px; border-radius:2px;">{{CTA_LABEL}}</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td style="padding:4px 38px 30px; font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif; color:#3a3a38;">
-              <p style="margin:0 0 18px; font-size:16px; line-height:1.95;">Should you have any questions, we are always here to help. We look forward to seeing where your research takes you.</p>
-              <p style="margin:0 0 4px; font-size:17px; line-height:1.67; font-weight:800; color:#1a6b1a; font-family:'Carelia','Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif;">Yuri &amp; Rish</p>
-              <p style="margin:0; font-size:14px; line-height:1.72; color:#666;">Co-Founders, Journie</p>
-            </td>
-          </tr>
-
-          <tr>
-            <td align="center" style="background-color:#1a6b1a; padding:24px 18px 20px;">
-              <a href="https://www.journie.io" target="_blank" rel="noopener noreferrer">
-                <img src="https://www.journie.io/logos/journie_invert.jpg" alt="Journie logo" width="120" style="display:block; width: 120px; max-width: 120px; height:auto; border:0; outline:none; text-decoration:none; margin:0 auto 10px;">
-              </a>
-              <p style="margin:0 0 12px; font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif; font-size:10px; line-height:1.5; letter-spacing:0.04em;"><span style="color:#ffffff;">your research, </span><span style="color:#9999cc;">simplified.</span></p>
-              <p style="margin:0; font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif; font-size:10px; line-height:1.72; color:rgba(255,255,255,0.72);">
-                <a href="#" style="color:rgba(255,255,255,0.9); text-decoration:none;">Unsubscribe</a>
-                <span style="padding:0 8px; color:rgba(255,255,255,0.5);">&middot;</span>
-                <a href="#" style="color:rgba(255,255,255,0.9); text-decoration:none;">Privacy Policy</a>
-                <span style="padding:0 8px; color:rgba(255,255,255,0.5);">&middot;</span>
-                <a href="https://www.journie.io" style="color:rgba(255,255,255,0.9); text-decoration:none;">journie.io</a>
-              </p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="en">
+  <head>
+    <meta content="width=device-width" name="viewport" />
+    <link rel="preload" as="image" href="https://www.journie.io/logos/Journie_logo.jpg" />
+    <link rel="preload" as="image" href="https://www.journie.io/logos/journie_invert.jpg" />
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="telephone=no,address=no,email=no,date=no,url=no" name="format-detection" />
+  </head>
+  <body style="margin:0; padding:0; background-color:#f0ede6;">
+    <table border="0" width="100%" cellpadding="0" cellspacing="0" role="presentation" align="center">
+      <tbody>
+        <tr>
+          <td>
+            <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+              <tbody>
+                <tr style="width:100%;">
+                  <td>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0; padding:24px 12px; background-color:#f0ede6;">
+                      <tbody>
+                        <tr style="margin:0; padding:0;">
+                          <td align="center" style="margin:0; padding:0;">
+                            <table width="600" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0; padding:0; width:600px; max-width:600px; background-color:#ffffff; border:1px solid #ddd; border-radius:4px; overflow:hidden;">
+                              <tbody>
+                                <tr style="margin:0; padding:0;">
+                                  <td align="center" style="margin:0; padding:32px 24px 20px; border-bottom:1px solid #e8e4dc;">
+                                    <a href="https://www.journie.io/" style="color:#067df7; text-decoration:none;" target="_blank" rel="noopener noreferrer">
+                                      <img
+                                        alt="Journie logo"
+                                        src="https://www.journie.io/logos/Journie_logo.jpg"
+                                        width="144"
+                                        style="display:block; outline:none; border:0; text-decoration:none; max-width:144px; width:144px; height:auto;"
+                                      />
+                                    </a>
+                                  </td>
+                                </tr>
+                                <tr style="margin:0; padding:0;">
+                                  <td style="margin:0; padding:36px 38px 10px; font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif; color:#2c2c2a;">
+                                    <p style="margin:0 0 22px; padding:0; font-size:27px; line-height:1.32; font-weight:800; color:#1a6b1a; font-family:'Carelia','Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif;">
+                                      Dear {{GIVEN_NAME}},
+                                    </p>
+                                    <p style="margin:0 0 22px; padding:0; font-size:16px; line-height:2.01; color:#3a3a38;">
+                                      Welcome to Journie, and congratulations on taking a meaningful step forward in your research career. We are genuinely thrilled to have you with us.
+                                    </p>
+                                    <p style="margin:0 0 30px; padding:0; font-size:16px; line-height:2.01; color:#3a3a38;">
+                                      We built Journie because we know first-hand how much time researchers waste navigating the administrative maze of scientific publishing: the reformatting, the resubmissions, and the endless searching for the right conference or journal. That time belongs to your science, and we intend to give it back.
+                                    </p>
+                                  </td>
+                                </tr>
+                                <tr style="margin:0; padding:0;">
+                                  <td align="center" style="margin:0; padding:2px 38px 30px;">
+                                    <p style="margin:0; padding:0;">
+                                      <a
+                                        href="{{CTA_URL}}"
+                                        rel="noopener noreferrer"
+                                        style="color:#ffffff; text-decoration:none; display:inline-block; background-color:#1a6b1a; font-family:'Carelia','Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; font-weight:700; padding:15px 34px; border-radius:2px;"
+                                        target="_blank"
+                                      >
+                                        {{CTA_LABEL}}
+                                      </a>
+                                    </p>
+                                  </td>
+                                </tr>
+                                <tr style="margin:0; padding:0;">
+                                  <td style="margin:0; padding:4px 38px 30px; font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif; color:#3a3a38;">
+                                    <p style="margin:0 0 18px; padding:0; font-size:16px; line-height:1.95;">
+                                      Should you have any questions, we are always here to help. We look forward to seeing where your research takes you.
+                                    </p>
+                                    <p style="margin:0 0 4px; padding:0; font-size:17px; line-height:1.67; font-weight:800; color:#1a6b1a; font-family:'Carelia','Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif;">
+                                      Yuri &amp; Rish
+                                    </p>
+                                    <p style="margin:0 0 18px; padding:0; font-size:14px; line-height:1.72; color:#666;">
+                                      Co-Founders, Journie
+                                    </p>
+                                    <p style="margin:0; padding:0; font-size:14px; line-height:1.8; color:#666;">
+                                      Need a hand? Reach us anytime at
+                                      <a href="mailto:{{SUPPORT_EMAIL}}" style="color:#1a6b1a; text-decoration:none;">{{SUPPORT_EMAIL}}</a>.
+                                    </p>
+                                  </td>
+                                </tr>
+                                <tr style="margin:0; padding:0;">
+                                  <td align="center" style="margin:0; padding:24px 18px 20px; background-color:#1a6b1a;">
+                                    <a href="https://www.journie.io/" style="color:#067df7; text-decoration:none;" target="_blank" rel="noopener noreferrer">
+                                      <img
+                                        alt="Journie logo"
+                                        src="https://www.journie.io/logos/journie_invert.jpg"
+                                        width="120"
+                                        style="display:block; outline:none; border:0; text-decoration:none; max-width:120px; width:120px; height:auto; margin:0 auto 10px;"
+                                      />
+                                    </a>
+                                    <p style="margin:0 0 12px; padding:0; font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif; font-size:10px; line-height:1.5; letter-spacing:0.04em;">
+                                      <span style="color:#ffffff;">your research, </span><span style="color:#d7d0ff;">simplified.</span>
+                                    </p>
+                                    <p style="margin:0; padding:0; font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif; font-size:10px; line-height:1.72; color:rgba(255,255,255,0.72);">
+                                      <a href="mailto:{{SUPPORT_EMAIL}}" style="color:rgba(255,255,255,0.9); text-decoration:none;" target="_blank" rel="noopener noreferrer">{{SUPPORT_EMAIL}}</a>
+                                      <span style="padding:0 8px; color:rgba(255,255,255,0.5);">&middot;</span>
+                                      <a href="https://www.journie.io" style="color:rgba(255,255,255,0.9); text-decoration:none;" target="_blank" rel="noopener noreferrer">journie.io</a>
+                                    </p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
-

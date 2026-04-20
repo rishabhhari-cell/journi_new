@@ -28,7 +28,7 @@ interface OpenAlexSource {
   id: string;
   issn_l: string | null;
   issn: string[] | null;
-  impact_factor: number | null;
+  summary_stats: { '2yr_mean_citedness': number | null } | null;
   x_concepts: Array<{ display_name: string; score: number; level: number }> | null;
   apc_prices: Array<{ price: number; currency: string; price_usd: number }> | null;
 }
@@ -71,12 +71,14 @@ async function fetchPage(cursor: string): Promise<{ results: OpenAlexSource[]; n
   url.searchParams.set('filter', 'type:journal');
   url.searchParams.set('per_page', String(PER_PAGE));
   url.searchParams.set('cursor', cursor);
-  url.searchParams.set('sort', 'works_count:desc');
-  url.searchParams.set('select', 'id,issn_l,issn,impact_factor,x_concepts,apc_prices');
+  url.searchParams.set('select', 'id,issn_l,issn,summary_stats,x_concepts,apc_prices');
   url.searchParams.set('mailto', MAILTO);
 
   const res = await fetch(url.toString(), { headers: { Accept: 'application/json' } });
-  if (!res.ok) throw new Error(`OpenAlex error ${res.status}`);
+  if (!res.ok) {
+    const body = await res.text().catch(() => '');
+    throw new Error(`OpenAlex error ${res.status}: ${body}\nURL: ${url.toString()}`);
+  }
   const data = await res.json();
   return { results: data.results, next_cursor: data.meta?.next_cursor ?? null };
 }
@@ -150,7 +152,7 @@ async function main() {
       }
       if (!journalId) continue;
 
-      const impact_factor = source.impact_factor ?? undefined;
+      const impact_factor = source.summary_stats?.['2yr_mean_citedness'] ?? undefined;
       const subject_areas = parseSubjectAreas(source);
       const apc_cost_usd = parseApcUsd(source) ?? undefined;
 
