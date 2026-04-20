@@ -4,7 +4,7 @@ import type { ParseDiagnostic, ParsedBlock, ParsedBoundingBox, ParsedFigure, Par
 import { parseRawDocument } from "../../shared/document-parse";
 import { parseDocumentWithLLM } from "./llm.service";
 import { runDeterministicErrorChecks } from "./parse-error-detection.service";
-import { extractDocxXmlStructure } from "./docx-xml-parse.service";
+import { extractDocxXmlStructure, classifyPreambleLine } from "./docx-xml-parse.service";
 import { computeParseConfidence } from "./parse-confidence.service";
 
 export interface ParseUploadInput {
@@ -1063,6 +1063,8 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
         ...extractReferencesFromOupHtml(result.value),
         ...xmlReferenceLines,
       ],
+      authors: xmlResult.authors,
+      institutions: xmlResult.institutions,
     };
 
     // Compute confidence score to decide whether to call Modal LLM
@@ -1145,6 +1147,24 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
     try {
       const payload = await extractPdfPayload(input.buffer);
 
+      // Extract authors and institutions from first-page text blocks
+      const pdfAuthors: string[] = [];
+      const pdfInstitutions: string[] = [];
+      let pastTitle = false;
+      let pastFirstHeading = false;
+      for (const block of (payload.blocks ?? []).filter((b) => b.page === 1)) {
+        if (pastFirstHeading) break;
+        if (!pastTitle && block.isLargeFont) { pastTitle = true; continue; }
+        if (!pastTitle) continue;
+        if (/^(abstract|introduction|background|methods)/i.test(block.text.trim())) {
+          pastFirstHeading = true;
+          break;
+        }
+        const kind = classifyPreambleLine(block.text);
+        if (kind === "author") pdfAuthors.push(block.text.replace(/[¹²³⁴⁵⁶⁷⁸⁹]+/g, "").trim());
+        else if (kind === "institution") pdfInstitutions.push(block.text.trim());
+      }
+
       if (!payload.text) {
         diagnostics.push({
           level: "warning",
@@ -1164,6 +1184,8 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
         tables: payload.tables,
         links: [],
         diagnostics: [...diagnostics, ...payload.diagnostics],
+        authors: pdfAuthors.length > 0 ? pdfAuthors : undefined,
+        institutions: pdfInstitutions.length > 0 ? pdfInstitutions : undefined,
       };
 
       // Compute confidence score to decide whether to call Modal LLM

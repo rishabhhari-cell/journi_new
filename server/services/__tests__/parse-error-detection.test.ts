@@ -140,3 +140,29 @@ describe("parseRawDocument — parseConfidence field", () => {
     expect(withConfidence.parseConfidence).toBe(0.92);
   });
 });
+
+describe("parseRawDocument — authors/institutions passthrough", () => {
+  it("passes authors and institutions from RawParsedDocument to ParsedManuscript", () => {
+    const raw: RawParsedDocument = {
+      fileTitle: "Test",
+      format: "docx",
+      html: "<h2>Abstract</h2><p>Some content here for the abstract section.</p>",
+      authors: ["Smith J", "Jones A"],
+      institutions: ["Harvard University"],
+    };
+    const result = parseRawDocument(raw);
+    expect(result.authors).toEqual(["Smith J", "Jones A"]);
+    expect(result.institutions).toEqual(["Harvard University"]);
+  });
+
+  it("returns undefined authors/institutions when not present in raw", () => {
+    const raw: RawParsedDocument = {
+      fileTitle: "Test",
+      format: "docx",
+      html: "<h2>Abstract</h2><p>Some content here for the abstract section.</p>",
+    };
+    const result = parseRawDocument(raw);
+    expect(result.authors).toBeUndefined();
+    expect(result.institutions).toBeUndefined();
+  });
+});
