@@ -407,7 +407,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
         console.error('[ProjectContext] Failed to persist project metadata');
       }
     }
-  }, [activeProject, backendMode, updateActive]);
+  }, [activeProject.id, activeProject.metadata, backendMode, updateActive]);
 
   const addTask = (taskData: TaskFormData) => {
     const newTask: Task = { id: nanoid(), ...taskData };
