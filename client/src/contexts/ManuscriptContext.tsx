@@ -277,7 +277,7 @@ interface ManuscriptContextType {
   activeManuscriptId: string;
   manuscript: Manuscript;
   setActiveManuscriptId: (id: string) => void;
-  createManuscript: (title: string, type: ManuscriptType) => string;
+  createManuscript: (title: string, type: ManuscriptType) => Promise<string>;
   deleteManuscript: (id: string) => void;
   manuscriptTypeLabels: Record<ManuscriptType, string>;
   activeSection: string;
@@ -631,38 +631,37 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
     setManuscripts((prev) => prev.map((doc) => (doc.id === activeManuscriptId ? updater(doc) : doc)));
   }, [activeManuscriptId]);
 
-  const createManuscript = useCallback((title: string, type: ManuscriptType): string => {
+  const createManuscript = useCallback(async (title: string, type: ManuscriptType): Promise<string> => {
     const projectId = activeProject?.id ?? 'mvp-project';
     const optimistic = createEmptyManuscript(projectId, title, type);
     setManuscripts((prev) => [...prev, optimistic]);
     setActiveManuscriptId(optimistic.id);
 
     if (backendMode && activeProject?.id) {
-      void (async () => {
-        try {
-          const created = await createManuscriptApi({
-            projectId: activeProject.id,
-            title,
-            type,
-            sections: optimistic.sections.map((section) => ({
-              title: section.title,
-              contentHtml: section.content,
-              status: section.status,
-            })),
-          });
-          const mapped = mapBackendManuscript(created.data, activeProject.id);
-          setManuscripts((prev) =>
-            prev.map((doc) =>
-              doc.id === optimistic.id
-                ? { ...mapped, comments: doc.comments, citations: doc.citations }
-                : doc,
-            ),
-          );
-          setActiveManuscriptId(mapped.id);
-        } catch {
-          // Keep optimistic local manuscript.
-        }
-      })();
+      try {
+        const created = await createManuscriptApi({
+          projectId: activeProject.id,
+          title,
+          type,
+          sections: optimistic.sections.map((section) => ({
+            title: section.title,
+            contentHtml: section.content,
+            status: section.status,
+          })),
+        });
+        const mapped = mapBackendManuscript(created.data, activeProject.id);
+        setManuscripts((prev) =>
+          prev.map((doc) =>
+            doc.id === optimistic.id
+              ? { ...mapped, comments: doc.comments, citations: doc.citations }
+              : doc,
+          ),
+        );
+        setActiveManuscriptId(mapped.id);
+        return mapped.id;
+      } catch {
+        // Keep optimistic local manuscript.
+      }
     }
 
     return optimistic.id;
