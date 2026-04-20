@@ -28,11 +28,11 @@ TypeScript ESM, React, ManuscriptContext (Yjs + Supabase), ProjectContext (Supab
 
 **Fix:** Change navigation target to `/dashboard`. After `createManuscript` resolves, call `replaceManuscriptContent({ title, sections, citations })` and `addCitations(citations)` from `ManuscriptContext` using the `importResult`. This mirrors what `handleWizardComplete` does in `Collaboration.tsx`.
 
-**Props needed:** `ProjectOnboardingWizard` must accept `replaceManuscriptContent` and `addCitations` from `useManuscript()` (already available via the hook inside the component — it already imports `useManuscript`).
+**Props needed:** `ProjectOnboardingWizard` calls `replaceManuscriptContent({ title, sections, citations })` from `useManuscript()` to set all content atomically in one update (already available via the hook inside the component — it already imports `useManuscript`). No separate `addCitations` call needed.
 
 **Flow after fix:**
 1. User uploads file in wizard → parser runs → `importResult` stored in wizard state
-2. User clicks "Create Project" → `createManuscript` called and awaited → `replaceManuscriptContent` called with sections/citations → `navigate("/dashboard")`
+2. User clicks "Create Project" → `createManuscript` called and awaited → `replaceManuscriptContent({ title, sections, citations })` called atomically → `navigate("/dashboard")`
 3. User opens editor → sees populated manuscript, no second parse
 
 ---
@@ -133,6 +133,17 @@ In `Collaboration.tsx`, after `applyImportedResult` is called, if `importResult.
 
 In `ProjectOnboardingWizard.handleFinish`, do the same after `replaceManuscriptContent`.
 
+### Dashboard display
+
+In `Dashboard.tsx`, the Overview tab gains a **Project Metadata** card below the stats row. It renders when `activeProject.metadata?.authors?.length > 0` or `activeProject.metadata?.institutions?.length > 0`. The card shows:
+
+- **Authors** — comma-separated list of parsed author strings (e.g. "Smith J, Jones A, Patel R")
+- **Institutions** — comma-separated list of affiliation strings
+
+If both arrays are empty (no document imported, or extraction found nothing), the card is not rendered. The card uses the same `bg-card rounded-xl border border-border p-5` styling as the existing overview cards. There is no edit UI in this spec — the metadata is read-only display only, populated automatically on import.
+
+`useProject()` is already available in `Dashboard.tsx`, so `activeProject.metadata` is accessible without new props.
+
 ### Submission surface
 
 `SubmitToJournalDialog` reads `activeProject.metadata?.authors ?? []` and `activeProject.metadata?.institutions ?? []` and includes them in the submission payload. No editor sections involved.
@@ -173,4 +184,4 @@ Find the "Figures and Tables" section via `getSectionByTitle('Figures and Tables
 
 - Unit tests for author/institution extraction heuristics in `server/services/__tests__/docx-xml-parse.test.ts` — add cases for: typical author line, institution line with university keyword, superscript-stripped author, line that should NOT match (abstract body text).
 - Unit test for `parseRawDocument` passing through `authors` and `institutions`.
-- Manual verification of all four flows: onboarding import → dashboard → editor shows content; collaboration wizard import → editor populated, wizard does not reopen; imported DOCX with known authors → project metadata populated; DOCX/PDF with figures → "Figures and Tables" section contains labeled `<figure>` blocks.
+- Manual verification of all four flows: onboarding import → dashboard → editor shows content; collaboration wizard import → editor populated, wizard does not reopen; imported DOCX with known authors → project metadata populated and visible in Dashboard Overview; DOCX/PDF with figures → "Figures and Tables" section contains labeled `<figure>` blocks.
