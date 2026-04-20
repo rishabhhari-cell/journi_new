@@ -108,164 +108,172 @@ export default function TaskDialog({ onClose, onSubmit, task, collaborators }: T
   };
 
   return (
-    <motion.aside
-      initial={{ x: '100%' }}
-      animate={{ x: 0 }}
-      exit={{ x: '100%' }}
-      transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-      className="absolute inset-y-0 right-0 z-20 w-[420px] bg-card border-l border-border shadow-2xl"
-    >
-      <form onSubmit={handleSubmit} className="flex h-full flex-col px-6 py-5 gap-5">
-        <div className="flex items-center justify-between pb-4 border-b border-border">
-          <h2 className="text-base font-semibold text-foreground truncate">
-            {task ? task.name : 'New Task'}
-          </h2>
-          <button
-            type="button"
-            onClick={onClose}
-            className="text-muted-foreground hover:text-foreground transition-colors"
-            aria-label="Close task panel"
-          >
-            <X size={20} />
-          </button>
-        </div>
-
-        <div>
-          <input
-            type="text"
-            value={formData.name}
-            onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
-            placeholder="Task name…"
-            className="w-full border-0 border-b border-input bg-transparent py-1 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#9999cc] focus:outline-none transition-colors"
-            autoFocus
-          />
-        </div>
-
-        <div>
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Priority</p>
-          <div className="flex gap-2">
-            {priorityOptions.map((option) => {
-              const selected = formData.priority === option.value;
-              return (
-                <button
-                  key={option.value}
-                  type="button"
-                  onClick={() => setFormData((prev) => ({ ...prev, priority: option.value }))}
-                  className={`border rounded-full px-3 py-1 text-xs font-medium cursor-pointer transition-colors ${selected ? option.selected : 'bg-background border-border text-muted-foreground dark:bg-background dark:border-border dark:text-muted-foreground'}`}
-                >
-                  {option.label}
-                </button>
-              );
-            })}
+    <>
+      <div
+        className="fixed inset-x-0 bottom-0 top-16 z-40 bg-black/10 backdrop-blur-[1px]"
+        onClick={onClose}
+        aria-hidden="true"
+      />
+      <motion.aside
+        initial={{ x: '100%' }}
+        animate={{ x: 0 }}
+        exit={{ x: '100%' }}
+        transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+        className="fixed bottom-0 right-0 top-16 z-50 w-full max-w-[420px] border-l border-border bg-card shadow-2xl"
+      >
+        <form onSubmit={handleSubmit} className="flex h-full flex-col bg-card px-6 py-5">
+          <div className="flex items-center justify-between border-b border-border pb-4">
+            <h2 className="truncate text-base font-semibold text-foreground">
+              {task ? task.name : 'New Task'}
+            </h2>
+            <button
+              type="button"
+              onClick={onClose}
+              className="text-muted-foreground transition-colors hover:text-foreground"
+              aria-label="Close task panel"
+            >
+              <X size={20} />
+            </button>
           </div>
-        </div>
 
-        <div>
-          <div className="mb-2 flex items-center justify-between">
-            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Progress</p>
-            <span className="rounded bg-[#9999cc]/10 px-2 py-0.5 text-xs font-semibold text-[#9999cc] dark:bg-[#9999cc]/20 dark:text-[#c9c9f2]">
-              {formData.completionPct}%
-            </span>
+          <div className="flex-1 space-y-5 overflow-y-auto pb-5 pr-1 pt-5">
+            <div>
+              <input
+                type="text"
+                value={formData.name}
+                onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
+                placeholder="Task name..."
+                className="w-full border-0 border-b border-input bg-transparent py-1 text-sm text-foreground transition-colors placeholder:text-muted-foreground focus:border-[#9999cc] focus:outline-none"
+                autoFocus
+              />
+            </div>
+
+            <div>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Priority</p>
+              <div className="flex gap-2">
+                {priorityOptions.map((option) => {
+                  const selected = formData.priority === option.value;
+                  return (
+                    <button
+                      key={option.value}
+                      type="button"
+                      onClick={() => setFormData((prev) => ({ ...prev, priority: option.value }))}
+                      className={`cursor-pointer rounded-full border px-3 py-1 text-xs font-medium transition-colors ${selected ? option.selected : 'bg-background border-border text-muted-foreground dark:bg-background dark:border-border dark:text-muted-foreground'}`}
+                    >
+                      {option.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div>
+              <div className="mb-2 flex items-center justify-between">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Progress</p>
+                <span className="rounded bg-[#9999cc]/10 px-2 py-0.5 text-xs font-semibold text-[#9999cc] dark:bg-[#9999cc]/20 dark:text-[#c9c9f2]">
+                  {formData.completionPct}%
+                </span>
+              </div>
+              <input
+                type="range"
+                min={0}
+                max={100}
+                step={5}
+                value={formData.completionPct}
+                onChange={(e) => setCompletion(Number(e.target.value))}
+                className="w-full accent-[#9999cc]"
+              />
+              <div className="mt-2 flex items-center gap-1">
+                {[0, 25, 50, 75, 100].map((value) => (
+                  <button
+                    key={value}
+                    type="button"
+                    onClick={() => setCompletion(value)}
+                    className="rounded border border-transparent px-1.5 py-0.5 text-[10px] text-muted-foreground transition-colors hover:border-border hover:text-foreground"
+                  >
+                    {value}%
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Assign to</p>
+              <div className="grid grid-cols-3 gap-2">
+                {collaborators.map((collaborator) => {
+                  const isSelected = formData.assignedTo?.includes(collaborator.id) || false;
+                  return (
+                    <button
+                      key={collaborator.id}
+                      type="button"
+                      onClick={() => handleAssigneeToggle(collaborator.id)}
+                      className={`flex cursor-pointer items-center gap-1.5 rounded-lg border px-2 py-1 text-xs transition-colors ${isSelected ? 'bg-[#9999cc]/10 border-[#9999cc]/40 text-[#9999cc] dark:bg-[#9999cc]/20 dark:border-[#9999cc]/50 dark:text-[#c9c9f2] font-medium' : 'bg-background border-border text-muted-foreground hover:bg-accent'}`}
+                      title={collaborator.name}
+                    >
+                      <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#9999cc] text-[10px] font-bold text-white">
+                        {collaborator.name.slice(0, 2).toUpperCase()}
+                      </span>
+                      <span className="truncate">{collaborator.name}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <p className="mb-1 text-xs text-muted-foreground">Start</p>
+                <input
+                  type="date"
+                  value={format(formData.startDate, 'yyyy-MM-dd')}
+                  onChange={(e) => setFormData((prev) => ({ ...prev, startDate: new Date(e.target.value) }))}
+                  className="w-full rounded-lg border border-border bg-background px-2 py-1.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-[#9999cc]"
+                />
+              </div>
+              <div>
+                <p className="mb-1 text-xs text-muted-foreground">Due</p>
+                <input
+                  type="date"
+                  value={format(formData.endDate, 'yyyy-MM-dd')}
+                  onChange={(e) => setFormData((prev) => ({ ...prev, endDate: new Date(e.target.value) }))}
+                  className="w-full rounded-lg border border-border bg-background px-2 py-1.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-[#9999cc]"
+                />
+              </div>
+            </div>
+
+            <div>
+              <p className="mb-1 text-xs text-muted-foreground">Notes</p>
+              <textarea
+                rows={3}
+                value={formData.description}
+                onChange={(e) => setFormData((prev) => ({ ...prev, description: e.target.value }))}
+                placeholder="Add notes..."
+                className="w-full resize-none border-0 border-b border-input bg-transparent py-1 text-sm text-foreground transition-colors placeholder:text-muted-foreground focus:border-[#9999cc] focus:outline-none"
+              />
+            </div>
+
+            {error && (
+              <p className="text-xs text-red-600 dark:text-red-400">{error}</p>
+            )}
           </div>
-          <input
-            type="range"
-            min={0}
-            max={100}
-            step={5}
-            value={formData.completionPct}
-            onChange={(e) => setCompletion(Number(e.target.value))}
-            className="w-full accent-[#9999cc]"
-          />
-          <div className="mt-2 flex items-center gap-1">
-            {[0, 25, 50, 75, 100].map((value) => (
-              <button
-                key={value}
-                type="button"
-                onClick={() => setCompletion(value)}
-                className="rounded border border-transparent px-1.5 py-0.5 text-[10px] text-muted-foreground hover:border-border hover:text-foreground transition-colors"
-              >
-                {value}%
-              </button>
-            ))}
+
+          <div className="flex justify-end gap-3 border-t border-border pt-4">
+            <button
+              type="button"
+              onClick={onClose}
+              className="rounded-lg border border-border bg-background px-4 py-2 text-sm text-foreground transition-colors hover:bg-accent"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="rounded-lg bg-[#9999cc] px-5 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            >
+              Save
+            </button>
           </div>
-        </div>
-
-        <div>
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Assign to</p>
-          <div className="grid grid-cols-3 gap-2">
-            {collaborators.map((collaborator) => {
-              const isSelected = formData.assignedTo?.includes(collaborator.id) || false;
-              return (
-                <button
-                  key={collaborator.id}
-                  type="button"
-                  onClick={() => handleAssigneeToggle(collaborator.id)}
-                  className={`flex items-center gap-1.5 rounded-lg border px-2 py-1 text-xs cursor-pointer transition-colors ${isSelected ? 'bg-[#9999cc]/10 border-[#9999cc]/40 text-[#9999cc] dark:bg-[#9999cc]/20 dark:border-[#9999cc]/50 dark:text-[#c9c9f2] font-medium' : 'bg-background border-border text-muted-foreground hover:bg-accent'}`}
-                  title={collaborator.name}
-                >
-                  <span className="h-5 w-5 rounded-full bg-[#9999cc] text-white text-[10px] font-bold flex items-center justify-center">
-                    {collaborator.name.slice(0, 2).toUpperCase()}
-                  </span>
-                  <span className="truncate">{collaborator.name}</span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <p className="mb-1 text-xs text-muted-foreground">Start</p>
-            <input
-              type="date"
-              value={format(formData.startDate, 'yyyy-MM-dd')}
-              onChange={(e) => setFormData((prev) => ({ ...prev, startDate: new Date(e.target.value) }))}
-              className="w-full rounded-lg border border-border bg-background px-2 py-1.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-[#9999cc]"
-            />
-          </div>
-          <div>
-            <p className="mb-1 text-xs text-muted-foreground">Due</p>
-            <input
-              type="date"
-              value={format(formData.endDate, 'yyyy-MM-dd')}
-              onChange={(e) => setFormData((prev) => ({ ...prev, endDate: new Date(e.target.value) }))}
-              className="w-full rounded-lg border border-border bg-background px-2 py-1.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-[#9999cc]"
-            />
-          </div>
-        </div>
-
-        <div>
-          <p className="mb-1 text-xs text-muted-foreground">Notes</p>
-          <textarea
-            rows={3}
-            value={formData.description}
-            onChange={(e) => setFormData((prev) => ({ ...prev, description: e.target.value }))}
-            placeholder="Add notes…"
-            className="w-full resize-none border-0 border-b border-input bg-transparent py-1 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#9999cc] focus:outline-none transition-colors"
-          />
-        </div>
-
-        {error && (
-          <p className="text-xs text-red-600 dark:text-red-400">{error}</p>
-        )}
-
-        <div className="mt-auto flex justify-end gap-3 border-t border-border pt-4">
-          <button
-            type="button"
-            onClick={onClose}
-            className="rounded-lg border border-border bg-background px-4 py-2 text-sm text-foreground hover:bg-accent transition-colors"
-          >
-            Cancel
-          </button>
-          <button
-            type="submit"
-            className="rounded-lg bg-[#9999cc] px-5 py-2 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
-          >
-            Save
-          </button>
-        </div>
-      </form>
-    </motion.aside>
+        </form>
+      </motion.aside>
+    </>
   );
 }
-

@@ -30,8 +30,8 @@ export default function LoadingScreen({ progress, fullscreen = true }: LoadingSc
   const burstControls = useAnimationControls();
   const hasBurst = useRef(false);
 
-  // Uncontrolled: ease-out ramp from 0→80% over 2.5s, then hold.
-  // No oscillation — J fills steadily, just never completes (burst doesn't fire).
+  // Uncontrolled: ease-out ramp from 0 to 80% over 2.5s, then hold.
+  // No oscillation - J fills steadily, just never completes (burst doesn't fire).
   useEffect(() => {
     if (controlled) return;
     const start = performance.now();
@@ -49,7 +49,7 @@ export default function LoadingScreen({ progress, fullscreen = true }: LoadingSc
     return () => cancelAnimationFrame(frame);
   }, [controlled]);
 
-  // Burst: fires ONLY when the caller explicitly passes progress=100.
+  // Burst: fires only when the caller explicitly passes progress=100.
   useEffect(() => {
     if (controlled && safeProgress >= 100 && !hasBurst.current) {
       hasBurst.current = true;
@@ -75,7 +75,7 @@ export default function LoadingScreen({ progress, fullscreen = true }: LoadingSc
       className={
         fullscreen
           ? "fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-white"
-          : "absolute inset-0 z-[120] flex items-center justify-center overflow-hidden bg-white/95 backdrop-blur-sm"
+          : "absolute inset-0 z-30 flex items-center justify-center overflow-hidden bg-white/95 backdrop-blur-sm"
       }
     >
       <motion.div
@@ -100,7 +100,7 @@ export default function LoadingScreen({ progress, fullscreen = true }: LoadingSc
         <div className="relative h-28 w-28">
           {/* Burst applies only to the keys ring, not the J */}
           <motion.div animate={burstControls} className="absolute inset-0">
-            {/* Cycling purple keys — fades out when burst fires */}
+            {/* Cycling purple keys - fades out when burst fires */}
             <motion.img
               src="/logos/journi_keys_only.svg"
               aria-hidden="true"
@@ -108,7 +108,7 @@ export default function LoadingScreen({ progress, fullscreen = true }: LoadingSc
               animate={{ opacity: controlled && safeProgress >= 100 ? 0 : 1 }}
               transition={{ duration: 0 }}
             />
-            {/* All-purple keys — fades in exactly when burst fires */}
+            {/* All-purple keys - fades in exactly when burst fires */}
             <motion.img
               src="/logos/journi_dashes_purple.svg"
               aria-hidden="true"
@@ -119,7 +119,7 @@ export default function LoadingScreen({ progress, fullscreen = true }: LoadingSc
             />
           </motion.div>
 
-          {/* J — green base + purple rising fill, unaffected by burst */}
+          {/* J - green base + purple rising fill, unaffected by burst */}
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
             <svg
               viewBox={`${J_VB_X} ${J_VB_Y} ${J_VB_W} ${J_VB_H}`}
@@ -151,7 +151,7 @@ export default function LoadingScreen({ progress, fullscreen = true }: LoadingSc
         {/* No text during burst (progress=100) to keep the animation clean */}
         {(!controlled || safeProgress < 100) && (
           <p className="text-xs font-semibold text-[#685FB4]">
-            {controlled ? `Loading ${Math.round(safeProgress)}%` : 'Loading…'}
+            {controlled ? `Loading ${Math.round(safeProgress)}%` : 'Loading...'}
           </p>
         )}
       </motion.div>

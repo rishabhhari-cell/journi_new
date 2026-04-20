@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { ExternalLink, FileUp, Search, SlidersHorizontal, X } from 'lucide-react';
 import { MeshGradient } from "@paper-design/shaders-react";
 import Navbar from '@/components/Navbar';
@@ -49,7 +49,6 @@ export default function Discovery() {
   const [heroJournals, setHeroJournals] = useState<Journal[]>([]);
 
   const isIdle = !searchQuery.trim();
-
   const cards = useMemo(() => paginatedJournals, [paginatedJournals]);
 
   useEffect(() => {
@@ -71,29 +70,26 @@ export default function Discovery() {
     <div className="min-h-screen bg-muted/20">
       <Navbar />
 
-      {/* â”€â”€ Hero Section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* Hero section */}
       <div
-        className={`relative overflow-hidden motion-safe:transition-all motion-safe:duration-500 motion-safe:ease-in-out
-          ${isIdle ? 'h-[560px]' : 'h-[120px]'}`}
+        className={`relative motion-safe:transition-all motion-safe:duration-500 motion-safe:ease-in-out ${
+          isIdle
+            ? 'min-h-[560px] overflow-hidden'
+            : 'overflow-visible border-b border-border/60 bg-white/80 supports-[backdrop-filter]:bg-white/65 supports-[backdrop-filter]:backdrop-blur-sm'
+        }`}
       >
-        {/* Shader base behind journal covers */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <MeshGradient
-            className="absolute inset-0 w-full h-full opacity-[38%]"
+            className="absolute inset-0 h-full w-full opacity-[38%]"
             colors={HERO_SHADER_COLORS}
             speed={0.2}
           />
         </div>
 
-        {/* Scattered journal covers â€” behind everything */}
         {heroJournals.length > 0 && isIdle && (
-          <JournalMarquee
-            journals={heroJournals}
-            variant="hero"
-          />
+          <JournalMarquee journals={heroJournals} variant="hero" />
         )}
 
-        {/* Vignette: softens edges so covers blend into the sage background */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -101,51 +97,52 @@ export default function Discovery() {
           }}
         />
 
-        {/* Centered hero content */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full pt-20 pb-10 px-4">
+        <div
+          className={`relative z-10 flex flex-col items-center px-4 ${
+            isIdle ? 'h-full justify-center pt-20 pb-10' : 'justify-start pb-6 pt-24'
+          }`}
+        >
           <div className="w-full max-w-3xl px-2 md:px-0">
             {isIdle && (
-              <div className="text-center mb-6 animate-in fade-in duration-300">
-                <h1 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight tracking-tight">
+              <div className="mb-6 text-center animate-in fade-in duration-300">
+                <h1 className="text-4xl font-black leading-tight tracking-tight text-slate-900 md:text-5xl">
                   Find Your <span className="text-journi-green">Journal</span>
                 </h1>
-                <p className="mt-3 text-base text-slate-800 max-w-md mx-auto font-semibold">
+                <p className="mx-auto mt-3 max-w-md text-base font-semibold text-slate-800">
                   Search{' '}
                   <span className="font-bold text-[#7f7fb3]">
-                    {isLoading ? '…' : totalResults.toLocaleString()}
+                    {isLoading ? '...' : totalResults.toLocaleString()}
                   </span>{' '}
                   indexed medical journals
                 </p>
               </div>
             )}
 
-            {/* Search bar — always visible in hero */}
-            <div className="w-full max-w-2xl mx-auto">
+            <div className="mx-auto w-full max-w-2xl">
               <SearchBar onSearch={setSearchQuery} />
             </div>
           </div>
         </div>
       </div>
 
-      {/* â”€â”€ Below-hero content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* Below-hero content */}
       <main className="pb-16">
         <section className="container space-y-4 pt-6">
-
-          {/* â”€â”€ Filter toggle row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+          {/* Filter toggle row */}
           <div className="flex items-center gap-3">
             <button
               onClick={() => setShowFilters((v) => !v)}
               aria-expanded={showFilters}
-              className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border text-xs font-medium transition-colors ${
+              className={`inline-flex items-center gap-2 rounded-lg border px-3.5 py-2 text-xs font-medium transition-colors ${
                 showFilters || activeFilterCount > 0
                   ? 'border-journi-green/40 bg-journi-green/10 text-journi-green'
-                  : 'border-border bg-card text-muted-foreground hover:text-foreground hover:border-foreground/20'
+                  : 'border-border bg-card text-muted-foreground hover:border-foreground/20 hover:text-foreground'
               }`}
             >
               <SlidersHorizontal size={13} aria-hidden="true" />
               Filters
               {activeFilterCount > 0 && (
-                <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-journi-green text-white text-[9px] font-bold leading-none">
+                <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-journi-green text-[9px] font-bold leading-none text-white">
                   {activeFilterCount}
                 </span>
               )}
@@ -153,7 +150,7 @@ export default function Discovery() {
             {activeFilterCount > 0 && (
               <button
                 onClick={() => setFilters({})}
-                className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
+                className="inline-flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-foreground"
               >
                 <X size={12} aria-hidden="true" />
                 Clear filters
@@ -161,28 +158,26 @@ export default function Discovery() {
             )}
           </div>
 
-          {/* Filter panel â€” shown when toggled */}
           {showFilters && (
             <FilterPanel filters={filters} onFiltersChange={setFilters} />
           )}
 
           <section className="space-y-4">
-            {/* Subtle loading hint — shown while fetching, does not block cards */}
             {isLoading && !isIdle && (
-              <p className="text-xs text-muted-foreground animate-pulse text-center py-1">
-                Finding your dream journal…
+              <p className="animate-pulse py-1 text-center text-xs text-muted-foreground">
+                Finding your dream journal...
               </p>
             )}
 
             {!isIdle && cards.length === 0 && !isLoading && (
-              <div className="text-center py-16 border border-dashed border-border rounded-xl bg-card">
-                <p className="text-foreground font-medium">No journals match the current filters.</p>
-                <p className="text-sm text-muted-foreground mt-1">Try broadening the search criteria.</p>
+              <div className="rounded-xl border border-dashed border-border bg-card py-16 text-center">
+                <p className="font-medium text-foreground">No journals match the current filters.</p>
+                <p className="mt-1 text-sm text-muted-foreground">Try broadening the search criteria.</p>
               </div>
             )}
 
             {isIdle && cards.length === 0 && (
-              <div className="text-center py-16 text-muted-foreground">
+              <div className="py-16 text-center text-muted-foreground">
                 <Search size={32} className="mx-auto mb-3 opacity-30" />
                 <p className="text-sm">Start typing above to search journals</p>
               </div>
@@ -190,20 +185,20 @@ export default function Discovery() {
 
             {cards.length > 0 && (
               <>
-                {/* â”€â”€ Sort row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+                {/* Sort row */}
                 <div className="flex items-center justify-between">
                   <p className="text-xs text-muted-foreground">
                     {totalResults.toLocaleString()} result{totalResults !== 1 ? 's' : ''}
                   </p>
                   <div className="flex items-center gap-0.5">
-                    <span className="text-xs text-muted-foreground mr-1.5">Sort:</span>
+                    <span className="mr-1.5 text-xs text-muted-foreground">Sort:</span>
                     {SORT_OPTIONS.map((opt) => (
                       <button
                         key={opt.value}
                         onClick={() => setSortBy(opt.value)}
-                        className={`text-xs px-2.5 py-1 rounded-md transition-colors ${
+                        className={`rounded-md px-2.5 py-1 text-xs transition-colors ${
                           sortBy === opt.value
-                            ? 'bg-journi-green/10 text-journi-green font-semibold'
+                            ? 'bg-journi-green/10 font-semibold text-journi-green'
                             : 'text-muted-foreground hover:text-foreground'
                         }`}
                       >
@@ -213,74 +208,70 @@ export default function Discovery() {
                   </div>
                 </div>
 
-                {/* â”€â”€ Journal cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+                {/* Journal cards */}
+                <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
                   {cards.map((journal) => {
                     const ifStr = formatImpactFactor(journal.impactFactor);
                     return (
                       <article
                         key={journal.id}
                         onClick={() => setSelectedJournal(journal)}
-                        className="rounded-xl border border-border bg-card px-4 py-3.5 shadow-sm hover:border-journi-green/40 hover:shadow-[0_2px_12px_rgba(79,177,81,0.08)] transition-all cursor-pointer group"
+                        className="group cursor-pointer rounded-xl border border-border bg-card px-4 py-3.5 shadow-sm transition-all hover:border-journi-green/40 hover:shadow-[0_2px_12px_rgba(79,177,81,0.08)]"
                       >
                         <div className="flex items-start gap-3">
-                          {/* Cover thumbnail */}
                           {journal.logoUrl ? (
                             <img
                               src={journal.logoUrl}
                               alt={`${journal.name} logo`}
-                              className="w-12 h-14 rounded-md object-cover border border-border bg-white shrink-0"
+                              className="h-14 w-12 shrink-0 rounded-md border border-border bg-white object-cover"
                               loading="lazy"
                             />
                           ) : (
                             <div
-                              className={`w-12 h-14 rounded-md bg-gradient-to-br ${journal.coverColor} flex items-center justify-center text-white text-[9px] font-bold shrink-0`}
+                              className={`flex h-14 w-12 shrink-0 items-center justify-center rounded-md bg-gradient-to-br ${journal.coverColor} text-[9px] font-bold text-white`}
                             >
                               {journal.coverInitial}
                             </div>
                           )}
 
-                          <div className="flex-1 min-w-0">
-                            {/* Name + publisher + hover arrow */}
+                          <div className="min-w-0 flex-1">
                             <div className="flex items-start justify-between gap-2">
                               <div className="min-w-0">
-                                <h2 className="text-sm font-bold text-foreground leading-snug">{journal.name}</h2>
-                                <p className="text-[11px] text-muted-foreground mt-0.5 truncate">
+                                <h2 className="text-sm font-bold leading-snug text-foreground">{journal.name}</h2>
+                                <p className="mt-0.5 truncate text-[11px] text-muted-foreground">
                                   {journal.publisher || 'Unknown Publisher'}
                                 </p>
                               </div>
-                              <span className="text-[11px] text-journi-green shrink-0 opacity-0 group-hover:opacity-100 transition-opacity font-medium pt-0.5">
-                                Details â†’
+                              <span className="shrink-0 pt-0.5 text-[11px] font-medium text-journi-green opacity-0 transition-opacity group-hover:opacity-100">
+                                Details -&gt;
                               </span>
                             </div>
 
-                            {/* Impact factor + secondary info pills */}
-                            <div className=”mt-2.5 flex items-baseline gap-3 flex-wrap”>
+                            <div className="mt-2.5 flex flex-wrap items-baseline gap-3">
                               {ifStr != null && (
-                                <div className=”flex items-baseline gap-1 shrink-0”>
-                                  <span className=”text-lg font-extrabold text-foreground leading-none”>
+                                <div className="flex shrink-0 items-baseline gap-1">
+                                  <span className="text-lg font-extrabold leading-none text-foreground">
                                     {ifStr}
                                   </span>
-                                  <span className=”text-[9px] text-muted-foreground uppercase tracking-widest font-semibold”>
+                                  <span className="text-[9px] font-semibold uppercase tracking-widest text-muted-foreground">
                                     IF
                                   </span>
                                 </div>
                               )}
                               <div className="flex flex-wrap gap-1.5">
                                 {typeof journal.avgDecisionDays === 'number' && (
-                                  <span className="text-[10px] bg-muted/70 text-muted-foreground px-2 py-0.5 rounded-full">
+                                  <span className="rounded-full bg-muted/70 px-2 py-0.5 text-[10px] text-muted-foreground">
                                     ~{journal.avgDecisionDays}d decision
                                   </span>
                                 )}
                                 {typeof journal.acceptanceRate === 'number' && (
-                                  <span className="text-[10px] bg-muted/70 text-muted-foreground px-2 py-0.5 rounded-full">
+                                  <span className="rounded-full bg-muted/70 px-2 py-0.5 text-[10px] text-muted-foreground">
                                     {journal.acceptanceRate}% accept
                                   </span>
                                 )}
                               </div>
                             </div>
 
-                            {/* OA badges + external links */}
                             <div className="mt-2 flex flex-wrap items-center gap-1.5">
                               <OAPolicyBadge journal={journal} />
                               {(journal.websiteUrl || journal.website) && (
@@ -289,7 +280,7 @@ export default function Discovery() {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   onClick={(e) => e.stopPropagation()}
-                                  className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border text-[10px] text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                                  className="inline-flex items-center gap-1 rounded-md border border-border px-2 py-0.5 text-[10px] text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
                                 >
                                   <ExternalLink size={10} aria-hidden="true" /> Website
                                 </a>
@@ -300,7 +291,7 @@ export default function Discovery() {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   onClick={(e) => e.stopPropagation()}
-                                  className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border text-[10px] text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                                  className="inline-flex items-center gap-1 rounded-md border border-border px-2 py-0.5 text-[10px] text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
                                 >
                                   <FileUp size={10} aria-hidden="true" /> Submit
                                 </a>

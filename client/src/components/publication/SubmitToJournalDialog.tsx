@@ -1,6 +1,6 @@
 /**
  * SubmitToJournalDialog
- * Lets users submit their paper from the editor — search for a journal or
+ * Lets users submit their paper from the editor - search for a journal or
  * be redirected to Journal Finder if they haven't decided yet.
  */
 import { useState, useMemo, useRef, useEffect } from 'react';
@@ -134,7 +134,7 @@ export default function SubmitToJournalDialog({ isOpen, onClose, manuscriptTitle
           </div>
 
           {submitted ? (
-            /* ── Success state ── */
+            /* Success state */
             <div className="px-6 py-10 flex flex-col items-center text-center gap-4">
               <div className="w-14 h-14 rounded-full bg-journi-green/15 flex items-center justify-center">
                 <CheckCircle2 size={28} className="text-journi-green" />
@@ -162,7 +162,7 @@ export default function SubmitToJournalDialog({ isOpen, onClose, manuscriptTitle
               </div>
             </div>
           ) : (
-            /* ── Form state ── */
+            /* Form state */
             <div className="px-6 py-5 space-y-5">
               {/* Journal search */}
               <div>
@@ -177,7 +177,7 @@ export default function SubmitToJournalDialog({ isOpen, onClose, manuscriptTitle
                     value={query}
                     onChange={(e) => handleQueryChange(e.target.value)}
                     onFocus={() => query.length >= 2 && setDropdownOpen(true)}
-                    placeholder="Search journals by name or publisher…"
+                    placeholder="Search journals by name or publisher..."
                     className="w-full pl-9 pr-3 py-2.5 bg-background border border-border rounded-xl text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-journi-green transition-shadow"
                   />
 

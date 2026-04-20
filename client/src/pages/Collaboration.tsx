@@ -1439,7 +1439,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
             {manuscript.type === 'literature_review' && litPrisma.included > 0 && (
               <p className="text-[10px] text-blue-600 flex items-center gap-1 mt-0.5">
                 <Database size={9} />
-                {litPrisma.included} studies included Â· {litSearchDbs.length} databases
+                {litPrisma.included} studies included &middot; {litSearchDbs.length} databases
               </p>
             )}
           </div>
@@ -1701,7 +1701,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                                         </div>
                                         <span className="font-medium text-foreground">{comment.userName}</span>
                                         <span className="text-muted-foreground">{format(comment.timestamp, 'MMM d, h:mm a')}</span>
-                                        <span className="text-muted-foreground italic">â€” in &ldquo;{section.title}&rdquo;</span>
+                                        <span className="text-muted-foreground italic">- in &ldquo;{section.title}&rdquo;</span>
                                         {comment.resolved && (
                                           <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-status-completed/15 text-status-completed text-[10px] font-medium">
                                             <CheckCircle size={10} />
@@ -1991,7 +1991,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                         type="text"
                         value={litDateRange}
                         onChange={(e) => setLitDateRange(e.target.value)}
-                        placeholder="e.g. Jan 2015 â€“ Dec 2024"
+                              placeholder="e.g. Jan 2015 - Dec 2024"
                         className="w-full text-xs bg-muted text-foreground placeholder:text-muted-foreground rounded px-2 py-1.5 outline-none focus:ring-1 focus:ring-journi-green"
                       />
                     </div>

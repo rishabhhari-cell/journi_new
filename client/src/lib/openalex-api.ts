@@ -122,6 +122,21 @@ function parseSource(source: OpenAlexSource): OpenAlexJournal {
   };
 }
 
+// Rejects journal names that contain more than 2 characters outside the
+// Latin + Latin-Extended Unicode range (U+0000 to U+024F).
+// Filters out Chinese, Arabic, Cyrillic, Japanese, Korean, etc.
+function isLatinName(name: string): boolean {
+  let nonLatin = 0;
+  for (const c of name) {
+    const code = c.codePointAt(0) ?? 0;
+    if (code > 0x024f && !/[\s\d!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/.test(c)) {
+      nonLatin++;
+      if (nonLatin > 2) return false;
+    }
+  }
+  return true;
+}
+
 // ============================================================================
 // Public API
 // ============================================================================
@@ -150,7 +165,7 @@ export async function searchOpenAlexJournals(
 
   const data: OpenAlexSearchResponse = await response.json();
   return {
-    journals: data.results.map(parseSource),
+    journals: data.results.map(parseSource).filter((j) => isLatinName(j.name)),
     totalCount: data.meta.count,
   };
 }
@@ -177,7 +192,7 @@ export async function browseOpenAlexJournals(
 
   const data: OpenAlexSearchResponse = await response.json();
   return {
-    journals: data.results.map(parseSource),
+    journals: data.results.map(parseSource).filter((j) => isLatinName(j.name)),
     totalCount: data.meta.count,
   };
 }

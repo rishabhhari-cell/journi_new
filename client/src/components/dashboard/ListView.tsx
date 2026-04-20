@@ -180,9 +180,9 @@ export default function ListView({ tasks, collaborators, onEdit, onDelete, onUpd
           const isNearDue = !isPastDue && daysToDue <= 7 && !isDone;
 
           const dueClassName = isPastDue
-            ? 'text-red-500 dark:text-red-400 font-medium'
+            ? 'font-medium text-red-500 dark:text-red-400'
             : isNearDue
-              ? 'text-amber-600 dark:text-amber-400 font-medium'
+              ? 'font-medium text-amber-600 dark:text-amber-400'
               : 'text-muted-foreground';
 
           const assignees = (task.assignedTo || [])
@@ -208,7 +208,7 @@ export default function ListView({ tasks, collaborators, onEdit, onDelete, onUpd
                   }
                   onUpdate(task.id, { completionPct: 100, status: 'completed' });
                 }}
-                className={`w-4 h-4 rounded border-2 border-muted-foreground/40 cursor-pointer hover:border-[#9999cc] transition-colors flex items-center justify-center ${isDone ? 'bg-emerald-500 border-emerald-500 hover:border-emerald-500' : ''}`}
+                className={`flex h-4 w-4 items-center justify-center rounded border-2 border-muted-foreground/40 transition-colors hover:border-[#9999cc] ${isDone ? 'border-emerald-500 bg-emerald-500 hover:border-emerald-500' : ''}`}
                 aria-label={isDone ? `Mark ${task.name} as not completed` : `Mark ${task.name} as completed`}
               >
                 {isDone && (
@@ -245,20 +245,20 @@ export default function ListView({ tasks, collaborators, onEdit, onDelete, onUpd
 
               <div className="flex items-center">
                 {assignees.length === 0 ? (
-                  <span className="text-xs text-muted-foreground">—</span>
+                  <span className="text-xs text-muted-foreground">-</span>
                 ) : (
                   <div className="flex items-center">
                     {assignees.slice(0, 3).map((assignee, index) => (
                       <div
                         key={assignee.id}
-                        className={`h-6 w-6 rounded-full bg-[#9999cc] text-white text-[10px] font-bold flex items-center justify-center ${index > 0 ? '-ml-1.5' : ''}`}
+                        className={`flex h-6 w-6 items-center justify-center rounded-full bg-[#9999cc] text-[10px] font-bold text-white ${index > 0 ? '-ml-1.5' : ''}`}
                         title={assignee.name}
                       >
                         {getAvatarLabel(assignee.name)}
                       </div>
                     ))}
                     {assignees.length > 3 && (
-                      <div className="-ml-1.5 h-6 min-w-6 rounded-full bg-[#9999cc] px-1 text-white text-[10px] font-bold flex items-center justify-center">
+                      <div className="-ml-1.5 flex h-6 min-w-6 items-center justify-center rounded-full bg-[#9999cc] px-1 text-[10px] font-bold text-white">
                         +{assignees.length - 3}
                       </div>
                     )}
@@ -267,8 +267,8 @@ export default function ListView({ tasks, collaborators, onEdit, onDelete, onUpd
               </div>
 
               <div className="flex items-center gap-2">
-                <span className="text-xs font-medium w-7 text-right">{pct}%</span>
-                <div className="flex-1 h-1.5 rounded-full bg-muted">
+                <span className="w-7 text-right text-xs font-medium">{pct}%</span>
+                <div className="h-1.5 flex-1 rounded-full bg-muted">
                   <div
                     style={{ width: `${pct}%` }}
                     className={`h-1.5 rounded-full transition-all duration-300 ${pct === 100 ? 'bg-emerald-500' : 'bg-[#9999cc]'}`}
@@ -279,7 +279,7 @@ export default function ListView({ tasks, collaborators, onEdit, onDelete, onUpd
               <div>
                 <p className={`text-xs ${dueClassName}`}>{format(dueDate, 'MMM d')}</p>
                 <p className="text-[10px] text-muted-foreground/60">
-                  {format(startDate, 'MMM d')} → {format(dueDate, 'MMM d')}
+                  {format(startDate, 'MMM d')} -&gt; {format(dueDate, 'MMM d')}
                 </p>
               </div>
 
