@@ -39,6 +39,7 @@ import ReformatPanel from '@/components/collaboration/ReformatPanel';
 import LoadingScreen from '@/components/LoadingScreen';
 import JLoadingGlyph from '@/components/JLoadingGlyph';
 import { useManuscript } from '@/contexts/ManuscriptContext';
+import { useProject } from '@/contexts/ProjectContext';
 import type { CitationFormData, CommentFormData, DocumentSection, ManuscriptType } from '@/types';
 import { format } from 'date-fns';
 import { exportToDocx, exportToPdf, importDocx, importPdf, importImage, type ImportDocumentResult } from '@/lib/document-io';
@@ -175,6 +176,7 @@ export default function Collaboration() {
   } = useManuscript();
 
   const project = { collaborators: [] as { id: string; name: string; initials: string; online: boolean; role?: string }[] };
+  const { updateProjectMetadata } = useProject();
 
 const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
 
@@ -672,6 +674,25 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
 
     const warnings = nonBlockingImportWarnings(result);
     if (warnings.length > 0) toast.warning(warnings[0].message);
+
+    // Render parsed figures into "Figures and Tables" section (non-review path only)
+    if (!result.review.required && result.review.figures.length > 0) {
+      const figSection = getSectionByTitle('Figures and Tables');
+      if (figSection) {
+        const figuresHtml = result.review.figures
+          .filter((fig) => fig.imageData)
+          .map((fig, i) => {
+            const label = `Figure ${i + 1}`;
+            const caption = fig.caption ? ` — ${fig.caption}` : '';
+            return `<figure><img src="${fig.imageData}" alt="${label}" /><figcaption><strong>${label}</strong>${caption}</figcaption></figure>`;
+          })
+          .join('\n');
+        if (figuresHtml) {
+          const existing = figSection.content && figSection.content !== '<p></p>' ? figSection.content : '';
+          updateSectionContent(figSection.id, existing + '\n' + figuresHtml);
+        }
+      }
+    }
   };
 
   const createServerImportSession = async (result: ImportDocumentResult): Promise<ManuscriptImportSessionDTO | null> => {
@@ -1005,8 +1026,16 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         else importResult = await importImage(result.file);
 
         const derivedTitle = importResult.title || result.title;
-        createManuscript(derivedTitle, result.type);
+        await createManuscript(derivedTitle, result.type);
         applyImportedResult(importResult);
+
+        // Persist authors/institutions as project metadata
+        if (importResult.authors.length > 0 || importResult.institutions.length > 0) {
+          void updateProjectMetadata({
+            authors: importResult.authors,
+            institutions: importResult.institutions,
+          });
+        }
       } catch (err) {
         console.error('Import failed:', err);
         toast.error('Failed to import file. Please try a different file.');
@@ -1014,7 +1043,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         setIsImporting(false);
       }
     } else {
-      createManuscript(result.title, result.type);
+      await createManuscript(result.title, result.type);
       toast.success('New document created \u2014 start writing!');
     }
 
