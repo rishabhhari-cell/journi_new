@@ -44,6 +44,9 @@ export interface JournalRow {
   acceptance_rate: number | null;
   avg_decision_days: number | null;
   apc_cost_usd: number | null;
+  cite_score: number | null;
+  sjr_score: number | null;
+  sjr_quartile: string | null;
   mean_time_to_publication_days: number | null;
   scope_embedding: number[] | null;
   provenance: Record<string, string> | null;
@@ -73,6 +76,9 @@ export function mapJournalRow(row: JournalRow): JournalDTO {
     acceptanceRate: row.acceptance_rate,
     avgDecisionDays: row.avg_decision_days,
     apcCostUsd: row.apc_cost_usd,
+    citeScore: row.cite_score,
+    sjrScore: row.sjr_score,
+    sjrQuartile: row.sjr_quartile,
     meanTimeToPublicationDays: row.mean_time_to_publication_days,
     provenance: row.provenance ?? {},
     lastVerifiedAt: row.last_verified_at,
