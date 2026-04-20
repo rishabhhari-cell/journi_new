@@ -270,7 +270,7 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
                     transition={{ duration: 1.4, ease: "easeOut", delay: 0.1 }}
                     className="text-4xl md:text-[44px] leading-tight font-semibold tracking-[-0.02em] text-foreground"
                   >
-                    Welcome to your new Journie
+                    Welcome to your new <span className="text-[#0C7016]">Journie</span>
                   </motion.h1>
                   <motion.p
                     initial={{ opacity: 0, y: 8 }}
