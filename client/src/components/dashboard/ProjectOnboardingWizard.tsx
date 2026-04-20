@@ -61,8 +61,8 @@ const ui = {
 
 export default function ProjectOnboardingWizard({ onComplete }: Props) {
   const [, navigate] = useLocation();
-  const { createProject, addCollaborator } = useProject();
-  const { createManuscript } = useManuscript();
+  const { createProject, addCollaborator, updateProjectMetadata } = useProject();
+  const { createManuscript, replaceManuscriptContent } = useManuscript();
 
   // Step navigation
   const [step, setStep] = useState<Step>(1);
@@ -146,9 +146,33 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
     try {
       await createProject(projectName.trim(), description.trim(), dueDate || undefined);
 
-      // Create manuscript
+      // Await manuscript creation so we have the real backend ID before applying content
       const msTitle = importResult?.title || "Untitled Manuscript";
-      createManuscript(msTitle, manuscriptType);
+      await createManuscript(msTitle, manuscriptType);
+
+      // Apply parsed content atomically if a document was imported
+      if (importResult) {
+        const sections = importResult.sections.map((s, i) => ({
+          id: (s as any).id ?? `imported-${i}`,
+          title: s.title ?? 'Section',
+          content: (s as any).content ?? '',
+          status: ((s as any).status ?? 'draft') as import('@/types').SectionStatus,
+          order: (s as any).order ?? i,
+        }));
+        const citations = importResult.citations.map((c, i) => ({
+          ...c,
+          id: (c as any).id ?? `cit-${i}`,
+        }));
+        replaceManuscriptContent({ title: msTitle, sections, citations });
+
+        // Persist authors/institutions as project metadata
+        if (importResult.authors.length > 0 || importResult.institutions.length > 0) {
+          void updateProjectMetadata({
+            authors: importResult.authors,
+            institutions: importResult.institutions,
+          });
+        }
+      }
 
       // Add collaborators
       const validCollabs = collaborators.filter((c) => c.name.trim() && c.email.trim());
@@ -162,13 +186,8 @@ export default function ProjectOnboardingWizard({ onComplete }: Props) {
       }
 
       toast.success("Project created!");
-
-      // If they imported a doc, go to editor; otherwise stay on dashboard
-      if (importResult && importFile) {
-        navigate("/collaboration");
-      }
-
       onComplete();
+      navigate("/dashboard");
     } catch {
       toast.error("Something went wrong. Please try again.");
     } finally {
