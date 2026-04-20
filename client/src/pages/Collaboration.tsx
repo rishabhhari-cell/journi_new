@@ -683,13 +683,13 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
           .filter((fig) => fig.imageData)
           .map((fig, i) => {
             const label = `Figure ${i + 1}`;
-            const caption = fig.caption ? ` — ${fig.caption}` : '';
+            const caption = fig.caption ? ` — ${normalizePlainImportedText(fig.caption, { trim: true })}` : '';
             return `<figure><img src="${fig.imageData}" alt="${label}" /><figcaption><strong>${label}</strong>${caption}</figcaption></figure>`;
           })
           .join('\n');
         if (figuresHtml) {
           const existing = figSection.content && figSection.content !== '<p></p>' ? figSection.content : '';
-          updateSectionContent(figSection.id, existing + '\n' + figuresHtml);
+          updateSectionContent(figSection.id, normalizeImportedHtml(existing + '\n' + figuresHtml));
         }
       }
     }
