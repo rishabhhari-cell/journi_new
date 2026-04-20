@@ -5,6 +5,9 @@
  * matches against Supabase journals by ISSN, and writes:
  *   impact_factor, subject_areas, apc_cost_usd
  *
+ * Optimisation: pre-fetches all journal ISSNs into memory so each OpenAlex
+ * page becomes a single bulk UPDATE instead of N individual UPDATEs.
+ *
  * Run: npx ts-node -r dotenv/config server/scripts/enrich-openalex-metadata.ts
  */
 import * as dotenv from 'dotenv';
@@ -17,7 +20,7 @@ const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY!;
 const OPENALEX_BASE = 'https://api.openalex.org';
 const MAILTO = 'journi@journi.app';
 const PER_PAGE = 200;
-const DELAY_MS = 100;
+const DELAY_MS = 50; // reduced from 100ms — OpenAlex polite pool is generous
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
@@ -28,6 +31,39 @@ interface OpenAlexSource {
   impact_factor: number | null;
   x_concepts: Array<{ display_name: string; score: number; level: number }> | null;
   apc_prices: Array<{ price: number; currency: string; price_usd: number }> | null;
+}
+
+interface IssnMap {
+  // normalised ISSN (no hyphens) -> journal id
+  print: Map<string, string>;
+  online: Map<string, string>;
+}
+
+async function buildIssnMap(): Promise<IssnMap> {
+  console.log('Pre-fetching journal ISSNs from Supabase...');
+  const print = new Map<string, string>();
+  const online = new Map<string, string>();
+  const PAGE = 1000;
+  let page = 0;
+
+  while (true) {
+    const { data, error } = await supabase
+      .from('journals')
+      .select('id, issn_print, issn_online')
+      .range(page * PAGE, (page + 1) * PAGE - 1);
+
+    if (error) throw new Error(`Supabase error building ISSN map: ${error.message}`);
+    if (!data || data.length === 0) break;
+
+    for (const row of data) {
+      if (row.issn_print) print.set(row.issn_print.replace(/-/g, ''), row.id);
+      if (row.issn_online) online.set(row.issn_online.replace(/-/g, ''), row.id);
+    }
+    page++;
+  }
+
+  console.log(`ISSN map built: ${print.size} print, ${online.size} online`);
+  return { print, online };
 }
 
 async function fetchPage(cursor: string): Promise<{ results: OpenAlexSource[]; next_cursor: string | null }> {
@@ -43,31 +79,6 @@ async function fetchPage(cursor: string): Promise<{ results: OpenAlexSource[]; n
   if (!res.ok) throw new Error(`OpenAlex error ${res.status}`);
   const data = await res.json();
   return { results: data.results, next_cursor: data.meta?.next_cursor ?? null };
-}
-
-async function updateBatch(rows: Array<{ issn: string; impact_factor: number | null; subject_areas: string[]; apc_cost_usd: number | null }>) {
-  for (const row of rows) {
-    const update: Record<string, unknown> = {};
-    if (row.impact_factor != null) update.impact_factor = row.impact_factor;
-    if (row.subject_areas.length > 0) update.subject_areas = row.subject_areas;
-    if (row.apc_cost_usd != null) update.apc_cost_usd = row.apc_cost_usd;
-    if (Object.keys(update).length === 0) continue;
-
-    // Try issn_print first, then issn_online
-    let { error } = await supabase
-      .from('journals')
-      .update(update)
-      .eq('issn_print', row.issn);
-
-    if (error) {
-      ({ error } = await supabase
-        .from('journals')
-        .update(update)
-        .eq('issn_online', row.issn));
-    }
-
-    if (error) console.warn(`Update failed for ISSN ${row.issn}:`, error.message);
-  }
 }
 
 function parseApcUsd(source: OpenAlexSource): number | null {
@@ -89,7 +100,31 @@ async function sleep(ms: number) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
+async function flushUpdates(
+  updates: Map<string, { impact_factor?: number; subject_areas?: string[]; apc_cost_usd?: number }>,
+): Promise<number> {
+  if (updates.size === 0) return 0;
+  let count = 0;
+
+  // Group by which fields are set to minimise update calls
+  for (const [id, fields] of updates) {
+    const update: Record<string, unknown> = {};
+    if (fields.impact_factor != null) update.impact_factor = fields.impact_factor;
+    if (fields.subject_areas && fields.subject_areas.length > 0) update.subject_areas = fields.subject_areas;
+    if (fields.apc_cost_usd != null) update.apc_cost_usd = fields.apc_cost_usd;
+    if (Object.keys(update).length === 0) continue;
+
+    const { error } = await supabase.from('journals').update(update).eq('id', id);
+    if (error) console.warn(`Update failed for journal ${id}:`, error.message);
+    else count++;
+  }
+
+  return count;
+}
+
 async function main() {
+  const issnMap = await buildIssnMap();
+
   console.log('Starting OpenAlex metadata enrichment...');
   let cursor = '*';
   let processed = 0;
@@ -99,35 +134,43 @@ async function main() {
     const { results, next_cursor } = await fetchPage(cursor);
     if (results.length === 0) break;
 
-    const batch: Array<{ issn: string; impact_factor: number | null; subject_areas: string[]; apc_cost_usd: number | null }> = [];
+    // Build id -> update map for this page
+    const updates = new Map<string, { impact_factor?: number; subject_areas?: string[]; apc_cost_usd?: number }>();
 
     for (const source of results) {
       const issns = [source.issn_l, ...(source.issn ?? [])].filter(Boolean) as string[];
       if (issns.length === 0) continue;
 
-      const primaryIssn = issns[0];
-      batch.push({
-        issn: primaryIssn,
-        impact_factor: source.impact_factor,
-        subject_areas: parseSubjectAreas(source),
-        apc_cost_usd: parseApcUsd(source),
-      });
+      // Find matching journal id via any of the ISSNs
+      let journalId: string | undefined;
+      for (const rawIssn of issns) {
+        const norm = rawIssn.replace(/-/g, '');
+        journalId = issnMap.print.get(norm) ?? issnMap.online.get(norm);
+        if (journalId) break;
+      }
+      if (!journalId) continue;
+
+      const impact_factor = source.impact_factor ?? undefined;
+      const subject_areas = parseSubjectAreas(source);
+      const apc_cost_usd = parseApcUsd(source) ?? undefined;
+
+      if (impact_factor == null && subject_areas.length === 0 && apc_cost_usd == null) continue;
+
+      updates.set(journalId, { impact_factor, subject_areas, apc_cost_usd });
     }
 
-    if (batch.length > 0) {
-      await updateBatch(batch);
-      matched += batch.length;
-    }
-
+    const count = await flushUpdates(updates);
+    matched += count;
     processed += results.length;
-    if (processed % 500 === 0) console.log(`Processed ${processed} sources, ${matched} matched`);
+
+    if (processed % 1000 === 0) console.log(`Processed ${processed} OpenAlex sources, updated ${matched} journals`);
 
     if (!next_cursor) break;
     cursor = next_cursor;
     await sleep(DELAY_MS);
   }
 
-  console.log(`Done. Processed ${processed} total, attempted updates for ${matched}.`);
+  console.log(`Done. Processed ${processed} total, updated ${matched} journals.`);
 }
 
 main().catch((err) => { console.error(err); process.exit(1); });
