@@ -1,3 +1,4 @@
+import { env } from "../config/env";
 import type { OrgRole } from "../../shared/backend";
 import { HttpError } from "./http-error";
 import { supabaseAdmin } from "./supabase";
@@ -19,6 +20,15 @@ function normalizeRole(role: string | null | undefined): OrgRole | null {
     return role;
   }
   return null;
+}
+
+function getInternalAdminEmails(): Set<string> {
+  return new Set(
+    (env.INTERNAL_ADMIN_EMAILS ?? "")
+      .split(",")
+      .map((value) => value.trim().toLowerCase())
+      .filter((value) => value.length > 0),
+  );
 }
 
 export async function getOrganizationRole(userId: string, organizationId: string): Promise<OrgRole | null> {
@@ -68,6 +78,23 @@ export async function assertAnyOrganizationRole(userId: string, minimum: OrgRole
 
   if (!hasAccess) {
     throw new HttpError(403, `Requires ${minimum} role in at least one organization`, "ORG_ROLE_INSUFFICIENT");
+  }
+}
+
+export async function assertInternalAdmin(userId: string): Promise<void> {
+  const allowedEmails = getInternalAdminEmails();
+  if (allowedEmails.size === 0) {
+    throw new HttpError(403, "Internal admin access is not configured", "INTERNAL_ADMIN_NOT_CONFIGURED");
+  }
+
+  const { data, error } = await supabaseAdmin.auth.admin.getUserById(userId);
+  if (error) {
+    throw new HttpError(500, "Failed to read authenticated user", "AUTH_USER_READ_FAILED");
+  }
+
+  const email = data.user?.email?.trim().toLowerCase();
+  if (!email || !allowedEmails.has(email)) {
+    throw new HttpError(403, "Internal admin access denied", "INTERNAL_ADMIN_ACCESS_DENIED");
   }
 }
 

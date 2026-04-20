@@ -1,23 +1,29 @@
 import { useEffect, useState } from 'react';
 import { ShieldCheck, Loader2, AlertTriangle, CheckCircle2, RefreshCw } from 'lucide-react';
 import Navbar from '@/components/Navbar';
-import { fetchEmailDebug, type EmailDebugResponseDTO } from '@/lib/api/backend';
+import {
+  fetchEmailDebug,
+  fetchInternalAdminHealth,
+  type EmailDebugResponseDTO,
+} from '@/lib/api/backend';
 
 export default function InternalAdmin() {
   const [emailDebug, setEmailDebug] = useState<EmailDebugResponseDTO | null>(null);
-  const [emailDebugError, setEmailDebugError] = useState('');
-  const [isEmailDebugLoading, setIsEmailDebugLoading] = useState(true);
+  const [accessError, setAccessError] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
   const loadDiagnostics = async () => {
-    setIsEmailDebugLoading(true);
+    setIsLoading(true);
     try {
+      await fetchInternalAdminHealth();
       const response = await fetchEmailDebug(12);
       setEmailDebug(response);
-      setEmailDebugError('');
-    } catch {
-      setEmailDebugError('Email diagnostics are unavailable right now.');
+      setAccessError('');
+    } catch (error: any) {
+      setEmailDebug(null);
+      setAccessError(error?.message || 'You do not have permission to view this page.');
     } finally {
-      setIsEmailDebugLoading(false);
+      setIsLoading(false);
     }
   };
 
@@ -28,7 +34,7 @@ export default function InternalAdmin() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <div className="mx-auto max-w-3xl px-4 py-10">
+      <div className="mx-auto max-w-3xl px-4 pb-10 pt-28">
         <div className="mb-8 flex items-start justify-between gap-4">
           <div>
             <div className="mb-1 flex items-center gap-3">
@@ -42,10 +48,10 @@ export default function InternalAdmin() {
           <button
             type="button"
             onClick={() => void loadDiagnostics()}
-            disabled={isEmailDebugLoading}
+            disabled={isLoading}
             className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent disabled:opacity-60"
           >
-            <RefreshCw size={14} className={isEmailDebugLoading ? 'animate-spin' : ''} />
+            <RefreshCw size={14} className={isLoading ? 'animate-spin' : ''} />
             Refresh
           </button>
         </div>
@@ -65,14 +71,14 @@ export default function InternalAdmin() {
             ) : null}
           </div>
 
-          {isEmailDebugLoading ? (
+          {isLoading ? (
             <div className="flex items-center justify-center py-6 text-muted-foreground">
               <Loader2 size={18} className="animate-spin" />
             </div>
-          ) : emailDebugError ? (
+          ) : accessError ? (
             <div className="flex items-center gap-2 rounded-lg border border-amber-500/20 bg-amber-500/10 px-3 py-3 text-sm text-amber-700">
               <AlertTriangle size={15} className="shrink-0" />
-              {emailDebugError}
+              {accessError}
             </div>
           ) : emailDebug ? (
             <div className="space-y-4">

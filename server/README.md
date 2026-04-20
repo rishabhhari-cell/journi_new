@@ -22,18 +22,19 @@ This backend now provides:
 
 Configure these Railway environment variables:
 
-- `MAIL_FROM=info@journi.com`
-- `MAIL_REPLY_TO=support@journi.com`
-- `SUPPORT_EMAIL=support@journi.com`
+- `MAIL_FROM=info@journie.io`
+- `MAIL_REPLY_TO=help@journie.io`
+- `SUPPORT_EMAIL=help@journie.io`
 - `RESEND_API_KEY=<your_resend_api_key>`
+- `INTERNAL_ADMIN_EMAILS=<comma-separated internal staff emails>`
 - `RESET_PASSWORD_REDIRECT_URL=https://<your-domain>/reset-password` (optional override)
 
 What Journi now sends:
 
-- Sign-up verification email (from `info@journi.com`)
-- Post-verification welcome email (from `info@journi.com`)
-- Team invite email (from `info@journi.com`)
-- Mention notification emails (from `info@journi.com`)
+- Sign-up verification email (from `info@journie.io`)
+- Post-verification welcome email (from `info@journie.io`)
+- Team invite email (from `info@journie.io`)
+- Mention notification emails (from `info@journie.io`)
 - Password reset emails through the app mailer (`/api/auth/forgot-password`)
 
 Supabase Auth requirements:
@@ -44,7 +45,7 @@ Supabase Auth requirements:
 
 Inbound support mailbox:
 
-- Create `support@journi.com` with your mailbox provider (Google Workspace/Zoho/etc).
+- Create `help@journie.io` with your mailbox provider (Google Workspace/Zoho/etc).
 - Point domain MX records to that provider.
 
 ## Realtime Protocol

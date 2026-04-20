@@ -3,7 +3,7 @@ import { Router } from "express";
 import { z } from "zod";
 import type { ApiSession, ApiUser, OrganizationMembershipDTO } from "../../shared/backend";
 import { env } from "../config/env";
-import { assertAnyOrganizationRole } from "../lib/access";
+import { assertAnyOrganizationRole, assertInternalAdmin } from "../lib/access";
 import { HttpError } from "../lib/http-error";
 import { logger } from "../lib/logger";
 import { createUserScopedSupabase, supabaseAdmin, supabasePublic } from "../lib/supabase";
@@ -226,11 +226,23 @@ async function maybeSendWelcomeEmail(input: {
   const alreadySent = await hasWelcomeEmailBeenSent(input.userId);
   if (alreadySent) return false;
 
-  const sent = await sendWelcomeEmail({
+  const result = await sendWelcomeEmail({
     to: input.to,
     fullName: input.fullName,
   });
-  if (!sent) return false;
+
+  if (!result.sent) {
+    await writeAuthEmailAuditEvent({
+      actorUserId: input.userId,
+      entityId: input.userId,
+      eventType: "email.welcome.failed",
+      email: input.to,
+      source: "post_verification_bootstrap",
+      provider: "resend",
+      error: result.error ?? "WELCOME_EMAIL_SEND_FAILED",
+    });
+    return false;
+  }
 
   await writeAuditEvent({
     actorUserId: input.userId,
@@ -373,8 +385,8 @@ async function deliverSignupVerificationEmail(input: {
   verificationUrl: string;
   source: "signup" | "duplicate_signup" | "resend_verification";
   linkType: "signup" | "magiclink";
-}): Promise<{ sent: boolean }> {
-  const sent = await sendSignupVerificationEmailMessage({
+}): Promise<{ sent: boolean; error: string | null }> {
+  const result = await sendSignupVerificationEmailMessage({
     to: input.email,
     fullName: input.fullName,
     verificationUrl: input.verificationUrl,
@@ -383,14 +395,15 @@ async function deliverSignupVerificationEmail(input: {
   await writeAuthEmailAuditEvent({
     actorUserId: input.userId,
     entityId: input.userId,
-    eventType: sent ? "email.signup_verification.sent" : "email.signup_verification.failed",
+    eventType: result.sent ? "email.signup_verification.sent" : "email.signup_verification.failed",
     email: input.email,
     source: input.source,
     provider: "resend",
     linkType: input.linkType,
+    error: result.error ?? undefined,
   });
 
-  return { sent };
+  return result;
 }
 
 authRouter.post("/signup", async (req, res, next) => {
@@ -697,7 +710,7 @@ authRouter.post("/forgot-password", async (req, res, next) => {
 
     if (!error && data?.properties?.action_link) {
       const fullName = data.user?.user_metadata?.full_name ?? data.user?.user_metadata?.name ?? undefined;
-      const sent = await sendPasswordResetEmail({
+      const result = await sendPasswordResetEmail({
         to: input.email,
         fullName,
         resetUrl: data.properties.action_link,
@@ -706,11 +719,12 @@ authRouter.post("/forgot-password", async (req, res, next) => {
       await writeAuthEmailAuditEvent({
         actorUserId: data.user?.id ?? null,
         entityId: data.user?.id ?? null,
-        eventType: sent ? "email.password_reset.sent" : "email.password_reset.failed",
+        eventType: result.sent ? "email.password_reset.sent" : "email.password_reset.failed",
         email: input.email,
         source: "forgot_password",
         provider: "resend",
         linkType: "recovery",
+        error: result.error ?? undefined,
       });
     } else {
       const existing = await findExistingUserByEmail(normalizeEmail(input.email));
@@ -975,11 +989,21 @@ authRouter.get("/admin/health", requireAuth, async (req, res, next) => {
   }
 });
 
+authRouter.get("/admin/internal-health", requireAuth, async (req, res, next) => {
+  try {
+    const authReq = req as unknown as AuthedRequest;
+    await assertInternalAdmin(authReq.auth.userId);
+    res.json({ ok: true });
+  } catch (error) {
+    next(error);
+  }
+});
+
 // GET /auth/admin/email-debug — inspect email config + recent email/auth audit events
 authRouter.get("/admin/email-debug", requireAuth, async (req, res, next) => {
   try {
     const authReq = req as unknown as AuthedRequest;
-    await assertAnyOrganizationRole(authReq.auth.userId, "admin");
+    await assertInternalAdmin(authReq.auth.userId);
     const query = emailDebugQuerySchema.parse(req.query);
 
     const config = {

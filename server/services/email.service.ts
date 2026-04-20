@@ -11,6 +11,11 @@ interface SendEmailInput {
   text?: string;
 }
 
+export interface SendEmailResult {
+  sent: boolean;
+  error: string | null;
+}
+
 type TemplateName = "welcome-email.html" | "password-reset-email.html" | "team-invite-email.html";
 
 const EMAIL_SEND_MAX_ATTEMPTS = 3;
@@ -90,13 +95,15 @@ async function sendViaResend(input: SendEmailInput): Promise<void> {
   }
 }
 
-export async function sendTransactionalEmail(input: SendEmailInput): Promise<boolean> {
+export async function sendTransactionalEmail(input: SendEmailInput): Promise<SendEmailResult> {
   if (!hasEmailProviderConfigured()) {
+    const error = "RESEND_API_KEY is not configured";
     logger.info("Email send skipped (no provider configured)", {
       to: input.to,
       subject: input.subject,
+      error,
     });
-    return false;
+    return { sent: false, error };
   }
 
   for (let attempt = 1; attempt <= EMAIL_SEND_MAX_ATTEMPTS; attempt += 1) {
@@ -107,7 +114,7 @@ export async function sendTransactionalEmail(input: SendEmailInput): Promise<boo
         subject: input.subject,
         attempt,
       });
-      return true;
+      return { sent: true, error: null };
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       const isLastAttempt = attempt === EMAIL_SEND_MAX_ATTEMPTS;
@@ -119,7 +126,7 @@ export async function sendTransactionalEmail(input: SendEmailInput): Promise<boo
           attempt,
           error: message,
         });
-        return false;
+        return { sent: false, error: message };
       }
 
       logger.warn("Transactional email send attempt failed; retrying", {
@@ -133,14 +140,14 @@ export async function sendTransactionalEmail(input: SendEmailInput): Promise<boo
     }
   }
 
-  return false;
+  return { sent: false, error: "EMAIL_SEND_ATTEMPTS_EXHAUSTED" };
 }
 
 export async function sendSignupVerificationEmail(input: {
   to: string;
   fullName: string;
   verificationUrl: string;
-}): Promise<boolean> {
+}): Promise<SendEmailResult> {
   const firstName = getGivenName(input.fullName);
   const subject = "Verify your email to start using Journie";
   const html = renderEmailTemplate("welcome-email.html", {
@@ -154,7 +161,7 @@ export async function sendSignupVerificationEmail(input: {
   return sendTransactionalEmail({ to: input.to, subject, html, text });
 }
 
-export async function sendWelcomeEmail(input: { to: string; fullName: string }): Promise<boolean> {
+export async function sendWelcomeEmail(input: { to: string; fullName: string }): Promise<SendEmailResult> {
   const firstName = getGivenName(input.fullName);
   const ctaUrl = "https://www.journie.io/dashboard";
   const subject = `Welcome to Journie, ${firstName} - your research journey begins here`;
@@ -175,7 +182,7 @@ export async function sendOrganizationInviteEmail(input: {
   organizationName: string;
   role: string;
   inviteUrl: string;
-}): Promise<boolean> {
+}): Promise<SendEmailResult> {
   const subject = `${input.inviterName} invited you to ${input.organizationName}`;
   const html = renderEmailTemplate("team-invite-email.html", {
     GIVEN_NAME: getInferredGivenName(input.to),
@@ -197,7 +204,7 @@ export async function sendMentionEmail(input: {
   manuscriptTitle: string;
   commentPreview: string;
   linkUrl: string;
-}): Promise<boolean> {
+}): Promise<SendEmailResult> {
   const subject = `${input.actorName} mentioned you in ${input.manuscriptTitle}`;
   const html = `
     <div style="font-family:Arial,sans-serif;line-height:1.5;color:#0f172a;">
@@ -216,7 +223,7 @@ export async function sendPasswordResetEmail(input: {
   to: string;
   fullName?: string;
   resetUrl: string;
-}): Promise<boolean> {
+}): Promise<SendEmailResult> {
   const firstName = getGivenName(input.fullName);
   const subject = "Reset your Journie password";
   const html = renderEmailTemplate("password-reset-email.html", {

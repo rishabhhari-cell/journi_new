@@ -557,6 +557,18 @@ export interface EmailDebugResponseDTO {
   recentEvents: EmailDebugEventDTO[];
 }
 
+export async function fetchAdminHealth() {
+  return apiFetch<{ ok: boolean }>('/auth/admin/health', {
+    method: 'GET',
+  });
+}
+
+export async function fetchInternalAdminHealth() {
+  return apiFetch<{ ok: boolean }>('/auth/admin/internal-health', {
+    method: 'GET',
+  });
+}
+
 export async function listInstitutionDomains() {
   return apiFetch<{ data: InstitutionDomainDTO[] }>('/auth/admin/institution-domains', {
     method: 'GET',

@@ -28,9 +28,10 @@ const envSchema = z.object({
   MODAL_TOKEN_SECRET: z.string().min(1).optional(),
   JOURNI_SCRAPER_SECRET: z.string().min(1).optional(),
   RESEND_API_KEY: z.string().min(1).optional(),
-  MAIL_FROM: z.string().email().default("info@journi.com"),
-  MAIL_REPLY_TO: z.string().email().default("support@journi.com"),
-  SUPPORT_EMAIL: z.string().email().default("support@journi.com"),
+  MAIL_FROM: z.string().email().default("info@journie.io"),
+  MAIL_REPLY_TO: z.string().email().default("help@journie.io"),
+  SUPPORT_EMAIL: z.string().email().default("help@journie.io"),
+  INTERNAL_ADMIN_EMAILS: z.string().optional(),
   RESET_PASSWORD_REDIRECT_URL: z.string().url().optional(),
 });
 

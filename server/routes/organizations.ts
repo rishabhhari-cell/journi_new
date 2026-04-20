@@ -170,7 +170,7 @@ organizationsRouter.post("/:organizationId/invite", async (req, res, next) => {
     const organizationName = org?.name || "your team";
     const inviteUrl = `${env.CLIENT_BASE_URL}/?inviteToken=${encodeURIComponent(inviteToken)}`;
 
-    const emailSent = await sendOrganizationInviteEmail({
+    const emailResult = await sendOrganizationInviteEmail({
       to: input.email.toLowerCase(),
       inviterName,
       organizationName,
@@ -181,7 +181,7 @@ organizationsRouter.post("/:organizationId/invite", async (req, res, next) => {
     await writeAuditEvent({
       organizationId,
       actorUserId: authReq.auth.userId,
-      eventType: emailSent ? "email.invite.sent" : "email.invite.failed",
+      eventType: emailResult.sent ? "email.invite.sent" : "email.invite.failed",
       entityType: "organization_invite",
       entityId: data.id,
       payload: {
@@ -189,6 +189,7 @@ organizationsRouter.post("/:organizationId/invite", async (req, res, next) => {
         role: input.role,
         provider: "resend",
         source: "organization_invite",
+        error: emailResult.error ?? null,
       },
     });
 
@@ -197,7 +198,7 @@ organizationsRouter.post("/:organizationId/invite", async (req, res, next) => {
         inviteId: data.id,
         role: input.role as OrgRole,
         expiresAt,
-        emailSent,
+        emailSent: emailResult.sent,
       },
     });
   } catch (error) {
