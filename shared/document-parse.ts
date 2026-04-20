@@ -102,6 +102,8 @@ export interface ParsedManuscript {
   totalWordCount: number;
   reviewRequired?: boolean;
   parseConfidence?: number;
+  authors?: string[];
+  institutions?: string[];
   blocks?: ParsedBlock[];
   figures?: ParsedFigure[];
   tables?: ParsedTable[];
@@ -121,6 +123,8 @@ export interface RawParsedDocument {
   tables?: ParsedTable[];
   links?: ParsedLink[];
   parseConfidence?: number;
+  authors?: string[];
+  institutions?: string[];
   llmParsed?: {
     sections: Array<{ title: string; content: string }>;
     citations: Array<{
@@ -1190,6 +1194,8 @@ export function parseRawDocument(raw: RawParsedDocument): ParsedManuscript {
     diagnostics,
     totalWordCount: sections.reduce((sum, section) => sum + section.wordCount, 0),
     reviewRequired: needsReview,
+    authors: raw.authors,
+    institutions: raw.institutions,
     blocks: normalizedBlocks,
     figures: parsedFigures,
     tables: parsedTables,

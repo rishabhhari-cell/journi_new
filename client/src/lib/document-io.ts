@@ -30,6 +30,8 @@ export interface ImportDocumentResult {
   citations: CitationFormData[];
   diagnostics: ParseDiagnostic[];
   totalWordCount: number;
+  authors: string[];
+  institutions: string[];
   status: ImportSessionStatus;
   unsupportedReason: string | null;
   items: ImportSessionItemApiDTO[];
@@ -704,6 +706,8 @@ async function importFile(file: File): Promise<ImportDocumentResult> {
     citations,
     diagnostics,
     totalWordCount: parsed.totalWordCount,
+    authors: parsed.authors ?? [],
+    institutions: parsed.institutions ?? [],
     status: statusInfo.status,
     unsupportedReason: statusInfo.unsupportedReason,
     items,
