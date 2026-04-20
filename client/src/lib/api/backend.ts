@@ -86,6 +86,7 @@ export interface ApiProject {
   project_members?: ApiProjectMember[];
   tasks_json?: unknown[];
   collaborators_json?: unknown[];
+  metadata?: Record<string, unknown>;
 }
 
 export interface ApiManuscriptSection {
@@ -205,6 +206,7 @@ export async function patchProject(
     description?: string;
     status?: 'active' | 'completed' | 'archived';
     dueDate?: string | null;
+    metadata?: Record<string, unknown>;
   },
 ) {
   return apiFetch<{ data: ApiProject }>(`/projects/${projectId}`, {

@@ -21,6 +21,7 @@ const patchProjectSchema = z.object({
   description: z.string().optional(),
   status: z.enum(["active", "completed", "archived"]).optional(),
   dueDate: z.string().datetime().nullable().optional(),
+  metadata: z.record(z.unknown()).optional(),
 });
 
 const patchTasksSchema = z.object({
@@ -119,6 +120,7 @@ projectsRouter.patch("/:projectId", async (req, res, next) => {
         ...(input.description !== undefined ? { description: input.description } : {}),
         ...(input.status !== undefined ? { status: input.status } : {}),
         ...(input.dueDate !== undefined ? { due_date: input.dueDate } : {}),
+        ...(input.metadata !== undefined ? { metadata: input.metadata } : {}),
         updated_at: new Date().toISOString(),
       })
       .eq("id", projectId)
