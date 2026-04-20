@@ -22,6 +22,7 @@ import Discovery from "./pages/Discovery";
 import Publication from "./pages/Publication";
 import FormatPreview from "./pages/FormatPreview";
 import Admin from "./pages/Admin";
+import InternalAdmin from "./pages/InternalAdmin";
 import Profile from "./pages/Profile";
 import ResetPassword from "./pages/ResetPassword";
 
@@ -97,6 +98,7 @@ function Router() {
         <Route path="/publication" component={Publication} />
         <Route path="/format/:journalId" component={FormatPreview} />
         <Route path="/admin" component={Admin} />
+        <Route path="/internal-admin" component={InternalAdmin} />
         <Route path="/profile" component={Profile} />
         <Route path="/reset-password" component={ResetPassword} />
         <Route component={NotFound} />
