@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, useRef, ReactNode, useMemo, useCallback } from 'react';
 import { nanoid } from 'nanoid';
-import type { Project, Task, Collaborator, Activity, TaskFormData, CollaboratorFormData } from '@/types';
+import type { Project, Task, Collaborator, Activity, TaskFormData, CollaboratorFormData, ProjectMetadata } from '@/types';
 import { useAuth } from '@/contexts/AuthContext';
 import {
   fetchProjects,
@@ -60,6 +60,7 @@ interface ProjectContextType {
   updateCollaborator: (collaboratorId: string, updates: Partial<Collaborator>) => void;
   getTask: (taskId: string) => Task | undefined;
   getCollaborator: (collaboratorId: string) => Collaborator | undefined;
+  updateProjectMetadata: (patch: Partial<ProjectMetadata>) => Promise<void>;
   project: Project;
 }
 
@@ -95,6 +96,15 @@ function mapApiProjectToUi(apiProject: ApiProject): Project {
     ? (apiProject.collaborators_json as Collaborator[])
     : [];
 
+  const rawMeta = apiProject.metadata ?? {};
+  const metadata: ProjectMetadata | undefined =
+    Array.isArray(rawMeta.authors) || Array.isArray(rawMeta.institutions)
+      ? {
+          authors: Array.isArray(rawMeta.authors) ? (rawMeta.authors as string[]) : [],
+          institutions: Array.isArray(rawMeta.institutions) ? (rawMeta.institutions as string[]) : [],
+        }
+      : undefined;
+
   return {
     id: apiProject.id,
     title: apiProject.title,
@@ -105,6 +115,7 @@ function mapApiProjectToUi(apiProject: ApiProject): Project {
     dueDate: apiProject.due_date ? new Date(apiProject.due_date) : undefined,
     tasks,
     collaborators,
+    metadata,
   };
 }
 
@@ -381,6 +392,23 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     setProjects(updated, activeProject.id);
   };
 
+  const updateProjectMetadata = useCallback(async (patch: Partial<ProjectMetadata>): Promise<void> => {
+    const current = activeProject.metadata ?? { authors: [], institutions: [] };
+    const merged: ProjectMetadata = {
+      authors: patch.authors ?? current.authors,
+      institutions: patch.institutions ?? current.institutions,
+    };
+    // Optimistic update
+    updateActive((p) => ({ ...p, metadata: merged, updatedAt: new Date() }));
+    if (backendMode && activeProject.id) {
+      try {
+        await patchProject(activeProject.id, { metadata: merged as unknown as Record<string, unknown> });
+      } catch {
+        console.error('[ProjectContext] Failed to persist project metadata');
+      }
+    }
+  }, [activeProject, backendMode, updateActive]);
+
   const addTask = (taskData: TaskFormData) => {
     const newTask: Task = { id: nanoid(), ...taskData };
     const newTasks = [...activeProject.tasks, newTask];
@@ -486,6 +514,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
         updateCollaborator,
         getTask,
         getCollaborator,
+        updateProjectMetadata,
         project: activeProject,
       }}
     >

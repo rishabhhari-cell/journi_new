@@ -38,6 +38,11 @@ export interface Collaborator {
 
 export type ProjectStatus = 'active' | 'completed' | 'archived';
 
+export interface ProjectMetadata {
+  authors: string[];
+  institutions: string[];
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -48,6 +53,7 @@ export interface Project {
   tasks: Task[];
   collaborators: Collaborator[];
   dueDate?: Date;
+  metadata?: ProjectMetadata;
 }
 
 // ============================================================================
