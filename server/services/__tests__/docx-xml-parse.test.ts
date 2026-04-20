@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { detectHeadingFromParagraphXml, extractTextFromParagraphXml } from "../docx-xml-parse.service";
+import { detectHeadingFromParagraphXml, extractTextFromParagraphXml, classifyPreambleLine } from "../docx-xml-parse.service";
 
 describe("detectHeadingFromParagraphXml", () => {
   it("detects heading via w:outlineLvl", () => {
@@ -27,5 +27,31 @@ describe("extractTextFromParagraphXml", () => {
   it("concatenates all w:t runs", () => {
     const paraXml = `<w:p><w:r><w:t>Hello </w:t></w:r><w:r><w:t>world</w:t></w:r></w:p>`;
     expect(extractTextFromParagraphXml(paraXml)).toBe("Hello world");
+  });
+});
+
+describe("classifyPreambleLine", () => {
+  it("classifies a typical author line", () => {
+    expect(classifyPreambleLine("Smith J, Jones A, Patel R")).toBe("author");
+  });
+
+  it("strips superscript suffixes before classifying author", () => {
+    expect(classifyPreambleLine("Smith J¹, Jones A², Patel R³")).toBe("author");
+  });
+
+  it("classifies a university affiliation as institution", () => {
+    expect(classifyPreambleLine("¹Department of Medicine, Harvard University, Boston, MA")).toBe("institution");
+  });
+
+  it("classifies a hospital affiliation as institution", () => {
+    expect(classifyPreambleLine("St. Mary's Hospital, London, UK")).toBe("institution");
+  });
+
+  it("does not classify a long body sentence as author or institution", () => {
+    expect(classifyPreambleLine("This study investigated the effects of treatment on patient outcomes over 12 months.")).toBe("other");
+  });
+
+  it("does not classify abstract heading as author or institution", () => {
+    expect(classifyPreambleLine("Abstract")).toBe("other");
   });
 });

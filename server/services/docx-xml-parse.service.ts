@@ -59,12 +59,43 @@ export interface DocxXmlSection {
   paragraphTexts: string[];
 }
 
+export type PreambleLineType = "author" | "institution" | "other";
+
+const INSTITUTION_KEYWORDS = /university|institute|department|hospital|college|school|center|centre|faculty|laboratory/i;
+const SUPERSCRIPT_DIGITS = /^[¹²³⁴⁵⁶⁷⁸⁹0-9]+[.\s]/;
+
+export function classifyPreambleLine(line: string): PreambleLineType {
+  const trimmed = line.trim();
+  if (!trimmed || trimmed.length > 200) return "other";
+
+  // Institution: keyword match OR starts with superscript/digit affiliation marker
+  if (INSTITUTION_KEYWORDS.test(trimmed)) return "institution";
+  if (SUPERSCRIPT_DIGITS.test(trimmed)) return "institution";
+
+  // Strip superscript suffixes (e.g. "Smith J¹" → "Smith J") before name check
+  const stripped = trimmed.replace(/[¹²³⁴⁵⁶⁷⁸⁹]+/g, "").trim();
+
+  // Author: short line, comma-separated tokens that look like names (1–4 words, starts uppercase)
+  if (stripped.length <= 120 && !/[.!?]$/.test(stripped)) {
+    const tokens = stripped.split(/,\s*/);
+    const looksLikeNames = tokens.every((token) => {
+      const words = token.trim().split(/\s+/);
+      return words.length >= 1 && words.length <= 4 && /^[A-Z]/.test(words[0]);
+    });
+    if (looksLikeNames && tokens.length >= 2) return "author";
+  }
+
+  return "other";
+}
+
 export interface DocxXmlResult {
   sections: DocxXmlSection[];
   referenceLines: string[];
   mainDocumentPath: string;
   figureRelsPath: string;
   diagnostics: ParseDiagnostic[];
+  authors: string[];
+  institutions: string[];
 }
 
 // ─── Main export ─────────────────────────────────────────────────────────────
@@ -108,7 +139,7 @@ export async function extractDocxXmlStructure(buffer: Buffer): Promise<DocxXmlRe
       code: "DOCX_DOCUMENT_XML_MISSING",
       message: `Main document part ${mainDocumentPath} not found in DOCX zip.`,
     });
-    return { sections: [], referenceLines: [], mainDocumentPath, figureRelsPath, diagnostics };
+    return { sections: [], referenceLines: [], mainDocumentPath, figureRelsPath, diagnostics, authors: [], institutions: [] };
   }
 
   const paragraphMatches = Array.from(documentXml.matchAll(/<w:p[\s>][\s\S]*?<\/w:p>/g));
@@ -141,6 +172,19 @@ export async function extractDocxXmlStructure(buffer: Buffer): Promise<DocxXmlRe
   }
   flush();
 
+  // Step 3b: Extract authors and institutions from preamble of the first section
+  const authors: string[] = [];
+  const institutions: string[] = [];
+  const firstSection = sections[0];
+  if (firstSection) {
+    const preambleLines = firstSection.paragraphTexts.slice(0, 10);
+    for (const line of preambleLines) {
+      const kind = classifyPreambleLine(line);
+      if (kind === "author") authors.push(line.replace(/[¹²³⁴⁵⁶⁷⁸⁹]+/g, "").trim());
+      else if (kind === "institution") institutions.push(line.trim());
+    }
+  }
+
   // Step 4: Extract reference lines from footnotes.xml + endnotes.xml
   const referenceLines: string[] = [];
   for (const notesFile of [`${mainDocDir}/footnotes.xml`, `${mainDocDir}/endnotes.xml`]) {
@@ -155,5 +199,5 @@ export async function extractDocxXmlStructure(buffer: Buffer): Promise<DocxXmlRe
     }
   }
 
-  return { sections, referenceLines, mainDocumentPath, figureRelsPath, diagnostics };
+  return { sections, referenceLines, mainDocumentPath, figureRelsPath, diagnostics, authors, institutions };
 }
