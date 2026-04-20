@@ -431,6 +431,28 @@ export default function Dashboard() {
                   ))}
                 </div>
 
+                {/* Project Metadata card — shown only when authors or institutions are available */}
+                {((project.metadata?.authors?.length ?? 0) > 0 || (project.metadata?.institutions?.length ?? 0) > 0) ? (
+                  <div className="bg-card rounded-xl border border-border p-5">
+                    <h2 className="text-sm font-bold text-foreground mb-4 flex items-center gap-2">
+                      <Users size={16} className="text-muted-foreground" />
+                      Document Metadata
+                    </h2>
+                    {(project.metadata?.authors?.length ?? 0) > 0 && (
+                      <div className="mb-3">
+                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-1">Authors</p>
+                        <p className="text-sm text-foreground">{project.metadata!.authors.join(', ')}</p>
+                      </div>
+                    )}
+                    {(project.metadata?.institutions?.length ?? 0) > 0 && (
+                      <div>
+                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-1">Institutions</p>
+                        <p className="text-sm text-foreground">{project.metadata!.institutions.join(', ')}</p>
+                      </div>
+                    )}
+                  </div>
+                ) : null}
+
                 {/* Urgent tasks + Team snapshot */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                   {/* Urgent / Key tasks */}
