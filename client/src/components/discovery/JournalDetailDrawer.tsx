@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { X, ExternalLink, BookOpen, TrendingUp, Clock, Users, Globe, Award, FileText, List, Quote, Image } from 'lucide-react';
 import type { Journal } from '@/types';
 import OAPolicyBadge from '@/components/discovery/OAPolicyBadge';
+import { JournalMetricBadge } from './JournalMetricBadge';
 import { fetchJournalGuidelines, type JournalGuidelinesDTO } from '@/lib/api/backend';
 
 interface JournalDetailDrawerProps {
@@ -169,11 +170,10 @@ export default function JournalDetailDrawer({ journal, onClose }: JournalDetailD
               Key Metrics
             </p>
             <div className="grid grid-cols-1 gap-2">
-              <Stat
-                label="Impact Factor (2yr)"
-                value={journal.impactFactor != null ? journal.impactFactor.toFixed(2) : null}
-                icon={TrendingUp}
-              />
+              <div className="flex flex-col gap-0.5">
+                <span className="text-xs text-muted-foreground uppercase tracking-wide">Impact Metrics</span>
+                <JournalMetricBadge journal={journal} size="detail" />
+              </div>
               <Stat
                 label="Acceptance Rate"
                 value={journal.acceptanceRate != null ? `${journal.acceptanceRate}%` : null}
