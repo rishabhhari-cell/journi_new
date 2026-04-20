@@ -183,6 +183,9 @@ export interface Journal {
   // OpenAlex enrichment
   openAlexId?: string;
   apcCostUsd?: number | null;
+  citeScore?: number | null;
+  sjrScore?: number | null;
+  sjrQuartile?: string | null;
   citationsCount?: number | null;
   worksCount?: number | null;
   // DOAJ enrichment
