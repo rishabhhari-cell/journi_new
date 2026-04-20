@@ -8,14 +8,10 @@ import Pagination from '@/components/discovery/Pagination';
 import JournalDetailDrawer from '@/components/discovery/JournalDetailDrawer';
 import JournalMarquee from '@/components/discovery/JournalMarquee';
 import OAPolicyBadge from '@/components/discovery/OAPolicyBadge';
+import { JournalMetricBadge } from '../components/discovery/JournalMetricBadge';
 import { useJournals } from '@/contexts/JournalsContext';
 import type { SortBy } from '@/contexts/JournalsContext';
 import type { Journal } from '@/types';
-
-function formatImpactFactor(value: number | null | undefined): string | null {
-  if (typeof value !== 'number') return null;
-  return value.toFixed(1);
-}
 
 const SORT_OPTIONS: { value: SortBy; label: string }[] = [
   { value: 'relevance', label: 'Relevance' },
@@ -211,7 +207,6 @@ export default function Discovery() {
                 {/* Journal cards */}
                 <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
                   {cards.map((journal) => {
-                    const ifStr = formatImpactFactor(journal.impactFactor);
                     return (
                       <article
                         key={journal.id}
@@ -248,16 +243,7 @@ export default function Discovery() {
                             </div>
 
                             <div className="mt-2.5 flex flex-wrap items-baseline gap-3">
-                              {ifStr != null && (
-                                <div className="flex shrink-0 items-baseline gap-1">
-                                  <span className="text-lg font-extrabold leading-none text-foreground">
-                                    {ifStr}
-                                  </span>
-                                  <span className="text-[9px] font-semibold uppercase tracking-widest text-muted-foreground">
-                                    IF
-                                  </span>
-                                </div>
-                              )}
+                              <JournalMetricBadge journal={journal} size="card" />
                               <div className="flex flex-wrap gap-1.5">
                                 {typeof journal.avgDecisionDays === 'number' && (
                                   <span className="rounded-full bg-muted/70 px-2 py-0.5 text-[10px] text-muted-foreground">
