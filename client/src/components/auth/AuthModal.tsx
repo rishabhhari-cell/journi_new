@@ -111,7 +111,6 @@ export default function AuthModal() {
   const [institutionalExpanded, setInstitutionalExpanded] = useState(false);
   const [verificationEmail, setVerificationEmail] = useState('');
   const [verificationEmailSent, setVerificationEmailSent] = useState(true);
-  const [verificationRetryScheduled, setVerificationRetryScheduled] = useState(false);
   const [resendingVerification, setResendingVerification] = useState(false);
 
   // Clear errors when switching views
@@ -157,11 +156,8 @@ export default function AuthModal() {
       if (result.requiresEmailVerification) {
         setVerificationEmail(suEmail.trim());
         setVerificationEmailSent(result.verificationEmailSent);
-        setVerificationRetryScheduled(result.verificationRetryScheduled);
         if (result.verificationEmailSent) {
           toast.success('Account created. Check your email to verify your account.');
-        } else if (result.verificationRetryScheduled) {
-          toast.success('Account created. We are retrying your verification email in about a minute.');
         } else {
           toast.error("Account created, but the verification email didn't send. Use resend below.");
         }
@@ -304,9 +300,7 @@ export default function AuthModal() {
                       <p className="mt-1 text-xs text-muted-foreground">
                         {verificationEmailSent
                           ? `We sent a verification link to ${verificationEmail || 'your email address'}. Click the link to verify your account.`
-                          : verificationRetryScheduled
-                            ? `We couldn't confirm delivery to ${verificationEmail || 'your email address'} yet, so we scheduled an automatic retry in about a minute. If nothing arrives after that, use resend below.`
-                            : `We couldn't confirm delivery to ${verificationEmail || 'your email address'} yet. Use resend below, then verify your account.`}
+                          : `We couldn't confirm delivery to ${verificationEmail || 'your email address'} yet. Use resend below, then verify your account.`}
                       </p>
                     </div>
                   </div>

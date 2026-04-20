@@ -9,7 +9,11 @@ import { logger } from "../lib/logger";
 import { createUserScopedSupabase, supabaseAdmin, supabasePublic } from "../lib/supabase";
 import { requireAuth, type AuthedRequest } from "../middleware/auth";
 import { writeAuditEvent } from "../services/audit.service";
-import { sendPasswordResetEmail, sendWelcomeEmail } from "../services/email.service";
+import {
+  sendPasswordResetEmail,
+  sendSignupVerificationEmail as sendSignupVerificationEmailMessage,
+  sendWelcomeEmail,
+} from "../services/email.service";
 
 export const authRouter = Router();
 
@@ -216,7 +220,6 @@ async function maybeSendWelcomeEmail(input: {
   userId: string;
   to: string;
   fullName: string;
-  verificationUrl?: string;
 }): Promise<boolean> {
   if (!input.to) return false;
 
@@ -226,7 +229,6 @@ async function maybeSendWelcomeEmail(input: {
   const sent = await sendWelcomeEmail({
     to: input.to,
     fullName: input.fullName,
-    verificationUrl: input.verificationUrl,
   });
   if (!sent) return false;
 
@@ -237,52 +239,12 @@ async function maybeSendWelcomeEmail(input: {
     entityId: input.userId,
     payload: {
       email: input.to,
-      mode: input.verificationUrl ? "verification" : "welcome",
+      provider: "resend",
+      source: "post_verification_bootstrap",
     },
   });
 
   return true;
-}
-
-async function resendPendingSignupEmail(email: string): Promise<boolean> {
-  const { error } = await supabasePublic.auth.resend({
-    type: "signup",
-    email,
-    options: {
-      emailRedirectTo: `${env.CLIENT_BASE_URL}/`,
-    },
-  });
-
-  if (error) {
-    logger.warn("Failed to resend Supabase signup confirmation email", {
-      email,
-      error: error.message,
-    });
-    return false;
-  }
-
-  return true;
-}
-
-function queueSignupVerificationRetry(input: { email: string; userId: string; delayMs?: number }) {
-  const delayMs = input.delayMs ?? 65_000;
-
-  setTimeout(() => {
-    void (async () => {
-      const sent = await resendPendingSignupEmail(input.email);
-
-      await writeAuditEvent({
-        actorUserId: input.userId,
-        eventType: sent ? "email.signup_verification.resent" : "email.signup_verification.failed",
-        entityType: "user",
-        entityId: input.userId,
-        payload: {
-          email: input.email,
-          source: "delayed_retry",
-        },
-      });
-    })();
-  }, delayMs);
 }
 
 async function findExistingUserByEmail(email: string): Promise<{ fullName: string; user: any | null }> {
@@ -329,41 +291,106 @@ function isAlreadyRegisteredError(message: string | undefined): boolean {
   return /already registered/i.test(message ?? "");
 }
 
-async function sendSignupVerificationEmail(input: {
+async function writeAuthEmailAuditEvent(input: {
+  actorUserId?: string | null;
+  eventType: string;
+  entityId?: string | null;
+  email: string;
+  source: string;
+  provider: "resend";
+  linkType?: "signup" | "magiclink" | "recovery";
+  error?: string;
+}): Promise<void> {
+  await writeAuditEvent({
+    actorUserId: input.actorUserId ?? null,
+    eventType: input.eventType,
+    entityType: "user",
+    entityId: input.entityId ?? input.actorUserId ?? null,
+    payload: {
+      email: input.email,
+      source: input.source,
+      provider: input.provider,
+      linkType: input.linkType ?? null,
+      error: input.error ?? null,
+    },
+  });
+}
+
+async function generateSignupVerificationLink(input: {
+  email: string;
+  password: string;
+  fullName: string;
+}): Promise<{ user: any | null; actionLink: string | null; errorMessage?: string }> {
+  const { data, error } = await supabaseAdmin.auth.admin.generateLink({
+    type: "signup",
+    email: input.email,
+    password: input.password,
+    options: {
+      redirectTo: `${env.CLIENT_BASE_URL}/`,
+      data: {
+        full_name: input.fullName,
+      },
+    },
+  });
+
+  if (error) {
+    return { user: null, actionLink: null, errorMessage: error.message };
+  }
+
+  return {
+    user: data.user ?? null,
+    actionLink: data.properties?.action_link ?? null,
+  };
+}
+
+async function generatePendingVerificationResendLink(email: string): Promise<{
+  user: any | null;
+  actionLink: string | null;
+  errorMessage?: string;
+}> {
+  const { data, error } = await supabaseAdmin.auth.admin.generateLink({
+    type: "magiclink",
+    email,
+    options: {
+      redirectTo: `${env.CLIENT_BASE_URL}/`,
+    },
+  });
+
+  if (error) {
+    return { user: null, actionLink: null, errorMessage: error.message };
+  }
+
+  return {
+    user: data.user ?? null,
+    actionLink: data.properties?.action_link ?? null,
+  };
+}
+
+async function deliverSignupVerificationEmail(input: {
   userId: string;
   email: string;
   fullName: string;
   verificationUrl: string;
-}): Promise<{ sent: boolean; retryScheduled: boolean }> {
-  const customSent = await maybeSendWelcomeEmail({
-    userId: input.userId,
+  source: "signup" | "duplicate_signup" | "resend_verification";
+  linkType: "signup" | "magiclink";
+}): Promise<{ sent: boolean }> {
+  const sent = await sendSignupVerificationEmailMessage({
     to: input.email,
     fullName: input.fullName,
     verificationUrl: input.verificationUrl,
   });
 
-  if (customSent) {
-    return { sent: true, retryScheduled: false };
-  }
-
-  queueSignupVerificationRetry({
-    email: input.email,
-    userId: input.userId,
-  });
-
-  await writeAuditEvent({
+  await writeAuthEmailAuditEvent({
     actorUserId: input.userId,
-    eventType: "email.signup_verification.failed",
-    entityType: "user",
     entityId: input.userId,
-    payload: {
-      email: input.email,
-      source: "initial_signup_send",
-      retryScheduled: true,
-    },
+    eventType: sent ? "email.signup_verification.sent" : "email.signup_verification.failed",
+    email: input.email,
+    source: input.source,
+    provider: "resend",
+    linkType: input.linkType,
   });
 
-  return { sent: false, retryScheduled: true };
+  return { sent };
 }
 
 authRouter.post("/signup", async (req, res, next) => {
@@ -376,20 +403,14 @@ authRouter.post("/signup", async (req, res, next) => {
       organizationName: parsedInput.organizationName?.trim(),
     };
 
-    const { data, error } = await supabaseAdmin.auth.admin.generateLink({
-      type: "signup",
+    const { user: generatedUser, actionLink, errorMessage } = await generateSignupVerificationLink({
       email: input.email,
       password: input.password,
-      options: {
-        redirectTo: `${env.CLIENT_BASE_URL}/`,
-        data: {
-          full_name: input.fullName,
-        },
-      },
+      fullName: input.fullName,
     });
 
-    if (error) {
-      if (isAlreadyRegisteredError(error.message)) {
+    if (errorMessage) {
+      if (isAlreadyRegisteredError(errorMessage)) {
         const existing = await findExistingUserByEmail(input.email);
         const existingUser = existing.user;
         const alreadyVerified = Boolean(existingUser?.email_confirmed_at || existingUser?.confirmed_at);
@@ -398,7 +419,33 @@ authRouter.post("/signup", async (req, res, next) => {
           throw new HttpError(409, "An account with this email already exists. Please sign in instead.", "USER_ALREADY_EXISTS");
         }
 
-        const verificationEmailSent = await resendPendingSignupEmail(input.email);
+        const resendLinkResult = await generatePendingVerificationResendLink(input.email);
+        const verificationEmailSent =
+          existingUser?.id && resendLinkResult.actionLink
+            ? (
+                await deliverSignupVerificationEmail({
+                  userId: existingUser.id,
+                  email: input.email,
+                  fullName: existing.fullName,
+                  verificationUrl: resendLinkResult.actionLink,
+                  source: "duplicate_signup",
+                  linkType: "magiclink",
+                })
+              ).sent
+            : false;
+
+        if (!verificationEmailSent && (!existingUser?.id || !resendLinkResult.actionLink)) {
+          await writeAuthEmailAuditEvent({
+            actorUserId: existingUser?.id ?? null,
+            entityId: existingUser?.id ?? null,
+            eventType: "email.signup_verification.failed",
+            email: input.email,
+            source: "duplicate_signup",
+            provider: "resend",
+            linkType: "magiclink",
+            error: resendLinkResult.errorMessage ?? "VERIFICATION_LINK_NOT_GENERATED",
+          });
+        }
 
         res.status(200).json({
           user: existingUser
@@ -420,23 +467,23 @@ authRouter.post("/signup", async (req, res, next) => {
         return;
       }
 
-      throw new HttpError(400, error.message, "SIGNUP_FAILED");
+      throw new HttpError(400, errorMessage, "SIGNUP_FAILED");
     }
-    if (!data.user) {
+    if (!generatedUser) {
       throw new HttpError(500, "Sign-up did not return a user", "SIGNUP_NO_USER");
     }
-    if (!data.properties?.action_link) {
+    if (!actionLink) {
       throw new HttpError(500, "Sign-up verification link was not generated", "SIGNUP_NO_VERIFICATION_LINK");
     }
 
     await upsertProfile({
-      userId: data.user.id,
+      userId: generatedUser.id,
       fullName: input.fullName,
       email: input.email,
     });
 
     // Auto-enroll into institution org if email domain is registered
-    await autoEnrollInstitutionMember(data.user.id, input.email);
+    await autoEnrollInstitutionMember(generatedUser.id, input.email);
 
     if (input.organizationName) {
       const slug = input.organizationName
@@ -450,7 +497,7 @@ authRouter.post("/signup", async (req, res, next) => {
         .insert({
           name: input.organizationName,
           slug: `${slug}-${crypto.randomBytes(2).toString("hex")}`,
-          created_by: data.user.id,
+          created_by: generatedUser.id,
         })
         .select("id")
         .single();
@@ -458,9 +505,9 @@ authRouter.post("/signup", async (req, res, next) => {
       if (!orgError && org) {
         await supabaseAdmin.from("organization_members").upsert({
           organization_id: org.id,
-          user_id: data.user.id,
+          user_id: generatedUser.id,
           role: "owner",
-          invited_by: data.user.id,
+          invited_by: generatedUser.id,
         });
       }
     }
@@ -468,31 +515,32 @@ authRouter.post("/signup", async (req, res, next) => {
     // Fetch memberships inline (includes auto-created workspace + any institution enrollment).
     // Run memberships + audit in parallel; projects depend on memberships so they run after.
     const [membershipDtos] = await Promise.all([
-      fetchMembershipsWithAutoOrg(data.user.id, input.fullName),
+      fetchMembershipsWithAutoOrg(generatedUser.id, input.fullName),
       writeAuditEvent({
-        actorUserId: data.user.id,
+        actorUserId: generatedUser.id,
         eventType: "auth.signup",
         entityType: "user",
-        entityId: data.user.id,
+        entityId: generatedUser.id,
       }),
     ]);
     const initialProjects = await fetchInitialProjects(membershipDtos[0]?.organizationId);
 
-    const verificationResult = await sendSignupVerificationEmail({
-      userId: data.user.id,
+    const verificationResult = await deliverSignupVerificationEmail({
+      userId: generatedUser.id,
       email: input.email,
       fullName: input.fullName,
-      verificationUrl: data.properties.action_link,
+      verificationUrl: actionLink,
+      source: "signup",
+      linkType: "signup",
     });
 
     res.status(201).json({
-      user: mapUser(data.user, input.fullName),
+      user: mapUser(generatedUser, input.fullName),
       session: null,
       memberships: membershipDtos,
       projects: initialProjects,
       requiresEmailVerification: true,
       verificationEmailSent: verificationResult.sent,
-      verificationRetryScheduled: verificationResult.retryScheduled,
     });
   } catch (error) {
     next(error);
@@ -647,34 +695,38 @@ authRouter.post("/forgot-password", async (req, res, next) => {
       },
     });
 
-    // Keep response generic so we don't reveal whether the email exists.
     if (!error && data?.properties?.action_link) {
-      const fullName =
-        data.user?.user_metadata?.full_name ??
-        data.user?.user_metadata?.name ??
-        undefined;
+      const fullName = data.user?.user_metadata?.full_name ?? data.user?.user_metadata?.name ?? undefined;
+      const sent = await sendPasswordResetEmail({
+        to: input.email,
+        fullName,
+        resetUrl: data.properties.action_link,
+      });
 
-      void (async () => {
-        const sent = await sendPasswordResetEmail({
-          to: input.email,
-          fullName,
-          resetUrl: data.properties.action_link,
-        });
-
-        if (!sent || !data.user?.id) return;
-
-        await writeAuditEvent({
-          actorUserId: data.user.id,
-          eventType: "email.password_reset.sent",
-          entityType: "user",
-          entityId: data.user.id,
-          payload: {
-            email: input.email,
-          },
-        });
-      })();
+      await writeAuthEmailAuditEvent({
+        actorUserId: data.user?.id ?? null,
+        entityId: data.user?.id ?? null,
+        eventType: sent ? "email.password_reset.sent" : "email.password_reset.failed",
+        email: input.email,
+        source: "forgot_password",
+        provider: "resend",
+        linkType: "recovery",
+      });
+    } else {
+      const existing = await findExistingUserByEmail(normalizeEmail(input.email));
+      await writeAuthEmailAuditEvent({
+        actorUserId: existing.user?.id ?? null,
+        entityId: existing.user?.id ?? null,
+        eventType: "email.password_reset.failed",
+        email: normalizeEmail(input.email),
+        source: "forgot_password",
+        provider: "resend",
+        linkType: "recovery",
+        error: error?.message ?? "RECOVERY_LINK_NOT_GENERATED",
+      });
     }
 
+    // Keep response generic so we don't reveal whether the email exists.
     res.json({ ok: true });
   } catch (error) {
     next(error);
@@ -794,17 +846,31 @@ authRouter.post("/signup/resend-verification", async (req, res, next) => {
       return;
     }
 
-    const sent = await resendPendingSignupEmail(email);
+    const resendLinkResult = await generatePendingVerificationResendLink(email);
+    const sent =
+      authUser?.id && resendLinkResult.actionLink
+        ? (
+            await deliverSignupVerificationEmail({
+              userId: authUser.id,
+              email,
+              fullName: existing.fullName,
+              verificationUrl: resendLinkResult.actionLink,
+              source: "resend_verification",
+              linkType: "magiclink",
+            })
+          ).sent
+        : false;
 
-    if (sent && authUser?.id) {
-      await writeAuditEvent({
-        actorUserId: authUser.id,
-        eventType: "email.signup_verification.resent",
-        entityType: "user",
-        entityId: authUser.id,
-        payload: {
-          email,
-        },
+    if (!sent && (!authUser?.id || !resendLinkResult.actionLink)) {
+      await writeAuthEmailAuditEvent({
+        actorUserId: authUser?.id ?? null,
+        entityId: authUser?.id ?? null,
+        eventType: "email.signup_verification.failed",
+        email,
+        source: "resend_verification",
+        provider: "resend",
+        linkType: "magiclink",
+        error: resendLinkResult.errorMessage ?? "VERIFICATION_LINK_NOT_GENERATED",
       });
     }
 
@@ -917,16 +983,14 @@ authRouter.get("/admin/email-debug", requireAuth, async (req, res, next) => {
     const query = emailDebugQuerySchema.parse(req.query);
 
     const config = {
+      provider: env.RESEND_API_KEY ? "resend" : "disabled",
       resendApiKeyConfigured: Boolean(env.RESEND_API_KEY),
       mailFrom: env.MAIL_FROM,
       mailReplyTo: env.MAIL_REPLY_TO,
       supportEmail: env.SUPPORT_EMAIL,
-      templateIds: {
-        welcome: env.RESEND_WELCOME_TEMPLATE_ID ?? null,
-        organizationInvite: env.RESEND_ORG_INVITE_TEMPLATE_ID ?? null,
-        mention: env.RESEND_MENTION_TEMPLATE_ID ?? null,
-        passwordReset: env.RESEND_PASSWORD_RESET_TEMPLATE_ID ?? null,
-      },
+      authDeliveryMode: "app_mailer",
+      inviteDeliveryMode: "app_mailer",
+      resetDeliveryMode: "app_mailer",
       resetPasswordRedirectUrl: env.RESET_PASSWORD_REDIRECT_URL ?? `${env.CLIENT_BASE_URL}/reset-password`,
     };
 
@@ -986,9 +1050,8 @@ authRouter.get("/admin/email-debug", requireAuth, async (req, res, next) => {
 
     const warnings: string[] = [];
     if (!config.resendApiKeyConfigured) warnings.push("RESEND_API_KEY is not configured.");
-    if (!config.templateIds.welcome) warnings.push("RESEND_WELCOME_TEMPLATE_ID is not configured.");
-    if (!config.templateIds.organizationInvite) warnings.push("RESEND_ORG_INVITE_TEMPLATE_ID is not configured.");
-    if (!config.templateIds.passwordReset) warnings.push("RESEND_PASSWORD_RESET_TEMPLATE_ID is not configured.");
+    if (!config.mailFrom) warnings.push("MAIL_FROM is not configured.");
+    if (!config.mailReplyTo) warnings.push("MAIL_REPLY_TO is not configured.");
     if (recentEvents.length === 0) warnings.push("No recent auth/email audit events found.");
     if (!recentEvents.some((event) => event.eventType.startsWith("email."))) {
       warnings.push("No recent email.* events found. Emails may not be triggering or may be failing before audit write.");

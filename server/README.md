@@ -30,16 +30,17 @@ Configure these Railway environment variables:
 
 What Journi now sends:
 
-- Sign-up welcome email (from `info@journi.com`)
+- Sign-up verification email (from `info@journi.com`)
+- Post-verification welcome email (from `info@journi.com`)
 - Team invite email (from `info@journi.com`)
 - Mention notification emails (from `info@journi.com`)
-- Password reset emails through Supabase Auth (`/api/auth/forgot-password`)
+- Password reset emails through the app mailer (`/api/auth/forgot-password`)
 
 Supabase Auth requirements:
 
 - Enable email confirmation in Supabase Auth settings.
-- Configure Supabase Auth SMTP to send from `info@journi.com`.
-- Update Auth email templates (confirmation + recovery) to your branding.
+- Add your frontend URLs to Supabase Auth redirect URL allowlists.
+- Journi generates auth action links through Supabase Admin and delivers them through Resend, so Supabase SMTP/templates are not used for signup verification or password reset.
 
 Inbound support mailbox:
 

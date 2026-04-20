@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
 import Navbar from "@/components/Navbar";
-import { updatePassword } from "@/lib/api/backend";
+import { getStoredSession, setStoredSession } from "@/lib/api/client";
+import { supabaseBrowser } from "@/lib/supabase-browser";
 import { toast } from "sonner";
 
 export default function ResetPassword() {
@@ -23,7 +24,36 @@ export default function ResetPassword() {
 
     setLoading(true);
     try {
-      await updatePassword(password);
+      const recoverySession = getStoredSession();
+      if (!recoverySession?.accessToken || !recoverySession?.refreshToken) {
+        throw new Error("Your reset session has expired. Please request a new password reset email.");
+      }
+
+      const { data: sessionData, error: sessionError } = await supabaseBrowser.auth.setSession({
+        access_token: recoverySession.accessToken,
+        refresh_token: recoverySession.refreshToken,
+      });
+      if (sessionError) {
+        throw new Error(sessionError.message);
+      }
+
+      const { error: updateError } = await supabaseBrowser.auth.updateUser({
+        password,
+      });
+      if (updateError) {
+        throw new Error(updateError.message);
+      }
+
+      const { data: refreshedSessionData } = await supabaseBrowser.auth.getSession();
+      const nextSession = refreshedSessionData.session ?? sessionData.session;
+      if (nextSession) {
+        setStoredSession({
+          accessToken: nextSession.access_token,
+          refreshToken: nextSession.refresh_token,
+          expiresAt: nextSession.expires_at ?? null,
+        });
+      }
+
       toast.success("Password updated. You can now sign in with your new password.");
       navigate("/dashboard");
     } catch (error) {

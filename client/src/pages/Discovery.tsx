@@ -255,15 +255,17 @@ export default function Discovery() {
                             </div>
 
                             {/* Impact factor + secondary info pills */}
-                            <div className="mt-2.5 flex items-baseline gap-3 flex-wrap">
-                              <div className="flex items-baseline gap-1 shrink-0">
-                                <span className="text-lg font-extrabold text-foreground leading-none">
-                                  {ifStr ?? 'â€”'}
-                                </span>
-                                <span className="text-[9px] text-muted-foreground uppercase tracking-widest font-semibold">
-                                  IF
-                                </span>
-                              </div>
+                            <div className=”mt-2.5 flex items-baseline gap-3 flex-wrap”>
+                              {ifStr != null && (
+                                <div className=”flex items-baseline gap-1 shrink-0”>
+                                  <span className=”text-lg font-extrabold text-foreground leading-none”>
+                                    {ifStr}
+                                  </span>
+                                  <span className=”text-[9px] text-muted-foreground uppercase tracking-widest font-semibold”>
+                                    IF
+                                  </span>
+                                </div>
+                              )}
                               <div className="flex flex-wrap gap-1.5">
                                 {typeof journal.avgDecisionDays === 'number' && (
                                   <span className="text-[10px] bg-muted/70 text-muted-foreground px-2 py-0.5 rounded-full">

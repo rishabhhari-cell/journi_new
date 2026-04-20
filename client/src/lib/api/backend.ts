@@ -164,7 +164,7 @@ export async function inviteToOrganization(
   organizationId: string,
   input: { email: string; role: OrgRole },
 ) {
-  return apiFetch<{ data: { inviteToken: string; role: OrgRole; expiresAt: string } }>(
+  return apiFetch<{ data: { inviteId: string; role: OrgRole; expiresAt: string; emailSent: boolean } }>(
     `/organizations/${organizationId}/invite`,
     {
       method: 'POST',
@@ -527,8 +527,44 @@ export interface InstitutionDomainDTO {
   organizations?: { name: string } | null;
 }
 
+export interface EmailDebugEventDTO {
+  id: string;
+  createdAt: string;
+  eventType: string;
+  actorUserId: string | null;
+  actorFullName: string | null;
+  actorEmail: string | null;
+  entityType: string | null;
+  entityId: string | null;
+  payload: Record<string, unknown>;
+}
+
+export interface EmailDebugResponseDTO {
+  ok: boolean;
+  generatedAt: string;
+  config: {
+    provider: string;
+    resendApiKeyConfigured: boolean;
+    mailFrom: string;
+    mailReplyTo: string;
+    supportEmail: string;
+    authDeliveryMode: string;
+    inviteDeliveryMode: string;
+    resetDeliveryMode: string;
+    resetPasswordRedirectUrl: string;
+  };
+  warnings: string[];
+  recentEvents: EmailDebugEventDTO[];
+}
+
 export async function listInstitutionDomains() {
   return apiFetch<{ data: InstitutionDomainDTO[] }>('/auth/admin/institution-domains', {
+    method: 'GET',
+  });
+}
+
+export async function fetchEmailDebug(limit = 10) {
+  return apiFetch<EmailDebugResponseDTO>(`/auth/admin/email-debug?limit=${encodeURIComponent(String(limit))}`, {
     method: 'GET',
   });
 }

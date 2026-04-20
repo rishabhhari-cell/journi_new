@@ -1,6 +1,8 @@
+import fs from "node:fs";
+import path from "node:path";
+import { Resend } from "resend";
 import { env } from "../config/env";
 import { logger } from "../lib/logger";
-import { Resend } from "resend";
 
 interface SendEmailInput {
   to: string;
@@ -9,8 +11,12 @@ interface SendEmailInput {
   text?: string;
 }
 
+type TemplateName = "welcome-email.html" | "password-reset-email.html" | "team-invite-email.html";
+
 const EMAIL_SEND_MAX_ATTEMPTS = 3;
 const EMAIL_SEND_RETRY_DELAYS_MS = [250, 750];
+const TEMPLATE_DIR = path.join(process.cwd(), "server", "templates");
+const TEMPLATE_CACHE = new Map<TemplateName, string>();
 
 function wait(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -20,10 +26,55 @@ function hasEmailProviderConfigured(): boolean {
   return Boolean(env.RESEND_API_KEY);
 }
 
+function htmlEscape(value: string): string {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function getGivenName(fullName?: string): string {
+  const firstName = fullName?.trim().split(/\s+/)[0];
+  return firstName || "there";
+}
+
+function getInferredGivenName(email: string): string {
+  const localPart = email.split("@")[0] ?? "";
+  const raw = localPart.split(/[._-]/)[0] ?? "";
+  if (!raw) return "there";
+  return raw.charAt(0).toUpperCase() + raw.slice(1).toLowerCase();
+}
+
+function loadTemplate(templateName: TemplateName): string {
+  const cached = TEMPLATE_CACHE.get(templateName);
+  if (cached) return cached;
+
+  const filePath = path.join(TEMPLATE_DIR, templateName);
+  const template = fs.readFileSync(filePath, "utf8");
+  TEMPLATE_CACHE.set(templateName, template);
+  return template;
+}
+
+export function renderEmailTemplate(
+  templateName: TemplateName,
+  variables: Record<string, string>,
+): string {
+  let html = loadTemplate(templateName);
+
+  for (const [key, value] of Object.entries(variables)) {
+    html = html.replaceAll(`{{${key}}}`, htmlEscape(value));
+  }
+
+  return html;
+}
+
 async function sendViaResend(input: SendEmailInput): Promise<void> {
   if (!env.RESEND_API_KEY) {
     throw new Error("RESEND_API_KEY is not configured");
   }
+
   const resend = new Resend(env.RESEND_API_KEY);
   const { error } = await resend.emails.send({
     from: env.MAIL_FROM,
@@ -85,79 +136,35 @@ export async function sendTransactionalEmail(input: SendEmailInput): Promise<boo
   return false;
 }
 
-export async function sendWelcomeEmail(input: { to: string; fullName: string; verificationUrl?: string }): Promise<boolean> {
-  const firstName = input.fullName.trim().split(/\s+/)[0] || "there";
-  const ctaUrl = input.verificationUrl ?? "https://www.journie.io/dashboard";
-  const ctaLabel = input.verificationUrl
-    ? "Verify Email &amp; Begin Journie &rarr;"
-    : "Begin Your Journie &rarr;";
+export async function sendSignupVerificationEmail(input: {
+  to: string;
+  fullName: string;
+  verificationUrl: string;
+}): Promise<boolean> {
+  const firstName = getGivenName(input.fullName);
+  const subject = "Verify your email to start using Journie";
+  const html = renderEmailTemplate("welcome-email.html", {
+    GIVEN_NAME: firstName,
+    CTA_URL: input.verificationUrl,
+    CTA_LABEL: "Verify Email & Begin Journie",
+    SUPPORT_EMAIL: env.SUPPORT_EMAIL,
+  });
+  const text = `Welcome to Journie, ${firstName}. Verify your email and get started: ${input.verificationUrl}. Need help? Email ${env.SUPPORT_EMAIL}.`;
+
+  return sendTransactionalEmail({ to: input.to, subject, html, text });
+}
+
+export async function sendWelcomeEmail(input: { to: string; fullName: string }): Promise<boolean> {
+  const firstName = getGivenName(input.fullName);
+  const ctaUrl = "https://www.journie.io/dashboard";
   const subject = `Welcome to Journie, ${firstName} - your research journey begins here`;
-
-  const html = `
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:#f0ede6; font-family:"Plus Jakarta Sans",Arial,sans-serif; }
-  .wrap { padding:2rem 1rem; background:#f0ede6; }
-  .shell { max-width:600px; margin:0 auto; background:#fff; border-radius:4px; overflow:hidden; border:1px solid #ddd; }
-  .header { background:#fff; padding:2.5rem 2.5rem 1.5rem; text-align:center; border-bottom:1px solid #e8e4dc; }
-  .logo-img { display:block; margin:0 auto; width: 144px; max-width:100%; height:auto; }
-  .body { padding:2.5rem 3rem 2rem; color:#2c2c2a; }
-  .greeting { font-family:"Plus Jakarta Sans",Arial,sans-serif; font-size:1.35rem; font-weight:800; color:#1a6b1a; margin-bottom:1.4rem; }
-  .p { font-family:"Plus Jakarta Sans",Arial,sans-serif; font-size:0.97rem; line-height:1.75; color:#3a3a38; margin-bottom:1.3rem; }
-  .cta { text-align:center; margin:2rem 0 1.5rem; }
-  .btn { display:inline-block; background:#1a6b1a; color:#fff; font-family:"Plus Jakarta Sans",Arial,sans-serif; font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.85rem 2.5rem; text-decoration:none; border-radius:2px; font-weight:600; }
-  .sign { margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid #e8e4dc; font-family:"Plus Jakarta Sans",Arial,sans-serif; font-size:0.95rem; color:#3a3a38; line-height:1.7; }
-  .sign-name { font-weight:800; color:#1a6b1a; margin-top:0.8rem; }
-  .footer { background:#1a6b1a; padding:1.5rem 2.5rem; text-align:center; }
-  .footer-logo-img { display:block; margin:0 auto 0.4rem; width: 120px; max-width:100%; height:auto; }
-  .footer-tag { font-family:"Plus Jakarta Sans",Arial,sans-serif; font-size:0.72rem; letter-spacing:0.04em; color:rgba(255,255,255,0.65); margin-bottom:0.8rem; }
-  .footer-links { font-size:0.72rem; font-family:"Plus Jakarta Sans",Arial,sans-serif; color:rgba(255,255,255,0.55); }
-  .footer-links a { color:rgba(255,255,255,0.7); margin:0 0.5rem; text-decoration:none; }
-</style>
-</head>
-<body>
-<div class="wrap">
-<div class="shell">
-  <div class="header">
-    <a href="https://www.journie.io" target="_blank" rel="noopener noreferrer">
-      <img src="https://www.journie.io/logos/Journie_logo.jpg" alt="Journie logo" class="logo-img" />
-    </a>
-  </div>
-
-  <div class="body" style="font-family:'Plus Jakarta Sans',Arial,sans-serif;">
-    <p class="greeting" style="font-family:'Carelia','Plus Jakarta Sans',Arial,sans-serif; font-size:1.16rem;">Dear ${firstName},</p>
-    <p class="p" style="font-family:'Plus Jakarta Sans',Arial,sans-serif;">Welcome to Journie, and congratulations on taking a meaningful step forward in your research career! We are genuinely thrilled to have you with us.</p>
-    <p class="p" style="font-family:'Plus Jakarta Sans',Arial,sans-serif;">We built Journie because we know first-hand how much time researchers waste navigating the administrative maze of scientific publishing: the reformatting, the resubmissions, the endless searching for the right conference or journal. That time belongs to your science - and we intend to give it back.</p>
-    <div class="cta"><a href="${ctaUrl}" class="btn" style="font-family:'Carelia','Plus Jakarta Sans',Arial,sans-serif;">${ctaLabel}</a></div>
-    <div class="sign">
-      <p>Should you have any questions, we are always here to help. We look forward to seeing where your research takes you.</p>
-      <p class="sign-name" style="font-family:'Carelia','Plus Jakarta Sans',Arial,sans-serif;">Yuri &amp; Rish<br><span style="font-weight:400;font-size:0.88rem;color:#666; font-family:'Plus Jakarta Sans',Arial,sans-serif;">Co-Founders, Journie</span></p>
-    </div>
-  </div>
-
-  <div class="footer">
-    <a href="https://www.journie.io" target="_blank" rel="noopener noreferrer">
-      <img src="https://www.journie.io/logos/journie_invert.jpg" alt="Journie logo" class="footer-logo-img" />
-    </a>
-    <div class="footer-tag"><span style="color:#ffffff;">your research, </span><span style="color:#9999cc;">simplified.</span></div>
-    <div class="footer-links">
-      <a href="#">Unsubscribe</a> &middot; <a href="#">Privacy Policy</a> &middot; <a href="https://www.journie.io">journie.io</a>
-    </div>
-  </div>
-</div>
-</div>
-</body>
-</html>
-  `;
-  const text = input.verificationUrl
-    ? `Welcome to Journie, ${firstName}. Verify your email and get started: ${ctaUrl}. Need help? Email ${env.SUPPORT_EMAIL}.`
-    : `Welcome to Journie, ${firstName}. Your account is ready. Start here: ${ctaUrl}. Need help? Email ${env.SUPPORT_EMAIL}.`;
+  const html = renderEmailTemplate("welcome-email.html", {
+    GIVEN_NAME: firstName,
+    CTA_URL: ctaUrl,
+    CTA_LABEL: "Begin Your Journie",
+    SUPPORT_EMAIL: env.SUPPORT_EMAIL,
+  });
+  const text = `Welcome to Journie, ${firstName}. Your account is ready. Start here: ${ctaUrl}. Need help? Email ${env.SUPPORT_EMAIL}.`;
 
   return sendTransactionalEmail({ to: input.to, subject, html, text });
 }
@@ -170,69 +177,16 @@ export async function sendOrganizationInviteEmail(input: {
   inviteUrl: string;
 }): Promise<boolean> {
   const subject = `${input.inviterName} invited you to ${input.organizationName}`;
-  const emailLocalPart = input.to.split("@")[0] ?? "";
-  const inferredGivenNameRaw = emailLocalPart.split(/[._-]/)[0] ?? "";
-  const inferredGivenName = inferredGivenNameRaw
-    ? inferredGivenNameRaw.charAt(0).toUpperCase() + inferredGivenNameRaw.slice(1).toLowerCase()
-    : "there";
+  const html = renderEmailTemplate("team-invite-email.html", {
+    GIVEN_NAME: getInferredGivenName(input.to),
+    INVITER_NAME: input.inviterName,
+    ORGANIZATION_NAME: input.organizationName,
+    ROLE: input.role,
+    INVITE_URL: input.inviteUrl,
+    SUPPORT_EMAIL: env.SUPPORT_EMAIL,
+  });
+  const text = `${input.inviterName} invited you to ${input.organizationName} on Journie as ${input.role}. Accept invite: ${input.inviteUrl}. Need help? ${env.SUPPORT_EMAIL}.`;
 
-  const html = `
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:#f0ede6; font-family:"Plus Jakarta Sans",Arial,sans-serif; }
-  .wrap { padding:2rem 1rem; background:#f0ede6; }
-  .shell { max-width:600px; margin:0 auto; background:#fff; border-radius:4px; overflow:hidden; border:1px solid #ddd; }
-  .header { background:#fff; padding:2.5rem 2.5rem 1.5rem; text-align:center; border-bottom:1px solid #e8e4dc; }
-  .logo-img { display:block; margin:0 auto; width:144px; max-width:100%; height:auto; }
-  .body { padding:2.5rem 3rem 2rem; color:#2c2c2a; }
-  .greeting { font-size:1.16rem; font-weight:800; color:#1a6b1a; margin-bottom:1.4rem; }
-  .p { font-size:0.97rem; line-height:1.75; color:#3a3a38; margin-bottom:1.3rem; }
-  .cta { text-align:center; margin:2rem 0 1.5rem; }
-  .btn { display:inline-block; background:#1a6b1a; color:#fff; font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.85rem 2.5rem; text-decoration:none; border-radius:2px; font-weight:600; }
-  .footer { background:#1a6b1a; padding:1.5rem 2.5rem; text-align:center; }
-  .footer-logo-img { display:block; margin:0 auto 0.4rem; width:120px; max-width:100%; height:auto; }
-  .footer-tag { font-size:0.72rem; color:rgba(255,255,255,0.65); margin-bottom:0.8rem; }
-  .footer-links { font-size:0.72rem; color:rgba(255,255,255,0.55); }
-  .footer-links a { color:rgba(255,255,255,0.7); margin:0 0.5rem; text-decoration:none; }
-</style>
-</head>
-<body>
-<div class="wrap">
-<div class="shell">
-  <div class="header">
-    <a href="https://www.journie.io" target="_blank" rel="noopener noreferrer">
-      <img src="https://www.journie.io/logos/Journie_logo.jpg" alt="Journie logo" class="logo-img" />
-    </a>
-  </div>
-  <div class="body">
-    <p class="greeting">Dear ${inferredGivenName},</p>
-    <p class="p"><strong>${input.inviterName}</strong> has invited you to join <strong>${input.organizationName}</strong> on Journie as <strong>${input.role}</strong>.</p>
-    <p class="p">Journie helps research teams collaborate on manuscripts, discover the right journals, and streamline submissions — all in one place.</p>
-    <div class="cta"><a href="${input.inviteUrl}" class="btn">Accept Invitation &rarr;</a></div>
-    <p class="p" style="font-size:0.85rem;color:#888;">If the button doesn't work, copy and paste this link into your browser:<br>${input.inviteUrl}</p>
-    <p class="p" style="font-size:0.85rem;color:#888;">Need help? Contact <a href="mailto:${env.SUPPORT_EMAIL}" style="color:#1a6b1a;">${env.SUPPORT_EMAIL}</a></p>
-  </div>
-  <div class="footer">
-    <a href="https://www.journie.io" target="_blank" rel="noopener noreferrer">
-      <img src="https://www.journie.io/logos/journie_invert.jpg" alt="Journie logo" class="footer-logo-img" />
-    </a>
-    <div class="footer-tag"><span style="color:#ffffff;">your research, </span><span style="color:#9999cc;">simplified.</span></div>
-    <div class="footer-links">
-      <a href="#">Unsubscribe</a> &middot; <a href="#">Privacy Policy</a> &middot; <a href="https://www.journie.io">journie.io</a>
-    </div>
-  </div>
-</div>
-</div>
-</body>
-</html>
-  `;
-  const text = `${input.inviterName} invited you to ${input.organizationName} on Journie as ${input.role}. Accept invite: ${input.inviteUrl}`;
   return sendTransactionalEmail({ to: input.to, subject, html, text });
 }
 
@@ -245,14 +199,13 @@ export async function sendMentionEmail(input: {
   linkUrl: string;
 }): Promise<boolean> {
   const subject = `${input.actorName} mentioned you in ${input.manuscriptTitle}`;
-
   const html = `
     <div style="font-family:Arial,sans-serif;line-height:1.5;color:#0f172a;">
       <h2 style="margin:0 0 12px;">You were mentioned in a comment</h2>
-      <p style="margin:0 0 12px;">Hi ${input.recipientName}, <strong>${input.actorName}</strong> mentioned you in <strong>${input.manuscriptTitle}</strong>.</p>
-      <blockquote style="margin:0 0 12px;border-left:3px solid #cbd5e1;padding-left:10px;color:#334155;">${input.commentPreview}</blockquote>
-      <p style="margin:0 0 12px;"><a href="${input.linkUrl}" style="display:inline-block;background:#67AA8A;color:#0f172a;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600;">Open comment</a></p>
-      <p style="margin:0;">Need help? Contact <a href="mailto:${env.SUPPORT_EMAIL}">${env.SUPPORT_EMAIL}</a>.</p>
+      <p style="margin:0 0 12px;">Hi ${htmlEscape(input.recipientName)}, <strong>${htmlEscape(input.actorName)}</strong> mentioned you in <strong>${htmlEscape(input.manuscriptTitle)}</strong>.</p>
+      <blockquote style="margin:0 0 12px;border-left:3px solid #cbd5e1;padding-left:10px;color:#334155;">${htmlEscape(input.commentPreview)}</blockquote>
+      <p style="margin:0 0 12px;"><a href="${htmlEscape(input.linkUrl)}" style="display:inline-block;background:#67AA8A;color:#0f172a;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600;">Open comment</a></p>
+      <p style="margin:0;">Need help? Contact <a href="mailto:${htmlEscape(env.SUPPORT_EMAIL)}">${htmlEscape(env.SUPPORT_EMAIL)}</a>.</p>
     </div>
   `;
   const text = `Hi ${input.recipientName}, ${input.actorName} mentioned you in ${input.manuscriptTitle}. ${input.commentPreview} Open: ${input.linkUrl}`;
@@ -264,65 +217,14 @@ export async function sendPasswordResetEmail(input: {
   fullName?: string;
   resetUrl: string;
 }): Promise<boolean> {
-  const firstName = input.fullName?.trim().split(/\s+/)[0] || "there";
+  const firstName = getGivenName(input.fullName);
   const subject = "Reset your Journie password";
-
-  const html = `
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:#f0ede6; font-family:"Plus Jakarta Sans",Arial,sans-serif; }
-  .wrap { padding:2rem 1rem; background:#f0ede6; }
-  .shell { max-width:600px; margin:0 auto; background:#fff; border-radius:4px; overflow:hidden; border:1px solid #ddd; }
-  .header { background:#fff; padding:2.5rem 2.5rem 1.5rem; text-align:center; border-bottom:1px solid #e8e4dc; }
-  .logo-img { display:block; margin:0 auto; width:144px; max-width:100%; height:auto; }
-  .body { padding:2.5rem 3rem 2rem; color:#2c2c2a; }
-  .greeting { font-size:1.16rem; font-weight:800; color:#1a6b1a; margin-bottom:1.4rem; }
-  .p { font-size:0.97rem; line-height:1.75; color:#3a3a38; margin-bottom:1.3rem; }
-  .cta { text-align:center; margin:2rem 0 1.5rem; }
-  .btn { display:inline-block; background:#1a6b1a; color:#fff; font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.85rem 2.5rem; text-decoration:none; border-radius:2px; font-weight:600; }
-  .footer { background:#1a6b1a; padding:1.5rem 2.5rem; text-align:center; }
-  .footer-logo-img { display:block; margin:0 auto 0.4rem; width:120px; max-width:100%; height:auto; }
-  .footer-tag { font-size:0.72rem; color:rgba(255,255,255,0.65); margin-bottom:0.8rem; }
-  .footer-links { font-size:0.72rem; color:rgba(255,255,255,0.55); }
-  .footer-links a { color:rgba(255,255,255,0.7); margin:0 0.5rem; text-decoration:none; }
-</style>
-</head>
-<body>
-<div class="wrap">
-<div class="shell">
-  <div class="header">
-    <a href="https://www.journie.io" target="_blank" rel="noopener noreferrer">
-      <img src="https://www.journie.io/logos/Journie_logo.jpg" alt="Journie logo" class="logo-img" />
-    </a>
-  </div>
-  <div class="body">
-    <p class="greeting">Hi ${firstName},</p>
-    <p class="p">We received a request to reset your Journie password. Click the button below to choose a new one.</p>
-    <div class="cta"><a href="${input.resetUrl}" class="btn">Reset Password &rarr;</a></div>
-    <p class="p" style="font-size:0.85rem;color:#888;">If you didn't request a password reset, you can safely ignore this email — your password won't change.</p>
-    <p class="p" style="font-size:0.85rem;color:#888;">If the button doesn't work, copy and paste this link:<br>${input.resetUrl}</p>
-    <p class="p" style="font-size:0.85rem;color:#888;">Need help? Contact <a href="mailto:${env.SUPPORT_EMAIL}" style="color:#1a6b1a;">${env.SUPPORT_EMAIL}</a></p>
-  </div>
-  <div class="footer">
-    <a href="https://www.journie.io" target="_blank" rel="noopener noreferrer">
-      <img src="https://www.journie.io/logos/journie_invert.jpg" alt="Journie logo" class="footer-logo-img" />
-    </a>
-    <div class="footer-tag"><span style="color:#ffffff;">your research, </span><span style="color:#9999cc;">simplified.</span></div>
-    <div class="footer-links">
-      <a href="#">Unsubscribe</a> &middot; <a href="#">Privacy Policy</a> &middot; <a href="https://www.journie.io">journie.io</a>
-    </div>
-  </div>
-</div>
-</div>
-</body>
-</html>
-  `;
+  const html = renderEmailTemplate("password-reset-email.html", {
+    GIVEN_NAME: firstName,
+    RESET_URL: input.resetUrl,
+    SUPPORT_EMAIL: env.SUPPORT_EMAIL,
+  });
   const text = `Hi ${firstName}, reset your Journie password here: ${input.resetUrl}. If you did not request this, you can ignore this email.`;
+
   return sendTransactionalEmail({ to: input.to, subject, html, text });
 }
