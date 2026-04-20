@@ -15,6 +15,20 @@ import {
 import { batchEnrichFromDoaj } from '@/lib/doaj-api';
 import { toFormattingRequirements } from '@/lib/journal-submission-requirements';
 
+// Rejects journal names with more than 2 non-Latin characters (blocks Chinese,
+// Arabic, Cyrillic, Japanese, Korean, etc.). Mirrors the filter in openalex-api.ts.
+function isLatinName(name: string): boolean {
+  let nonLatin = 0;
+  for (const c of name) {
+    const code = c.codePointAt(0) ?? 0;
+    if (code > 0x024f && !/[\s\d!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/.test(c)) {
+      nonLatin++;
+      if (nonLatin > 2) return false;
+    }
+  }
+  return true;
+}
+
 // ============================================================================
 // Static database lookup index (for metric enrichment of NLM results)
 // ============================================================================
@@ -358,7 +372,7 @@ export async function searchJournals(
 
   const nlmJournals =
     nlmResult.status === 'fulfilled'
-      ? nlmResult.value.journals.map((j, i) => nlmToJournal(j, i))
+      ? nlmResult.value.journals.map((j, i) => nlmToJournal(j, i)).filter((j) => isLatinName(j.name))
       : [];
 
   const totalCount =
@@ -407,7 +421,7 @@ export async function listJournals(
 
   const nlmJournals =
     nlmResult.status === 'fulfilled'
-      ? nlmResult.value.journals.map((j, i) => nlmToJournal(j, i))
+      ? nlmResult.value.journals.map((j, i) => nlmToJournal(j, i)).filter((j) => isLatinName(j.name))
       : [];
 
   const totalCount =
