@@ -20,60 +20,52 @@ import { createClient } from '@supabase/supabase-js';
 
 const SUPABASE_URL = process.env.SUPABASE_URL!;
 const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+const ELSEVIER_API_KEY = process.env.ELSEVIER_API_KEY!;
 const ELSEVIER_BASE = 'https://api.elsevier.com/content/serial/title/issn';
-const SLOT_MS = 350;        // one 350ms slot per 3 concurrent requests
-const CONCURRENCY = 3;      // parallel requests per slot
+const SLOT_MS = 1000;       // 1s between slots
+const CONCURRENCY = 3;      // 3 concurrent per slot
 const REQUEST_TIMEOUT_MS = 10000;
 const PAGE_SIZE = 1000;
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
+function parseEntry(data: unknown): number | null {
+  const entry = (data as Record<string, unknown>)?.['serial-metadata-response'] as Record<string, unknown> | undefined;
+  const raw = (entry?.entry as Record<string, unknown>[])?.[0]?.citeScoreCurrentMetric;
+  if (raw == null) return null;
+  const val = parseFloat(String(raw));
+  return isNaN(val) ? null : val;
+}
+
 async function fetchCiteScore(issn: string): Promise<number | null> {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  const HEADERS = { Accept: 'application/json', 'X-ELS-APIKey': ELSEVIER_API_KEY };
+  const url = `${ELSEVIER_BASE}/${issn}`;
 
-  try {
-    const res = await fetch(`${ELSEVIER_BASE}/${issn}`, {
-      headers: { Accept: 'application/json' },
-      signal: controller.signal,
-    });
-
-    clearTimeout(timer);
-
-    if (res.status === 404) return null;
-    if (!res.ok) {
-      console.warn(`Elsevier ${res.status} for ISSN ${issn}`);
-      return null;
-    }
-
-    const data = await res.json();
-    const entry = data?.['serial-metadata-response']?.entry?.[0];
-    const raw = entry?.citeScoreCurrentMetric;
-    if (raw == null) return null;
-    const val = parseFloat(String(raw));
-    return isNaN(val) ? null : val;
-  } catch (err: unknown) {
-    clearTimeout(timer);
-    if (err instanceof Error && err.name === 'AbortError') {
-      console.warn(`Timeout for ISSN ${issn}, skipping`);
-      return null;
-    }
-    // Retry once without timeout
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
     try {
-      const res2 = await fetch(`${ELSEVIER_BASE}/${issn}`, {
-        headers: { Accept: 'application/json' },
-      });
-      if (!res2.ok) return null;
-      const data2 = await res2.json();
-      const entry2 = data2?.['serial-metadata-response']?.entry?.[0];
-      const raw2 = entry2?.citeScoreCurrentMetric;
-      if (raw2 == null) return null;
-      const val2 = parseFloat(String(raw2));
-      return isNaN(val2) ? null : val2;
-    } catch {
+      const res = await fetch(url, { headers: HEADERS, signal: controller.signal });
+      clearTimeout(timer);
+      if (res.status === 404) return null;
+      if (res.status === 429) {
+        const retryAfter = parseInt(res.headers.get('Retry-After') ?? '5', 10);
+        await sleep((retryAfter + 1) * 1000);
+        continue;
+      }
+      if (!res.ok) { console.warn(`Elsevier ${res.status} for ISSN ${issn}`); return null; }
+      return parseEntry(await res.json());
+    } catch (err: unknown) {
+      clearTimeout(timer);
+      if (err instanceof Error && err.name === 'AbortError') {
+        console.warn(`Timeout for ISSN ${issn}, skipping`);
+        return null;
+      }
       return null;
     }
   }
+  console.warn(`Gave up on ISSN ${issn} after 4 attempts`);
+  return null;
 }
 
 async function sleep(ms: number) {

@@ -62,7 +62,7 @@ export default function EditorToolbar({ editor, onOpenCitationDialog }: EditorTo
   }) => (
     <button
       onClick={onClick}
-      className={`p-2 rounded transition-colors ${
+      className={`p-2.5 sm:p-2 rounded transition-colors min-w-[36px] min-h-[36px] sm:min-w-0 sm:min-h-0 flex items-center justify-center ${
         isActive
           ? 'bg-journi-green/15 text-journi-green'
           : destructive
@@ -76,7 +76,7 @@ export default function EditorToolbar({ editor, onOpenCitationDialog }: EditorTo
     </button>
   );
 
-  const Divider = () => <div className="w-px h-5 bg-border mx-1" />;
+  const Divider = () => <div className="w-px h-5 bg-border mx-0.5 sm:mx-1 shrink-0" />;
 
   const setLink = () => {
     const previousUrl = editor.getAttributes('link').href ?? '';
@@ -150,8 +150,8 @@ export default function EditorToolbar({ editor, onOpenCitationDialog }: EditorTo
     <div className="bg-card border-b border-border">
     {/* Inline link URL input */}
     {linkInput.show && (
-      <div className="flex items-center gap-2 px-6 py-2 border-b border-border bg-accent/30">
-        <label htmlFor="toolbar-link-url" className="text-xs text-muted-foreground shrink-0">Link URL:</label>
+      <div className="flex items-center gap-2 px-3 sm:px-6 py-2 border-b border-border bg-accent/30">
+        <label htmlFor="toolbar-link-url" className="text-xs text-muted-foreground shrink-0 hidden sm:block">Link URL:</label>
         <input
           id="toolbar-link-url"
           ref={linkInputRef}
@@ -160,16 +160,16 @@ export default function EditorToolbar({ editor, onOpenCitationDialog }: EditorTo
           onChange={(e) => setLinkInput({ ...linkInput, value: e.target.value })}
           onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); confirmLink(); } if (e.key === 'Escape') setLinkInput({ show: false, value: '' }); }}
           placeholder="https://example.com"
-          className="flex-1 px-2 py-1 text-sm bg-background border border-border rounded focus:outline-none focus:ring-2 focus:ring-journi-green"
+          className="flex-1 px-2 py-1.5 text-sm bg-background border border-border rounded focus:outline-none focus:ring-2 focus:ring-journi-green min-w-0"
         />
-        <button type="button" onClick={confirmLink} className="px-3 py-1 text-xs font-semibold bg-journi-green text-journi-slate rounded hover:opacity-90">Apply</button>
-        <button type="button" onClick={() => setLinkInput({ show: false, value: '' })} aria-label="Cancel link" className="px-2 py-1 text-xs text-muted-foreground hover:text-foreground">Cancel</button>
+        <button type="button" onClick={confirmLink} className="px-3 py-1.5 text-xs font-semibold bg-journi-green text-journi-slate rounded hover:opacity-90 shrink-0">Apply</button>
+        <button type="button" onClick={() => setLinkInput({ show: false, value: '' })} aria-label="Cancel link" className="px-2 py-1.5 text-xs text-muted-foreground hover:text-foreground shrink-0">Cancel</button>
       </div>
     )}
     {/* Inline image URL input */}
     {imageUrlInput.show && (
-      <div className="flex items-center gap-2 px-6 py-2 border-b border-border bg-accent/30">
-        <label htmlFor="toolbar-image-url" className="text-xs text-muted-foreground shrink-0">Image URL:</label>
+      <div className="flex items-center gap-2 px-3 sm:px-6 py-2 border-b border-border bg-accent/30">
+        <label htmlFor="toolbar-image-url" className="text-xs text-muted-foreground shrink-0 hidden sm:block">Image URL:</label>
         <input
           id="toolbar-image-url"
           ref={imageUrlInputRef}
@@ -178,13 +178,15 @@ export default function EditorToolbar({ editor, onOpenCitationDialog }: EditorTo
           onChange={(e) => setImageUrlInput({ ...imageUrlInput, value: e.target.value })}
           onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); confirmImageUrl(); } if (e.key === 'Escape') setImageUrlInput({ show: false, value: '' }); }}
           placeholder="https://example.com/image.png"
-          className="flex-1 px-2 py-1 text-sm bg-background border border-border rounded focus:outline-none focus:ring-2 focus:ring-journi-green"
+          className="flex-1 px-2 py-1.5 text-sm bg-background border border-border rounded focus:outline-none focus:ring-2 focus:ring-journi-green min-w-0"
         />
-        <button type="button" onClick={confirmImageUrl} className="px-3 py-1 text-xs font-semibold bg-journi-green text-journi-slate rounded hover:opacity-90">Insert</button>
-        <button type="button" onClick={() => setImageUrlInput({ show: false, value: '' })} aria-label="Cancel image URL" className="px-2 py-1 text-xs text-muted-foreground hover:text-foreground">Cancel</button>
+        <button type="button" onClick={confirmImageUrl} className="px-3 py-1.5 text-xs font-semibold bg-journi-green text-journi-slate rounded hover:opacity-90 shrink-0">Insert</button>
+        <button type="button" onClick={() => setImageUrlInput({ show: false, value: '' })} aria-label="Cancel image URL" className="px-2 py-1.5 text-xs text-muted-foreground hover:text-foreground shrink-0">Cancel</button>
       </div>
     )}
-    <div className="px-6 py-2.5 flex items-center gap-1 overflow-x-auto">
+    <div className="px-2 sm:px-6 py-2 flex items-center gap-0.5 sm:gap-1 overflow-x-auto scrollbar-none"
+      style={{ WebkitOverflowScrolling: 'touch' } as React.CSSProperties}
+    >
       {/* Text Formatting */}
       <ToolbarButton
         onClick={() => editor.chain().focus().toggleBold().run()}
@@ -297,7 +299,7 @@ export default function EditorToolbar({ editor, onOpenCitationDialog }: EditorTo
           title="Insert Table"
         />
         {showTableGrid && (
-          <div className="absolute top-full left-0 mt-1 bg-card border border-border rounded-lg shadow-lg p-3 z-50">
+          <div className="absolute top-full left-0 mt-1 bg-card border border-border rounded-lg shadow-lg p-3 z-50 max-w-[min(220px,90vw)]">
             <div
               className="grid gap-[3px]"
               style={{ gridTemplateColumns: `repeat(${GRID_SIZE}, 1fr)` }}
@@ -369,11 +371,11 @@ export default function EditorToolbar({ editor, onOpenCitationDialog }: EditorTo
       {onOpenCitationDialog && (
         <button
           onClick={onOpenCitationDialog}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-foreground bg-journi-green/10 hover:bg-journi-green/20 rounded-lg transition-colors"
+          className="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium text-foreground bg-journi-green/10 hover:bg-journi-green/20 rounded-lg transition-colors shrink-0"
           type="button"
         >
           <Quote size={14} />
-          Add Citation
+          <span className="hidden sm:inline">Add Citation</span>
         </button>
       )}
     </div>

@@ -5,12 +5,12 @@
  * Shows onboarding screen when document sections are all empty.
  */
 import { useState, useMemo, useRef, useEffect, type MouseEvent } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   CheckCircle, Circle, BookOpen, MessageSquare, Pencil, Check, FileText,
   FileDown, Loader2, MessageSquarePlus, Layers, Plus, Trash2,
   FilePlus2, FileUp, ChevronDown, DollarSign, AlertTriangle, Minus,
-  BookMarked, Database, Send, X, Wand2,
+  BookMarked, Database, Send, X, Wand2, Menu, Info,
 } from 'lucide-react';
 import { useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
@@ -247,12 +247,18 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   // Reformat panel
   const [isReformatOpen, setIsReformatOpen] = useState(false);
 
-  // Literature review â€” search strategy tracker
+  // Mobile/tablet sidebar drawer
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
+
+  // Mobile info panel sheet
+  const [isMobileInfoOpen, setIsMobileInfoOpen] = useState(false);
+
+  // Literature review â€" search strategy tracker
   const [litSearchDbs, setLitSearchDbs] = useState<string[]>(['PubMed/MEDLINE']);
   const [litPrisma, setLitPrisma] = useState({ identified: 0, screened: 0, eligible: 0, included: 0 });
   const [litDateRange, setLitDateRange] = useState('');
 
-  // Grant application â€” budget tracker + agency
+  // Grant application â€" budget tracker + agency
   const [grantAgency, setGrantAgency] = useState('');
   const [grantBudgetItems, setGrantBudgetItems] = useState<{ name: string; amount: number }[]>([
     { name: 'Personnel', amount: 0 },
@@ -284,7 +290,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   // "Everything" view
   const isEverythingView = activeSection === '__everything__';
 
-  // Check if the manuscript is "empty" â€” no section has any actual prose.
+  // Check if the manuscript is "empty" â€" no section has any actual prose.
   // Template subheadings (h2/h3) count as content so templated documents
   // bypass the onboarding screen and open directly in the editor.
   const isManuscriptEmpty = useMemo(() => {
@@ -404,7 +410,11 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     const container = editorContainerRef.current;
     if (container) {
       container.addEventListener('mouseup', handleMouseUp);
-      return () => container.removeEventListener('mouseup', handleMouseUp);
+      container.addEventListener('touchend', handleMouseUp);
+      return () => {
+        container.removeEventListener('mouseup', handleMouseUp);
+        container.removeEventListener('touchend', handleMouseUp);
+      };
     }
   }, []);
 
@@ -1145,7 +1155,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
   // ========================================
   // Onboarding screen (when manuscript is empty)
   // ========================================
-  // Zero manuscripts â€” "Get Started" screen
+  // Zero manuscripts â€" "Get Started" screen
   // ========================================
   if (manuscripts.length === 0) {
     return (
@@ -1306,8 +1316,338 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     <div className="h-screen flex flex-col bg-muted/30">
       <Navbar />
 
+      {/* Mobile top bar — visible only below lg */}
+      <div className="lg:hidden fixed top-16 left-0 right-0 z-40 bg-card border-b border-border flex items-center gap-2 px-3 py-2">
+        <button
+          onClick={() => setIsMobileSidebarOpen(true)}
+          className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+          aria-label="Open navigation"
+        >
+          <Menu size={18} />
+        </button>
+        <div className="flex-1 min-w-0">
+          <p className="text-sm font-semibold text-foreground truncate">{manuscript.title}</p>
+          <p className="text-[10px] text-muted-foreground tabular-nums">{totalWordCount.toLocaleString()} words · {activeSection !== '__everything__' ? activeSection : 'Full view'}</p>
+        </div>
+        <button
+          onClick={() => setIsMobileInfoOpen(true)}
+          className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+          aria-label="Document info"
+        >
+          <Info size={18} />
+        </button>
+      </div>
+
+      {/* Mobile Sidebar Drawer backdrop */}
+      <AnimatePresence>
+        {isMobileSidebarOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="lg:hidden fixed inset-0 z-50 bg-black/40"
+              onClick={() => setIsMobileSidebarOpen(false)}
+            />
+            <motion.div
+              initial={{ x: '-100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '-100%' }}
+              transition={{ type: 'spring', damping: 28, stiffness: 300 }}
+              className="lg:hidden fixed top-0 left-0 bottom-0 z-50 w-72 bg-card border-r border-border flex flex-col shadow-2xl"
+            >
+              {/* Drawer header */}
+              <div className="flex items-center justify-between px-4 py-3 border-b border-border pt-safe">
+                <span className="text-sm font-bold text-foreground">Documents</span>
+                <button
+                  onClick={() => setIsMobileSidebarOpen(false)}
+                  className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                >
+                  <X size={16} />
+                </button>
+              </div>
+
+              {/* Drawer content — same as desktop sidebar */}
+              <div className="flex-1 overflow-y-auto pt-3 pb-4">
+                {/* Document Switcher */}
+                <div className="px-3 mb-3">
+                  <button
+                    onClick={() => setShowDocSwitcher(!showDocSwitcher)}
+                    className="w-full flex items-center gap-2 px-2.5 py-2 text-left text-xs font-medium text-foreground bg-accent/60 hover:bg-accent rounded-lg transition-colors"
+                  >
+                    <FileText size={13} className="text-journi-green shrink-0" />
+                    <span className="flex-1 truncate">{manuscript.title}</span>
+                    <ChevronDown size={12} className={`text-muted-foreground transition-transform ${showDocSwitcher ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  {showDocSwitcher && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      className="mt-1.5 bg-card border border-border rounded-lg shadow-lg overflow-hidden"
+                    >
+                      <div className="max-h-48 overflow-y-auto">
+                        {manuscripts.map((m) => (
+                          <div
+                            key={m.id}
+                            className={`flex items-center gap-2 px-3 py-2 text-xs cursor-pointer transition-colors ${
+                              m.id === activeManuscriptId
+                                ? 'bg-journi-green/10 text-journi-green font-medium'
+                                : 'text-muted-foreground hover:text-foreground hover:bg-accent'
+                            }`}
+                          >
+                            <button
+                              onClick={() => {
+                                setActiveManuscriptId(m.id);
+                                setShowDocSwitcher(false);
+                                setIsMobileSidebarOpen(false);
+                              }}
+                              className="flex-1 text-left truncate"
+                            >
+                              {m.title}
+                            </button>
+                            <span className="text-[9px] text-muted-foreground shrink-0">
+                              {manuscriptTypeLabels[m.type]}
+                            </span>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleDeleteDocument(m.id);
+                              }}
+                              className="p-0.5 rounded hover:bg-status-delayed/10 text-muted-foreground hover:text-status-delayed shrink-0"
+                              title="Delete document"
+                            >
+                              <Trash2 size={11} />
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                      <button
+                        onClick={() => { setShowWizard(true); setIsMobileSidebarOpen(false); }}
+                        className="w-full flex items-center gap-2 px-3 py-2 text-xs text-journi-green hover:bg-journi-green/5 transition-colors border-t border-border"
+                      >
+                        <Plus size={12} />
+                        New Document
+                      </button>
+                    </motion.div>
+                  )}
+                </div>
+
+                {/* Section navigation */}
+                <nav className="px-2 space-y-0.5">
+                  {documentSections.map((sec) => {
+                    const config = sectionStatusConfig[sec.status];
+                    const Icon = config.icon;
+                    const wc = sectionWordCounts[sec.title] || 0;
+                    return (
+                      <button
+                        key={sec.id}
+                        onClick={() => {
+                          setActiveSection(sec.title);
+                          setActiveTab('editor');
+                          setIsMobileSidebarOpen(false);
+                        }}
+                        className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm transition-colors text-left ${
+                          activeSection === sec.title
+                            ? 'bg-journi-green/10 text-journi-green'
+                            : 'text-muted-foreground hover:text-foreground hover:bg-accent'
+                        }`}
+                      >
+                        <Icon size={14} className={config.color} />
+                        <span className="flex-1 truncate">{sec.title}</span>
+                        <span className="text-[10px] tabular-nums text-muted-foreground">{wc}</span>
+                      </button>
+                    );
+                  })}
+
+                  <div className="pt-2 mt-2 border-t border-border">
+                    <button
+                      onClick={() => {
+                        setActiveSection('__everything__');
+                        setActiveTab('editor');
+                        setIsMobileSidebarOpen(false);
+                      }}
+                      className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm transition-colors ${
+                        isEverythingView
+                          ? 'bg-journi-green/10 text-journi-green font-medium'
+                          : 'text-muted-foreground hover:text-foreground hover:bg-accent'
+                      }`}
+                    >
+                      <Layers size={14} className={isEverythingView ? 'text-journi-green' : ''} />
+                      <span className="flex-1 text-left">Everything</span>
+                      <span className="text-[10px] text-muted-foreground tabular-nums">{totalWordCount}</span>
+                    </button>
+                  </div>
+                </nav>
+              </div>
+
+              {/* Drawer footer — actions */}
+              <div className="px-3 py-3 border-t border-border space-y-2">
+                <div className="grid grid-cols-2 gap-1.5">
+                  <button
+                    onClick={() => { setIsReformatOpen(true); setIsMobileSidebarOpen(false); }}
+                    className="flex items-center justify-center gap-1.5 px-3 py-2.5 border border-journi-green/40 text-journi-green text-xs font-semibold rounded-lg hover:bg-journi-green/10 transition-colors"
+                  >
+                    <Wand2 size={13} />
+                    Reformat
+                  </button>
+                  <button
+                    onClick={() => { setSubmitDialogOpen(true); setIsMobileSidebarOpen(false); }}
+                    className="flex items-center justify-center gap-1.5 px-3 py-2.5 bg-journi-green text-journi-slate text-xs font-semibold rounded-lg hover:opacity-90 transition-opacity"
+                  >
+                    <Send size={13} />
+                    Submit
+                  </button>
+                </div>
+                <div className="grid grid-cols-3 gap-1.5">
+                  <button
+                    onClick={() => { fileInputRef.current?.click(); setIsMobileSidebarOpen(false); }}
+                    disabled={isImporting}
+                    className="flex items-center justify-center gap-1 py-2 text-[11px] font-medium text-foreground bg-accent hover:bg-accent/80 rounded-md transition-colors disabled:opacity-50"
+                  >
+                    {isImporting ? <Loader2 size={12} className="animate-spin" /> : <FileUp size={12} />}
+                    Import
+                  </button>
+                  <button
+                    onClick={() => { handleExportDocx(); setIsMobileSidebarOpen(false); }}
+                    disabled={isExporting !== null}
+                    className="flex items-center justify-center gap-1 py-2 text-[11px] font-medium text-foreground bg-accent hover:bg-accent/80 rounded-md transition-colors disabled:opacity-50"
+                  >
+                    {isExporting === 'docx' ? <Loader2 size={12} className="animate-spin" /> : <FileDown size={12} />}
+                    Word
+                  </button>
+                  <button
+                    onClick={() => { handleExportPdf(); setIsMobileSidebarOpen(false); }}
+                    disabled={isExporting !== null}
+                    className="flex items-center justify-center gap-1 py-2 text-[11px] font-medium text-foreground bg-accent hover:bg-accent/80 rounded-md transition-colors disabled:opacity-50"
+                  >
+                    {isExporting === 'pdf' ? <Loader2 size={12} className="animate-spin" /> : <FileDown size={12} />}
+                    PDF
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
+      {/* Mobile Info Panel Sheet */}
+      <AnimatePresence>
+        {isMobileInfoOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="xl:hidden fixed inset-0 z-50 bg-black/40"
+              onClick={() => setIsMobileInfoOpen(false)}
+            />
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 28, stiffness: 300 }}
+              className="xl:hidden fixed top-0 right-0 bottom-0 z-50 w-80 max-w-[90vw] bg-card border-l border-border flex flex-col shadow-2xl overflow-y-auto"
+            >
+              <div className="flex items-center justify-between px-4 py-3 border-b border-border sticky top-0 bg-card z-10">
+                <h3 className="text-sm font-bold text-foreground">Document Info</h3>
+                <button
+                  onClick={() => setIsMobileInfoOpen(false)}
+                  className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                >
+                  <X size={16} />
+                </button>
+              </div>
+              {/* Info panel content rendered inline below in the aside — we reuse the same markup */}
+              <div className="p-4 space-y-4 flex-1">
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-muted-foreground">Total Words</span>
+                    <span className="font-medium text-foreground">{totalWordCount.toLocaleString()}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-muted-foreground">Total Sections</span>
+                    <span className="font-medium text-foreground">{manuscript.sections.length}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-muted-foreground">Citations</span>
+                    <span className="font-medium text-foreground">{manuscript.citations.length}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-muted-foreground">Comments</span>
+                    <span className="font-medium text-foreground">
+                      {manuscript.comments.filter((c) => !c.resolved).length} unresolved
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-muted-foreground">Last Updated</span>
+                    <span className="font-medium text-foreground">
+                      {format(manuscript.updatedAt, 'MMM d, yyyy')}
+                    </span>
+                  </div>
+                </div>
+                <div className="pt-4 border-t border-border">
+                  <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">
+                    Word Count by Section
+                  </h4>
+                  <div className="space-y-2">
+                    {manuscript.sections.map((section) => {
+                      const wc = sectionWordCounts[section.title] || 0;
+                      const pct = totalWordCount > 0 ? (wc / totalWordCount) * 100 : 0;
+                      return (
+                        <div key={section.id}>
+                          <div className="flex items-center justify-between text-xs mb-1">
+                            <span className="text-muted-foreground truncate mr-2">{section.title}</span>
+                            <span className="font-medium text-foreground tabular-nums">{wc}</span>
+                          </div>
+                          <div className="h-1 bg-muted rounded-full overflow-hidden">
+                            <div
+                              className="h-full bg-journi-green/60 rounded-full transition-all"
+                              style={{ width: `${Math.min(pct, 100)}%` }}
+                            />
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+                {project.collaborators.length > 0 && (
+                  <div className="pt-4 border-t border-border">
+                    <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">
+                      Collaborators
+                    </h4>
+                    <div className="space-y-2">
+                      {project.collaborators.map((collab) => (
+                        <div key={collab.id} className="flex items-center gap-2">
+                          <div
+                            className={`w-6 h-6 rounded-full flex items-center justify-center text-[9px] font-bold shrink-0 ${
+                              collab.online
+                                ? 'bg-journi-green/20 text-journi-green ring-2 ring-journi-green/30'
+                                : 'bg-muted text-muted-foreground'
+                            }`}
+                          >
+                            {collab.initials}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-xs font-medium text-foreground truncate">{collab.name}</p>
+                            <p className="text-[10px] text-muted-foreground">{(collab.role ?? 'contributor').replace('_', ' ')}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
       <div className="flex flex-1 pt-16">
-        {/* Document Outline Sidebar â€” fixed */}
+
+        {/* Document Outline Sidebar — fixed, desktop only */}
         <aside className="hidden lg:flex flex-col w-56 bg-card border-r border-border pt-4 pb-4 shrink-0 fixed top-16 bottom-0 z-30">
           {/* Document Switcher */}
           <div className="px-3 mb-3">
@@ -1362,7 +1702,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                   ))}
                 </div>
 
-                {/* New document button â€” opens wizard */}
+                {/* New document button â€" opens wizard */}
                 <button
                   onClick={() => setShowWizard(true)}
                   className="w-full flex items-center gap-2 px-3 py-2 text-xs text-journi-green hover:bg-journi-green/5 transition-colors border-t border-border"
@@ -1592,18 +1932,27 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
           </div>
         </aside>
 
-        {/* Main Editor Area â€” offset by sidebar width */}
-        <main className="flex-1 flex flex-col overflow-hidden lg:ml-56">
-          {/* Toolbar â€” sticky below navbar */}
+        {/* Main Editor Area — offset by sidebar width on desktop; mobile top bar handled by fixed spacer */}
+        <main className="flex-1 flex flex-col overflow-hidden lg:ml-56 pt-10 lg:pt-0">
+          {/* Toolbar — sticky: on desktop just below navbar; on mobile/tablet below the mobile top bar */}
           {!isEverythingView && (
             <>
-              <div className="fixed top-16 left-0 right-0 lg:left-56 z-40 bg-card">
+              {/* Desktop toolbar position */}
+              <div className="hidden lg:block fixed top-16 left-56 right-0 z-40 bg-card">
                 <EditorToolbar
                   editor={editor}
                   onOpenCitationDialog={() => setIsCitationDialogOpen(true)}
                 />
               </div>
-              <div className="h-12 shrink-0" />
+              {/* Mobile/tablet toolbar position — below mobile top bar (64px navbar + 40px top bar = 104px) */}
+              <div className="lg:hidden fixed top-[104px] left-0 right-0 z-40 bg-card">
+                <EditorToolbar
+                  editor={editor}
+                  onOpenCitationDialog={() => setIsCitationDialogOpen(true)}
+                />
+              </div>
+              {/* Spacer: toolbar height on all breakpoints (~44px) */}
+              <div className="h-11 shrink-0" />
             </>
           )}
 
@@ -1621,19 +1970,19 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
             </button>
             {/* Editor/References/Comments Container */}
             <div className="flex-1 overflow-auto">
-              <div className="p-8 lg:p-12">
+              <div className="p-4 sm:p-6 lg:p-12">
                 {isEverythingView ? (
                   /* ============================== */
                   /* EVERYTHING VIEW                */
                   /* ============================== */
                   <motion.div
-                    className="max-w-3xl mx-auto"
+                    className="max-w-3xl mx-auto pb-8"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.4 }}
                   >
-                    <div className="mb-8">
-                      <h1 className="text-3xl font-extrabold text-foreground mb-2">
+                    <div className="mb-6 lg:mb-8">
+                      <h1 className="text-2xl lg:text-3xl font-extrabold text-foreground mb-2 break-words">
                         {manuscript.title}
                       </h1>
                       <p className="text-sm text-muted-foreground italic mb-3">Full Manuscript Preview</p>
@@ -1740,17 +2089,17 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                   /* NORMAL SECTION VIEW            */
                   /* ============================== */
                   <motion.div
-                    className="max-w-3xl mx-auto"
+                    className="max-w-3xl mx-auto pb-8"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.4 }}
                   >
                     {/* Section Header */}
-                    <div className="mb-8">
-                      <h1 className="text-3xl font-extrabold text-foreground mb-2">
+                    <div className="mb-6 lg:mb-8">
+                      <h1 className="text-2xl lg:text-3xl font-extrabold text-foreground mb-2 break-words">
                         {activeSection}
                       </h1>
-                      <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                      <div className="flex items-center gap-3 text-xs text-muted-foreground flex-wrap">
                         {currentSection && (
                           <span>
                             Last edited by {currentSection.lastEditedBy} &middot;{' '}
@@ -1822,12 +2171,17 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                         {showCommentPopup && selectedText && (
                           <div
                             className="absolute z-30"
-                            style={{ top: commentPopupPos.top, left: commentPopupPos.left, transform: 'translateX(-50%)' }}
+                            style={{
+                              top: Math.max(0, commentPopupPos.top),
+                              left: commentPopupPos.left,
+                              transform: 'translateX(-50%)',
+                              maxWidth: 'calc(100vw - 2rem)',
+                            }}
                           >
                             <motion.div
                               initial={{ opacity: 0, y: 5 }}
                               animate={{ opacity: 1, y: 0 }}
-                              className="bg-card border border-border rounded-lg shadow-lg p-3 min-w-[280px]"
+                              className="bg-card border border-border rounded-lg shadow-lg p-3 w-[280px] max-w-[calc(100vw-2rem)]"
                             >
                               <div className="text-[10px] text-muted-foreground mb-1.5 italic truncate max-w-[260px]">
                                 On: &ldquo;{selectedText.substring(0, 80)}{selectedText.length > 80 ? '...' : ''}&rdquo;
@@ -1952,7 +2306,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
               </div>
               <div className="p-4 space-y-4">
 
-                {/* â”€â”€ Literature Review: Search Strategy Panel â”€â”€ */}
+                {/* â"€â"€ Literature Review: Search Strategy Panel â"€â"€ */}
                 {manuscript.type === 'literature_review' && (
                   <div className="space-y-3">
                     <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
@@ -2025,7 +2379,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
                   </div>
                 )}
 
-                {/* â”€â”€ Grant Application: Budget & Limits Panel â”€â”€ */}
+                {/* â"€â"€ Grant Application: Budget & Limits Panel â"€â"€ */}
                 {manuscript.type === 'grant_application' && (
                   <div className="space-y-3">
                     <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">

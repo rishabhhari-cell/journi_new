@@ -29,8 +29,9 @@ export function TimelineContent({
   children,
 }: TimelineContentProps) {
   const localRef = useRef<HTMLDivElement>(null);
-  const targetRef = timelineRef ?? localRef;
-  const isInView = useInView(targetRef, { once: true, amount: 0.2 });
+  const localInView = useInView(localRef, { once: true, amount: 0.15 });
+  const sectionInView = useInView(timelineRef ?? localRef, { once: true, amount: 0.05 });
+  const isInView = timelineRef ? localInView || sectionInView : localInView;
   const variants = customVariants ?? defaultVariants;
 
   const commonProps = {
@@ -59,4 +60,3 @@ export function TimelineContent({
     </motion.div>
   );
 }
-
