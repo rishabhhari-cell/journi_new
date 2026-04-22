@@ -145,9 +145,9 @@ const SocialLink = ({
 
 export default function StickyFooter() {
   return (
-    <div className="relative h-[70vh]" style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
-      <div className="relative -top-[100vh] h-[calc(100vh+70vh)]">
-        <div className="sticky top-[calc(100vh-70vh)] h-[70vh]">
+    <div className="relative h-[90vh] sm:h-[80vh] md:h-[70vh]" style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
+      <div className="relative -top-[100vh] h-[calc(100vh+90vh)] sm:h-[calc(100vh+80vh)] md:h-[calc(100vh+70vh)]">
+        <div className="sticky top-[calc(100vh-90vh)] sm:top-[calc(100vh-80vh)] md:top-[calc(100vh-70vh)] h-[90vh] sm:h-[80vh] md:h-[70vh]">
           <motion.div
             initial="hidden"
             animate="visible"

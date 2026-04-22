@@ -56,9 +56,9 @@ export default function Home() {
       <Navbar />
 
       {/* ── Hero ────────────────────────────────────────────────────────────── */}
-      <HeroShader className="pt-24 pb-0 md:pt-28">
+      <HeroShader className="pt-24 pb-10 md:pt-28 md:pb-0">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
 
             {/* Left */}
             <div className="pt-0 pb-8">
@@ -335,7 +335,7 @@ export default function Home() {
       <section className="py-20 md:py-28 bg-muted/30">
         <div className="container">
           <motion.div
-            className="relative rounded-2xl bg-gradient-to-br from-journi-green/10 via-journi-green/5 to-transparent border border-journi-green/20 p-12 md:p-16 text-center overflow-hidden"
+            className="relative rounded-2xl bg-gradient-to-br from-journi-green/10 via-journi-green/5 to-transparent border border-journi-green/20 p-6 sm:p-10 md:p-16 text-center overflow-hidden"
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}
           >
             <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">

@@ -410,7 +410,7 @@ export default function PricingSection5({ onCheckout, checkoutLoading }: Pricing
           animationNum={0}
           timelineRef={pricingRef}
           customVariants={revealVariants}
-          className="md:text-base text-sm text-muted-foreground w-[80%]"
+          className="md:text-base text-sm text-muted-foreground w-full sm:w-[80%]"
         >
           Start free, then scale from individual projects to labs, institutions, and CROs.
         </TimelineContent>

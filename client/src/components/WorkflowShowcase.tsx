@@ -249,7 +249,7 @@ export default function WorkflowShowcase({
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="min-h-[200px] bg-gradient-to-br from-journi-green/7 via-background to-muted/40 p-4 md:min-h-[335px] md:p-5">
+            <div className="min-h-[200px] bg-gradient-to-br from-journi-green/7 via-background to-muted/40 p-3 sm:p-4 md:min-h-[335px] md:p-5 overflow-x-hidden">
               <PreviewMockup variant={currentTab.previewVariant} />
             </div>
           </motion.div>

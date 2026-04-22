@@ -249,7 +249,7 @@ export default function Navbar() {
       <div className="container flex items-center h-16">
         {/* Logo + Nav — left-aligned group */}
         <div className="flex items-center gap-5">
-          <Link href={isAuthenticated ? "/dashboard" : "/"} className="flex items-center shrink-0 ml-8">
+          <Link href={isAuthenticated ? "/dashboard" : "/"} className="flex items-center shrink-0 ml-2 sm:ml-8">
             <img src={LOGO_URL} alt="Journie" className="h-11 w-auto" />
           </Link>
 
@@ -473,7 +473,7 @@ export default function Navbar() {
       </div>
 
       {/* Portal-based mobile menu */}
-      <MobileMenu open={mobileOpen} className="flex flex-col justify-between gap-4">
+      <MobileMenu open={mobileOpen} className="flex flex-col gap-4">
         <nav className="flex flex-col gap-1">
           {isAppRoute ? (
             /* App route links */
@@ -578,7 +578,7 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile auth section */}
-        <div className="mt-auto pt-4 border-t border-border">
+        <div className="pt-4 border-t border-border">
           {isAuthenticated ? (
             <div className="space-y-1">
               {!isAppRoute && (
