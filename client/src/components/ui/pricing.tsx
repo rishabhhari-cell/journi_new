@@ -45,10 +45,10 @@ const plans = [
     id: "pro",
     tagline: "Individual Pro",
     name: "Journie Pro",
-    monthlyPrice: 18,
-    yearlyPrice: 15,
+    monthlyPrice: 29.99,
+    yearlyPrice: 23.99,
     priceLabel: null, // uses NumberFlow
-    billingNote: "Cancel anytime",
+    billingNote: "Per person · Cancel anytime",
     description:
       "End-to-end manuscript submission workflow for busy clinician-researchers.",
     features: [
@@ -71,8 +71,8 @@ const plans = [
     name: "Journie Team",
     monthlyPrice: null,
     yearlyPrice: null,
-    priceLabel: "$10–12 / user / mo",
-    billingNote: "Billed annually · min. 5 users",
+    priceLabel: "A$20-25 / user / team",
+    billingNote: "Per user · team pricing",
     description:
       "Shared visibility and structure for departments, labs and research groups.",
     features: [
@@ -442,22 +442,21 @@ export default function PricingSection5({ onCheckout, checkoutLoading }: Pricing
             >
               <Card
                 className={cn(
-                  "relative flex flex-col h-full transition-all",
+                  "relative flex flex-col h-full overflow-visible transition-all",
                   plan.popular
                     ? "ring-2 ring-journi-green bg-journi-green/5 shadow-xl shadow-journi-green/10"
                     : "border border-[#7B71C7]/45 hover:border-[#7B71C7]/75 hover:shadow-lg hover:shadow-[#7B71C7]/15 bg-card"
                 )}
               >
+                {plan.popular && (
+                  <div className="pointer-events-none absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-1/2">
+                    <span className="inline-flex items-center gap-1 rounded-full border border-journi-green/40 bg-journi-green px-2.5 py-0.5 text-[11px] font-bold tracking-wide text-journi-slate shadow-sm select-none">
+                      <Star size={9} fill="currentColor" aria-hidden="true" />
+                      Recommended
+                    </span>
+                  </div>
+                )}
                 <CardHeader className="text-left pb-4">
-                  {/* Recommended badge */}
-                  {plan.popular && (
-                    <div className="mb-3">
-                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wide bg-journi-green text-journi-slate select-none">
-                        <Star size={9} fill="currentColor" aria-hidden="true" />
-                        Recommended
-                      </span>
-                    </div>
-                  )}
 
                   {/* Icon + tier label + plan name */}
                   <div className="flex items-center gap-3 mb-1">
@@ -493,9 +492,9 @@ export default function PricingSection5({ onCheckout, checkoutLoading }: Pricing
                           </p>
                         ) : (
                           <>
-                            <span className="text-3xl font-extrabold text-foreground">$</span>
+                            <span className="text-3xl font-extrabold text-foreground">A$</span>
                             <NumberFlow
-                              format={{ maximumFractionDigits: 0 }}
+                              format={{ minimumFractionDigits: 2, maximumFractionDigits: 2 }}
                               value={isYearly ? (plan.yearlyPrice ?? 0) : (plan.monthlyPrice ?? 0)}
                               className="text-3xl font-extrabold text-foreground"
                             />
@@ -508,9 +507,9 @@ export default function PricingSection5({ onCheckout, checkoutLoading }: Pricing
                     )}
                     {isYearly && plan.id === "pro" && plan.yearlyPrice ? (
                       <p className="text-sm text-[#7B71C7] font-semibold mt-1">
-                        Billed annually: ${plan.yearlyPrice * 12}/year{" "}
+                        Billed annually: A${(plan.yearlyPrice * 12).toFixed(2)}/year{" "}
                         <span className="text-[#7B71C7]/70 line-through font-medium">
-                          $216/yr
+                          A${(plan.monthlyPrice * 12).toFixed(2)}/yr
                         </span>
                       </p>
                     ) : null}
