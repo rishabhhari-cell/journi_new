@@ -42,12 +42,16 @@ export default function About() {
                   role: "Doctor - Clinical & Regulatory Strategy Lead in MedTech",
                   bio: "She brings hands-on experience leading clinical research and regulatory strategy across global healthcare startups.",
                   photo: "/team/yuri.png",
+                  borderClass: "border-journi-green",
+                  roleClass: "text-journi-green",
                 },
                 {
                   name: "Dr Rishabh Hariharan",
                   role: "Doctor - Researcher - Startup Operator",
                   bio: "He combines a strong clinical research background with early-stage venture building to ship products.",
                   photo: "/team/rish.png",
+                  borderClass: "border-[color:var(--color-journi-purple)]",
+                  roleClass: "text-[color:var(--color-journi-purple)]",
                 },
               ].map((person, i) => (
                 <motion.div
@@ -59,19 +63,21 @@ export default function About() {
                   custom={i + 1}
                 >
                   <div className="shrink-0">
-                    <div className="w-28 h-28 rounded-2xl overflow-hidden bg-gradient-to-b from-background to-muted/70 border border-border/60 flex items-end justify-center">
+                    <div
+                      className={`w-28 h-28 rounded-full overflow-hidden bg-white border-4 ${person.borderClass} flex items-center justify-center shadow-sm`}
+                    >
                       <img
                         src={person.photo}
                         alt={person.name}
                         width={112}
                         height={112}
-                        className="w-full h-full object-contain object-top"
+                        className="w-full h-full object-cover object-top"
                       />
                     </div>
                   </div>
                   <div className="min-w-0">
                     <h2 className="text-lg font-bold text-foreground">{person.name}</h2>
-                    <p className="text-xs font-semibold text-journi-green mt-0.5 mb-3">{person.role}</p>
+                    <p className={`text-xs font-semibold mt-0.5 mb-3 ${person.roleClass}`}>{person.role}</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">{person.bio}</p>
                   </div>
                 </motion.div>

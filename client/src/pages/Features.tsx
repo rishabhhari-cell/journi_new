@@ -358,11 +358,11 @@ export default function Features() {
             >
               {/* Column headers */}
               <div className="grid grid-cols-2 divide-x divide-border">
-                <div className="px-6 py-4 bg-red-50 dark:bg-red-950/30 flex items-center gap-2">
+                <div className="min-w-0 px-4 py-4 sm:px-6 bg-red-50 dark:bg-red-950/30 flex items-center gap-2">
                   <span aria-hidden="true" className="text-base">❌</span>
                   <span className="text-sm font-bold text-red-700 dark:text-red-400">Without Journie</span>
                 </div>
-                <div className="px-6 py-4 bg-journi-green/10 flex items-center gap-2">
+                <div className="min-w-0 px-4 py-4 sm:px-6 bg-journi-green/10 flex items-center gap-2">
                   <CheckCircle2 size={16} className="text-journi-green shrink-0" aria-hidden="true" />
                   <span className="text-sm font-bold text-journi-green">With Journie</span>
                 </div>
@@ -374,10 +374,10 @@ export default function Features() {
                   key={i}
                   className={`grid grid-cols-2 divide-x divide-border border-t border-border ${i % 2 === 1 ? "bg-muted/20" : "bg-background"}`}
                 >
-                  <div className="px-6 py-4 text-sm text-muted-foreground leading-relaxed">
+                  <div className="min-w-0 px-4 py-4 sm:px-6 text-xs sm:text-sm text-muted-foreground leading-relaxed break-words [overflow-wrap:anywhere]">
                     {row.without}
                   </div>
-                  <div className="px-6 py-4 text-sm text-foreground leading-relaxed font-medium">
+                  <div className="min-w-0 px-4 py-4 sm:px-6 text-xs sm:text-sm text-foreground leading-relaxed font-medium break-words [overflow-wrap:anywhere]">
                     {row.with}
                   </div>
                 </div>
