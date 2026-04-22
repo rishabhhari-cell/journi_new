@@ -31,7 +31,7 @@ export default function About() {
                 Clinicians. Researchers. Builders.
               </h1>
               <p className="text-muted-foreground text-lg">
-                We&apos;re building the product we wished we had as clinician-researchers.
+                We're building the product we wished we had as clinician-researchers.
               </p>
             </motion.div>
 
@@ -41,13 +41,13 @@ export default function About() {
                   name: "Dr Yuri Aung",
                   role: "Doctor - Clinical & Regulatory Strategy Lead in MedTech",
                   bio: "She brings hands-on experience leading clinical research and regulatory strategy across global healthcare startups.",
-                  photo: "/team/yuri.jpg",
+                  photo: "/team/yuri.png",
                 },
                 {
                   name: "Dr Rishabh Hariharan",
                   role: "Doctor - Researcher - Startup Operator",
                   bio: "He combines a strong clinical research background with early-stage venture building to ship products.",
-                  photo: "/team/rish.jpg",
+                  photo: "/team/rish.png",
                 },
               ].map((person, i) => (
                 <motion.div
@@ -59,7 +59,15 @@ export default function About() {
                   custom={i + 1}
                 >
                   <div className="shrink-0">
-                    <img src={person.photo} alt={person.name} width={96} height={96} className="w-24 h-24 rounded-2xl object-cover" />
+                    <div className="w-28 h-28 rounded-2xl overflow-hidden bg-gradient-to-b from-background to-muted/70 border border-border/60 flex items-end justify-center">
+                      <img
+                        src={person.photo}
+                        alt={person.name}
+                        width={112}
+                        height={112}
+                        className="w-full h-full object-contain object-top"
+                      />
+                    </div>
                   </div>
                   <div className="min-w-0">
                     <h2 className="text-lg font-bold text-foreground">{person.name}</h2>
@@ -83,7 +91,7 @@ export default function About() {
                 {[
                   {
                     title: "Lived experience of the problem",
-                    desc: "We&apos;ve both navigated the full research-to-publication journey - including projects that stalled, got delayed, or never made it across the line.",
+                    desc: "We've both navigated the full research-to-publication journey - including projects that stalled, got delayed, or never made it across the line.",
                   },
                   {
                     title: "Deep domain and system understanding",
@@ -91,7 +99,7 @@ export default function About() {
                   },
                   {
                     title: "Builders inside the workflow",
-                    desc: "We&apos;re not designing from the outside looking in. Journie is built from within real research and clinical environments, for the people working in them.",
+                    desc: "We're not designing from the outside looking in. Journie is built from within real research and clinical environments, for the people working in them.",
                   },
                 ].map((item, i) => (
                   <motion.div
