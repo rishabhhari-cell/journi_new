@@ -39,7 +39,7 @@ export default function About() {
               {[
                 {
                   name: "Dr Yuri Aung",
-                  role: "Doctor - Clinical Lead in MedTech",
+                  role: "Doctor - Researcher - MedTech Clinical Lead",
                   bio: "She brings hands-on experience leading clinical research and regulatory strategy across global healthcare startups.",
                   photo: "/team/yuri.png",
                   borderClass: "border-journi-green",
