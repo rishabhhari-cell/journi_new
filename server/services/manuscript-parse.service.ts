@@ -11,6 +11,7 @@ export interface ParseUploadInput {
   fileName: string;
   mimeType?: string;
   buffer: Buffer;
+  disableLlmFallback?: boolean;
 }
 
 /** Extracts the figure number from a caption string, e.g. "Figure 3. ..." → 3. Returns null if no number found. */
@@ -1183,7 +1184,7 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
     });
 
     let llmParsed: RawParsedDocument["llmParsed"] | undefined;
-    if (confidenceScore < 0.85) {
+    if (!input.disableLlmFallback && confidenceScore < 0.85) {
       try {
         if (textResult.value.trim().length > 0) {
           llmParsed = await parseDocumentWithLLM(textResult.value);
@@ -1304,7 +1305,7 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
       });
 
       let llmParsed: RawParsedDocument["llmParsed"] | undefined;
-      if (pdfConfidenceScore < 0.85 && payload.text.trim().length > 0) {
+      if (!input.disableLlmFallback && pdfConfidenceScore < 0.85 && payload.text.trim().length > 0) {
         try {
           llmParsed = await parseDocumentWithLLM(payload.text);
           diagnostics.push({

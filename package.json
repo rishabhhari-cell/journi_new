@@ -11,6 +11,12 @@
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
+    "benchmark:discover": "tsx server/scripts/discover-parser-corpus.ts",
+    "benchmark:feasibility": "tsx server/scripts/check-parser-corpus-feasibility.ts",
+    "benchmark:fetch": "tsx server/scripts/fetch-parser-corpus.ts",
+    "benchmark:render-docx": "tsx server/scripts/render-parser-docx.ts",
+    "benchmark:run": "tsx server/scripts/run-parser-benchmark.ts",
+    "benchmark:review-pack": "tsx server/scripts/build-review-pack.ts",
     "format": "prettier --write .",
     "test": "vitest run",
     "test:watch": "vitest"

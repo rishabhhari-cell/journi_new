@@ -21,7 +21,7 @@ const patchProjectSchema = z.object({
   description: z.string().optional(),
   status: z.enum(["active", "completed", "archived"]).optional(),
   dueDate: z.string().datetime().nullable().optional(),
-  metadata: z.record(z.unknown()).optional(),
+  metadata: z.record(z.string(), z.unknown()).optional(),
 });
 
 const patchTasksSchema = z.object({
