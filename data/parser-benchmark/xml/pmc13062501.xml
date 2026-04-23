@@ -1,0 +1,1554 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="hsr271950" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Health Sci Rep</journal-id><journal-id journal-id-type="iso-abbrev">Health Sci Rep</journal-id><journal-id journal-id-type="pmc-domain-id">3569</journal-id><journal-id journal-id-type="pmc-domain">hscirep</journal-id><journal-id journal-id-type="publisher-id">HSR2</journal-id><journal-title-group><journal-title>Health Science Reports</journal-title></journal-title-group><issn pub-type="epub">2398-8835</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13062501</article-id><article-id pub-id-type="pmcid-ver">PMC13062501.1</article-id><article-id pub-id-type="pmcaid">13062501</article-id><article-id pub-id-type="pmcaiid">13062501</article-id><article-id pub-id-type="pmid">41970431</article-id><article-id pub-id-type="doi">10.1002/hsr2.71950</article-id><article-id pub-id-type="publisher-id">HSR271950</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Systematic Review</subject></subj-group><subj-group subj-group-type="heading"><subject>Systematic Review</subject></subj-group></article-categories><title-group><article-title>Potential Effects of Aspirin on Transcription Factors Related to the Inflammation in Atherosclerosis: A Systematic Review</article-title></title-group><contrib-group><contrib id="hsr271950-cr-0001" contrib-type="author"><name name-style="western"><surname>Aghaei</surname><given-names initials="M">Mojtaba</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-6382-6657</contrib-id><xref rid="hsr271950-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="hsr271950-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><xref rid="hsr271950-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="hsr271950-cr-0002" contrib-type="author"><name name-style="western"><surname>Khademi</surname><given-names initials="R">Reyhane</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-3121-9307</contrib-id><xref rid="hsr271950-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="hsr271950-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="hsr271950-cr-0003" contrib-type="author"><name name-style="western"><surname>Bahreiny</surname><given-names initials="SS">Seyed Sobhan</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-2148-1205</contrib-id><xref rid="hsr271950-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="hsr271950-cr-0004" contrib-type="author"><name name-style="western"><surname>Haybar</surname><given-names initials="H">Habib</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-2202-6538</contrib-id><xref rid="hsr271950-aff-0004" ref-type="aff">
+<sup>4</sup>
+</xref></contrib><contrib id="hsr271950-cr-0005" contrib-type="author"><name name-style="western"><surname>Torfi</surname><given-names initials="E">Ekhlas</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-0351-3541</contrib-id><xref rid="hsr271950-aff-0005" ref-type="aff">
+<sup>5</sup>
+</xref></contrib><contrib id="hsr271950-cr-0006" contrib-type="author"><name name-style="western"><surname>Azizidoost</surname><given-names initials="S">Shirin</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-6102-3263</contrib-id><xref rid="hsr271950-aff-0004" ref-type="aff">
+<sup>4</sup>
+</xref></contrib><contrib id="hsr271950-cr-0007" contrib-type="author" corresp="yes"><name name-style="western"><surname>Saki</surname><given-names initials="N">Najmaldin</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-8494-5594</contrib-id><xref rid="hsr271950-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="hsr271950-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref><address><email>najmaldinsaki@gmail.com</email></address></contrib></contrib-group><aff id="hsr271950-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Thalassemia &amp; Hemoglobinopathy Research Center, Health Research Institute</named-content>
+<institution>Ahvaz Jundishapur University of Medical Sciences</institution>
+<city>Ahvaz</city>
+<country country="IR">Iran</country>
+</aff><aff id="hsr271950-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Student Research Committee</named-content>
+<institution>Ahvaz Jundishapur University of Medical Sciences</institution>
+<city>Ahvaz</city>
+<country country="IR">Iran</country>
+</aff><aff id="hsr271950-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Department of Medical Laboratory Sciences, School of Para‐Medicine</named-content>
+<institution>Ahvaz Jundishapur University of Medical Sciences</institution>
+<city>Ahvaz</city>
+<country country="IR">Iran</country>
+</aff><aff id="hsr271950-aff-0004">
+<label>
+<sup>4</sup>
+</label>
+<named-content content-type="organisation-division">Atherosclerosis Research Center</named-content>
+<institution>Ahvaz Jundishapur University of Medical Sciences</institution>
+<city>Ahvaz</city>
+<country country="IR">Iran</country>
+</aff><aff id="hsr271950-aff-0005">
+<label>
+<sup>5</sup>
+</label>
+<named-content content-type="organisation-division">Department of Cardiovascular Disease, School of Medicine</named-content>
+<institution>Ahvaz Jundishapur University of Medical Sciences</institution>
+<city>Ahvaz</city>
+<country country="IR">Iran</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold> Najmaldin Saki (<email>najmaldinsaki@gmail.com</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>08</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>9</volume><issue seq="20">4</issue><issue-id pub-id-type="pmc-issue-id">510729</issue-id><issue-id pub-id-type="doi">10.1002/hsr2.v9.4</issue-id><elocation-id>e71950</elocation-id><history><date date-type="rev-recd"><day>25</day><month>1</month><year>2026</year></date><date date-type="received"><day>06</day><month>9</month><year>2024</year></date><date date-type="accepted"><day>21</day><month>2</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>08</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>10</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-13 15:25:13.833"><day>13</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Health Science Reports</italic> published by Wiley Periodicals LLC.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbyncndlicense">https://creativecommons.org/licenses/by-nc-nd/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc-nd/4.0/">http://creativecommons.org/licenses/by-nc-nd/4.0/</ext-link> License, which permits use and distribution in any medium, provided the original work is properly cited, the use is non‐commercial and no modifications or adaptations are made.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="HSR2-9-e71950.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:HSR2-9-e71950.pdf"/><abstract><title>ABSTRACT</title><sec id="hsr271950-sec-0010"><title>Background and Aims</title><p>Atherosclerosis (AS), a major cause of cardiovascular mortality, involves chronic inflammation mediated by transcription factors such as NF‐κB, PPARs, and AP‐2α. Beyond its antiplatelet role, aspirin exerts anti‐inflammatory effects that may influence these molecular pathways. This review systematically evaluates aspirin's modulatory effects on these transcription factors in AS.</p></sec><sec id="hsr271950-sec-0020"><title>Methods</title><p>Relevant English‐language studies (1980–2025) were retrieved from PubMed, ScienceDirect, and Google Scholar using keywords related to aspirin, atherosclerosis, and inflammation‐related transcription factors.</p></sec><sec id="hsr271950-sec-0030"><title>Results</title><p>Aspirin inhibits NF‐κB activation, reduces proinflammatory cytokine production, and enhances PPAR and AP‐2α signaling, contributing to anti‐inflammatory and plaque‐stabilizing effects. Clinical findings (e.g., ARRIVE, ASPREE) show variable cardiovascular outcomes, likely reflecting dose‐ and population‐dependent responses.</p></sec><sec id="hsr271950-sec-0040"><title>Conclusion</title><p>Aspirin modulates key inflammatory transcription factors in AS, offering potential benefits beyond platelet inhibition. Further studies should clarify AP‐2α's mechanistic role and explore aspirin‐based combination strategies tailored to patient‐specific inflammatory profiles.</p></sec></abstract><kwd-group><kwd id="hsr271950-kwd-0001">AP‐2α</kwd><kwd id="hsr271950-kwd-0002">aspirin</kwd><kwd id="hsr271950-kwd-0003">atherosclerosis</kwd><kwd id="hsr271950-kwd-0004">NF‐κB</kwd><kwd id="hsr271950-kwd-0005">PPAR</kwd></kwd-group><counts><fig-count count="2"/><table-count count="2"/><page-count count="14"/><word-count count="9956"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC-ND</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:09.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec id="hsr271950-sec-0050"><label>1</label><title>Introduction</title><p>Atherosclerosis (AS), an inflammatory and chronic vascular disease, is one of the most common causes of cardiovascular disease (CVD) that is a leading mortality factor worldwide. Several key mechanisms contribute to the development of atherosclerotic plaques, including: (i) activation of dysfunctional endothelial cells and subsequent cholesterol accumulation in the vessel wall, (ii) oxidative stress caused by excessive production of free radicals, and (iii) an imbalance between pro‐inflammatory and anti‐inflammatory responses. They considered essential for regulating the expression of inflammatory genes (inflammatory modulators) associated with NF‐κB [<xref rid="hsr271950-bib-0001" ref-type="bibr">1</xref>, <xref rid="hsr271950-bib-0002" ref-type="bibr">2</xref>, <xref rid="hsr271950-bib-0003" ref-type="bibr">3</xref>]. Several studies illustrated that during the AS process, regulation of membrane protein expression is controlled by various transcription factors such as peroxisome proliferator‐activated receptors (PPARs) in addition to NF‐κB [<xref rid="hsr271950-bib-0004" ref-type="bibr">4</xref>, <xref rid="hsr271950-bib-0005" ref-type="bibr">5</xref>, <xref rid="hsr271950-bib-0006" ref-type="bibr">6</xref>].</p><p>Given the role of inflammation in developing atherosclerotic plaques, several treatments have been tested that can specifically act on inflammatory signals and influence inflammatory pathways at different stages of the atherosclerotic process [<xref rid="hsr271950-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr271950-bib-0008" ref-type="bibr">8</xref>].</p><p>Notably, aspirin's beneficial effects on AS are not due to its antiplatelet function because platelet aggregation has little effect on the progression of AS. Besides, the plasma half‐life of aspirin is short and is hydrolyzed in human serum by the enzyme paraoxonase 1 (PON1) [<xref rid="hsr271950-bib-0009" ref-type="bibr">9</xref>]. Acetylsalicylic acid, under the brand name aspirin is a nonsteroidal anti‐inflammatory drug that inhibits inflammation by inhibiting cyclooxygenase (COX), and making a suppressing effect on the generation of proinflammatory molecules like prostaglandins [<xref rid="hsr271950-bib-0010" ref-type="bibr">10</xref>]. In hyperlipidemic conditions, aspirin systemically normalize atherosclerosis both in vitro and in vivo. It leads to a hemostatic balance between thromboxane and prostacyclin. Moreover, low‐dose aspirin treatment decreases the production of reactive oxygen species (ROS) [<xref rid="hsr271950-bib-0011" ref-type="bibr">11</xref>, <xref rid="hsr271950-bib-0012" ref-type="bibr">12</xref>].</p><p>It is worth to mention that salicylic acid is considered to possibly affect AS by regulating transcription factors. Long‐term treatment with free salicylic acid regulates the function of transcription factors associated with the inflammatory and anti‐inflammatory mechanism, thereby controlling AS complications [<xref rid="hsr271950-bib-0013" ref-type="bibr">13</xref>].</p><p>Despite extensive research on aspirin's cardiovascular effects, its transcriptional regulatory role in atherosclerosis has not been systematically defined. Therefore, the present review aims to address the central question: How does aspirin modulate inflammation in atherosclerosis through its effects on the key transcription factors NF‐κB, PPARs, and AP‐2α? We hypothesize that aspirin exerts pleiotropic, anti‐inflammatory effects by regulating these transcription factors in a dose‐ and context‐dependent manner. This systematic review synthesizes current molecular and clinical evidence to clarify these mechanisms and highlight their therapeutic implications.</p></sec><sec sec-type="methods" id="hsr271950-sec-0060"><label>2</label><title>Methods</title><sec id="hsr271950-sec-0070"><label>2.1</label><title>Literature Search</title><p>This systematic review was conducted in accordance with PRISMA guidelines to evaluate the effects of aspirin on inflammation‐related transcription factors in atherosclerosis (AS). We aimed to identify studies exploring aspirin's modulatory effects on transcription factors, specifically NF‐κB, PPARs, and AP‐2α, and their roles in AS‐related inflammatory processes. A comprehensive literature search was performed using PubMed, ScienceDirect, and Google Scholar, covering publications from 1980 to October 2025. Search terms included “Atherosclerosis,” “Aspirin,” “NF‐κB,” “PPARs,” “AP‐2α,” “Inflammation,” and “Transcription Factors.” Reference lists of included studies were manually reviewed to identify additional relevant articles. This search strategy yielded 102 studies for initial screening. Although the search covered a broad timeframe and multiple databases, the initial yield of 102 studies reflects the specificity of our inclusion criteria, which targeted studies directly addressing aspirin′s modulatory effects on the transcription factors NF‐κB, PPARs, and AP‐2α in atherosclerosis. Duplicate and irrelevant records were excluded to ensure that all eligible and high‐quality studies were captured within the defined scope.</p></sec><sec id="hsr271950-sec-0080"><label>2.2</label><title>Eligibility Criteria</title><p>Studies were included if they investigated aspirin's effects on inflammation‐related transcription factors (NF‐κB, PPARs, AP‐2α) in the context of atherosclerosis, including preclinical (e.g., in vitro, animal models) or clinical studies. Eligible studies had to report outcomes related to inflammatory pathways, plaque stability, or cardiovascular complications in AS. Only English‐language articles published between 1980 and 2025 were considered to ensure accessibility and relevance. Exclusion criteria included studies not specifically addressing aspirin's effects on the specified transcription factors, research focused on non‐AS conditions (e.g., cancer), and nonoriginal data sources such as reviews, editorials, or conference abstracts. These criteria ensured that selected studies provided high‐quality insights into aspirin's anti‐inflammatory mechanisms and their therapeutic implications in AS management.</p></sec><sec id="hsr271950-sec-0090"><label>2.3</label><title>Data Extraction</title><p>To ensure a rigorous and unbiased review process, two independent reviewers screened titles and abstracts of identified studies against the inclusion and exclusion criteria. Full‐text articles of potentially relevant studies were then evaluated for eligibility by the same reviewers. Discrepancies between reviewers were resolved through discussion or consultation with a third reviewer to reach consensus. Data extracted included study design, transcription factors investigated, aspirin's mechanistic effects, and outcomes related to inflammation or AS progression. This systematic approach minimized selection bias and ensured the inclusion of high‐quality studies contributing to a comprehensive understanding of aspirin's role in modulating transcription factors in atherosclerosis.</p></sec><sec id="hsr271950-sec-0100"><label>2.4</label><title>Study Selection</title><p>Two independent reviewers (S. S. Bahreiny and M. Aghaei) assessed the eligibility of the retrieved records according to the predefined inclusion and exclusion criteria. Initially, titles and abstracts were screened for relevance. Subsequently, the full texts of potentially eligible studies were retrieved and evaluated in detail by both reviewers. Any disagreements during the screening or eligibility assessment were resolved through discussion or by consulting a third reviewer (N. Saki). The entire study selection process, including the number of records identified, screened, excluded (with reasons), and finally included, is illustrated in Figure <xref rid="hsr271950-fig-0001" ref-type="fig">1</xref> (PRISMA 2020 flow diagram).</p><fig position="float" fig-type="Figure" id="hsr271950-fig-0001" orientation="portrait"><label>Figure 1</label><caption><p>Flow diagram of study selection adjusted by PRISMA.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="HSR2-9-e71950-g001.jpg"/></fig></sec></sec><sec sec-type="results" id="hsr271950-sec-0110"><label>3</label><title>Results</title><sec id="hsr271950-sec-0120"><label>3.1</label><title>Transcription Factor/Inflammatory Network Axis</title><sec id="hsr271950-sec-0130"><label>3.1.1</label><title>Nuclear Factor‐Kappa B (NF‐κB)</title><p>The NF‐κB family includes five members, such as p50 and p65, which control inflammation by turning on specific genes. Normally, NF‐κB is inactive, held in the cell's cytoplasm by IκB proteins [<xref rid="hsr271950-bib-0014" ref-type="bibr">14</xref>]. When inflammation signals, like TNF‐α or interleukins, are present, IκB is broken down, freeing NF‐κB to move into the nucleus. There, it activates genes that produce inflammatory molecules, adhesion proteins, and clotting factors, driving atherosclerosis progression. In the alternative pathway, NIK and IKKα mediate NF‐κB activation, which ultimately triggers the activation of adaptive humoral immunity [<xref rid="hsr271950-bib-0015" ref-type="bibr">15</xref>].</p><p>AS is characterized by an imbalance between inflammatory and anti‐inflammatory responses [<xref rid="hsr271950-bib-0016" ref-type="bibr">16</xref>]. NF‐κB is a widely expressed transcription factor in cellular responses to cell inflammatory signals and stimuli such as stress, cytokines, free radicals, irradiation, oxidized LDL (oxLDL), and infection antigens. In turn, NF‐κB stimulates cytokine production in a positive loop. The pathogenic role of NF‐κB has been demonstrated in many diseases, including cancer and CVD, by driving the expression of specific target genes involved in inflammation. Therefore, NF‐κB may be a promising therapeutic target in diseases that inflammation contributes to organ damage followed by increased activity of this transcription factor [<xref rid="hsr271950-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr271950-bib-0017" ref-type="bibr">17</xref>, <xref rid="hsr271950-bib-0018" ref-type="bibr">18</xref>].</p><p>Several signaling pathways are involved in activation and inhibition of NF‐κB. For example, cyclic adenosine monophosphate (cAMP), a ubiquitous second messenger, inhibits NF‐κB in endothelial cells mediated by activation of protein kinase A (PKA). In contrast, mitogen‐activated protein kinase (P38/MAPK) phosphorylates and activates NF‐κB subunits in endothelial cells. Interestingly, cAMP inhibits P38/MAPK signaling as well [<xref rid="hsr271950-bib-0019" ref-type="bibr">19</xref>].</p><p>Atherosclerosis is a multistage process that includes the following stages: damage to the endothelium, formation of foam cells, the proliferation of smooth muscle cells, and formation and rupture of the atherosclerotic plaque [<xref rid="hsr271950-bib-0020" ref-type="bibr">20</xref>]. When endothelial cells (ECs) lose their ability to maintain homeostasis, vessel walls are vulnerable to vasoconstriction, lipid infiltration, leukocyte adhesion, platelet activation, and oxidative stress (Figure <xref rid="hsr271950-fig-0002" ref-type="fig">2</xref>) [<xref rid="hsr271950-bib-0021" ref-type="bibr">21</xref>].</p><fig position="float" fig-type="Figure" id="hsr271950-fig-0002" orientation="portrait"><label>Figure 2</label><caption><p>Schematic representation of aspirin's anti‐inflammatory mechanisms in atherosclerosis through modulation of transcription factors NF‐κB, PPARs, and AP‐2α. The figure summarizes key molecular interactions verified from the reviewed literature to illustrate aspirin's integrated role in endothelial protection and plaque stabilization.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="HSR2-9-e71950-g002.jpg"/></fig><sec id="hsr271950-sec-0140"><label>3.1.1.1</label><title>Endothelial Cell Dysfunction, Inflammation, and Atherosclerosis</title><p>Mediated by NF‐κB activation, trapped modified LDL induces the production of ROS and promotes the synthesis of pro‐atherogenic cytokines (TNF‐α and interleukins IL‐1 and IL‐6), adhesion molecules (VCAM‐I and ICAM‐I), chemokines (MCP‐1 and IL‐8), abnormal vascular smooth muscle cell proliferation (VSMC), and prothrombotic mediators such as plasminogen activator inhibitor (PAI) or tissue factor [<xref rid="hsr271950-bib-0020" ref-type="bibr">20</xref>, <xref rid="hsr271950-bib-0022" ref-type="bibr">22</xref>, <xref rid="hsr271950-bib-0023" ref-type="bibr">23</xref>]. In a positive loop, IL‐1β induces nuclear transfer of NF‐κB through activation of the p38/MAPK pathway [<xref rid="hsr271950-bib-0023" ref-type="bibr">23</xref>, <xref rid="hsr271950-bib-0024" ref-type="bibr">24</xref>, <xref rid="hsr271950-bib-0025" ref-type="bibr">25</xref>].</p><p>Hyperglycemia and ox‐LDL stimulate endothelial cells activate protein kinase C (PKC). PKC, through NADPH activation, generates ROS agents that subsequently activate NF‐κB. NADPH oxidase 4 (NOX4) is an essential factor for the production of ROS [<xref rid="hsr271950-bib-0026" ref-type="bibr">26</xref>]. Increased expression of inducible nitric oxide synthase (iNOS) in pathological states also leads to high production of NO, which generates nitrite peroxides in its reaction with produced ROS agents and causes vascular damage [<xref rid="hsr271950-bib-0027" ref-type="bibr">27</xref>]. Expression of both NOX4 and iNOS increases at AS (Figure <xref rid="hsr271950-fig-0002" ref-type="fig">2</xref>) [<xref rid="hsr271950-bib-0028" ref-type="bibr">28</xref>].</p><p>Moreover, the renin–angiotensin system, particularly angiotensin II (Ang II) as a strong vasoconstrictor, is produced during hypertension. In fact, Ang‐II possesses the effects of inflammation, pro‐atherogenic, and induces endothelial oxidative stress [<xref rid="hsr271950-bib-0022" ref-type="bibr">22</xref>]. Ang II activates the P38/MAPK/NF‐κB signaling pathways [<xref rid="hsr271950-bib-0029" ref-type="bibr">29</xref>] and NADPH oxidase [<xref rid="hsr271950-bib-0007" ref-type="bibr">7</xref>]. Moreover, in the response to inflammation in VSMC cells, Ang II by binding to the angiotensin II type 1 receptor (AT1R) promotes the expression of COX‐2. Subsequently, COX‐2 activates NF‐κB and secretion of C‐reactive protein (CRP) [<xref rid="hsr271950-bib-0030" ref-type="bibr">30</xref>]. CRP is a pro‐atherogenic factor that activates VSMC, upregulates the expression of AT1R, various adhesion molecules, and PAI‐1, but it decreases NO levels [<xref rid="hsr271950-bib-0007" ref-type="bibr">7</xref>].</p></sec><sec id="hsr271950-sec-0150"><label>3.1.1.2</label><title>The Role of Nitric Oxide (NO) in Endothelial Dysfunction</title><p>NO is synthesized in ECs from <sc>l</sc>‐arginine in a reaction catalyzed by endothelial nitric oxide synthase (eNOS) [<xref rid="hsr271950-bib-0020" ref-type="bibr">20</xref>, <xref rid="hsr271950-bib-0031" ref-type="bibr">31</xref>]. NO plays anti‐atherogenic role, therefore, a decrease in the NO level could promote the progression of atherosclerosis and CVD [<xref rid="hsr271950-bib-0021" ref-type="bibr">21</xref>]. By increasing the expression of IκB and binding to a critical cysteine in the NF‐κB subunit P50, NO inhibits NF‐κB [<xref rid="hsr271950-bib-0032" ref-type="bibr">32</xref>]. In situations of oxidative stress, hyperlipidemia, hypertension, smoking, or diabetes, NO is reduced [<xref rid="hsr271950-bib-0020" ref-type="bibr">20</xref>, <xref rid="hsr271950-bib-0033" ref-type="bibr">33</xref>]. Moreover, AgII produces ROS elements and causes inactivation of NO during inflammation [<xref rid="hsr271950-bib-0032" ref-type="bibr">32</xref>].</p></sec><sec id="hsr271950-sec-0160"><label>3.1.1.3</label><title>LDL Infiltration and Foam Cell Formation of Monocytes and VSMCs</title><p>Trapped LDL particles are oxidized in the form of ox‐LDL in the subendothelial space, producing a pro‐inflammatory response in ECs and macrophages [<xref rid="hsr271950-bib-0020" ref-type="bibr">20</xref>].</p><p>Hydrolysis of packed cholesterol esters produces free cholesterol that is transferred by macrophages to apolipoprotein A‐I (ApoA‐I) or high‐density lipoprotein (HDL) (an essential step for removing excess cholesterol from peripheral tissues). The regular reverse cholesterol transport (RCT) process and HDL biogenesis are mediated by the ATP‐binding cassettes‐A1 (ABCA1) and ATP‐binding cassette transporter‐G1 (ABCG1), and scavenger receptor class‐B1 (SR‐B1). These cholesterol transporters are essential in mediating cholesterol efflux from cells and preventing foam cell formation [<xref rid="hsr271950-bib-0020" ref-type="bibr">20</xref>, <xref rid="hsr271950-bib-0022" ref-type="bibr">22</xref>, <xref rid="hsr271950-bib-0034" ref-type="bibr">34</xref>].</p><p>However, the pro‐inflammatory microenvironment of atherosclerotic lesions impairs the ABCA1 efflux system in macrophages and promotes foam cell accumulation. Furthermore, excessive lipid uptake by macrophages enhances the inflammatory response, and oxLDLs induce signaling cascades that activate NF‐κB targets [<xref rid="hsr271950-bib-0020" ref-type="bibr">20</xref>].</p></sec><sec id="hsr271950-sec-0170"><label>3.1.1.4</label><title>Plaque Stability and Rupture</title><p>When inflammation prevails and the death of VSMC happens, extracellular matrix (ECM) production is reduced, while the release of matrix metalloproteinases (MMPs) increases. MMPs degrade ECM components and promote the progression of AS. Consequently, the solid and rigid fibrous cap maintenance decreases, making the cap unstable and prone to cracking [<xref rid="hsr271950-bib-0020" ref-type="bibr">20</xref>, <xref rid="hsr271950-bib-0035" ref-type="bibr">35</xref>]. Increased expression of MMP‐9 in AS is accompanied with degraded collagen type IV, a significant basement membrane component [<xref rid="hsr271950-bib-0036" ref-type="bibr">36</xref>]. There is a binding site for NF‐κB located in the region of the MMP‐9 promoter [<xref rid="hsr271950-bib-0036" ref-type="bibr">36</xref>].</p><p>Expression of membrane‐bound prostaglandin E synthase‐1 (mPGES‐1) and COX‐2 as inducible enzymes increases in response to inflammation in the shoulder region of the plaque [<xref rid="hsr271950-bib-0037" ref-type="bibr">37</xref>]. MMP‐9 expression increases in response to NF‐κB and COX‐2/mPGES‐1 signaling pathway [<xref rid="hsr271950-bib-0038" ref-type="bibr">38</xref>].</p></sec></sec><sec id="hsr271950-sec-0180"><label>3.1.2</label><title>Peroxisome Proliferator‐Activated Receptors (PPARs)</title><p>PPARs are transcription factors that play critical roles in regulating of the gene expression that are responsible for energy metabolism, cellular development, differentiation, and inflammation [<xref rid="hsr271950-bib-0039" ref-type="bibr">39</xref>, <xref rid="hsr271950-bib-0040" ref-type="bibr">40</xref>]. PPARα, PPARβ/δ, and PPARγ are three separate PPAR isoforms that each have unique tissue expression patterns, physiological roles, and ligand selectivity [<xref rid="hsr271950-bib-0010" ref-type="bibr">10</xref>]. PPARs work with other receptors, such as RXR or LXR, to control genes that manage inflammation, cholesterol levels, and energy metabolism. When specific molecules bind to PPARs, they activate these receptors, allowing them to turn on genes that reduce inflammation or promote cholesterol removal. Without these molecules, PPARs remain inactive, blocking gene activation. PPARs also interact with other factors, like NF‐κB, to fine‐tune their effects on inflammation and atherosclerosis [<xref rid="hsr271950-bib-0041" ref-type="bibr">41</xref>].</p><p>PPAR activation is essential for regulating sensitivity to inflammatory stimuli and controlling the production of proinflammatory and anti‐inflammatory factors [<xref rid="hsr271950-bib-0042" ref-type="bibr">42</xref>, <xref rid="hsr271950-bib-0043" ref-type="bibr">43</xref>, <xref rid="hsr271950-bib-0044" ref-type="bibr">44</xref>]. PPARs were initially thought to have an anti‐inflammatory function. Through repression of inflammation‐associated NF‐κB, PPARδ‐ligands were found to suppress inflammation‐associated genes in human monocyte‐derived macrophages [<xref rid="hsr271950-bib-0041" ref-type="bibr">41</xref>]. Activation of PPARα and PPARγ may lead to anti‐atherosclerotic effects by inhibiting the expression of proinflammatory cytokines in vascular cells (Figure <xref rid="hsr271950-fig-0002" ref-type="fig">2</xref>) [<xref rid="hsr271950-bib-0042" ref-type="bibr">42</xref>]. Under atherosclerotic conditions, the expression of these transcription factors decreases [<xref rid="hsr271950-bib-0038" ref-type="bibr">38</xref>, <xref rid="hsr271950-bib-0041" ref-type="bibr">41</xref>, <xref rid="hsr271950-bib-0042" ref-type="bibr">42</xref>], which in turn leads to increased expression of MMPs [<xref rid="hsr271950-bib-0041" ref-type="bibr">41</xref>, <xref rid="hsr271950-bib-0042" ref-type="bibr">42</xref>].</p><p>Therefore, the significance of PPARs‐targeting in medical research and medication discovery for hypertension or atherosclerosis (AS) is determined by PPARs' critical biological roles [<xref rid="hsr271950-bib-0040" ref-type="bibr">40</xref>]. However, the effects of PPARs on inflammation are complex depending on the interactions with target gene sequences (PPREs) and the presence or absence of relevant PPAR ligands, coactivators, and repressors [<xref rid="hsr271950-bib-0041" ref-type="bibr">41</xref>, <xref rid="hsr271950-bib-0042" ref-type="bibr">42</xref>].</p><p>Through triggering lipoprotein production, inflammatory response [<xref rid="hsr271950-bib-0040" ref-type="bibr">40</xref>] and fatty acid and cholesterol metabolism, PPARα is primarily engaged in the regulation of the cell′s energy homeostasis [<xref rid="hsr271950-bib-0010" ref-type="bibr">10</xref>]. By preventing leukocytes from adhering to activated endothelial cells in the arterial lumen during the AS process, PPARα activation prevents the development of macrophage‐derived foam cells and atherosclerotic plaques by reducing the oxidative modification of lipoproteins. In order to stop the inflammatory response, PPARα ligands can successfully block the NF‐кB activation and signaling pathways by lowering the amounts of IL‐1, TNF‐α, COX‐2, iNOS, and other proinflammatory cytokines. When PPAR is activated, CRP, IL‐6, and PGs levels are reduced [<xref rid="hsr271950-bib-0040" ref-type="bibr">40</xref>]. Moreover, PPARα/γ can reduce MMP‐9 expression by inhibiting COX‐2/mPGES‐1 [<xref rid="hsr271950-bib-0045" ref-type="bibr">45</xref>]. Studies in human monocyte THP‐1 cells have shown that using PPAR‐α or PPAR‐γ agonists reduces MMP‐9 secretion [<xref rid="hsr271950-bib-0046" ref-type="bibr">46</xref>].</p><p>Membrane scavenger receptors perform ox‐LDL internalization into lysosomes to be hydrolyzed. Lysosomes and autophagy are involved in nearly the whole process of AS plaque formation and growth in foam cells [<xref rid="hsr271950-bib-0047" ref-type="bibr">47</xref>]. The crucial regulator of the induction of autophagy and lysosome biogenesis is transcription factor EB (TFEB) [<xref rid="hsr271950-bib-0010" ref-type="bibr">10</xref>]. Inhibition of TFEB is demonstrated in AS [<xref rid="hsr271950-bib-0047" ref-type="bibr">47</xref>]. Notably, PPARα activation and recruitment to its binding site on the Tfeb promoter were improved by SR‐BI, which in turn controlled the expression of Tfeb. Additionally, TFEB controls PPARα expression. SR‐BI expression was also elevated by PPARα agonism. Contrarily, NF‐κB transcriptional activity may reduce the expression of the autophagy genes. Interestingly, by activation of PPARα, aspirin upregulates TFEB and consequently stimulates lysosomal biogenesis in brain cells [<xref rid="hsr271950-bib-0010" ref-type="bibr">10</xref>].</p><p>By preventing NF‐kB activity, activated PPARγ encourages the outflow of cholesterol and lessens inflammation. RCT, which is mediated by ABCA1, ABCG1, PPARγ, and LXRα, is a process for the recycling or excretion of cholesterol in which cholesterol enters LDL, effluxes from foam cells, travels from blood arteries, and returns to the liver for processing. The PPARγ–LXRα–ABCA1/ABCG1 pathway has been implicated in numerous studies as playing a significant role and being a possible therapeutic target for atherosclerosis [<xref rid="hsr271950-bib-0022" ref-type="bibr">22</xref>, <xref rid="hsr271950-bib-0048" ref-type="bibr">48</xref>]. Increased PPARγ expression suppresses NF‐κB, STAT1, and AP‐1 signal transduction to have anti‐inflammatory effects, regulates iNOS secretion, and decreases monocyte secretion of IL‐6, MCP‐1, TNF‐α, and other cytokines. The production of VCAM‐1 results in chronic inflammation, which is partially reduced by PPARγ [<xref rid="hsr271950-bib-0040" ref-type="bibr">40</xref>].</p><p>BCL‐6 is released when PPARβ/δ is activated by a ligand, and it can block the pro‐inflammatory pathways that lead to the development of atherosclerosis [<xref rid="hsr271950-bib-0049" ref-type="bibr">49</xref>]. Additionally, PPARβ/δ may lessen the circulatory system's ability to transmit signals associated with inflammatory responses [<xref rid="hsr271950-bib-0040" ref-type="bibr">40</xref>].</p></sec><sec id="hsr271950-sec-0190"><label>3.1.3</label><title>Activator Protein‐2α (AP‐2α)</title><p>AP‐2α controls cell functions by targeting specific DNA regions in genes, influencing cell growth and differentiation. It is activated by enzymes like protein kinase D and AMPKα, which play roles in inflammation and atherosclerosis [<xref rid="hsr271950-bib-0001" ref-type="bibr">1</xref>, <xref rid="hsr271950-bib-0050" ref-type="bibr">50</xref>].</p><p>AMPKα, a serine–threonine kinase, is activated by oxidants and hypoxia conditions [<xref rid="hsr271950-bib-0001" ref-type="bibr">1</xref>, <xref rid="hsr271950-bib-0051" ref-type="bibr">51</xref>] and increases MMP‐2 expression in VSMCs [<xref rid="hsr271950-bib-0052" ref-type="bibr">52</xref>], leading to instability of atherosclerotic plaques [<xref rid="hsr271950-bib-0053" ref-type="bibr">53</xref>]. Additionally, several targeted genes, including ABCA1 and APOE, have been demonstrated to be repressed by AP‐2α phosphorylation [<xref rid="hsr271950-bib-0053" ref-type="bibr">53</xref>]. Noteworthy, AP‐2α decreased HDL biogenesis by decreasing the expression of ABCA1 [<xref rid="hsr271950-bib-0050" ref-type="bibr">50</xref>], thus may play a role in the progression of AS by increasing foam cell formation.</p><p>On the other hand, inhibition of oxidative stress by AP‐2α activation in human epithelial cells [<xref rid="hsr271950-bib-0001" ref-type="bibr">1</xref>]. Phosphorylation and activation of AP‐2α by AMPKα can increase IκB expression and inhibit NF‐κB function (Figure <xref rid="hsr271950-fig-0002" ref-type="fig">2</xref>) [<xref rid="hsr271950-bib-0001" ref-type="bibr">1</xref>, <xref rid="hsr271950-bib-0051" ref-type="bibr">51</xref>]. Moreover, in diabetic mice ApoE<sup>−/−</sup>, hyperglycemia prevented AMPKα–AP‐2α signaling and decreased levels of the prolyl‐4‐hydroxylase alpha 1 (P4Hα1) that is an essential enzyme in type I and III collagen synthesis [<xref rid="hsr271950-bib-0053" ref-type="bibr">53</xref>]. In Apoe<sup>−/−</sup> mice, activation of AP‐2α increased the stability of atherosclerotic plaque and Ang II‐induced aneurysm development. These disparities may be caused by the fact that the DNA sequences surrounding the binding site, among other things, influence whether AP‐2α interacts with the target genes and whether they are up‐ or downregulated [<xref rid="hsr271950-bib-0053" ref-type="bibr">53</xref>].</p><p>PPARs and Ap‐2α transcription factors interact with other key transcription factors of the inflammatory pathway, such as NF‐κB, and play important roles in regulating inflammatory genes and modulating inflammation in AS [<xref rid="hsr271950-bib-0054" ref-type="bibr">54</xref>]. Modulating the interaction between transcription factors and inflammatory networks could therefore be considered as important therapeutic targets for anti‐inflammatory mechanisms.</p></sec></sec><sec id="hsr271950-sec-0200"><label>3.2</label><title>Control of Inflammation by Aspirin: Implication for Transcription Factor</title><p>Aspirin has displayed anti‐inflammatory properties [<xref rid="hsr271950-bib-0034" ref-type="bibr">34</xref>]. It regulates the expression of inflammatory cytokines, chemokines, and adhesion molecules by regulating the expression and function of related transcription factors [<xref rid="hsr271950-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr271950-bib-0028" ref-type="bibr">28</xref>, <xref rid="hsr271950-bib-0055" ref-type="bibr">55</xref>]. For example, nucleotide‐binding oligomerization domain‐like receptor protein (NLRP‐1) inflammasome has been introduced as a main factor in the initiation and progression of the endothelial dysfunction that provokes atherosclerotic events [<xref rid="hsr271950-bib-0056" ref-type="bibr">56</xref>]. Following aspirin intake by patients with peripheral arterial disease, lowering level of transcription of NLRP‐1 in endothelial cells (ECs) occurred. Noteworthy, this finding has been attributed to the possible inhibition of the NF‐κB pathway [<xref rid="hsr271950-bib-0057" ref-type="bibr">57</xref>].</p><p>Aspirin's anti‐inflammatory effects in atherosclerosis are well‐documented, particularly through its modulation of transcription factors such as NF‐κB, PPARs, and AP‐2α. However, these effects are highly dose‐dependent, with low doses (e.g., 75–100 mg/day) typically associated with anti‐inflammatory and atheroprotective outcomes, while higher doses (e.g., &gt; 1 g/day) may paradoxically promote pro‐inflammatory responses in certain contexts [<xref rid="hsr271950-bib-0058" ref-type="bibr">58</xref>, <xref rid="hsr271950-bib-0059" ref-type="bibr">59</xref>, <xref rid="hsr271950-bib-0060" ref-type="bibr">60</xref>].</p><p>For example, high‐dose aspirin has been shown to enhance the production of pro‐inflammatory cytokines, such as IL‐6, in some in vitro models, potentially due to nonspecific inhibition of cyclooxygenase‐independent pathways [<xref rid="hsr271950-bib-0061" ref-type="bibr">61</xref>, <xref rid="hsr271950-bib-0062" ref-type="bibr">62</xref>]. This dose‐dependent variability underscores the importance of optimizing aspirin dosing to maximize its anti‐inflammatory benefits while minimizing potential adverse effects in atherosclerosis management.</p><p>In this context, we investigated the modulatory effects of aspirin (acetylsalicylic acid) on the inflammatory process of AS, focusing in particular on three important transcription factors such as NF‐κB, PPAR, and AP‐2α, as summarized in Table <xref rid="hsr271950-tbl-0001" ref-type="table">1</xref>. To provide a clearer overview of the existing evidence, Table <xref rid="hsr271950-tbl-0002" ref-type="table">2</xref> summarizes the key findings from studies investigating aspirin's effects on major transcription factors involved in atherosclerosis, including NF‐κB, PPARs, and AP‐2α. The table outlines the type of study, the specific transcription factors assessed, and the primary outcomes related to inflammation, oxidative stress, and plaque stability. As shown, most available data support aspirin's inhibitory action on NF‐κB, leading to reduced inflammatory cytokine production and improved endothelial function. In contrast, studies on PPARs and AP‐2α are fewer but indicate potential anti‐inflammatory and plaque‐stabilizing roles through enhanced cholesterol efflux and reduced oxidative damage.</p><table-wrap position="float" id="hsr271950-tbl-0001" content-type="Table" orientation="portrait"><label>Table 1</label><caption><p>The role of aspirin and transcription factors in regulating inflammation in atherosclerosis.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th valign="bottom" rowspan="1" colspan="1">Stimulator</th><th align="center" valign="bottom" rowspan="1" colspan="1">Target cell</th><th align="center" valign="bottom" rowspan="1" colspan="1">Induction transcription factor</th><th align="center" valign="bottom" rowspan="1" colspan="1">Expression of the target gene/protein</th><th align="center" valign="bottom" rowspan="1" colspan="1">Function of target gene/protein</th><th align="center" valign="bottom" rowspan="1" colspan="1">The role of aspirin</th><th align="center" valign="bottom" rowspan="1" colspan="1">Therapeutic role of aspirin in AS</th><th align="center" valign="bottom" rowspan="1" colspan="1">Reference</th></tr></thead><tbody valign="top"><tr><td valign="middle" rowspan="8" colspan="1">ox‐LDL</td><td valign="middle" rowspan="5" align="left" colspan="1">ECs</td><td valign="middle" rowspan="2" align="left" colspan="1">↑NF‐kB</td><td align="left" valign="top" rowspan="1" colspan="1">↑NOX4, ↑ iNOS</td><td align="left" valign="top" rowspan="1" colspan="1">Endothelial cell injury</td><td align="left" valign="top" rowspan="1" colspan="1">Inhibit NF‐kB/P65</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Protective effect</p></list-item><list-item><label>–</label><p>Antioxidant effect</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Chen et al. [<xref rid="hsr271950-bib-0028" ref-type="bibr">28</xref>]</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">↑ICAM‐1, ↑COX‐2</td><td align="left" valign="top" rowspan="1" colspan="1">Monocyte and MQ activation</td><td align="left" valign="top" rowspan="1" colspan="1">Inhibit NF‐kB</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Inhibition of cell adhesion</p></list-item><list-item><label>–</label><p>Inhibition of recruitment of monocytes and MQ</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Zhao et al. [<xref rid="hsr271950-bib-0063" ref-type="bibr">63</xref>]</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">↓PPAR α</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>↑NADPH</p>
+<p>↑ROS</p>
+<p>↑NF‐kB</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↑MCP‐1</p></list-item><list-item><label>–</label><p>↑Monocyte recruitment</p></list-item><list-item><label>–</label><p>↑Adhesion molecules</p></list-item><list-item><label>–</label><p>↑Inflammatory cytokines</p></list-item><list-item><label>–</label><p>↑MMP‐1</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↓NF‐kB</p></list-item><list-item><label>–</label><p>↓AP‐1</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↓MCP‐1</p></list-item><list-item><label>–</label><p>↓ plaque size</p></list-item><list-item><label>–</label><p>↑ plaque stability</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Dragomir et al. [<xref rid="hsr271950-bib-0064" ref-type="bibr">64</xref>]</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">↓PPAR‐ δ</td><td align="left" valign="top" rowspan="1" colspan="1">↓p‐AMPK–PGC‐1α</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>↑MQ antigen</p>
+<p>↑ AT1R</p>
+<p>↑TNF‐α</p>
+<p>↓p‐eNOS</p>
+<p>↓oxidative phosphorylation</p>
+<p>↓ATP synthesis</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">↑PPAR‐δ–AMPK–PGC1α</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↓Fat accumulation</p></list-item><list-item><label>–</label><p>↑Vasodilation</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Han et al. [<xref rid="hsr271950-bib-0065" ref-type="bibr">65</xref>]</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">↓AP‐2α</td><td align="left" valign="top" rowspan="1" colspan="1">↑NF‐kB</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>↑Oxidative stress</p>
+<p>↑Plaque instability</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>↑AP‐2α</p>
+<p>↑IkBα→↓NF‐kB</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Inhibit oxidative stress</p></list-item><list-item><label>–</label><p>↑plaque stability</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Yang et al. [<xref rid="hsr271950-bib-0001" ref-type="bibr">1</xref>]</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">VSMC</td><td align="left" valign="top" rowspan="1" colspan="1">↑NF‐kB1</td><td align="left" valign="top" rowspan="1" colspan="1">↑ICAM‐1, ↑CX3CL1, ↑VCAM1,↑TNF‐α</td><td align="left" valign="top" rowspan="1" colspan="1">Cell proliferation</td><td align="left" valign="top" rowspan="1" colspan="1">Inhibit NF‐kB1</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Increase cell apoptosis rate</p></list-item><list-item><label>–</label><p>Inhibit AS progression</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Zhang et al. [<xref rid="hsr271950-bib-0055" ref-type="bibr">55</xref>]</td></tr><tr><td valign="middle" rowspan="2" align="left" colspan="1">MQ</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>↓PPARγ/α</p>
+<p>↑NF‐kB</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">↑MMP‐2/9</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↑Unstable plaque</p></list-item><list-item><label>–</label><p>↑Plaque rupture</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>↑PPARγ/α</p>
+<p>↓NF‐kB</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↓MMP‐2/9</p></list-item><list-item><label>–</label><p>↑Plaque stability</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Hua et al. [<xref rid="hsr271950-bib-0035" ref-type="bibr">35</xref>]</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">↓PPAR α</td><td align="left" valign="top" rowspan="1" colspan="1">↓ABCA1</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Reduce ApoA‐I mediated cholesterol efflux from MQ lesion</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">↑PPARα</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>↑ABCA1</p>
+<p>↑Cholesterol efflux</p>
+<p>↓Foam cell content</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Wang et al. [<xref rid="hsr271950-bib-0066" ref-type="bibr">66</xref>]</td></tr><tr><td valign="top" rowspan="1" colspan="1">IL‐1B</td><td align="left" valign="top" rowspan="1" colspan="1">VSMC (AoSMC)</td><td align="left" valign="top" rowspan="1" colspan="1">↑NF‐kB</td><td align="left" valign="top" rowspan="1" colspan="1">↑ICAM‐1, ↑ICAM‐2</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Tcell Jurkat adhesion to AoSMC</p></list-item><list-item><label>–</label><p>VSMC death</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Inhibit NF‐kB</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↑ plaque stability</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Yotsui et al. [<xref rid="hsr271950-bib-0024" ref-type="bibr">24</xref>]</td></tr><tr><td valign="middle" rowspan="2" colspan="1">TNF‐α</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>SMC</p>
+<p>RAW267.7 (MQ)</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">↑NF‐kB</td><td align="left" valign="top" rowspan="1" colspan="1">↑MMP‐9</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↑Degradation of extracellular plaque matrix</p></list-item><list-item><label>–</label><p>↑plaque instability</p></list-item><list-item><label>–</label><p>↑plaque rupture</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Inhibit MAPK/NF‐kB</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↓ MMP‐9</p></list-item><list-item><label>–</label><p>↑ plaque stability</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Zhang et al. [<xref rid="hsr271950-bib-0036" ref-type="bibr">36</xref>]</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">VECs</td><td align="left" valign="top" rowspan="1" colspan="1">↑NF‐kB</td><td align="left" valign="top" rowspan="1" colspan="1">↑MCP‐1, ↑IL‐8</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Monocyte migration</p></list-item><list-item><label>–</label><p>The adhesion of monocytes</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Inhibit NF‐kB</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↓ Progression of atherosclerosis</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Yang et al. [<xref rid="hsr271950-bib-0067" ref-type="bibr">67</xref>]</td></tr><tr><td valign="top" rowspan="1" colspan="1">A II</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>VSMC</p>
+<p>VECs</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">↑NF‐kB (P50/P65)</td><td align="left" valign="top" rowspan="1" colspan="1">↑VCAM‐1, ↑ICAM‐1, ↑CRP→↑AT1R, ↑plasminogen activator inhibitor‐1, ↓NO</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Formation and progression of atherosclerotic plaque</p></list-item><list-item><label>–</label><p>Plaque instability</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Inhibit NF‐kB</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↓ Progression of atherosclerosis</p></list-item><list-item><label>–</label><p>↑ Plaque stability</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Sattler et al. [<xref rid="hsr271950-bib-0030" ref-type="bibr">30</xref>], Costanzo et al. [<xref rid="hsr271950-bib-0068" ref-type="bibr">68</xref>]</td></tr><tr><td valign="top" rowspan="1" colspan="1">PGE2</td><td align="left" valign="top" rowspan="1" colspan="1">MQ derived from THP‐1</td><td align="left" valign="top" rowspan="1" colspan="1">↓PPAR α/γ</td><td align="left" valign="top" rowspan="1" colspan="1">↑MMP‐9</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↑ECM degradation</p></list-item><list-item><label>–</label><p>↑plaque instability</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>↑PPARγ/α</p>
+<p>↓NF‐kB</p>
+<p>↓Cox‐2/mPGES‐1</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>↓MMP‐9</p>
+<p>↓PEG2</p>
+<p>↑Plaque stability</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Xue et al. [<xref rid="hsr271950-bib-0045" ref-type="bibr">45</xref>]</td></tr><tr><td valign="middle" rowspan="4" colspan="1">Proatherogenic condition</td><td align="left" valign="top" rowspan="1" colspan="1">Leukocytes</td><td align="left" valign="top" rowspan="1" colspan="1">↑NF‐kB</td><td align="left" valign="top" rowspan="1" colspan="1">↑Fractalkin (CX3CL1)</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Increase Leukocyte integrin avidity</p></list-item><list-item><label>–</label><p>inducing firm leukocyte adhesion</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Inhibit NF‐kB</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↓Plaque size</p></list-item></list>
+</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Liu et al. [<xref rid="hsr271950-bib-0069" ref-type="bibr">69</xref>]</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">VECs</td><td align="left" valign="top" rowspan="1" colspan="1">↑NF‐kB</td><td align="left" valign="top" rowspan="1" colspan="1">Netrin‐1 (↑truncated isoform, ↓full‐length isoform)</td><td align="left" valign="top" rowspan="1" colspan="1">Recruitment monocyte and MQ</td><td align="left" valign="top" rowspan="1" colspan="1">Inhibit NF‐kB</td><td align="left" valign="top" rowspan="1" colspan="1">Reduce of monocyte/MQ accumulation</td><td align="left" valign="top" rowspan="1" colspan="1">Passacquale et al. [<xref rid="hsr271950-bib-0070" ref-type="bibr">70</xref>]</td></tr><tr><td rowspan="2" align="left" valign="top" colspan="1">Lesion MQ</td><td rowspan="2" align="left" valign="top" colspan="1">↑NF‐kB</td><td rowspan="2" align="left" valign="top" colspan="1">↑SR‐BI</td><td rowspan="2" align="left" valign="top" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↑Cholesterol efflux from MQ lesion</p></list-item></list>
+</p>
+</td><td rowspan="2" align="left" valign="top" colspan="1">Activate NF‐kB</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↓Foam cell content</p></list-item></list>
+</p>
+</td><td rowspan="2" align="left" valign="top" colspan="1">Wehinger et al. [<xref rid="hsr271950-bib-0071" ref-type="bibr">71</xref>]</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>↑Plaque stability</p></list-item></list>
+</p>
+</td></tr></tbody></table><table-wrap-foot><fn id="hsr271950-tbl1-note-0001"><p>Abbreviations: ABCA1, ATP‐binding cassette transporter (ABC) A1 gene; A II, angiotensin II; AMPK, 5′‐AMP activated protein kinase; AP‐1, activator protein‐1; AP‐2α, activator protein 2α; AT1R, angiotensin II receptor 1; AoSMC, aortic smooth muscle cell; COX‐2, cyclooxygenase‐2; CRP, C‐reactive protein; CX3CL1, C‐X3‐C motif chemokine ligand 1; ECs, endothelial cells; ICAM‐1, intercellular adhesion molecule 1; IL‐1β, interleukin‐1β; IL‐8, interleukin‐8; iNOS, inducible nitric oxide synthase; MAPK, mitogen‐activated protein kinase; MCP‐1, monocyte chemoattractant protein‐1; MMP‐9, matrix metalloproteinase‐9; mPGES, membrane bound prostaglandin E synthase; MQ, macrophage; NF‐kB, nuclear factor‐kB; NO, nitric oxide; NOX4, NADPH oxidase‐4; ox‐LDL, oxidative low‐density lipoprotein; PGC‐1α, PPAR gamma coactivator 1 alpha; PGE2, prostaglandin (PG) E2; PPARα, peroxisome proliferator activated receptor α; PPARγ, peroxisome proliferator activated receptor γ; PPARδ, peroxisome proliferator activated receptor δ; ROS, reactive oxygen species; SR‐BI, scavenger receptor class‐B type I; TNF‐α, tumor necrosis factor‐α; VCAM‐1, vascular cell adhesion molecule‐1; VSMC, vascular smooth muscle cell.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><table-wrap position="float" id="hsr271950-tbl-0002" content-type="Table" orientation="portrait"><label>Table 2</label><caption><p>Summary of included studies evaluating aspirin's effects on transcription factors in atherosclerosis.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Author (year) [Ref]</th><th align="center" valign="bottom" rowspan="1" colspan="1">Study model</th><th align="center" valign="bottom" rowspan="1" colspan="1">Transcription factor(s)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Key findings</th><th align="center" valign="bottom" rowspan="1" colspan="1">Clinical/mechanistic implication</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Yang et al. (2016) [<xref rid="hsr271950-bib-0001" ref-type="bibr">1</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">ApoE<sup>−</sup>
+<sup>/−</sup> mice (carotid collar model); VSMCs (in vitro); human leukocyte</td><td align="center" valign="top" rowspan="1" colspan="1">AP‐2α</td><td align="left" valign="top" rowspan="1" colspan="1">Aspirin activated AP‐2α phosphorylation, increased IκBα expression, and reduced oxidative stress and plaque instability. AP‐2α knockdown abolished these effects.</td><td align="left" valign="top" rowspan="1" colspan="1">AP‐2α mediates aspirin's anti‐atherosclerotic effects by enhancing plaque stability via the AP‐2α/IκBα/NF‐κB pathway.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Chen et al. (2012) [<xref rid="hsr271950-bib-0028" ref-type="bibr">28</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">HUVECs exposed to oxLDL</td><td align="center" valign="top" rowspan="1" colspan="1">NF‐κB</td><td align="left" valign="top" rowspan="1" colspan="1">Aspirin inhibited NF‐κB activation, reduced Nox4 and iNOS expression, and decreased ROS production.</td><td align="left" valign="top" rowspan="1" colspan="1">Protects endothelial cells from oxidative stress via NF‐κB inhibition, supporting anti‐atherogenic effects.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Hua et al. (2009) [<xref rid="hsr271950-bib-0035" ref-type="bibr">35</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">ox‐LDL–stimulated macrophage</td><td align="center" valign="top" rowspan="1" colspan="1">PPARα/γ, NF‐κB</td><td align="left" valign="top" rowspan="1" colspan="1">Aspirin activated PPARα/γ and inhibited NF‐κB, reducing MMP‐2/9 and enhancing TIMP expression.</td><td align="left" valign="top" rowspan="1" colspan="1">Promotes plaque stability via PPARα/γ activation and NF‐κB suppression.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Zhang et al. (2019) [<xref rid="hsr271950-bib-0055" ref-type="bibr">55</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">Human femoral artery tissues (AS patients vs. healthy controls); ApoE<sup>−/−</sup> mouse model; VSMCs (in vitro)</td><td align="center" valign="top" rowspan="1" colspan="1">NF‐κB1 (p50)</td><td align="left" valign="top" rowspan="1" colspan="1">Aspirin significantly downregulated NF‐κB1 expression and suppressed its downstream targets (ICAM1, VCAM1, CX3CL1, TNF‐α) in vascular smooth muscle cells and atherosclerotic tissues. It also inactivated the cAMP signaling pathway, reduced VSMC proliferation, and promoted apoptosis.</td><td align="left" valign="top" rowspan="1" colspan="1">Demonstrated that aspirin attenuates atherosclerosis progression by inhibiting NF‐κB1‐mediated inflammatory signaling and cell proliferation, suggesting a potential molecular mechanism underlying its anti‐atherogenic and plaque‐stabilizing effects.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Han et al. (2020) [<xref rid="hsr271950-bib-0065" ref-type="bibr">65</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">Dyslipidemic rabbits; HepG2, HUVEC, RAW264.7 cells</td><td align="center" valign="top" rowspan="1" colspan="1">PPARδ–AMPK–PGC‐1α</td><td align="left" valign="top" rowspan="1" colspan="1">Aspirin activated the PPARδ–AMPK–PGC‐1α pathway, increased mitochondrial function, and reduced lipid accumulation and inflammation. It decreased NF‐κB, TNF‐α, and CCR2 expression while enhancing M2 macrophage markers.</td><td align="left" valign="top" rowspan="1" colspan="1">Aspirin improves lipid metabolism and vascular inflammation by activating PPARδ–AMPK–PGC‐1α, linking metabolic regulation with anti‐atherosclerotic effects.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Guo et al. (2022) [<xref rid="hsr271950-bib-0072" ref-type="bibr">72</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">Mouse model of preeclampsia</td><td align="center" valign="top" rowspan="1" colspan="1">PPARγ</td><td align="left" valign="top" rowspan="1" colspan="1">LDA prevented hypertension, proteinuria, and placental damage in a dose‐dependent manner. It rescued PPAR‐γ mRNA downregulation and reduced inflammatory/antiangiogenic markers.</td><td align="left" valign="top" rowspan="1" colspan="1">Strongly supports a PPAR‐γ‐mediated mechanism for aspirin's protective effects in a preeclampsia model, demonstrating dose‐dependent efficacy.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Kim et al. (2024) [<xref rid="hsr271950-bib-0073" ref-type="bibr">73</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">Clinical cohort of 988 ischemic stroke/TIA patients</td><td align="center" valign="top" rowspan="1" colspan="1">— (genomic/epigenomic markers)</td><td align="left" valign="top" rowspan="1" colspan="1">Identified SNPs (TXAS1 A/A) and promoter methylation (ALOX12, COX1) improving prediction of aspirin/clopidogrel resistance.</td><td align="left" valign="top" rowspan="1" colspan="1">Supports personalized antiplatelet therapy via genomic/epigenomic markers.</td></tr></tbody></table><table-wrap-foot><fn id="hsr271950-tbl2-note-0001"><p>Abbreviations: ALOX12, 12‐lipoxygenase; AMPK, AMP‐activated protein kinase; AP‐2α, activator protein‐2 alpha; ARU, aspirin reaction unit; AS, atherosclerosis; COX1, cyclooxygenase 1; HUVECs, human umbilical vein endothelial cells; LDA, low‐dose aspirin; MMP, matrix metalloproteinase; NF‐κB, nuclear factor kappa‐B; oxLDL, oxidized low‐density lipoprotein; PGC‐1α, PPARγ coactivator‐1 alpha; PPAR, peroxisome proliferator‐activated receptor; PRU, P2Y12 reaction unit; ROS, reactive oxygen species; SNP, single nucleotide polymorphism; TIA, transient ischemic attack; TIMP, tissue inhibitor of metalloproteinase; TXAS1, thromboxane A synthase 1; VSMCs, vascular smooth muscle cells.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><p>Together, these findings reinforce aspirin's multifaceted mechanism of action in atherosclerosis and highlight important areas—particularly involving PPARs and AP‐2α—that require further mechanistic and translational investigation.</p><sec id="hsr271950-sec-0210"><label>3.2.1</label><title>Anti‐Inflammation Effect of Aspirin by NF‐κB</title><p>Zhang and colleagues in an in vivo study showed that aspirin inhibited NF‐κB expression in mice by upregulating the cAMP and PKA, reducing the expression of adhesion molecules, chemokines, and inflammatory cytokines. These processes led to a decrease in cell proliferation of VSMCs, and ultimately inhibiting the progression of AS [<xref rid="hsr271950-bib-0055" ref-type="bibr">55</xref>].</p><p>Some studies have also shown that aspirin inhibits the expression of chemokine (C‐X3‐C motif) ligand 1 (CX3CL1) (or fractalkine) by inhibiting the NF‐κB pathway [<xref rid="hsr271950-bib-0055" ref-type="bibr">55</xref>]. Therefore, they showed the size reduction of atherosclerotic plaques in hyperlipidemic mice following the reduction of leukocyte adhesion [<xref rid="hsr271950-bib-0069" ref-type="bibr">69</xref>, <xref rid="hsr271950-bib-0074" ref-type="bibr">74</xref>].</p><p>Yotsui and colleagues presented that aspirin inhibited NF‐κB signaling in IL‐1β‐activated aortic smooth muscle cells (AoSMCs), thereby reducing the expression of adhesion molecules. It caused a decrease in the adhesion of Jurkat T cells to AoSMCs. Thus, aspirin increased VSMC survival in the plaque by regulating the expression of adhesion molecules and ultimately strengthened the stability of the atherosclerotic plaque [<xref rid="hsr271950-bib-0024" ref-type="bibr">24</xref>].</p><p>In the study of Yang and colleagues, aspirin also inhibited NF‐κB signaling in TNF‐α‐stimulated human umbilical vein endothelial cells (HUVECs), and resulted in decreasing of the IL‐8 and MCP‐1 expression [<xref rid="hsr271950-bib-0067" ref-type="bibr">67</xref>]. This declination, in turn, diminished the migration and adhesion of leukocytes to damaged endothelial cells [<xref rid="hsr271950-bib-0075" ref-type="bibr">75</xref>], which negatively influenced the AS progression [<xref rid="hsr271950-bib-0067" ref-type="bibr">67</xref>].</p><p>While aspirin has demonstrated significant anti‐inflammatory effects through NF‐κB inhibition in various preclinical and clinical models, its efficacy can vary across patient populations, particularly in those with comorbidities. For instance, studies have reported reduced responsiveness to aspirin′s anti‐inflammatory effects in patients with diabetes mellitus, potentially due to altered NF‐κB signaling pathways influenced by hyperglycemia or insulin resistance [<xref rid="hsr271950-bib-0033" ref-type="bibr">33</xref>, <xref rid="hsr271950-bib-0076" ref-type="bibr">76</xref>, <xref rid="hsr271950-bib-0077" ref-type="bibr">77</xref>]. Similarly, in patients with chronic kidney disease, impaired endothelial function and heightened oxidative stress may diminish aspirin's ability to effectively suppress NF‐κB‐mediated inflammation [<xref rid="hsr271950-bib-0078" ref-type="bibr">78</xref>, <xref rid="hsr271950-bib-0079" ref-type="bibr">79</xref>]. These findings suggest that the therapeutic benefits of aspirin in modulating inflammation may be context‐dependent, necessitating personalized approaches to its use in atherosclerosis management.</p><p>The neuroimmune guidance factor netrin‐1 is expressed as a chemoattractant factor by endothelial cells in two isoforms: full‐length (secreted isoform) and truncated (nuclear isoform). Full‐length is associated with the inhibition of monocyte and macrophage recruitment. Under pro‐atherogenic conditions, the balance of the two isoforms changes [<xref rid="hsr271950-bib-0080" ref-type="bibr">80</xref>]. In an NF‐κB‐dependent pathway, transcription of the truncated form is higher than that of the full‐length. Aspirin inhibits the synthesis of the truncated form by inhibiting NF‐κB signaling. Aspirin also increases the expression of the full‐length (secreted) form through epigenetic changes and histone acetylation. Therefore, it reduces the accumulation of monocytes and macrophages in atherosclerotic plaques by establishing a balance between the two isoforms [<xref rid="hsr271950-bib-0070" ref-type="bibr">70</xref>].</p><p>Aspirin plays an essential role in regulating inflammatory factors as an antioxidant and inhibitor of the NF‐κB pathway in AS. Studies have shown that treating human ox‐LDL‐stimulated umbilical vein cells with aspirin inhibits NF‐κB/p65 and subsequently reduced the expression of NOX4 and iNOS [<xref rid="hsr271950-bib-0028" ref-type="bibr">28</xref>]. Aspirin treatment can reduce the expression of adhesion molecules (e.g., VCAM‐1 and ICAM‐1) in endothelial cells by inhibiting ROi production and subsequent NF‐κB inhibition [<xref rid="hsr271950-bib-0068" ref-type="bibr">68</xref>]. Notably, the inhibition of NF‐κB‐dependent adhesion molecules by aspirin is most pronounced at low doses, as higher doses may disrupt this balance and promote inflammation in certain contexts [<xref rid="hsr271950-bib-0076" ref-type="bibr">76</xref>, <xref rid="hsr271950-bib-0081" ref-type="bibr">81</xref>].</p><p>Aspirin has been reported to increase the expression of SR‐BI in human plaque through an NF‐κB‐dependent mechanism. No response element for NF‐kB was found in the gene sequence SR‐BI. NF‐κB may indirectly regulate the expression of SR‐BI at the posttranscriptional level through other factors [<xref rid="hsr271950-bib-0071" ref-type="bibr">71</xref>].</p><p>Moreover, aspirin inhibits NF‐κB by inhibiting IκB phosphorylation and subsequently decreases the expression of COX‐2 in ox‐LDL‐stimulated HUVECs [<xref rid="hsr271950-bib-0063" ref-type="bibr">63</xref>]. Furthermore, aspirin decreases MMP‐9 expression in TNF‐α‐stimulated RAW267.7 cells by inhibiting the MAPK/NF‐κB pathway and stabilizing atherosclerotic plaques [<xref rid="hsr271950-bib-0036" ref-type="bibr">36</xref>].</p><p>Based on the aforementioned studies, aspirin has a protective effect against endothelial cell damage. Inhibition of NF‐κB also reduces the expression of adhesion molecules, chemoattractant chemokines, and other inflammatory factors. Aspirin also increases the expression of SR‐BI through the NF‐κB‐dependent mechanism, thereby decreasing foam cell content (Table <xref rid="hsr271950-tbl-0001" ref-type="table">1</xref>). These processes result in decreased plaque formation, increased plaque stability, and inhibition of rupture and thrombosis, ultimately reducing the progression of AS.</p></sec><sec id="hsr271950-sec-0220"><label>3.2.2</label><title>Anti‐Inflammation Effect of Aspirin by PPARs</title><p>To point to the importance of PPARs in CVD management, it is noteworthy to mention that many conventional pharmacological therapies like Aspirin often affect PPARs [<xref rid="hsr271950-bib-0049" ref-type="bibr">49</xref>]. Additionally, studies have shown that PPARα agonists can prevent AS plaque in coronary arteries from progressing [<xref rid="hsr271950-bib-0040" ref-type="bibr">40</xref>].</p><p>Aspirin acts as a PPAR activator in modulating inflammation in AS [<xref rid="hsr271950-bib-0042" ref-type="bibr">42</xref>]. AMPK may be regulated by PPARδ. In vivo and in vitro studies in the AS state also show that aspirin boosts PPAR‐δ and activates a pathway involving AMPK and PGC‐1, which increases ABCA1 to promote cholesterol removal and reduce inflammation. Whereas it decreases TNF‐α and NF‐κB expression by this signaling pathway. These events lead to increased vasodilation, diminished fat accumulation, and decreased inflammation [<xref rid="hsr271950-bib-0065" ref-type="bibr">65</xref>].</p><p>Studies have also shown that low‐dose aspirin therapy increases the expression of ABCA1 and the efflux of ApoA‐I‐mediated cholesterol in RAW264.7 cells through a PPARα‐mediated mechanism. This process may reduce foam cell content and atherosclerosis lesions [<xref rid="hsr271950-bib-0066" ref-type="bibr">66</xref>].</p><p>Exposure of human ox‐LDL‐stimulated macrophage cells to aspirin increased PPARα/γ expression, which subsequently decreased MMP‐9/2 expression and increased plaque stability by inhibiting NF‐κB [<xref rid="hsr271950-bib-0035" ref-type="bibr">35</xref>]. Another study reported that exposure of macrophage‐derived THP‐1 cells to aspirin decreased MMP‐9 expression by two different mechanisms. The first mechanism involves inhibiting NF‐κB and subsequently reducing MMP‐2 expression through induction of high PPAR α/γ expression. In the second mechanism, aspirin inhibits prostaglandin E2 (PGE2) synthesis and decreases MMP‐9 expression by inhibiting COX‐2/mPGES‐1 [<xref rid="hsr271950-bib-0045" ref-type="bibr">45</xref>].</p><p>Aspirin and PPARα activators such as fenofibrate and clofibrate inhibit NF‐κB and activator protein‐1 (AP‐1) by inhibiting PKC and reducing MCP‐1 expression [<xref rid="hsr271950-bib-0064" ref-type="bibr">64</xref>]. MCP‐1 can promote MMP‐1 expression [<xref rid="hsr271950-bib-0064" ref-type="bibr">64</xref>], hence aspirin could induce plaque stability by reducing MMP‐1/9 expression [<xref rid="hsr271950-bib-0082" ref-type="bibr">82</xref>].</p><p>Through its binding to PPARα, aspirin stimulates the production of neurotrophin, which in turn has neuroprotective effects. One component of the cardiovascular effect of aspirin therapy mediated by PPARα may be neurotrophins with the role in the maintenance of cardiometabolic balance and cardioprotection. Interestingly, to note that COX inhibition, namely the antiangiogenic effects of aspirin, has also been linked to the antiangiogenic effects of PPARα activation. Aspirin dramatically decreased VEGF release in a limited clinical investigation with patients with myocardial ischemia having coronary artery bypass graft surgery; this antiangiogenic mechanism was also attributed to PPARα and γ activation [<xref rid="hsr271950-bib-0049" ref-type="bibr">49</xref>].</p><p>Aspirin may boost PPARs expression on its own or in combination with PPAR activators, which reduces foam cell concentration and prevents plaque instability or rupture [<xref rid="hsr271950-bib-0083" ref-type="bibr">83</xref>]. Therefore, it would be interesting to find out how much the antiangiogenic effects of aspirin are mediated by PPARs activation. Would be interesting to determine to what extent antiangiogenic effects of aspirin are mediated by PPAR activation [<xref rid="hsr271950-bib-0049" ref-type="bibr">49</xref>].</p></sec><sec id="hsr271950-sec-0230"><label>3.2.3</label><title>Anti‐Inflammation Effect of Aspirin by AP‐2α</title><p>Several studies suggest that AP‐2α plays an essential role in regulating the expression of various factors involved in AS. Metformin increased P4Hα1 expression and, hence, collagen synthesis by activating AMPK‐AP‐2α signaling, subsequently increasing plaque stability in AS patients [<xref rid="hsr271950-bib-0053" ref-type="bibr">53</xref>]. In vascular cells, aspirin stimulates AMPK. In VSMC, AMPK activation results in an increase in AP‐2α phosphorylation and inhibits the development of atherosclerotic plaques in mice. Aspirin also reduces inflammation through pathways independent of COX, involving the AP‐2α protein, which helps reduce cholesterol accumulation in plaques by activating AP‐2α and decreasing foam cell formation [<xref rid="hsr271950-bib-0001" ref-type="bibr">1</xref>, <xref rid="hsr271950-bib-0084" ref-type="bibr">84</xref>].</p><p>Nonetheless, few studies have been performed on the role of aspirin in regulating Ap‐2α signaling in AS. Regarding the effect of aspirin on AP‐2α expression in AS, one study reported that using a conventional dose of aspirin increased AP‐2α phosphorylation and its activation. Subsequently, it inhibits NF‐κB by increasing the expression of IκBα, which ultimately inhibits oxidative stress and plaque instability in AS [<xref rid="hsr271950-bib-0001" ref-type="bibr">1</xref>, <xref rid="hsr271950-bib-0011" ref-type="bibr">11</xref>].</p><p>It is important to note that, compared to the extensive evidence available for NF‐κB, studies directly investigating aspirin's regulatory effects on AP‐2α and PPARs in atherosclerosis remain relatively limited. The molecular pathways involving these transcription factors are emerging areas of research, and most current findings derive from small‐scale preclinical or in vitro studies. This limitation explains the more detailed discussion of NF‐κB in this review, while also emphasizing the need for future mechanistic and translational studies to better elucidate aspirin's effects on AP‐2α and PPAR‐mediated pathways.</p></sec></sec></sec><sec sec-type="conclusions" id="hsr271950-sec-0240"><label>4</label><title>Conclusion</title><p>Preclinical and clinical studies have demonstrated that inflammatory responses are involved in all stages of the atherosclerotic process, including onset, progression, and lesion formation. The inflammatory process is usually associated with multiple risk factors that cause changes in vascular pathophysiology, plaque formation, and thrombosis. Inflammatory cytokines play a crucial role in the rupture of vulnerable plaques through increasing accumulation of immune cells in the vessel wall, decreasing integrity of ECs following high level of surface adhesion molecules, low level of NO, and secretion of matrix‐degrading enzymes (e.g., MMPs) [<xref rid="hsr271950-bib-0021" ref-type="bibr">21</xref>].</p><p>Dysregulation of the inflammatory transcription factor NF‐κB leads to various pathological events and chronic inflammatory disorders. Activation canonical (or classical) pathway of NF‐κB in response to inflammatory mediators leads to the transcription of genes such as inflammatory factors, adhesion molecules, and thrombosis factors. These genes play a central role in all phases of inflammation and atherosclerotic plaque formation [<xref rid="hsr271950-bib-0085" ref-type="bibr">85</xref>].</p><p>Although aspirin (acetylsalicylic acid) is regarded to effect on AS through its antiplatelet property, its anti‐inflammatory effects are more associated with the amelioration of AS. In a dose‐dependent manner, as monotherapy or combination therapy, aspirin regulates critical molecules involved in inflammation process by influencing on the related transcription factors [<xref rid="hsr271950-bib-0064" ref-type="bibr">64</xref>].</p><p>To prevent vascular wall damage, it is crucial to reduce cholesterol accumulation and/or the production of inflammatory mediators [<xref rid="hsr271950-bib-0040" ref-type="bibr">40</xref>]. Numerous studies have shown that aspirin inhibits NF‐κB canonical signaling pathway, and modulates inflammation at AS [<xref rid="hsr271950-bib-0086" ref-type="bibr">86</xref>]. By inhibiting NF‐κB, aspirin reduces the production of oxidants, but stimulates the production of NO [<xref rid="hsr271950-bib-0028" ref-type="bibr">28</xref>], and inhibits the production of adhesion molecules and inflammatory cytokines, thereby inhibiting the formation of atherosclerotic plaques [<xref rid="hsr271950-bib-0055" ref-type="bibr">55</xref>]. Moreover, the transcription factor NF‐κB also controls anti‐inflammatory genes such as the membrane protein SR‐BI. Therefore, studies on aspirin application in combination with the NF‐κB blocker are proposed to determine the anti‐inflammatory role of NF‐κB in macrophages in atherosclerotic plaques [<xref rid="hsr271950-bib-0087" ref-type="bibr">87</xref>].</p><p>In contrast, the transcription factors PPARs and AP‐2a form a network in a negative reaction with NF‐κB, which attenuate the AS process. Aspirin increases the expression of membrane proteins and enhances HDL biogenesis that reduces foam cell content by increasing the expression of PPARs [<xref rid="hsr271950-bib-0066" ref-type="bibr">66</xref>]. Aspirin also reduces the expression of MMPs through high expression of PPARs [<xref rid="hsr271950-bib-0088" ref-type="bibr">88</xref>].</p><p>Therefore, aspirin could directly inhibit NF‐κB and inflammation in atherosclerosis, while it can increase the expression of PPARs and/or AP‐2 factors. In addition to its molecular effects, recent clinical evidence informs aspirin's role in atherosclerosis. Clinical trials like ASPREE and ARRIVE have shown varied results for aspirin's cardiovascular benefits beyond preventing blood clots, particularly in older adults or high‐risk groups. These differences may stem from variations in inflammation processes involving NF‐κB, PPARs, and AP‐2α [<xref rid="hsr271950-bib-0073" ref-type="bibr">73</xref>, <xref rid="hsr271950-bib-0089" ref-type="bibr">89</xref>, <xref rid="hsr271950-bib-0090" ref-type="bibr">90</xref>, <xref rid="hsr271950-bib-0091" ref-type="bibr">91</xref>, <xref rid="hsr271950-bib-0092" ref-type="bibr">92</xref>]. These findings underscore the translational relevance of aspirin's effects on transcription factors discussed herein and highlight the need for further research to optimize its use in specific patient groups, particularly those with varying inflammatory profiles. Despite promising molecular evidence, large‐scale clinical trials such as ASPREE and ARRIVE have reported mixed results regarding aspirin's cardiovascular benefits. This variability may arise from several factors, including differences in study populations (e.g., age, baseline inflammation, diabetes, or CKD status), aspirin dose and regimen, and background therapies. Moreover, interindividual variability in the activation of transcriptional pathways such as NF‐κB, PPARs, and AP‐2α may further modulate aspirin's anti‐inflammatory and plaque‐stabilizing effects. These findings highlight that aspirin's efficacy is context‐dependent and suggest that personalized approaches—guided by molecular and clinical biomarkers—may be necessary to optimize its therapeutic use in atherosclerosis prevention and management [<xref rid="hsr271950-bib-0091" ref-type="bibr">91</xref>, <xref rid="hsr271950-bib-0093" ref-type="bibr">93</xref>, <xref rid="hsr271950-bib-0094" ref-type="bibr">94</xref>, <xref rid="hsr271950-bib-0095" ref-type="bibr">95</xref>, <xref rid="hsr271950-bib-0096" ref-type="bibr">96</xref>, <xref rid="hsr271950-bib-0097" ref-type="bibr">97</xref>, <xref rid="hsr271950-bib-0098" ref-type="bibr">98</xref>]. To advance the therapeutic potential of aspirin in atherosclerosis, future research should focus on clarifying the role of AP‐2α in modulating inflammatory and plaque‐stabilizing pathways, given its emerging significance in aspirin's non‐COX‐dependent effects. Additionally, exploring aspirin in combination therapies, such as with statins or novel anti‐inflammatory agents, could enhance its efficacy in CVD by targeting complementary pathways like NF‐κB and PPARs. These investigations will help address current gaps and guide personalized treatment strategies for diverse patient populations [<xref rid="hsr271950-bib-0099" ref-type="bibr">99</xref>, <xref rid="hsr271950-bib-0100" ref-type="bibr">100</xref>]. Nonetheless, the relationship between AP‐2a and PPARs transcription factors in atherosclerosis and the effect of aspirin on them need to be more investigated. While aspirin's modulation of NF‐κB, PPARs, and AP‐2α offers significant therapeutic potential, its efficacy is influenced by dose‐dependent effects and patient‐specific factors, such as comorbidities like diabetes or chronic kidney disease, which warrant further investigation to optimize its clinical application.</p></sec><sec id="hsr271950-sec-0250"><title>Author Contributions</title><p>All authors have read and approved the final version of the manuscript. Corresponding author Najmaldin Saki had full access to all of the data in this study and takes complete responsibility for the integrity of the data and the accuracy of the data analysis.</p></sec><sec id="hsr271950-sec-0270"><title>Funding</title><p>The authors have nothing to report.</p></sec><sec id="hsr271950-sec-0280"><title>Disclosure</title><p>The lead author Najmaldin Saki affirms that this manuscript is an honest, accurate, and transparent account of the study being reported; that no important aspects of the study have been omitted; and that any discrepancies from the study as planned (and, if relevant, registered) have been explained. The supporting sources and financial relationships had no such involvement in the study.</p></sec><sec id="hsr271950-sec-0290"><title>Ethics Statement</title><p>The authors have nothing to report.</p></sec><sec sec-type="COI-statement" id="hsr271950-sec-0300"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec></body><back><ack id="hsr271950-sec-0260"><title>Acknowledgments</title><p>The authors wish to thank all their colleagues at Ahvaz Jundishapur University of Medical Sciences.</p></ack><sec sec-type="data-availability" id="hsr271950-sec-0320"><title>Data Availability Statement</title><p>There are no data sets available for this specific manuscript.</p></sec><ref-list content-type="cited-references" id="hsr271950-bibl-0001"><title>References</title><ref id="hsr271950-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="hsr271950-cit-0001">
+<string-name name-style="western">
+<given-names>J.‐J.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Wang</surname>
+</string-name>, et al., “<article-title>Activation of Activator Protein 2 Alpha by Aspirin Alleviates Atherosclerotic Plaque Growth and Instability In Vivo</article-title>,” <source>Oncotarget</source>
+<volume>7</volume>, no. <issue>33</issue> (<year>2016</year>): <fpage>52729</fpage>–<lpage>52739</lpage>.<pub-id pub-id-type="pmid">27391154</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.18632/oncotarget.10400</pub-id><pub-id pub-id-type="pmcid">PMC5288144</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="hsr271950-cit-0002">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Torfi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. S.</given-names>
+<surname>Bahreiny</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Saki</surname>
+</string-name>, et al., “<article-title>Evaluation of Pro‐BNP Biomarker in Heart Failure Patients and Its Relationship With Complete Blood Count Parameters: A Case–Control Study</article-title>,” <source>Health Science Reports</source>
+<volume>7</volume>, no. <issue>9</issue> (<year>2024</year>): <elocation-id>e70083</elocation-id>.<pub-id pub-id-type="pmid">39328979</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/hsr2.70083</pub-id><pub-id pub-id-type="pmcid">PMC11424362</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="hsr271950-cit-0003">
+<string-name name-style="western">
+<given-names>O.</given-names>
+<surname>Uwishema</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Nazir</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Munyangaju</surname>
+</string-name>, et al., “<article-title>The Pulse of Sleep: Novel Interventions in Understanding the Sleep‐Cardiovascular Connection: A Literature Review</article-title>,” <source>Annals of Medicine &amp; Surgery</source>
+<volume>86</volume>, no. <issue>9</issue> (<year>2024</year>): <fpage>5283</fpage>–<lpage>5291</lpage>.<pub-id pub-id-type="pmid">39238992</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/MS9.0000000000002414</pub-id><pub-id pub-id-type="pmcid">PMC11374239</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="hsr271950-cit-0004">
+<string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Pateras</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Giaginis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Tsigris</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Patsouris</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Theocharis</surname>
+</string-name>, “<article-title>NF‐κB Signaling at the Crossroads of Inflammation and Atherogenesis: Searching for New Therapeutic Links</article-title>,” <source>Expert Opinion on Therapeutic Targets</source>
+<volume>18</volume>, no. <issue>9</issue> (<year>2014</year>): <fpage>1089</fpage>–<lpage>1101</lpage>.<pub-id pub-id-type="pmid">25005042</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1517/14728222.2014.938051</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="hsr271950-cit-0005">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X. Y.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. R.</given-names>
+<surname>Shi</surname>
+</string-name>, et al., “<article-title>Natural Products in Atherosclerosis Therapy by Targeting PPARs: A Review Focusing on Lipid Metabolism and Inflammation</article-title>,” <source>Frontiers in Cardiovascular Medicine</source>
+<volume>11</volume> (<year>2024</year>): <fpage>2024</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fcvm.2024.1372055</pub-id><pub-id pub-id-type="pmcid">PMC11064802</pub-id><pub-id pub-id-type="pmid">38699583</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="hsr271950-cit-0006">
+<string-name name-style="western">
+<given-names>A. Z.</given-names>
+<surname>Fernandez</surname>
+</string-name>, “<article-title>Peroxisome Proliferator‐Activated Receptors in the Modulation of the Immune/Inflammatory Response in Atherosclerosis</article-title>,” <source>PPAR Research</source>
+<volume>2008</volume>, no. <issue>1</issue> (<year>2008</year>): <elocation-id>285842</elocation-id>.<pub-id pub-id-type="pmid">18769491</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1155/2008/285842</pub-id><pub-id pub-id-type="pmcid">PMC2519138</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="hsr271950-cit-0007">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Fiordelisi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Iaccarino</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Morisco</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Coscioni</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Sorriento</surname>
+</string-name>, “<article-title>NFkappaB Is a Key Player in the Crosstalk Between Inflammation and Cardiovascular Diseases</article-title>,” <source>International Journal of Molecular Sciences</source>
+<volume>20</volume>, no. <issue>7</issue> (<year>2019</year>): <fpage>1599</fpage>.<pub-id pub-id-type="pmid">30935055</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/ijms20071599</pub-id><pub-id pub-id-type="pmcid">PMC6480579</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="hsr271950-cit-0008">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Mugisha</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Ghanem</surname>
+</string-name>, <string-name name-style="western">
+<given-names>O. A. I.</given-names>
+<surname>Komi</surname>
+</string-name>, et al., “<article-title>Addressing Cardiometabolic Challenges in HIV: Insights, Impact, and Best Practices for Optimal Management—A Narrative Review</article-title>,” <source>Health Science Reports</source>
+<volume>8</volume>, no. <issue>4</issue> (<year>2025</year>): <elocation-id>e70727</elocation-id>.<pub-id pub-id-type="pmid">40256141</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/hsr2.70727</pub-id><pub-id pub-id-type="pmcid">PMC12007417</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="hsr271950-cit-0009">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Santanam</surname>
+</string-name> and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Parthasarathy</surname>
+</string-name>, “<article-title>Aspirin Is a Substrate for Paraoxonase‐Like Activity: Implications in Atherosclerosis</article-title>,” <source>Atherosclerosis</source>
+<volume>191</volume>, no. <issue>2</issue> (<year>2007</year>): <fpage>272</fpage>–<lpage>275</lpage>.<pub-id pub-id-type="pmid">16793048</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.atherosclerosis.2006.05.027</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="hsr271950-cit-0010">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Chandra</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Roy</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. R.</given-names>
+<surname>Patel</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Pahan</surname>
+</string-name>, “<article-title>PPARα Between Aspirin and Plaque Clearance</article-title>,” <source>Journal of Alzheimer's Disease</source>
+<volume>71</volume>, no. <issue>2</issue> (<year>2019</year>): <fpage>389</fpage>–<lpage>397</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.3233/JAD-190586</pub-id><pub-id pub-id-type="pmcid">PMC8163018</pub-id><pub-id pub-id-type="pmid">31424405</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="hsr271950-cit-0011">
+<string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Falco</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Tessitore</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Ciccarelli</surname>
+</string-name>, et al., “<article-title>Antioxidant Properties of Oral Antithrombotic Therapies in Atherosclerotic Disease and Atrial Fibrillation</article-title>,” <source>Antioxidants</source>
+<volume>12</volume>, no. <issue>6</issue> (<year>2023</year>): <fpage>1185</fpage>.<pub-id pub-id-type="pmid">37371915</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/antiox12061185</pub-id><pub-id pub-id-type="pmcid">PMC10294911</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="hsr271950-cit-0012">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Berjaoui</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Tesfasilassie Kibrom</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Ghayyad</surname>
+</string-name>, et al., “<article-title>Unveiling the Sleep‐Cardiovascular Connection: Novel Perspectives and Interventions—A Narrative Review</article-title>,” <source>Health Science Reports</source>
+<volume>6</volume>, no. <issue>12</issue> (<year>2023</year>): <elocation-id>e1773</elocation-id>.<pub-id pub-id-type="pmid">38107151</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/hsr2.1773</pub-id><pub-id pub-id-type="pmcid">PMC10723785</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="hsr271950-cit-0013">
+<string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Lu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Peng</surname>
+</string-name>, et al., “<article-title>Regulations of the Key Mediators in Inflammation and Atherosclerosis by Aspirin in Human Macrophages</article-title>,” <source>Lipids in Health and Disease</source>
+<volume>9</volume> (<year>2010</year>): <fpage>16</fpage>.<pub-id pub-id-type="pmid">20137092</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/1476-511X-9-16</pub-id><pub-id pub-id-type="pmcid">PMC2846939</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="hsr271950-cit-0014">
+<string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Li</surname>
+</string-name> and <string-name name-style="western">
+<given-names>I. M.</given-names>
+<surname>Verma</surname>
+</string-name>, “<article-title>NF‐κB Regulation in the Immune System</article-title>,” <source>Nature Reviews Immunology</source>
+<volume>2</volume>, no. <issue>10</issue> (<year>2002</year>): <fpage>725</fpage>–<lpage>734</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nri910</pub-id><pub-id pub-id-type="pmid">12360211</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="hsr271950-cit-0015">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Monaco</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Andreakos</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Kiriakidis</surname>
+</string-name>, et al., “<article-title>Canonical Pathway of Nuclear Factor κB Activation Selectively Regulates Proinflammatory and Prothrombotic Responses in Human Atherosclerosis</article-title>,” <source>Proceedings of the National Academy of Sciences</source>
+<volume>101</volume>, no. <issue>15</issue> (<year>2004</year>): <fpage>5634</fpage>–<lpage>5639</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.0401060101</pub-id><pub-id pub-id-type="pmcid">PMC397455</pub-id><pub-id pub-id-type="pmid">15064395</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="hsr271950-cit-0016">
+<string-name name-style="western">
+<given-names>S. N.</given-names>
+<surname>Sotiriou</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V. V.</given-names>
+<surname>Orlova</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Al‐Fakhri</surname>
+</string-name>, et al., “<article-title>Lipoprotein (a) in Atherosclerotic Plaques Recruits Inflammatory Cells Through Interaction With Mac‐1 Integrin</article-title>,” <source>FASEB Journal</source>
+<volume>20</volume>, no. <issue>3</issue> (<year>2006</year>): <fpage>559</fpage>–<lpage>561</lpage>.<pub-id pub-id-type="pmid">16403785</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1096/fj.05-4857fje</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="hsr271950-cit-0017">
+<string-name name-style="western">
+<given-names>N. S.</given-names>
+<surname>Sherafat</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Keshavarz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Mardi</surname>
+</string-name>, et al., “<article-title>Rationale of Using Immune Checkpoint Inhibitors (ICIs) and Anti‐Angiogenic Agents in Cancer Treatment From a Molecular Perspective</article-title>,” <source>Clinical and Experimental Medicine</source>
+<volume>25</volume>, no. <issue>1</issue> (<year>2025</year>): <fpage>238</fpage>.<pub-id pub-id-type="pmid">40629032</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10238-025-01751-7</pub-id><pub-id pub-id-type="pmcid">PMC12238221</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="hsr271950-cit-0018">
+<string-name name-style="western">
+<given-names>S. S.</given-names>
+<surname>Bahreiny</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. N.</given-names>
+<surname>Bastani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Aghaei</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Dabbagh</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A. H.</given-names>
+<surname>Mahdizade</surname>
+</string-name>, “<article-title>Circulating Galectin‐3 Levels in Women With Polycystic Ovary Syndrome: A Meta‐Analysis</article-title>,” <source>Taiwanese Journal of Obstetrics and Gynecology</source>
+<volume>63</volume>, no. <issue>1</issue> (<year>2024</year>): <fpage>37</fpage>–<lpage>45</lpage>.<pub-id pub-id-type="pmid">38216266</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.tjog.2023.10.003</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="hsr271950-cit-0019">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Rahman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. N.</given-names>
+<surname>Anwar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Minhajuddin</surname>
+</string-name>, et al., “<article-title>cAMP Targeting of p38 MAP Kinase Inhibits Thrombin‐Induced NF‐κB Activation and ICAM‐1 Expression in Endothelial Cells</article-title>,” <source>American Journal of Physiology‐Lung Cellular and Molecular Physiology</source>
+<volume>287</volume>, no. <issue>5</issue> (<year>2004</year>): <fpage>L1017</fpage>–<lpage>L1024</lpage>.<pub-id pub-id-type="pmid">15246972</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1152/ajplung.00072.2004</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="hsr271950-cit-0020">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Jebari‐Benslaiman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Galicia‐García</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Larrea‐Sebal</surname>
+</string-name>, et al., “<article-title>Pathophysiology of Atherosclerosis</article-title>,” <source>International Journal of Molecular Sciences</source>
+<volume>23</volume>, no. <issue>6</issue> (<year>2022</year>): <fpage>3346</fpage>.<pub-id pub-id-type="pmid">35328769</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/ijms23063346</pub-id><pub-id pub-id-type="pmcid">PMC8954705</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="hsr271950-cit-0021">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Haybar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Shokuhian</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Bagheri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Davari</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Saki</surname>
+</string-name>, “<article-title>Involvement of Circulating Inflammatory Factors in Prognosis and Risk of Cardiovascular Disease</article-title>,” <source>Journal of Molecular and Cellular Cardiology</source>
+<volume>132</volume> (<year>2019</year>): <fpage>110</fpage>–<lpage>119</lpage>.<pub-id pub-id-type="pmid">31102585</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.yjmcc.2019.05.010</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="hsr271950-cit-0022">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Malekmohammad</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. E.</given-names>
+<surname>Bezsonov</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Rafieian‐Kopaei</surname>
+</string-name>, “<article-title>Role of Lipid Accumulation and Inflammation in Atherosclerosis: Focus on Molecular and Cellular Mechanisms</article-title>,” <source>Frontiers in Cardiovascular Medicine</source>
+<volume>8</volume> (<year>2021</year>): <elocation-id>707529</elocation-id>.<pub-id pub-id-type="pmid">34552965</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fcvm.2021.707529</pub-id><pub-id pub-id-type="pmcid">PMC8450356</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="hsr271950-cit-0023">
+<string-name name-style="western">
+<given-names>S. S.</given-names>
+<surname>Bahreiny</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. N.</given-names>
+<surname>Bastani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Dabbagh</surname>
+</string-name>, et al., “<article-title>Association Between Ambient Particulate Matter and Semen Quality Parameters: A Systematic Review and Meta‐Analysis</article-title>,” <source>Middle East Fertility Society Journal</source>
+<volume>29</volume>, no. <issue>1</issue> (<year>2024</year>): <fpage>2</fpage>.</mixed-citation></ref><ref id="hsr271950-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="hsr271950-cit-0024">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Yotsui</surname>
+</string-name>, <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>Yasuda</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Kawamoto</surname>
+</string-name>, et al., “<article-title>Aspirin Prevents Adhesion of T Lymphoblasts to Vascular Smooth Muscle Cells</article-title>,” <source>FEBS Letters</source>
+<volume>581</volume>, no. <issue>3</issue> (<year>2007</year>): <fpage>427</fpage>–<lpage>432</lpage>.<pub-id pub-id-type="pmid">17239863</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.febslet.2006.12.052</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="hsr271950-cit-0025">
+<string-name name-style="western">
+<given-names>S. S.</given-names>
+<surname>Bahreiny</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Ahangarpour</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Rajaei</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. S.</given-names>
+<surname>Sharifani</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Aghaei</surname>
+</string-name>, “<article-title>Meta‐Analytical and Meta‐Regression Evaluation of Subclinical Hyperthyroidism's Effect on Male Reproductive Health: Hormonal and Seminal Perspectives</article-title>,” <source>Reproductive Sciences</source>
+<volume>31</volume>, no. <issue>10</issue> (<year>2024</year>): <fpage>2957</fpage>–<lpage>2971</lpage>.<pub-id pub-id-type="pmid">39168918</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s43032-024-01676-8</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="hsr271950-cit-0026">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Bedard</surname>
+</string-name> and <string-name name-style="western">
+<given-names>K.‐H.</given-names>
+<surname>Krause</surname>
+</string-name>, “<article-title>The NOX Family of ROS‐Generating NADPH Oxidases: Physiology and Pathophysiology</article-title>,” <source>Physiological Reviews</source>
+<volume>87</volume>, no. <issue>1</issue> (<year>2007</year>): <fpage>245</fpage>–<lpage>313</lpage>.<pub-id pub-id-type="pmid">17237347</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1152/physrev.00044.2005</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="hsr271950-cit-0027">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Pacher</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. S.</given-names>
+<surname>Beckman</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Liaudet</surname>
+</string-name>, “<article-title>Nitric Oxide and Peroxynitrite in Health and Disease</article-title>,” <source>Physiological Reviews</source>
+<volume>87</volume>, no. <issue>1</issue> (<year>2007</year>): <fpage>315</fpage>–<lpage>424</lpage>.<pub-id pub-id-type="pmid">17237348</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1152/physrev.00029.2006</pub-id><pub-id pub-id-type="pmcid">PMC2248324</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="hsr271950-cit-0028">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Zhao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Wu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Qi</surname>
+</string-name>, “<article-title>Aspirin Inhibits the Production of Reactive Oxygen Species by Downregulating Nox4 and Inducible Nitric Oxide Synthase in Human Endothelial Cells Exposed to Oxidized Low‐Density Lipoprotein</article-title>,” <source>Journal of Cardiovascular Pharmacology</source>
+<volume>59</volume>, no. <issue>5</issue> (<year>2012</year>): <fpage>405</fpage>–<lpage>412</lpage>.<pub-id pub-id-type="pmid">22217881</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/FJC.0b013e318248acba</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="hsr271950-cit-0029">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Pacurari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Kafoury</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. B.</given-names>
+<surname>Tchounwou</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Ndebele</surname>
+</string-name>, “<article-title>The Renin‐Angiotensin‐Aldosterone System in Vascular Inflammation and Remodeling</article-title>,” <source>International Journal of Inflammation</source>
+<volume>2014</volume> (<year>2014</year>): <fpage>1</fpage>–<lpage>13</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1155/2014/689360</pub-id><pub-id pub-id-type="pmcid">PMC3997861</pub-id><pub-id pub-id-type="pmid">24804145</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="hsr271950-cit-0030">
+<string-name name-style="western">
+<given-names>K. J. E.</given-names>
+<surname>Sattler</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>Woodrum</surname>
+</string-name>, <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>Galili</surname>
+</string-name>, et al., “<article-title>Concurrent Treatment With Renin‐Angiotensin System Blockers and Acetylsalicylic Acid Reduces Nuclear Factor κB Activation and C‐Reactive Protein Expression in Human Carotid Artery Plaques</article-title>,” <source>Stroke</source>
+<volume>36</volume>, no. <issue>1</issue> (<year>2005</year>): <fpage>14</fpage>–<lpage>20</lpage>.<pub-id pub-id-type="pmid">15576654</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/01.STR.0000150643.08420.78</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="hsr271950-cit-0031">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Gonzalez</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Clayton</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Wauson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Christian</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Q. K.</given-names>
+<surname>Tran</surname>
+</string-name>, “<article-title>Promotion of Nitric Oxide Production: Mechanisms, Strategies, and Possibilities</article-title>,” <source>Frontiers in Physiology</source>
+<volume>16</volume> (<year>2025</year>): <elocation-id>1545044</elocation-id>.<pub-id pub-id-type="pmid">39917079</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fphys.2025.1545044</pub-id><pub-id pub-id-type="pmcid">PMC11799299</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="hsr271950-cit-0032">
+<string-name name-style="western">
+<given-names>T. J.</given-names>
+<surname>Guzik</surname>
+</string-name> and <string-name name-style="western">
+<given-names>D. G.</given-names>
+<surname>Harrison</surname>
+</string-name>, “<article-title>Endothelial NF‐κB as a Mediator of Kidney Damage: The Missing Link Between Systemic Vascular and Renal Disease?</article-title>,” <source>Circulation Research</source>
+<volume>101</volume> (<year>2007</year>): <fpage>227</fpage>–<lpage>229</lpage>.<pub-id pub-id-type="pmid">17673681</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/CIRCRESAHA.107.158295</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="hsr271950-cit-0033">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Aghaei</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. S.</given-names>
+<surname>Bahreiny</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z. D.</given-names>
+<surname>Zayeri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Davari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. M.</given-names>
+<surname>Abolhasani</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Saki</surname>
+</string-name>, “<article-title>Evaluation of Complete Blood Count Parameters in Patients With Diabetes Mellitus: A Systematic Review</article-title>,” <source>Health Science Reports</source>
+<volume>8</volume>, no. <issue>2</issue> (<year>2025</year>): <elocation-id>e70488</elocation-id>.<pub-id pub-id-type="pmid">39995796</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/hsr2.70488</pub-id><pub-id pub-id-type="pmcid">PMC11847716</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="hsr271950-cit-0034">
+<string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Hedin</surname>
+</string-name> and <string-name name-style="western">
+<given-names>L. P.</given-names>
+<surname>Matic</surname>
+</string-name>, “<article-title>Recent Advances in Therapeutic Targeting of Inflammation in Atherosclerosis</article-title>,” <source>Journal of Vascular Surgery</source>
+<volume>69</volume>, no. <issue>3</issue> (<year>2019</year>): <fpage>944</fpage>–<lpage>951</lpage>.<pub-id pub-id-type="pmid">30591299</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jvs.2018.10.051</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="hsr271950-cit-0035">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Hua</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Xue</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Sun</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Zhu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Xie</surname>
+</string-name>, “<article-title>Aspirin Inhibits MMP‐2 and MMP‐9 Expressions and Activities Through Upregulation of PPARα/γ and TIMP Gene Expressions in ox‐LDL‐Stimulated Macrophages Derived From Human Monocytes</article-title>,” <source>Pharmacology</source>
+<volume>83</volume>, no. <issue>1</issue> (<year>2009</year>): <fpage>18</fpage>–<lpage>25</lpage>.<pub-id pub-id-type="pmid">18971601</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1159/000166183</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="hsr271950-cit-0036">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Wu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X. H.</given-names>
+<surname>Huang</surname>
+</string-name>, et al., “<article-title>Aspirin Suppresses TNF‐α‐Induced MMP‐9 Expression via NF‐κB and MAPK Signaling Pathways in RAW264.7 Cells</article-title>,” <source>Experimental and Therapeutic Medicine</source>
+<volume>14</volume>, no. <issue>6</issue> (<year>2017</year>): <fpage>5597</fpage>–<lpage>5604</lpage>.<pub-id pub-id-type="pmid">29285098</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3892/etm.2017.5252</pub-id><pub-id pub-id-type="pmcid">PMC5740800</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="hsr271950-cit-0037">
+<string-name name-style="western">
+<given-names>Y. J.</given-names>
+<surname>Kang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>U. R.</given-names>
+<surname>Mbonye</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. J.</given-names>
+<surname>DeLong</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Wada</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>W. L.</given-names>
+<surname>Smith</surname>
+</string-name>, “<article-title>Regulation of Intracellular Cyclooxygenase Levels by Gene Transcription and Protein Degradation</article-title>,” <source>Progress in Lipid Research</source>
+<volume>46</volume>, no. <issue>2</issue> (<year>2007</year>): <fpage>108</fpage>–<lpage>125</lpage>.<pub-id pub-id-type="pmid">17316818</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.plipres.2007.01.001</pub-id><pub-id pub-id-type="pmcid">PMC3253738</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="hsr271950-cit-0038">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Dragomir</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Manduteanu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Voinea</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Costache</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Manea</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Simionescu</surname>
+</string-name>, “<article-title>Aspirin Rectifies Calcium Homeostasis, Decreases Reactive Oxygen Species, and Increases NO Production in High Glucose‐Exposed Human Endothelial Cells</article-title>,” <source>Journal of Diabetes and Its Complications</source>
+<volume>18</volume>, no. <issue>5</issue> (<year>2004</year>): <fpage>289</fpage>–<lpage>299</lpage>.<pub-id pub-id-type="pmid">15337503</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jdiacomp.2004.03.003</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="hsr271950-cit-0039">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Blanquart</surname>
+</string-name>, <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>Barbier</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. C.</given-names>
+<surname>Fruchart</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Staels</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Glineur</surname>
+</string-name>, “<article-title>Peroxisome Proliferator‐Activated Receptors: Regulation of Transcriptional Activities and Roles in Inflammation</article-title>,” <source>Journal of Steroid Biochemistry and Molecular Biology</source>
+<volume>85</volume>, no. <issue>2–5</issue> (<year>2003</year>): <fpage>267</fpage>–<lpage>273</lpage>.<pub-id pub-id-type="pmid">12943712</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s0960-0760(03)00214-0</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="hsr271950-cit-0040">
+<string-name name-style="western">
+<given-names>Y.‐Y.</given-names>
+<surname>Qiu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. Y.</given-names>
+<surname>Zeng</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y. Z.</given-names>
+<surname>Zhu</surname>
+</string-name>, “<article-title>Roles of the Peroxisome Proliferator‐Activated Receptors (PPARs) in the Pathogenesis of Nonalcoholic Fatty Liver Disease (NAFLD)</article-title>,” <source>Pharmacological Research</source>
+<volume>192</volume> (<year>2023</year>): <elocation-id>106786</elocation-id>.<pub-id pub-id-type="pmid">37146924</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.phrs.2023.106786</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="hsr271950-cit-0041">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. K.</given-names>
+<surname>Colby</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Zuo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Jaoude</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Wei</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Shureiqi</surname>
+</string-name>, “<article-title>The Role of PPAR‐δ in Metabolism, Inflammation, and Cancer: Many Characters of a Critical Transcription Factor</article-title>,” <source>International Journal of Molecular Sciences</source>
+<volume>19</volume>, no. <issue>11</issue> (<year>2018</year>): <fpage>3339</fpage>.<pub-id pub-id-type="pmid">30373124</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/ijms19113339</pub-id><pub-id pub-id-type="pmcid">PMC6275063</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0042"><label>42</label><mixed-citation publication-type="journal" id="hsr271950-cit-0042">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Marx</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Duez</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. C.</given-names>
+<surname>Fruchart</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Staels</surname>
+</string-name>, “<article-title>Peroxisome Proliferator‐Activated Receptors and Atherogenesis: Regulators of Gene Expression in Vascular Cells</article-title>,” <source>Circulation Research</source>
+<volume>94</volume>, no. <issue>9</issue> (<year>2004</year>): <fpage>1168</fpage>–<lpage>1178</lpage>.<pub-id pub-id-type="pmid">15142970</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/01.RES.0000127122.22685.0A</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0043"><label>43</label><mixed-citation publication-type="journal" id="hsr271950-cit-0043">
+<string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Sobolev</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Tchepourina</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Soboleva</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Denisova</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Korsunskaya</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Mezentsev</surname>
+</string-name>, “<article-title>PPAR‐γ in Melanoma and Immune Cells: Insights Into Disease Pathogenesis and Therapeutic Implications</article-title>,” <source>Cells</source>
+<volume>14</volume>, no. <issue>7</issue> (<year>2025</year>): <fpage>534</fpage>.<pub-id pub-id-type="pmid">40214488</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/cells14070534</pub-id><pub-id pub-id-type="pmcid">PMC11989151</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0044"><label>44</label><mixed-citation publication-type="journal" id="hsr271950-cit-0044">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Zheng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Shao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Zheng</surname>
+</string-name>, et al., “<article-title>PPARs in Atherosclerosis: The Spatial and Temporal Features From Mechanism to Druggable Targets</article-title>,” <source>Journal of Advanced Research</source>
+<volume>69</volume> (<year>2025</year>): <fpage>225</fpage>–<lpage>244</lpage>.<pub-id pub-id-type="pmid">38555000</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jare.2024.03.020</pub-id><pub-id pub-id-type="pmcid">PMC11954843</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0045"><label>45</label><mixed-citation publication-type="journal" id="hsr271950-cit-0045">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Xue</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. N.</given-names>
+<surname>Hua</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. L.</given-names>
+<surname>Xie</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Z. L.</given-names>
+<surname>Gu</surname>
+</string-name>, “<article-title>Aspirin Inhibits MMP‐9 mRNA Expression and Release via the PPARα/γ and COX‐2/mPGES‐1‐Mediated Pathways in Macrophages Derived From THP‐1 Cells</article-title>,” <source>Biomedicine &amp; Pharmacotherapy</source>
+<volume>64</volume>, no. <issue>2</issue> (<year>2010</year>): <fpage>118</fpage>–<lpage>123</lpage>.<pub-id pub-id-type="pmid">19880272</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.biopha.2009.04.033</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0046"><label>46</label><mixed-citation publication-type="journal" id="hsr271950-cit-0046">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Shu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Wong</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Zhou</surname>
+</string-name>, et al., “<article-title>Activation of PPARα or γ Reduces Secretion of Matrix Metalloproteinase 9 but Not Interleukin 8 From Human Monocytic THP‐1 Cells</article-title>,” <source>Biochemical and Biophysical Research Communications</source>
+<volume>267</volume>, no. <issue>1</issue> (<year>2000</year>): <fpage>345</fpage>–<lpage>349</lpage>.<pub-id pub-id-type="pmid">10623622</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1006/bbrc.1999.1968</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0047"><label>47</label><mixed-citation publication-type="journal" id="hsr271950-cit-0047">
+<string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Yue</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Lu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Wei</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Wei</surname>
+</string-name>, “<article-title>Role of Lysosomes in Physiological Activities, Diseases, and Therapy</article-title>,” <source>Journal of Hematology &amp; Oncology</source>
+<volume>14</volume>, no. <issue>1</issue> (<year>2021</year>): <fpage>79</fpage>.<pub-id pub-id-type="pmid">33990205</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s13045-021-01087-1</pub-id><pub-id pub-id-type="pmcid">PMC8120021</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0048"><label>48</label><mixed-citation publication-type="journal" id="hsr271950-cit-0048">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>He</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Liang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Shui</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Lei</surname>
+</string-name>, “<article-title>Aryl Hydrocarbon Receptor: A Bridge Linking Immuno‐Inflammation and Metabolism in Atherosclerosis</article-title>,” <source>Biochemical Pharmacology</source>
+<volume>216</volume> (<year>2023</year>): <elocation-id>115744</elocation-id>.<pub-id pub-id-type="pmid">37579858</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.bcp.2023.115744</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0049"><label>49</label><mixed-citation publication-type="journal" id="hsr271950-cit-0049">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Wagner</surname>
+</string-name> and <string-name name-style="western">
+<given-names>K.‐D.</given-names>
+<surname>Wagner</surname>
+</string-name>, “<article-title>Pharmacological Utility of PPAR Modulation for Angiogenesis in Cardiovascular Disease</article-title>,” <source>International Journal of Molecular Sciences</source>
+<volume>24</volume>, no. <issue>3</issue> (<year>2023</year>): <fpage>2345</fpage>.<pub-id pub-id-type="pmid">36768666</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/ijms24032345</pub-id><pub-id pub-id-type="pmcid">PMC9916802</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0050"><label>50</label><mixed-citation publication-type="journal" id="hsr271950-cit-0050">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Iwamoto</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Abe‐Dohmae</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Lu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Yokoyama</surname>
+</string-name>, “<article-title>Involvement of Protein Kinase D in Phosphorylation and Increase of DNA Binding of Activator Protein 2α to Downregulate ATP‐Binding Cassette Transporter A1</article-title>,” <source>Arteriosclerosis, Thrombosis, and Vascular Biology</source>
+<volume>28</volume>, no. <issue>12</issue> (<year>2008</year>): <fpage>2282</fpage>–<lpage>2287</lpage>.<pub-id pub-id-type="pmid">18845787</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/ATVBAHA.108.174714</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0051"><label>51</label><mixed-citation publication-type="journal" id="hsr271950-cit-0051">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Shi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Xiao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Tian</surname>
+</string-name>, et al., “<article-title>Activating Enhancer‐Binding Protein‐2α Induces Cyclooxygenase‐2 Expression and Promotes Nasopharyngeal Carcinoma Growth</article-title>,” <source>Oncotarget</source>
+<volume>6</volume>, no. <issue>7</issue> (<year>2015</year>): <fpage>5005</fpage>–<lpage>5021</lpage>.<pub-id pub-id-type="pmid">25669978</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.18632/oncotarget.3215</pub-id><pub-id pub-id-type="pmcid">PMC4467130</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0052"><label>52</label><mixed-citation publication-type="journal" id="hsr271950-cit-0052">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Zhang</surname>
+</string-name>, et al., “<article-title>Activation of AMP‐Activated Protein Kinase α2 by Nicotine Instigates Formation of Abdominal Aortic Aneurysms in Mice In Vivo</article-title>,” <source>Nature Medicine</source>
+<volume>18</volume>, no. <issue>6</issue> (<year>2012</year>): <fpage>902</fpage>–<lpage>910</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nm.2711</pub-id><pub-id pub-id-type="pmcid">PMC3559018</pub-id><pub-id pub-id-type="pmid">22561688</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0053"><label>53</label><mixed-citation publication-type="journal" id="hsr271950-cit-0053">
+<string-name name-style="western">
+<given-names>W. J.</given-names>
+<surname>Liang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. N.</given-names>
+<surname>Zhou</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Shan</surname>
+</string-name>, et al., “<article-title>AMPKα Inactivation Destabilizes Atherosclerotic Plaque in Streptozotocin‐Induced Diabetic Mice Through AP‐2α/miRNA‐124 Axis</article-title>,” <source>Journal of Molecular Medicine</source>
+<volume>96</volume>, no. <issue>5</issue> (<year>2018</year>): <fpage>403</fpage>–<lpage>412</lpage>.<pub-id pub-id-type="pmid">29502204</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00109-018-1627-8</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0054"><label>54</label><mixed-citation publication-type="journal" id="hsr271950-cit-0054">
+<string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Chinetti</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. G.</given-names>
+<surname>Gbaguidi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Griglio</surname>
+</string-name>, et al., “<article-title>CLA‐1/SR‐BI Is Expressed in Atherosclerotic Lesion Macrophages and Regulated by Activators of Peroxisome Proliferator‐Activated Receptors</article-title>,” <source>Circulation</source>
+<volume>101</volume>, no. <issue>20</issue> (<year>2000</year>): <fpage>2411</fpage>–<lpage>2417</lpage>.<pub-id pub-id-type="pmid">10821819</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/01.cir.101.20.2411</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0055"><label>55</label><mixed-citation publication-type="journal" id="hsr271950-cit-0055">
+<string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Miao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Ding</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Wang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Wang</surname>
+</string-name>, “<article-title>Aspirin Suppresses NFκB1 Expression and Inactivates cAMP Signaling Pathway to Treat Atherosclerosis</article-title>,” <source>Biofactors</source>
+<volume>45</volume>, no. <issue>3</issue> (<year>2019</year>): <fpage>343</fpage>–<lpage>354</lpage>.<pub-id pub-id-type="pmid">30633827</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/biof.1487</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0056"><label>56</label><mixed-citation publication-type="journal" id="hsr271950-cit-0056">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Bleda</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>de Haro</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Varela</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Esparza</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Ferruelo</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Acin</surname>
+</string-name>, “<article-title>NLRP1 Inflammasome, and Not NLRP3, Is the Key in the Shift to Proinflammatory State on Endothelial Cells in Peripheral Arterial Disease</article-title>,” <source>International Journal of Cardiology</source>
+<volume>172</volume>, no. <issue>2</issue> (<year>2014</year>): <fpage>e282</fpage>–<lpage>e284</lpage>.<pub-id pub-id-type="pmid">24439873</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ijcard.2013.12.201</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0057"><label>57</label><mixed-citation publication-type="journal" id="hsr271950-cit-0057">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>De Haro</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Bleda</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I. V.</given-names>
+<surname>Laime</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Carballido</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Uyaguari</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Acin</surname>
+</string-name>, “<article-title>Aspirin‐Dependent Platelet Inflammatory Inhibition in Healthy Subjects Decreases NLRP‐1 Inflammasome</article-title>,” <source>Annals of Vascular Surgery</source>
+<volume>59</volume> (<year>2019</year>): <fpage>244</fpage>–<lpage>247</lpage>.<pub-id pub-id-type="pmid">31009712</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.avsg.2019.02.008</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0058"><label>58</label><mixed-citation publication-type="journal" id="hsr271950-cit-0058">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Cyrus</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Sung</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Zhao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. D.</given-names>
+<surname>Funk</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Tang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Praticò</surname>
+</string-name>, “<article-title>Effect of Low‐Dose Aspirin on Vascular Inflammation, Plaque Stability, and Atherogenesis in Low‐Density Lipoprotein Receptor‐Deficient Mice</article-title>,” <source>Circulation</source>
+<volume>106</volume>, no. <issue>10</issue> (<year>2002</year>): <fpage>1282</fpage>–<lpage>1287</lpage>.<pub-id pub-id-type="pmid">12208806</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/01.cir.0000027816.54430.96</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0059"><label>59</label><mixed-citation publication-type="journal" id="hsr271950-cit-0059">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Patrono</surname>
+</string-name>, “<article-title>Low‐Dose Aspirin for the Prevention of Atherosclerotic Cardiovascular Disease</article-title>,” <source>European Heart Journal</source>
+<volume>45</volume>, no. <issue>27</issue> (<year>2024</year>): <fpage>2362</fpage>–<lpage>2376</lpage>.<pub-id pub-id-type="pmid">38839268</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/eurheartj/ehae324</pub-id><pub-id pub-id-type="pmcid">PMC11242460</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0060"><label>60</label><mixed-citation publication-type="journal" id="hsr271950-cit-0060">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Husain</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N. P.</given-names>
+<surname>Andrews</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Mulcahy</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. A.</given-names>
+<surname>Panza</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A. A.</given-names>
+<surname>Quyyumi</surname>
+</string-name>, “<article-title>Aspirin Improves Endothelial Dysfunction in Atherosclerosis</article-title>,” <source>Circulation</source>
+<volume>97</volume>, no. <issue>8</issue> (<year>1998</year>): <fpage>716</fpage>–<lpage>720</lpage>.<pub-id pub-id-type="pmid">9498533</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/01.cir.97.8.716</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0061"><label>61</label><mixed-citation publication-type="journal" id="hsr271950-cit-0061">
+<string-name name-style="western">
+<given-names>K. M.</given-names>
+<surname>Rood</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Patel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I. M.</given-names>
+<surname>DeVengencie</surname>
+</string-name>, et al., “<article-title>Aspirin Modulates Production of Pro‐Inflammatory and Pro‐Resolving Mediators in Endothelial Cells</article-title>,” <source>PLoS One</source>
+<volume>18</volume>, no. <issue>4</issue> (<year>2023</year>): <elocation-id>e0283163</elocation-id>.<pub-id pub-id-type="pmid">37098090</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0283163</pub-id><pub-id pub-id-type="pmcid">PMC10128936</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0062"><label>62</label><mixed-citation publication-type="journal" id="hsr271950-cit-0062">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Brox</surname>
+</string-name> and <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Hackstein</surname>
+</string-name>, “<article-title>Physiologically Relevant Aspirin Concentrations Trigger Immunostimulatory Cytokine Production by Human Leukocytes</article-title>,” <source>PLoS One</source>
+<volume>16</volume>, no. <issue>8</issue> (<year>2021</year>): <elocation-id>e0254606</elocation-id>.<pub-id pub-id-type="pmid">34428217</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0254606</pub-id><pub-id pub-id-type="pmcid">PMC8384208</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0063"><label>63</label><mixed-citation publication-type="journal" id="hsr271950-cit-0063">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Zhao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Qi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Li</surname>
+</string-name>, et al., “<article-title>Protective Effects of Aspirin Against Oxidized LDL‐Induced Inflammatory Protein Expression in Human Endothelial Cells</article-title>,” <source>Journal of Cardiovascular Pharmacology</source>
+<volume>51</volume>, no. <issue>1</issue> (<year>2008</year>): <fpage>32</fpage>–<lpage>37</lpage>.<pub-id pub-id-type="pmid">18209566</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/FJC.0b013e318159ebaf</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0064"><label>64</label><mixed-citation publication-type="journal" id="hsr271950-cit-0064">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Dragomir</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Tircol</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Manduteanu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Voinea</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Simionescu</surname>
+</string-name>, “<article-title>Aspirin and PPAR‐α Activators Inhibit Monocyte Chemoattractant Protein‐1 Expression Induced by High Glucose Concentration in Human Endothelial Cells</article-title>,” <source>Vascular Pharmacology</source>
+<volume>44</volume>, no. <issue>6</issue> (<year>2006</year>): <fpage>440</fpage>–<lpage>449</lpage>.<pub-id pub-id-type="pmid">16600694</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.vph.2006.02.006</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0065"><label>65</label><mixed-citation publication-type="journal" id="hsr271950-cit-0065">
+<string-name name-style="western">
+<given-names>Y. M.</given-names>
+<surname>Han</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. J.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. N.</given-names>
+<surname>Jang</surname>
+</string-name>, et al., “<article-title>Aspirin Improves Nonalcoholic Fatty Liver Disease and Atherosclerosis Through Regulation of the PPARδ‐AMPK‐PGC‐1α Pathway in Dyslipidemic Conditions</article-title>,” <source>BioMed Research International</source>
+<volume>2020</volume> (<year>2020</year>): <elocation-id>7806860</elocation-id>.<pub-id pub-id-type="pmid">32258142</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1155/2020/7806860</pub-id><pub-id pub-id-type="pmcid">PMC7106881</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0066"><label>66</label><mixed-citation publication-type="journal" id="hsr271950-cit-0066">
+<string-name name-style="western">
+<given-names>Y. H.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. F.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. R.</given-names>
+<surname>Chen</surname>
+</string-name>, et al., “<article-title>Aspirin Increases Apolipoprotein‐A‐I‐Mediated Cholesterol Efflux via Enhancing Expression of ATP‐Binding Cassette Transporter A1</article-title>,” <source>Pharmacology</source>
+<volume>86</volume>, no. <issue>5–6</issue> (<year>2010</year>): <fpage>320</fpage>–<lpage>326</lpage>.<pub-id pub-id-type="pmid">21088444</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1159/000321727</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0067"><label>67</label><mixed-citation publication-type="journal" id="hsr271950-cit-0067">
+<string-name name-style="western">
+<given-names>Y.‐Y.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. J.</given-names>
+<surname>Hu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Chang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T. Y.</given-names>
+<surname>Tai</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Leu</surname>
+</string-name>, “<article-title>Aspirin Inhibits Monocyte Chemoattractant Protein‐1 and Interleukin‐8 Expression in TNF‐α Stimulated Human Umbilical Vein Endothelial Cells</article-title>,” <source>Atherosclerosis</source>
+<volume>174</volume>, no. <issue>2</issue> (<year>2004</year>): <fpage>207</fpage>–<lpage>213</lpage>.<pub-id pub-id-type="pmid">15136050</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.atherosclerosis.2004.01.024</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0068"><label>68</label><mixed-citation publication-type="journal" id="hsr271950-cit-0068">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Costanzo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Moretti</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V. L.</given-names>
+<surname>Burgio</surname>
+</string-name>, et al., “<article-title>Endothelial Activation by Angiotensin II Through NFκB and p38 Pathways: Involvement of NFκB‐Inducible Kinase (NIK), Free Oxygen Radicals, and Selective Inhibition by Aspirin</article-title>,” <source>Journal of Cellular Physiology</source>
+<volume>195</volume>, no. <issue>3</issue> (<year>2003</year>): <fpage>402</fpage>–<lpage>410</lpage>.<pub-id pub-id-type="pmid">12704649</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/jcp.10191</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0069"><label>69</label><mixed-citation publication-type="journal" id="hsr271950-cit-0069">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Jiang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Zhang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Ou</surname>
+</string-name>, “<article-title>Aspirin Inhibits Fractalkine Expression in Atherosclerotic Plaques and Reduces Atherosclerosis in ApoE Gene Knockout Mice</article-title>,” <source>Cardiovascular Drugs and Therapy</source>
+<volume>24</volume>, no. <issue>1</issue> (<year>2010</year>): <fpage>17</fpage>–<lpage>24</lpage>.<pub-id pub-id-type="pmid">19997773</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10557-009-6210-7</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0070"><label>70</label><mixed-citation publication-type="journal" id="hsr271950-cit-0070">
+<string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Passacquale</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Phinikaridou</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Warboys</surname>
+</string-name>, et al., “<article-title>Aspirin‐Induced Histone Acetylation in Endothelial Cells Enhances Synthesis of the Secreted Isoform of Netrin‐1 Thus Inhibiting Monocyte Vascular Infiltration</article-title>,” <source>British Journal of Pharmacology</source>
+<volume>172</volume>, no. <issue>14</issue> (<year>2015</year>): <fpage>3548</fpage>–<lpage>3564</lpage>.<pub-id pub-id-type="pmid">25824964</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/bph.13144</pub-id><pub-id pub-id-type="pmcid">PMC4507159</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0071"><label>71</label><mixed-citation publication-type="journal" id="hsr271950-cit-0071">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Wehinger</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Tancevski</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Seiler</surname>
+</string-name>, et al., “<article-title>Influence of Aspirin on SR‐BI Expression in Human Carotid Plaques</article-title>,” <source>Atherosclerosis</source>
+<volume>206</volume>, no. <issue>1</issue> (<year>2009</year>): <fpage>234</fpage>–<lpage>238</lpage>.<pub-id pub-id-type="pmid">19268942</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.atherosclerosis.2009.01.034</pub-id><pub-id pub-id-type="pmcid">PMC2964595</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0072"><label>72</label><mixed-citation publication-type="journal" id="hsr271950-cit-0072">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Guo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Zhu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Sun</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Yang</surname>
+</string-name>, “<article-title>The Preventive Effect of Low‐Dose Aspirin in a PPAR‐γ Antagonist Treated Mouse Model of Preeclampsia</article-title>,” <source>BMC Pregnancy and Childbirth</source>
+<volume>22</volume>, no. <issue>1</issue> (<year>2022</year>): <fpage>606</fpage>.<pub-id pub-id-type="pmid">35906540</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12884-022-04901-x</pub-id><pub-id pub-id-type="pmcid">PMC9338524</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0073"><label>73</label><mixed-citation publication-type="journal" id="hsr271950-cit-0073">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. S.</given-names>
+<surname>Shin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. H.</given-names>
+<surname>Kim</surname>
+</string-name>, et al., “<article-title>Molecular Genomic and Epigenomic Characteristics Related to Aspirin and Clopidogrel Resistance</article-title>,” <source>BMC Medical Genomics</source>
+<volume>17</volume>, no. <issue>1</issue> (<year>2024</year>): <fpage>166</fpage>.<pub-id pub-id-type="pmid">38902747</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12920-024-01936-1</pub-id><pub-id pub-id-type="pmcid">PMC11188263</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0074"><label>74</label><mixed-citation publication-type="miscellaneous" id="hsr271950-cit-0074">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Noels</surname>
+</string-name> and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Weber</surname>
+</string-name>, “Fractalkine as an Important Target of Aspirin in the Prevention of Atherogenesis: Editorial to: “Aspirin Inhibits Fractalkine Expression in Atherosclerotic Plaques and Reduces Atherosclerosis in ApoE Gene Knockout Mice” by H. Liu et al.,” <italic toggle="yes">Cardiovascular Drugs and Therapy</italic> 24 (2010): 1–3.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10557-009-6213-4</pub-id><pub-id pub-id-type="pmid">20033269</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0075"><label>75</label><mixed-citation publication-type="journal" id="hsr271950-cit-0075">
+<string-name name-style="western">
+<given-names>B. J.</given-names>
+<surname>Rollins</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Yoshimura</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. J.</given-names>
+<surname>Leonard</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. S.</given-names>
+<surname>Pober</surname>
+</string-name>, “<article-title>Cytokine‐Activated Human Endothelial Cells Synthesize and Secrete a Monocyte Chemoattractant, MCP‐1/JE</article-title>,” <source>American Journal of Pathology</source>
+<volume>136</volume>, no. <issue>6</issue> (<year>1990</year>): <fpage>1229</fpage>–<lpage>1233</lpage>.<pub-id pub-id-type="pmid">2113354</pub-id>
+<pub-id pub-id-type="pmcid">PMC1877579</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0076"><label>76</label><mixed-citation publication-type="journal" id="hsr271950-cit-0076">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Kopp</surname>
+</string-name> and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Ghosh</surname>
+</string-name>, “<article-title>Inhibition of NF‐κB by Sodium Salicylate and Aspirin</article-title>,” <source>Science</source>
+<volume>265</volume>, no. <issue>5174</issue> (<year>1994</year>): <fpage>956</fpage>–<lpage>959</lpage>.<pub-id pub-id-type="pmid">8052854</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.8052854</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0077"><label>77</label><mixed-citation publication-type="journal" id="hsr271950-cit-0077">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Fang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Li</surname>
+</string-name>, et al., “<article-title>Aspirin Inhibits LPS‐Induced Macrophage Activation via the NF‐κB Pathway</article-title>,” <source>Scientific Reports</source>
+<volume>7</volume>, no. <issue>1</issue> (<year>2017</year>): <elocation-id>11549</elocation-id>.<pub-id pub-id-type="pmid">28912509</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41598-017-10720-4</pub-id><pub-id pub-id-type="pmcid">PMC5599518</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0078"><label>78</label><mixed-citation publication-type="journal" id="hsr271950-cit-0078">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Capodanno</surname>
+</string-name> and <string-name name-style="western">
+<given-names>D. J.</given-names>
+<surname>Angiolillo</surname>
+</string-name>, “<article-title>Antithrombotic Therapy in Patients With Chronic Kidney Disease</article-title>,” <source>Circulation</source>
+<volume>125</volume>, no. <issue>21</issue> (<year>2012</year>): <fpage>2649</fpage>–<lpage>2661</lpage>.<pub-id pub-id-type="pmid">22644369</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/CIRCULATIONAHA.111.084996</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0079"><label>79</label><mixed-citation publication-type="journal" id="hsr271950-cit-0079">
+<string-name name-style="western">
+<given-names>S. F.</given-names>
+<surname>Rapa</surname>,</string-name>
+<string-name name-style="western">
+<given-names>B. R.</given-names>
+<surname>Di Iorio</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Campiglia</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Heidland</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Marzocco</surname>
+</string-name>, “<article-title>Inflammation and Oxidative Stress in Chronic Kidney Disease‐Potential Therapeutic Role of Minerals, Vitamins and Plant‐Derived Metabolites</article-title>,” <source>International Journal of Molecular Sciences</source>
+<volume>21</volume>, no. <issue>1</issue> (<year>2019</year>): <elocation-id>263</elocation-id>, <pub-id pub-id-type="doi">10.3390/ijms21010263</pub-id>.<pub-id pub-id-type="pmid">31906008</pub-id>
+<pub-id pub-id-type="pmcid">PMC6981831</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0080"><label>80</label><mixed-citation publication-type="journal" id="hsr271950-cit-0080">
+<string-name name-style="western">
+<given-names>R. E.</given-names>
+<surname>Gerszten</surname>
+</string-name> and <string-name name-style="western">
+<given-names>A. M.</given-names>
+<surname>Tager</surname>
+</string-name>, “<article-title>The Monocyte in Atherosclerosis—Should I Stay or Should I Go Now?</article-title>,” <source>New England Journal of Medicine</source>
+<volume>366</volume>, no. <issue>18</issue> (<year>2012</year>): <fpage>1734</fpage>–<lpage>1736</lpage>.<pub-id pub-id-type="pmid">22551134</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1056/NEJMcibr1200164</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0081"><label>81</label><mixed-citation publication-type="journal" id="hsr271950-cit-0081">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Weber</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Erl</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Pietsch</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P. C.</given-names>
+<surname>Weber</surname>
+</string-name>, “<article-title>Aspirin Inhibits Nuclear Factor–κB Mobilization and Monocyte Adhesion in Stimulated Human Endothelial Cells</article-title>,” <source>Circulation</source>
+<volume>91</volume>, no. <issue>7</issue> (<year>1995</year>): <fpage>1914</fpage>–<lpage>1917</lpage>.<pub-id pub-id-type="pmid">7534663</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/01.cir.91.7.1914</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0082"><label>82</label><mixed-citation publication-type="journal" id="hsr271950-cit-0082">
+<string-name name-style="western">
+<given-names>H. B.</given-names>
+<surname>Brewer</surname>, <suffix>Jr.</suffix>
+</string-name>, <string-name name-style="western">
+<given-names>A. T.</given-names>
+<surname>Remaley</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. B.</given-names>
+<surname>Neufeld</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Basso</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Joyce</surname>
+</string-name>, “<article-title>Regulation of Plasma High‐Density Lipoprotein Levels by the ABCA1 Transporter and the Emerging Role of High‐Density Lipoprotein in the Treatment of Cardiovascular Disease</article-title>,” <source>Arteriosclerosis, Thrombosis, and Vascular Biology</source>
+<volume>24</volume>, no. <issue>10</issue> (<year>2004</year>): <fpage>1755</fpage>–<lpage>1760</lpage>.<pub-id pub-id-type="pmid">15319263</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/01.ATV.0000142804.27420.5b</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0083"><label>83</label><mixed-citation publication-type="journal" id="hsr271950-cit-0083">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Xie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Peng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>wang</surname>
+</string-name>, et al., “<article-title>QiShenYiQi Pill Inhibits Atherosclerosis by Promoting Reverse Cholesterol Transport PPARγ‐LXRα/β‐ABCA1 Pathway</article-title>,” <source>Journal of Ethnopharmacology</source>
+<volume>315</volume> (<year>2023</year>): <elocation-id>116684</elocation-id>.<pub-id pub-id-type="pmid">37230281</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jep.2023.116684</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0084"><label>84</label><mixed-citation publication-type="journal" id="hsr271950-cit-0084">
+<string-name name-style="western">
+<given-names>U. E.</given-names>
+<surname>Laila</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z. L.</given-names>
+<surname>Zhao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Lui</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Z. X.</given-names>
+<surname>Xu</surname>
+</string-name>, “<article-title>Aspirin in Cancer Therapy: Pharmacology and Nanotechnology Advances</article-title>,” <source>International Journal of Nanomedicine</source>
+<volume>20</volume> (<year>2025</year>): <fpage>2327</fpage>–<lpage>2365</lpage>.<pub-id pub-id-type="pmid">40017626</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2147/IJN.S505636</pub-id><pub-id pub-id-type="pmcid">PMC11866938</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0085"><label>85</label><mixed-citation publication-type="journal" id="hsr271950-cit-0085">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Huxford</surname>
+</string-name> and <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Ghosh</surname>
+</string-name>, “<article-title>A Structural Guide to Proteins of the NF‐κB Signaling Module</article-title>,” <source>Cold Spring Harbor Perspectives in Biology</source>
+<volume>1</volume>, no. <issue>3</issue> (<year>2009</year>): <elocation-id>a000075</elocation-id>.<pub-id pub-id-type="pmid">20066103</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1101/cshperspect.a000075</pub-id><pub-id pub-id-type="pmcid">PMC2773632</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0086"><label>86</label><mixed-citation publication-type="journal" id="hsr271950-cit-0086">
+<string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Tancevski</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Weliinger</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Schgoer</surname>
+</string-name>, et al., “<article-title>Aspirin Regulates Expression and Function of Scavenger Receptor‐BI in Macrophages: Studies in Primary Human Macrophages and in Mice</article-title>,” <source>FASEB Journal</source>
+<volume>20</volume>, no. <issue>9</issue> (<year>2006</year>): <fpage>1328</fpage>–<lpage>1335</lpage>.<pub-id pub-id-type="pmid">16816107</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1096/fj.05-5368com</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0087"><label>87</label><mixed-citation publication-type="journal" id="hsr271950-cit-0087">
+<string-name name-style="western">
+<given-names>D. C.</given-names>
+<surname>Swinney</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. Z.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. E.</given-names>
+<surname>Scarafia</surname>
+</string-name>, et al., “<article-title>A Small Molecule Ubiquitination Inhibitor Blocks NF‐κB‐Dependent Cytokine Expression in Cells and Rats</article-title>,” <source>Journal of Biological Chemistry</source>
+<volume>277</volume>, no. <issue>26</issue> (<year>2002</year>): <fpage>23573</fpage>–<lpage>23581</lpage>.<pub-id pub-id-type="pmid">11950839</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1074/jbc.M200842200</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0088"><label>88</label><mixed-citation publication-type="journal" id="hsr271950-cit-0088">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Yiqin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Meilin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Jie</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Keping</surname>
+</string-name>, “<article-title>Aspirin Inhibits MMP‐2 and MMP‐9 Expression and Activity Through PPARα/γ and TIMP‐1‐Mediated Mechanisms in Cultured Mouse Celiac Macrophages</article-title>,” <source>Inflammation</source>
+<volume>32</volume>, no. <issue>4</issue> (<year>2009</year>): <fpage>233</fpage>–<lpage>241</lpage>.<pub-id pub-id-type="pmid">19462226</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10753-009-9125-3</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0089"><label>89</label><mixed-citation publication-type="journal" id="hsr271950-cit-0089">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Dai</surname>
+</string-name> and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Ge</surname>
+</string-name>, “<article-title>Clinical Use of Aspirin in Treatment and Prevention of Cardiovascular Disease</article-title>,” <source>Thrombosis</source>
+<volume>2012</volume>, no. <issue>1</issue> (<year>2012</year>): <elocation-id>245037</elocation-id>.<pub-id pub-id-type="pmid">22195280</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1155/2012/245037</pub-id><pub-id pub-id-type="pmcid">PMC3236445</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0090"><label>90</label><mixed-citation publication-type="journal" id="hsr271950-cit-0090">
+<string-name name-style="western">
+<given-names>M. T.</given-names>
+<surname>Brown</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. S.</given-names>
+<surname>Bortfeld</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. S.</given-names>
+<surname>Sperling</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>N. K.</given-names>
+<surname>Wenger</surname>
+</string-name>, “<article-title>Redefining the Roles of Aspirin Across the Spectrum of Cardiovascular Disease Prevention</article-title>,” <source>Current Cardiology Reviews</source>
+<volume>19</volume> (<year>2023</year>): <fpage>9</fpage>–<lpage>22</lpage>, <pub-id pub-id-type="doi">10.2174/1573403X19666230502163828</pub-id>.<pub-id pub-id-type="pmid">37132104</pub-id>
+<pub-id pub-id-type="pmcid">PMC10636801</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0091"><label>91</label><mixed-citation publication-type="journal" id="hsr271950-cit-0091">
+<string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Gaziano</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Brotons</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Coppolecchia</surname>
+</string-name>, et al., “<article-title>Use of Aspirin to Reduce Risk of Initial Vascular Events in Patients at Moderate Risk of Cardiovascular Disease (ARRIVE): A Randomised, Double‐Blind, Placebo‐Controlled Trial</article-title>,” <source>Lancet</source>
+<volume>392</volume>, no. <issue>10152</issue> (<year>2018</year>): <fpage>1036</fpage>–<lpage>1046</lpage>.<pub-id pub-id-type="pmid">30158069</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/S0140-6736(18)31924-X</pub-id><pub-id pub-id-type="pmcid">PMC7255888</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0092"><label>92</label><mixed-citation publication-type="journal" id="hsr271950-cit-0092">
+<string-name name-style="western">
+<given-names>B. M.</given-names>
+<surname>Kuehn</surname>
+</string-name>, “<article-title>Aspirin for Primary Prevention Takes a Hit With New Trial Results</article-title>,” <source>Circulation</source>
+<volume>138</volume>, no. <issue>23</issue> (<year>2018</year>): <fpage>2713</fpage>–<lpage>2714</lpage>.<pub-id pub-id-type="pmid">30571274</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/CIRCULATIONAHA.118.038570</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0093"><label>93</label><mixed-citation publication-type="journal" id="hsr271950-cit-0093">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Wolfe</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. C.</given-names>
+<surname>Broder</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Zhou</surname>
+</string-name>, et al., “<article-title>Aspirin, Cardiovascular Events, and Major Bleeding in Older Adults: Extended Follow‐Up of the ASPREE Trial</article-title>,” <source>European Heart Journal</source>
+<volume>46</volume>, no. <issue>42</issue> (<year>2025</year>): <fpage>4410</fpage>–<lpage>4422</lpage>.<pub-id pub-id-type="pmid">40796244</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/eurheartj/ehaf514</pub-id><pub-id pub-id-type="pmcid">PMC12596486</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0094"><label>94</label><mixed-citation publication-type="journal" id="hsr271950-cit-0094">
+<string-name name-style="western">
+<given-names>J. W.</given-names>
+<surname>McEvoy</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Keane</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Ng</surname>
+</string-name>, “<article-title>Primary Prevention Aspirin Among the Elderly: Challenges in Translating Trial Evidence to the Clinic</article-title>,” <source>British Journal of Cardiology</source>
+<volume>27</volume>, no. <issue>1</issue> (<year>2020</year>): <fpage>7</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.5837/bjc.2020.007</pub-id><pub-id pub-id-type="pmcid">PMC8793932</pub-id><pub-id pub-id-type="pmid">35747418</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0095"><label>95</label><mixed-citation publication-type="journal" id="hsr271950-cit-0095">
+<string-name name-style="western">
+<given-names>L. A.</given-names>
+<surname>Stark</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Reid</surname>
+</string-name>, <string-name name-style="western">
+<given-names>O. J.</given-names>
+<surname>Sansom</surname>
+</string-name>, et al., “<article-title>Aspirin Activates the NF‐κB Signalling Pathway and Induces Apoptosis in Intestinal Neoplasia in Two In Vivo Models of Human Colorectal Cancer</article-title>,” <source>Carcinogenesis</source>
+<volume>28</volume>, no. <issue>5</issue> (<year>2007</year>): <fpage>968</fpage>–<lpage>976</lpage>.<pub-id pub-id-type="pmid">17132819</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/carcin/bgl220</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0096"><label>96</label><mixed-citation publication-type="journal" id="hsr271950-cit-0096">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Wolfe</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. C.</given-names>
+<surname>Broder</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Zhou</surname>
+</string-name>, et al., “<article-title>Aspirin, Cardiovascular Events, and Major Bleeding in Older Adults: Extended Follow‐Up of the ASPREE Trial</article-title>,” <source>European Heart Journal</source>
+<volume>46</volume>, no. <issue>42</issue> (<year>2025</year>): <fpage>4410</fpage>–<lpage>4422</lpage>.<pub-id pub-id-type="pmid">40796244</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/eurheartj/ehaf514</pub-id><pub-id pub-id-type="pmcid">PMC12596486</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0097"><label>97</label><mixed-citation publication-type="journal" id="hsr271950-cit-0097">
+<string-name name-style="western">
+<given-names>E. T.</given-names>
+<surname>Hawk</surname>
+</string-name> and <string-name name-style="western">
+<given-names>K. C.</given-names>
+<surname>Maresso</surname>
+</string-name>, “<article-title>The ASPREE Trial: An Unanticipated Stimulus for Greater Precision in Prevention?</article-title>,” <source>Journal of the National Cancer Institute</source>
+<volume>113</volume>, no. <issue>3</issue> (<year>2021</year>): <fpage>221</fpage>–<lpage>222</lpage>.<pub-id pub-id-type="pmid">32778864</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/jnci/djaa115</pub-id><pub-id pub-id-type="pmcid">PMC7936052</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0098"><label>98</label><mixed-citation publication-type="journal" id="hsr271950-cit-0098">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Wagner</surname>
+</string-name> and <string-name name-style="western">
+<given-names>K. D.</given-names>
+<surname>Wagner</surname>
+</string-name>, “<article-title>Pharmacological Utility of PPAR Modulation for Angiogenesis in Cardiovascular Disease</article-title>,” <source>International Journal of Molecular Sciences</source>
+<volume>24</volume>, no. <issue>3</issue> (<year>2023</year>): <fpage>2345</fpage>.<pub-id pub-id-type="pmid">36768666</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/ijms24032345</pub-id><pub-id pub-id-type="pmcid">PMC9916802</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0099"><label>99</label><mixed-citation publication-type="journal" id="hsr271950-cit-0099">
+<string-name name-style="western">
+<given-names>O.</given-names>
+<surname>Uwishema</surname>
+</string-name> and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Boon</surname>
+</string-name>, “<article-title>Bridging the Gaps: Addressing Inequities in Neurological Care for Underserved Populations</article-title>,” <source>European Journal of Neurology</source>
+<volume>32</volume>, no. <issue>2</issue> (<year>2025</year>): <elocation-id>e70073</elocation-id>.<pub-id pub-id-type="pmid">39912252</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/ene.70073</pub-id><pub-id pub-id-type="pmcid">PMC11799841</pub-id></mixed-citation></ref><ref id="hsr271950-bib-0100"><label>100</label><mixed-citation publication-type="journal" id="hsr271950-cit-0100">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Mugisha</surname>
+</string-name>, <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>Uwishema</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. S.</given-names>
+<surname>Fatokun</surname>
+</string-name>, et al., “<article-title>AI‐Enhanced Telemedicine for Personalized Antiretroviral Therapy in HIV Patients With Neurological Comorbidities: A Narrative Review</article-title>,” <source>Postgraduate Medical Journal</source>
+<volume>101</volume>, no. <issue>1202</issue> (<year>2025</year>): <fpage>1335</fpage>–<lpage>1343</lpage>.<pub-id pub-id-type="pmid">40377263</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/postmj/qgaf069</pub-id></mixed-citation></ref></ref-list></back></article>

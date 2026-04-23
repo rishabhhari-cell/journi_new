@@ -1,0 +1,1506 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="jex270123" xml:lang="en" article-type="research-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">J Extracell Biol</journal-id><journal-id journal-id-type="iso-abbrev">J Extracell Biol</journal-id><journal-id journal-id-type="pmc-domain-id">4594</journal-id><journal-id journal-id-type="pmc-domain">jebiol</journal-id><journal-id journal-id-type="publisher-id">JEX2</journal-id><journal-title-group><journal-title>Journal of Extracellular Biology</journal-title></journal-title-group><issn pub-type="epub">2768-2811</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13077561</article-id><article-id pub-id-type="pmcid-ver">PMC13077561.1</article-id><article-id pub-id-type="pmcaid">13077561</article-id><article-id pub-id-type="pmcaiid">13077561</article-id><article-id pub-id-type="pmid">41988016</article-id><article-id pub-id-type="doi">10.1002/jex2.70123</article-id><article-id pub-id-type="publisher-id">JEX270123</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Research Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group></article-categories><title-group><article-title>Circulating Tumour DNA and Extracellular Vesicle‐Associated DNA as Biomarkers for Cancer Detection: A Systematic Review and Meta‐Analysis</article-title></title-group><contrib-group><contrib id="jex270123-cr-0001" contrib-type="author"><name name-style="western"><surname>Wu</surname><given-names initials="T">Tad</given-names></name><xref rid="jex270123-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jex270123-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jex270123-cr-0002" contrib-type="author"><name name-style="western"><surname>Dickinson</surname><given-names initials="K">Kyle</given-names></name><xref rid="jex270123-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="jex270123-cr-0003" contrib-type="author"><name name-style="western"><surname>Schiller</surname><given-names initials="I">Ian</given-names></name><xref rid="jex270123-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="jex270123-cr-0004" contrib-type="author"><name name-style="western"><surname>Tsering</surname><given-names initials="T">Thupten</given-names></name><xref rid="jex270123-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jex270123-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jex270123-cr-0005" contrib-type="author"><name name-style="western"><surname>Chen</surname><given-names initials="Y">Yunxi</given-names></name><xref rid="jex270123-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jex270123-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jex270123-cr-0006" contrib-type="author"><name name-style="western"><surname>Nadeau</surname><given-names initials="A">Amélie</given-names></name><xref rid="jex270123-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jex270123-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jex270123-cr-0007" contrib-type="author"><name name-style="western"><surname>Dendukuri</surname><given-names initials="N">Nandini</given-names></name><xref rid="jex270123-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="jex270123-cr-0008" contrib-type="author"><name name-style="western"><surname>Agnihotram</surname><given-names initials="VR">Venkata Ramana</given-names></name><xref rid="jex270123-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="jex270123-cr-0009" contrib-type="author" corresp="yes"><name name-style="western"><surname>Burnier</surname><given-names initials="JV">Julia V.</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-2184-2157</contrib-id><xref rid="jex270123-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jex270123-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><xref rid="jex270123-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref><address><email>julia.burnier@mcgill.ca</email></address></contrib></contrib-group><aff id="jex270123-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Research Institute of the McGill University Health Centre</named-content>
+<institution>McGill University</institution>
+<city>Montreal</city>
+<named-content content-type="country-part">QC</named-content>
+<country country="CA">Canada</country>
+</aff><aff id="jex270123-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Department of Pathology</named-content>
+<institution>McGill University</institution>
+<city>Montreal</city>
+<named-content content-type="country-part">QC</named-content>
+<country country="CA">Canada</country>
+</aff><aff id="jex270123-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Gerald Bronfman Department of Oncology</named-content>
+<institution>McGill University</institution>
+<city>Montreal</city>
+<named-content content-type="country-part">QC</named-content>
+<country country="CA">Canada</country>
+</aff><pub-date pub-type="epub"><day>14</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>5</volume><issue seq="40">4</issue><issue-id pub-id-type="pmc-issue-id">510813</issue-id><issue-id pub-id-type="doi">10.1002/jex2.v5.4</issue-id><elocation-id>e70123</elocation-id><history><date date-type="rev-recd"><day>31</day><month>12</month><year>2025</year></date><date date-type="received"><day>08</day><month>11</month><year>2025</year></date><date date-type="accepted"><day>13</day><month>2</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>14</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>15</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-16 09:25:13.197"><day>16</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Journal of Extracellular Biology</italic> published by Wiley Periodicals, LLC on behalf of the International Society for Extracellular Vesicles.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbyncndlicense">https://creativecommons.org/licenses/by-nc-nd/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc-nd/4.0/">http://creativecommons.org/licenses/by-nc-nd/4.0/</ext-link> License, which permits use and distribution in any medium, provided the original work is properly cited, the use is non‐commercial and no modifications or adaptations are made.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="JEX2-5-e70123.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:JEX2-5-e70123.pdf"/><abstract><title>ABSTRACT</title><p>Liquid biopsy is an emerging tool that allows the detection and monitoring of tumours through the analysis of various analytes in biofluids like blood. An important component of liquid biopsy is circulating tumour (ct) DNA, small fragments of DNA that are released by cancer cells, which have been shown to be a robust biomarker and are already in use clinically. Recent research indicates that cancer cells can also release DNA via extracellular vesicles (EVs), and this EV‐associated DNA (EV‐DNA) has emerged as another promising biomarker for several tumour types. However, its clinical utility remains under investigation. In this meta‐analysis, we compared the sensitivity and specificity of EV‐DNA and ctDNA for detecting cancer‐related mutations. Using the <underline underline-style="single">e</underline>xtracellular <underline underline-style="single">v</underline>esicle‐<underline underline-style="single">a</underline>ssociated <underline underline-style="single">D</underline>NA <underline underline-style="single">d</underline>atabase (EV‐ADD), which compiles all published literature on EV‐DNA, we systematically mined data comparing ctDNA and EV‐DNA in liquid biopsy as a cancer biomarker. After applying our inclusion criteria, we identified and analysed 12 studies involving 765 patients. Summary estimates showed a sensitivity of 64.6% (95% credible interval: 48.8%–79.4%) and specificity of 93.3% (95% credible interval: 86.8%–96.9%) for EV‐DNA, compared to a sensitivity of 70.0% (95% credible interval: 54.7%–83.4%) and a specificity of 90.6% (95% credible interval: 80.8%–96.0%) for ctDNA. Additionally, studies with higher EV‐ADD metric scores, reflecting adherence to MISEV guidelines, demonstrated higher probability of increased sensitivity and specificity for EV‐DNA and increased sensitivity for ctDNA. This analysis underscores the potential of EV‐DNA as a complementary biomarker to ctDNA in cancer detection. Future research should focus on larger patient cohorts and expand to other biofluids.</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="jex270123-kwd-0001">cancer biomarkers</kwd><kwd id="jex270123-kwd-0002">ctDNA</kwd><kwd id="jex270123-kwd-0003">EV‐ADD</kwd><kwd id="jex270123-kwd-0004">EV‐associated DNA</kwd><kwd id="jex270123-kwd-0005">liquid biopsy</kwd></kwd-group><counts><fig-count count="8"/><table-count count="1"/><page-count count="16"/><word-count count="10713"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC-ND</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:14.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec id="jex270123-sec-0010"><label>1</label><title>Introduction</title><p>Cancer remains a major clinical challenge despite significant advances in diagnostics and precision therapeutics. In the era of targeted treatments, molecular profiling of tumour tissue is crucial to personalise care. Although tissue biopsy has been traditionally used to determine a tumour's histologic grade and genetic alterations, its invasiveness limits the ability to perform real‐time, longitudinal sampling. Moreover, tissue biopsies can often fail to capture tumour heterogeneity because they provide only a spatially and temporally limited snapshot of a tumour (reviewed in Crowley et al. <xref rid="jex270123-bib-0001" ref-type="bibr">2013</xref>). To address this need, liquid biopsy involves the analysis of bodily fluids, such as blood, urine, saliva, pleural effusion, and cerebrospinal fluid, to detect biomarkers less invasively. In the context of cancer, it allows longitudinal monitoring of tumour burden, treatment response and outcome. Many components from these bodily fluids can serve as liquid biopsy analytes, such as circulating tumour cells, extracellular vesicles (EVs), and cell‐free (cf) DNA and miRNAs (reviewed in Valencia and Montuenga <xref rid="jex270123-bib-0002" ref-type="bibr">2021</xref>). EV‐associated components, such as RNA, proteins and more recently, DNA (EV‐DNA), have shown potential to be valuable cancer biomarkers (reviewed in Valencia and Montuenga <xref rid="jex270123-bib-0002" ref-type="bibr">2021</xref> and Tsering et al. <xref rid="jex270123-bib-0003" ref-type="bibr">2024</xref>).</p><p>cfDNA consists of small DNA fragments that are released from cells mainly due to cell death, including apoptosis and necrosis, as well as through active secretion (Moss et al. <xref rid="jex270123-bib-0004" ref-type="bibr">2018</xref>; Mattox et al. <xref rid="jex270123-bib-0005" ref-type="bibr">2023</xref>). Circulating free DNA levels in blood serve as an independent prognostic marker as they correlate with tumour burden in various cancers like metastatic melanoma (Valpione et al. <xref rid="jex270123-bib-0006" ref-type="bibr">2018</xref>), metastatic breast cancer (Cheng et al. <xref rid="jex270123-bib-0007" ref-type="bibr">2018</xref>) and oral squamous cell carcinoma (Eboshida et al. <xref rid="jex270123-bib-0008" ref-type="bibr">2024</xref>). Circulating tumour DNA (ctDNA) is the fraction of cfDNA derived from tumours and can be recognised by characteristics from the originating cancer cells (reviewed in Siravegna et al. <xref rid="jex270123-bib-0009" ref-type="bibr">2019</xref> and Pessoa et al. <xref rid="jex270123-bib-0010" ref-type="bibr">2020</xref>), like mutations (Husain et al. <xref rid="jex270123-bib-0011" ref-type="bibr">2022</xref>; Zhang et al. <xref rid="jex270123-bib-0012" ref-type="bibr">2020</xref>; Kirchweger et al. <xref rid="jex270123-bib-0013" ref-type="bibr">2022</xref>; Wang et al. <xref rid="jex270123-bib-0014" ref-type="bibr">2022</xref>; Tie et al. <xref rid="jex270123-bib-0015" ref-type="bibr">2016</xref>; Liu et al. <xref rid="jex270123-bib-0016" ref-type="bibr">2021</xref>; Tie et al. <xref rid="jex270123-bib-0017" ref-type="bibr">2022</xref>; Moding et al. <xref rid="jex270123-bib-0018" ref-type="bibr">2020</xref>), methylation (Stutheit‐Zhao et al. <xref rid="jex270123-bib-0019" ref-type="bibr">2024</xref>; Grützmann et al. <xref rid="jex270123-bib-0020" ref-type="bibr">2008</xref>; Fiano et al. <xref rid="jex270123-bib-0021" ref-type="bibr">2014</xref>; Wong et al. <xref rid="jex270123-bib-0022" ref-type="bibr">2003</xref>), fragmentation patterns (Underhill et al. <xref rid="jex270123-bib-0023" ref-type="bibr">2016</xref>; Jiang et al. <xref rid="jex270123-bib-0024" ref-type="bibr">2015</xref>; Ivanov et al. <xref rid="jex270123-bib-0025" ref-type="bibr">2015</xref>; Liu <xref rid="jex270123-bib-0026" ref-type="bibr">2022</xref>; Thierry <xref rid="jex270123-bib-0027" ref-type="bibr">2023</xref>) and viral sequences (Ferrier et al. <xref rid="jex270123-bib-0028" ref-type="bibr">2023</xref>; Chera et al. <xref rid="jex270123-bib-0029" ref-type="bibr">2020</xref>; Leung et al. <xref rid="jex270123-bib-0030" ref-type="bibr">2021</xref>; Chan et al. <xref rid="jex270123-bib-0031" ref-type="bibr">2002</xref>; Yalçın et al. <xref rid="jex270123-bib-0032" ref-type="bibr">2020</xref>). Another contributor to cfDNA is thought to be DNA associated with EVs (Cai et al. <xref rid="jex270123-bib-0033" ref-type="bibr">2013</xref>; Lee et al. <xref rid="jex270123-bib-0034" ref-type="bibr">2014</xref>; Kahlert et al. <xref rid="jex270123-bib-0035" ref-type="bibr">2014</xref>). EVs are naturally occurring nanoparticles composed of a lipid bilayer membrane, ranging from 30 nm to 10 µm in diameter, are highly heterogenous and can be categorised based on their size, shape and origin (reviewed in Zaborowski et al. <xref rid="jex270123-bib-0036" ref-type="bibr">2015</xref>; Spinelli et al. <xref rid="jex270123-bib-0037" ref-type="bibr">2018</xref>; Cocucci and Meldolesi <xref rid="jex270123-bib-0038" ref-type="bibr">2015</xref>; van Niel et al. <xref rid="jex270123-bib-0039" ref-type="bibr">2018</xref>). A major physiological function of EVs is to transport cargo such as RNA (reviewed in Abels and Breakefield <xref rid="jex270123-bib-0040" ref-type="bibr">2016</xref>; Jeppesen et al. <xref rid="jex270123-bib-0041" ref-type="bibr">2019</xref>; Bellingham et al. <xref rid="jex270123-bib-0042" ref-type="bibr">2012</xref>), DNA (Kahlert et al. <xref rid="jex270123-bib-0035" ref-type="bibr">2014</xref>; Thakur et al. <xref rid="jex270123-bib-0043" ref-type="bibr">2014</xref>; Lee et al. <xref rid="jex270123-bib-0044" ref-type="bibr">2016</xref>) and proteins (Théry et al. <xref rid="jex270123-bib-0045" ref-type="bibr">2001</xref>; Tauro et al. <xref rid="jex270123-bib-0046" ref-type="bibr">2013</xref>; Liang et al. <xref rid="jex270123-bib-0047" ref-type="bibr">2013</xref>) and act as messengers between cells, playing a vital role in intercellular communication (reviewed in Zaborowski et al. <xref rid="jex270123-bib-0036" ref-type="bibr">2015</xref>; van Niel et al. <xref rid="jex270123-bib-0039" ref-type="bibr">2018</xref>; Inamdar et al. <xref rid="jex270123-bib-0048" ref-type="bibr">2017</xref>).</p><p>Although the field is still emerging, interest in EV‐DNA as a biomarker for cancer detection and monitoring has grown substantially in recent years (reviewed in Malkin and Bratman <xref rid="jex270123-bib-0049" ref-type="bibr">2020</xref>). EV‐DNA and ctDNA are derived from different biological processes and may carry distinct molecular signatures. As ctDNA is predominantly released during apoptosis and necrosis (Choi et al. <xref rid="jex270123-bib-0050" ref-type="bibr">2005</xref>), it reflects ongoing cell death and serves as a dynamic marker of tumour burden or treatment response (reviewed in Stejskal et al. <xref rid="jex270123-bib-0051" ref-type="bibr">2023</xref>). In contrast, EV‐DNA is actively secreted by viable cells, often packaged within EVs (Takahashi et al. <xref rid="jex270123-bib-0052" ref-type="bibr">2017</xref>) and may capture signals from functionally active tumour cells and the surrounding tumour microenvironment (Lee et al. <xref rid="jex270123-bib-0034" ref-type="bibr">2014</xref>; Chennakrishnaiah et al. <xref rid="jex270123-bib-0053" ref-type="bibr">2020</xref>). Unlike the typically short and fragmented nature of ctDNA, EV‐DNA can include longer and more intact genomic regions (Kahlert et al. <xref rid="jex270123-bib-0035" ref-type="bibr">2014</xref>), potentially offering greater resolution for mutational or epigenetic analysis. These mechanistic differences suggest that EV‐DNA may provide complementary insights into tumour biology and enhance diagnostic sensitivity, particularly in early‐stage disease or treatment‐responsive settings. Understanding these distinctions is critical to evaluate how EV‐DNA and ctDNA can be used most effectively—either individually or in combination—in liquid biopsy applications for cancer detection.</p><p>Currently, there are six liquid biopsy tests approved by the United States Food and Drug Administration (FDA) that employ ctDNA as a biomarker for cancer: CancerSEEK, Guardant360 CDx, FoundationOne Liquid CDx, Cologuard and EpiColon (reviewed in Choi and Kim <xref rid="jex270123-bib-0054" ref-type="bibr">2022</xref>). Although the FDA has approved liquid biopsy tests that detect cancer mutations using ctDNA, the same is not true for EV‐DNA. This is partly due to the recency of EV‐associated DNA's discovery, which was only reported for the first time 11 years ago (Cai et al. <xref rid="jex270123-bib-0033" ref-type="bibr">2013</xref>). An advantage of EV‐DNA compared to ctDNA is its ability to more comprehensively recapitulate the genome and mutational burden of the parental tumour due to protection by the lipid bilayer, while the latter is fragmented and thus more difficult to obtain the specific DNA mutations pursued in a given analysis (reviewed in Valencia and Montuenga <xref rid="jex270123-bib-0002" ref-type="bibr">2021</xref>). However, ctDNA is easier to obtain from biofluids, as EV‐DNA still faces challenges related to isolation, purity, yield, downstream analyses and reproducibility (reviewed in Tsering et al. <xref rid="jex270123-bib-0003" ref-type="bibr">2024</xref>). Hence, it would be useful to compare EV‐DNA and ctDNA as liquid biopsy‐based cancer biomarkers.</p><p>Despite the promising role of EV‐DNA, technical challenges persist. Separating EVs from non‐vesicular extracellular particles (NVEPs) is technically challenging, and standard EV isolation protocols, such as centrifugation or commercial kits, do not fully separate EVs and NVEPs (Lötvall et al. <xref rid="jex270123-bib-0055" ref-type="bibr">2014</xref>). Moreover, depending on the protocol, the composition of isolated EVs, including proteins and nucleic acids, can differ greatly (Lötvall et al. <xref rid="jex270123-bib-0055" ref-type="bibr">2014</xref>). Along with this challenge, the large heterogeneity of EVs makes the development of biomarkers difficult since appropriate and accurate methods are needed for each step of EV isolation and analysis. Hence, the Minimal Information for Studies of Extracellular Vesicles (MISEVs) was created in 2014 (Lötvall et al. <xref rid="jex270123-bib-0055" ref-type="bibr">2014</xref>), updated in 2018 (Thery et al. <xref rid="jex270123-bib-0056" ref-type="bibr">2018</xref>), and its third version, MISEV2023, was published in early 2024 (Welsh et al. <xref rid="jex270123-bib-0057" ref-type="bibr">2024</xref>). The MISEV provides guidelines that promote rigour and standardisation across various aspects of EV work, including EV isolation, characterisation, and analysis.</p><p>Many databases have been developed to standardise research on EV‐associated proteins, RNA, lipids and metabolites. These include ExoCarta (Keerthikumar et al. <xref rid="jex270123-bib-0062" ref-type="bibr">2016</xref>), Vesiclepedia (Kalra et al. <xref rid="jex270123-bib-0058" ref-type="bibr">2012</xref>, Pathan et al. <xref rid="jex270123-bib-0059" ref-type="bibr">2018</xref>), EVpedia (Kim et al. <xref rid="jex270123-bib-0060" ref-type="bibr">2013</xref>), and EV‐TRACK (Van Deun et al. <xref rid="jex270123-bib-0061" ref-type="bibr">2017</xref>). To fill the gap in such resources for EV‐DNA research, we previously manually curated a database of EV‐DNA data derived from human biofluids (liquid biopsy) and in vitro studies called the extracellular vesicle‐associated DNA database (EV‐ADD) (Tsering et al. <xref rid="jex270123-bib-0063" ref-type="bibr">2022</xref>). The EV‐ADD reports experimental data extracted from peer‐reviewed publications on EV‐DNA, including type of disease, number of patients enrolled in the study, type of biofluid, volume of biofluids, EV isolation method, EV characterisation, EV‐DNA isolation technique, EV‐DNA type, EV‐DNA detection method, EV‐DNA fragment size, targeted gene(s), enzymatic treatment, results, and applications of EV‐DNA (Tsering et al. <xref rid="jex270123-bib-0063" ref-type="bibr">2022</xref>). Moreover, an EV‐ADD data metric system was also integrated to assign a compliance score to the MISEV guidelines based on a variety of experimental parameters reported in each study.</p><p>Although the potential of EV‐DNA as a cancer biomarker has been demonstrated in many tumour types (Möhrmann et al. <xref rid="jex270123-bib-0064" ref-type="bibr">2018</xref>; Nakai et al. <xref rid="jex270123-bib-0065" ref-type="bibr">2022</xref>; Choi et al. <xref rid="jex270123-bib-0066" ref-type="bibr">2022</xref>; Thakur et al. <xref rid="jex270123-bib-0067" ref-type="bibr">2021</xref>; Wan et al. <xref rid="jex270123-bib-0068" ref-type="bibr">2018</xref>; Glennon et al. <xref rid="jex270123-bib-0069" ref-type="bibr">2021</xref>; Bernard et al. <xref rid="jex270123-bib-0070" ref-type="bibr">2019</xref>), its clinical utility, particularly compared to ctDNA, remains under investigation (Tkach et al. <xref rid="jex270123-bib-0071" ref-type="bibr">2022</xref>). Previous meta‐analyses have shown that EVs (Liu et al. <xref rid="jex270123-bib-0072" ref-type="bibr">2021</xref>) and EV‐associated RNA and proteins (Jia et al. <xref rid="jex270123-bib-0073" ref-type="bibr">2022</xref>; Li et al. <xref rid="jex270123-bib-0074" ref-type="bibr">2023</xref>; Lee et al. <xref rid="jex270123-bib-0075" ref-type="bibr">2022</xref>) are promising biomarkers for cancer diagnosis. However, no meta‐analyses have been conducted on the clinical utility of EV‐DNA in detecting mutations as a cancer biomarker. Thus, this study conducted a meta‐analysis, including 12 studies and 765 participants, to investigate the potential clinical utility of EV‐DNA in liquid biopsy for cancer detection by comparing the sensitivity and specificity of EV‐DNA and ctDNA reported by studies from EV‐ADD. This meta‐analysis has important implications for cohorts that are afflicted with cancers in which EV‐DNA may be a reliable and appropriate biomarker and should be investigated.</p></sec><sec id="jex270123-sec-0020"><label>2</label><title>Methods</title><sec id="jex270123-sec-0030"><label>2.1</label><title>Search Strategy and Study Selection</title><p>This meta‐analysis was conducted per the guidelines in the Preferred Reporting Items for Systematic Reviews and Meta‐Analyses (PRISMA) and prospectively registered with PROSPERO (CRD42024552523). An electronic search was performed using the EV‐ADD. All studies were included until 31 January 2025. The full texts of selected studies were reviewed to determine eligibility. The inclusion criteria for the analysis were: (1) clinical studies including individuals diagnosed with any cancer; (2) studies that compared the sensitivity and specificity of detecting cancer‐specific mutations in EV‐DNA and ctDNA in human biofluids against tissue biopsies (reference standard); (3) studies that reported the concordance between tumour and EV‐DNA or between tumour and ctDNA; (4) in cases of multiple detection methods, the most commonly used method was selected relative to the rest of the studies. Studies that were unrelated to cancer, related to cancer but did not compare EV‐DNA to ctDNA, investigated mitochondrial DNA (mtDNA), and compared the concordance between EV‐DNA and ctDNA, but not tumour, were excluded.</p></sec><sec id="jex270123-sec-0040"><label>2.2</label><title>Data Extraction</title><p>The following data were extracted from the included articles: title, sample size (including true positives, false negatives, true negatives and false positives), cancer subtype, target mutation(s), method(s) of EV‐DNA/ctDNA analysis, sensitivity of EV‐DNA/ctDNA, specificity of EV‐DNA/ctDNA, EV‐DNA and ctDNA concentrations, EV‐ADD score, and main conclusion of the study.</p></sec><sec id="jex270123-sec-0050"><label>2.3</label><title>Quality Assessment</title><p>The Quality Assessment of Diagnostic Accuracy Studies 2 (QUADAS‐2) was used to assess the quality of the included studies. Four domains (patient selection, index test, reference standard, and flow and timing) are evaluated regarding the risk of bias. The first three domains (patient selection, index test, and reference standard) are also assessed in terms of concerns about applicability. Signalling questions are included to assist in assessing the risk of bias. These questions are answered as ‘yes’, ‘no’, or ‘unclear’ and are framed such that ‘yes’ suggests a low risk of bias. A study's domain has a low risk of bias if the answers to all signalling questions about this domain are ‘yes’. There is potential for bias if any signalling question is answered ‘no’. In these cases, we judged a domain's risk of bias based on the relative importance of the signalling question. The concerns about applicability are rated as ‘low’, ‘high’, or ‘unclear’ and are assessed based on information from each study.</p></sec><sec id="jex270123-sec-0060"><label>2.4</label><title>Statistical Analysis</title><p>Wilson score 95% confidence intervals were computed for both the sensitivity and specificity of EV‐DNA and ctDNA for each study. The Wilson score method is particularly appropriate when dealing with small sample sizes or extreme proportions, as it provides better coverage probability compared to other methods like the Wald interval.</p><p>A Bayesian bivariate model was employed to calculate sensitivity and specificity summary estimates for both EV‐DNA and ctDNA, along with 95% credible intervals (Sutton and Abrams <xref rid="jex270123-bib-0076" ref-type="bibr">2001</xref>). This approach is superior to simple proportional meta‐analysis for diagnostic test accuracy, as it accounts for the correlation between sensitivity and specificity and allows for between‐study heterogeneity. The contribution of each study to the summary estimates was based on the inverse of their variance. This method gives more weight to studies with more precise estimates (lower variance), which is a standard approach in meta‐analysis to ensure that more reliable studies significantly influence the overall results. The Bayesian approach allows for direct probability statements about the parameters of interest, providing a more intuitive interpretation than traditional frequentist <italic toggle="yes">p</italic> values. Statistical significance of the difference between two sensitivities or specificities was assessed by examining whether the posterior probability of the difference exceeding zero was very low (e.g., less than 0.05) or very high (e.g., greater than 0.95).</p><p>The EV‐ADD score, measuring compliance with international guidelines on EV research, was incorporated into the analysis through Bayesian meta‐regression. The dichotomisation of the EV‐ADD score into ‘low’ and ‘high’ categories based on the median value was done to facilitate subgroup comparisons and to enhance the interpretability of the results. It allows for comparison between studies with different levels of guideline compliance, potentially revealing the impact of methodological quality on diagnostic accuracy. The EV‐ADD score was also treated as a continuous variable and plotted against EV‐DNA sensitivity/specificity and ctDNA sensitivity/specificity.</p><p>The Markov Chain Monte Carlo (MCMC) algorithm was implemented with careful consideration of convergence and autocorrelation. Three independent chains were used to assess convergence. A burn‐in period of 15,000 iterations was discarded. A total of 100,000 iterations were kept for each chain, resulting in 300,000 total iterations. Thinning was applied by keeping every 10th iteration to reduce autocorrelation. The final posterior sample consisted of 30,000 iterations.</p><p>An unpaired two‐tailed Student's <italic toggle="yes">t</italic> test was used to compare the means of EV‐DNA/ctDNA sensitivity between two independent groups (early‐ and late‐stage patients). Results were considered statistically significant at a <italic toggle="yes">p</italic> value less than 0.05. Analyses were performed using Microsoft Excel. Data are presented as median with individual values.</p></sec></sec><sec id="jex270123-sec-0070"><label>3</label><title>Results</title><sec id="jex270123-sec-0080"><label>3.1</label><title>Eligible Studies</title><p>As of 31 January 2025, a total of 227 studies were included in the EV‐ADD database. Of these, 108 were excluded for being either purely in vitro studies (<italic toggle="yes">n</italic> = 103) or animal studies (<italic toggle="yes">n</italic> = 5), leaving 119 studies for full‐text review. Following full‐text screening, 91 studies were excluded because they were either unrelated to cancer, focused on cancer but not on liquid biopsy, did not report sensitivity and specificity data for both EV‐DNA and ctDNA in detecting cancer mutations, or did not report concordance between tumour biopsy and EV‐DNA or tumour biopsy and ctDNA (Figure <xref rid="jex270123-fig-0001" ref-type="fig">1</xref>). Of the remaining 28 studies, 21 analysed plasma samples from patient blood, while 7 focused on other biofluids, including pleural effusion (<italic toggle="yes">n</italic> = 2), bone marrow (<italic toggle="yes">n</italic> = 2), urine (<italic toggle="yes">n</italic> = 1) and bronchoalveolar lavage fluid (<italic toggle="yes">n</italic> = 2). Studies using non‐plasma biofluids were excluded, as cross‐biofluid comparisons were deemed inappropriate and subgroup analysis was not feasible due to the small number of studies per biofluid, which would have resulted in unreliable estimates of between‐study variability. Thus, we proceeded with studies that performed liquid biopsy from plasma samples (<italic toggle="yes">n</italic> = 21). Of these, two assessed concordance between EV‐DNA and tumour tissue and between ctDNA and tumour tissue without reporting sensitivity and specificity and were thus excluded. Two studies investigated EV‐associated and cf mtDNA and were excluded due to lack of comparability to genomic DNA‐focused studies. Five studies detected oncogene mutations without confirming their presence in the patient's tumour tissue and were also thus excluded. This resulted in a total of 12 studies included in the final meta‐analysis (Figure <xref rid="jex270123-fig-0001" ref-type="fig">1</xref>).</p><fig position="float" fig-type="FIGURE" id="jex270123-fig-0001" orientation="portrait"><label>FIGURE 1</label><caption><p>Preferred Reporting Items for Systematic Reviews and Meta‐Analyses (PRISMA) flow diagram of literature search and study selection. BALF, bronchoalveolar lavage fluid; BM, bone marrow; EV‐ADD, extracellular vesicle‐associated DNA database; mtDNA, mitochondrial DNA; PE, pleural effusion; sens, sensitivity; spec, specificity.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="JEX2-5-e70123-g004.jpg"/></fig></sec><sec id="jex270123-sec-0090"><label>3.2</label><title>Study Characteristics</title><p>A total of 12 studies with 765 patients were included in the analysis (Figure <xref rid="jex270123-fig-0001" ref-type="fig">1</xref>). There was variation in the number of patients included per study, ranging from 4 to 446 (Table <xref rid="jex270123-tbl-0001" ref-type="table">1</xref>). Of the 12 studies included, 8 (67%) were prospective and 4 (33%) were retrospective. The most common cancer types among the studies were colorectal cancer and breast cancer with three studies (25%) investigating each cancer type. Other cancers that were examined included non‐small cell lung cancer (NSCLC), pancreatic ductal adenocarcinoma, ovarian cancer, papillary thyroid cancer, appendiceal cancer, endometrial cancer, Erdheim–Chester disease, melanoma, renal cell carcinoma, and oropharyngeal squamous cell carcinoma. EDTA tubes were the most used blood collection tube, being used in 10/12 studies (83%). One study (8%) used citrate tubes, and 1 study (8%) did not mention the blood collection tube used. For both ctDNA and EV‐DNA, droplet digital PCR (ddPCR) was the most common method [used in 10 studies (83%) to detect ctDNA mutations and 9 studies (75%) to detect EV‐DNA mutations]. Other methods included next‐generation sequencing and an amplification‐refractory mutation system (Figure <xref rid="jex270123-fig-0002" ref-type="fig">2</xref>).</p><table-wrap position="float" id="jex270123-tbl-0001" content-type="TABLE" orientation="portrait"><label>TABLE 1</label><caption><p>Summary of study and patient characteristics.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead><tr style="border-bottom:solid 1px #000000"><th align="left" rowspan="1" colspan="1">Source</th><th align="center" rowspan="1" colspan="1">Study design</th><th align="center" rowspan="1" colspan="1">Cancer subtype</th><th align="center" rowspan="1" colspan="1">Sample size</th><th align="center" rowspan="1" colspan="1">EV isolation method</th><th align="center" rowspan="1" colspan="1">cfDNA extraction method</th><th align="center" rowspan="1" colspan="1">EV‐DNA extraction method</th><th align="center" rowspan="1" colspan="1">ctDNA detection method</th><th align="center" rowspan="1" colspan="1">EV‐DNA detection method</th><th align="center" rowspan="1" colspan="1">Blood tube used</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Möhrmann et al. (<xref rid="jex270123-bib-0064" ref-type="bibr">2018</xref>)</td><td align="center" rowspan="1" colspan="1">Retrospective</td><td align="center" rowspan="1" colspan="1">Appendiceal cancer, colorectal cancer, Erdheim–Chester disease, melanoma, NSCLC, ovarian cancer, papillary thyroid cancer, prostate cancer, endometrial cancer</td><td align="center" rowspan="1" colspan="1">43</td><td align="center" rowspan="1" colspan="1">ExoLution Plus Isolation Kit</td><td align="center" rowspan="1" colspan="1">Column based</td><td align="center" rowspan="1" colspan="1">Column based</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">NGS</td><td align="center" rowspan="1" colspan="1">EDTA</td></tr><tr><td align="left" rowspan="1" colspan="1">Tkach et al. (<xref rid="jex270123-bib-0071" ref-type="bibr">2022</xref>)</td><td align="center" rowspan="1" colspan="1">Prospective</td><td align="center" rowspan="1" colspan="1">Breast cancer</td><td align="center" rowspan="1" colspan="1">27</td><td align="center" rowspan="1" colspan="1">Size‐exclusion chromatography</td><td align="center" rowspan="1" colspan="1">Column based</td><td align="center" rowspan="1" colspan="1">Column based</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">EDTA</td></tr><tr><td align="left" rowspan="1" colspan="1">Nakai et al. (<xref rid="jex270123-bib-0065" ref-type="bibr">2022</xref>)</td><td align="center" rowspan="1" colspan="1">Prospective</td><td align="center" rowspan="1" colspan="1">Breast cancer</td><td align="center" rowspan="1" colspan="1">52</td><td align="center" rowspan="1" colspan="1">Invitrogen Total Exosome Isolation Kit</td><td align="center" rowspan="1" colspan="1">Column based</td><td align="center" rowspan="1" colspan="1">Column based</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">EDTA</td></tr><tr><td align="left" rowspan="1" colspan="1">Cardinali et al. (<xref rid="jex270123-bib-0095" ref-type="bibr">2022</xref>)</td><td align="center" rowspan="1" colspan="1">Prospective</td><td align="center" rowspan="1" colspan="1">Breast cancer</td><td align="center" rowspan="1" colspan="1">4</td><td align="center" rowspan="1" colspan="1">Size‐exclusion chromatography</td><td align="center" rowspan="1" colspan="1">Magnetic bead based</td><td align="center" rowspan="1" colspan="1">Column based</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">EDTA</td></tr><tr><td align="left" rowspan="1" colspan="1">Choi et al. (<xref rid="jex270123-bib-0066" ref-type="bibr">2022</xref>)</td><td align="center" rowspan="1" colspan="1">Prospective</td><td align="center" rowspan="1" colspan="1">Colon cancer</td><td align="center" rowspan="1" colspan="1">38</td><td align="center" rowspan="1" colspan="1">Ultracentrifugation at 100,000 x <italic toggle="yes">g</italic> for 70 min</td><td align="center" rowspan="1" colspan="1">Magnetic bead based</td><td align="center" rowspan="1" colspan="1">Magnetic bead based</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">EDTA</td></tr><tr><td align="left" rowspan="1" colspan="1">Galbiati et al. (<xref rid="jex270123-bib-0096" ref-type="bibr">2021</xref>)</td><td align="center" rowspan="1" colspan="1">Prospective</td><td align="center" rowspan="1" colspan="1">Colorectal cancer</td><td align="center" rowspan="1" colspan="1">10</td><td align="center" rowspan="1" colspan="1">Ultracentrifugation at 120,000 x <italic toggle="yes">g</italic> for 120 min at 4°C, Exosome Precipitation Solution kit, Immunoprecipitation</td><td align="center" rowspan="1" colspan="1">Magnetic bead based</td><td align="center" rowspan="1" colspan="1">Magnetic bead based</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">EDTA</td></tr><tr><td align="left" rowspan="1" colspan="1">Thakur et al. (<xref rid="jex270123-bib-0067" ref-type="bibr">2021</xref>)</td><td align="center" rowspan="1" colspan="1">Retrospective</td><td align="center" rowspan="1" colspan="1">Colon carcinoma</td><td align="center" rowspan="1" colspan="1">21</td><td align="center" rowspan="1" colspan="1">Invitrogen Total Exosome Isolation Kit</td><td align="center" rowspan="1" colspan="1">Magnetic bead based</td><td align="center" rowspan="1" colspan="1">Magnetic bead based</td><td align="center" rowspan="1" colspan="1">NGS</td><td align="center" rowspan="1" colspan="1">NGS</td><td align="center" rowspan="1" colspan="1">Unknown</td></tr><tr><td align="left" rowspan="1" colspan="1">Wan et al. (<xref rid="jex270123-bib-0068" ref-type="bibr">2018</xref>)</td><td align="center" rowspan="1" colspan="1">Retrospective</td><td align="center" rowspan="1" colspan="1">NSCLC</td><td align="center" rowspan="1" colspan="1">446</td><td align="center" rowspan="1" colspan="1">Ultracentrifugation at 100,000 x <italic toggle="yes">g</italic> for 4 h</td><td align="center" rowspan="1" colspan="1">Phenol chloroform</td><td align="center" rowspan="1" colspan="1">Phenol chloroform</td><td align="center" rowspan="1" colspan="1">ARMS‐PCR</td><td align="center" rowspan="1" colspan="1">ARMS‐PCR</td><td align="center" rowspan="1" colspan="1">EDTA</td></tr><tr><td align="left" rowspan="1" colspan="1">Bernard et al. (<xref rid="jex270123-bib-0070" ref-type="bibr">2019</xref>)</td><td align="center" rowspan="1" colspan="1">Prospective</td><td align="center" rowspan="1" colspan="1">PDAC</td><td align="center" rowspan="1" colspan="1">34</td><td align="center" rowspan="1" colspan="1">Ultracentrifugation at 154,000 x <italic toggle="yes">g</italic> for 2 h at 4°C</td><td align="center" rowspan="1" colspan="1">Column based</td><td align="center" rowspan="1" colspan="1">Column based</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">Citrate</td></tr><tr><td align="left" rowspan="1" colspan="1">Glennon et al. (<xref rid="jex270123-bib-0069" ref-type="bibr">2021</xref>)</td><td align="center" rowspan="1" colspan="1">Retrospective</td><td align="center" rowspan="1" colspan="1">Renal cell carcinoma</td><td align="center" rowspan="1" colspan="1">11</td><td align="center" rowspan="1" colspan="1">Ultracentrifugation at 110,000 x <italic toggle="yes">g</italic> for 70 min at 4°C</td><td align="center" rowspan="1" colspan="1">Column based</td><td align="center" rowspan="1" colspan="1">Column based</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">EDTA</td></tr><tr><td align="left" rowspan="1" colspan="1">Zocco et al. (<xref rid="jex270123-bib-0093a" ref-type="bibr">2020</xref>)</td><td align="center" rowspan="1" colspan="1">Prospective</td><td align="center" rowspan="1" colspan="1">Melanoma</td><td align="center" rowspan="1" colspan="1">55</td><td align="center" rowspan="1" colspan="1">Peptide affinity</td><td align="center" rowspan="1" colspan="1">Column based</td><td align="center" rowspan="1" colspan="1">Column based</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">EDTA</td></tr><tr><td align="left" rowspan="1" colspan="1">Nguyen et al. (<xref rid="jex270123-bib-0093" ref-type="bibr">2020</xref>)</td><td align="center" rowspan="1" colspan="1">Prospective</td><td align="center" rowspan="1" colspan="1">Oropharyngeal squamous cell carcinoma</td><td align="center" rowspan="1" colspan="1">24</td><td align="center" rowspan="1" colspan="1">Ultracentrifugation at 110,000 x <italic toggle="yes">g</italic> for 90 min at 4°C</td><td align="center" rowspan="1" colspan="1">Column based</td><td align="center" rowspan="1" colspan="1">Column based</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">ddPCR</td><td align="center" rowspan="1" colspan="1">EDTA</td></tr></tbody></table><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><fig position="float" fig-type="FIGURE" id="jex270123-fig-0002" orientation="portrait"><label>FIGURE 2</label><caption><p>Visual summary of study characteristics. The study design, cancer subtype, blood tube used, ctDNA extraction method, EV‐DNA extraction method, ctDNA detection method and EV‐DNA detection method used in each of the 12 included studies are shown in distinct colours. ctDNA, circulating tumour DNA; EV‐DNA, extracellular vesicle‐associated DNA.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="JEX2-5-e70123-g006.jpg"/></fig></sec><sec id="jex270123-sec-0100"><label>3.3</label><title>EV‐DNA and ctDNA Have High Sensitivity and Specificity in Detecting Mutations in Liquid Biopsy</title><p>The sensitivity of EV‐DNA in detecting mutations was reported in 6 studies (50%) and deduced in 6 studies (50%), while the specificity was reported in 5 studies (42%), deduced in 4 studies (33%) and not computable in 3 studies (25%). For ctDNA, 6 studies (50%) reported, and 6 studies (50%) allowed us to deduce sensitivity. The specificity of ctDNA was reported in 5 studies (42%), deduced in 3 studies (25%) and not computable in 4 studies (33%). The sensitivity and specificity for EV‐DNA extracted from plasma were 64.6% (95% credible interval: 48.8%, 79.4%) and 93.3% (95% credible interval: 86.8%, 96.9%), respectively (Figure <xref rid="jex270123-fig-0003" ref-type="fig">3</xref>). The sensitivity and specificity for ctDNA extracted from plasma were 70.0% (95% credible interval: 54.7%, 83.4%) and 90.6% (95% credible interval: 80.8%, 96.0%), respectively (Figure <xref rid="jex270123-fig-0004" ref-type="fig">4</xref>). ctDNA has an increased probability of higher sensitivity, while EV‐DNA has an increased probability of higher specificity (Table <xref rid="jex270123-supinfo-0001" ref-type="">S1</xref>).</p><fig position="float" fig-type="FIGURE" id="jex270123-fig-0003" orientation="portrait"><label>FIGURE 3</label><caption><p>Sensitivity and specificity of EV‐DNA from each included study and the summary estimates. Forest plot of pooled meta‐analysis including 12 studies. CI, confidence interval; EV‐DNA, extracellular vesicle‐associated DNA; FN, false negative; FP, false positive; Sens, sensitivity; Spec, specificity; TN, true negative; TP, true positive.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="JEX2-5-e70123-g007.jpg"/></fig><fig position="float" fig-type="FIGURE" id="jex270123-fig-0004" orientation="portrait"><label>FIGURE 4</label><caption><p>Sensitivity and specificity of circulating tumour DNA (ctDNA) from each included study and the summary estimates. Forest plot of pooled meta‐analysis including 12 studies.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="JEX2-5-e70123-g002.jpg"/></fig></sec><sec id="jex270123-sec-0110"><label>3.4</label><title>Complying With Guidelines on EV Research Is Associated With Increased Sensitivity and Specificity for EV‐DNA and Increased Sensitivity for ctDNA</title><p>We aimed next to determine whether studies that better complied with international guidelines on EV research yielded higher sensitivity and specificity for EV‐DNA. The MISEV guidelines promote rigour and standardisation across all aspects of EV work, including EV isolation, characterisation, and analysis. In the EV‐ADD, we previously designed a metric system that assigns a score to each study based on its compliance with MISEV guidelines. Specifically, the score is based on the reporting of sample preparation, EV isolation, and characterisation (Tsering et al. <xref rid="jex270123-bib-0063" ref-type="bibr">2022</xref>). A study with a high EV‐ADD score adheres highly to MISEV guidelines. A study with a low EV‐ADD score lacks reporting in the previously mentioned aspects, potentially raising concerns about EV isolation yield, quality, and downstream analysis of EV‐DNA.</p><p>The median EV‐ADD score for EV‐DNA studies was 0.57. In our subgroup analysis, we computed the sensitivity and specificity summary estimates using only studies with low EV‐ADD scores (≤0.57) or only studies with high EV‐ADD scores (&gt;0.57). The EV‐DNA detection rates in patients from studies with a high EV‐ADD score were pooled, resulting in a sensitivity of 66.7% (95% credible interval: 43.1%, 86.1%) and a specificity of 94.2% (95% credible interval: 85.7%, 97.8%) (Figure <xref rid="jex270123-fig-0005" ref-type="fig">5</xref>). The EV‐DNA detection rates in patients from studies with a low EV‐ADD score were also pooled, resulting in a sensitivity of 62.7% (95% credible interval: 37.0%, 83.3%) and a specificity of 92.1% (95% credible interval: 78.5%, 97.8%) (Figure <xref rid="jex270123-fig-0005" ref-type="fig">5</xref>). Although the summary estimates suggest modestly better diagnostic accuracy in studies with higher EV‐ADD scores, the large credible and prediction intervals and small number of studies in each group reflect a considerable amount of uncertainty (Table <xref rid="jex270123-supinfo-0001" ref-type="">S2</xref>).</p><fig position="float" fig-type="FIGURE" id="jex270123-fig-0005" orientation="portrait"><label>FIGURE 5</label><caption><p>The sensitivity and specificity of EV‐DNA were measured from studies with a high EV‐ADD score (top) and studies with a low EV‐ADD score (bottom), along with the summary estimates. Forest plot of meta‐regression analyses including 12 studies. EV‐ADD, <underline underline-style="single">e</underline>xtracellular <underline underline-style="single">v</underline>esicle‐<underline underline-style="single">a</underline>ssociated <underline underline-style="single">D</underline>NA <underline underline-style="single">d</underline>atabase; EV‐DNA, extracellular vesicle‐associated DNA.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="JEX2-5-e70123-g001.jpg"/></fig><p>We then determined whether we would observe a similar trend with ctDNA. The median EV‐ADD score for ctDNA studies was 0.57. The ctDNA sensitivity and specificity for studies with a high EV‐ADD score were 77.9% (95% credible interval: 58.7%, 91.3%) and 86.4% (95% credible interval: 68.2%, 95.1%), respectively (Figure <xref rid="jex270123-fig-0006" ref-type="fig">6</xref>). The ctDNA sensitivity and specificity for studies with a low EV‐ADD score were 60.5% (95% credible interval: 37.2%, 81.3%) and 96.8% (95% credible interval: 87.8%, 99.6%), respectively (Figure <xref rid="jex270123-fig-0006" ref-type="fig">6</xref>). Similar to EV‐DNA, the large credible and prediction intervals and small number of studies in each group suggest a significant amount of uncertainty, even if the summary estimates suggest higher sensitivity in studies with higher EV‐ADD scores and higher specificity in studies with lower EV‐ADD scores (Table <xref rid="jex270123-supinfo-0001" ref-type="">S3</xref>). To further determine the relationship between EV‐ADD score and sensitivity/specificity, we also treated the EV‐ADD score as a continuous variable and plotted it against EV‐DNA sensitivity, EV‐DNA specificity, ctDNA sensitivity and ctDNA specificity, respectively. A linear regression model was applied to assess the correlation between the dependent and independent variables. Surprisingly, no correlation was found between EV‐ADD score and EV‐DNA sensitivity (<italic toggle="yes">R</italic>
+<sup>2</sup> = 0.0657), EV‐ADD score and EV‐DNA specificity (<italic toggle="yes">R</italic>
+<sup>2</sup> = 0.0137), EV‐ADD score and ctDNA sensitivity (<italic toggle="yes">R</italic>
+<sup>2</sup> = 0.1263) and EV‐ADD score and ctDNA specificity (<italic toggle="yes">R</italic>
+<sup>2</sup> = 0.2405) (Figure <xref rid="jex270123-supinfo-0001" ref-type="">S1</xref>).</p><fig position="float" fig-type="FIGURE" id="jex270123-fig-0006" orientation="portrait"><label>FIGURE 6</label><caption><p>The sensitivity and specificity of ctDNA were measured from studies with a high EV‐ADD score (top) and studies with a low EV‐ADD score (bottom), along with the summary estimates. Forest plot of meta‐regression analyses including 12 studies. ctDNA, circulating tumour DNA; EV‐ADD, <underline underline-style="single">e</underline>xtracellular <underline underline-style="single">v</underline>esicle‐<underline underline-style="single">a</underline>ssociated <underline underline-style="single">D</underline>NA <underline underline-style="single">d</underline>atabase.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-11" orientation="portrait" xlink:href="JEX2-5-e70123-g003.jpg"/></fig></sec><sec id="jex270123-sec-0120"><label>3.5</label><title>Sensitivity in Detecting Cancer Mutations Is Significantly Higher in Late‐Stage Patients Compared to Early‐Stage Patients</title><p>The ability of liquid biopsy to detect cancer‐related mutations in early‐ and late‐stage patients has important implications for diagnosis, treatment response and monitoring minimal residual disease. Several studies have shown that ctDNA is found more frequently in later‐stage disease (Bettegowda et al. <xref rid="jex270123-bib-0077" ref-type="bibr">2014</xref>; Yang et al. <xref rid="jex270123-bib-0078" ref-type="bibr">2018</xref>). Here, we performed a subgroup analysis to determine the sensitivity of EV‐DNA and ctDNA in detecting mutations from early‐ (Stages I and II) and late‐stage (Stages III and IV) patients. Five studies included in our meta‐analysis included both early‐ and late‐stage patients (Choi et al. <xref rid="jex270123-bib-0066" ref-type="bibr">2022</xref>; Thakur et al. <xref rid="jex270123-bib-0067" ref-type="bibr">2021</xref>; Wan et al. <xref rid="jex270123-bib-0068" ref-type="bibr">2018</xref>; Glennon et al. <xref rid="jex270123-bib-0069" ref-type="bibr">2021</xref>; Bernard et al. <xref rid="jex270123-bib-0070" ref-type="bibr">2019</xref>). The mean sensitivity of EV‐DNA in early‐ and late‐stage patients was 0.48 ± 0.36 and 0.87 ± 0.12, respectively (<italic toggle="yes">p</italic> = 0.052). The mean sensitivity of ctDNA in early‐ and late‐stage patients was 0.36 ± 0.22 and 0.85 ± 0.10, respectively (<italic toggle="yes">p</italic> = 0.001) (Figure <xref rid="jex270123-fig-0007" ref-type="fig">7</xref>). In early‐stage disease, EV‐DNA had higher sensitivity than ctDNA (0.48 vs. 0.36)—although this difference was not significant. These findings support further investigation of EV‐DNA as a complementary approach to ctDNA, particularly for enhancing mutation detection in early‐stage cancer.</p><fig position="float" fig-type="FIGURE" id="jex270123-fig-0007" orientation="portrait"><label>FIGURE 7</label><caption><p>Subgroup analysis of (a) EV‐DNA and (b) ctDNA sensitivity in early‐ versus late‐stage disease. Panel C: Sensitivity of EV‐DNA and ctDNA in early‐stage patients. Panel D: Sensitivity of EV‐DNA and ctDNA in late‐stage patients. Panel E: Individual sensitivities of EV‐DNA and ctDNA from the included studies along with the mean and standard deviation. ctDNA, circulating tumour DNA; EV‐DNA, extracellular vesicle‐associated DNA.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-13" orientation="portrait" xlink:href="JEX2-5-e70123-g008.jpg"/></fig><p>For the QUADAS‐2 quality assessment (Figure <xref rid="jex270123-fig-0008" ref-type="fig">8</xref>), 9 studies (75%) had a low risk of bias, 1 study had a high risk of bias (8%), and 2 studies (16%) had an unclear risk of bias for flow and timing, 12 studies (100%) had a low risk of bias for the reference standard, 12 studies (100%) had a high risk of bias for the index tests, and 12 studies (100%) had a low risk of bias for patient selection. Twelve studies (100%) had low concerns regarding applicability for the reference standard, 12 studies (100%) had low concerns regarding applicability for the index tests, and 12 studies (100%) had low concerns regarding applicability for patient selection.</p><fig position="float" fig-type="FIGURE" id="jex270123-fig-0008" orientation="portrait"><label>FIGURE 8</label><caption><p>Graphical representation of the summarised Quality Assessment of Diagnostic Accuracy Studies 2 (QUADAS‐2) results regarding (a) risk of bias and (b) applicability.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-15" orientation="portrait" xlink:href="JEX2-5-e70123-g005.jpg"/></fig></sec></sec><sec id="jex270123-sec-0130"><label>4</label><title>Discussion</title><p>This meta‐analysis sought to compare ctDNA and EV‐DNA as a cancer biomarker. Overall, we found that EV‐DNA and ctDNA were comparable in detecting cancer‐related mutations, with no significant differences in sensitivity and specificity. Subgroup analysis by EV‐ADD score, a measure of compliance to MISEV guidelines, showed that studies with higher EV‐ADD scores have an increased probability of higher EV‐DNA sensitivity, EV‐DNA specificity, and ctDNA sensitivity. Altogether the data in our analysis point to the potential of EV‐DNA as a biomarker and highlight the need for stringent adherence to guidelines for EV isolation and analysis.</p><p>To our knowledge, this is the first meta‐analysis comparing the detection of cancer mutations in EV‐DNA relative to ctDNA in multiple cancers. In the literature, meta‐analyses have been mainly conducted to assess the sensitivity and specificity of ctDNA as a cancer biomarker in individual or groups of related cancers, such as breast cancer (Galvano et al. <xref rid="jex270123-bib-0079" ref-type="bibr">2022</xref>), colorectal cancer (Tang et al. <xref rid="jex270123-bib-0080" ref-type="bibr">2017</xref>; Hao et al. <xref rid="jex270123-bib-0081" ref-type="bibr">2017</xref>; Min et al. <xref rid="jex270123-bib-0082" ref-type="bibr">2023</xref>; Ye et al. <xref rid="jex270123-bib-0083" ref-type="bibr">2021</xref>), esophageal cancer (Chidambaram and Markar <xref rid="jex270123-bib-0084" ref-type="bibr">2022</xref>), gastric cancer (Gao et al. <xref rid="jex270123-bib-0085" ref-type="bibr">2017</xref>), upper gastrointestinal cancers (Creemers et al. <xref rid="jex270123-bib-0086" ref-type="bibr">2017</xref>), NSCLC (Passiglia et al. <xref rid="jex270123-bib-0087" ref-type="bibr">2018</xref>; Qiu et al. <xref rid="jex270123-bib-0088" ref-type="bibr">2015</xref>; Zhou et al. <xref rid="jex270123-bib-0089" ref-type="bibr">2020</xref>; Chen et al. <xref rid="jex270123-bib-0090" ref-type="bibr">2024</xref>), pancreatic cancer (Zhu et al. <xref rid="jex270123-bib-0091" ref-type="bibr">2020</xref>), and hepatocellular carcinoma (Zhang et al. <xref rid="jex270123-bib-0092" ref-type="bibr">2020</xref>). The pooled sensitivities of ctDNA analysis for these meta‐analyses vary widely from 28% (Creemers et al. <xref rid="jex270123-bib-0086" ref-type="bibr">2017</xref>) to 77% (Ye et al. <xref rid="jex270123-bib-0083" ref-type="bibr">2021</xref>), while the pooled specificities range from 80% (Passiglia et al. <xref rid="jex270123-bib-0087" ref-type="bibr">2018</xref>) to 99% (Chidambaram and Markar <xref rid="jex270123-bib-0084" ref-type="bibr">2022</xref>; Chen et al. <xref rid="jex270123-bib-0090" ref-type="bibr">2024</xref>). In our study, the summary estimates of sensitivity we obtained for EV‐DNA and ctDNA were 64.6% (95% credible interval: 48.8%, 79.4%) and 70.0% (95% credible interval: 54.7%, 83.4%), respectively. Although the sensitivity values are in a similar range to other meta‐analyses mentioned above, the 95% credible interval of our meta‐analysis is much larger, indicating the possible presence of heterogeneity that is likely due to the inclusion of studies investigating various cancer types. Indeed, the shedding rates of ctDNA (Bettegowda et al. <xref rid="jex270123-bib-0077" ref-type="bibr">2014</xref>) and EV‐DNA (Möhrmann et al. <xref rid="jex270123-bib-0064" ref-type="bibr">2018</xref>) have been previously described to vary between cancer types, with a smaller variance in EV‐DNA (Möhrmann et al. <xref rid="jex270123-bib-0064" ref-type="bibr">2018</xref>). The summary estimates of specificity we obtained for EV‐DNA and ctDNA were 93.3% (95% credible interval: 86.8%, 96.9%) and 90.6% (95% credible interval: 80.8%, 96.0%), respectively. In this case, the specificity values and 95% credible interval are more similar to other meta‐analyses, suggesting that the fewer studies included in the meta‐analysis for specificity calculations were more homogeneous compared to the studies included in the meta‐analysis for sensitivity calculations.</p><p>Although EV‐DNA generally had higher Bayesian probabilities of increased sensitivity and specificity than ctDNA, it is context‐dependent. For instance, in renal cell carcinoma (Glennon et al. <xref rid="jex270123-bib-0069" ref-type="bibr">2021</xref>), ctDNA had higher sensitivity than EV‐DNA (45% vs. 36%). In oropharyngeal squamous cell carcinoma (Nguyen et al. <xref rid="jex270123-bib-0093" ref-type="bibr">2020</xref>), ctDNA had a sensitivity of 91% while EV‐DNA had a sensitivity of 42%. Therefore, the choice of EV‐DNA or ctDNA for liquid biopsy should take the specific disease into account. Breast cancer, oropharyngeal squamous cell carcinoma, NSCLC, colorectal cancer, and multiple myeloma have been shown to shed more cfDNA than EV‐DNA, which could indicate that ctDNA is a better choice to detect mutations in these diseases (Nakai et al. <xref rid="jex270123-bib-0065" ref-type="bibr">2022</xref>; Thakur et al. <xref rid="jex270123-bib-0067" ref-type="bibr">2021</xref>; Wan et al. <xref rid="jex270123-bib-0068" ref-type="bibr">2018</xref>; Tkach et al. <xref rid="jex270123-bib-0071" ref-type="bibr">2022</xref>; Nguyen et al. <xref rid="jex270123-bib-0093" ref-type="bibr">2020</xref>; Heestermans et al. <xref rid="jex270123-bib-0094" ref-type="bibr">2022</xref>). Sensitivity also varied between studies investigating cohorts afflicted with the same cancer. For example, the sensitivity of detecting mutations from EV‐DNA in breast cancer patients ranged from 23% (Nakai et al. <xref rid="jex270123-bib-0065" ref-type="bibr">2022</xref>) to 67% (Cardinali et al. <xref rid="jex270123-bib-0095" ref-type="bibr">2022</xref>) depending on the study, while the ctDNA sensitivity ranged from 31% (Nakai et al. <xref rid="jex270123-bib-0065" ref-type="bibr">2022</xref>) to 100% (Cardinali et al. <xref rid="jex270123-bib-0095" ref-type="bibr">2022</xref>) in those same studies. In colon cancer, EV‐DNA sensitivity ranged from 62% (Thakur et al. <xref rid="jex270123-bib-0067" ref-type="bibr">2021</xref>) to 100% (Galbiati et al. <xref rid="jex270123-bib-0096" ref-type="bibr">2021</xref>) while ctDNA sensitivity ranged from 67% (Thakur et al. <xref rid="jex270123-bib-0067" ref-type="bibr">2021</xref>) to 100% (Galbiati et al. <xref rid="jex270123-bib-0096" ref-type="bibr">2021</xref>).</p><p>Wan et al. (<xref rid="jex270123-bib-0068" ref-type="bibr">2018</xref>) found no correlation between the levels of EV‐DNA and cfDNA in NSCLC patients, suggesting the release mechanisms and perhaps the origin of these two sources of DNA are different. On the other hand, hepatocellular carcinoma tumours have been shown to shed more EV‐associated mtDNA copy numbers than cf mtDNA copy numbers (Li et al. <xref rid="jex270123-bib-0097" ref-type="bibr">2020</xref>). Reports have also indicated that tumours in lung adenocarcinoma and melanoma and aggressive mastocytosis emit more EV‐DNA than cf/ctDNA (Lee et al. <xref rid="jex270123-bib-0098" ref-type="bibr">2018</xref>; Klump et al. <xref rid="jex270123-bib-0099" ref-type="bibr">2018</xref>). By comparing levels between studies, EV‐DNA levels were found to be higher in NSCLC (Wan et al. <xref rid="jex270123-bib-0068" ref-type="bibr">2018</xref>) compared to breast (Nakai et al. <xref rid="jex270123-bib-0065" ref-type="bibr">2022</xref>) and colorectal (Thakur et al. <xref rid="jex270123-bib-0067" ref-type="bibr">2021</xref>) cancers. The detection of <italic toggle="yes">EGFR</italic> mutations had an overall sensitivity of 46% and specificity of 97% for EV‐DNA and an overall sensitivity of 40% and specificity of 92% for ctDNA (Wan et al. <xref rid="jex270123-bib-0068" ref-type="bibr">2018</xref>). However, the sensitivity of both EV‐DNA and ctDNA in detecting <italic toggle="yes">EGFR</italic> mutations was relatively low in patients with early‐stage NSCLC—26% for EV‐DNA and 14% for ctDNA. In contrast, detection rates for <italic toggle="yes">EGFR</italic>
+<sup>T790M</sup> were much higher in late‐stage NSCLC—79% for EV‐DNA and 82% for ctDNA (Wan et al. <xref rid="jex270123-bib-0068" ref-type="bibr">2018</xref>). Similarly, in the context of colon cancer, there was also a trend towards increased detection in late‐stage patients (Thakur et al. <xref rid="jex270123-bib-0067" ref-type="bibr">2021</xref>). Taken together, the data suggest higher sensitivity for both EV‐DNA and ctDNA in later‐stage patients; however, our subgroup analysis revealed that the difference was only statistically significant for ctDNA. This likely arises from the challenge of accurately distinguishing cfDNA sources, as the marked rise in cfDNA during advanced cancer complicates source attribution. Prioritising early‐stage disease will enable clearer delineation of ctDNA and EV‐DNA subtypes, improving mechanistic insight and biomarker accuracy. These results highlight the influence of disease stage on the performance of liquid biopsy assays.</p><p>The source of EVs for liquid biopsy assays may impact the sensitivity and specificity of EV‐DNA and ctDNA. Indeed, studies have demonstrated higher sensitivity and specificity of ctDNA and EV‐DNA from BALF than from plasma in NSCLC (Hur et al. <xref rid="jex270123-bib-0100" ref-type="bibr">2018</xref>; Kim et al. <xref rid="jex270123-bib-0101" ref-type="bibr">2022</xref>). Ascites‐derived EV‐DNA was also shown to better represent tumour copy number variation status than plasma‐derived EV‐DNA in ovarian cancer (Yokoi et al. <xref rid="jex270123-bib-0102" ref-type="bibr">2019</xref>). In bladder cancer, urine‐derived EV‐DNA was found to be a better biomarker than cfDNA or serum‐derived EV‐DNA (Zhou et al. <xref rid="jex270123-bib-0103" ref-type="bibr">2021</xref>). Finally, in glioma, ctDNA derived from cerebrospinal fluid was found to carry more tumour‐specific mutations than plasma‐derived ctDNA (Maire et al. <xref rid="jex270123-bib-0104" ref-type="bibr">2021</xref>). These findings suggest that choosing the appropriate biofluid to analyse EV‐DNA and ctDNA is crucial and context‐dependent.</p><p>The results of the meta‐regression with a dichotomised EV‐ADD score supported our hypothesis that studies that were more MISEV‐compliant have higher probabilities of increased sensitivity and specificity (Tables <xref rid="jex270123-supinfo-0001" ref-type="">S2</xref> and <xref rid="jex270123-supinfo-0001" ref-type="">S3</xref>). This finding aligns with our expectation, as the more stringent EV isolation methods yield purer EV samples, which are likely to enhance assay performance. The same association was not seen between EV‐ADD score and ctDNA specificity (Table <xref rid="jex270123-supinfo-0001" ref-type="">S3</xref>). A study's EV‐ADD score is based on its reporting of biofluid processing, EV purification, EV‐DNA isolation and EV characterisation (Tsering et al. <xref rid="jex270123-bib-0063" ref-type="bibr">2022</xref>). A high EV‐ADD score, which corresponds to high adherence to standardised MISEV guidelines and protocols, can help ensure that a specific EV subpopulation and its corresponding cargo were isolated. Interestingly, when we plotted the EV‐ADD score against the sensitivity and specificity of EV‐DNA or ctDNA, there was no correlation in either liquid biopsy analyte. This may be due to several reasons. First, perhaps only very low compliance (e.g., EV‐ADD score &lt;0.1) or very high compliance (e.g., EV‐ADD score &gt;0.9) affects sensitivity and specificity, which would be missed by a linear regression model. Second, the EV‐ADD score aggregates many factors (e.g., pre‐analytical steps, characterisation, and quantification), whereas potentially only a subset (e.g., purity checks) truly affects sensitivity and specificity. Large EVs have been shown to carry the majority of tumour DNA circulating in the plasma of prostate cancer patients (Vagner et al. <xref rid="jex270123-bib-0105" ref-type="bibr">2018</xref>). Encapsulation within the lipid bilayer may protect this DNA from degradation by circulating DNases, potentially enhancing its stability as a biomarker (Cai et al. <xref rid="jex270123-bib-0033" ref-type="bibr">2013</xref>; Kahlert et al. <xref rid="jex270123-bib-0035" ref-type="bibr">2014</xref>; Vagner et al. <xref rid="jex270123-bib-0105" ref-type="bibr">2018</xref>; Degli Esposti et al. <xref rid="jex270123-bib-0106" ref-type="bibr">2021</xref>). This increased stability could improve sensitivity, as EV‐associated DNA would be more readily preserved and accessible for downstream analysis. The limitation of EV‐DNA as a biomarker is that it is less ‘real‐time’ since it may not reflect the disease at that moment, compared to ctDNA, whose half‐life ranges from a few minutes (Rumore et al. <xref rid="jex270123-bib-0107" ref-type="bibr">1992</xref>; Lo et al. <xref rid="jex270123-bib-0108" ref-type="bibr">1999</xref>) to hours (Lau et al. <xref rid="jex270123-bib-0109" ref-type="bibr">2002</xref>; Yu et al. <xref rid="jex270123-bib-0110" ref-type="bibr">2013</xref>). However, EV‐DNA's lack of real‐time monitoring could be complemented by ctDNA, highlighting the utility of using both analytes in combination.</p><p>It is also important to note that the method of EV isolation can influence downstream DNA extraction as methods vary in how effectively they separate EVs from cfDNA. These differences may therefore bias comparisons between ctDNA and EV‐DNA. For example, size‐exclusion chromatography (SEC) may not efficiently separate cfDNA from EVs, whereas density‐gradient ultracentrifugation (DGUC) may remove external EV‐DNA altogether (Liu et al. <xref rid="jex270123-bib-0111" ref-type="bibr">2022</xref>). Thus, if EV‐DNA extraction via SEC includes external cfDNA, the EV‐DNA signal may be artificially inflated, making EV‐DNA appear more sensitive than it truly is. Conversely, DGUC removes external EV‐DNA, so EV‐DNA measurements reflect only internal cargo. This could make EV‐DNA seem less sensitive compared to ctDNA, even if EVs carry relevant tumour signals.</p><p>Although this analysis has focused on mutation detection in EV‐DNA as a diagnostic biomarker, it is also important to mention the role of EV‐DNA as a functional biomarker. Recent studies have demonstrated that EV‐DNA can interact with proteins and signalling pathways, influencing tumour progression and metastasis, as shown in leukaemia (Cai et al. <xref rid="jex270123-bib-0033" ref-type="bibr">2013</xref>; Cai et al. <xref rid="jex270123-bib-0112" ref-type="bibr">2014</xref>) and liver cancer models (Wortzel et al. <xref rid="jex270123-bib-0113" ref-type="bibr">2024</xref>). This functional dimension positions EV‐DNA not only as a diagnostic marker but also as a potential mechanistic biomarker that could inform therapeutic strategies. For example, colorectal cancer EVs have been shown to transfer EV‐DNA to recipient fibroblasts and possibly transcribe it in vitro (Abdouh et al. <xref rid="jex270123-bib-0114" ref-type="bibr">2019</xref>). This transfer of DNA, along with miRNAs, may be responsible for the transformation of these fibroblasts into colon carcinoma cells. Moreover, EGFRvIII‐driven glioblastoma‐derived EVs carrying genomic DNA have been shown to be taken up by primary endothelial cells and induce the formation of micronuclei, an indicator of genetic instability, in the recipient cells (Chennakrishnaiah et al. <xref rid="jex270123-bib-0053" ref-type="bibr">2020</xref>). Such works demonstrate that—unlike ctDNA, which primarily reflects tumour burden—EV‐DNA may provide insights into active disease processes, including metastatic spread.</p><p>A limitation of our meta‐analysis is that we excluded studies investigating mtDNA. Previous literature has shown that large‐scale mtDNA deletions detected from patient blood (reviewed in Mohd Khair et al. <xref rid="jex270123-bib-0115" ref-type="bibr">2021</xref>) and circulating cf mtDNA (Hashad et al. <xref rid="jex270123-bib-0116" ref-type="bibr">2015</xref>) have the potential to be mtDNA‐based cancer biomarkers. However, little is known about the utility of EV‐derived mtDNA as a biomarker. EV‐derived mtDNA from controls, hepatocellular carcinoma patients, and hepatitis patients has been shown to recapitulate the entire mitochondrial genome (Li et al. <xref rid="jex270123-bib-0097" ref-type="bibr">2020</xref>). In the same study, they also reported that EV‐derived mtDNA fragment length and copy number varied between controls and hepatocellular carcinoma patients (Li et al. <xref rid="jex270123-bib-0097" ref-type="bibr">2020</xref>). These findings highlight the need for further studies to clarify the diagnostic and prognostic utility of EV‐derived mtDNA.</p><p>Several important studies in the field of EV‐DNA liquid biopsy did not meet our inclusion criteria for meta‐analysis, but nevertheless provide valuable insights. For instance, Casanova‐Salas et al. (<xref rid="jex270123-bib-0117" ref-type="bibr">2024</xref>) reported a 55% detection rate for mutations in plasma EV‐DNA from metastatic prostate cancer patients, while Yang et al. (<xref rid="jex270123-bib-0118" ref-type="bibr">2017</xref>) detected <italic toggle="yes">KRAS</italic> G12D mutations in 40% of serum EV‐DNA samples from pancreatic cancer patients. Although methodological differences prevented their inclusion, these findings underscore the growing evidence base supporting EV‐DNA as a promising biomarker in oncology.</p><p>Although ctDNA assays showed higher sensitivity compared to EV‐DNA (70.0% vs. 64.6%) and EV‐DNA assays demonstrated higher specificity compared to ctDNA (93.3% vs. 90.6%), the large credible and prediction intervals and the small number of studies in each group reflect a considerable amount of uncertainty. Moreover, ctDNA is already integrated into several FDA‐approved liquid biopsy tests, underscoring its established clinical utility. Nonetheless, EV‐DNA represents a promising complementary approach: it can be isolated using existing workflows with minimal procedural changes and may offer additional biological insights. To advance EV‐DNA towards clinical adoption, we recommend the development of standardised protocols, prospective validation studies—particularly in high‐risk cohorts—to assess its potential value alongside approved ctDNA tests.</p></sec><sec id="jex270123-sec-0140"><label>5</label><title>Conclusion</title><p>This meta‐analysis is the first to determine the summary estimates of sensitivity and specificity for detecting mutations in both EV‐DNA and ctDNA. We highlight the exciting potential of EV‐DNA as a complementary cancer biomarker. The diversity in study populations and publication bias clearly demands additional research to firmly establish these findings and enhance the effectiveness of EV‐DNA and ctDNA analysis in the treatment of various cancers. Tackling these limitations with more robust study designs, consistent methodologies, thorough data reporting, and meticulous attention to potential biases is essential for propelling our understanding of the prognostic significance of EV‐DNA and ctDNA mutations in various cancers.</p></sec><sec id="jex270123-sec-0150"><title>Author Contributions</title><p>
+<bold>Tad Wu</bold>: Conceptualization; data curation; formal analysis; writing – original draft; writing – review and editing. <bold>Kyle Dickinson</bold>: Data curation; formal analysis; project administration; writing – review and editing. <bold>Ian Schiller</bold>: Data curation; writing – review and editing. <bold>Thupten Tsering</bold>: Conceptualization; data curation; formal analysis; writing – review and editing. <bold>Amélie Nadeau</bold>: Data curation; writing – review &amp; editing. <bold>Yunxi Chen</bold>: Data curation; writing – review and editing. <bold>Nandini Dendukuri</bold>: Data curation; writing – review and editing. <bold>Venkata Ramana Agnihotram</bold>: Data curation; Formal analysis; writing – review &amp; editing. <bold>Julia V. Burnier</bold>: Conceptualization; funding acquisition; writing – original draft; writing – review and editing.</p></sec><sec id="jex270123-sec-0160"><title>Funding</title><p>J.V.B. is supported by the Fonds de Recherche du Québec en Santé (FRQS, #312831). T.W. received a Canada Graduate Scholarship‐Master's (CGS‐M) award from the Canadian Institutes of Health research (CIHR) and a Cancer Research Society (CRS) Doctoral Research Award (1332608). Y.C. received Master's and PhD awards from the FRQS (#306252, #330509), PhD studentship award from the Research Institute of the McGill University Health Centre, and Graduate Excellence Fellowship from McGill University. T.T. received PhD award from FRQS [#344929] with additional support from Gaden Phodrang Foundation, McGill University internal studentship and Fiera Capital Prize from the MUHC Foundation.</p></sec><sec id="jex270123-sec-0170"><title>Ethics Statement</title><p>Not Applicable.</p></sec><sec sec-type="COI-statement" id="jex270123-sec-0180"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="jex270123-supinfo-0001" position="float" content-type="local-data" orientation="portrait"/><supplementary-material id="jex270123-supitem-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Supporting Information Figure S1</bold>: jex270123‐sup‐0001‐FigureS1.jpg</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="JEX2-5-e70123-s002.jpg" position="float" orientation="portrait"/></supplementary-material><supplementary-material id="jex270123-supitem-0002" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Supporting Information Tables S1–S3</bold>: jex270123‐sup‐0002‐TableS1‐S3.docx</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="JEX2-5-e70123-s001.docx" position="float" orientation="portrait"/></supplementary-material></sec></body><back><sec sec-type="data-availability" id="jex270123-sec-0200"><title>Data Availability Statement</title><p>The data that supports the findings of this study are available in the supplementary material of this article.</p></sec><ref-list id="jex270123-bibl-0001"><title>References</title><ref id="jex270123-bib-0114"><mixed-citation publication-type="journal" id="jex270123-cite-0114">
+<string-name name-style="western">
+<surname>Abdouh</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Floris</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.‐H.</given-names>
+<surname>Gao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Arena</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Arena</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G. O.</given-names>
+<surname>Arena</surname>
+</string-name>. <year>2019</year>. “<article-title>Colorectal Cancer‐Derived Extracellular Vesicles Induce Transformation of Fibroblasts Into Colon Carcinoma Cells</article-title>.” <source>Journal of Experimental &amp; Clinical Cancer Research</source>
+<volume>38</volume>, no. <issue>1</issue>: <fpage>257</fpage>.<pub-id pub-id-type="pmid">31200749</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s13046-019-1248-2</pub-id><pub-id pub-id-type="pmcid">PMC6567673</pub-id></mixed-citation></ref><ref id="jex270123-bib-0040"><mixed-citation publication-type="journal" id="jex270123-cite-0040">
+<string-name name-style="western">
+<surname>Abels</surname>, <given-names>E. R.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>X. O.</given-names>
+<surname>Breakefield</surname>
+</string-name>. <year>2016</year>. “<article-title>Introduction to Extracellular Vesicles: Biogenesis, RNA Cargo Selection, Content, Release, and Uptake</article-title>.” <source>Cellular and Molecular Neurobiology</source>
+<volume>36</volume>, no. <issue>3</issue>: <fpage>301</fpage>–<lpage>312</lpage>.<pub-id pub-id-type="pmid">27053351</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10571-016-0366-z</pub-id><pub-id pub-id-type="pmcid">PMC5546313</pub-id></mixed-citation></ref><ref id="jex270123-bib-0042"><mixed-citation publication-type="journal" id="jex270123-cite-0042">
+<string-name name-style="western">
+<surname>Bellingham</surname>, <given-names>S. A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>B. M.</given-names>
+<surname>Coleman</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A. F.</given-names>
+<surname>Hill</surname>
+</string-name>. <year>2012</year>. “<article-title>Small RNA Deep Sequencing Reveals a Distinct miRNA Signature Released in Exosomes From Prion‐Infected Neuronal Cells</article-title>.” <source>Nucleic Acids Research</source>
+<volume>40</volume>, no. <issue>21</issue>: <fpage>10937</fpage>–<lpage>10949</lpage>.<pub-id pub-id-type="pmid">22965126</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/gks832</pub-id><pub-id pub-id-type="pmcid">PMC3505968</pub-id></mixed-citation></ref><ref id="jex270123-bib-0070"><mixed-citation publication-type="journal" id="jex270123-cite-0070">
+<string-name name-style="western">
+<surname>Bernard</surname>, <given-names>V.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D. U.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. A.</given-names>
+<surname>San Lucas</surname>
+</string-name>, et al. <year>2019</year>. “<article-title>Circulating Nucleic Acids Are Associated With Outcomes of Patients With Pancreatic Cancer</article-title>.” <source>Gastroenterology</source>
+<volume>156</volume>, no. <issue>1</issue>: <fpage>108</fpage>–<lpage>118.e4</lpage>.<pub-id pub-id-type="pmid">30240661</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1053/j.gastro.2018.09.022</pub-id><pub-id pub-id-type="pmcid">PMC6434712</pub-id></mixed-citation></ref><ref id="jex270123-bib-0077"><mixed-citation publication-type="journal" id="jex270123-cite-0077">
+<string-name name-style="western">
+<surname>Bettegowda</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Sausen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. J.</given-names>
+<surname>Leary</surname>
+</string-name>, et al. <year>2014</year>. “<article-title>Detection of Circulating Tumor DNA in Early‐ and Late‐Stage Human Malignancies</article-title>.” <source>Science Translational Medicine</source>
+<volume>6</volume>, no. <issue>224</issue>: <elocation-id>224ra24</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/scitranslmed.3007094</pub-id><pub-id pub-id-type="pmcid">PMC4017867</pub-id><pub-id pub-id-type="pmid">24553385</pub-id></mixed-citation></ref><ref id="jex270123-bib-0033"><mixed-citation publication-type="journal" id="jex270123-cite-0033">
+<string-name name-style="western">
+<surname>Cai</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Han</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Ren</surname>
+</string-name>, et al. <year>2013</year>. “<article-title>Extracellular Vesicle‐Mediated Transfer of Donor Genomic DNA to Recipient Cells Is a Novel Mechanism for Genetic Influence Between Cells</article-title>.” <source>Journal of Molecular Cell Biology</source>
+<volume>5</volume>, no. <issue>4</issue>: <fpage>227</fpage>–<lpage>238</lpage>.<pub-id pub-id-type="pmid">23580760</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/jmcb/mjt011</pub-id><pub-id pub-id-type="pmcid">PMC3733418</pub-id></mixed-citation></ref><ref id="jex270123-bib-0112"><mixed-citation publication-type="journal" id="jex270123-cite-0112">
+<string-name name-style="western">
+<surname>Cai</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Wu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Tan</surname>
+</string-name>, et al. <year>2014</year>. “<article-title>Transferred BCR/ABL DNA From K562 Extracellular Vesicles Causes Chronic Myeloid Leukemia in Immunodeficient Mice</article-title>.” <source>PLoS ONE</source>
+<volume>9</volume>, no. <issue>8</issue>: <elocation-id>e105200</elocation-id>.<pub-id pub-id-type="pmid">25133686</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0105200</pub-id><pub-id pub-id-type="pmcid">PMC4136837</pub-id></mixed-citation></ref><ref id="jex270123-bib-0095"><mixed-citation publication-type="journal" id="jex270123-cite-0095">
+<string-name name-style="western">
+<surname>Cardinali</surname>, <given-names>B.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>De Luca</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Tasso</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Targeting PIK3CA Actionable Mutations in the Circulome: A Proof of Concept in Metastatic Breast Cancer</article-title>.” <source>International Journal of Molecular Sciences</source>
+<volume>23</volume>, no. <issue>11</issue>: <fpage>6320</fpage>.<pub-id pub-id-type="pmid">35682999</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/ijms23116320</pub-id><pub-id pub-id-type="pmcid">PMC9181240</pub-id></mixed-citation></ref><ref id="jex270123-bib-0117"><mixed-citation publication-type="journal" id="jex270123-cite-0117">
+<string-name name-style="western">
+<surname>Casanova‐Salas</surname>, <given-names>I.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Aguilar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Cordoba‐Terreros</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>Circulating Tumor Extracellular Vesicles to Monitor Metastatic Prostate Cancer Genomics and Transcriptomic Evolution</article-title>.” <source>Cancer Cell</source>
+<volume>42</volume>, no. <issue>7</issue>: <fpage>1301</fpage>–<lpage>1312.e7</lpage>.<pub-id pub-id-type="pmid">38981440</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ccell.2024.06.003</pub-id></mixed-citation></ref><ref id="jex270123-bib-0031"><mixed-citation publication-type="journal" id="jex270123-cite-0031">
+<string-name name-style="western">
+<surname>Chan</surname>, <given-names>A. T. C.</given-names>
+</string-name>
+<year>2002</year>. “<article-title>Plasma Epstein‐Barr Virus DNA and Residual Disease After Radiotherapy for Undifferentiated Nasopharyngeal Carcinoma</article-title>.” <source>JNCI: Journal of the National Cancer Institute</source>
+<volume>94</volume>, no. <issue>21</issue>: <fpage>1614</fpage>–<lpage>1619</lpage>.<pub-id pub-id-type="pmid">12419787</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/jnci/94.21.1614</pub-id></mixed-citation></ref><ref id="jex270123-bib-0090"><mixed-citation publication-type="journal" id="jex270123-cite-0090">
+<string-name name-style="western">
+<surname>Chen</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M. P.</given-names>
+<surname>Douglas</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. V.</given-names>
+<surname>Ragavan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. A.</given-names>
+<surname>Phillips</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Jansen</surname>
+</string-name>. <year>2024</year>. “<article-title>Clinical Validity and Utility of Circulating Tumor DNA (ctDNA) Testing in Advanced Non‐Small Cell Lung Cancer (aNSCLC): A Systematic Literature Review and Meta‐Analysis</article-title>.” <source>Molecular Diagnosis &amp; Therapy</source>
+<volume>28</volume>, no. <issue>5</issue>: <fpage>525</fpage>–<lpage>536</lpage>.<pub-id pub-id-type="pmid">39093546</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s40291-024-00725-x</pub-id><pub-id pub-id-type="pmcid">PMC11349784</pub-id></mixed-citation></ref><ref id="jex270123-bib-0007"><mixed-citation publication-type="journal" id="jex270123-cite-0007">
+<string-name name-style="western">
+<surname>Cheng</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Holland‐Letz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Wallwiener</surname>
+</string-name>, et al. <year>2018</year>. “<article-title>Circulating Free DNA Integrity and Concentration as Independent Prognostic Markers in Metastatic Breast Cancer</article-title>.” <source>Breast Cancer Research and Treatment</source>
+<volume>169</volume>, no. <issue>1</issue>: <fpage>69</fpage>–<lpage>82</lpage>.<pub-id pub-id-type="pmid">29340881</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10549-018-4666-5</pub-id></mixed-citation></ref><ref id="jex270123-bib-0053"><mixed-citation publication-type="journal" id="jex270123-cite-0053">
+<string-name name-style="western">
+<surname>Chennakrishnaiah</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Tsering</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Gregory</surname>
+</string-name>, et al. <year>2020</year>. “<article-title>Extracellular Vesicles From Genetically Unstable, Oncogene‐Driven Cancer Cells Trigger Micronuclei Formation in Endothelial Cells</article-title>.” <source>Scientific Reports</source>
+<volume>10</volume>, no. <issue>1</issue>: <fpage>8532</fpage>.<pub-id pub-id-type="pmid">32444772</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41598-020-65640-7</pub-id><pub-id pub-id-type="pmcid">PMC7244541</pub-id></mixed-citation></ref><ref id="jex270123-bib-0029"><mixed-citation publication-type="journal" id="jex270123-cite-0029">
+<string-name name-style="western">
+<surname>Chera</surname>, <given-names>B. S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Kumar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Shen</surname>
+</string-name>, et al. <year>2020</year>. “<article-title>Plasma Circulating Tumor HPV DNA for the Surveillance of Cancer Recurrence in HPV‐Associated Oropharyngeal Cancer</article-title>.” <source>Journal of Clinical Oncology</source>
+<volume>38</volume>, no. <issue>10</issue>: <fpage>1050</fpage>–<lpage>1058</lpage>.<pub-id pub-id-type="pmid">32017652</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1200/JCO.19.02444</pub-id><pub-id pub-id-type="pmcid">PMC7106982</pub-id></mixed-citation></ref><ref id="jex270123-bib-0084"><mixed-citation publication-type="journal" id="jex270123-cite-0084">
+<string-name name-style="western">
+<surname>Chidambaram</surname>, <given-names>S.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>S. R.</given-names>
+<surname>Markar</surname>
+</string-name>. <year>2022</year>. “<article-title>Clinical Utility and Applicability of Circulating Tumor DNA Testing in Esophageal Cancer: A Systematic Review and Meta‐Analysis</article-title>.” <source>Diseases of the Esophagus</source>
+<volume>35</volume>, no. <issue>2</issue>: <elocation-id>doab046</elocation-id>.<pub-id pub-id-type="pmid">34286823</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/dote/doab046</pub-id><pub-id pub-id-type="pmcid">PMC8832526</pub-id></mixed-citation></ref><ref id="jex270123-bib-0050"><mixed-citation publication-type="journal" id="jex270123-cite-0050">
+<string-name name-style="western">
+<surname>Choi</surname>, <given-names>J.‐J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C. F.</given-names>
+<surname>Reich</surname>
+<suffix>3rd</suffix>
+</string-name>, and <string-name name-style="western">
+<given-names>D. S.</given-names>
+<surname>Pisetsky</surname>
+</string-name>. <year>2005</year>. “<article-title>The Role of Macrophages in the In Vitro Generation of Extracellular DNA From Apoptotic and Necrotic Cells</article-title>.” <source>Immunology</source>
+<volume>115</volume>, no. <issue>1</issue>: <fpage>55</fpage>–<lpage>62</lpage>.<pub-id pub-id-type="pmid">15819697</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/j.1365-2567.2005.02130.x</pub-id><pub-id pub-id-type="pmcid">PMC1782131</pub-id></mixed-citation></ref><ref id="jex270123-bib-0054"><mixed-citation publication-type="journal" id="jex270123-cite-0054">
+<string-name name-style="western">
+<surname>Choi</surname>, <given-names>E. J.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>Y. J.</given-names>
+<surname>Kim</surname>
+</string-name>. <year>2022</year>. “<article-title>Liquid Biopsy for Early Detection and Therapeutic Monitoring of Hepatocellular Carcinoma</article-title>.” <source>Journal of Liver Cancer</source>
+<volume>22</volume>, no. <issue>2</issue>: <fpage>103</fpage>–<lpage>114</lpage>.<pub-id pub-id-type="pmid">37383403</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.17998/jlc.2022.09.08</pub-id><pub-id pub-id-type="pmcid">PMC10035729</pub-id></mixed-citation></ref><ref id="jex270123-bib-0066"><mixed-citation publication-type="journal" id="jex270123-cite-0066">
+<string-name name-style="western">
+<surname>Choi</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>H. Y.</given-names>
+<surname>Cho</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Jeon</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Detection of Circulating KRAS Mutant DNA in Extracellular Vesicles Using Droplet Digital PCR in Patients With Colon Cancer</article-title>.” <source>Frontiers in Oncology</source>
+<volume>12</volume>: <elocation-id>1067210</elocation-id>.<pub-id pub-id-type="pmid">36591510</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fonc.2022.1067210</pub-id><pub-id pub-id-type="pmcid">PMC9797818</pub-id></mixed-citation></ref><ref id="jex270123-bib-0038"><mixed-citation publication-type="journal" id="jex270123-cite-0038">
+<string-name name-style="western">
+<surname>Cocucci</surname>, <given-names>E.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Meldolesi</surname>
+</string-name>. <year>2015</year>. “<article-title>Ectosomes and Exosomes: Shedding the Confusion Between Extracellular Vesicles</article-title>.” <source>Trends in Cell Biology</source>
+<volume>25</volume>, no. <issue>6</issue>: <fpage>364</fpage>–<lpage>372</lpage>.<pub-id pub-id-type="pmid">25683921</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.tcb.2015.01.004</pub-id></mixed-citation></ref><ref id="jex270123-bib-0086"><mixed-citation publication-type="journal" id="jex270123-cite-0086">
+<string-name name-style="western">
+<surname>Creemers</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Krausz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Strijker</surname>
+</string-name>, et al. <year>2017</year>. “<article-title>Clinical Value of ctDNA in Upper‐GI Cancers: A Systematic Review and Meta‐Analysis</article-title>.” <source>Biochimica et Biophysica Acta (BBA)—Reviews on Cancer</source>
+<volume>1868</volume>, no. <issue>2</issue>: <fpage>394</fpage>–<lpage>403</lpage>.<pub-id pub-id-type="pmid">28801248</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.bbcan.2017.08.002</pub-id></mixed-citation></ref><ref id="jex270123-bib-0001"><mixed-citation publication-type="journal" id="jex270123-cite-0001">
+<string-name name-style="western">
+<surname>Crowley</surname>, <given-names>E.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Di Nicolantonio</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Loupakis</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Bardelli</surname>
+</string-name>. <year>2013</year>. “<article-title>Liquid Biopsy: Monitoring Cancer‐Genetics in the Blood</article-title>.” <source>Nature Reviews Clinical Oncology</source>
+<volume>10</volume>, no. <issue>8</issue>: <fpage>472</fpage>–<lpage>484</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nrclinonc.2013.110</pub-id><pub-id pub-id-type="pmid">23836314</pub-id></mixed-citation></ref><ref id="jex270123-bib-0106"><mixed-citation publication-type="journal" id="jex270123-cite-0106">
+<string-name name-style="western">
+<surname>Degli Esposti</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Iadarola</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Maestri</surname>
+</string-name>, et al. <year>2021</year>. “<article-title>Exosomes From Plasma of Neuroblastoma Patients Contain Doublestranded DNA Reflecting the Mutational Status of Parental Tumor Cells</article-title>.” <source>International Journal of Molecular Sciences</source>
+<volume>22</volume>, no. <issue>7</issue>: <fpage>3667</fpage>.<pub-id pub-id-type="pmid">33915956</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/ijms22073667</pub-id><pub-id pub-id-type="pmcid">PMC8036333</pub-id></mixed-citation></ref><ref id="jex270123-bib-0008"><mixed-citation publication-type="journal" id="jex270123-cite-0008">
+<string-name name-style="western">
+<surname>Eboshida</surname>, <given-names>N.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Hamada</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Higaki</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>Potential Role of Circulating Tumor Cells and Cell‐Free DNA as Biomarkers in Oral Squamous Cell Carcinoma: A Prospective Single‐Center Study</article-title>.” <source>PLoS ONE</source>
+<volume>19</volume>, no. <issue>12</issue>: <elocation-id>e0309178</elocation-id>.<pub-id pub-id-type="pmid">39729421</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0309178</pub-id><pub-id pub-id-type="pmcid">PMC11676868</pub-id></mixed-citation></ref><ref id="jex270123-bib-0028"><mixed-citation publication-type="journal" id="jex270123-cite-0028">
+<string-name name-style="western">
+<surname>Ferrier</surname>, <given-names>S. T.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Tsering</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Sadeghi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Zeitouni</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. V.</given-names>
+<surname>Burnier</surname>
+</string-name>. <year>2023</year>. “<article-title>Blood and Saliva‐Derived ctDNA Is a Marker of Residual Disease After Treatment and Correlates With Recurrence in Human Papillomavirus‐Associated Head and Neck Cancer</article-title>.” <source>Cancer Medicine</source>
+<volume>12</volume>, no. <issue>15</issue>: <fpage>15777</fpage>–<lpage>15787</lpage>.<pub-id pub-id-type="pmid">37526056</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/cam4.6191</pub-id><pub-id pub-id-type="pmcid">PMC10469655</pub-id></mixed-citation></ref><ref id="jex270123-bib-0021"><mixed-citation publication-type="journal" id="jex270123-cite-0021">
+<string-name name-style="western">
+<surname>Fiano</surname>, <given-names>V.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Trevisan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Trevisan</surname>
+</string-name>, et al. <year>2014</year>. “<article-title>MGMT Promoter Methylation in Plasma of Glioma Patients Receiving Temozolomide</article-title>.” <source>Journal of Neuro‐Oncology</source>
+<volume>117</volume>, no. <issue>2</issue>: <fpage>347</fpage>–<lpage>357</lpage>.<pub-id pub-id-type="pmid">24519517</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s11060-014-1395-4</pub-id></mixed-citation></ref><ref id="jex270123-bib-0096"><mixed-citation publication-type="journal" id="jex270123-cite-0096">
+<string-name name-style="western">
+<surname>Galbiati</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Damin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Brambilla</surname>
+</string-name>, et al. <year>2021</year>. “<article-title>Small EVs‐Associated DNA as Complementary Biomarker to Circulating Tumor DNA in Plasma of Metastatic Colorectal Cancer Patients</article-title>.” <source>Pharmaceuticals</source>
+<volume>14</volume>, no. <issue>2</issue>: <fpage>128</fpage>.<pub-id pub-id-type="pmid">33562158</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/ph14020128</pub-id><pub-id pub-id-type="pmcid">PMC7915475</pub-id></mixed-citation></ref><ref id="jex270123-bib-0079"><mixed-citation publication-type="journal" id="jex270123-cite-0079">
+<string-name name-style="western">
+<surname>Galvano</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Castellana</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Gristina</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>The Diagnostic Accuracy of PIK3CA Mutations by Circulating Tumor DNA in Breast Cancer: An Individual Patient Data Meta‐Analysis</article-title>.” <source>Therapeutic Advances in Medical Oncology</source>
+<volume>14</volume>: <elocation-id>17588359221110162</elocation-id>.<pub-id pub-id-type="pmid">36188485</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/17588359221110162</pub-id><pub-id pub-id-type="pmcid">PMC9516428</pub-id></mixed-citation></ref><ref id="jex270123-bib-0085"><mixed-citation publication-type="journal" id="jex270123-cite-0085">
+<string-name name-style="western">
+<surname>Gao</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Xi</surname>
+</string-name>, et al. <year>2017</year>. “<article-title>Diagnostic and Prognostic Value of Circulating Tumor DNA in Gastric Cancer: A Meta‐Analysis</article-title>.” <source>Oncotarget</source>
+<volume>8</volume>, no. <issue>4</issue>: <fpage>6330</fpage>–<lpage>6340</lpage>.<pub-id pub-id-type="pmid">28009985</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.18632/oncotarget.14064</pub-id><pub-id pub-id-type="pmcid">PMC5351635</pub-id></mixed-citation></ref><ref id="jex270123-bib-0069"><mixed-citation publication-type="journal" id="jex270123-cite-0069">
+<string-name name-style="western">
+<surname>Glennon</surname>, <given-names>K. I.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Maralani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Abdian</surname>
+</string-name>, et al. <year>2021</year>. “<article-title>Rational Development of Liquid Biopsy Analysis in Renal Cell Carcinoma</article-title>.” <source>Cancers</source>
+<volume>13</volume>, no. <issue>22</issue>: <fpage>5825</fpage>.<pub-id pub-id-type="pmid">34830979</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/cancers13225825</pub-id><pub-id pub-id-type="pmcid">PMC8616270</pub-id></mixed-citation></ref><ref id="jex270123-bib-0020"><mixed-citation publication-type="journal" id="jex270123-cite-0020">
+<string-name name-style="western">
+<surname>Grützmann</surname>, <given-names>R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Molnar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Pilarsky</surname>
+</string-name>, et al. <year>2008</year>. “<article-title>Sensitive Detection of Colorectal Cancer in Peripheral Blood by Septin 9 DNA Methylation Assay</article-title>.” <source>PLoS ONE</source>
+<volume>3</volume>, no. <issue>11</issue>: <elocation-id>e3759</elocation-id>.<pub-id pub-id-type="pmid">19018278</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0003759</pub-id><pub-id pub-id-type="pmcid">PMC2582436</pub-id></mixed-citation></ref><ref id="jex270123-bib-0081"><mixed-citation publication-type="journal" id="jex270123-cite-0081">
+<string-name name-style="western">
+<surname>Hao</surname>, <given-names>Y.‐X.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Fu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.‐Y.</given-names>
+<surname>Guo</surname>
+</string-name>, et al. <year>2017</year>. “<article-title>Effectiveness of Circulating Tumor DNA for Detection of KRAS Gene Mutations in Colorectal Cancer Patients: A Meta‐Analysis</article-title>.” <source>OncoTargets and Therapy</source>
+<volume>10</volume>, no. <issue>null</issue>: <fpage>945</fpage>–<lpage>953</lpage>.<pub-id pub-id-type="pmid">28243130</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2147/OTT.S123954</pub-id><pub-id pub-id-type="pmcid">PMC5317324</pub-id></mixed-citation></ref><ref id="jex270123-bib-0116"><mixed-citation publication-type="journal" id="jex270123-cite-0116">
+<string-name name-style="western">
+<surname>Hashad</surname>, <given-names>D. I.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A. S.</given-names>
+<surname>Elyamany</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P. E.</given-names>
+<surname>Salem</surname>
+</string-name>. <year>2015</year>. “<article-title>Mitochondrial DNA Copy Number in Egyptian Patients With Hepatitis C Virus‐Related Hepatocellular Carcinoma</article-title>.” <source>Genetic Testing and Molecular Biomarkers</source>
+<volume>19</volume>, no. <issue>11</issue>: <fpage>604</fpage>–<lpage>609</lpage>.<pub-id pub-id-type="pmid">26447820</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1089/gtmb.2015.0132</pub-id></mixed-citation></ref><ref id="jex270123-bib-0094"><mixed-citation publication-type="journal" id="jex270123-cite-0094">
+<string-name name-style="western">
+<surname>Heestermans</surname>, <given-names>R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>De Brouwer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Maes</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Liquid Biopsy‐Derived DNA Sources as Tools for Comprehensive Mutation Profiling in Multiple Myeloma: A Comparative Study</article-title>.” <source>Cancers</source>
+<volume>14</volume>, no. <issue>19</issue>: <fpage>4901</fpage>.<pub-id pub-id-type="pmid">36230824</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/cancers14194901</pub-id><pub-id pub-id-type="pmcid">PMC9563447</pub-id></mixed-citation></ref><ref id="jex270123-bib-0100"><mixed-citation publication-type="journal" id="jex270123-cite-0100">
+<string-name name-style="western">
+<surname>Hur</surname>, <given-names>J. Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>H. J.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. S.</given-names>
+<surname>Lee</surname>
+</string-name>, et al. <year>2018</year>. “<article-title>Extracellular Vesicle‐Derived DNA for Performing EGFR Genotyping of NSCLC Patients</article-title>.” <source>Molecular Cancer</source>
+<volume>17</volume>, no. <issue>1</issue>: <fpage>15</fpage>.<pub-id pub-id-type="pmid">29374476</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12943-018-0772-6</pub-id><pub-id pub-id-type="pmcid">PMC5787306</pub-id></mixed-citation></ref><ref id="jex270123-bib-0011"><mixed-citation publication-type="journal" id="jex270123-cite-0011">
+<string-name name-style="western">
+<surname>Husain</surname>, <given-names>H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D. C.</given-names>
+<surname>Pavlick</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. J.</given-names>
+<surname>Fendler</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Tumor Fraction Correlates With Detection of Actionable Variants Across &gt;23,000 Circulating Tumor DNA Samples</article-title>.” <source>JCO Precision Oncology</source>
+<volume>6</volume>: <elocation-id>e2200261</elocation-id>.<pub-id pub-id-type="pmid">36265119</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1200/PO.22.00261</pub-id><pub-id pub-id-type="pmcid">PMC9616642</pub-id></mixed-citation></ref><ref id="jex270123-bib-0048"><mixed-citation publication-type="journal" id="jex270123-cite-0048">
+<string-name name-style="western">
+<surname>Inamdar</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Nitiyanandan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Rege</surname>
+</string-name>. <year>2017</year>. “<article-title>Emerging Applications of Exosomes in Cancer Therapeutics and Diagnostics</article-title>.” <source>Bioengineering &amp; Translational Medicine</source>
+<volume>2</volume>, no. <issue>1</issue>: <fpage>70</fpage>–<lpage>80</lpage>.<pub-id pub-id-type="pmid">28529978</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/btm2.10059</pub-id><pub-id pub-id-type="pmcid">PMC5413841</pub-id></mixed-citation></ref><ref id="jex270123-bib-0025"><mixed-citation publication-type="journal" id="jex270123-cite-0025">
+<string-name name-style="western">
+<surname>Ivanov</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Baranova</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Butler</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Spellman</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Mileyko</surname>
+</string-name>. <year>2015</year>. “<article-title>Non‐Random Fragmentation Patterns in Circulating Cell‐Free DNA Reflect Epigenetic Regulation</article-title>.” <source>BMC Genomics</source>
+<volume>16</volume>, no. <issue>13</issue>: <fpage>S1</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/1471-2164-16-S13-S1</pub-id><pub-id pub-id-type="pmcid">PMC4686799</pub-id><pub-id pub-id-type="pmid">26693644</pub-id></mixed-citation></ref><ref id="jex270123-bib-0041"><mixed-citation publication-type="journal" id="jex270123-cite-0041">
+<string-name name-style="western">
+<surname>Jeppesen</surname>, <given-names>D. K.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A. M.</given-names>
+<surname>Fenix</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. L.</given-names>
+<surname>Franklin</surname>
+</string-name>, et al. <year>2019</year>. “<article-title>Reassessment of Exosome Composition</article-title>.” <source>Cell</source>
+<volume>177</volume>, no. <issue>2</issue>: <fpage>428</fpage>–<lpage>445.e18</lpage>.<pub-id pub-id-type="pmid">30951670</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cell.2019.02.029</pub-id><pub-id pub-id-type="pmcid">PMC6664447</pub-id></mixed-citation></ref><ref id="jex270123-bib-0073"><mixed-citation publication-type="journal" id="jex270123-cite-0073">
+<string-name name-style="western">
+<surname>Jia</surname>, <given-names>E.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Ren</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Shi</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Extracellular Vesicle Biomarkers for Pancreatic Cancer Diagnosis: A Systematic Review and Meta‐Analysis</article-title>.” <source>BMC Cancer</source>
+<volume>22</volume>, no. <issue>1</issue>: <fpage>573</fpage>.<pub-id pub-id-type="pmid">35606727</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12885-022-09463-x</pub-id><pub-id pub-id-type="pmcid">PMC9125932</pub-id></mixed-citation></ref><ref id="jex270123-bib-0024"><mixed-citation publication-type="journal" id="jex270123-cite-0024">
+<string-name name-style="western">
+<surname>Jiang</surname>, <given-names>P.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C. W. M.</given-names>
+<surname>Chan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. C. A.</given-names>
+<surname>Chan</surname>
+</string-name>, et al. <year>2015</year>. “<article-title>Lengthening and Shortening of Plasma DNA in Hepatocellular Carcinoma Patients</article-title>.” <source>Proceedings of the National Academy of Sciences of the United States of America</source>
+<volume>112</volume>, no. <issue>11</issue>: <fpage>E1317</fpage>–<lpage>E1325</lpage>.<pub-id pub-id-type="pmid">25646427</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.1500076112</pub-id><pub-id pub-id-type="pmcid">PMC4372002</pub-id></mixed-citation></ref><ref id="jex270123-bib-0035"><mixed-citation publication-type="journal" id="jex270123-cite-0035">
+<string-name name-style="western">
+<surname>Kahlert</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Melo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Protopopov</surname>
+</string-name>, et al. <year>2014</year>. “<article-title>Identification of Double‐Stranded Genomic DNA Spanning all Chromosomes With Mutated KRAS and p53 DNA in the Serum Exosomes of Patients With Pancreatic Cancer</article-title>.” <source>Journal of Biological Chemistry</source>
+<volume>289</volume>, no. <issue>7</issue>: <fpage>3869</fpage>–<lpage>3875</lpage>.<pub-id pub-id-type="pmid">24398677</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1074/jbc.C113.532267</pub-id><pub-id pub-id-type="pmcid">PMC3924256</pub-id></mixed-citation></ref><ref id="jex270123-bib-0058"><mixed-citation publication-type="journal" id="jex270123-cite-0058">
+<string-name name-style="western">
+<surname>Kalra</surname>, <given-names>H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>R. J.</given-names>
+<surname>Simpson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Ji</surname>
+</string-name>, et al. <year>2012</year>. “<article-title>Vesiclepedia: A Compendium for Extracellular Vesicles With Continuous Community Annotation</article-title>.” <source>PLoS Biology</source>
+<volume>10</volume>, no. <issue>12</issue>: <elocation-id>e1001450</elocation-id>.<pub-id pub-id-type="pmid">23271954</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pbio.1001450</pub-id><pub-id pub-id-type="pmcid">PMC3525526</pub-id></mixed-citation></ref><ref id="jex270123-bib-0062"><mixed-citation publication-type="journal" id="jex270123-cite-0062">
+<string-name name-style="western">
+<surname>Keerthikumar</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Chisanga</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Ariyaratne</surname>
+</string-name>, et al. <year>2016</year>. “<article-title>ExoCarta: A Web‐Based Compendium of Exosomal Cargo</article-title>.” <source>Journal of Molecular Biology</source>
+<volume>428</volume>, no. <issue>4</issue>: <fpage>688</fpage>–<lpage>692</lpage>.<pub-id pub-id-type="pmid">26434508</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jmb.2015.09.019</pub-id><pub-id pub-id-type="pmcid">PMC4783248</pub-id></mixed-citation></ref><ref id="jex270123-bib-0060"><mixed-citation publication-type="journal" id="jex270123-cite-0060">
+<string-name name-style="western">
+<surname>Kim</surname>, <given-names>D. K.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Kang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>O. Y.</given-names>
+<surname>Kim</surname>
+</string-name>, et al. <year>2013</year>. “<article-title>EVpedia: An Integrated Database of High‐Throughput Data for Systemic Analyses of Extracellular Vesicles</article-title>.” <source>Journal of Extracellular Vesicles</source>
+<volume>2</volume>, no. <issue>1</issue>: <elocation-id>20384</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.3402/jev.v2i0.20384</pub-id><pub-id pub-id-type="pmcid">PMC3760654</pub-id><pub-id pub-id-type="pmid">24009897</pub-id></mixed-citation></ref><ref id="jex270123-bib-0101"><mixed-citation publication-type="journal" id="jex270123-cite-0101">
+<string-name name-style="western">
+<surname>Kim</surname>, <given-names>I. A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. Y.</given-names>
+<surname>Hur</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. J.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W. S.</given-names>
+<surname>Kim</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K. Y.</given-names>
+<surname>Lee</surname>
+</string-name>. <year>2022</year>. “<article-title>Extracellular Vesicle‐Based Bronchoalveolar Lavage Fluid Liquid Biopsy for EGFR Mutation Testing in Advanced Non‐Squamous NSCLC</article-title>.” <source>Cancers</source>
+<volume>14</volume>, no. <issue>11</issue>: <fpage>2744</fpage>.<pub-id pub-id-type="pmid">35681723</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/cancers14112744</pub-id><pub-id pub-id-type="pmcid">PMC9179452</pub-id></mixed-citation></ref><ref id="jex270123-bib-0013"><mixed-citation publication-type="journal" id="jex270123-cite-0013">
+<string-name name-style="western">
+<surname>Kirchweger</surname>, <given-names>P.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Kupferthaler</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Burghofer</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Circulating Tumor DNA Correlates With Tumor Burden and Predicts Outcome in Pancreatic Cancer Irrespective of Tumor Stage</article-title>.” <source>European Journal of Surgical Oncology</source>
+<volume>48</volume>, no. <issue>5</issue>: <fpage>1046</fpage>–<lpage>1053</lpage>.<pub-id pub-id-type="pmid">34876329</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ejso.2021.11.138</pub-id></mixed-citation></ref><ref id="jex270123-bib-0099"><mixed-citation publication-type="journal" id="jex270123-cite-0099">
+<string-name name-style="western">
+<surname>Klump</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Phillipp</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Follo</surname>
+</string-name>, et al. <year>2018</year>. “<article-title>Extracellular Vesicles or Free Circulating DNA: Where to Search for BRAF and cKIT Mutations?</article-title>” <source>Nanomedicine: Nanotechnology, Biology and Medicine</source>
+<volume>14</volume>, no. <issue>3</issue>: <fpage>875</fpage>–<lpage>882</lpage>.<pub-id pub-id-type="pmid">29288729</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.nano.2017.12.009</pub-id></mixed-citation></ref><ref id="jex270123-bib-0055"><mixed-citation publication-type="journal" id="jex270123-cite-0055">
+<string-name name-style="western">
+<surname>Lötvall</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A. F.</given-names>
+<surname>Hill</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Hochberg</surname>
+</string-name>, et al. <year>2014</year>. “<article-title>Minimal Experimental Requirements for Definition of Extracellular Vesicles and Their Functions: A Position Statement From the International Society for Extracellular Vesicles</article-title>.” <source>Journal of Extracellular Vesicles</source>
+<volume>3</volume>: <elocation-id>26913</elocation-id>.<pub-id pub-id-type="pmid">25536934</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3402/jev.v3.26913</pub-id><pub-id pub-id-type="pmcid">PMC4275645</pub-id></mixed-citation></ref><ref id="jex270123-bib-0109"><mixed-citation publication-type="journal" id="jex270123-cite-0109">
+<string-name name-style="western">
+<surname>Lau</surname>, <given-names>T.‐W.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>T. N.</given-names>
+<surname>Leung</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. Y.</given-names>
+<surname>Chan</surname>
+</string-name>, et al. <year>2002</year>. “<article-title>Fetal DNA Clearance From Maternal Plasma Is Impaired in Preeclampsia</article-title>.” <source>Clinical Chemistry</source>
+<volume>48</volume>, no. <issue>12</issue>: <fpage>2141</fpage>–<lpage>2146</lpage>.<pub-id pub-id-type="pmid">12446469</pub-id>
+</mixed-citation></ref><ref id="jex270123-bib-0034"><mixed-citation publication-type="journal" id="jex270123-cite-0034">
+<string-name name-style="western">
+<surname>Lee</surname>, <given-names>T. H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Chennakrishnaiah</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Audemard</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Montermini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Meehan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Rak</surname>
+</string-name>. <year>2014</year>. “<article-title>Oncogenic Ras‐Driven Cancer Cell Vesiculation Leads to Emission of Double‐Stranded DNA Capable of Interacting With Target Cells</article-title>.” <source>Biochemical and Biophysical Research Communications</source>
+<volume>451</volume>, no. <issue>2</issue>: <fpage>295</fpage>–<lpage>301</lpage>.<pub-id pub-id-type="pmid">25086355</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.bbrc.2014.07.109</pub-id></mixed-citation></ref><ref id="jex270123-bib-0044"><mixed-citation publication-type="journal" id="jex270123-cite-0044">
+<string-name name-style="western">
+<surname>Lee</surname>, <given-names>T. H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Chennakrishnaiah</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Meehan</surname>
+</string-name>, et al. <year>2016</year>. “<article-title>Barriers to Horizontal Cell Transformation by Extracellular Vesicles Containing Oncogenic H‐ras</article-title>.” <source>Oncotarget</source>
+<volume>7</volume>, no. <issue>32</issue>: <fpage>51991</fpage>–<lpage>52002</lpage>.<pub-id pub-id-type="pmid">27437771</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.18632/oncotarget.10627</pub-id><pub-id pub-id-type="pmcid">PMC5239530</pub-id></mixed-citation></ref><ref id="jex270123-bib-0075"><mixed-citation publication-type="journal" id="jex270123-cite-0075">
+<string-name name-style="western">
+<surname>Lee</surname>, <given-names>I. T.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C. H.</given-names>
+<surname>Shen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. C.</given-names>
+<surname>Tsai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. B.</given-names>
+<surname>Chen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K. S.</given-names>
+<surname>Ma</surname>
+</string-name>. <year>2022</year>. “<article-title>Cancer‐Derived Extracellular Vesicles as Biomarkers for Cutaneous Squamous Cell Carcinoma: A Systematic Review</article-title>.” <source>Cancers (Basel)</source>
+<volume>14</volume>, no. <issue>20</issue>: <fpage>5098</fpage>.<pub-id pub-id-type="pmid">36291882</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/cancers14205098</pub-id><pub-id pub-id-type="pmcid">PMC9599948</pub-id></mixed-citation></ref><ref id="jex270123-bib-0098"><mixed-citation publication-type="journal" id="jex270123-cite-0098">
+<string-name name-style="western">
+<surname>Lee</surname>, <given-names>J. S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. Y.</given-names>
+<surname>Hur</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I. A.</given-names>
+<surname>Kim</surname>
+</string-name>, et al. <year>2018</year>. “<article-title>Liquid Biopsy Using the Supernatant of a Pleural Effusion for EGFR Genotyping in Pulmonary Adenocarcinoma Patients: A Comparison Between Cell‐Free DNA and Extracellular Vesicle‐Derived DNA</article-title>.” <source>BMC Cancer</source>
+<volume>18</volume>, no. <issue>1</issue>: <fpage>1236</fpage>.<pub-id pub-id-type="pmid">30526536</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12885-018-5138-3</pub-id><pub-id pub-id-type="pmcid">PMC6288853</pub-id></mixed-citation></ref><ref id="jex270123-bib-0030"><mixed-citation publication-type="journal" id="jex270123-cite-0030">
+<string-name name-style="western">
+<surname>Leung</surname>, <given-names>E.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Han</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Zou</surname>
+</string-name>, et al. <year>2021</year>. “<article-title>HPV Sequencing Facilitates Ultrasensitive Detection of HPV Circulating Tumor DNA</article-title>.” <source>Clinical Cancer Research</source>
+<volume>27</volume>, no. <issue>21</issue>: <fpage>5857</fpage>–<lpage>5868</lpage>.<pub-id pub-id-type="pmid">34580115</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1158/1078-0432.CCR-19-2384</pub-id><pub-id pub-id-type="pmcid">PMC9401563</pub-id></mixed-citation></ref><ref id="jex270123-bib-0074"><mixed-citation publication-type="journal" id="jex270123-cite-0074">
+<string-name name-style="western">
+<surname>Li</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Shi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Jia</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Qin</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Yu</surname>
+</string-name>. <year>2023</year>. “<article-title>Extracellular Vesicle Biomarkers for Prostate Cancer Diagnosis: A Systematic Review and Meta‐Analysis</article-title>.” <source>Urologic Oncology</source>
+<volume>41</volume>, no. <issue>11</issue>: <fpage>440</fpage>–<lpage>453</lpage>.<pub-id pub-id-type="pmid">37914569</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.urolonc.2023.08.019</pub-id></mixed-citation></ref><ref id="jex270123-bib-0097"><mixed-citation publication-type="journal" id="jex270123-cite-0097">
+<string-name name-style="western">
+<surname>Li</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Guo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Guo</surname>
+</string-name>, et al. <year>2020</year>. “<article-title>Next Generation Sequencing‑Based Analysis of Mitochondrial DNA Characteristics in Plasma Extracellular Vesicles of Patients With Hepatocellular Carcinoma</article-title>.” <source>Oncology Letters</source>
+<volume>20</volume>, no. <issue>3</issue>: <fpage>2820</fpage>–<lpage>2828</lpage>.<pub-id pub-id-type="pmid">32782600</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3892/ol.2020.11831</pub-id><pub-id pub-id-type="pmcid">PMC7400774</pub-id></mixed-citation></ref><ref id="jex270123-bib-0047"><mixed-citation publication-type="journal" id="jex270123-cite-0047">
+<string-name name-style="western">
+<surname>Liang</surname>, <given-names>B.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Peng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Chen</surname>
+</string-name>, et al. <year>2013</year>. “<article-title>Characterization and Proteomic Analysis of Ovarian Cancer‐Derived Exosomes</article-title>.” <source>Journal of Proteomics</source>
+<volume>80</volume>: <fpage>171</fpage>–<lpage>182</lpage>.<pub-id pub-id-type="pmid">23333927</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jprot.2012.12.029</pub-id></mixed-citation></ref><ref id="jex270123-bib-0016"><mixed-citation publication-type="journal" id="jex270123-cite-0016">
+<string-name name-style="western">
+<surname>Liu</surname>, <given-names>A. P. Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K. S.</given-names>
+<surname>Smith</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Kumar</surname>
+</string-name>, et al. <year>2021</year>. “<article-title>Serial Assessment of Measurable Residual Disease in Medulloblastoma Liquid Biopsies</article-title>.” <source>Cancer Cell</source>
+<volume>39</volume>, no. <issue>11</issue>: <fpage>1519</fpage>–<lpage>1530.e4</lpage>.<pub-id pub-id-type="pmid">34678152</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ccell.2021.09.012</pub-id><pub-id pub-id-type="pmcid">PMC9620970</pub-id></mixed-citation></ref><ref id="jex270123-bib-0026"><mixed-citation publication-type="journal" id="jex270123-cite-0026">
+<string-name name-style="western">
+<surname>Liu</surname>, <given-names>Y.</given-names>
+</string-name>
+<year>2022</year>. “<article-title>At the Dawn: Cell‐Free DNA Fragmentomics and Gene Regulation</article-title>.” <source>British Journal of Cancer</source>
+<volume>126</volume>, no. <issue>3</issue>: <fpage>379</fpage>–<lpage>390</lpage>.<pub-id pub-id-type="pmid">34815523</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41416-021-01635-z</pub-id><pub-id pub-id-type="pmcid">PMC8810841</pub-id></mixed-citation></ref><ref id="jex270123-bib-0072"><mixed-citation publication-type="journal" id="jex270123-cite-0072">
+<string-name name-style="western">
+<surname>Liu</surname>, <given-names>S.‐Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Liao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Hosseinifard</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Imani</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Q.‐L.</given-names>
+<surname>Wen</surname>
+</string-name>. <year>2021</year>. “<article-title>Diagnostic Role of Extracellular Vesicles in Cancer: A Comprehensive Systematic Review and Meta‐Analysis</article-title>.” <source>Frontiers in Cell and Developmental Biology</source>
+<volume>9</volume>: <elocation-id>705791</elocation-id>.<pub-id pub-id-type="pmid">34722499</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fcell.2021.705791</pub-id><pub-id pub-id-type="pmcid">PMC8555429</pub-id></mixed-citation></ref><ref id="jex270123-bib-0111"><mixed-citation publication-type="journal" id="jex270123-cite-0111">
+<string-name name-style="western">
+<surname>Liu</surname>, <given-names>H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Tian</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Xue</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Niu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Chen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Yan</surname>
+</string-name>. <year>2022</year>. “<article-title>Analysis of Extracellular Vesicle DNA at the Single‐Vesicle Level by Nano‐Flow Cytometry</article-title>.” <source>Journal of Extracellular Vesicles</source>
+<volume>11</volume>, no. <issue>4</issue>: <elocation-id>e12206</elocation-id>.<pub-id pub-id-type="pmid">35373518</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/jev2.12206</pub-id><pub-id pub-id-type="pmcid">PMC8977970</pub-id></mixed-citation></ref><ref id="jex270123-bib-0108"><mixed-citation publication-type="journal" id="jex270123-cite-0108">
+<string-name name-style="western">
+<surname>Lo</surname>, <given-names>Y. M. D.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T. N.</given-names>
+<surname>Leung</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T. K.</given-names>
+<surname>Lau</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. M. Z.</given-names>
+<surname>Chang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>N. M.</given-names>
+<surname>Hjelm</surname>
+</string-name>. <year>1999</year>. “<article-title>Rapid Clearance of Fetal DNA From Maternal Plasma</article-title>.” <source>The American Journal of Human Genetics</source>
+<volume>64</volume>, no. <issue>1</issue>: <fpage>218</fpage>–<lpage>224</lpage>.<pub-id pub-id-type="pmid">9915961</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1086/302205</pub-id><pub-id pub-id-type="pmcid">PMC1377720</pub-id></mixed-citation></ref><ref id="jex270123-bib-0064"><mixed-citation publication-type="journal" id="jex270123-cite-0064">
+<string-name name-style="western">
+<surname>Möhrmann</surname>, <given-names>L.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>H. J.</given-names>
+<surname>Huang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. S.</given-names>
+<surname>Hong</surname>
+</string-name>, et al. <year>2018</year>. “<article-title>Liquid Biopsies Using Plasma Exosomal Nucleic Acids and Plasma Cell‐Free DNA Compared With Clinical Outcomes of Patients With Advanced Cancers</article-title>.” <source>Clinical Cancer Research</source>
+<volume>24</volume>, no. <issue>1</issue>: <fpage>181</fpage>–<lpage>188</lpage>.<pub-id pub-id-type="pmid">29051321</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1158/1078-0432.CCR-17-2007</pub-id><pub-id pub-id-type="pmcid">PMC5754253</pub-id></mixed-citation></ref><ref id="jex270123-bib-0104"><mixed-citation publication-type="journal" id="jex270123-cite-0104">
+<string-name name-style="western">
+<surname>Maire</surname>, <given-names>C. L.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M. M.</given-names>
+<surname>Fuh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Kaulich</surname>
+</string-name>, et al. <year>2021</year>. “<article-title>Genome‐Wide Methylation Profiling of Glioblastoma Cell‐Derived Extracellular Vesicle DNA Allows Tumor Classification</article-title>.” <source>Neuro‐Oncology</source>
+<volume>23</volume>, no. <issue>7</issue>: <fpage>1087</fpage>–<lpage>1099</lpage>.<pub-id pub-id-type="pmid">33508126</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/neuonc/noab012</pub-id><pub-id pub-id-type="pmcid">PMC8673443</pub-id></mixed-citation></ref><ref id="jex270123-bib-0049"><mixed-citation publication-type="journal" id="jex270123-cite-0049">
+<string-name name-style="western">
+<surname>Malkin</surname>, <given-names>E. Z.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>S. V.</given-names>
+<surname>Bratman</surname>
+</string-name>. <year>2020</year>. “<article-title>Bioactive DNA From Extracellular Vesicles and Particles</article-title>.” <source>Cell Death &amp; Disease</source>
+<volume>11</volume>, no. <issue>7</issue>: <fpage>584</fpage>.<pub-id pub-id-type="pmid">32719324</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41419-020-02803-4</pub-id><pub-id pub-id-type="pmcid">PMC7385258</pub-id></mixed-citation></ref><ref id="jex270123-bib-0005"><mixed-citation publication-type="journal" id="jex270123-cite-0005">
+<string-name name-style="western">
+<surname>Mattox</surname>, <given-names>A. K.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Douville</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Wang</surname>
+</string-name>, et al. <year>2023</year>. “<article-title>The Origin of Highly Elevated Cell‐Free DNA in Healthy Individuals and Patients With Pancreatic, Colorectal, Lung, or Ovarian Cancer</article-title>.” <source>Cancer Discovery</source>
+<volume>13</volume>, no. <issue>10</issue>: <fpage>2166</fpage>–<lpage>2179</lpage>.<pub-id pub-id-type="pmid">37565753</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1158/2159-8290.CD-21-1252</pub-id><pub-id pub-id-type="pmcid">PMC10592331</pub-id></mixed-citation></ref><ref id="jex270123-bib-0082"><mixed-citation publication-type="journal" id="jex270123-cite-0082">
+<string-name name-style="western">
+<surname>Min</surname>, <given-names>L.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Yu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Liu</surname>
+</string-name>. <year>2023</year>. “<article-title>Using Circulating Tumor DNA as a Novel Biomarker to Screen and Diagnose Colorectal Cancer: A Meta‐Analysis</article-title>.” <source>Journal of Clinical Medicine</source>
+<volume>12</volume>, no. <issue>2</issue>: <fpage>408</fpage>.<pub-id pub-id-type="pmid">36675337</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/jcm12020408</pub-id><pub-id pub-id-type="pmcid">PMC9860998</pub-id></mixed-citation></ref><ref id="jex270123-bib-0018"><mixed-citation publication-type="journal" id="jex270123-cite-0018">
+<string-name name-style="western">
+<surname>Moding</surname>, <given-names>E. J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. Y.</given-names>
+<surname>Nabet</surname>
+</string-name>, et al. <year>2020</year>. “<article-title>Circulating Tumor DNA Dynamics Predict Benefit From Consolidation Immunotherapy in Locally Advanced Non‐Small Cell Lung Cancer</article-title>.” <source>Nature Cancer</source>
+<volume>1</volume>, no. <issue>2</issue>: <fpage>176</fpage>–<lpage>183</lpage>.<pub-id pub-id-type="pmid">34505064</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s43018-019-0011-0</pub-id><pub-id pub-id-type="pmcid">PMC8425388</pub-id></mixed-citation></ref><ref id="jex270123-bib-0115"><mixed-citation publication-type="journal" id="jex270123-cite-0115">
+<string-name name-style="western">
+<surname>Mohd Khair</surname>, <given-names>S. Z. N.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Abd Radzak</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A. A.</given-names>
+<surname>Mohamed Yusoff</surname>
+</string-name>. <year>2021</year>. “<article-title>The Uprising of Mitochondrial DNA Biomarker in Cancer</article-title>.” <source>Disease Markers</source>
+<volume>2021</volume>, no. <issue>1</issue>: <elocation-id>7675269</elocation-id>.<pub-id pub-id-type="pmid">34326906</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1155/2021/7675269</pub-id><pub-id pub-id-type="pmcid">PMC8302403</pub-id></mixed-citation></ref><ref id="jex270123-bib-0004"><mixed-citation publication-type="journal" id="jex270123-cite-0004">
+<string-name name-style="western">
+<surname>Moss</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Magenheim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Neiman</surname>
+</string-name>, et al. <year>2018</year>. “<article-title>Comprehensive Human Cell‐Type Methylation Atlas Reveals Origins of Circulating Cell‐Free DNA in Health and Disease</article-title>.” <source>Nature Communications</source>
+<volume>9</volume>, no. <issue>1</issue>: <fpage>5068</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41467-018-07466-6</pub-id><pub-id pub-id-type="pmcid">PMC6265251</pub-id><pub-id pub-id-type="pmid">30498206</pub-id></mixed-citation></ref><ref id="jex270123-bib-0065"><mixed-citation publication-type="journal" id="jex270123-cite-0065">
+<string-name name-style="western">
+<surname>Nakai</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Yamada</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Sekiya</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Use of Liquid Biopsy to Detect PIK3CA Mutation in Metastatic Breast Cancer</article-title>.” <source>Journal of Nippon Medical School</source>
+<volume>89</volume>, no. <issue>1</issue>: <fpage>66</fpage>–<lpage>71</lpage>.<pub-id pub-id-type="pmid">33692304</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1272/jnms.JNMS.2022_89-107</pub-id></mixed-citation></ref><ref id="jex270123-bib-0093"><mixed-citation publication-type="journal" id="jex270123-cite-0093">
+<string-name name-style="western">
+<surname>Nguyen</surname>, <given-names>B.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Meehan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Pereira</surname>
+</string-name>, et al. <year>2020</year>. “<article-title>A Comparative Study of Extracellular Vesicle‐Associated and Cell‐Free DNA and RNA for HPV Detection in Oropharyngeal Squamous Cell Carcinoma</article-title>.” <source>Scientific Reports</source>
+<volume>10</volume>, no. <issue>1</issue>: <fpage>6083</fpage>.<pub-id pub-id-type="pmid">32269293</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41598-020-63180-8</pub-id><pub-id pub-id-type="pmcid">PMC7142128</pub-id></mixed-citation></ref><ref id="jex270123-bib-0039"><mixed-citation publication-type="journal" id="jex270123-cite-0039">
+<string-name name-style="western">
+<surname>van Niel</surname>, <given-names>G.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>D'Angelo</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Raposo</surname>
+</string-name>. <year>2018</year>. “<article-title>Shedding Light on the Cell Biology of Extracellular Vesicles</article-title>.” <source>Nature Reviews Molecular Cell Biology</source>
+<volume>19</volume>, no. <issue>4</issue>: <fpage>213</fpage>–<lpage>228</lpage>.<pub-id pub-id-type="pmid">29339798</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nrm.2017.125</pub-id></mixed-citation></ref><ref id="jex270123-bib-0087"><mixed-citation publication-type="journal" id="jex270123-cite-0087">
+<string-name name-style="western">
+<surname>Passiglia</surname>, <given-names>F.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Rizzo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Di Maio</surname>
+</string-name>, et al. <year>2018</year>. “<article-title>The Diagnostic Accuracy of Circulating Tumor DNA for the Detection of EGFR‐T790M Mutation in NSCLC: A Systematic Review and Meta‐Analysis</article-title>.” <source>Scientific Reports</source>
+<volume>8</volume>, no. <issue>1</issue>: <elocation-id>13379</elocation-id>.<pub-id pub-id-type="pmid">30190486</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41598-018-30780-4</pub-id><pub-id pub-id-type="pmcid">PMC6127187</pub-id></mixed-citation></ref><ref id="jex270123-bib-0059"><mixed-citation publication-type="journal" id="jex270123-cite-0059">
+<string-name name-style="western">
+<surname>Pathan</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Fonseka</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. V.</given-names>
+<surname>Chitti</surname>
+</string-name>, et al. <year>2018</year>. “<article-title>Vesiclepedia 2019: A Compendium of RNA, Proteins, Lipids and Metabolites in Extracellular Vesicles</article-title>.” <source>Nucleic Acids Research</source>
+<volume>47</volume>, no. <issue>D1</issue>: <fpage>D516</fpage>–<lpage>D519</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/gky1029</pub-id><pub-id pub-id-type="pmcid">PMC6323905</pub-id><pub-id pub-id-type="pmid">30395310</pub-id></mixed-citation></ref><ref id="jex270123-bib-0010"><mixed-citation publication-type="journal" id="jex270123-cite-0010">
+<string-name name-style="western">
+<surname>Pessoa</surname>, <given-names>L. S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Heringer</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>V. P.</given-names>
+<surname>Ferrer</surname>
+</string-name>. <year>2020</year>. “<article-title>ctDNA as a Cancer Biomarker: A Broad Overview</article-title>.” <source>Critical Reviews in Oncology/Hematology</source>
+<volume>155</volume>: <elocation-id>103109</elocation-id>.<pub-id pub-id-type="pmid">33049662</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.critrevonc.2020.103109</pub-id></mixed-citation></ref><ref id="jex270123-bib-0088"><mixed-citation publication-type="journal" id="jex270123-cite-0088">
+<string-name name-style="western">
+<surname>Qiu</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Xu</surname>
+</string-name>, et al. <year>2015</year>. “<article-title>Circulating Tumor DNA Is Effective for the Detection of EGFR Mutation in Non‐Small Cell Lung Cancer: A Meta‐Analysis</article-title>.” <source>Cancer Epidemiology Biomarkers &amp; Prevention</source>
+<volume>24</volume>, no. <issue>1</issue>: <fpage>206</fpage>–<lpage>212</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1158/1055-9965.EPI-14-0895</pub-id><pub-id pub-id-type="pmid">25339418</pub-id></mixed-citation></ref><ref id="jex270123-bib-0107"><mixed-citation publication-type="journal" id="jex270123-cite-0107">
+<string-name name-style="western">
+<surname>Rumore</surname>, <given-names>P.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Muralidhar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Lin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Lai</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C. R.</given-names>
+<surname>Steinman</surname>
+</string-name>. <year>1992</year>. “<article-title>Haemodialysis as a Model for Studying Endogenous Plasma DNA: Oligonucleosome‐Like Structure and Clearance</article-title>.” <source>Clinical and Experimental Immunology</source>
+<volume>90</volume>, no. <issue>1</issue>: <fpage>56</fpage>–<lpage>62</lpage>.<pub-id pub-id-type="pmid">1395101</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/j.1365-2249.1992.tb05831.x</pub-id><pub-id pub-id-type="pmcid">PMC1554541</pub-id></mixed-citation></ref><ref id="jex270123-bib-0009"><mixed-citation publication-type="journal" id="jex270123-cite-0009">
+<string-name name-style="western">
+<surname>Siravegna</surname>, <given-names>G.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Mussolin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Venesio</surname>
+</string-name>, et al. <year>2019</year>. “<article-title>How Liquid Biopsies Can Change Clinical Practice in Oncology</article-title>.” <source>Annals of Oncology</source>
+<volume>30</volume>, no. <issue>10</issue>: <fpage>1580</fpage>–<lpage>1590</lpage>.<pub-id pub-id-type="pmid">31373349</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/annonc/mdz227</pub-id></mixed-citation></ref><ref id="jex270123-bib-0037"><mixed-citation publication-type="journal" id="jex270123-cite-0037">
+<string-name name-style="western">
+<surname>Spinelli</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Adnani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Choi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Rak</surname>
+</string-name>. <year>2018</year>. “<article-title>Extracellular Vesicles as Conduits of Non‐Coding RNA Emission and Intercellular Transfer in Brain Tumors</article-title>.” <source>Noncoding RNA</source>
+<volume>5</volume>, no. <issue>1</issue>: <fpage>1</fpage>.<pub-id pub-id-type="pmid">30585246</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/ncrna5010001</pub-id><pub-id pub-id-type="pmcid">PMC6468529</pub-id></mixed-citation></ref><ref id="jex270123-bib-0051"><mixed-citation publication-type="journal" id="jex270123-cite-0051">
+<string-name name-style="western">
+<surname>Stejskal</surname>, <given-names>P.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Goodarzi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Srovnal</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Hajdúch</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. J.</given-names>
+<surname>van 't Veer</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. J. M.</given-names>
+<surname>Magbanua</surname>
+</string-name>. <year>2023</year>. “<article-title>Circulating Tumor Nucleic Acids: Biology, Release Mechanisms, and Clinical Relevance</article-title>.” <source>Molecular Cancer</source>
+<volume>22</volume>, no. <issue>1</issue>: <fpage>15</fpage>.<pub-id pub-id-type="pmid">36681803</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12943-022-01710-w</pub-id><pub-id pub-id-type="pmcid">PMC9862574</pub-id></mixed-citation></ref><ref id="jex270123-bib-0019"><mixed-citation publication-type="journal" id="jex270123-cite-0019">
+<string-name name-style="western">
+<surname>Stutheit‐Zhao</surname>, <given-names>E. Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Sanz‐Garcia</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z. A.</given-names>
+<surname>Liu</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>Early Changes in Tumor‐Naive Cell‐Free Methylomes and Fragmentomes Predict Outcomes in Pembrolizumab‐Treated Solid Tumors</article-title>.” <source>Cancer Discovery</source>
+<volume>14</volume>, no. <issue>6</issue>: <fpage>1048</fpage>–<lpage>1063</lpage>.<pub-id pub-id-type="pmid">38393391</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1158/2159-8290.CD-23-1060</pub-id><pub-id pub-id-type="pmcid">PMC11145176</pub-id></mixed-citation></ref><ref id="jex270123-bib-0076"><mixed-citation publication-type="journal" id="jex270123-cite-0076">
+<string-name name-style="western">
+<surname>Sutton</surname>, <given-names>A. J.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>K. R.</given-names>
+<surname>Abrams</surname>
+</string-name>. <year>2001</year>. “<article-title>Bayesian Methods in Meta‐Analysis and Evidence Synthesis</article-title>.” <source>Statistical Methods in Medical Research</source>
+<volume>10</volume>, no. <issue>4</issue>: <fpage>277</fpage>–<lpage>303</lpage>.<pub-id pub-id-type="pmid">11491414</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/096228020101000404</pub-id></mixed-citation></ref><ref id="jex270123-bib-0052"><mixed-citation publication-type="journal" id="jex270123-cite-0052">
+<string-name name-style="western">
+<surname>Takahashi</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Okada</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Nagao</surname>
+</string-name>, et al. <year>2017</year>. “<article-title>Exosomes Maintain Cellular Homeostasis by Excreting Harmful DNA From Cells</article-title>.” <source>Nature Communications</source>
+<volume>8</volume>: <elocation-id>15287</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/ncomms15287</pub-id><pub-id pub-id-type="pmcid">PMC5440838</pub-id><pub-id pub-id-type="pmid">28508895</pub-id></mixed-citation></ref><ref id="jex270123-bib-0080"><mixed-citation publication-type="journal" id="jex270123-cite-0080">
+<string-name name-style="western">
+<surname>Tang</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Deng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Peng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Song</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Liu</surname>
+</string-name>. <year>2017</year>. “<article-title>Circulating Tumor DNA Is Effective for Detection of KRAS Mutation in Colorectal Cancer: A Meta‐Analysis</article-title>.” <source>The International Journal of Biological Markers</source>
+<volume>32</volume>, no. <issue>4</issue>: <fpage>421</fpage>–<lpage>427</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.5301/ijbm.5000295</pub-id><pub-id pub-id-type="pmid">28885658</pub-id></mixed-citation></ref><ref id="jex270123-bib-0046"><mixed-citation publication-type="journal" id="jex270123-cite-0046">
+<string-name name-style="western">
+<surname>Tauro</surname>, <given-names>B. J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D. W.</given-names>
+<surname>Greening</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. A.</given-names>
+<surname>Mathias</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Mathivanan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Ji</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R. J.</given-names>
+<surname>Simpson</surname>
+</string-name>. <year>2013</year>. “<article-title>Two Distinct Populations of Exosomes Are Released From LIM1863 Colon Carcinoma Cell‐Derived Organoids</article-title>.” <source>Molecular &amp; Cellular Proteomics</source>
+<volume>12</volume>, no. <issue>3</issue>: <fpage>587</fpage>–<lpage>598</lpage>.<pub-id pub-id-type="pmid">23230278</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1074/mcp.M112.021303</pub-id><pub-id pub-id-type="pmcid">PMC3591653</pub-id></mixed-citation></ref><ref id="jex270123-bib-0045"><mixed-citation publication-type="journal" id="jex270123-cite-0045">
+<string-name name-style="western">
+<surname>Théry</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Boussac</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Véron</surname>
+</string-name>, et al. <year>2001</year>. “<article-title>Proteomic Analysis of Dendritic Cell‐Derived Exosomes: A Secreted Subcellular Compartment Distinct From Apoptotic Vesicles</article-title>.” <source>Journal of Immunology</source>
+<volume>166</volume>, no. <issue>12</issue>: <fpage>7309</fpage>–<lpage>7318</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.4049/jimmunol.166.12.7309</pub-id><pub-id pub-id-type="pmid">11390481</pub-id></mixed-citation></ref><ref id="jex270123-bib-0056"><mixed-citation publication-type="journal" id="jex270123-cite-0056">
+<string-name name-style="western">
+<surname>Théry</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K. W.</given-names>
+<surname>Witwer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Aikawa</surname>
+</string-name>, et al. <year>2018</year>. “<article-title>Minimal Information for Studies of Extracellular Vesicles 2018 (MISEV2018): A Position Statement of the International Society for Extracellular Vesicles and Update of the MISEV2014 Guidelines</article-title>.” <source>Journal of Extracellular Vesicles</source>
+<volume>7</volume>, no. <issue>1</issue>: <elocation-id>1535750</elocation-id>.<pub-id pub-id-type="pmid">30637094</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/20013078.2018.1535750</pub-id><pub-id pub-id-type="pmcid">PMC6322352</pub-id></mixed-citation></ref><ref id="jex270123-bib-0043"><mixed-citation publication-type="journal" id="jex270123-cite-0043">
+<string-name name-style="western">
+<surname>Thakur</surname>, <given-names>B. K.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Becker</surname>
+</string-name>, et al. <year>2014</year>. “<article-title>Double‐Stranded DNA in Exosomes: A Novel Biomarker in Cancer Detection</article-title>.” <source>Cell Research</source>
+<volume>24</volume>, no. <issue>6</issue>: <fpage>766</fpage>–<lpage>769</lpage>.<pub-id pub-id-type="pmid">24710597</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/cr.2014.44</pub-id><pub-id pub-id-type="pmcid">PMC4042169</pub-id></mixed-citation></ref><ref id="jex270123-bib-0067"><mixed-citation publication-type="journal" id="jex270123-cite-0067">
+<string-name name-style="western">
+<surname>Thakur</surname>, <given-names>K.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M. S.</given-names>
+<surname>Singh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Feldstein‐Davydova</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Hannes</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Hershkovitz</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Tsuriel</surname>
+</string-name>. <year>2021</year>. “<article-title>Extracellular Vesicle‐Derived DNA vs. CfDNA as a Biomarker for the Detection of Colon Cancer</article-title>.” <source>Genes</source>
+<volume>12</volume>, no. <issue>8</issue>: <fpage>1171</fpage>.<pub-id pub-id-type="pmid">34440345</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/genes12081171</pub-id><pub-id pub-id-type="pmcid">PMC8393490</pub-id></mixed-citation></ref><ref id="jex270123-bib-0027"><mixed-citation publication-type="journal" id="jex270123-cite-0027">
+<string-name name-style="western">
+<surname>Thierry</surname>, <given-names>A. R.</given-names>
+</string-name>
+<year>2023</year>. “<article-title>Circulating DNA Fragmentomics and Cancer Screening</article-title>.” <source>Cell Genomics</source>
+<volume>3</volume>, no. <issue>1</issue>: <elocation-id>100242</elocation-id>.<pub-id pub-id-type="pmid">36777187</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.xgen.2022.100242</pub-id><pub-id pub-id-type="pmcid">PMC9903826</pub-id></mixed-citation></ref><ref id="jex270123-bib-0015"><mixed-citation publication-type="journal" id="jex270123-cite-0015">
+<string-name name-style="western">
+<surname>Tie</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Tomasetti</surname>
+</string-name>, et al. <year>2016</year>. “<article-title>Circulating Tumor DNA Analysis Detects Minimal Residual Disease and Predicts Recurrence in Patients With Stage II Colon Cancer</article-title>.” <source>Science Translational Medicine</source>
+<volume>8</volume>, no. <issue>346</issue>: <elocation-id>346ra92</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/scitranslmed.aaf6219</pub-id><pub-id pub-id-type="pmcid">PMC5346159</pub-id><pub-id pub-id-type="pmid">27384348</pub-id></mixed-citation></ref><ref id="jex270123-bib-0017"><mixed-citation publication-type="journal" id="jex270123-cite-0017">
+<string-name name-style="western">
+<surname>Tie</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Cohen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Lahouel</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Circulating Tumor DNA Analysis Guiding Adjuvant Therapy in Stage II Colon Cancer</article-title>.” <source>New England Journal of Medicine</source>
+<volume>386</volume>, no. <issue>24</issue>: <fpage>2261</fpage>–<lpage>2272</lpage>.<pub-id pub-id-type="pmid">35657320</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1056/NEJMoa2200075</pub-id><pub-id pub-id-type="pmcid">PMC9701133</pub-id></mixed-citation></ref><ref id="jex270123-bib-0071"><mixed-citation publication-type="journal" id="jex270123-cite-0071">
+<string-name name-style="western">
+<surname>Tkach</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Hego</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Michel</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Circulating Extracellular Vesicles Provide Valuable Protein, but Not DNA, Biomarkers in Metastatic Breast Cancer</article-title>.” <source>Journal of Extracellular Biology</source>
+<volume>1</volume>, no. <issue>7</issue>: <elocation-id>e51</elocation-id>.<pub-id pub-id-type="pmid">38938580</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/jex2.51</pub-id><pub-id pub-id-type="pmcid">PMC11080866</pub-id></mixed-citation></ref><ref id="jex270123-bib-0003"><mixed-citation publication-type="journal" id="jex270123-cite-0003">
+<string-name name-style="western">
+<surname>Tsering</surname>, <given-names>T.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Nadeau</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Wu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Dickinson</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. V.</given-names>
+<surname>Burnier</surname>
+</string-name>. <year>2024</year>. “<article-title>Extracellular Vesicle‐Associated DNA: Ten Years Since Its Discovery in Human Blood</article-title>.” <source>Cell Death &amp; Disease</source>
+<volume>15</volume>, no. <issue>9</issue>: <fpage>668</fpage>.<pub-id pub-id-type="pmid">39266560</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41419-024-07003-y</pub-id><pub-id pub-id-type="pmcid">PMC11393322</pub-id></mixed-citation></ref><ref id="jex270123-bib-0063"><mixed-citation publication-type="journal" id="jex270123-cite-0063">
+<string-name name-style="western">
+<surname>Tsering</surname>, <given-names>T.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Chen</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>EV‐ADD, a Database for EV‐Associated DNA in Human Liquid Biopsy Samples</article-title>.” <source>Journal of Extracellular Vesicles</source>
+<volume>11</volume>, no. <issue>10</issue>: <elocation-id>e12270</elocation-id>.<pub-id pub-id-type="pmid">36271888</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/jev2.12270</pub-id><pub-id pub-id-type="pmcid">PMC9587709</pub-id></mixed-citation></ref><ref id="jex270123-bib-0023"><mixed-citation publication-type="journal" id="jex270123-cite-0023">
+<string-name name-style="western">
+<surname>Underhill</surname>, <given-names>H. R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. O.</given-names>
+<surname>Kitzman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Hellwig</surname>
+</string-name>, et al. <year>2016</year>. “<article-title>Fragment Length of Circulating Tumor DNA</article-title>.” <source>PLoS Genetics</source>
+<volume>12</volume>, no. <issue>7</issue>: <elocation-id>e1006162</elocation-id>.<pub-id pub-id-type="pmid">27428049</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pgen.1006162</pub-id><pub-id pub-id-type="pmcid">PMC4948782</pub-id></mixed-citation></ref><ref id="jex270123-bib-0105"><mixed-citation publication-type="journal" id="jex270123-cite-0105">
+<string-name name-style="western">
+<surname>Vagner</surname>, <given-names>T.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Spinelli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V. R.</given-names>
+<surname>Minciacchi</surname>
+</string-name>, et al. <year>2018</year>. “<article-title>Large Extracellular Vesicles Carry Most of the Tumour DNA Circulating in Prostate Cancer Patient Plasma</article-title>.” <source>Journal of Extracellular Vesicles</source>
+<volume>7</volume>, no. <issue>1</issue>: <elocation-id>1505403</elocation-id>.<pub-id pub-id-type="pmid">30108686</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/20013078.2018.1505403</pub-id><pub-id pub-id-type="pmcid">PMC6084494</pub-id></mixed-citation></ref><ref id="jex270123-bib-0002"><mixed-citation publication-type="journal" id="jex270123-cite-0002">
+<string-name name-style="western">
+<surname>Valencia</surname>, <given-names>K.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>L. M.</given-names>
+<surname>Montuenga</surname>
+</string-name>. <year>2021</year>. “<article-title>Exosomes in Liquid Biopsy: The Nanometric World in the Pursuit of Precision Oncology</article-title>.” <source>Cancers (Basel)</source>
+<volume>13</volume>, no. <issue>9</issue>: <fpage>2147</fpage>.<pub-id pub-id-type="pmid">33946893</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/cancers13092147</pub-id><pub-id pub-id-type="pmcid">PMC8124368</pub-id></mixed-citation></ref><ref id="jex270123-bib-0006"><mixed-citation publication-type="journal" id="jex270123-cite-0006">
+<string-name name-style="western">
+<surname>Valpione</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Gremel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Mundra</surname>
+</string-name>, et al. <year>2018</year>. “<article-title>Plasma Total Cell‐Free DNA (cfDNA) Is a Surrogate Biomarker for Tumour Burden and a Prognostic Biomarker for Survival in Metastatic Melanoma Patients</article-title>.” <source>European Journal of Cancer</source>
+<volume>88</volume>: <fpage>1</fpage>–<lpage>9</lpage>.<pub-id pub-id-type="pmid">29175734</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ejca.2017.10.029</pub-id><pub-id pub-id-type="pmcid">PMC5769519</pub-id></mixed-citation></ref><ref id="jex270123-bib-0061"><mixed-citation publication-type="journal" id="jex270123-cite-0061">
+<string-name name-style="western">
+<surname>Van Deun</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Mestdagh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Agostinis</surname>
+</string-name>, et al. <year>2017</year>. “<article-title>EV‐TRACK: Transparent Reporting and Centralizing Knowledge in Extracellular Vesicle Research</article-title>.” <source>Nature Methods</source>
+<volume>14</volume>, no. <issue>3</issue>: <fpage>228</fpage>–<lpage>232</lpage>.<pub-id pub-id-type="pmid">28245209</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nmeth.4185</pub-id></mixed-citation></ref><ref id="jex270123-bib-0068"><mixed-citation publication-type="journal" id="jex270123-cite-0068">
+<string-name name-style="western">
+<surname>Wan</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Lei</surname>
+</string-name>, et al. <year>2018</year>. “<article-title>Nanoscale Extracellular Vesicle‐Derived DNA Is Superior to Circulating Cell‐Free DNA for Mutation Detection in Early‐Stage Non‐Small‐Cell Lung Cancer</article-title>.” <source>Annals of Oncology</source>
+<volume>29</volume>, no. <issue>12</issue>: <fpage>2379</fpage>–<lpage>2383</lpage>.<pub-id pub-id-type="pmid">30339193</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/annonc/mdy458</pub-id><pub-id pub-id-type="pmcid">PMC6311950</pub-id></mixed-citation></ref><ref id="jex270123-bib-0014"><mixed-citation publication-type="journal" id="jex270123-cite-0014">
+<string-name name-style="western">
+<surname>Wang</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Zhang</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Circulating Tumor DNA Integrating Tissue Clonality Detects Minimal Residual Disease in Resectable Non‐Small‐Cell Lung Cancer</article-title>.” <source>Journal of Hematology &amp; Oncology</source>
+<volume>15</volume>, no. <issue>1</issue>: <fpage>137</fpage>.<pub-id pub-id-type="pmid">36183093</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s13045-022-01355-8</pub-id><pub-id pub-id-type="pmcid">PMC9526343</pub-id></mixed-citation></ref><ref id="jex270123-bib-0057"><mixed-citation publication-type="journal" id="jex270123-cite-0057">
+<string-name name-style="western">
+<surname>Welsh</surname>, <given-names>J. A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D. C. I.</given-names>
+<surname>Goberdhan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>O'Driscoll</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>Minimal Information for Studies of Extracellular Vesicles (MISEV2023): From Basic to Advanced Approaches</article-title>.” <source>Journal of Extracellular Vesicles</source>
+<volume>13</volume>, no. <issue>2</issue>: <elocation-id>e12404</elocation-id>.<pub-id pub-id-type="pmid">38326288</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/jev2.12404</pub-id><pub-id pub-id-type="pmcid">PMC10850029</pub-id></mixed-citation></ref><ref id="jex270123-bib-0022"><mixed-citation publication-type="journal" id="jex270123-cite-0022">
+<string-name name-style="western">
+<surname>Wong</surname>, <given-names>I. H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. B.</given-names>
+<surname>Lai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W. Y.</given-names>
+<surname>Lau</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y. M.</given-names>
+<surname>Lo</surname>
+</string-name>. <year>2003</year>. “<article-title>Quantitative Analysis of Tumor‐Derived Methylated p16INK4a Sequences in Plasma, Serum, and Blood Cells of Hepatocellular Carcinoma Patients</article-title>.” <source>Clinical Cancer Research</source>
+<volume>9</volume>, no. <issue>3</issue>: <fpage>1047</fpage>–<lpage>1052</lpage>.<pub-id pub-id-type="pmid">12631605</pub-id>
+</mixed-citation></ref><ref id="jex270123-bib-0113"><mixed-citation publication-type="journal" id="jex270123-cite-0113">
+<string-name name-style="western">
+<surname>Wortzel</surname>, <given-names>I.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Seo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Akano</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>Unique Structural Configuration of EV‐DNA Primes Kupffer Cell‐Mediated Antitumor Immunity to Prevent Metastatic Progression</article-title>.” <source>Nature Cancer</source>
+<volume>5</volume>, no. <issue>12</issue>: <fpage>1815</fpage>–<lpage>1833</lpage>.<pub-id pub-id-type="pmid">39627554</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s43018-024-00862-6</pub-id><pub-id pub-id-type="pmcid">PMC12185067</pub-id></mixed-citation></ref><ref id="jex270123-bib-0032"><mixed-citation publication-type="journal" id="jex270123-cite-0032">
+<string-name name-style="western">
+<surname>Yalçın</surname>, <given-names>B.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kutluk</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. K.</given-names>
+<surname>Ağbaba</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Ç.</given-names>
+<surname>Demir</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Talim</surname>
+</string-name>. <year>2020</year>. “<article-title>Circulating Epstein‐Barr Virus DNA and Cell‐Free DNA in Pediatric Lymphomas</article-title>.” <source>The Turkish Journal of Pediatrics</source>
+<volume>62</volume>, no. <issue>4</issue>: <fpage>541</fpage>–<lpage>550</lpage>.<pub-id pub-id-type="pmid">32779406</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.24953/turkjped.2020.04.003</pub-id></mixed-citation></ref><ref id="jex270123-bib-0078"><mixed-citation publication-type="journal" id="jex270123-cite-0078">
+<string-name name-style="western">
+<surname>Yang</surname>, <given-names>Y.‐C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Jin</surname>
+</string-name>, et al. <year>2018</year>. “<article-title>Circulating Tumor DNA Detectable in Early‐ and Late‐Stage Colorectal Cancer Patients</article-title>.” <source>Bioscience Reports</source>
+<volume>38</volume>, no. <issue>4</issue>: <elocation-id>BSR20180322</elocation-id>.<pub-id pub-id-type="pmid">29914973</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1042/BSR20180322</pub-id><pub-id pub-id-type="pmcid">PMC6066652</pub-id></mixed-citation></ref><ref id="jex270123-bib-0118"><mixed-citation publication-type="journal" id="jex270123-cite-0118">
+<string-name name-style="western">
+<surname>Yang</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S. P. Y.</given-names>
+<surname>Che</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Kurywchak</surname>
+</string-name>, et al. <year>2017</year>. “<article-title>Detection of Mutant KRAS and TP53 DNA in Circulating Exosomes From Healthy Individuals and Patients With Pancreatic Cancer</article-title>.” <source>Cancer Biology &amp; Therapy</source>
+<volume>18</volume>, no. <issue>3</issue>: <fpage>158</fpage>–<lpage>165</lpage>.<pub-id pub-id-type="pmid">28121262</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/15384047.2017.1281499</pub-id><pub-id pub-id-type="pmcid">PMC5389423</pub-id></mixed-citation></ref><ref id="jex270123-bib-0083"><mixed-citation publication-type="journal" id="jex270123-cite-0083">
+<string-name name-style="western">
+<surname>Ye</surname>, <given-names>P.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Cai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Xie</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Wei</surname>
+</string-name>. <year>2021</year>. “<article-title>The Diagnostic Accuracy of Digital PCR, ARMS and NGS for Detecting KRAS Mutation in Cell‐Free DNA of Patients With Colorectal Cancer: A Systematic Review and Meta‐Analysis</article-title>.” <source>PLoS ONE</source>
+<volume>16</volume>, no. <issue>3</issue>: <elocation-id>e0248775</elocation-id>.<pub-id pub-id-type="pmid">33770081</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0248775</pub-id><pub-id pub-id-type="pmcid">PMC7997033</pub-id></mixed-citation></ref><ref id="jex270123-bib-0102"><mixed-citation publication-type="journal" id="jex270123-cite-0102">
+<string-name name-style="western">
+<surname>Yokoi</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Villar‐Prados</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. A.</given-names>
+<surname>Oliphint</surname>
+</string-name>, et al. <year>2019</year>. “<article-title>Mechanisms of Nuclear Content Loading to Exosomes</article-title>.” <source>Science Advances</source>
+<volume>5</volume>, no. <issue>11</issue>: <elocation-id>eaax8849</elocation-id>.<pub-id pub-id-type="pmid">31799396</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/sciadv.aax8849</pub-id><pub-id pub-id-type="pmcid">PMC6867874</pub-id></mixed-citation></ref><ref id="jex270123-bib-0110"><mixed-citation publication-type="journal" id="jex270123-cite-0110">
+<string-name name-style="western">
+<surname>Yu</surname>, <given-names>S. C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S. W.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Jiang</surname>
+</string-name>, et al. <year>2013</year>. “<article-title>High‐Resolution Profiling of Fetal DNA Clearance From Maternal Plasma by Massively Parallel Sequencing</article-title>.” <source>Clinical Chemistry</source>
+<volume>59</volume>, no. <issue>8</issue>: <fpage>1228</fpage>–<lpage>1237</lpage>.<pub-id pub-id-type="pmid">23603797</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1373/clinchem.2013.203679</pub-id></mixed-citation></ref><ref id="jex270123-bib-0036"><mixed-citation publication-type="journal" id="jex270123-cite-0036">
+<string-name name-style="western">
+<surname>Zaborowski</surname>, <given-names>M. P.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Balaj</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X. O.</given-names>
+<surname>Breakefield</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C. P.</given-names>
+<surname>Lai</surname>
+</string-name>. <year>2015</year>. “<article-title>Extracellular Vesicles: Composition, Biological Relevance, and Methods of Study</article-title>.” <source>Bioscience</source>
+<volume>65</volume>, no. <issue>8</issue>: <fpage>783</fpage>–<lpage>797</lpage>.<pub-id pub-id-type="pmid">26955082</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/biosci/biv084</pub-id><pub-id pub-id-type="pmcid">PMC4776721</pub-id></mixed-citation></ref><ref id="jex270123-bib-0012"><mixed-citation publication-type="journal" id="jex270123-cite-0012">
+<string-name name-style="western">
+<surname>Zhang</surname>, <given-names>E. W.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Dagogo‐Jack</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Kuo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. M.</given-names>
+<surname>Rooney</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. T.</given-names>
+<surname>Shaw</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. R.</given-names>
+<surname>Digumarthy</surname>
+</string-name>. <year>2020</year>. “<article-title>Association Between Circulating Tumor DNA Burden and Disease Burden in Patients With ALK‐Positive Lung Cancer</article-title>.” <source>Cancer</source>
+<volume>126</volume>, no. <issue>20</issue>: <fpage>4473</fpage>–<lpage>4484</lpage>.<pub-id pub-id-type="pmid">32757294</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/cncr.33118</pub-id></mixed-citation></ref><ref id="jex270123-bib-0092"><mixed-citation publication-type="journal" id="jex270123-cite-0092">
+<string-name name-style="western">
+<surname>Zhang</surname>, <given-names>Z.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Xie</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Cao</surname>
+</string-name>. <year>2020</year>. “<article-title>Using Circulating Tumor DNA as a Novel Biomarker to Screen and Diagnose Hepatocellular Carcinoma: A Systematic Review and Meta‐Analysis</article-title>.” <source>Cancer Medicine</source>
+<volume>9</volume>, no. <issue>4</issue>: <fpage>1349</fpage>–<lpage>1364</lpage>.<pub-id pub-id-type="pmid">31876977</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/cam4.2799</pub-id><pub-id pub-id-type="pmcid">PMC7013058</pub-id></mixed-citation></ref><ref id="jex270123-bib-0089"><mixed-citation publication-type="journal" id="jex270123-cite-0089">
+<string-name name-style="western">
+<surname>Zhou</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Huang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Cao</surname>
+</string-name>. <year>2020</year>. “<article-title>Detection of Epidermal Growth Factor Receptor Mutations in Peripheral Blood Circulating Tumor DNA in Patients With Advanced Non‐Small Cell Lung Cancer: A PRISMA‐Compliant Meta‐Analysis and Systematic Review</article-title>.” <source>Medicine</source>
+<volume>99</volume>, no. <issue>40</issue>: <elocation-id>e21965</elocation-id>.<pub-id pub-id-type="pmid">33019389</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/MD.0000000000021965</pub-id><pub-id pub-id-type="pmcid">PMC7535563</pub-id></mixed-citation></ref><ref id="jex270123-bib-0103"><mixed-citation publication-type="journal" id="jex270123-cite-0103">
+<string-name name-style="western">
+<surname>Zhou</surname>, <given-names>X.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Kurywchak</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Wolf‐Dennen</surname>
+</string-name>, et al. <year>2021</year>. “<article-title>Unique Somatic Variants in DNA From Urine Exosomes of Individuals With Bladder Cancer</article-title>.” <source>Molecular Therapy—Methods &amp; Clinical Development</source>
+<volume>22</volume>: <fpage>360</fpage>–<lpage>376</lpage>.<pub-id pub-id-type="pmid">34514028</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.omtm.2021.05.010</pub-id><pub-id pub-id-type="pmcid">PMC8408559</pub-id></mixed-citation></ref><ref id="jex270123-bib-0093a"><mixed-citation publication-type="journal" id="jex270123-cite-0093a">
+<string-name name-style="western">
+<surname>Zocco</surname>, <given-names>D.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Bernardi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Novelli</surname>
+</string-name>, et al. <year>2020</year>. “<article-title>Isolation of extracellular vesicles improves the detection of mutant DNA from plasma of metastatic melanoma patients</article-title>.” <source>Scientific Reports</source>
+<volume>10</volume>, no. <issue>1</issue>: <elocation-id>15745</elocation-id>. <pub-id pub-id-type="doi">10.1038/s41598-020-72700-3</pub-id>.<pub-id pub-id-type="pmid">32978468</pub-id>
+<pub-id pub-id-type="pmcid">PMC7519075</pub-id></mixed-citation></ref><ref id="jex270123-bib-0091"><mixed-citation publication-type="journal" id="jex270123-cite-0091">
+<string-name name-style="western">
+<surname>Zhu</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Hao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Jin</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Ma</surname>
+</string-name>. <year>2020</year>. “<article-title>Diagnostic Value of Various Liquid Biopsy Methods for Pancreatic Cancer: A Systematic Review and Meta‐Analysis</article-title>.” <source>Medicine</source>
+<volume>99</volume>, no. <issue>3</issue>: <elocation-id>e18581</elocation-id>.<pub-id pub-id-type="pmid">32011436</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/MD.0000000000018581</pub-id><pub-id pub-id-type="pmcid">PMC7220382</pub-id></mixed-citation></ref></ref-list></back></article>

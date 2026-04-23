@@ -1,0 +1,1087 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="fsn371742" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Food Sci Nutr</journal-id><journal-id journal-id-type="iso-abbrev">Food Sci Nutr</journal-id><journal-id journal-id-type="pmc-domain-id">2357</journal-id><journal-id journal-id-type="pmc-domain">fsn</journal-id><journal-id journal-id-type="publisher-id">FSN3</journal-id><journal-title-group><journal-title>Food Science &amp; Nutrition</journal-title></journal-title-group><issn pub-type="epub">2048-7177</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13057429</article-id><article-id pub-id-type="pmcid-ver">PMC13057429.1</article-id><article-id pub-id-type="pmcaid">13057429</article-id><article-id pub-id-type="pmcaiid">13057429</article-id><article-id pub-id-type="pmid">41960360</article-id><article-id pub-id-type="doi">10.1002/fsn3.71742</article-id><article-id pub-id-type="publisher-id">FSN371742</article-id><article-id pub-id-type="other">8095534</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Review</subject></subj-group><subj-group subj-group-type="heading"><subject>Review</subject><subj-group subj-group-type="heading"><subject>Article</subject></subj-group></subj-group></article-categories><title-group><article-title>A Systematic Review on Chinese Baijiu Aging Process in Cellular Built Environment: States, Challenges, and Directions</article-title></title-group><contrib-group><contrib id="fsn371742-cr-0001" contrib-type="author"><name name-style="western"><surname>Li</surname><given-names initials="J">Jin</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-3385-0979</contrib-id><xref rid="fsn371742-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="fsn371742-cr-0002" contrib-type="author"><name name-style="western"><surname>Wen</surname><given-names initials="Y">Yuwen</given-names></name><xref rid="fsn371742-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="fsn371742-cr-0003" contrib-type="author"><name name-style="western"><surname>Yi</surname><given-names initials="C">Chang</given-names></name><xref rid="fsn371742-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="fsn371742-cr-0004" contrib-type="author"><name name-style="western"><surname>Zhou</surname><given-names initials="W">Wenwu</given-names></name><xref rid="fsn371742-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="fsn371742-cr-0005" contrib-type="author" corresp="yes"><name name-style="western"><surname>Zhang</surname><given-names initials="Y">Yin</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-0299-9482</contrib-id><xref rid="fsn371742-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><address><email>cdzhangyin@163.com</email></address></contrib></contrib-group><aff id="fsn371742-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">School of Civil Engineering</named-content>
+<institution>Sichuan University of Science &amp; Engineering</institution>
+<city>Zigong</city>
+<country country="CN">China</country>
+</aff><aff id="fsn371742-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">School of Architecture and Design</named-content>
+<institution>Southwest Minzu University</institution>
+<city>Chengdu</city>
+<country country="CN">China</country>
+</aff><aff id="fsn371742-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">College of Chemistry and Environment Engineering</named-content>
+<institution>Sichuan University of Science &amp; Engineering</institution>
+<city>Zigong</city>
+<country country="CN">China</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold>
+<break/>
+Yin Zhang (<email>cdzhangyin@163.com</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>07</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>14</volume><issue seq="860">4</issue><issue-id pub-id-type="pmc-issue-id">510823</issue-id><issue-id pub-id-type="doi">10.1002/fsn3.v14.4</issue-id><elocation-id>e71742</elocation-id><history><date date-type="rev-recd"><day>16</day><month>3</month><year>2026</year></date><date date-type="received"><day>22</day><month>10</month><year>2025</year></date><date date-type="accepted"><day>24</day><month>3</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>07</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>09</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-10 09:25:14.357"><day>10</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Food Science &amp; Nutrition</italic> published by Wiley Periodicals LLC.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="FSN3-14-e71742.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:FSN3-14-e71742.pdf"/><abstract><title>ABSTRACT</title><p>The aging of Chinese Baijiu is a critical determinant of both product quality and production efficiency, yet the role of cellar microenvironments in shaping this process remains insufficiently understood. In particular, the interactions among thermal conditions, humidity, and volatile compounds released from Baijiu have been largely overlooked, leaving gaps in understanding the mechanisms that govern aging dynamics. This study synthesizes current research on Baijiu aging environments, encompassing environmental factors, regulatory strategies, and dynamic monitoring techniques, and introduces the concept of a “Gas‐Thermal‐Humidity” microenvironment. This framework emphasizes the coupled effects of volatile compounds and ambient conditions, offering a comprehensive perspective on microenvironment formation. Empirical observations reveal substantial spatial and temporal variability in underground cellar temperatures, while the reciprocal impact of volatiles on the surrounding environment remains insufficiently studied. To address these gaps, a multi‐faceted research framework is proposed, including dynamic measurement of key cellar parameters, statistical analysis to identify spatiotemporal patterns, development of a coupled gas‐thermal‐humidity multi‐physical field model with numerical solutions, and construction of a multi‐scale, multi‐parameter evaluation method for cellar microenvironments. By integrating engineering thermophysical approaches such as computational fluid dynamics, thermal and humidity analysis, and multi‐field coupling, this study provides novel insights into the mechanisms of Baijiu aging, along with practical strategies for optimizing production, thereby contributing both theoretical advances and applied value to the field.</p></abstract><abstract abstract-type="graphical"><p>This review addresses a critical gap in Chinese Baijiu aging research: the neglect of physical properties in cellar storage environments. Current studies emphasize microorganisms, CO<sub>2</sub>, and base liquor interactions, yet lack systematic consideration of environmental dynamics. To bridge this gap, the “Gas‐Thermal‐Humidity” coupled microenvironment is proposed as a core concept. An integrated framework is further established, combining multi‐parameter monitoring (temperature, humidity, airflow, CO<sub>2</sub>, aroma compounds) with statistical analysis, multi‐physics modeling of heat and mass transfer, and AHP‐FCE‐based comprehensive evaluation. This framework offers a science‐driven pathway to optimize aging conditions.<boxed-text position="anchor" content-type="graphic" id="fsn371742-blkfxd-0001" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="FSN3-14-e71742-g002.jpg"/></boxed-text>
+</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="fsn371742-kwd-0001">“Gas‐Thermal‐Humidity”</kwd><kwd id="fsn371742-kwd-0002">aging process</kwd><kwd id="fsn371742-kwd-0003">cellar</kwd><kwd id="fsn371742-kwd-0004">Chinese Baijiu</kwd></kwd-group><funding-group><award-group id="funding-0001"><funding-source>
+<institution-wrap><institution>Chinese Scholarship Council</institution></institution-wrap>
+</funding-source><award-id>202410890003</award-id></award-group><award-group id="funding-0002"><funding-source>
+<institution-wrap><institution>Key Research Base Program of Sichuan Social Sciences Association of China</institution></institution-wrap>
+</funding-source><award-id>25SCZSXW02</award-id></award-group><award-group id="funding-0003"><funding-source>
+<institution-wrap><institution>College Students’ Innovative Entrepreneurial Training Plan Program, Sichuan University of Science &amp; Engineering</institution></institution-wrap>
+</funding-source><award-id>cx2025162</award-id></award-group></funding-group><counts><fig-count count="7"/><table-count count="4"/><page-count count="16"/><word-count count="10200"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:08.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body id="fsn371742-body-0001"><sec id="fsn371742-sec-0001"><label>1</label><title>Introduction</title><p>As one of the world's three major distilled spirits, Chinese Baijiu possesses a long history (Fan and Xu <xref rid="fsn371742-bib-0023" ref-type="bibr">2023</xref>) and is renowned internationally for its diverse and distinctive aroma profiles, including Moutai, Luzhou, and Light flavors (Xiao et al. <xref rid="fsn371742-bib-0089" ref-type="bibr">2016</xref>). Traditionally, Baijiu is produced from raw materials such as sorghum, wheat, and corn, with <italic toggle="yes">qu</italic> serving as both saccharification and fermentation starter. Its production involves four key stages: fermentation (Liu and Sun <xref rid="fsn371742-bib-0046" ref-type="bibr">2018</xref>), distillation (Li et al. <xref rid="fsn371742-bib-0044" ref-type="bibr">2012</xref>), aging (Rizeng et al. <xref rid="fsn371742-bib-0066" ref-type="bibr">2023</xref>), and blending (Wang <xref rid="fsn371742-bib-0085" ref-type="bibr">2024</xref>). Among these, aging is particularly critical, as freshly distilled base Baijiu exhibits a sharp, pungent taste due to high concentrations of fermentation by‐products. Prolonged storage mitigates these harsh flavors, resulting in a smoother mouthfeel and enhanced aromatic complexity (Wang et al. <xref rid="fsn371742-bib-0086" ref-type="bibr">2024</xref>). However, aging is inherently time‐consuming, imposing substantial economic burdens on producers and complicating quality and safety management (He et al. <xref rid="fsn371742-bib-0034" ref-type="bibr">2023</xref>). Consequently, accelerating the aging process has become a central research focus, offering potential solutions to both economic and quality challenges in Baijiu production.</p><sec id="fsn371742-sec-0002"><label>1.1</label><title>Aging Theory</title><p>Understanding the aging mechanism is essential for developing precise strategies for Chinese Baijiu maturation. Researchers have examined the process from multiple perspectives, and several comprehensive reviews have summarized the evolution of mechanistic hypotheses (He et al. <xref rid="fsn371742-bib-0034" ref-type="bibr">2023</xref>). The main theories include the Association (Peng <xref rid="fsn371742-bib-0063" ref-type="bibr">2021</xref>), Esterification (Sun et al. <xref rid="fsn371742-bib-0074" ref-type="bibr">2022</xref>), Leaching (Qiao <xref rid="fsn371742-bib-0064" ref-type="bibr">2014</xref>), Volatilization (Zhu and Cadwallader <xref rid="fsn371742-bib-0096" ref-type="bibr">2019</xref>), and Oxidation (Deng et al. <xref rid="fsn371742-bib-0018" ref-type="bibr">2020</xref>) theories. The Association Theory proposes that ethanol‐water interactions reduce free ethanol availability, thereby elevating its boiling point. The Esterification Theory emphasizes that ester formation between aromatic compounds and ethanol contributes substantially to aging (Niu et al. <xref rid="fsn371742-bib-0060" ref-type="bibr">2017</xref>). According to the “Leaching Theory”, trace metal ions from the container play a crucial role in the maturation process (Huang et al. <xref rid="fsn371742-bib-0036" ref-type="bibr">2020</xref>). According to the Volatilization Theory, the gradual release of sulfides diminishes pungent flavors (Zhu et al. <xref rid="fsn371742-bib-0095" ref-type="bibr">2020</xref>), while the Oxidation Theory attributes aging to the slow oxidation of alcohols (Gao et al. <xref rid="fsn371742-bib-0030" ref-type="bibr">2014</xref>). Although these hypotheses remain incompletely validated and have limitations, they encapsulate extensive empirical observations and constitute a valuable knowledge base with significant practical guidance.</p></sec><sec id="fsn371742-sec-0003"><label>1.2</label><title>Aging Techniques</title><sec id="fsn371742-sec-0004"><label>1.2.1</label><title>Natural Aging</title><p>Natural aging refers to the maturation of Baijiu without artificial physical, chemical, or biological interventions, relying instead on appropriate storage conditions and temperature control. Common approaches include outdoor (Gao <xref rid="fsn371742-bib-0029" ref-type="bibr">2016</xref>), warehouse (Sun et al. <xref rid="fsn371742-bib-0074" ref-type="bibr">2022</xref>), cellar (Zheng et al. <xref rid="fsn371742-bib-0094" ref-type="bibr">2016</xref>), and cave (Yang et al. <xref rid="fsn371742-bib-0090" ref-type="bibr">2011</xref>) aging. Although time‐consuming, natural aging typically yields superior quality compared to artificial methods. To date, no artificial technique has fully replicated the effects of natural aging (Qiao <xref rid="fsn371742-bib-0065" ref-type="bibr">2013</xref>), highlighting the importance of developing strategies to accelerate this process.</p></sec><sec id="fsn371742-sec-0005"><label>1.2.2</label><title>Artificial Aging</title><p>The mechanisms underlying Baijiu aging remain largely speculative due to limited empirical evidence and a lack of rigorous methodologies. Existing hypotheses primarily focus on the internal characteristics of Baijiu, often neglecting the influence of external thermal and humidity conditions. Natural aging involves not only complex internal physical and chemical reactions and microbial activities but also the properties of ceramic containers, the physicochemical attributes of Baijiu, and interactions between microorganisms and the storage environment. As a result, elucidating the precise mechanisms of Baijiu aging remains a considerable challenge.</p><p>Concurrently, significant progress has been made in developing aging methods, broadly classified as physical, chemical, and biological techniques (Zhang et al. <xref rid="fsn371742-bib-0093" ref-type="bibr">2023</xref>). However, most of these approaches are temporary, have not seen widespread industrial adoption (Fan <xref rid="fsn371742-bib-0022" ref-type="bibr">2023</xref>), and fail to fully replicate natural aging (Qiao <xref rid="fsn371742-bib-0065" ref-type="bibr">2013</xref>). While Baijiu is not produced in Western countries, their extensive experience with wine aging highlights the inadequacy of isolating storage conditions in aging studies; some scholars have proposed the concept of “wine‐barrel‐cellar” interactions (Roussey et al. <xref rid="fsn371742-bib-0068" ref-type="bibr">2020</xref>). This underscores that research in China lags behind, largely due to insufficient engineering focus on controlling temperature and humidity. With recent advancements in indoor environment monitoring technologies, investigating Baijiu aging from the perspective of storage space conditions has become increasingly imperative.</p></sec></sec><sec id="fsn371742-sec-0006"><label>1.3</label><title>Limitations of Existing Research</title><p>Although there has been extensive exploration of certain aging theories and technologies, there are still some fundamental limitations in the existing research on the aging of Chinese Baijiu. Current mechanistic hypotheses and practices mainly regard Baijiu aging as a process of chemical reactions and physical transformations within the Baijiu. Therefore, research has primarily focused on the internal conditions of Baijiu, while considering the storage environment as a secondary factor.</p><p>However, the aging of Baijiu is essentially a long‐term process that occurs through continuous interaction with the surrounding physical environment. Factors such as ambient temperature, humidity, container permeability, and the coupled thermal and moisture conditions of the storage space directly affect mass transfer, reaction kinetics, and microbial activity. Ignoring these external conditions not only limits the explanatory power of aging theories for Baijiu but also increases the difficulty of artificially reproducing or accelerating natural aging. Therefore, current research tends to overemphasize the internal conditions of the Baijiu while neglecting the external physical conditions, which restricts both theoretical validation and practical applications. To address this imbalance, it is necessary to systematically reassess Baijiu aging from the perspective of the external physical environment of the storage space.</p></sec><sec id="fsn371742-sec-0007"><label>1.4</label><title>Research Gap and Focus</title><p>Despite the development of various techniques to accelerate Baijiu aging, existing studies have predominantly focused on the internal conditions of the base Baijiu, failing to provide a comprehensive evaluation of the external thermal and humidity environment. Meanwhile, these approaches overlook the critical interplay among the physical properties of ceramic vessels, the physicochemical characteristics of the Baijiu, and the surrounding cellar environment. This oversight neglects the scientific reality that natural Baijiu aging depends not only on intricate physicochemical reactions and microbial metabolic processes within the Baijiu but also on the coupled interactions with external environmental factors. Critically, the direct, mechanistic evidence for these couplings—particularly how volatilized organics influence the cellar's thermal‐humidity environment and vice‐versa—remains largely unquantified.</p><p>To address this significant gap, the present study highlights the significance of the aging environment's physical properties and proposes innovative, technology‐driven methods for accelerating aging. First, existing studies on environmental factors, control mechanisms, optimal condition creation, and dynamic monitoring techniques are systematically reviewed. Building on this foundation, a cognitive framework is established, and key challenges and bottlenecks in current research are identified. Finally, the concept of a “Gas‐Thermal‐Humidity” microenvironments is introduced, providing a detailed research framework and practical implementation strategies to guide future innovations.</p></sec></sec><sec id="fsn371742-sec-0008"><label>2</label><title>Current Status</title><p>Chinese Baijiu is usually aged in large ceramic containers for a long time under natural storage conditions, which makes its aging system different from that of wine. The aging environment of Baijiu is characterized by the complex interaction among storage containers, environmental conditions, and physical and chemical transformation processes.</p><p>One of the most remarkable characteristics of Baijiu aging is the use of traditional ceramic storage containers. Ceramic containers have a microporous structure that allows for limited gas exchange between the internal liquid phase and the external environment. This structural characteristic slows down oxygen diffusion and promotes the adsorption desorption process of volatile compounds on the container surface, which can regulate the concentration of aromatic active compounds and facilitate physical and chemical transformation during long‐term storage. Moreover, the permeability and surface properties of ceramic materials can affect the evaporation process, leading to changes in alcohol content and volatile components over time.</p><p>Another important aspect of Baijiu aging is the gradual transformation of volatile components. During long‐term storage, alcohols, esters, aldehydes, and organic acids in alcohol undergo a series of chemical reactions, including esterification, oxidation, and hydrolysis. These reactions lead to a gradual adjustment of aroma components, typically resulting in smoother and more mellow flavors. The research shows that aging can reduce the irritation of fresh Baijiu and increase the complexity of aroma compounds. Although the alcohol concentration in Baijiu will restrict the growth of microorganisms in the liquid phase, microorganisms may still exist in the surrounding storage environment or container surface. These microbial communities can indirectly affect the aging process by interacting with environmental conditions to produce trace metabolites. However, the research on microbial ecology in Baijiu aging environment is still relatively limited, and further research is needed.</p><p>In a word, the aging environment of Baijiu is a complex system, involving the interaction between container materials, environmental conditions, and chemical conversion processes. Understanding these interactions is crucial to reveal the aging mechanism of Baijiu and provides an important basis for developing a system framework to describe the gas heat moisture coupling effect in the aging system.</p><p>Although a direct correlation between the storage environment and ripening quality has not been definitively established, the academic community has increasingly recognized the significance of the cellar storage environment in the aging process of base wine and has conducted extensive research on this topic (Arredondo‐Ruiz et al. <xref rid="fsn371742-bib-0003" ref-type="bibr">2020</xref>). Given the limited focus on cellar storage environments specific to our country, many perspectives are drawn from wine aging studies. The research in this area primarily encompasses five key aspects:</p><sec id="fsn371742-sec-0009"><label>2.1</label><title>Environmental Factors</title><sec id="fsn371742-sec-0010"><label>2.1.1</label><title>Temperature</title><p>Research on temperature can be summarized in two key aspects. Firstly, it involves monitoring variations in environmental temperature when utilizing spaces like basements and caves as aging rooms. Secondly, it focuses on maintaining a stable environment to observe variations in color (Hopfer et al. <xref rid="fsn371742-bib-0035" ref-type="bibr">2013</xref>), flavor (Jung et al. <xref rid="fsn371742-bib-0039" ref-type="bibr">2021</xref>), compositions (Cutzach et al. <xref rid="fsn371742-bib-0017" ref-type="bibr">2000</xref>; Arapitsas et al. <xref rid="fsn371742-bib-0002" ref-type="bibr">2014</xref>; Drappier et al. <xref rid="fsn371742-bib-0021" ref-type="bibr">2019</xref>; Scrimgeour et al. <xref rid="fsn371742-bib-0071" ref-type="bibr">2015</xref>), wine losses (Ruiz de Adana et al. <xref rid="fsn371742-bib-0069" ref-type="bibr">2005</xref>), gases (Cejudo‐Bastante et al. <xref rid="fsn371742-bib-0015" ref-type="bibr">2013</xref>), and microbial communities of stored items (Kim et al. <xref rid="fsn371742-bib-0040" ref-type="bibr">2023</xref>; Belda et al. <xref rid="fsn371742-bib-0010" ref-type="bibr">2017</xref>), especially beverages. However, the need for stable temperatures in storage rooms often results in higher energy consumption (Benni <xref rid="fsn371742-bib-0011" ref-type="bibr">2014</xref>). Table <xref rid="fsn371742-tbl-0002" ref-type="table">2</xref> presents the measured temperature values from various natural wine cellars, highlighting significant variations in temperature fluctuations. These differences are primarily driven by the combined effects of cellar structure, soil properties, and outdoor meteorological conditions.</p><p>Moreover, (Cañas Guerrero and Martin Ocaña <xref rid="fsn371742-bib-0012" ref-type="bibr">2005</xref>) studied the hygro‐thermal behavior of two traditional underground wine cellars in Morcuera (Soria, Spain). (Cejudo‐Bastante et al. <xref rid="fsn371742-bib-0015" ref-type="bibr">2013</xref>) found that temperature factors (storage and accelerated aging) induced common changes in the volatile profiles of Chardonnay wines. (Martín Ocaña and Cañas Guerrero <xref rid="fsn371742-bib-0049" ref-type="bibr">2006</xref>) highlighted the uneven temperature distribution in wine cellars, while (Barbaresi, de Maria, et al. <xref rid="fsn371742-bib-0005" ref-type="bibr">2015</xref>) observed that indoor temperatures in aboveground buildings are more uniform. (Silvia and Ignacio <xref rid="fsn371742-bib-0073" ref-type="bibr">2005</xref>) examined the impact of temperature and humidity differences within wine cellars on wine quality. (Igarashi et al. <xref rid="fsn371742-bib-0037" ref-type="bibr">2019</xref>) demonstrated that adjusting temperature and humidity in an artificial climate room could alter wine taste evaluations. (Hopfer et al. <xref rid="fsn371742-bib-0035" ref-type="bibr">2013</xref>) studied the combined effects of storage temperature and packaging on Californian Cabernet Sauvignon, finding that elevated temperatures could be useful for wine packaging screening. (Mazarrón and Cañas <xref rid="fsn371742-bib-0052" ref-type="bibr">2023</xref>) monitored 19 Spanish wine cellars, revealing significant variability in hygrothermal conditions. Additionally, (Ocón et al. <xref rid="fsn371742-bib-0061" ref-type="bibr">2011</xref>) identified temperature and humidity as key factors influencing the presence of mold in the air. Consequently, studying the cellar and wine as an integrated system is essential for a more comprehensive understanding of their interactions and dynamics.</p><p>Table <xref rid="fsn371742-tbl-0001" ref-type="table">1</xref> summarizes the reported temperature ranges for different Baijiu storerooms and warehouses. Although underground storage environments are generally considered relatively stable, collected data indicates that significant temperature fluctuations still occur due to various factors, including seasonal climate change, ventilation conditions, structural characteristics of storage facilities, and thermal inertia of surrounding soil. These factors result in differences in the magnitude and pattern of temperature changes between different storage systems. Temperature fluctuation will affect the physical and chemical process of Baijiu aging. For example, temperature can affect the rates of chemical reactions such as esterification, hydrolysis, and oxidation, as well as the volatility and diffusion of aromatic compounds. Even moderate changes in temperature may alter the balance of mass transfer processes and volatile components in storage environments. Therefore, the temperature characteristics summarized in Table <xref rid="fsn371742-tbl-0001" ref-type="table">1</xref> are not only descriptive data, but also provide an important empirical basis for understanding the environmental dynamics of Baijiu aging. These observations further advance the development of the gas heat moisture coupling framework proposed in this study, which aims to systematically describe the interactions between temperature, humidity, and gas transport processes in aging environments.</p><table-wrap position="float" id="fsn371742-tbl-0001" content-type="TABLE" orientation="portrait"><label>TABLE 1</label><caption><p>Indoor air temperatures of different aging rooms.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" rowspan="2" valign="bottom" colspan="1">Wine cellars or resources</th><th align="center" colspan="3" valign="bottom" rowspan="1">Indoor air temperature (°C)</th></tr><tr style="border-bottom:solid 1px #000000"><th align="center" valign="bottom" rowspan="1" colspan="1">Average</th><th align="center" valign="bottom" rowspan="1" colspan="1">Minimum</th><th align="center" valign="bottom" rowspan="1" colspan="1">Maximum</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Basement cellar<xref rid="fsn371742-note-0001" ref-type="table-fn">
+<sup>a</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">16.4</td><td align="center" valign="top" rowspan="1" colspan="1">11.3</td><td align="center" valign="top" rowspan="1" colspan="1">26</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Morceura (Top and Summer)<xref rid="fsn371742-note-0002" ref-type="table-fn">
+<sup>b</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">11.8</td><td align="center" valign="top" rowspan="1" colspan="1">11.4</td><td align="center" valign="top" rowspan="1" colspan="1">12.4</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Morceura (Bottom and Summer)<xref rid="fsn371742-note-0002" ref-type="table-fn">
+<sup>b</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">9.0</td><td align="center" valign="top" rowspan="1" colspan="1">9.0</td><td align="center" valign="top" rowspan="1" colspan="1">9.0</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Morceura (Top and Winter)<xref rid="fsn371742-note-0002" ref-type="table-fn">
+<sup>b</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">7.1</td><td align="center" valign="top" rowspan="1" colspan="1">7</td><td align="center" valign="top" rowspan="1" colspan="1">7.4</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Morceura (Bottom and Winter)<xref rid="fsn371742-note-0002" ref-type="table-fn">
+<sup>b</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">6.6</td><td align="center" valign="top" rowspan="1" colspan="1">6.2</td><td align="center" valign="top" rowspan="1" colspan="1">6.8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Alcubilla del Marques (Eugenia and Summer)<xref rid="fsn371742-note-0002" ref-type="table-fn">
+<sup>b</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">12.1</td><td align="center" valign="top" rowspan="1" colspan="1">11.8</td><td align="center" valign="top" rowspan="1" colspan="1">12.6</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Alcubilla del Marques (Teofilo and Summer)<xref rid="fsn371742-note-0002" ref-type="table-fn">
+<sup>b</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">11.5</td><td align="center" valign="top" rowspan="1" colspan="1">11.4</td><td align="center" valign="top" rowspan="1" colspan="1">12.2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Alcubilla del Marques (Eugenia and Winter)<xref rid="fsn371742-note-0002" ref-type="table-fn">
+<sup>b</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">12.5</td><td align="center" valign="top" rowspan="1" colspan="1">12.2</td><td align="center" valign="top" rowspan="1" colspan="1">12.9</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Alcubilla del Marques (Teofilo and Winter)<xref rid="fsn371742-note-0002" ref-type="table-fn">
+<sup>b</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">10.1</td><td align="center" valign="top" rowspan="1" colspan="1">9</td><td align="center" valign="top" rowspan="1" colspan="1">11</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Underground cellar<xref rid="fsn371742-note-0003" ref-type="table-fn">
+<sup>c</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">9.9</td><td align="center" valign="top" rowspan="1" colspan="1">8.6</td><td align="center" valign="top" rowspan="1" colspan="1">11.1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Basement cellar<xref rid="fsn371742-note-0003" ref-type="table-fn">
+<sup>c</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">13.2</td><td align="center" valign="top" rowspan="1" colspan="1">8.9</td><td align="center" valign="top" rowspan="1" colspan="1">17.3</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Aboveground without Air‐conditioning<xref rid="fsn371742-note-0003" ref-type="table-fn">
+<sup>c</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">14.4</td><td align="center" valign="top" rowspan="1" colspan="1">7.8</td><td align="center" valign="top" rowspan="1" colspan="1">21.8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Earth‐sheltered<xref rid="fsn371742-note-0003" ref-type="table-fn">
+<sup>c</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">12.5</td><td align="center" valign="top" rowspan="1" colspan="1">10.3</td><td align="center" valign="top" rowspan="1" colspan="1">14.9</td></tr></tbody></table><table-wrap-foot id="fsn371742-ntgp-0001"><fn id="fsn371742-note-0001"><label>
+<sup>a</sup>
+</label><p>Data from Barbaresi et al. (<xref rid="fsn371742-bib-0009" ref-type="bibr">2014</xref>).</p></fn><fn id="fsn371742-note-0002"><label>
+<sup>b</sup>
+</label><p>Data from Cañas Guerrero and Martin Ocaña (<xref rid="fsn371742-bib-0012" ref-type="bibr">2005</xref>).</p></fn><fn id="fsn371742-note-0003"><label>
+<sup>c</sup>
+</label><p>Data from Geyrhofer (<xref rid="fsn371742-bib-0032" ref-type="bibr">2011</xref>).</p></fn></table-wrap-foot></table-wrap></sec><sec id="fsn371742-sec-0011"><label>2.1.2</label><title>Humidity</title><p>Scholars commonly study temperature and humidity together, as monitoring instruments typically measure both parameters simultaneously (Morais et al. <xref rid="fsn371742-bib-0056" ref-type="bibr">2018</xref>). Unlike temperature, relative humidity in underground cellars exhibits less fluctuation and tends to be more uniform across different locations. For example, a study by (Cañas et al. <xref rid="fsn371742-bib-0014" ref-type="bibr">2022</xref>) on cider aging found that relative humidity generally ranged from 60% to 90%. (Gómez‐Villarino et al. <xref rid="fsn371742-bib-0033" ref-type="bibr">2021</xref>) reported average humidity levels of 77%, 80%, and 94% for basement, buried, and underground cellars, respectively. Additionally, (Mwithiga et al. <xref rid="fsn371742-bib-0057" ref-type="bibr">2013</xref>) developed a humidity control system to maintain optimal humidity levels in cellars. Theoretically, relative humidity influences the volatilization rate of the wine, and conversely, wine evaporation affects the indoor humidity levels. The coupling relationship between these two factors underscores the importance of further investigation into effective cellar humidity control.</p></sec><sec id="fsn371742-sec-0012"><label>2.1.3</label><title>Gas</title><p>Gas transfer, and especially oxygen, through wine closures has been studied and confirmed since the 1990s (Crouvisier‐Urion et al. <xref rid="fsn371742-bib-0016" ref-type="bibr">2018</xref>). The gases in the cellar environment also originate from the volatilization of compounds within the wine itself. Accordingly, this study reviews research on the volatile gases present in the wine, as summarized in Table <xref rid="fsn371742-tbl-0002" ref-type="table">2</xref>. Most existing studies focus on the concentration changes of various volatile gases, such as oxygen, carbon dioxide, and aroma compounds, in base wine of different ages, using these changes to infer the effects of external temperature and humidity control measures. However, conclusions can vary depending on the type of wine being studied. While research on Baijiu remains limited, most studies focus primarily on the changes in aroma components within the Baijiu. Furthermore, the majority of studies concentrate on the gases inside the Baijiu itself, with few investigating how the volatilization of these gases into the surrounding air impacts the thermal and humidity dynamics of the cellar environment.</p><table-wrap position="float" id="fsn371742-tbl-0002" content-type="TABLE" orientation="portrait"><label>TABLE 2</label><caption><p>Gases studied in different literature.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Resources</th><th align="center" valign="bottom" rowspan="1" colspan="1">O<sub>2</sub>
+</th><th align="center" valign="bottom" rowspan="1" colspan="1">CO<sub>2</sub>
+</th><th align="center" valign="bottom" rowspan="1" colspan="1">SO<sub>2</sub>
+</th><th align="center" valign="bottom" rowspan="1" colspan="1">H<sub>2</sub>S</th><th align="center" valign="bottom" rowspan="1" colspan="1">MeSH</th><th align="center" valign="bottom" rowspan="1" colspan="1">DMS</th><th align="center" valign="bottom" rowspan="1" colspan="1">VOCs</th><th align="center" valign="bottom" rowspan="1" colspan="1">NO<sub>2</sub>
+</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Wang et al. (<xref rid="fsn371742-bib-0084" ref-type="bibr">2022</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Panaras et al. (<xref rid="fsn371742-bib-0062" ref-type="bibr">2021</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1">■</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Toussaint et al. (<xref rid="fsn371742-bib-0079" ref-type="bibr">2014</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1">■</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Cutzach et al. (<xref rid="fsn371742-bib-0017" ref-type="bibr">2000</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Ugliano et al. (<xref rid="fsn371742-bib-0081" ref-type="bibr">2012</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Ferreira et al. (<xref rid="fsn371742-bib-0024" ref-type="bibr">2014</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Tarasov et al. (<xref rid="fsn371742-bib-0075" ref-type="bibr">2021</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Ferreira et al. (<xref rid="fsn371742-bib-0025" ref-type="bibr">2023</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1">
+<mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="jats-math-1" display="inline" overflow="scroll"><mml:mrow><mml:mrow><mml:mrow><mml:mo>∎</mml:mo></mml:mrow></mml:mrow></mml:mrow></mml:math>
+</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Vidal and Moutounet (<xref rid="fsn371742-bib-0082" ref-type="bibr">2006</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Franco‐Luesma and Ferreira (<xref rid="fsn371742-bib-0027" ref-type="bibr">2016</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Dimkou et al. (<xref rid="fsn371742-bib-0019" ref-type="bibr">2011</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Flor et al. (<xref rid="fsn371742-bib-0026" ref-type="bibr">2018</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1">■</td><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/><td align="center" valign="top" rowspan="1" colspan="1"/></tr></tbody></table><table-wrap-foot id="fsn371742-ntgp-0002"><fn id="fsn371742-note-0006"><p>
+<italic toggle="yes">Note:</italic> ∎ indicates that the gas parameter was investigated in the corresponding study. Blank cells indicate that the parameter was not investigated.</p></fn><fn id="fsn371742-note-0004"><p>Abbreviations: DMS, Dimethylsulfide; MeSH, Methanethiol.</p></fn></table-wrap-foot></table-wrap><p>Moreover, (Geyrhofer <xref rid="fsn371742-bib-0032" ref-type="bibr">2011</xref>) investigated airflow velocity in underground wine cellars and determined that existing air outlets often fail to generate adequate convection, emphasizing the need to minimize improper ventilation practices. Barbaresi et al. employed the lattice Boltzmann method to numerically simulate airflow dynamics during the wine aging process, analyzing how room layout and air vent configurations affect overall air circulation (Barbaresi <xref rid="fsn371742-bib-0006" ref-type="bibr">2015</xref>). (Barbaresi et al. <xref rid="fsn371742-bib-0009" ref-type="bibr">2014</xref>) conducted continuous temperature measurements in an underground wine cellar in Italy over the course of a year, revealing a temperature variation of up to 14.7°C within the cellar. This underscores that not all underground wine cellars can maintain a consistent temperature. In contrast, Silvia et al.'s monitoring of traditional underground wine cellars in the Tierras Sorianas del Cid region of Spain demonstrated that cellar temperatures were generally more stable compared to external temperatures (Silvia and Ignacio <xref rid="fsn371742-bib-0073" ref-type="bibr">2005</xref>). Guerrero and Ocaña explored the thermal and humidity behavior of two traditional underground wine cellars in the Morqueira region of Soria Province, Spain, and speculated on the effects of temperature differentials on the aging process (Cañas Guerrero and Martin Ocaña <xref rid="fsn371742-bib-0012" ref-type="bibr">2005</xref>). These studies represent a shift from empirical, “black box” approaches to a more scientific, “white box” perspective on optimizing cellar environments, marking a significant advancement in the scientific understanding of aging. However, focusing solely on improvements in ventilation, temperature, and airflow fields does not fully address the complex interplay between multiple physical factors, leading to recommendations that may lack comprehensiveness.</p></sec></sec><sec id="fsn371742-sec-0013"><label>2.2</label><title>Environmental Regulation</title><p>Ventilation control is a critical aspect of managing the cellar environment. Santolini et al. (<xref rid="fsn371742-bib-0070" ref-type="bibr">2019</xref>) utilized Computational Fluid Dynamics (CFD) simulations to optimize ventilation strategies for underground wine cellars. Barbaresi, Torreggiani, et al. (<xref rid="fsn371742-bib-0008" ref-type="bibr">2015</xref>) identified temperature inhomogeneity in these cellars and developed a temperature prediction method to assess the degree of temperature field uniformity, thereby enhancing monitoring schemes. In response to temperature field inconsistencies, they also designed a micro‐ventilation system aimed at improving temperature and humidity uniformity without altering the average temperature (Barbaresi et al. <xref rid="fsn371742-bib-0007" ref-type="bibr">2020</xref>). Additionally, Mazarrón et al. examined the impact of traditional ventilation openings, known as zarceras, on the thermal and humidity properties of underground wine cellars in Spain, demonstrating that such systems can support optimal conditions for wine maturation without the need for air conditioning (Cañas and Mazarrón <xref rid="fsn371742-bib-0013" ref-type="bibr">2009</xref>). They also noted that the thermal inertia of the surrounding ground can create favorable temperature conditions (Mazarrón et al. <xref rid="fsn371742-bib-0054" ref-type="bibr">2012b</xref>). (Jiménez‐López et al. <xref rid="fsn371742-bib-0038" ref-type="bibr">2024</xref>) proposed a bioclimatic strategy to decrease energy consumption by using a quantitative theoretical method. They recommended integrating high thermal mass and shading techniques. Despite these valuable contributions, the research predominantly treats underground wine cellars as typical indoor environments. It often overlooks the interactive nature of the internal environment and the barrels themselves. Future studies should integrate these components to provide a more holistic understanding of cellar dynamics and improve environmental control strategies.</p></sec><sec id="fsn371742-sec-0014"><label>2.3</label><title>Formation Mechanism</title><p>Indoor temperatures in underground wine cellars typically exhibit less fluctuation and greater stability compared to above‐ground structures. It is largely attributed to the thermal inertia of the surrounding soil, which moderates temperature variations and contributes to energy savings (Mazarrón et al. <xref rid="fsn371742-bib-0054" ref-type="bibr">2012b</xref>, <xref rid="fsn371742-bib-0053" ref-type="bibr">2012a</xref>; Tinti et al. <xref rid="fsn371742-bib-0077" ref-type="bibr">2015</xref>, <xref rid="fsn371742-bib-0076" ref-type="bibr">2014</xref>; Rodríguez‐Gonzálvez et al. <xref rid="fsn371742-bib-0067" ref-type="bibr">2014</xref>; Martin and Canas <xref rid="fsn371742-bib-0050" ref-type="bibr">2006</xref>; Tinti <xref rid="fsn371742-bib-0078" ref-type="bibr">2017</xref>). Martín Ocaña and Cañas Guerrero (<xref rid="fsn371742-bib-0049" ref-type="bibr">2006</xref>) investigated the thermal properties of traditional underground wine cellars in Spain and proposed a straightforward model for predicting cellar temperatures. While this model can estimate the indoor temperature range, it is inadequate for predicting temperature variations over time. The significant thermal inertia of the soil allows for boundary conditions to be based primarily on seasonal temperature changes, rendering outdoor meteorological factors minimal in their influence.</p><p>Furthermore, some studies have entirely bypassed physical investigations in favor of developing predictive models. Mazarrón and Cañas (<xref rid="fsn371742-bib-0051" ref-type="bibr">2008</xref>), for example, formulated a mathematical model specifically for traditional underground wine cellars in Spain's “Ribeira de Duero” region. Despite these advancements, there remains a notable gap in research regarding the formation mechanisms of thermal and humidity environments in underground cellars. Specifically, there is a lack of studies exploring the multiphysics coupling effects involving internal disturbances and the volatilization dynamics of the building envelopes, indicating a need for more scientifically rigorous investigations.</p><p>Additionally, this study summarizes the calculations for soil temperature, as presented in Table <xref rid="fsn371742-tbl-0003" ref-type="table">3</xref>. Soil temperature is a critical boundary condition and a key factor influencing the accuracy of simulations of the thermal environment in wine cellars. Currently, most researchers use periodic soil boundary conditions, which approximate soil temperature fluctuations through Fourier series in complex functions. Some modifications have been made to adapt these models to different regions. However, research specific to the Chinese context remains relatively scarce, highlighting the need for further investigation in this area.</p><table-wrap position="float" id="fsn371742-tbl-0003" content-type="TABLE" orientation="portrait"><label>TABLE 3</label><caption><p>Calculation formula of soil temperature in the existed literature.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Formula</th><th align="center" valign="bottom" rowspan="1" colspan="1">Resources</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="jats-math-2" display="inline" overflow="scroll"><mml:mrow><mml:mrow><mml:mrow><mml:mi>T</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi></mml:mrow></mml:mfenced><mml:mo>=</mml:mo><mml:mfenced close=")" open="("><mml:msub><mml:mi>T</mml:mi><mml:mi>m</mml:mi></mml:msub></mml:mfenced><mml:mo>−</mml:mo><mml:msub><mml:mi>A</mml:mi><mml:mi>s</mml:mi></mml:msub><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mo>−</mml:mo><mml:mi>x</mml:mi><mml:msqrt><mml:mfrac><mml:mi>π</mml:mi><mml:mrow><mml:mn>365</mml:mn><mml:mi>α</mml:mi></mml:mrow></mml:mfrac></mml:msqrt></mml:mrow></mml:msup><mml:mi>cos</mml:mi><mml:mfenced close="]" open="["><mml:mrow><mml:mfrac><mml:mrow><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mrow><mml:mn>365</mml:mn></mml:mfrac><mml:mfenced close=")" open="("><mml:mrow><mml:mi>t</mml:mi><mml:mo>−</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mo>−</mml:mo><mml:mfrac><mml:mi>x</mml:mi><mml:mn>2</mml:mn></mml:mfrac><mml:msqrt><mml:mfrac><mml:mn>365</mml:mn><mml:mi mathvariant="italic">πα</mml:mi></mml:mfrac></mml:msqrt></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced></mml:mrow></mml:mrow></mml:mrow></mml:math>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Labs (<xref rid="fsn371742-bib-0043" ref-type="bibr">1982</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="jats-math-3" display="inline" overflow="scroll"><mml:mrow><mml:mrow><mml:mrow><mml:mi>T</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi></mml:mrow></mml:mfenced><mml:mo>=</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>m</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>A</mml:mi><mml:mi>s</mml:mi></mml:msub><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mo>−</mml:mo><mml:mi>x</mml:mi><mml:msqrt><mml:mfrac><mml:mi>π</mml:mi><mml:mrow><mml:mn>365</mml:mn><mml:mi>α</mml:mi></mml:mrow></mml:mfrac></mml:msqrt></mml:mrow></mml:msup><mml:mi>cos</mml:mi><mml:mfenced close="}" open="{"><mml:mrow><mml:mfrac><mml:mrow><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mrow><mml:mn>365</mml:mn></mml:mfrac><mml:mfenced close="]" open="["><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:mi>t</mml:mi><mml:mo>−</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mo>−</mml:mo><mml:mfrac><mml:mi>x</mml:mi><mml:mn>2</mml:mn></mml:mfrac></mml:mrow></mml:mfenced><mml:msqrt><mml:mfrac><mml:mn>365</mml:mn><mml:mi mathvariant="italic">πα</mml:mi></mml:mfrac></mml:msqrt></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced></mml:mrow></mml:mrow></mml:mrow></mml:math>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Kusuda and Achenbach (<xref rid="fsn371742-bib-0042" ref-type="bibr">1965</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="jats-math-4" display="inline" overflow="scroll"><mml:mrow><mml:mrow><mml:mrow><mml:mi>T</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi></mml:mrow></mml:mfenced><mml:mo>=</mml:mo><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mi>T</mml:mi><mml:mi>m</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:mi>k</mml:mi></mml:mrow></mml:mfenced><mml:mo>−</mml:mo><mml:msub><mml:mi>A</mml:mi><mml:mi>s</mml:mi></mml:msub><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mo>−</mml:mo><mml:msup><mml:mi>x</mml:mi><mml:mo>′</mml:mo></mml:msup><mml:msqrt><mml:mfrac><mml:mi>π</mml:mi><mml:mrow><mml:mn>365</mml:mn><mml:mi>α</mml:mi></mml:mrow></mml:mfrac></mml:msqrt></mml:mrow></mml:msup><mml:mi>cos</mml:mi><mml:mfenced close="]" open="["><mml:mrow><mml:mfrac><mml:mrow><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mrow><mml:mn>365</mml:mn></mml:mfrac><mml:mfenced close=")" open="("><mml:mrow><mml:mi>t</mml:mi><mml:mo>−</mml:mo><mml:msubsup><mml:mi>t</mml:mi><mml:mn>0</mml:mn><mml:mo>′</mml:mo></mml:msubsup><mml:mo>−</mml:mo><mml:mfrac><mml:msup><mml:mi>x</mml:mi><mml:mo>′</mml:mo></mml:msup><mml:mn>2</mml:mn></mml:mfrac><mml:msqrt><mml:mfrac><mml:mn>365</mml:mn><mml:mi mathvariant="italic">πα</mml:mi></mml:mfrac></mml:msqrt></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced></mml:mrow></mml:mrow></mml:mrow></mml:math>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Mazarrón and Cañas (<xref rid="fsn371742-bib-0051" ref-type="bibr">2008</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="jats-math-5" display="inline" overflow="scroll"><mml:mrow><mml:mrow><mml:mrow><mml:mi>T</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi></mml:mrow></mml:mfenced><mml:mo>=</mml:mo><mml:mn>9.76</mml:mn><mml:mo>−</mml:mo><mml:mn>9.65</mml:mn><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mo>−</mml:mo><mml:mn>0.31</mml:mn><mml:mi>x</mml:mi></mml:mrow></mml:msup><mml:mi mathvariant="italic">cos</mml:mi><mml:mfenced close="]" open="["><mml:mrow><mml:mfrac><mml:mrow><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mrow><mml:mn>365</mml:mn></mml:mfrac><mml:mfenced close=")" open="("><mml:mrow><mml:mi>t</mml:mi><mml:mo>−</mml:mo><mml:mn>35</mml:mn><mml:mo>−</mml:mo><mml:mn>18.06</mml:mn><mml:mi>x</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced></mml:mrow></mml:mrow></mml:mrow></mml:math>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Al‐Temeemi and Harris (<xref rid="fsn371742-bib-0001" ref-type="bibr">2001</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="jats-math-6" display="inline" overflow="scroll"><mml:mrow><mml:mrow><mml:mrow><mml:mi>T</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi></mml:mrow></mml:mfenced><mml:mo>=</mml:mo><mml:mfrac><mml:mn>1</mml:mn><mml:msub><mml:mi>h</mml:mi><mml:mi>e</mml:mi></mml:msub></mml:mfrac><mml:mfenced close="]" open="["><mml:mrow><mml:msub><mml:mi>h</mml:mi><mml:mi>r</mml:mi></mml:msub><mml:msub><mml:mi>T</mml:mi><mml:mi mathvariant="italic">ma</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:mi>ϵ</mml:mi><mml:mi mathvariant="normal">Δ</mml:mi><mml:mi>R</mml:mi><mml:mo>+</mml:mo><mml:mi>b</mml:mi><mml:msub><mml:mi>S</mml:mi><mml:mi>m</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:mn>0.0168</mml:mn><mml:msub><mml:mi>h</mml:mi><mml:mi>s</mml:mi></mml:msub><mml:mi mathvariant="italic">fb</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:msub><mml:mi>r</mml:mi><mml:mi>a</mml:mi></mml:msub></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced><mml:mo>+</mml:mo><mml:mfenced close="]" open="["><mml:mrow><mml:msub><mml:mi>h</mml:mi><mml:mi>r</mml:mi></mml:msub><mml:msub><mml:mi>A</mml:mi><mml:mi mathvariant="italic">sa</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:mi>b</mml:mi><mml:msub><mml:mi>S</mml:mi><mml:mi>a</mml:mi></mml:msub><mml:mi>exp</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>i</mml:mi><mml:msub><mml:mi>φ</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>φ</mml:mi><mml:mi>a</mml:mi></mml:msub></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced><mml:mo>/</mml:mo><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mi>h</mml:mi><mml:mi>e</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>K</mml:mi><mml:mi>s</mml:mi></mml:msub></mml:mrow></mml:mfenced><mml:mi mathvariant="italic">Re</mml:mi><mml:mfenced close="]" open="["><mml:mrow><mml:mi mathvariant="italic">exp</mml:mi><mml:mfenced close=")" open="("><mml:mi mathvariant="italic">iwt</mml:mi></mml:mfenced></mml:mrow></mml:mfenced></mml:mrow></mml:mrow></mml:mrow></mml:math>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Mihalakakou et al. (<xref rid="fsn371742-bib-0055" ref-type="bibr">1997</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="jats-math-7" display="inline" overflow="scroll"><mml:mrow><mml:mrow><mml:mrow><mml:mi>T</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi></mml:mrow></mml:mfenced><mml:mo>=</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>m</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>c</mml:mi></mml:msub><mml:mfenced close=")" open="("><mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mi>A</mml:mi><mml:mi>s</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>A</mml:mi><mml:mi>c</mml:mi></mml:msub></mml:mrow></mml:mfenced><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mo>−</mml:mo><mml:mi>x</mml:mi><mml:msqrt><mml:mfrac><mml:mi>π</mml:mi><mml:mrow><mml:mn>365</mml:mn><mml:mi>α</mml:mi></mml:mrow></mml:mfrac></mml:msqrt></mml:mrow></mml:msup><mml:mi>cos</mml:mi><mml:mfenced close="}" open="{"><mml:mrow><mml:mfrac><mml:mrow><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mrow><mml:mn>365</mml:mn></mml:mfrac><mml:mfenced close="]" open="["><mml:mrow><mml:mfenced close=")" open="("><mml:mrow><mml:mi>t</mml:mi><mml:mo>−</mml:mo><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>c</mml:mi></mml:msub></mml:mrow></mml:mfenced><mml:mo>−</mml:mo><mml:mfrac><mml:mi>x</mml:mi><mml:mn>2</mml:mn></mml:mfrac></mml:mrow></mml:mfenced><mml:msqrt><mml:mfrac><mml:mn>365</mml:mn><mml:mi mathvariant="italic">πα</mml:mi></mml:mfrac></mml:msqrt></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced></mml:mrow></mml:mrow></mml:mrow></mml:math>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Tinti et al. (<xref rid="fsn371742-bib-0076" ref-type="bibr">2014</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="jats-math-8" display="inline" overflow="scroll"><mml:mrow><mml:mrow><mml:mrow><mml:mi>T</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>,</mml:mo><mml:mi>z</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi></mml:mrow></mml:mfenced><mml:mo>=</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi mathvariant="italic">me</mml:mi></mml:msub><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced><mml:mo>−</mml:mo><mml:mn>1.07</mml:mn><mml:msub><mml:mi>S</mml:mi><mml:mi>h</mml:mi></mml:msub><mml:msub><mml:mi>A</mml:mi><mml:mi>e</mml:mi></mml:msub><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced><mml:mi>exp</mml:mi><mml:mfenced close="]" open="["><mml:mrow><mml:mo>−</mml:mo><mml:mi>z</mml:mi><mml:msqrt><mml:mfrac><mml:mi>π</mml:mi><mml:mrow><mml:mn>365</mml:mn><mml:mi>α</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>,</mml:mo><mml:mi>z</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mfrac></mml:msqrt></mml:mrow></mml:mfenced><mml:mi mathvariant="italic">cos</mml:mi><mml:mfenced close="}" open="{"><mml:mrow><mml:mfrac><mml:mrow><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mrow><mml:mn>365</mml:mn></mml:mfrac><mml:mfenced close="]" open="["><mml:mrow><mml:mi>t</mml:mi><mml:mo>−</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:msub><mml:mi>T</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:msub><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced><mml:mo>−</mml:mo><mml:mfrac><mml:mi>z</mml:mi><mml:mn>2</mml:mn></mml:mfrac><mml:msqrt><mml:mfrac><mml:mn>365</mml:mn><mml:mrow><mml:mi mathvariant="italic">πα</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>,</mml:mo><mml:mi>z</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mfrac></mml:msqrt></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced><mml:mo>+</mml:mo><mml:mfrac><mml:mrow><mml:mi>h</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced></mml:mrow><mml:mrow><mml:mi>λ</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>,</mml:mo><mml:mi>z</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mfrac><mml:mi>z</mml:mi></mml:mrow></mml:mrow></mml:mrow></mml:math>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Baggs (<xref rid="fsn371742-bib-0004" ref-type="bibr">1983</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="jats-math-9" display="inline" overflow="scroll"><mml:mrow><mml:mrow><mml:mrow><mml:msub><mml:mi>T</mml:mi><mml:mi>g</mml:mi></mml:msub><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>,</mml:mo><mml:mi>z</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi></mml:mrow></mml:mfenced><mml:mo>=</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>m</mml:mi></mml:msub><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced><mml:mo>+</mml:mo><mml:mi>k</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced><mml:mo>−</mml:mo><mml:mi>η</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced><mml:msub><mml:mi>A</mml:mi><mml:mi>e</mml:mi></mml:msub><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced><mml:mi>exp</mml:mi><mml:mfenced close="]" open="["><mml:mrow><mml:mo>−</mml:mo><mml:mi>z</mml:mi><mml:msqrt><mml:mfrac><mml:mi>π</mml:mi><mml:mrow><mml:mn>365</mml:mn><mml:mi>α</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>,</mml:mo><mml:mi>z</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mfrac></mml:msqrt></mml:mrow></mml:mfenced><mml:mi mathvariant="italic">cos</mml:mi><mml:mfenced close="}" open="{"><mml:mrow><mml:mfrac><mml:mrow><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mrow><mml:mn>365</mml:mn></mml:mfrac><mml:mfenced close="]" open="["><mml:mrow><mml:mi>t</mml:mi><mml:mo>−</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:msub><mml:mi>T</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:msub><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced><mml:mo>−</mml:mo><mml:mi>τ</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced><mml:mo>−</mml:mo><mml:mfrac><mml:mi>z</mml:mi><mml:mn>2</mml:mn></mml:mfrac><mml:msqrt><mml:mfrac><mml:mn>365</mml:mn><mml:mrow><mml:mi mathvariant="italic">πα</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>,</mml:mo><mml:mi>z</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mfrac></mml:msqrt></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced><mml:mo>+</mml:mo><mml:mfrac><mml:mrow><mml:mi>h</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced></mml:mrow><mml:mrow><mml:mi>λ</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>,</mml:mo><mml:mi>z</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mfrac><mml:mi>z</mml:mi></mml:mrow></mml:mrow></mml:mrow></mml:math>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Tinti (<xref rid="fsn371742-bib-0078" ref-type="bibr">2017</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="jats-math-10" display="inline" overflow="scroll"><mml:mrow><mml:mrow><mml:mrow><mml:msubsup><mml:mfenced close="|" open=""><mml:mrow><mml:mover accent="true"><mml:mi>T</mml:mi><mml:mo stretchy="true">¯</mml:mo></mml:mover><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced><mml:mo>=</mml:mo><mml:mfenced close="]" open="["><mml:mrow><mml:msub><mml:mi>T</mml:mi><mml:mi>m</mml:mi></mml:msub><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced><mml:mo>+</mml:mo><mml:mi>k</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced><mml:mo>+</mml:mo><mml:mfrac><mml:mi mathvariant="italic">Aπ</mml:mi><mml:mrow><mml:mfenced close="]" open="["><mml:mrow><mml:mi>s</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced><mml:mo>−</mml:mo><mml:mi>r</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced><mml:mo>·</mml:mo><mml:mn>2</mml:mn><mml:mo>·</mml:mo><mml:msqrt><mml:mfrac><mml:mi>π</mml:mi><mml:mrow><mml:mn>365</mml:mn><mml:mi>α</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>,</mml:mo><mml:mi>z</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mfrac></mml:msqrt></mml:mrow></mml:mfrac><mml:mi>exp</mml:mi><mml:mfenced close="]" open="["><mml:mrow><mml:mo>−</mml:mo><mml:mi>z</mml:mi><mml:msqrt><mml:mfrac><mml:mi>π</mml:mi><mml:mrow><mml:mn>365</mml:mn><mml:mi>α</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>,</mml:mo><mml:mi>z</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mfrac></mml:msqrt></mml:mrow></mml:mfenced><mml:mfenced close="⟩" open="⟨"><mml:mrow><mml:mfenced close="}" open="{"><mml:mrow><mml:mi>sin</mml:mi><mml:mfrac><mml:mrow><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mrow><mml:mn>365</mml:mn></mml:mfrac><mml:mfenced close="]" open="["><mml:mrow><mml:mi>t</mml:mi><mml:mo>−</mml:mo><mml:msubsup><mml:mi>t</mml:mi><mml:msub><mml:mi>T</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mo>,</mml:mo></mml:msubsup><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>,</mml:mo><mml:mi>z</mml:mi></mml:mrow></mml:mfenced><mml:mo>−</mml:mo><mml:mfrac><mml:mi>z</mml:mi><mml:mn>2</mml:mn></mml:mfrac><mml:msqrt><mml:mfrac><mml:mn>365</mml:mn><mml:mrow><mml:mi mathvariant="italic">πα</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>,</mml:mo><mml:mi>z</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mfrac></mml:msqrt></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced><mml:mo>+</mml:mo><mml:mi>cos</mml:mi><mml:mfenced close="}" open="{"><mml:mrow><mml:mfrac><mml:mrow><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mrow><mml:mn>365</mml:mn></mml:mfrac><mml:mfenced close="]" open="["><mml:mrow><mml:mi>t</mml:mi><mml:mo>−</mml:mo><mml:msubsup><mml:mi>t</mml:mi><mml:msub><mml:mi>T</mml:mi><mml:mn>0</mml:mn></mml:msub><mml:mo>,</mml:mo></mml:msubsup><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>,</mml:mo><mml:mi>z</mml:mi></mml:mrow></mml:mfenced><mml:mo>−</mml:mo><mml:mfrac><mml:mi>z</mml:mi><mml:mn>2</mml:mn></mml:mfrac><mml:msqrt><mml:mfrac><mml:mn>365</mml:mn><mml:mrow><mml:mi mathvariant="italic">πα</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>,</mml:mo><mml:mi>z</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mfrac></mml:msqrt></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced><mml:mi>r</mml:mi><mml:mi>s</mml:mi></mml:msubsup></mml:mrow></mml:mrow></mml:mrow></mml:math>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Tinti (<xref rid="fsn371742-bib-0078" ref-type="bibr">2017</xref>)</td></tr></tbody></table></table-wrap></sec><sec id="fsn371742-sec-0015"><label>2.4</label><title>Recommendations</title><p>The relationship between temperature, humidity, and aging has been a subject of interest in brewing for centuries. Since the 1950s, research in various countries has investigated the optimal environmental conditions for winemaking. Current recommendations suggest maintaining a temperature range of 9°C–20°C (Troost <xref rid="fsn371742-bib-0080" ref-type="bibr">1953</xref>), a thermal variation of less than 6°C (Vogt <xref rid="fsn371742-bib-0083" ref-type="bibr">1971</xref>), and a relative humidity exceeding 70% (Troost <xref rid="fsn371742-bib-0080" ref-type="bibr">1953</xref>). Additionally, it is crucial to consider the impact of temperature and humidity on the evaporation loss of base wine (Nègre et al. <xref rid="fsn371742-bib-0058" ref-type="bibr">1965</xref>). While, Scrimgeour et al. (<xref rid="fsn371742-bib-0071" ref-type="bibr">2015</xref>) pointed out that there is no “ideal” storage temperature for wine in general. As for Baijiu, Niu et al. (<xref rid="fsn371742-bib-0059" ref-type="bibr">2022</xref>) recommended a temperature range of 9°C–20°C and a relative humidity exceeding 70%. It is evident that many studies have relied on recommended values for temperature and humidity; however, these recommendations have often not been rigorously validated. This study contends that the exploration of optimal temperature and humidity conditions for aging different types of Baijiu should extend beyond current assumptions. Further investigation is essential to substantiate and refine these parameters, ensuring more reliable and accurate guidelines.</p><p>In China, optimal temperature and humidity ranges for aging have also been proposed, largely based on engineering experience rather than empirical research. Although early investigations laid the groundwork, progress has been limited due to entrenched beliefs in established guidelines within the brewing industry. This adherence to conventional recommendations has hindered further exploration into the mechanisms by which temperature, humidity, and airflow affect the aging process. Based on these observations, we recommend that future research should go beyond empirical approaches and strive to establish quantitative correlation models between “environmental parameters‐physical field characteristics‐aging quality indicators,” Such models would enable a more rigorous and predictive understanding of how temperature, humidity, and airflow collectively influence the maturation of Baijiu, providing a more scientific basis for optimizing cellar conditions.</p></sec><sec id="fsn371742-sec-0016"><label>2.5</label><title>Dynamic Monitoring</title><p>The primary objective of monitoring is to promptly identify and rectify anomalies, ensuring both accuracy and correctness. Effective monitoring necessitates precision, with contemporary approaches heavily relying on automation technology. Despite the relatively recent initiation of Baijiu storage environment monitoring in China (Kurniawan and Witanti <xref rid="fsn371742-bib-0041" ref-type="bibr">2021</xref>), the rapid advancement of technologies such as the Internet of Things (IoT) has facilitated the widespread adoption of automated monitoring systems in production enterprises. Current research has concentrated on enhancing monitoring accuracy through improved sensor precision and algorithm optimization, employing various technologies (Table <xref rid="fsn371742-tbl-0004" ref-type="table">4</xref>).</p><table-wrap position="float" id="fsn371742-tbl-0004" content-type="TABLE" orientation="portrait"><label>TABLE 4</label><caption><p>Monitoring technologies in Baijiu production and storage.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Technologies</th><th align="center" valign="bottom" rowspan="1" colspan="1">Type</th><th align="center" valign="bottom" rowspan="1" colspan="1">Parameters</th><th align="center" valign="bottom" rowspan="1" colspan="1">Resources</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">NB‐IoT + Zigbee+Ali Cloud</td><td align="center" valign="top" rowspan="1" colspan="1">Chinese Baijiu</td><td align="center" valign="top" rowspan="1" colspan="1">T, CC</td><td align="center" valign="top" rowspan="1" colspan="1">Luo and Shi (<xref rid="fsn371742-bib-0048" ref-type="bibr">2023b</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">fuzzy PID + Zigbee</td><td align="center" valign="top" rowspan="1" colspan="1">Chinese Baijiu</td><td align="center" valign="top" rowspan="1" colspan="1">T, CC</td><td align="center" valign="top" rowspan="1" colspan="1">Luo and Shi (<xref rid="fsn371742-bib-0047" ref-type="bibr">2023a</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">PLC + LabView</td><td align="center" valign="top" rowspan="1" colspan="1">Wine</td><td align="center" valign="top" rowspan="1" colspan="1">T, H, I</td><td align="center" valign="top" rowspan="1" colspan="1">Zeng (<xref rid="fsn371742-bib-0092" ref-type="bibr">2020</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">AI+fuzzy PID</td><td align="center" valign="top" rowspan="1" colspan="1">Wine</td><td align="center" valign="top" rowspan="1" colspan="1">T, H, I</td><td align="center" valign="top" rowspan="1" colspan="1">Zeng (<xref rid="fsn371742-bib-0091" ref-type="bibr">2021</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">NB‐IoT</td><td align="center" valign="top" rowspan="1" colspan="1">Wine</td><td align="center" valign="top" rowspan="1" colspan="1">T, H, I, EC, IAT</td><td align="center" valign="top" rowspan="1" colspan="1">Li and Wang (<xref rid="fsn371742-bib-0045" ref-type="bibr">2020</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">ACOA</td><td align="center" valign="top" rowspan="1" colspan="1">Chinese Baijiu</td><td align="center" valign="top" rowspan="1" colspan="1">T, H, PH, M</td><td align="center" valign="top" rowspan="1" colspan="1">Shi (<xref rid="fsn371742-bib-0072" ref-type="bibr">2017</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">RFID</td><td align="center" valign="top" rowspan="1" colspan="1">Chinese Baijiu</td><td align="center" valign="top" rowspan="1" colspan="1">T, H</td><td align="center" valign="top" rowspan="1" colspan="1">Fu (<xref rid="fsn371742-bib-0028" ref-type="bibr">2019</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">ZigBee</td><td align="center" valign="top" rowspan="1" colspan="1">Chinese Baijiu</td><td align="center" valign="top" rowspan="1" colspan="1">T, H</td><td align="center" valign="top" rowspan="1" colspan="1">Dong (<xref rid="fsn371742-bib-0020" ref-type="bibr">2020</xref>)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">CAN‐bus</td><td align="center" valign="top" rowspan="1" colspan="1">Chinese Baijiu</td><td align="center" valign="top" rowspan="1" colspan="1">T, H</td><td align="center" valign="top" rowspan="1" colspan="1">Wang (<xref rid="fsn371742-bib-0088" ref-type="bibr">2009</xref>)</td></tr></tbody></table><table-wrap-foot id="fsn371742-ntgp-0003"><fn id="fsn371742-note-0005"><p>Abbreviations: ACOA, advanced ant colony optimization algorithms; CC, CO<sub>2</sub> concentration; EC, Ethanol concentration; H, Humidity; I, Illuminance; IAT, Indoor air quality; M, microorganism; T, Temperature.</p></fn></table-wrap-foot></table-wrap><p>Research on monitoring parameters has predominantly focused on temperature and humidity. While these studies have made significant contributions to enhancing monitoring accuracy and reducing measurement noise, challenges remain in achieving precise measurements. These challenges often stem from design assumptions that overlook the physical properties of the environment, leading to inaccuracies in initial diagnoses. Key issues include: Design assumptions typically presume a uniform indoor temperature field, neglecting field non‐uniformities introduced by the coupling of multiple physical fields. Continuous dynamic requirements are often not integrated with these non‐uniformities. Monitoring Considerations: There is frequently an inadequate consideration of the relationship between the storage environment and the aging process of Baijiu. The assumption that monitoring only temperature and humidity provides comprehensive oversight is often insufficient. Given the complexity of indoor environments, effective monitoring of storage conditions requires a foundation of scientific evaluation. Historical reviews of air environment evaluation indicate that current assessment systems have not extended to address continuous dynamic requirements in storage environments. Therefore, existing monitoring parameters may fail to capture critical aspects, and environmental control remains challenging. Further research is needed to optimize monitoring parameters and measurement point configurations under continuous dynamic conditions.</p><p>It should also be pointed out that the strong attention paid to temperature and humidity in the existing research largely reflects the research status of Baijiu aging environment. Most published studies mainly monitor these two parameters, while systematic datasets on other environmental variables, such as gas‐phase concentration gradients, volatile transport processes, or multi‐physics interactions, are still scarce. The existing literature provides limited empirical evidence for comprehensive synthesis beyond these common parameters. This situation highlights an important gap in the current research field. Therefore, expanding the analysis perspective from the traditional temperature and humidity monitoring to a more comprehensive description of gas transportation, thermal processes and humidity dynamics is a necessary step to promote the understanding of Baijiu aging environment.</p></sec></sec><sec id="fsn371742-sec-0017"><label>3</label><title>Challenges</title><sec id="fsn371742-sec-0018"><label>3.1</label><title>Environmental Specificity</title><p>The storage conditions for Chinese Baijiu are defined by their unique air dynamics, typically involving ceramic jars (Wang <xref rid="fsn371742-bib-0087" ref-type="bibr">2025</xref>) that do not fully isolate the Baijiu from the external environment, allowing for component exchange between the Baijiu and its surroundings. Key factors identified in current research include: the diffusion of aromatic compounds such as alcohols and esters into the air, creating an “atmosphere” that aids aging and needs to be maintained at optimal concentrations; the volatilization of impurities like sulfides, which contribute to undesirable “pungent” flavors and should be allowed to dissipate; the production of gases like CO<sub>2</sub> from fermentation and microbial activity, which necessitates proper ventilation to prevent asphyxiation risks; and the role of mud seals on jars, which facilitate the transfer of microorganisms such as yeast and lactic acid bacteria between the Baijiu, mud, and air, influenced by temperature and humidity. This intricate microenvironment involves the interplay of volatile gases, ambient gases, and microorganisms (Gao et al. <xref rid="fsn371742-bib-0031" ref-type="bibr">2020</xref>), all contributing to the aging process of the Baijiu. Acquiring detailed data on the distribution of these gases in aging environments is essential for advancing research, yet significant gaps remain in our understanding of their distribution. This study also outlines the internal and external factors influencing the environment of different types of wine cellars. In underground cellars, periodic fluctuations like solar radiation and outdoor air have minimal impact on the environment.</p><p>Wine storage oak barrels are relatively airtight, largely isolating the liquid from the external environment, whereas Chinese Baijiu ceramic jars have a semi‐permeable structure. This semi‐permeable structure allows gas exchange between the Baijiu and the surrounding air, creating a dynamic microenvironment that affects the retention of volatile compounds, the transfer of microorganisms, and the aging process. These differences require a dedicated research framework for Baijiu aging, as barrels cannot replicate the unique “Gas‐Thermal‐Humidity” interactions present in ceramic jar systems.</p><p>Moreover, the “Gas‐Thermal‐Humidity” microenvironment may indirectly regulate the aging process by affecting the activity and community structure of microorganisms in the cellar soil and surrounding air. Changes in temperature, humidity, and gas concentrations can all modulate microbial metabolism and interactions, thereby influencing the transformation of aromatic compounds and the overall maturation of the Baijiu (Figure <xref rid="fsn371742-fig-0001" ref-type="fig">1</xref>). This emphasizes that the environment is an interconnected component of the microbial system, highlighting the necessity of establishing a framework to study the aging of Baijiu.</p><fig position="float" fig-type="FIGURE" id="fsn371742-fig-0001" orientation="portrait"><label>FIGURE 1</label><caption><p>Diagram of the aging environment formation mechanism of Baijiu under different storage conditions: (a) Aging environment: Describing the direct relationship between the base spirit, atmosphere, microorganisms, and ventilation; (b) Aboveground: Solar radiation and outdoor air exchange are the main sources of thermal and disturbances; (c) Underground: The surrounding soil has minimal external disturbance; (d) Basement: A state influenced jointly by ground and indoor air disturbances. The four diagrams highlight the differences in thermal sources, disturbance mechanisms, and main environmental influencing factors under different typical aging scenarios.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="FSN3-14-e71742-g003.jpg"/></fig><sec id="fsn371742-sec-0019"><label>3.1.1</label><title>Mechanistic Interpretation of Gas‐Thermal‐Humidity Coupling</title><p>In this study, the proposed gas‐thermal‐humidity coupling concept describes the synergistic interaction among gas components, temperature, and humidity in a confined aging environment. “Gas” not only refers to the volatile compounds produced during the aging process but also to their dual role as carriers and reactants within the storage system. Furthermore, the concentration gradient of gaseous compounds in the container can serve as the fundamental driving force for mass transfer, facilitating the transmission and redistribution of volatile substances and oxygen, which subsequently participate in microbial metabolism and chemical reactions. Simultaneously, the transmission and reaction kinetics of these gases are directly influenced by the environmental temperature and humidity conditions, which jointly regulate the physical and chemical environment within the ceramic container. Their coupled effects affect the microporosity and permeability of ceramic materials, thereby influencing the gas diffusion pathways and the adsorption–desorption equilibrium on the container surface. Thermal‐humidity conditions control the rate of liquid evaporation and moisture migration, further altering the internal gas composition and reaction kinetics. Through these interrelated processes, gas transmission, microbial activity, and the formation of flavor compounds become dynamically coupled, forming a multi‐physical interaction mechanism: the gas field provides the material basis and reaction substrates, while the coupled thermal‐humidity field provides activation energy and physical pathways, jointly shaping the unique aging trajectory of Chinese Baijiu.</p></sec></sec><sec id="fsn371742-sec-0020"><label>3.2</label><title>Challenges and Obstacles</title><p>Synthesizing the research status outlined in Section <xref rid="fsn371742-sec-0009" ref-type="sec">2.1</xref>, several interconnected challenges and obstacles become apparent. These challenges are not merely generic difficulties but are directly derived from the identified gaps, oversights, and methodological constraints prevalent in the current body of literature. Previous studies exhibit strong specificity but notable limitations (Figure <xref rid="fsn371742-fig-0002" ref-type="fig">2</xref>). Research frameworks are often rigid and singular, neglecting the physical properties of indoor environments and the coupling of multiple physical fields. Additionally, most studies focus on wine, with limited attention to Chinese Baijiu, and oversimplify the complexities of boundary conditions in physical phenomena. These shortcomings stem from insufficient understanding of cellar environments' unique and shared characteristics, including their complexity, temporal variability, and coupled dynamics. In the Baijiu industry, empiricism dominates, with limited scientific rigor and universality in engineering practices, highlighting the need for innovative, science‐driven approaches. This study addresses these gaps by proposing thermal and humidity control techniques to accelerate aging processes. Given the overwhelming complexity of influencing factors and limited foundational data, it adopts a “Baijiu‐centered” approach. The goal is to comprehensively characterize cellar microenvironments under complex coupling effects, variable boundary conditions, and continuous dynamic changes. To systematically address the challenges mentioned above (Figure <xref rid="fsn371742-fig-0002" ref-type="fig">2</xref>), we propose an integrated research framework, as shown in Figure <xref rid="fsn371742-fig-0003" ref-type="fig">3</xref>.</p><fig position="float" fig-type="FIGURE" id="fsn371742-fig-0002" orientation="portrait"><label>FIGURE 2</label><caption><p>Summary of challenges and obstacles.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="FSN3-14-e71742-g001.jpg"/></fig><fig position="float" fig-type="FIGURE" id="fsn371742-fig-0003" orientation="portrait"><label>FIGURE 3</label><caption><p>The novel framework to reveal the aging room environment. ACG, Auto correlogram; AHP, Analytic Hierarchy Process; CF, Concentration field; CPC, Contribution pie chart; DHM, Distribution hotspot map; FCE, Fuzzy comprehensive evaluation; FDM, Finite Difference Method; GDM, Grade distribution map; GR, Geometric irregularity; IPC, Importance pie chart; LBM, Lattice Boltzmann Method; PBC, Periodic boundary conditions; RMH, Related matrix heatmap; TF, Temperature field; TSC, Time series chart; VF, Velocity field.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="FSN3-14-e71742-g007.jpg"/></fig><p>Based on the systematic review of existing literature (Sections <xref rid="fsn371742-sec-0009" ref-type="sec">2.1</xref>, <xref rid="fsn371742-sec-0016" ref-type="sec">2.5</xref>) and the identification of key challenges (Section <xref rid="fsn371742-sec-0013" ref-type="sec">2.2</xref>), we now shift from summarizing what is known to proposing what needs to be done. The following section presents a novel research framework designed to address the identified gaps. It is important to note that this framework is a prospective proposal—a set of testable hypotheses and methodological recommendations—rather than a synthesis of completed work. Its validity and feasibility remain to be demonstrated through future empirical research.</p></sec></sec><sec id="fsn371742-sec-0021"><label>4</label><title>Future Directions</title><p>The novel framework aims to explore the potential of enhancing the aging process of Baijiu through environmental control measures, with a focus on the transport and coupling relationships between Baijiu and the external thermal‐humidity environment. It addresses the dynamic characterization, formation mechanism, and comprehensive evaluation of the microenvironment in storage cellars. The framework proposes a scientific method to accurately describe and assess the indoor microenvironment in unique underground air settings.</p><p>First, to monitor the dynamic changes in temperature and humidity, Apresys‐NFC tag‐type temperature and humidity recorders are used for continuous monitoring. Second, airflow velocity is continuously monitored using a hot‐wire anemometer. Then, non‐dispersive infrared (NDIR) sensors are employed to continuously monitor CO<sub>2</sub> levels, reflecting the intensity of the fermentation activity while ensuring the safety of the air quality in the storage environment. Finally, gas chromatography–mass spectrometry (GC–MS) is used to accurately measure the volatile target gases in the base Baijiu, including the ‘atmosphere’ formed by volatile flavor compounds and impurities mentioned in the “volatile theory”. The project will also use data from the sensor network within the storage space for cross‐validation to improve data accuracy and reliability. Combined with temperature and humidity information, these measurement data allow for practical analysis of the “gas‐thermal‐humidity” environment and support targeted interventions to optimize Baijiu aging. By providing this operational detail, the framework not only remains at the conceptual model level but also demonstrates specific applicability to actual Baijiu aging systems.</p><sec id="fsn371742-sec-0022"><label>4.1</label><title>The Novel Framework</title><p>Based on the above analysis, this paper highlights that a key future direction for Baijiu aging lies in emphasizing the physical properties of the environment to promote aging in a scientific manner. The primary task is to develop a comprehensive understanding of the cellar environment by integrating and coupling various physical factors and external influences. To address these challenges, this article proposes a novel framework aimed at advancing the scientific study and optimization of the Baijiu aging process.</p><p>Figure <xref rid="fsn371742-fig-0003" ref-type="fig">3</xref> involves investigating the functional identification, spatiotemporal distribution patterns, and dynamic transformation characteristics of target gases amid the uncertainties of base Baijiu volatilization and the randomness of flow diffusion. It examines the coupling relationships and mechanistic construction of the “gas‐thermal‐humidity” multi‐physical field under complex conditions, such as the irregular dimensions of ceramic vessels, their arrangements, and periodic soil boundary conditions. Furthermore, it aims to develop comprehensive evaluation methods for the aging room that account for multiple physical fields under continuous dynamic demands, including optimizing measurement points for improved accuracy.</p><p>Methodologically, this framework represents a significant advancement by deeply integrating multidisciplinary approaches. By combining engineering physics analysis with data‐driven and flavor‐oriented methods, it advances existing research and establishes a unified research paradigm, connecting building environmental science, multi‐physical fluid dynamics, spatiotemporal data analysis, and food flavor chemistry, systematically unifying these fields for use in the study of Baijiu aging.</p><p>Furthermore, the framework is designed to probe specific coupled mechanisms, such as how evaporation‐regulated humidity modulates gas‐phase reaction kinetics near the Baijiu surface or influences microbial ecology and activity within the porous jar mud seals. By integrating boundary‐specific measurements with multi‐physics modeling, the proposed approach moves beyond descriptive correlations towards a mechanistic understanding of the aging microenvironment.</p><sec id="fsn371742-sec-0023"><label>4.1.1</label><title>Dynamic Characteristics</title><p>To address the challenges of insufficient understanding of spatiotemporal distribution patterns and incomprehensive environmental parameters identified in Section <xref rid="fsn371742-sec-0013" ref-type="sec">2.2</xref>, amid the uncertainty of base wine volatilization, the novel framework focuses on the spatiotemporal distribution patterns of physical quantities such as temperature, humidity, and target gas concentrations. It analyzes the correlation of these physical quantities across both temporal and spatial dimensions to understand their dynamic transformation characteristics (Figure <xref rid="fsn371742-fig-0004" ref-type="fig">4</xref>).</p><fig position="float" fig-type="FIGURE" id="fsn371742-fig-0004" orientation="portrait"><label>FIGURE 4</label><caption><p>Test process and data analysis framework.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="FSN3-14-e71742-g005.jpg"/></fig><p>Initially, field measurements are conducted to collect data on temperature, humidity, airflow velocity, and CO<sub>2</sub> concentrations, “aroma”, and impurity at various locations and times. Then, clustering analysis is utilized to classify and identify “aroma” and impurity gases. Time series analysis and spatial distribution analysis are employed to understand the dynamic changes in these data, leading to the creation of a comprehensive database.</p><p>Subsequently, statistical methods are applied to eliminate the effects of stochastic flow and deduce the coupling characteristics of multiple physical fields. The relationships between target gas concentrations and factors such as temperature and humidity, as well as the autocorrelation of all data, are examined. Ultimately, the correlation between the spatiotemporal distribution characteristics of the “Gas‐Thermal‐humidity” multi‐physical field and the flavor quality of base wine, alongside environmental factors, is uncovered.</p></sec><sec id="fsn371742-sec-0024"><label>4.1.2</label><title>Regulation Mechanism</title><p>In complex conditions, this framework aims to establish a “Gas‐Thermal‐Humidity” multi‐physical field coupling model to analyze the multiple physical fields influenced, thereby elucidating the mechanisms of “Gas‐Thermal‐Humidity” microenvironment (Figure <xref rid="fsn371742-fig-0005" ref-type="fig">5</xref>). By constructing typical scenarios, the processes of mass transfer, heat transfer, and fluid flow will be repeatedly simulated to develop the multi‐physical fields coupling model. The framework systematically organizes and identifies known and unknown parameters in the model, including geometries, envelope properties, and environmental factors. Utilizing computational fluid dynamics, numerical simulation solutions for the proposed model will be developed to acquire fields such as temperature, velocity, and concentration. The model's accuracy will be validated through comparative analysis with measured data, and it will be refined based on experimental results to ensure reliability. The simulation investigates the influence mechanisms of factors such as temperature, humidity, ventilation, and the envelopes' properties on the multi‐physical fields.</p><fig position="float" fig-type="FIGURE" id="fsn371742-fig-0005" orientation="portrait"><label>FIGURE 5</label><caption><p>Numerical modeling framework for the “Gas‐Thermal‐Humidity” microenvironment: From governing equations to boundary conditions. Numerical modeling framework for the “Gas‐Thermal‐Humidity” microenvironment. The diagram illustrates: (a) the selection of numerical methods (Lattice Boltzmann Method, LBM) and their governing evolution equations; (b) the corresponding macroscopic conservation equations (Navier–Stokes, energy, and species transport); (c) the critical boundary conditions, with particular emphasis on the volatilization flux at the Baijiu surface and the porous media transport through the ceramic jar wall; and (d) the key coupling mechanisms between the thermal, flow, and concentration fields. The framework integrates periodic soil boundary conditions, jar arrangement geometries, and ventilation strategies to enable a comprehensive analysis of influencing factors.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-11" orientation="portrait" xlink:href="FSN3-14-e71742-g004.jpg"/></fig></sec><sec id="fsn371742-sec-0025"><label>4.1.3</label><title>Evaluation System</title><p>This framework addresses the need for continuous dynamic monitoring by focusing on two critical aspects: the heterogeneity of multi‐physical fields and the functional roles of target gases. It is designed to optimize measurement point layouts, improving monitoring efficiency and accuracy (Figure <xref rid="fsn371742-fig-0006" ref-type="fig">6</xref>). The process begins with a comprehensive literature review to establish a theoretical foundation for evaluating aging microenvironments, summarizing commonly used environmental parameters and indicators. Based on this foundation, surveys, field measurements, and simulation analyses are conducted to identify critical parameters. These parameters are then assessed for importance, with corresponding weights calculated using appropriate methodologies. A comprehensive evaluation model for aging microenvironments is developed from these insights. Additionally, the framework creates databases capturing the spatial distribution and temporal trends of the evaluation index, forming a dynamic basis for ongoing analysis. Finally, by integrating geometries, ventilation dynamics, and temperature and humidity conditions, the framework systematically optimizes monitoring parameters, density, and layouts. This holistic approach enhances the accuracy and reliability of storage microenvironment evaluation and monitoring, ensuring robust insights for improving aging environments.</p><fig position="float" fig-type="FIGURE" id="fsn371742-fig-0006" orientation="portrait"><label>FIGURE 6</label><caption><p>Multi‐parameter comprehensive evaluation framework for the cellar microenvironment based on AHP and fuzzy logic. Multi‐parameter comprehensive evaluation framework for the cellar microenvironment. The diagram illustrates: (a) the multi‐dimensional considerations underlying the evaluation; (b) the multi‐parameter monitoring indicators (temperature, humidity, wind speed, “fragrance”, impurity concentration, CO<sub>2</sub>); (c) the use of Analytic Hierarchy Process (AHP) to determine parameter weights at the criterion and factor layers; and (d) the application of fuzzy comprehensive evaluation (FCE) to integrate time‐series data, grade distributions, and parameter importance into a single Comprehensive Evaluation Index (CEI).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-13" orientation="portrait" xlink:href="FSN3-14-e71742-g006.jpg"/></fig></sec></sec></sec><sec sec-type="conclusions" id="fsn371742-sec-0026"><label>5</label><title>Conclusions</title><p>This study tackles the challenge of accelerating the aging process of Chinese Baijiu by focusing on the physical properties of the aging environment and the coupling interactions between gas exchange in the Baijiu and its surroundings. Using a systems science approach, it examines the existing knowledge framework, identifies critical challenges, and proposes a research framework rooted in the environmental characteristics. The key findings include:</p><p>(1) Environmental temperatures in underground cellars are not constant, with fluctuations in amplitude and unevenness that warrant further exploration.</p><p>(2) Current research focuses predominantly on volatile gases within the Baijiu, with minimal attention to gases released into the surrounding air.</p><p>(3) The study introduces the “gas‐heat‐humidity” microenvironment concept, offering a systematic research framework and implementation pathway to guide future work.</p><p>The study acknowledges its limitations: (1) dependence on insights from wine aging research due to limited studies on Baijiu aging environments, (2) an unverified hypothesis regarding gas distribution that requires experimental validation, and (3) the proposed framework is primarily aimed at the design of underground or semi‐underground ceramic jar aging systems; its applicability to other storage methods, such as stainless steel tanks in warehouses, may require adjustments and further study.</p></sec><sec id="fsn371742-sec-0027"><title>Author Contributions</title><p>
+<bold>Jin Li:</bold> conceptualization, methodology, writing – original draft. <bold>Yuwen Wen:</bold> systematic review, formal analysis. <bold>Chang Yi:</bold> data collection, software, analysis. <bold>Wenwu Zhou:</bold> data collection, validation. <bold>Yin Zhang:</bold> validation, visualization, project administration, writing – review and editing.</p></sec><sec id="fsn371742-sec-0031"><title>Funding</title><p>This work is financed by the Chinese Scholarship Council (No. 202410890003), the Key Research Base Program of the Sichuan Social Sciences Association of China (No. 25SCZSXW02), and the College Students' Innovative Entrepreneurial Training Plan Program, Sichuan University of Science and Engineering (No. cx2025162).</p></sec><sec sec-type="COI-statement" id="fsn371742-sec-0032"><title>Disclosure</title><p>Declaration of Generative <styled-content style="fixed-case" toggle="no">AI</styled-content> in Scientific Writing: The authors declare that they did not use any AI or AI‐assisted technologies in the manuscript preparation.</p><p>Submission Declaration and Verification: The authors declare that this work has not been published previously, that it is not under consideration for publication elsewhere, that its publication is approved by all authors and tacitly or explicitly by the responsible authorities.</p></sec><sec sec-type="COI-statement" id="fsn371742-sec-0028"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec></body><back><sec sec-type="data-availability" id="fsn371742-sec-0030"><title>Data Availability Statement</title><p>Data will be available on request.</p></sec><ref-list content-type="cited-references" id="fsn371742-bibl-0001"><title>References</title><ref id="fsn371742-bib-0001"><mixed-citation publication-type="journal" id="fsn371742-cit-0001">
+<string-name name-style="western">
+<surname>Al‐Temeemi</surname>, <given-names>A. A.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>D. J.</given-names>
+<surname>Harris</surname>
+</string-name>. <year>2001</year>. “<article-title>The Generation of Subsurface Temperature Profiles for Kuwait</article-title>.” <source>Energy and Buildings</source>
+<volume>33</volume>, no. <issue>8</issue>: <fpage>837</fpage>–<lpage>841</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0002"><mixed-citation publication-type="journal" id="fsn371742-cit-0002">
+<string-name name-style="western">
+<surname>Arapitsas</surname>, <given-names>P.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Speri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Angeli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Perenzoni</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Mattivi</surname>
+</string-name>. <year>2014</year>. “<article-title>The Influence of Storage on the “Chemical Age” of Red Wines</article-title>.” <source>Metabolomics</source>
+<volume>10</volume>, no. <issue>5</issue>: <fpage>816</fpage>–<lpage>832</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0003"><mixed-citation publication-type="journal" id="fsn371742-cit-0003">
+<string-name name-style="western">
+<surname>Arredondo‐Ruiz</surname>, <given-names>F.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Cañas</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. R.</given-names>
+<surname>Mazarrón</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C. B.</given-names>
+<surname>Manjarrez‐Domínguez</surname>
+</string-name>. <year>2020</year>. “<article-title>Designs for Energy‐Efficient Wine Cellars (Ageing Rooms): A Review</article-title>.” <source>Australian Journal of Grape and Wine Research</source>
+<volume>26</volume>, no. <issue>1</issue>: <fpage>9</fpage>–<lpage>28</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0004"><mixed-citation publication-type="journal" id="fsn371742-cit-0004">
+<string-name name-style="western">
+<surname>Baggs</surname>, <given-names>S. A.</given-names>
+</string-name>
+<year>1983</year>. “<article-title>Remote Prediction of Ground Temperature in Australian Soils and Mapping Its Distribution</article-title>.” <source>Solar Energy</source>
+<volume>30</volume>, no. <issue>4</issue>: <fpage>351</fpage>–<lpage>366</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0005"><mixed-citation publication-type="journal" id="fsn371742-cit-0005">
+<string-name name-style="western">
+<surname>Barbaresi</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>de Maria</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Torreggiani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Benni</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Tassinari</surname>
+</string-name>. <year>2015</year>. “<article-title>Performance Assessment of Thermal Simulation Approaches of Wine Storage Buildings Based on Experimental Calibration</article-title>.” <source>Energy and Buildings</source>
+<volume>103</volume>: <fpage>307</fpage>–<lpage>316</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0006"><mixed-citation publication-type="miscellaneous" id="fsn371742-cit-0006">
+<string-name name-style="western">
+<surname>Barbaresi</surname>, <given-names>A.</given-names>
+</string-name>
+<year>2015</year>. <article-title>“Effective Predictions of the Airflows Involving Barrels in a Wine‐Ageing Room in AIIA 2015 International Mid‐Term Conference”</article-title>.</mixed-citation></ref><ref id="fsn371742-bib-0007"><mixed-citation publication-type="journal" id="fsn371742-cit-0007">
+<string-name name-style="western">
+<surname>Barbaresi</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Santolini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Agrusti</surname>
+</string-name>, et al. <year>2020</year>. “<article-title>Microventilation System Improves the Ageing Conditions in Existent Wine Cellars</article-title>.” <source>Australian Journal of Grape and Wine Research</source>
+<volume>26</volume>, no. <issue>4</issue>: <fpage>417</fpage>–<lpage>426</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0009"><mixed-citation publication-type="journal" id="fsn371742-cit-0009">
+<string-name name-style="western">
+<surname>Barbaresi</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Torreggiani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Benni</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Tassinari</surname>
+</string-name>. <year>2014</year>. “<article-title>Underground Cellar Thermal Simulation: Definition of a Method for Modelling Performance Assessment Based on Experimental Calibration</article-title>.” <source>Energy and Buildings</source>
+<volume>76</volume>: <fpage>363</fpage>–<lpage>372</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0008"><mixed-citation publication-type="journal" id="fsn371742-cit-0008">
+<string-name name-style="western">
+<surname>Barbaresi</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Torreggiani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Benni</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Tassinari</surname>
+</string-name>. <year>2015</year>. “<article-title>Indoor Air Temperature Monitoring: A Method Lending Support to Management and Design Tested on a Wine‐Aging Room</article-title>.” <source>Building and Environment</source>
+<volume>86</volume>: <fpage>203</fpage>–<lpage>210</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0010"><mixed-citation publication-type="journal" id="fsn371742-cit-0010">
+<string-name name-style="western">
+<surname>Belda</surname>, <given-names>I.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Ruiz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Esteban‐Fernández</surname>
+</string-name>, et al. <year>2017</year>. “<article-title>Microbial Contribution to Wine Aroma and Its Intended Use for Wine Quality Improvement</article-title>.” <source>Molecules</source>
+<volume>22</volume>: <elocation-id>189</elocation-id>. <pub-id pub-id-type="doi">10.3390/molecules22020189</pub-id>.<pub-id pub-id-type="pmid">28125039</pub-id>
+<pub-id pub-id-type="pmcid">PMC6155689</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0011"><mixed-citation publication-type="journal" id="fsn371742-cit-0011">
+<string-name name-style="western">
+<surname>Benni</surname>, <given-names>S.</given-names>
+</string-name>
+<year>2014</year>. “<article-title>Wine Cellar Modeling for the Assessment of Energy Efficiency</article-title>.” <source>International Conference of Agricultural Engineering</source>
+<volume>2014</volume>: <fpage>6</fpage>–<lpage>10</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0012"><mixed-citation publication-type="journal" id="fsn371742-cit-0012">
+<string-name name-style="western">
+<surname>Cañas Guerrero</surname>, <given-names>I.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Martin Ocaña</surname>
+</string-name>. <year>2005</year>. “<article-title>Study of the Thermal Behaviour of Traditional Wine Cellars: The Case of the Area of ‘Tierras Sorianas del Cid’ (Spain)</article-title>.” <source>Renewable Energy</source>
+<volume>30</volume>, no. <issue>1</issue>: <fpage>43</fpage>–<lpage>55</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0013"><mixed-citation publication-type="journal" id="fsn371742-cit-0013">
+<string-name name-style="western">
+<surname>Cañas</surname>, <given-names>I.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>F. R.</given-names>
+<surname>Mazarrón</surname>
+</string-name>. <year>2009</year>. “<article-title>The Effect of Traditional Wind Vents Called Zarceras on the Hygrothermal Behaviour of Underground Wine Cellars in Spain</article-title>.” <source>Building and Environment</source>
+<volume>44</volume>, no. <issue>9</issue>: <fpage>1818</fpage>–<lpage>1826</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0014"><mixed-citation publication-type="journal" id="fsn371742-cit-0014">
+<string-name name-style="western">
+<surname>Cañas</surname>, <given-names>I.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>E. G.</given-names>
+<surname>Navia‐Osorio</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Porras‐Amores</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F. R.</given-names>
+<surname>Mazarrón</surname>
+</string-name>. <year>2022</year>. “<article-title>Hygrothermal Conditions for the Biological Aging of Sherry Wine</article-title>.” <source>Innovative Food Science &amp; Emerging Technologies</source>
+<volume>82</volume>: <elocation-id>103164</elocation-id>.</mixed-citation></ref><ref id="fsn371742-bib-0015"><mixed-citation publication-type="journal" id="fsn371742-cit-0015">
+<string-name name-style="western">
+<surname>Cejudo‐Bastante</surname>, <given-names>M. J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Hermosin‐Gutierrez</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. S.</given-names>
+<surname>Perez‐Coello</surname>
+</string-name>. <year>2013</year>. “<article-title>Accelerated Aging Against Conventional Storage: Effects on the Volatile Composition of Chardonnay White Wines</article-title>.” <source>Journal of Food Science</source>
+<volume>78</volume>, no. <issue>4</issue>: <fpage>C507</fpage>–<lpage>C513</lpage>.<pub-id pub-id-type="pmid">23488723</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/1750-3841.12077</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0016"><mixed-citation publication-type="journal" id="fsn371742-cit-0016">
+<string-name name-style="western">
+<surname>Crouvisier‐Urion</surname>, <given-names>K.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Bellat</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. D.</given-names>
+<surname>Gougeon</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Karbowiak</surname>
+</string-name>. <year>2018</year>. “<article-title>Gas Transfer Through Wine Closures: A Critical Review</article-title>.” <source>Trends in Food Science &amp; Technology</source>
+<volume>78</volume>: <fpage>255</fpage>–<lpage>269</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0017"><mixed-citation publication-type="journal" id="fsn371742-cit-0017">
+<string-name name-style="western">
+<surname>Cutzach</surname>, <given-names>I.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Chatonnet</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Dubourdieu</surname>
+</string-name>. <year>2000</year>. “<article-title>Influence of Storage Conditions on the Formation of Some Volatile Compounds in White Fortified Wines (Vins Doux Naturels) During the Aging Process</article-title>.” <source>Journal of Agricultural and Food Chemistry</source>
+<volume>48</volume>, no. <issue>6</issue>: <fpage>2340</fpage>–<lpage>2345</lpage>.<pub-id pub-id-type="pmid">10888547</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/jf9913209</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0018"><mixed-citation publication-type="journal" id="fsn371742-cit-0018">
+<string-name name-style="western">
+<surname>Deng</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Xiong</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Zhao</surname>
+</string-name>, et al. <year>2020</year>. “<article-title>Mechanisms of the Regulation of Ester Balance Between Oxidation and Esterification in Aged Baijiu</article-title>.” <source>Scientific Reports</source>
+<volume>10</volume>, no. <issue>1</issue>: <fpage>17169</fpage>.<pub-id pub-id-type="pmid">33051575</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41598-020-74423-z</pub-id><pub-id pub-id-type="pmcid">PMC7555894</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0019"><mixed-citation publication-type="journal" id="fsn371742-cit-0019">
+<string-name name-style="western">
+<surname>Dimkou</surname>, <given-names>E.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Ugliano</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. B.</given-names>
+<surname>Dieval</surname>
+</string-name>, et al. <year>2011</year>. “<article-title>Impact of Headspace Oxygen and Closure on Sulfur Dioxide, Color, and Hydrogen Sulfide Levels in a Riesling Wine</article-title>.” <source>American Journal of Enology and Viticulture</source>
+<volume>62</volume>, no. <issue>3</issue>: <fpage>261</fpage>–<lpage>269</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0020"><mixed-citation publication-type="book" id="fsn371742-cit-0020">
+<string-name name-style="western">
+<surname>Dong</surname>, <given-names>H.</given-names>
+</string-name>
+<year>2020</year>. <source>Design of Wireless Monitoring System for Liquor Storage Environment Based on ZigBee Technology</source>. <publisher-name>Anhui University</publisher-name>.</mixed-citation></ref><ref id="fsn371742-bib-0021"><mixed-citation publication-type="journal" id="fsn371742-cit-0021">
+<string-name name-style="western">
+<surname>Drappier</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Thibon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Rabot</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Geny‐Denis</surname>
+</string-name>. <year>2019</year>. “<article-title>Relationship Between Wine Composition and Temperature: Impact on Bordeaux Wine Typicity in the Context of Global Warming—Review</article-title>.” <source>Critical Reviews in Food Science and Nutrition</source>
+<volume>59</volume>, no. <issue>1</issue>: <fpage>14</fpage>–<lpage>30</lpage>.<pub-id pub-id-type="pmid">29064726</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/10408398.2017.1355776</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0022"><mixed-citation publication-type="journal" id="fsn371742-cit-0022">
+<string-name name-style="western">
+<surname>Fan</surname>, <given-names>W.</given-names>
+</string-name>
+<year>2023</year>. “<article-title>Review and Prospect of Research on the Storage and Aging of Baijiu (Chinese Liquor)</article-title>.” <source>Liquor Making</source>
+<volume>50</volume>, no. <issue>5</issue>: <fpage>2</fpage>–<lpage>6</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0023"><mixed-citation publication-type="book" id="fsn371742-cit-0023">
+<string-name name-style="western">
+<surname>Fan</surname>, <given-names>W.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Xu</surname>
+</string-name>. <year>2023</year>. “<part-title>History and Technology of Chinese Liquor</part-title>.” In <source>Science and Engineering of Chinese Liquor (Baijiu) Microbiology, Chemistry and Process Technology</source>, <fpage>3</fpage>–<lpage>41</lpage>. <publisher-name>Springer</publisher-name>.</mixed-citation></ref><ref id="fsn371742-bib-0024"><mixed-citation publication-type="journal" id="fsn371742-cit-0024">
+<string-name name-style="western">
+<surname>Ferreira</surname>, <given-names>V.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Bueno</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Franco‐Luesma</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Culleré</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Fernández‐Zurbano</surname>
+</string-name>. <year>2014</year>. “<article-title>Key Changes in Wine Aroma Active Compounds During Bottle Storage of Spanish Red Wines Under Different Oxygen Levels</article-title>.” <source>Journal of Agricultural and Food Chemistry</source>
+<volume>62</volume>, no. <issue>41</issue>: <fpage>10015</fpage>–<lpage>10027</lpage>.<pub-id pub-id-type="pmid">25284059</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/jf503089u</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0025"><mixed-citation publication-type="journal" id="fsn371742-cit-0025">
+<string-name name-style="western">
+<surname>Ferreira</surname>, <given-names>V.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Sánchez‐Gimeno</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Ontañón</surname>
+</string-name>. <year>2023</year>. “<article-title>A Method for the Quantitative and Reversible Trapping of Sulfidic Gases From Headspaces and Its Application to the Study of Wine Reductive Off‐Odors</article-title>.” <source>Food Chemistry</source>
+<volume>421</volume>: <elocation-id>136092</elocation-id>.<pub-id pub-id-type="pmid">37087988</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.foodchem.2023.136092</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0026"><mixed-citation publication-type="journal" id="fsn371742-cit-0026">
+<string-name name-style="western">
+<surname>Flor</surname>, <given-names>F. J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>F. J.</given-names>
+<surname>Leiva</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. L.</given-names>
+<surname>García</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Martínez</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Jiménez</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Blanco</surname>
+</string-name>. <year>2018</year>. “<article-title>Environmental Impact of Wine Aging Process in Oak Barrels in Wineries of La Rioja (Spain)</article-title>.” <source>American Journal of Enology and Viticulture</source>
+<volume>69</volume>, no. <issue>3</issue>: <fpage>302</fpage>–<lpage>306</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0027"><mixed-citation publication-type="journal" id="fsn371742-cit-0027">
+<string-name name-style="western">
+<surname>Franco‐Luesma</surname>, <given-names>E.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Ferreira</surname>
+</string-name>. <year>2016</year>. “<article-title>Formation and Release of H2S, Methanethiol, and Dimethylsulfide During the Anoxic Storage of Wines at Room Temperature</article-title>.” <source>Journal of Agricultural and Food Chemistry</source>
+<volume>64</volume>, no. <issue>32</issue>: <fpage>6317</fpage>–<lpage>6326</lpage>.<pub-id pub-id-type="pmid">27425214</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/acs.jafc.6b01638</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0028"><mixed-citation publication-type="book" id="fsn371742-cit-0028">
+<string-name name-style="western">
+<surname>Fu</surname>, <given-names>H.</given-names>
+</string-name>
+<year>2019</year>. <source>Design and Implementation of the Supervision System of Liquor Cellar Based on RFID</source>. <publisher-name>Guizhou University</publisher-name>.</mixed-citation></ref><ref id="fsn371742-bib-0029"><mixed-citation publication-type="book" id="fsn371742-cit-0029">
+<string-name name-style="western">
+<surname>Gao</surname>, <given-names>Q.</given-names>
+</string-name>
+<year>2016</year>. <source>The Function of Several Metal Ions on the Aging Process of Fen Liquor</source>. <publisher-name>Shanxi University</publisher-name>.</mixed-citation></ref><ref id="fsn371742-bib-0030"><mixed-citation publication-type="journal" id="fsn371742-cit-0030">
+<string-name name-style="western">
+<surname>Gao</surname>, <given-names>W.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Fan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Xu</surname>
+</string-name>. <year>2014</year>. “<article-title>Characterization of the Key Odorants in Light Aroma Type Chinese Liquor by Gas Chromatography–Olfactometry, Quantitative Measurements, Aroma Recombination, and Omission Studies</article-title>.” <source>Journal of Agricultural and Food Chemistry</source>
+<volume>62</volume>, no. <issue>25</issue>: <fpage>5796</fpage>–<lpage>5804</lpage>.<pub-id pub-id-type="pmid">24909925</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/jf501214c</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0031"><mixed-citation publication-type="journal" id="fsn371742-cit-0031">
+<string-name name-style="western">
+<surname>Gao</surname>, <given-names>Z.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Zhang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Wu</surname>
+</string-name>. <year>2020</year>. “<article-title>Research Progress in Microecology of Baijiu‐Making &amp; Its Application</article-title>.” <source>Liquor‐Making Science &amp; Technology</source>
+<volume>04</volume>: <fpage>94</fpage>–<lpage>101</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0032"><mixed-citation publication-type="journal" id="fsn371742-cit-0032">
+<string-name name-style="western">
+<surname>Geyrhofer</surname>, <given-names>A. F.</given-names>
+</string-name>
+<year>2011</year>. “<article-title>Measurements of Air Flow in the Wine Cellar</article-title>.” <source>Mitteilungen Klosterneuburg, Rebe Und Wein, Obstbau Und Früchteverwertung</source>
+<volume>61</volume>, no. <issue>2</issue>: <fpage>76</fpage>–<lpage>81</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0033"><mixed-citation publication-type="journal" id="fsn371742-cit-0033">
+<string-name name-style="western">
+<surname>Gómez‐Villarino</surname>, <given-names>M. T.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M. M.</given-names>
+<surname>Barbero‐Barrera</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. R.</given-names>
+<surname>Mazarrón</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Cañas</surname>
+</string-name>. <year>2021</year>. “<article-title>Cost‐Effectiveness Evaluation of Nearly Zero‐Energy Buildings for the Aging of Red Wine</article-title>.” <source>Agronomy</source>
+<volume>11</volume>: <elocation-id>687</elocation-id>. <pub-id pub-id-type="doi">10.3390/agronomy11040687</pub-id>.</mixed-citation></ref><ref id="fsn371742-bib-0034"><mixed-citation publication-type="journal" id="fsn371742-cit-0034">
+<string-name name-style="western">
+<surname>He</surname>, <given-names>Q.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Tang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Han</surname>
+</string-name>, et al. <year>2023</year>. “<article-title>Research Progress on Aging Mechanism and Aging Methods of Baijiu</article-title>.” <source>China Brewing</source>
+<volume>42</volume>, no. <issue>7</issue>: <fpage>7</fpage>–<lpage>12</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0035"><mixed-citation publication-type="journal" id="fsn371742-cit-0035">
+<string-name name-style="western">
+<surname>Hopfer</surname>, <given-names>H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P. A.</given-names>
+<surname>Buffon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. E.</given-names>
+<surname>Ebeler</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Heymann</surname>
+</string-name>. <year>2013</year>. “<article-title>The Combined Effects of Storage Temperature and Packaging on the Sensory, Chemical, and Physical Properties of a Cabernet Sauvignon Wine</article-title>.” <source>Journal of Agricultural and Food Chemistry</source>
+<volume>61</volume>, no. <issue>13</issue>: <fpage>3320</fpage>–<lpage>3334</lpage>.<pub-id pub-id-type="pmid">23458342</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/jf3051736</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0036"><mixed-citation publication-type="journal" id="fsn371742-cit-0036">
+<string-name name-style="western">
+<surname>Huang</surname>, <given-names>Z.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Zeng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Shen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Shi</surname>
+</string-name>. <year>2020</year>. “<article-title>Effects of Metals Released in Strong‐Flavor Baijiu on the Evolution of Aroma Compounds During Storage</article-title>.” <source>Food Science &amp; Nutrition</source>
+<volume>8</volume>, no. <issue>4</issue>: <fpage>1904</fpage>–<lpage>1913</lpage>.<pub-id pub-id-type="pmid">32328256</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/fsn3.1475</pub-id><pub-id pub-id-type="pmcid">PMC7174237</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0037"><mixed-citation publication-type="book" id="fsn371742-cit-0037">
+<string-name name-style="western">
+<surname>Igarashi</surname>, <given-names>T.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Minagawa</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Ochiai</surname>
+</string-name>. <year>2019</year>. <source>Augmented Taste of Wine by Artificial Climate Room: Influence of Temperature and Humidity on Taste Evaluation, in Proceedings of the 10th Augmented Human International Conference 2019</source>, <fpage>20</fpage>. <publisher-name>Association for Computing Machinery</publisher-name>.</mixed-citation></ref><ref id="fsn371742-bib-0038"><mixed-citation publication-type="journal" id="fsn371742-cit-0038">
+<string-name name-style="western">
+<surname>Jiménez‐López</surname>, <given-names>V.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Luna‐León</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Benni</surname>
+</string-name>. <year>2024</year>. “<article-title>A Bioclimatic Approach for Enhanced Wine Cellar Design: General Formulation and Analysis of a Case Study in Mexico</article-title>.” <source>AgriEngineering</source>
+<volume>6</volume>: <fpage>2395</fpage>–<lpage>2416</lpage>. <pub-id pub-id-type="doi">10.3390/agriengineering6030140</pub-id>.</mixed-citation></ref><ref id="fsn371742-bib-0039"><mixed-citation publication-type="journal" id="fsn371742-cit-0039">
+<string-name name-style="western">
+<surname>Jung</surname>, <given-names>R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Kumar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Patz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Rauhut</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Tarasov</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Schüßler</surname>
+</string-name>. <year>2021</year>. “<article-title>Influence of Transport Temperature Profiles on Wine Quality</article-title>.” <source>Food Packaging and Shelf Life</source>
+<volume>29</volume>: <elocation-id>100706</elocation-id>.</mixed-citation></ref><ref id="fsn371742-bib-0040"><mixed-citation publication-type="journal" id="fsn371742-cit-0040">
+<string-name name-style="western">
+<surname>Kim</surname>, <given-names>D.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S. E.</given-names>
+<surname>Park</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. J.</given-names>
+<surname>Kim</surname>
+</string-name>, et al. <year>2023</year>. “<article-title>Effects of Sediment and Temperature on the Long‐Term Aging Process of Rice Wine: Microbial and Metabolic Insights</article-title>.” <source>Food Research International</source>
+<volume>174</volume>: <elocation-id>113604</elocation-id>.<pub-id pub-id-type="pmid">37986465</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.foodres.2023.113604</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0041"><mixed-citation publication-type="journal" id="fsn371742-cit-0041">
+<string-name name-style="western">
+<surname>Kurniawan</surname>, <given-names>D.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Witanti</surname>
+</string-name>. <year>2021</year>. “<article-title>Prototype of Control and Monitor System With Fuzzy Logic Method for Smart Greenhouse</article-title>.” <source>Indonesian Journal of Information Systems</source>
+<volume>3</volume>, no. <issue>2</issue>: <fpage>116</fpage>–<lpage>127</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0042"><mixed-citation publication-type="book" id="fsn371742-cit-0042">
+<string-name name-style="western">
+<surname>Kusuda</surname>, <given-names>T.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>P. R.</given-names>
+<surname>Achenbach</surname>
+</string-name>. <year>1965</year>. <source>Earth Temperature and Thermal Diffusivity at Selected Stations in the United States</source>. <publisher-name>National Institute of Standards and Technology</publisher-name>.</mixed-citation></ref><ref id="fsn371742-bib-0043"><mixed-citation publication-type="journal" id="fsn371742-cit-0043">
+<string-name name-style="western">
+<surname>Labs</surname>, <given-names>K.</given-names>
+</string-name>
+<year>1982</year>. “<article-title>Regional‐Analysis of Ground and Above‐Ground Climate Conclusion</article-title>.” <source>Underground Space</source>
+<volume>7</volume>, no. <issue>1</issue>: <fpage>37</fpage>–<lpage>65</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0044"><mixed-citation publication-type="journal" id="fsn371742-cit-0044">
+<string-name name-style="western">
+<surname>Li</surname>, <given-names>H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Huang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Shen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Yi</surname>
+</string-name>. <year>2012</year>. “<article-title>Optimization of the Distillation Process of Chinese Liquor by Comprehensive Experimental Investigation</article-title>.” <source>Food and Bioproducts Processing</source>
+<volume>90</volume>, no. <issue>3</issue>: <fpage>392</fpage>–<lpage>398</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0045"><mixed-citation publication-type="journal" id="fsn371742-cit-0045">
+<string-name name-style="western">
+<surname>Li</surname>, <given-names>W.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Wang</surname>
+</string-name>. <year>2020</year>. “<article-title>Wine Cellar Environment Remote Monitoring System Based on NB‐IoT</article-title>.” <source>Applied Science and Technology</source>
+<volume>47</volume>, no. <issue>4</issue>: <fpage>32</fpage>–<lpage>36</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0046"><mixed-citation publication-type="journal" id="fsn371742-cit-0046">
+<string-name name-style="western">
+<surname>Liu</surname>, <given-names>H.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Sun</surname>
+</string-name>. <year>2018</year>. “<article-title>Effect of Fermentation Processing on the Flavor of Baijiu</article-title>.” <source>Journal of Agricultural and Food Chemistry</source>
+<volume>66</volume>, no. <issue>22</issue>: <fpage>5425</fpage>–<lpage>5432</lpage>.<pub-id pub-id-type="pmid">29751730</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/acs.jafc.8b00692</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0047"><mixed-citation publication-type="journal" id="fsn371742-cit-0047">
+<string-name name-style="western">
+<surname>Luo</surname>, <given-names>Y.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Shi</surname>
+</string-name>. <year>2023a</year>. “<article-title>The Environment Monitoring System of Cellar Based on Fuzzy PID Control</article-title>.” <source>Food and Machinery</source>
+<volume>39</volume>, no. <issue>3</issue>: <fpage>85</fpage>–<lpage>90</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0048"><mixed-citation publication-type="journal" id="fsn371742-cit-0048">
+<string-name name-style="western">
+<surname>Luo</surname>, <given-names>Y.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Shi</surname>
+</string-name>. <year>2023b</year>. “<article-title>Research and Development of Cellar Pool Environmental Monitoring System Based on NB‐IOT and Cloud Platform</article-title>.” <source>Academic Journal of Science and Technology</source>
+<volume>4</volume>, no. <issue>2</issue>: <fpage>21</fpage>–<lpage>25</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0050"><mixed-citation publication-type="journal" id="fsn371742-cit-0050">
+<string-name name-style="western">
+<surname>Martin</surname>, <given-names>S.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Canas</surname>
+</string-name>. <year>2006</year>. “<article-title>A Comparison Between Underground Wine Cellars and Aboveground Storage for the Aging of Spanish Wines</article-title>.” <source>Transactions of the ASABE</source>
+<volume>49</volume>, no. <issue>5</issue>: <fpage>1471</fpage>–<lpage>1478</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0049"><mixed-citation publication-type="journal" id="fsn371742-cit-0049">
+<string-name name-style="western">
+<surname>Martín Ocaña</surname>, <given-names>S.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Cañas Guerrero</surname>
+</string-name>. <year>2006</year>. “<article-title>Comparison of Analytical and on Site Temperature Results on Spanish Traditional Wine Cellars</article-title>.” <source>Applied Thermal Engineering</source>
+<volume>26</volume>, no. <issue>7</issue>: <fpage>700</fpage>–<lpage>708</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0051"><mixed-citation publication-type="journal" id="fsn371742-cit-0051">
+<string-name name-style="western">
+<surname>Mazarrón</surname>, <given-names>F. R.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Cañas</surname>
+</string-name>. <year>2008</year>. “<article-title>Exponential Sinusoidal Model for Predicting Temperature Inside Underground Wine Cellars From a Spanish Region</article-title>.” <source>Energy and Buildings</source>
+<volume>40</volume>, no. <issue>10</issue>: <fpage>1931</fpage>–<lpage>1940</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0052"><mixed-citation publication-type="journal" id="fsn371742-cit-0052">
+<string-name name-style="western">
+<surname>Mazarrón</surname>, <given-names>F. R.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Cañas</surname>
+</string-name>. <year>2023</year>. “<article-title>Hygrothermal Conditions for the Aging of Red Wine From Experimental Data</article-title>.” <source>LWT</source>
+<volume>173</volume>: <elocation-id>114272</elocation-id>.</mixed-citation></ref><ref id="fsn371742-bib-0053"><mixed-citation publication-type="journal" id="fsn371742-cit-0053">
+<string-name name-style="western">
+<surname>Mazarrón</surname>, <given-names>F. R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Cid‐Falceto</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Cañas</surname>
+</string-name>. <year>2012a</year>. “<article-title>An Assessment of Using Ground Thermal Inertia as Passive Thermal Technique in the Wine Industry Around the World</article-title>.” <source>Applied Thermal Engineering</source>
+<volume>33</volume>: <fpage>54</fpage>–<lpage>61</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0054"><mixed-citation publication-type="journal" id="fsn371742-cit-0054">
+<string-name name-style="western">
+<surname>Mazarrón</surname>, <given-names>F. R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Cid‐Falceto</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Cañas</surname>
+</string-name>. <year>2012b</year>. “<article-title>Ground Thermal Inertia for Energy Efficient Building Design: A Case Study on Food Industry</article-title>.” <source>Energies</source>
+<volume>5</volume>, no. <issue>2</issue>: <fpage>227</fpage>–<lpage>242</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0055"><mixed-citation publication-type="journal" id="fsn371742-cit-0055">
+<string-name name-style="western">
+<surname>Mihalakakou</surname>, <given-names>G.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Santamouris</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. O.</given-names>
+<surname>Lewis</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D. N.</given-names>
+<surname>Asimakopoulos</surname>
+</string-name>. <year>1997</year>. “<article-title>On the Application of the Energy Balance Equation to Predict Ground Temperature Profiles</article-title>.” <source>Solar Energy</source>
+<volume>60</volume>, no. <issue>3</issue>: <fpage>181</fpage>–<lpage>190</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0056"><mixed-citation publication-type="journal" id="fsn371742-cit-0056">
+<string-name name-style="western">
+<surname>Morais</surname>, <given-names>R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Peres</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Boaventura‐Cunha</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Mendes</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Cosme</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F. M.</given-names>
+<surname>Nunes</surname>
+</string-name>. <year>2018</year>. “<article-title>Distributed Monitoring System for Precision Enology of the Tawny Port Wine Aging Process</article-title>.” <source>Computers and Electronics in Agriculture</source>
+<volume>145</volume>: <fpage>92</fpage>–<lpage>104</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0057"><mixed-citation publication-type="journal" id="fsn371742-cit-0057">
+<string-name name-style="western">
+<surname>Mwithiga</surname>, <given-names>G.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Magama</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Hlophe</surname>
+</string-name>. <year>2013</year>. “<article-title>Humidity Control System for Wine Maturation Structures</article-title>.” <source>Advanced Materials Research</source>
+<volume>824</volume>: <fpage>10</fpage>.</mixed-citation></ref><ref id="fsn371742-bib-0058"><mixed-citation publication-type="miscellaneous" id="fsn371742-cit-0058">
+<string-name name-style="western">
+<surname>Nègre</surname>, <given-names>É.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Françot</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Gondé</surname>
+</string-name>. <year>1965</year>. <article-title>“Manuel Pratique de Vinification et de Conservation des Vins”</article-title>.</mixed-citation></ref><ref id="fsn371742-bib-0059"><mixed-citation publication-type="journal" id="fsn371742-cit-0059">
+<string-name name-style="western">
+<surname>Niu</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Shen</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>What Are the Main Factors That Affect the Flavor of Sauce‐Aroma Baijiu</article-title>.” <source>Food</source>
+<volume>11</volume>: <elocation-id>3534</elocation-id>. <pub-id pub-id-type="doi">10.3390/foods11213534</pub-id>.<pub-id pub-id-type="pmcid">PMC9657106</pub-id><pub-id pub-id-type="pmid">36360147</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0060"><mixed-citation publication-type="journal" id="fsn371742-cit-0060">
+<string-name name-style="western">
+<surname>Niu</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Yao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Xiao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Xiao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Ma</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Zhu</surname>
+</string-name>. <year>2017</year>. “<article-title>Characterization of the Key Aroma Compounds in Different Light Aroma Type Chinese Liquors by GC‐Olfactometry, GC‐FPD, Quantitative Measurements, and Aroma Recombination</article-title>.” <source>Food Chemistry</source>
+<volume>233</volume>: <fpage>204</fpage>–<lpage>215</lpage>.<pub-id pub-id-type="pmid">28530568</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.foodchem.2017.04.103</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0061"><mixed-citation publication-type="journal" id="fsn371742-cit-0061">
+<string-name name-style="western">
+<surname>Ocón</surname>, <given-names>E.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A. R.</given-names>
+<surname>Gutiérrez</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Garijo</surname>
+</string-name>, et al. <year>2011</year>. “<article-title>Factors of Influence in the Distribution of Mold in the Air in a Wine Cellar</article-title>.” <source>Journal of Food Science</source>
+<volume>76</volume>, no. <issue>3</issue>: <fpage>M169</fpage>–<lpage>M174</lpage>.<pub-id pub-id-type="pmid">21535840</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/j.1750-3841.2011.02097.x</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0062"><mixed-citation publication-type="journal" id="fsn371742-cit-0062">
+<string-name name-style="western">
+<surname>Panaras</surname>, <given-names>G.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Tzimas</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. I.</given-names>
+<surname>Tolis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Papadopoulos</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Afentoulidis</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Souliotis</surname>
+</string-name>. <year>2021</year>. “<article-title>Combined Investigation of Indoor Climate Parameters and Energy Performance of a Winery</article-title>.” <source>Applied Sciences</source>
+<volume>11</volume>: <elocation-id>593</elocation-id>. <pub-id pub-id-type="doi">10.3390/app11020593</pub-id>.</mixed-citation></ref><ref id="fsn371742-bib-0063"><mixed-citation publication-type="journal" id="fsn371742-cit-0063">
+<string-name name-style="western">
+<surname>Peng</surname>, <given-names>J.</given-names>
+</string-name>
+<year>2021</year>. “<article-title>Theoretical Study on Tetramer Association of Alcohol and Water Molecules in Liquor</article-title>.” <source>Chemical Research</source>
+<volume>32</volume>, no. <issue>4</issue>: <fpage>290</fpage>–<lpage>297</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0065"><mixed-citation publication-type="book" id="fsn371742-cit-0065">
+<string-name name-style="western">
+<surname>Qiao</surname>, <given-names>H.</given-names>
+</string-name>
+<year>2013</year>. <source>Maturation Mechanism of Chinese Distilled Spirits and Its Application</source>. <publisher-name>Shanxi University</publisher-name>.</mixed-citation></ref><ref id="fsn371742-bib-0064"><mixed-citation publication-type="journal" id="fsn371742-cit-0064">
+<string-name name-style="western">
+<surname>Qiao</surname>, <given-names>H.</given-names>
+</string-name>
+<year>2014</year>. “<article-title>Fluorescence Spectroscopic Studies of Ethanol‐Water Association Behavior in Fen‐Flavor Liquor</article-title>.” <source>Food Science and Biotechnology</source>
+<volume>15</volume>: <fpage>82</fpage>–<lpage>88</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0066"><mixed-citation publication-type="journal" id="fsn371742-cit-0066">
+<string-name name-style="western">
+<surname>Rizeng</surname>, <given-names>T.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Y. U.</given-names>
+<surname>Yongqi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. I.</given-names>
+<surname>Huizi</surname>
+</string-name>, et al. <year>2023</year>. “<article-title>Research Progress on Aging Technology of Chinese Baijiu</article-title>.” <source>Journal of Technology</source>
+<volume>23</volume>, no. <issue>2</issue>: <fpage>131</fpage>–<lpage>136</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0067"><mixed-citation publication-type="journal" id="fsn371742-cit-0067">
+<string-name name-style="western">
+<surname>Rodríguez‐Gonzálvez</surname>, <given-names>P.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Á.</given-names>
+<surname>Muñoz‐Nieto</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Gozalo‐Sanz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Mancera‐Taboada</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>González‐Aguilera</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Carrasco‐Morillo</surname>
+</string-name>. <year>2014</year>. “<article-title>Geomatics and Geophysics Synergies to Evaluate Underground Wine Cellars</article-title>.” <source>International Journal of Architectural Heritage</source>
+<volume>8</volume>, no. <issue>4</issue>: <fpage>537</fpage>–<lpage>555</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0068"><mixed-citation publication-type="journal" id="fsn371742-cit-0068">
+<string-name name-style="western">
+<surname>Roussey</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Colin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Teissier du Cros</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Casalinho</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Perré</surname>
+</string-name>. <year>2020</year>. “<article-title>In‐Situ Monitoring of Wine Volume, Barrel Mass, Ullage Pressure and Dissolved Oxygen for a Better Understanding of Wine‐Barrel‐Cellar Interactions</article-title>.” <source>Journal of Food Engineering</source>
+<volume>291</volume>, no. <issue>2</issue>: <elocation-id>110233</elocation-id>.</mixed-citation></ref><ref id="fsn371742-bib-0069"><mixed-citation publication-type="journal" id="fsn371742-cit-0069">
+<string-name name-style="western">
+<surname>Ruiz de Adana</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L. M.</given-names>
+<surname>López</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Sala</surname>
+</string-name>. <year>2005</year>. “<article-title>A Fickian Model for Calculating Wine Losses From Oak Casks Depending on Conditions in Ageing Facilities</article-title>.” <source>Applied Thermal Engineering</source>
+<volume>25</volume>, no. <issue>5</issue>: <fpage>709</fpage>–<lpage>718</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0070"><mixed-citation publication-type="journal" id="fsn371742-cit-0070">
+<string-name name-style="western">
+<surname>Santolini</surname>, <given-names>E.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Barbaresi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Torreggiani</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Tassinari</surname>
+</string-name>. <year>2019</year>. “<article-title>Numerical Simulations for the Optimisation of Ventilation System Designed for Wine Cellars</article-title>.” <source>Journal of Agricultural Engineering</source>
+<volume>50</volume>, no. <issue>4</issue>: <fpage>180</fpage>–<lpage>190</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0071"><mixed-citation publication-type="journal" id="fsn371742-cit-0071">
+<string-name name-style="western">
+<surname>Scrimgeour</surname>, <given-names>N.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Nordestgaard</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N. D. R.</given-names>
+<surname>Lloyd</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>E. N.</given-names>
+<surname>Wilkes</surname>
+</string-name>. <year>2015</year>. “<article-title>Exploring the Effect of Elevated Storage Temperature on Wine Composition</article-title>.” <source>Australian Journal of Grape and Wine Research</source>
+<volume>21</volume>: <fpage>713</fpage>–<lpage>722</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0072"><mixed-citation publication-type="journal" id="fsn371742-cit-0072">
+<string-name name-style="western">
+<surname>Shi</surname>, <given-names>L.</given-names>
+</string-name>
+<year>2017</year>. “<article-title>Key Technology of Wine Cellar Monitoring System Based on Improved Ant Colony Optimization Algorithm</article-title>.” <source>Journal of Fuyang Normal University (Natural Science)</source>
+<volume>34</volume>, no. <issue>2</issue>: <fpage>62</fpage>–<lpage>68</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0073"><mixed-citation publication-type="journal" id="fsn371742-cit-0073">
+<string-name name-style="western">
+<surname>Silvia</surname>, <given-names>M. O.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>C. G.</given-names>
+<surname>Ignacio</surname>
+</string-name>. <year>2005</year>. “<article-title>Comparison of Hygro‐Thermal Conditions in Underground Wine Cellars From a Spanish Area</article-title>.” <source>Building and Environment</source>
+<volume>40</volume>, no. <issue>10</issue>: <fpage>1384</fpage>–<lpage>1394</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0074"><mixed-citation publication-type="journal" id="fsn371742-cit-0074">
+<string-name name-style="western">
+<surname>Sun</surname>, <given-names>X.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Qian</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Xiong</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Characterization of the Key Aroma Compounds in Aged Chinese Xiaoqu Baijiu by Means of the Sensomics Approach</article-title>.” <source>Food Chemistry</source>
+<volume>384</volume>: <elocation-id>132452</elocation-id>.<pub-id pub-id-type="pmid">35193021</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.foodchem.2022.132452</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0075"><mixed-citation publication-type="journal" id="fsn371742-cit-0075">
+<string-name name-style="western">
+<surname>Tarasov</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Garzelli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Schuessler</surname>
+</string-name>, et al. <year>2021</year>. “<article-title>Wine Storage at Cellar vs. Room Conditions: Changes in the Aroma Composition of Riesling Wine</article-title>.” <source>Molecules</source>
+<volume>26</volume>: <elocation-id>6256</elocation-id>. <pub-id pub-id-type="doi">10.3390/molecules26206256</pub-id>.<pub-id pub-id-type="pmid">34684839</pub-id>
+<pub-id pub-id-type="pmcid">PMC8540336</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0076"><mixed-citation publication-type="journal" id="fsn371742-cit-0076">
+<string-name name-style="western">
+<surname>Tinti</surname>, <given-names>F.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Barbaresi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Benni</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Torreggiani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Bruno</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Tassinari</surname>
+</string-name>. <year>2014</year>. “<article-title>Experimental Analysis of Shallow Underground Temperature for the Assessment of Energy Efficiency Potential of Underground Wine Cellars</article-title>.” <source>Energy and Buildings</source>
+<volume>80</volume>: <fpage>451</fpage>–<lpage>460</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0077"><mixed-citation publication-type="journal" id="fsn371742-cit-0077">
+<string-name name-style="western">
+<surname>Tinti</surname>, <given-names>F.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Barbaresi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Benni</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Torreggiani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Bruno</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Tassinari</surname>
+</string-name>. <year>2015</year>. “<article-title>Experimental Analysis of Thermal Interaction Between Wine Cellar and Underground</article-title>.” <source>Energy and Buildings</source>
+<volume>104</volume>: <fpage>275</fpage>–<lpage>286</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0078"><mixed-citation publication-type="journal" id="fsn371742-cit-0078">
+<string-name name-style="western">
+<surname>Tinti</surname>, <given-names>F.</given-names>
+</string-name>
+<year>2017</year>. “<article-title>Experimental Calibration of Underground Heat Transfer Models Under a Winery Building in a Rural Area</article-title>.” <source>Rudarsko‐Geološko‐Naftni Zbornik</source>
+<volume>32</volume>, no. <issue>3</issue>: <fpage>35</fpage>–<lpage>43</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0079"><mixed-citation publication-type="journal" id="fsn371742-cit-0079">
+<string-name name-style="western">
+<surname>Toussaint</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.‐C.</given-names>
+<surname>Vidal</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.‐M.</given-names>
+<surname>Salmon</surname>
+</string-name>. <year>2014</year>. “<article-title>Comparative Evolution of Oxygen, Carbon Dioxide, Nitrogen, and Sulfites During Storage of a Rosé Wine Bottled in PET and Glass</article-title>.” <source>Journal of Agricultural and Food Chemistry</source>
+<volume>62</volume>, no. <issue>13</issue>: <fpage>2946</fpage>–<lpage>2955</lpage>.<pub-id pub-id-type="pmid">24606566</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/jf405392u</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0080"><mixed-citation publication-type="book" id="fsn371742-cit-0080">
+<string-name name-style="western">
+<surname>Troost</surname>, <given-names>G.</given-names>
+</string-name>
+<year>1953</year>. <source>Die Technologie des Weines</source>. <publisher-name>Ulmer</publisher-name>.</mixed-citation></ref><ref id="fsn371742-bib-0081"><mixed-citation publication-type="journal" id="fsn371742-cit-0081">
+<string-name name-style="western">
+<surname>Ugliano</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. B.</given-names>
+<surname>Dieval</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T. E.</given-names>
+<surname>Siebert</surname>
+</string-name>, et al. <year>2012</year>. “<article-title>Oxygen Consumption and Development of Volatile Sulfur Compounds During Bottle Aging of Two Shiraz Wines. Influence of Pre‐ and Postbottling Controlled Oxygen Exposure</article-title>.” <source>Journal of Agricultural and Food Chemistry</source>
+<volume>60</volume>, no. <issue>35</issue>: <fpage>8561</fpage>–<lpage>8570</lpage>.<pub-id pub-id-type="pmid">22900817</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/jf3014348</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0082"><mixed-citation publication-type="journal" id="fsn371742-cit-0082">
+<string-name name-style="western">
+<surname>Vidal</surname>, <given-names>J.‐C.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Moutounet</surname>
+</string-name>. <year>2006</year>. “<article-title>Monitoring of Oxygen in the Gas and Liquide Phases of Bottles of Wine at Bottling and During Storage</article-title>.” <source>OENO One</source>
+<volume>40</volume>, no. <issue>1</issue>: <fpage>35</fpage>–<lpage>45</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0083"><mixed-citation publication-type="book" id="fsn371742-cit-0083">
+<string-name name-style="western">
+<surname>Vogt</surname>, <given-names>E.</given-names>
+</string-name>
+<year>1971</year>. <source>Fabricacion de Vinos (Winemaking)</source>. <publisher-name>Editorial Acribia</publisher-name>.</mixed-citation></ref><ref id="fsn371742-bib-0084"><mixed-citation publication-type="journal" id="fsn371742-cit-0084">
+<string-name name-style="western">
+<surname>Wang</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Tang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Rao</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Chen</surname>
+</string-name>. <year>2022</year>. “<article-title>Effects of Different Aging Methods on the Phenolic Compounds and Antioxidant Activity of Red Wine</article-title>.” <source>Fermentation</source>
+<volume>8</volume>: <elocation-id>592</elocation-id>. <pub-id pub-id-type="doi">10.3390/fermentation8110592</pub-id>.</mixed-citation></ref><ref id="fsn371742-bib-0085"><mixed-citation publication-type="miscellaneous" id="fsn371742-cit-0085">
+<string-name name-style="western">
+<surname>Wang</surname>, <given-names>D.</given-names>
+</string-name>
+<year>2024</year>. <article-title>“Intelligent Baijiu Blending Model Based on Meta‐Goal Programming in 2024 14th Asian Control Conference (ASCC)”</article-title>.</mixed-citation></ref><ref id="fsn371742-bib-0088"><mixed-citation publication-type="miscellaneous" id="fsn371742-cit-0088">
+<string-name name-style="western">
+<surname>Wang</surname>, <given-names>L.</given-names>
+</string-name>
+<year>2009</year>. <article-title>“The Research of Temperature &amp; Humidity of Wine Cellar Monitoring System Based on CAN‐Bus”</article-title>.</mixed-citation></ref><ref id="fsn371742-bib-0086"><mixed-citation publication-type="journal" id="fsn371742-cit-0086">
+<string-name name-style="western">
+<surname>Wang</surname>, <given-names>L.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Gao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Wu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Chen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Xu</surname>
+</string-name>. <year>2024</year>. “<article-title>Characterization of Key Aging Aroma Compounds in Aged Jiangxiangxing Baijiu and Their Formation Influencing Factors During the Storge Process</article-title>.” <source>Journal of Agricultural and Food Chemistry</source>
+<volume>72</volume>, no. <issue>3</issue>: <fpage>1695</fpage>–<lpage>1707</lpage>.<pub-id pub-id-type="pmid">38194670</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/acs.jafc.3c06929</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0087"><mixed-citation publication-type="journal" id="fsn371742-cit-0087">
+<string-name name-style="western">
+<surname>Wang</surname>, <given-names>L.</given-names>
+</string-name>
+<year>2025</year>. “<article-title>Multi‐Dimensional Quality Analysis of Jiangxiangxing Baijiu With Different Aged Years in Pottery Jar</article-title>.” <source>Food and Fermentation Industries</source>: <fpage>1</fpage>–<lpage>11</lpage>. <pub-id pub-id-type="doi">10.13995/j.cnki.11-1802/ts.044382</pub-id>.</mixed-citation></ref><ref id="fsn371742-bib-0089"><mixed-citation publication-type="journal" id="fsn371742-cit-0089">
+<string-name name-style="western">
+<surname>Xiao</surname>, <given-names>Z.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Yu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Niu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Ma</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Zhu</surname>
+</string-name>. <year>2016</year>. “<article-title>Characterization of Different Aroma‐Types of Chinese Liquors Based on Their Aroma Profile by Gas Chromatography–Mass Spectrometry and Sensory Evaluation</article-title>.” <source>Flavour and Fragrance Journal</source>
+<volume>31</volume>, no. <issue>3</issue>: <fpage>217</fpage>–<lpage>227</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0090"><mixed-citation publication-type="journal" id="fsn371742-cit-0090">
+<string-name name-style="western">
+<surname>Yang</surname>, <given-names>G.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Qiu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Huang</surname>
+</string-name>. <year>2011</year>. “<article-title>Microbiology Research of Liquor Production</article-title>.” <source>China Brewing</source>
+<volume>4</volume>: <fpage>24</fpage>–<lpage>27</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0092"><mixed-citation publication-type="journal" id="fsn371742-cit-0092">
+<string-name name-style="western">
+<surname>Zeng</surname>, <given-names>B.</given-names>
+</string-name>
+<year>2020</year>. “<article-title>Design of Wireless Wine Cellar Environment Measurement and Control System Based on MCU and LabVIEW</article-title>.” <source>Foreign Electronic Measurement Technology</source>
+<volume>39</volume>, no. <issue>4</issue>: <fpage>133</fpage>–<lpage>137</lpage>.</mixed-citation></ref><ref id="fsn371742-bib-0091"><mixed-citation publication-type="book" id="fsn371742-cit-0091">
+<string-name name-style="western">
+<surname>Zeng</surname>, <given-names>B.</given-names>
+</string-name>
+<year>2021</year>. <source>Design and Realization of Measurement and Control System for Environmental Parameters of Wine Cellar</source>. <publisher-name>Xi'an Polytechnic University</publisher-name>.</mixed-citation></ref><ref id="fsn371742-bib-0093"><mixed-citation publication-type="journal" id="fsn371742-cit-0093">
+<string-name name-style="western">
+<surname>Zhang</surname>, <given-names>W.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Xiao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Deng</surname>
+</string-name>, et al. <year>2023</year>. “<article-title>An Electric‐Field Instrument for Accelerated Aging to Improve Flavor of Chinese Baijiu</article-title>.” <source>LWT</source>
+<volume>174</volume>: <elocation-id>114446</elocation-id>.</mixed-citation></ref><ref id="fsn371742-bib-0094"><mixed-citation publication-type="journal" id="fsn371742-cit-0094">
+<string-name name-style="western">
+<surname>Zheng</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Sun</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Zhao</surname>
+</string-name>, et al. <year>2016</year>. “<article-title>Characterization of the Key Odorants in Chinese Zhima Aroma‐Type Baijiu by Gas Chromatography–Olfactometry, Quantitative Measurements, Aroma Recombination, and Omission Studies</article-title>.” <source>Journal of Agricultural and Food Chemistry</source>
+<volume>64</volume>, no. <issue>26</issue>: <fpage>5367</fpage>–<lpage>5374</lpage>.<pub-id pub-id-type="pmid">27263543</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/acs.jafc.6b01390</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0095"><mixed-citation publication-type="journal" id="fsn371742-cit-0095">
+<string-name name-style="western">
+<surname>Zhu</surname>, <given-names>L.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Song</surname>
+</string-name>, et al. <year>2020</year>. “<article-title>Evolution of the Key Odorants and Aroma Profiles in Traditional Laowuzeng Baijiu During Its One‐Year Ageing</article-title>.” <source>Food Chemistry</source>
+<volume>310</volume>: <fpage>1</fpage>–<lpage>11</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.foodchem.2019.125898</pub-id><pub-id pub-id-type="pmid">31816535</pub-id></mixed-citation></ref><ref id="fsn371742-bib-0096"><mixed-citation publication-type="journal" id="fsn371742-cit-0096">
+<string-name name-style="western">
+<surname>Zhu</surname>, <given-names>W.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>K. R. X.</given-names>
+<surname>Cadwallader</surname>
+</string-name>. <year>2019</year>. “<article-title>Streamlined Approach for Careful and Exhaustive Aroma Characterization of Aged Distilled Liquors</article-title>.” <source>Food Chemistry</source>
+<volume>3</volume>: <elocation-id>100038</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.fochx.2019.100038</pub-id><pub-id pub-id-type="pmcid">PMC6694847</pub-id><pub-id pub-id-type="pmid">31432022</pub-id></mixed-citation></ref></ref-list></back></article>

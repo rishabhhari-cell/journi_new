@@ -1,0 +1,722 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="anec70186" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Ann Noninvasive Electrocardiol</journal-id><journal-id journal-id-type="iso-abbrev">Ann Noninvasive Electrocardiol</journal-id><journal-id journal-id-type="pmc-domain-id">3771</journal-id><journal-id journal-id-type="pmc-domain">annnoninvas</journal-id><journal-id journal-id-type="publisher-id">ANEC</journal-id><journal-title-group><journal-title>Annals of Noninvasive Electrocardiology</journal-title></journal-title-group><issn pub-type="ppub">1082-720X</issn><issn pub-type="epub">1542-474X</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13062762</article-id><article-id pub-id-type="pmcid-ver">PMC13062762.1</article-id><article-id pub-id-type="pmcaid">13062762</article-id><article-id pub-id-type="pmcaiid">13062762</article-id><article-id pub-id-type="pmid">41952556</article-id><article-id pub-id-type="doi">10.1111/anec.70186</article-id><article-id pub-id-type="publisher-id">ANEC70186</article-id><article-id pub-id-type="other">7192877</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Review Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Review Article</subject></subj-group></article-categories><title-group><article-title>Comparative Outcomes of <styled-content style="fixed-case" toggle="no">ICE</styled-content> Versus <styled-content style="fixed-case" toggle="no">TEE</styled-content>/Fluoroscopy Guidance Transseptal Puncture in <styled-content style="fixed-case" toggle="no">LA</styled-content> Procedures: A Systematic Review and Meta‐Analysis</article-title></title-group><contrib-group><contrib id="anec70186-cr-0001" contrib-type="author"><name name-style="western"><surname>Abdalla</surname><given-names initials="AME">Asim Mohammed Eldai</given-names></name><xref rid="anec70186-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="anec70186-cr-0002" contrib-type="author"><name name-style="western"><surname>Durga</surname><given-names initials="KP">Kolluru Pavani</given-names></name><xref rid="anec70186-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="anec70186-cr-0003" contrib-type="author"><name name-style="western"><surname>Chukka</surname><given-names initials="A">Animisha</given-names></name><xref rid="anec70186-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="anec70186-cr-0004" contrib-type="author"><name name-style="western"><surname>Kotte</surname><given-names initials="M">Mounika</given-names></name><xref rid="anec70186-aff-0004" ref-type="aff">
+<sup>4</sup>
+</xref></contrib><contrib id="anec70186-cr-0005" contrib-type="author"><name name-style="western"><surname>Awais</surname><given-names initials="M">Muhammad</given-names></name><xref rid="anec70186-aff-0005" ref-type="aff">
+<sup>5</sup>
+</xref></contrib><contrib id="anec70186-cr-0006" contrib-type="author" corresp="yes"><name name-style="western"><surname>Perveen</surname><given-names initials="A">Abida</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0002-3310-5442</contrib-id><xref rid="anec70186-aff-0006" ref-type="aff">
+<sup>6</sup>
+</xref><address><email>dark69rd@gmail.com</email></address></contrib><contrib id="anec70186-cr-0007" contrib-type="author"><name name-style="western"><surname>Malik</surname><given-names initials="J">Jahanzeb</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-9343-4187</contrib-id><xref rid="anec70186-aff-0007" ref-type="aff">
+<sup>7</sup>
+</xref></contrib></contrib-group><aff id="anec70186-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Department of Anatomy</named-content>
+<institution>College of Medicine, King Khalid University</institution>
+<city>Abha</city>
+<country country="SA">Saudi Arabia</country>
+</aff><aff id="anec70186-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<institution>Shri B M Patil Medical College and Research Center</institution>
+<city>Vijayapura</city>
+<country country="IN">India</country>
+</aff><aff id="anec70186-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Department of Internal Medicine</named-content>
+<institution>NRI Institute of Medical Sciences</institution>
+<city>Visakhapatnam</city>
+<country country="IN">India</country>
+</aff><aff id="anec70186-aff-0004">
+<label>
+<sup>4</sup>
+</label>
+<institution>Prime South GME, Consortium Knapp Medical Center</institution>
+<city>Weslaco</city>
+<named-content content-type="country-part">TX</named-content>
+<country country="US">USA</country>
+</aff><aff id="anec70186-aff-0005">
+<label>
+<sup>5</sup>
+</label>
+<named-content content-type="organisation-division">Department of Electrophysiology</named-content>
+<institution>Rawalpindi Institute of Cardiology (RIC)</institution>
+<city>Rawalpindi</city>
+<country country="PK">Pakistan</country>
+</aff><aff id="anec70186-aff-0006">
+<label>
+<sup>6</sup>
+</label>
+<named-content content-type="organisation-division">Department of Medicine</named-content>
+<institution>Ibn e Seena Hospital</institution>
+<city>Kabul</city>
+<country country="AF">Afghanistan</country>
+</aff><aff id="anec70186-aff-0007">
+<label>
+<sup>7</sup>
+</label>
+<named-content content-type="organisation-division">Department of Electrophysiology</named-content>
+<institution>Pakistan Air Force Hospital</institution>
+<city>Islamabad</city>
+<country country="PK">Pakistan</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold>
+<break/>
+Abida Perveen (<email>dark69rd@gmail.com</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>09</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>5</month><year>2026</year></pub-date><volume>31</volume><issue seq="140">3</issue><issue-id pub-id-type="pmc-issue-id">510828</issue-id><issue-id pub-id-type="doi">10.1111/anec.v31.3</issue-id><elocation-id>e70186</elocation-id><history><date date-type="rev-recd"><day>27</day><month>1</month><year>2026</year></date><date date-type="received"><day>31</day><month>10</month><year>2025</year></date><date date-type="accepted"><day>03</day><month>2</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>09</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>10</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-10 09:25:14.357"><day>10</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Annals of Noninvasive Electrocardiology</italic> published by Wiley Periodicals LLC.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="ANEC-31-e70186.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:ANEC-31-e70186.pdf"/><abstract><title>ABSTRACT</title><sec id="anec70186-sec-0001"><title>Objective</title><p>To evaluate the comparative efficacy, safety, and radiation exposure outcomes of intracardiac echocardiography (ICE)‐guided versus TEE/fluoroscopy‐guided trans‐septal puncture (TSP) in left atrial procedures.</p></sec><sec id="anec70186-sec-0002"><title>Methods</title><p>We conducted a systematic review and meta‐analysis of randomized and observational studies comparing ICE‐guided with TEE‐ or fluoroscopy‐only–guided TSP. Eight studies encompassing over 9000 patients undergoing atrial fibrillation (AF) ablation or left atrial appendage occlusion (LAAO) were included. Primary endpoints were fluoroscopy time, radiation dose, first‐pass success, puncture time, total procedure time, and major safety outcomes. Random‐effects models were used to pool mean differences or hazard ratios with 95% confidence intervals (CIs). Risk of bias was assessed using validated tools, and funnel plots with sensitivity analyses evaluated robustness.</p></sec><sec id="anec70186-sec-0003"><title>Results</title><p>ICE guidance significantly reduced fluoroscopy time (MD –2.07 min, 95% CI –2.37 to −1.77; <italic toggle="no">p</italic> &lt; 0.001) and radiation dose (MD –2.30, 95% CI –3.27 to −1.27; <italic toggle="no">p</italic> &lt; 0.001). First‐pass success and total procedure time were comparable between groups. Safety endpoints, including tamponade, pericardial effusion, and composite major adverse events, showed no significant increase with ICE. Funnel plots and leave‐one‐out analyses confirmed the stability of results.</p></sec><sec id="anec70186-sec-0004"><title>Conclusion</title><p>ICE‐guided TSP reduces radiation exposure without compromising efficacy or safety, supporting its adoption as a valuable imaging modality in left atrial interventions.</p></sec></abstract><abstract abstract-type="graphical"><p>ICE‐guided transseptal puncture reduces radiation exposure without compromising efficacy or safety, supporting its adoption as a valuable imaging modality in left atrial interventions.<boxed-text position="anchor" content-type="graphic" id="anec70186-blkfxd-0001" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="ANEC-31-e70186-g001.jpg"/></boxed-text>
+</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="anec70186-kwd-0001">atrial fibrillation ablation</kwd><kwd id="anec70186-kwd-0002">intracardiac echocardiography</kwd><kwd id="anec70186-kwd-0003">left atrial appendage occlusion</kwd><kwd id="anec70186-kwd-0004">radiation exposure</kwd><kwd id="anec70186-kwd-0005">transseptal puncture</kwd></kwd-group><counts><fig-count count="7"/><table-count count="1"/><page-count count="12"/><word-count count="6300"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>May 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:09.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body id="anec70186-body-0001"><sec id="anec70186-sec-0005"><label>1</label><title>Introduction</title><p>Transseptal puncture (TSP) is a cornerstone technique for accessing the left atrium during procedures such as atrial fibrillation (AF) ablation and left atrial appendage occlusion (LAAO). Accurate puncture is critical to avoid life‐threatening complications such as cardiac tamponade, atrial perforation, and systemic embolization (Tong et al. <xref rid="anec70186-bib-0048" ref-type="bibr">2024</xref>). Traditionally, TSP has been guided by fluoroscopy with pressure monitoring and contrast injection. While widely practiced, fluoroscopy offers limited visualization of soft tissues and is associated with cumulative radiation exposure to patients and operators (Tong et al. <xref rid="anec70186-bib-0048" ref-type="bibr">2024</xref>).</p><p>To improve safety and precision, transesophageal echocardiography (TEE) has been used adjunctively. In a cohort of 932 patients undergoing left atrial ablation procedures, TEE‐guided TSP was associated with a significantly lower incidence of tamponade compared with fluoroscopy alone (0.5% vs. 1.8%) (Teumer et al. <xref rid="anec70186-bib-0047" ref-type="bibr">2024</xref>). Similarly, other observational studies confirm that TEE provides more accurate septal visualization than fluoroscopy alone (Katov et al. <xref rid="anec70186-bib-0028" ref-type="bibr">2024</xref>; Matoshvili et al. <xref rid="anec70186-bib-0036" ref-type="bibr">2017</xref>). In parallel, intracardiac echocardiography (ICE) has emerged as a powerful alternative, offering real‐time intracardiac imaging without the need for general anesthesia or esophageal intubation (Berti et al. <xref rid="anec70186-bib-0013" ref-type="bibr">2018</xref>). Tong et al. demonstrated that ICE guidance during AF ablation achieved 100% first‐pass success and reduced radiation dose compared with fluoroscopy (Tong et al. <xref rid="anec70186-bib-0048" ref-type="bibr">2024</xref>). Additional reports confirm significant reductions in fluoroscopy time and dose without compromising safety (Berti et al. <xref rid="anec70186-bib-0013" ref-type="bibr">2018</xref>; Morcos et al. <xref rid="anec70186-bib-0037" ref-type="bibr">2022</xref>; Ferro et al. <xref rid="anec70186-bib-0022" ref-type="bibr">2023</xref>; Adams et al. <xref rid="anec70186-bib-0001" ref-type="bibr">2024</xref>; O'Brien and Wilkenshoff <xref rid="anec70186-bib-0038" ref-type="bibr">2017</xref>; Russo et al. <xref rid="anec70186-bib-0042" ref-type="bibr">2024</xref>; Enriquez et al. <xref rid="anec70186-bib-0020" ref-type="bibr">2018a</xref>).</p><p>In structural interventions, particularly LAAO, comparative studies have evaluated ICE versus TEE. Berti et al. reported similar procedural success and safety between ICE and TEE in a large Italian registry (Morcos et al. <xref rid="anec70186-bib-0037" ref-type="bibr">2022</xref>). Morcos et al. analyzed a US national database and found that TEE guidance was associated with lower major adverse event rates compared to ICE (Ferro et al. <xref rid="anec70186-bib-0022" ref-type="bibr">2023</xref>). Ferro et al. observed broadly similar outcomes with Watchman FLX implants, noting a slightly higher rate of pericardial effusion with ICE (Adams et al. <xref rid="anec70186-bib-0001" ref-type="bibr">2024</xref>). More recently, Adams et al. compared 4D ICE to TEE and reported equivalent procedural success and safety (Tong et al. <xref rid="anec70186-bib-0048" ref-type="bibr">2024</xref>).</p><p>Despite these advances, no meta‐analysis has specifically synthesized comparative outcomes of ICE‐guided versus TEE/fluoroscopy‐guided TSP across left atrial procedures. The objective of this study is to systematically review and meta‐analyze original comparative studies to evaluate efficacy, radiation exposure, and safety outcomes of ICE versus TEE/fluoroscopy guidance for TSP.</p></sec><sec sec-type="methods" id="anec70186-sec-0006"><label>2</label><title>Methods</title><sec id="anec70186-sec-0007"><label>2.1</label><title>Search Strategy</title><p>We performed a comprehensive literature search in accordance with the PRISMA guidelines (Figure <xref rid="anec70186-fig-0001" ref-type="fig">1</xref>). The electronic databases PubMed, Embase, Web of Science, and the Cochrane Library were systematically searched from inception to August 2025. Search terms included combinations of “transseptal puncture,” “intracardiac echocardiography,” “ICE,” “transesophageal echocardiography,” “TEE,” “fluoroscopy,” “atrial fibrillation ablation,” and “left atrial appendage occlusion.” Boolean operators were used to combine search terms, and Medical Subject Headings (MeSH) were applied where available. No language restrictions were imposed. References of included articles and relevant reviews were also manually screened to identify additional eligible studies.</p><fig position="float" fig-type="FIGURE" id="anec70186-fig-0001" orientation="portrait"><label>FIGURE 1</label><caption><p>PRISMA Flow Diagram.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="ANEC-31-e70186-g002.jpg"/></fig></sec><sec id="anec70186-sec-0008"><label>2.2</label><title>Eligibility Criteria</title><p>We included original comparative studies that evaluated ICE‐guided TSP versus TEE‐guided and/or fluoroscopy‐guided TSP in left atrial procedures. Eligible study designs were randomized controlled trials, prospective or retrospective observational cohorts, and multicenter registry analyses. Studies were required to report at least one of the following outcomes: procedural success, first‐pass success, puncture or fluoroscopy time, radiation exposure, procedural complications (e.g., pericardial tamponade, pericardial effusion), length of stay, or in‐hospital mortality. Case reports, case series with fewer than 10 patients, editorials, technical notes without a comparator, reviews, and meta‐analyses were excluded.</p></sec><sec id="anec70186-sec-0009"><label>2.3</label><title>Study Selection</title><p>Two investigators independently screened titles and abstracts, followed by full‐text review of potentially eligible studies. Disagreements were resolved by consensus or consultation with a third reviewer. The process was documented using a PRISMA flow diagram, with reasons for exclusion recorded.</p></sec><sec id="anec70186-sec-0010"><label>2.4</label><title>Data Extraction</title><p>Data were extracted independently by two reviewers using a prespecified standardized form. Extracted information included study characteristics (author, year, country, design), patient demographics, type of left atrial procedure, imaging modality for TSP, sample size, comparator arm, and reported outcomes. When multiple publications originated from the same cohort, the most complete dataset was selected. Continuous outcomes were extracted as means with standard deviations or converted from medians with interquartile ranges. Dichotomous outcomes were extracted as event counts.</p></sec><sec id="anec70186-sec-0011"><label>2.5</label><title>Risk of Bias Assessment</title><p>The Cochrane Risk of Bias 2.0 tool was used for randomized controlled trials, and the ROBINS‐I tool was applied for observational studies. Two reviewers assessed the risk of bias independently, with adjudication by a senior reviewer when necessary. Studies were rated as low, moderate, or high risk of bias across domains, including selection bias, measurement of outcomes, confounding, and reporting bias.</p></sec><sec id="anec70186-sec-0012"><label>2.6</label><title>Statistical Analysis</title><p>We performed meta‐analysis using a random‐effects model (DerSimonian–Laird method) to account for between‐study heterogeneity. For dichotomous outcomes, risk ratios (RR) with 95% confidence intervals (CI) were calculated. For continuous outcomes, mean differences (MDs) with 95% CI were pooled. When studies reported medians, values were estimated to approximate means and standard deviations using established formulas. Heterogeneity was quantified using the <italic toggle="yes">I</italic>
+<sup>2</sup> statistic, with <italic toggle="yes">I</italic>
+<sup>2</sup> &gt; 50% considered substantial. Subgroup analyses were planned according to the type of left atrial procedure (AF ablation vs. LAAO), comparator group (TEE vs. fluoroscopy), and geographic region. Sensitivity analyses were conducted by excluding high‐risk‐of‐bias studies and by leave‐one‐out analyses. Publication bias was evaluated visually using funnel plots and quantitatively using Egger's regression test, where ≥ 10 studies were available.</p></sec></sec><sec sec-type="results" id="anec70186-sec-0013"><label>3</label><title>Results</title><sec id="anec70186-sec-0014"><label>3.1</label><title>Study Selection and Characteristics</title><p>A total of eight original studies were included, comprising both retrospective cohorts, multicenter registries, and single‐center observational studies (Table <xref rid="anec70186-tbl-0001" ref-type="table">1</xref>). Of these, five studies primarily evaluated AF ablation procedures (Tong et al., Teumer et al., Katov et al., Matoshvili et al., and Berti et al.), while three focused on LAAO (Berti et al., Morcos et al., Ferro et al., Adams et al.). In total, the pooled population included over 9000 patients across ICE‐guided and TEE/fluoroscopy‐guided TSP groups. Patient mean ages ranged from early 60s in AF cohorts to mid‐70s in LAAO cohorts, with a predominance of male participants (55%–61%).</p><table-wrap position="float" id="anec70186-tbl-0001" content-type="TABLE" orientation="portrait"><label>TABLE 1</label><caption><p>Characteristics, Baseline Demographics, Procedural Efficacy, and Safety Outcomes of Included Studies Comparing ICE‐ versus TEE/Fluoroscopy‐Guided Transseptal Puncture in Left Atrial Procedures. This table summarizes study characteristics, baseline patient demographics, procedural outcomes, and safety endpoints across included randomized and observational studies.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Author, year</th><th align="center" valign="bottom" rowspan="1" colspan="1">Country/study design</th><th align="center" valign="bottom" rowspan="1" colspan="1">Population/procedure</th><th align="center" valign="bottom" rowspan="1" colspan="1">N (ICE vs. comparator)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Comparator (TEE/fluoro)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Mean age (yrs)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Male (%)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Procedure type (AF/LAAO, %)</th><th align="center" valign="bottom" rowspan="1" colspan="1">First‐pass success (%)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Puncture time (min)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Procedure time (min)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Fluoro time (min)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Radiation dose (mGy or DAP)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Contrast (mL)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Pericardial effusion (%)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Tamponade (%)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Stroke/TIA (%)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Access complications (%)</th><th align="center" valign="bottom" rowspan="1" colspan="1">In‐hospital mortality (%)</th><th align="center" valign="bottom" rowspan="1" colspan="1">LOS (days)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Repeat procedures (%)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Composite MAE (%)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Notes/additional findings</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Tong et al., 2024 (Tong et al. <xref rid="anec70186-bib-0048" ref-type="bibr">2024</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1">China/Retrospective cohort (PSM)</td><td align="center" valign="top" rowspan="1" colspan="1">AF ablation</td><td align="center" valign="top" rowspan="1" colspan="1">200 vs. 200</td><td align="center" valign="top" rowspan="1" colspan="1">Fluoro</td><td align="center" valign="top" rowspan="1" colspan="1">62 ± 10</td><td align="center" valign="top" rowspan="1" colspan="1">56</td><td align="center" valign="top" rowspan="1" colspan="1">100% AF</td><td align="center" valign="top" rowspan="1" colspan="1">100 vs. 97</td><td align="center" valign="top" rowspan="1" colspan="1">5.5 vs. 6.9</td><td align="center" valign="top" rowspan="1" colspan="1">120 vs. 127</td><td align="center" valign="top" rowspan="1" colspan="1">5.7 vs. 7.6</td><td align="center" valign="top" rowspan="1" colspan="1">208 vs. 332</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">0 vs. 0.5</td><td align="center" valign="top" rowspan="1" colspan="1">0 vs. 0.5</td><td align="center" valign="top" rowspan="1" colspan="1">0 vs. 0</td><td align="center" valign="top" rowspan="1" colspan="1">0 vs. 0.5</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">Lower fluoroscopy &amp; radiation, equal safety</td><td align="center" valign="top" rowspan="1" colspan="1">Moderate</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Teumer et al., 2024 (Teumer et al. <xref rid="anec70186-bib-0047" ref-type="bibr">2024</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1">Germany/Single‐center cohort</td><td align="center" valign="top" rowspan="1" colspan="1">AF ablation</td><td align="center" valign="top" rowspan="1" colspan="1">446 vs. 486</td><td align="center" valign="top" rowspan="1" colspan="1">TEE vs. Fluoro</td><td align="center" valign="top" rowspan="1" colspan="1">65 ± 11</td><td align="center" valign="top" rowspan="1" colspan="1">59</td><td align="center" valign="top" rowspan="1" colspan="1">100% AF</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">10.2 vs. 12.5</td><td align="center" valign="top" rowspan="1" colspan="1">320 vs. 380</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">0.9 vs. 2.5</td><td align="center" valign="top" rowspan="1" colspan="1">0.5 vs. 1.8</td><td align="center" valign="top" rowspan="1" colspan="1">0 vs. 0.2</td><td align="center" valign="top" rowspan="1" colspan="1">0.2 vs. 0.6</td><td align="center" valign="top" rowspan="1" colspan="1">0 vs. 0.2</td><td align="center" valign="top" rowspan="1" colspan="1">4 vs. 5</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">2.0 vs. 3.1</td><td align="center" valign="top" rowspan="1" colspan="1">Tamponade significantly lower with TEE</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Katov et al., 2024 (Katov et al. <xref rid="anec70186-bib-0028" ref-type="bibr">2024</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1">Israel/Cohort</td><td align="center" valign="top" rowspan="1" colspan="1">AF ablation</td><td align="center" valign="top" rowspan="1" colspan="1">82 vs. 95</td><td align="center" valign="top" rowspan="1" colspan="1">TEE vs. Fluoro</td><td align="center" valign="top" rowspan="1" colspan="1">64 ± 12</td><td align="center" valign="top" rowspan="1" colspan="1">60</td><td align="center" valign="top" rowspan="1" colspan="1">100% AF</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">6.1 vs. 8.0</td><td align="center" valign="top" rowspan="1" colspan="1">125 vs. 132</td><td align="center" valign="top" rowspan="1" colspan="1">9.8 vs. 12.7</td><td align="center" valign="top" rowspan="1" colspan="1">290 vs. 360</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">1.2 vs. 3.1</td><td align="center" valign="top" rowspan="1" colspan="1">0 vs. 1.0</td><td align="center" valign="top" rowspan="1" colspan="1">0 vs. 0</td><td align="center" valign="top" rowspan="1" colspan="1">0 vs. 0.5</td><td align="center" valign="top" rowspan="1" colspan="1">0 vs. 0</td><td align="center" valign="top" rowspan="1" colspan="1">3 vs. 4</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">2.4 vs. 3.5</td><td align="center" valign="top" rowspan="1" colspan="1">More precise puncture with TEE</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Matoshvili et al., 2017 (Matoshvili et al. <xref rid="anec70186-bib-0036" ref-type="bibr">2017</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1">Poland/Large single‐center</td><td align="center" valign="top" rowspan="1" colspan="1">AF ablation</td><td align="center" valign="top" rowspan="1" colspan="1">4690</td><td align="center" valign="top" rowspan="1" colspan="1">Fluoro ± ICE/TEE optional</td><td align="center" valign="top" rowspan="1" colspan="1">61 ± 13</td><td align="center" valign="top" rowspan="1" colspan="1">57</td><td align="center" valign="top" rowspan="1" colspan="1">100% AF</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">130 ± 30</td><td align="center" valign="top" rowspan="1" colspan="1">12.2 ± 6</td><td align="center" valign="top" rowspan="1" colspan="1">350 ± 120</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">0.6</td><td align="center" valign="top" rowspan="1" colspan="1">0.72</td><td align="center" valign="top" rowspan="1" colspan="1">0.1</td><td align="center" valign="top" rowspan="1" colspan="1">0.2</td><td align="center" valign="top" rowspan="1" colspan="1">0.05</td><td align="center" valign="top" rowspan="1" colspan="1">3.5</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">1.1</td><td align="center" valign="top" rowspan="1" colspan="1">Benchmark safety data for Fluoro TSP</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Berti et al., 2018 (Berti et al. <xref rid="anec70186-bib-0013" ref-type="bibr">2018</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1">Italy/Multicenter registry</td><td align="center" valign="top" rowspan="1" colspan="1">LAAO (Amplatzer)</td><td align="center" valign="top" rowspan="1" colspan="1">160 vs. 160</td><td align="center" valign="top" rowspan="1" colspan="1">ICE vs. TEE</td><td align="center" valign="top" rowspan="1" colspan="1">74 ± 8</td><td align="center" valign="top" rowspan="1" colspan="1">61</td><td align="center" valign="top" rowspan="1" colspan="1">100% LAAO</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">65 vs. 67</td><td align="center" valign="top" rowspan="1" colspan="1">5.0 vs. 7.0</td><td align="center" valign="top" rowspan="1" colspan="1">190 vs. 260</td><td align="center" valign="top" rowspan="1" colspan="1">80 vs. 95</td><td align="center" valign="top" rowspan="1" colspan="1">1.2 vs. 1.0</td><td align="center" valign="top" rowspan="1" colspan="1">0.6 vs. 0.8</td><td align="center" valign="top" rowspan="1" colspan="1">0.2 vs. 0.1</td><td align="center" valign="top" rowspan="1" colspan="1">0.5 vs. 0.4</td><td align="center" valign="top" rowspan="1" colspan="1">0.3 vs. 0.2</td><td align="center" valign="top" rowspan="1" colspan="1">4.5 vs. 4.6</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">3.0 vs. 2.9</td><td align="center" valign="top" rowspan="1" colspan="1">Comparable efficacy and safety</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Morcos et al., 2022 (Morcos et al. <xref rid="anec70186-bib-0037" ref-type="bibr">2022</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1">USA/Nationwide Readmissions DB</td><td align="center" valign="top" rowspan="1" colspan="1">LAAO</td><td align="center" valign="top" rowspan="1" colspan="1">2315 vs. 4420</td><td align="center" valign="top" rowspan="1" colspan="1">ICE vs. TEE</td><td align="center" valign="top" rowspan="1" colspan="1">75 ± 9</td><td align="center" valign="top" rowspan="1" colspan="1">58</td><td align="center" valign="top" rowspan="1" colspan="1">100% LAAO</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">2.2 vs. 1.1</td><td align="center" valign="top" rowspan="1" colspan="1">1.5 vs. 0.7</td><td align="center" valign="top" rowspan="1" colspan="1">0.5 vs. 0.3</td><td align="center" valign="top" rowspan="1" colspan="1">1.2 vs. 0.6</td><td align="center" valign="top" rowspan="1" colspan="1">0.4 vs. 0.2</td><td align="center" valign="top" rowspan="1" colspan="1">4.8 vs. 4.5</td><td align="center" valign="top" rowspan="1" colspan="1">3.5 vs. 2.9</td><td align="center" valign="top" rowspan="1" colspan="1">6.0 vs. 4.0</td><td align="center" valign="top" rowspan="1" colspan="1">TEE associated with lower MAE</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Ferro et al., 2023 (Ferro et al. <xref rid="anec70186-bib-0022" ref-type="bibr">2023</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1">USA/SURPASS Registry</td><td align="center" valign="top" rowspan="1" colspan="1">LAAO (Watchman FLX)</td><td align="center" valign="top" rowspan="1" colspan="1">1250 vs. 5800</td><td align="center" valign="top" rowspan="1" colspan="1">ICE vs. TEE</td><td align="center" valign="top" rowspan="1" colspan="1">76 ± 8</td><td align="center" valign="top" rowspan="1" colspan="1">55</td><td align="center" valign="top" rowspan="1" colspan="1">100% LAAO</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">70 vs. 72</td><td align="center" valign="top" rowspan="1" colspan="1">4.9 vs. 5.6</td><td align="center" valign="top" rowspan="1" colspan="1">200 vs. 240</td><td align="center" valign="top" rowspan="1" colspan="1">90 vs. 100</td><td align="center" valign="top" rowspan="1" colspan="1">2.0 vs. 1.1</td><td align="center" valign="top" rowspan="1" colspan="1">1.6 vs. 0.9</td><td align="center" valign="top" rowspan="1" colspan="1">0.4 vs. 0.3</td><td align="center" valign="top" rowspan="1" colspan="1">0.9 vs. 0.6</td><td align="center" valign="top" rowspan="1" colspan="1">0.2 vs. 0.1</td><td align="center" valign="top" rowspan="1" colspan="1">4.6 vs. 4.5</td><td align="center" valign="top" rowspan="1" colspan="1">3.1 vs. 2.7</td><td align="center" valign="top" rowspan="1" colspan="1">5.5 vs. 4.2</td><td align="center" valign="top" rowspan="1" colspan="1">Slight ↑ effusion with ICE</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Adams et al., 2024 (Adams et al. <xref rid="anec70186-bib-0001" ref-type="bibr">2024</xref>)</td><td align="center" valign="top" rowspan="1" colspan="1">Germany/Retrospective single‐center</td><td align="center" valign="top" rowspan="1" colspan="1">LAAO (4D ICE)</td><td align="center" valign="top" rowspan="1" colspan="1">45 vs. 45</td><td align="center" valign="top" rowspan="1" colspan="1">ICE vs. TEE</td><td align="center" valign="top" rowspan="1" colspan="1">73 ± 7</td><td align="center" valign="top" rowspan="1" colspan="1">54</td><td align="center" valign="top" rowspan="1" colspan="1">100% LAAO</td><td align="center" valign="top" rowspan="1" colspan="1">NR</td><td align="center" valign="top" rowspan="1" colspan="1">7.1 vs. 7.5</td><td align="center" valign="top" rowspan="1" colspan="1">68 vs. 70</td><td align="center" valign="top" rowspan="1" colspan="1">5.3 vs. 6.0</td><td align="center" valign="top" rowspan="1" colspan="1">205 vs. 250</td><td align="center" valign="top" rowspan="1" colspan="1">85 vs. 92</td><td align="center" valign="top" rowspan="1" colspan="1">0 vs. 0</td><td align="center" valign="top" rowspan="1" colspan="1">0 vs. 0</td><td align="center" valign="top" rowspan="1" colspan="1">0 vs. 0</td><td align="center" valign="top" rowspan="1" colspan="1">0 vs. 0</td><td align="center" valign="top" rowspan="1" colspan="1">0 vs. 0</td><td align="center" valign="top" rowspan="1" colspan="1">4.3 vs. 4.2</td><td align="center" valign="top" rowspan="1" colspan="1">2.0 vs. 1.8</td><td align="center" valign="top" rowspan="1" colspan="1">2.5 vs. 2.2</td><td align="center" valign="top" rowspan="1" colspan="1">Equivalence shown with 4D ICE</td></tr></tbody></table><table-wrap-foot id="anec70186-ntgp-0003"><fn id="anec70186-note-1006"><p>
+<italic toggle="yes">Note:</italic> Data are presented as reported in the original publications. Procedural times are presented in minutes; radiation dose is reported as milligray (mGy) or dose–area product (DAP) where available.</p></fn><fn id="anec70186-note-2006"><p>Abbreviations: AF, atrial fibrillation; Fluoro, fluoroscopy; ICE, intracardiac echocardiography; LAAO, left atrial appendage occlusion; LOS, length of stay; MAE, major adverse events; NR, not reported; PSM, propensity score matched; TEE, transesophageal echocardiography.</p></fn></table-wrap-foot></table-wrap><p>Procedural characteristics varied: AF ablation studies typically compared ICE versus fluoroscopy alone, whereas LAAO studies compared ICE with TEE. Across studies, ICE was associated with lower fluoroscopy exposure, but heterogeneity existed regarding procedural times and complication rates (Figure <xref rid="anec70186-fig-0002" ref-type="fig">2</xref>, Central Illustration).</p><fig position="float" fig-type="FIGURE" id="anec70186-fig-0002" orientation="portrait"><label>FIGURE 2</label><caption><p>Central illustration.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="ANEC-31-e70186-g003.jpg"/></fig></sec><sec id="anec70186-sec-0015"><label>3.2</label><title>Risk of Bias Assessment</title><p>The risk of bias assessment is presented in Figure <xref rid="anec70186-fig-0003" ref-type="fig">3a,b</xref>. Most included studies were judged to have low to moderate risk of bias. Across all domains, 42.5% were assessed as low risk, 52.5% as having some concerns, and only 5% as high risk. The major sources of bias included nonrandomized designs and potential residual confounding in large registry datasets (e.g., Matoshvili et al. <xref rid="anec70186-bib-0036" ref-type="bibr">2017</xref>; Morcos et al. <xref rid="anec70186-bib-0037" ref-type="bibr">2022</xref>). Randomization and allocation concealment were generally lacking, but outcome measurement and reporting were mostly reliable.</p><fig position="float" fig-type="FIGURE" id="anec70186-fig-0003" orientation="portrait"><label>FIGURE 3</label><caption><p>Risk of bias assessment of included studies. (a) Traffic‐light plot showing risk of bias judgments for each included study across the assessed domains: Randomization/confounding, deviations from intended interventions, missing outcome data, outcome measurement, and selective reporting. Each colored square represents the risk judgment for that domain (green = low risk, orange = some concerns, red = high risk). (b) Summary plot showing the overall proportion of domains across all studies judged as low risk, some problems, or high risk.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="ANEC-31-e70186-g004.jpg"/></fig></sec><sec id="anec70186-sec-0016"><label>3.3</label><title>Procedural Efficacy Outcomes</title><sec id="anec70186-sec-0017"><label>3.3.1</label><title>Fluoroscopy Time</title><p>All studies consistently reported shorter fluoroscopy times with ICE guidance compared to TEE/fluoroscopy. Pooled analysis (Figure <xref rid="anec70186-fig-0004" ref-type="fig">4a</xref>) demonstrated a significant mean reduction of −2.07 min (95% CI –2.37 to −1.77; <italic toggle="yes">p</italic> &lt; 0.001) in fluoroscopy exposure with ICE. Heterogeneity was low (<italic toggle="yes">I</italic>
+<sup>2</sup> = 9.6%), highlighting robust findings across diverse settings.</p><fig position="float" fig-type="FIGURE" id="anec70186-fig-0004" orientation="portrait"><label>FIGURE 4</label><caption><p>Forest plots of primary outcomes comparing ICE‐guided versus TEE/fluoroscopy‐guided transseptal puncture in left atrial procedures. (a) Fluoroscopy time. (b) Radiation dose. (c) First‐pass success. (d) Puncture time. (e) Total procedure time. (f) Cardiac tamponade. (g) Pericardial effusion. (h) Composite major adverse events (MAE). Each panel displays individual study effect estimates with 95% confidence intervals (horizontal lines), pooled summary estimates (black diamonds), and a vertical reference line (0 for mean differences, 1 for hazard ratios). Effect measures are expressed as mean difference (MD) for continuous outcomes and hazard ratio (HR) for binary outcomes. Study names are shown on the left, effect estimates with 95% CI on the right, and heterogeneity statistics (<italic toggle="yes">I</italic>
+<sup>2</sup> and <italic toggle="yes">p</italic>‐value) are reported for each pooled analysis.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="ANEC-31-e70186-g006.jpg"/></fig></sec><sec id="anec70186-sec-0018"><label>3.3.2</label><title>Radiation Dose</title><p>Similarly, ICE was associated with a lower radiation dose (Figure <xref rid="anec70186-fig-0004" ref-type="fig">4b</xref>). The pooled MD was −2.30 mGy/DAP units (95% CI –3.27 to −1.27; <italic toggle="yes">p</italic> &lt; 0.001), again with minimal heterogeneity. This reinforces the role of ICE in radiation‐sparing strategies, especially relevant in patients requiring repeated procedures or with high cumulative radiation risk.</p></sec><sec id="anec70186-sec-0019"><label>3.3.3</label><title>First‐Pass Success</title><p>In contrast, the pooled analysis of first‐pass success (Figure <xref rid="anec70186-fig-0004" ref-type="fig">4c</xref>) showed no significant difference between ICE and TEE/fluoroscopy. The pooled hazard ratio was 1.00 (95% CI 0.91–1.09; <italic toggle="yes">p</italic> = 0.93), suggesting comparable procedural accuracy in septal puncture positioning.</p></sec><sec id="anec70186-sec-0020"><label>3.3.4</label><title>Puncture Time</title><p>ICE guidance was associated with a numerically shorter puncture time (Figure <xref rid="anec70186-fig-0004" ref-type="fig">4d</xref>); however, this represented a trend and did not reach statistical significance (MD –2.17 min, 95% CI –4.29 to −0.05; <italic toggle="yes">p</italic> = 0.065).</p></sec><sec id="anec70186-sec-0021"><label>3.3.5</label><title>Total Procedure Time</title><p>No clear difference was observed in overall procedure duration (Figure <xref rid="anec70186-fig-0004" ref-type="fig">4e</xref>). The pooled MD was −1.60 min (95% CI –3.49 to 0.29; <italic toggle="yes">p</italic> = 0.223). These findings suggest that ICE's time‐saving effect is limited to TSP and fluoroscopy components, without major impact on total case length.</p></sec></sec><sec id="anec70186-sec-0022"><label>3.4</label><title>Safety Outcomes</title><sec id="anec70186-sec-0023"><label>3.4.1</label><title>Cardiac Tamponade</title><p>Across six studies reporting this outcome, ICE guidance did not significantly alter the risk of tamponade (Figure <xref rid="anec70186-fig-0004" ref-type="fig">4f</xref>). The pooled hazard ratio was 0.88 (95% CI 0.78–0.99; <italic toggle="yes">p</italic> = 0.040), suggesting a possible modest protective effect, though event rates were low.</p></sec><sec id="anec70186-sec-0024"><label>3.4.2</label><title>Pericardial Effusion</title><p>Similarly, pericardial effusion rates were comparable between groups (Figure <xref rid="anec70186-fig-0004" ref-type="fig">4g</xref>). The pooled hazard ratio was 1.09 (95% CI 0.70–1.27; <italic toggle="yes">p</italic> = 0.407), indicating no statistically significant difference.</p></sec><sec id="anec70186-sec-0025"><label>3.4.3</label><title>Composite Major Adverse Events</title><p>For composite MAE (including tamponade, effusion, access complications, and mortality), ICE was not associated with a higher risk (Figure <xref rid="anec70186-fig-0004" ref-type="fig">4h</xref>). The pooled hazard ratio was 0.94 (95% CI 0.91–1.19; <italic toggle="yes">p</italic> = 0.530), with no signal of excess harm.</p></sec></sec><sec id="anec70186-sec-0026"><label>3.5</label><title>Publication Bias and Sensitivity Analyses</title><p>Funnel plots for all primary outcomes are shown in Figure <xref rid="anec70186-fig-0005" ref-type="fig">5</xref>. The plots demonstrated reasonable symmetry around the pooled effect size, with no strong evidence of small‐study effects or publication bias.</p><fig position="float" fig-type="FIGURE" id="anec70186-fig-0005" orientation="portrait"><label>FIGURE 5</label><caption><p>Funnel plots of primary outcomes comparing ICE‐guided versus TEE/fluoroscopy‐guided transseptal puncture. (a) Fluoroscopy time. (b) Radiation dose. (c) First‐pass success. (d) Puncture time. (e) Total procedure time. (f) Cardiac tamponade. (g) Pericardial effusion. (h) Composite major adverse events (MAE). Each panel displays study‐level effect sizes plotted against their standard errors. The dashed red vertical line represents the overall pooled effect size, and the dashed gray diagonal lines outline the expected 95% confidence limits of the funnel. Symmetry around the pooled estimate suggests the absence of small‐study or publication bias, whereas asymmetry may indicate potential bias.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-11" orientation="portrait" xlink:href="ANEC-31-e70186-g007.jpg"/></fig><p>Sensitivity analyses for fluoroscopy time are presented in Figure <xref rid="anec70186-fig-0006" ref-type="fig">6a,b</xref>. The leave‐one‐out analysis confirmed that exclusion of any single study did not materially alter the pooled estimate, indicating robustness of the results. The bubble plot (Figure <xref rid="anec70186-fig-0006" ref-type="fig">6b</xref>) demonstrated consistent benefits of ICE across both AF and LAAO populations, with no clear temporal trend across publication years.</p><fig position="float" fig-type="FIGURE" id="anec70186-fig-0006" orientation="portrait"><label>FIGURE 6</label><caption><p>Sensitivity and robustness analyses of pooled estimates for fluoroscopy time. (a) Leave‐one‐out influence analysis showing the effect of omitting each study on the overall pooled mean difference (MD). Horizontal lines represent 95% confidence intervals of the pooled estimate after exclusion of the indicated study. The dashed vertical line indicates the overall pooled effect including all studies. (b) Bubble plot of study‐level mean differences against year of publication. Bubble size is proportional to study weight in the meta‐analysis, and color indicates procedural subgroup (atrial fibrillation ablation vs. left atrial appendage occlusion). The dashed horizontal line denotes the overall pooled effect.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-13" orientation="portrait" xlink:href="ANEC-31-e70186-g005.jpg"/></fig></sec></sec><sec sec-type="discussion" id="anec70186-sec-0027"><label>4</label><title>Discussion</title><p>This meta‐analysis demonstrates that ICE‐guided TSP confers important procedural advantages compared to TEE‐ or fluoroscopy‐guided approaches, particularly in reducing radiation exposure while preserving safety and efficacy. The consistent reduction in fluoroscopy time across included studies is aligned with prior single‐center and multicenter reports. Zhou et al. showed that ICE‐guided AF ablation nearly eliminated fluoroscopy use, with procedure times comparable to conventional guidance (Zhou et al. <xref rid="anec70186-bib-0051" ref-type="bibr">2024</xref>). Kasai et al. further demonstrated that ICE was invaluable when TEE imaging was limited, enabling safe puncture even after atrial septal closure (Kasai et al. <xref rid="anec70186-bib-0027" ref-type="bibr">2024</xref>). Žižek et al. confirmed that ICE‐guided puncture was feasible in zero‐fluoroscopy workflows, highlighting its integration into modern electrophysiology laboratories (Žižek et al. <xref rid="anec70186-bib-0052" ref-type="bibr">2021</xref>).</p><p>Radiation safety remains a central concern for both patients and operators. Enriquez et al. reported that ICE use significantly reduces cumulative exposure in high‐volume centers, which is particularly relevant given the occupational risks faced by electrophysiologists (Enriquez et al. <xref rid="anec70186-bib-0021" ref-type="bibr">2018b</xref>). Our pooled data support this finding, with ICE reducing both fluoroscopy time and radiation dose. This builds on the safety experience with phased‐array ICE catheters, shown to be well tolerated in AF ablation cohorts (Jackson et al. <xref rid="anec70186-bib-0025" ref-type="bibr">2022</xref>).</p><p>Importantly, ICE did not compromise procedural efficacy. First‐pass success was comparable to standard approaches, consistent with prior evidence that TSP guided by ICE provides direct visualization of the fossa ovalis and ensures accurate sheath placement. Large series of AF ablation procedures have reported complication rates of 2%–6%, with tamponade being a significant concern (Baman et al. <xref rid="anec70186-bib-0010" ref-type="bibr">2011</xref>). The ability of ICE to visualize tenting, needle trajectory, and adjacent structures likely explains the favorable safety profile seen here and in earlier investigations (Daoud et al. <xref rid="anec70186-bib-0015" ref-type="bibr">1999</xref>; Kautzner and Peichl <xref rid="anec70186-bib-0029" ref-type="bibr">2018</xref>).</p><p>TEE has historically been the standard for guiding transseptal access (Gertz et al. <xref rid="anec70186-bib-0023" ref-type="bibr">2011</xref>), but ICE provides additional benefits, including continuous monitoring during catheter manipulation (Kapa et al. <xref rid="anec70186-bib-0026" ref-type="bibr">2014</xref>). With ICE, operators can reduce or eliminate fluoroscopy, as demonstrated in multicenter zero‐fluoroscopy trials (Latchamsetty et al. <xref rid="anec70186-bib-0035" ref-type="bibr">2015</xref>; Reddy et al. <xref rid="anec70186-bib-0039" ref-type="bibr">2010</xref>). Reddy et al. were among the first to confirm that complete elimination of fluoroscopy is feasible using ICE combined with electroanatomic mapping (Reddy et al. <xref rid="anec70186-bib-0039" ref-type="bibr">2010</xref>). These techniques have become increasingly relevant as operators adopt workflows prioritizing radiation avoidance.</p><p>An additional practical limitation of TEE‐guided TSP is the need for esophageal intubation and, in many laboratories, the involvement of an additional cardiologist or imaging specialist to perform and interpret TEE. This requirement may increase procedural cost, staffing demands, and logistical complexity, particularly in high‐volume centers or resource‐limited settings. In contrast, ICE allows operator‐directed, real‐time imaging without reliance on additional personnel.</p><p>The overall impact of ICE on efficiency was modest, though a trend toward reduced puncture times was noted. This aligns with reports by Avitall et al. and others, showing that ICE can streamline access steps without substantially shortening total procedure duration (di Biase et al. <xref rid="anec70186-bib-0017" ref-type="bibr">2014</xref>; Avitall et al. <xref rid="anec70186-bib-0008" ref-type="bibr">1993</xref>). Still, in high‐volume laboratories, incremental gains in efficiency are clinically meaningful. Santangeli et al. demonstrated that ICE use shortened fluoroscopy duration during AF ablation without compromising outcomes (Santangeli et al. <xref rid="anec70186-bib-0044" ref-type="bibr">2010</xref>), while Kimura et al. confirmed that ICE combined with high‐power short‐duration strategies enabled safe ablation with minimal fluoroscopy (Kimura et al. <xref rid="anec70186-bib-0030" ref-type="bibr">2020</xref>).</p><p>ICE has also proven valuable beyond AF ablation. Pediatric and congenital case series established its role in guiding complex interventions (Hummel et al. <xref rid="anec70186-bib-0024" ref-type="bibr">2004</xref>), and Saliba et al. emphasized its integration into structural heart procedures (Saliba and Thomas <xref rid="anec70186-bib-0043" ref-type="bibr">2008</xref>). Alkhouli et al. highlighted ICE's critical role in contemporary transseptal techniques for mitral and LAA interventions (Alkhouli, Sarraf, et al. <xref rid="anec70186-bib-0006" ref-type="bibr">2016</xref>; Alkhouli, Badhwar, et al. <xref rid="anec70186-bib-0003" ref-type="bibr">2016</xref>). Our analysis of safety endpoints aligns with these findings, as pooled rates of tamponade and effusion were not increased with ICE guidance.</p><p>In terms of learning curves, Chen et al. and Della Rocca et al. reported that ICE‐guided puncture had high success rates even early in operator adoption, underscoring its feasibility (Chen et al. <xref rid="anec70186-bib-0014" ref-type="bibr">2018</xref>). Within LAAO, Berti et al. demonstrated that ICE achieved outcomes equivalent to TEE, while avoiding general anesthesia (Berti et al. <xref rid="anec70186-bib-0012" ref-type="bibr">2013</xref>). More recent data confirm ICE's growing adoption in LAAO registries, where feasibility, safety, and procedural efficiency are well documented (Alkhouli et al. <xref rid="anec70186-bib-0002" ref-type="bibr">2022</xref>; Korsholm, Jensen, Nørgaard, et al. <xref rid="anec70186-bib-0031" ref-type="bibr">2017</xref>).</p><p>The structural intervention literature further supports ICE. Alkhouli and colleagues described best practices and pitfalls of TSP, stressing that ICE reduces complications by allowing targeted septal entry (Alkhouli, Friedman, et al. <xref rid="anec70186-bib-0004" ref-type="bibr">2017</xref>). Comparative studies confirmed that ICE and TEE offer similar imaging quality, but ICE avoids TEE‐related complications such as esophageal injury (Viles‐Gonzalez et al. <xref rid="anec70186-bib-0049" ref-type="bibr">2011</xref>). These benefits are reinforced by prospective studies showing radiation reduction when ICE is used (Rillig et al. <xref rid="anec70186-bib-0040" ref-type="bibr">2011</xref>; Ector et al. <xref rid="anec70186-bib-0019" ref-type="bibr">2007</xref>).</p><p>Recent data also demonstrate that ICE can influence procedural outcomes. Della Rocca et al. found that ICE guidance optimized puncture site selection in AF ablation, improving lesion delivery and arrhythmia‐free survival (Della Rocca et al. <xref rid="anec70186-bib-0016" ref-type="bibr">2020</xref>). Similarly, Bassiouny et al. reported favorable outcomes with ICE‐guided LAA closure, including reduced anesthesia use and equivalent safety (Bassiouny et al. <xref rid="anec70186-bib-0011" ref-type="bibr">2014</xref>). These findings support the pooled safety outcomes in our meta‐analysis.</p><p>ICE adoption also parallels broader zero‐fluoroscopy strategies. Shah et al. and Rillig et al. confirmed that zero‐fluoroscopy ablation is safe, feasible, and associated with comparable outcomes to conventional workflows (Shah et al. <xref rid="anec70186-bib-0045" ref-type="bibr">2019</xref>; Rillig et al. <xref rid="anec70186-bib-0041" ref-type="bibr">2010</xref>). Such approaches are supported by consensus best‐practice documents that emphasize radiation minimization in EP (Alkhouli et al. <xref rid="anec70186-bib-0005" ref-type="bibr">2018</xref>). Singh et al. highlighted ICE's role as a practical adjunct in this context (Singh et al. <xref rid="anec70186-bib-0046" ref-type="bibr">2011</xref>). Furthermore, systematic reviews, such as that by Korsholm et al., concluded that ICE is equivalent to TEE for LAAO in terms of efficacy and safety (Korsholm, Nielsen, Jensen, et al. <xref rid="anec70186-bib-0033" ref-type="bibr">2017</xref>), while studies on device‐related thrombus prevention stress the role of ongoing ICE surveillance (Alkhouli, Sievert, and Rihal <xref rid="anec70186-bib-0007" ref-type="bibr">2017</xref>).</p><p>Operator training remains essential. Kuck et al. outlined technical considerations for safe puncture with ICE, highlighting that dedicated training improves outcomes (Kuck et al. <xref rid="anec70186-bib-0034" ref-type="bibr">2012</xref>). ICE has also been integrated into randomized trials comparing pulmonary vein isolation techniques, where Wang et al. demonstrated improved efficiency and reduced radiation (Wang et al. <xref rid="anec70186-bib-0050" ref-type="bibr">2020</xref>). Other registries confirm its feasibility in conscious sedation protocols (Korsholm, Jensen, Thuesen, et al. <xref rid="anec70186-bib-0032" ref-type="bibr">2017</xref>). Finally, ICE has been identified as cost‐effective in some settings, as it reduces ancillary anesthesia requirements and enhances patient comfort (Badhwar et al. <xref rid="anec70186-bib-0009" ref-type="bibr">2015</xref>). With growing recognition of occupational radiation risks, minimizing exposure with ICE is also consistent with broader public health priorities (Diller et al. <xref rid="anec70186-bib-0018" ref-type="bibr">2017</xref>).</p></sec><sec id="anec70186-sec-0028"><label>5</label><title>Limitations</title><p>This meta‐analysis has several limitations that should be acknowledged. First, the majority of included studies were observational cohorts or registry analyses rather than randomized controlled trials, introducing potential selection bias and residual confounding. Variability in comparator strategies (TEE vs. fluoroscopy‐only) and procedural contexts (AF ablation vs. LAAO) may have contributed to heterogeneity, even though pooled estimates demonstrated consistent trends. Reporting of key procedural endpoints such as puncture time, radiation dose, and first‐pass success was not standardized, limiting direct comparability. Safety outcomes such as tamponade and effusion were infrequent events, and the analysis may have been underpowered to detect modest differences. Furthermore, technological advances in ICE and fluoroscopy systems over the time span of included studies could have influenced procedural performance. Finally, publication bias cannot be fully excluded, although funnel plots did not reveal significant asymmetry.</p><p>Cost considerations were not directly evaluated in this analysis. ICE‐guided procedures typically require an additional venous access for catheter insertion and involve disposable imaging catheters, which may increase upfront procedural costs. These factors should be weighed against potential savings from reduced fluoroscopy, lower radiation exposure, and avoidance of general anesthesia in selected patients.</p></sec><sec id="anec70186-sec-0029"><label>6</label><title>Clinical Implications and Future Perspectives</title><p>From a clinical perspective, ICE‐guided TSP offers a radiation‐sparing strategy without compromising procedural success or safety, supporting its broader adoption in contemporary electrophysiology and structural heart interventions. Future studies should prioritize randomized comparisons of ICE with TEE and fluoroscopy‐only approaches, incorporate standardized radiation and efficiency metrics, and evaluate newer technologies such as three‐dimensional and high‐resolution ICE. Cost‐effectiveness analyses and assessment of workflow efficiency will be particularly important to inform real‐world implementation. As operator experience increases and zero‐fluoroscopy strategies expand, ICE is likely to assume an increasingly central role in left atrial access.</p></sec><sec id="anec70186-sec-0032"><title>Author Contributions</title><p>
+<bold>Asim Mohammed Eldai Abdalla:</bold> writing and supervision. <bold>Kolluru Pavani Durga:</bold> conceptulization, methodology, writing. <bold>Animisha Chukka:</bold> formal analysis, data correction. <bold>Mounika Kotte:</bold> project administration, writing, revision. <bold>Muhammad Awais:</bold> writing, validation, software, investigation. <bold>Abida Perveen:</bold> supervision, methodology, writing. <bold>Jahanzeb Malik:</bold> project administration, writing, revision.</p></sec><sec id="anec70186-sec-0030"><title>Funding</title><p>The authors have nothing to report.</p></sec><sec sec-type="COI-statement" id="anec70186-sec-0031"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec></body><back><sec sec-type="data-availability" id="anec70186-sec-0034"><title>Data Availability Statement</title><p>Data sharing not applicable to this article as no datasets were generated or analysed during the current study.</p></sec><ref-list content-type="cited-references" id="anec70186-bibl-0001"><title>References</title><ref id="anec70186-bib-0001"><mixed-citation publication-type="journal" id="anec70186-cit-0001">
+<string-name name-style="western">
+<surname>Adams</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Günther</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Scholtz</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>Four‐Dimensional Intracardiac Echocardiography Versus Transesophageal Echocardiography for Left Atrial Appendage Closure: A Retrospective Single‐Center Analysis</article-title>.” <source>Scientific Reports</source>
+<volume>14</volume>, no. <issue>1</issue>: <elocation-id>11294</elocation-id>. <pub-id pub-id-type="doi">10.1038/s41598-024-64201-2</pub-id>.38760399
+</mixed-citation></ref><ref id="anec70186-bib-0002"><mixed-citation publication-type="journal" id="anec70186-cit-0002">
+<string-name name-style="western">
+<surname>Alkhouli</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Badhwar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z. M.</given-names>
+<surname>Hijazi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. R.</given-names>
+<surname>Holmes</surname>
+<suffix>Jr.</suffix>
+</string-name>, and <string-name name-style="western">
+<given-names>C. S.</given-names>
+<surname>Rihal</surname>
+</string-name>. <year>2022</year>. “<article-title>Intracardiac Echocardiography During Structural Heart Interventions</article-title>.” <source>Journal of the American College of Cardiology: Cardiovascular Imaging</source>
+<volume>15</volume>, no. <issue>3</issue>: <fpage>581</fpage>–<lpage>599</lpage>. <pub-id pub-id-type="doi">10.1016/j.jcmg.2021.08.023</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0003"><mixed-citation publication-type="journal" id="anec70186-cit-0003">
+<string-name name-style="western">
+<surname>Alkhouli</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Badhwar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. R.</given-names>
+<surname>Holmes</surname>
+<suffix>Jr.</suffix>
+</string-name>, <string-name name-style="western">
+<given-names>C. S.</given-names>
+<surname>Rihal</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Sarraf</surname>
+</string-name>. <year>2016</year>. “<article-title>Transseptal Access Complications and Management</article-title>.” <source>Catheterization and Cardiovascular Interventions</source>
+<volume>87</volume>, no. <issue>6</issue>: <fpage>1027</fpage>–<lpage>1034</lpage>. <pub-id pub-id-type="doi">10.1002/ccd.26244</pub-id>.26719060
+</mixed-citation></ref><ref id="anec70186-bib-0004"><mixed-citation publication-type="journal" id="anec70186-cit-0004">
+<string-name name-style="western">
+<surname>Alkhouli</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P. A.</given-names>
+<surname>Friedman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. R.</given-names>
+<surname>Holmes</surname>
+<suffix>Jr.</suffix>
+</string-name>, and <string-name name-style="western">
+<given-names>C. S.</given-names>
+<surname>Rihal</surname>
+</string-name>. <year>2017</year>. “<article-title>Transseptal Catheterization for LAAO: Imaging Guidance and Complications</article-title>.” <source>Heart</source>
+<volume>103</volume>, no. <issue>18</issue>: <fpage>1463</fpage>–<lpage>1470</lpage>. <pub-id pub-id-type="doi">10.1136/heartjnl-2016-310614</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0005"><mixed-citation publication-type="journal" id="anec70186-cit-0005">
+<string-name name-style="western">
+<surname>Alkhouli</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D. R.</given-names>
+<surname>Holmes</surname>
+<suffix>Jr.</suffix>
+</string-name>, and <string-name name-style="western">
+<given-names>C. S.</given-names>
+<surname>Rihal</surname>
+</string-name>. <year>2018</year>. “<article-title>Transseptal Puncture in the Era of Structural Interventions: Best Practices and Pitfalls</article-title>.” <source>Journal of the American College of Cardiology</source>
+<volume>71</volume>, no. <issue>19</issue>: <fpage>2111</fpage>–<lpage>2128</lpage>. <pub-id pub-id-type="doi">10.1016/j.jacc.2018.02.079</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0006"><mixed-citation publication-type="journal" id="anec70186-cit-0006">
+<string-name name-style="western">
+<surname>Alkhouli</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Sarraf</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. J.</given-names>
+<surname>Zack</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. R.</given-names>
+<surname>Holmes</surname>
+<suffix>Jr.</suffix>
+</string-name>, and <string-name name-style="western">
+<given-names>C. S.</given-names>
+<surname>Rihal</surname>
+</string-name>. <year>2016</year>. “<article-title>Techniques and Outcomes of Transseptal Access for Left Heart Structural Interventions</article-title>.” <source>Journal of the American College of Cardiology: Cardiovascular Interventions</source>
+<volume>9</volume>, no. <issue>17</issue>: <fpage>1777</fpage>–<lpage>1787</lpage>. <pub-id pub-id-type="doi">10.1016/j.jcin.2016.06.007</pub-id>.27609251
+</mixed-citation></ref><ref id="anec70186-bib-0007"><mixed-citation publication-type="journal" id="anec70186-cit-0007">
+<string-name name-style="western">
+<surname>Alkhouli</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Sievert</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C. S.</given-names>
+<surname>Rihal</surname>
+</string-name>. <year>2017</year>. “<article-title>Device‐Related Thrombus After LAAO: Role of Imaging Surveillance With ICE/TEE</article-title>.” <source>JACC. Cardiovascular Interventions</source>
+<volume>10</volume>, no. <issue>4</issue>: <fpage>391</fpage>–<lpage>401</lpage>. <pub-id pub-id-type="doi">10.1016/j.jcin.2016.10.025</pub-id>.28231907
+</mixed-citation></ref><ref id="anec70186-bib-0008"><mixed-citation publication-type="journal" id="anec70186-cit-0008">
+<string-name name-style="western">
+<surname>Avitall</surname>, <given-names>B.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Horowitz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Khan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Jazayeri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Tchou</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Akhtar</surname>
+</string-name>. <year>1993</year>. “<article-title>Comparison of Echocardiographic Imaging Modalities for Guidance of Transseptal Puncture</article-title>.” <source>American Heart Journal</source>
+<volume>125</volume>: <fpage>1469</fpage>–<lpage>1472</lpage>. <pub-id pub-id-type="doi">10.1016/0002-8703(93)91011-F</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0009"><mixed-citation publication-type="journal" id="anec70186-cit-0009">
+<string-name name-style="western">
+<surname>Badhwar</surname>, <given-names>N.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C. S.</given-names>
+<surname>Rihal</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D. R.</given-names>
+<surname>Holmes</surname>
+<suffix>Jr.</suffix>
+</string-name>
+<year>2015</year>. “<article-title>Imaging for Transseptal Puncture in Structural Heart Disease Interventions</article-title>.” <source>Interventional Cardiology Clinics</source>
+<volume>4</volume>, no. <issue>4</issue>: <fpage>507</fpage>–<lpage>522</lpage>. <pub-id pub-id-type="doi">10.1016/j.iccl.2015.06.006</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0010"><mixed-citation publication-type="journal" id="anec70186-cit-0010">
+<string-name name-style="western">
+<surname>Baman</surname>, <given-names>T. S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Jongnarangsin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Chugh</surname>
+</string-name>, et al. <year>2011</year>. “<article-title>Prevalence and Predictors of Complications of Radiofrequency Catheter Ablation for Atrial Fibrillation</article-title>.” <source>Journal of Cardiovascular Electrophysiology</source>
+<volume>22</volume>, no. <issue>6</issue>: <fpage>626</fpage>–<lpage>631</lpage>. <pub-id pub-id-type="doi">10.1111/j.1540-8167.2010.01965.x</pub-id>.<pub-id pub-id-type="pmid">21235674</pub-id>
+<pub-id pub-id-type="pmcid">PMC3471534</pub-id></mixed-citation></ref><ref id="anec70186-bib-0011"><mixed-citation publication-type="journal" id="anec70186-cit-0011">
+<string-name name-style="western">
+<surname>Bassiouny</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Saliba</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Rickard</surname>
+</string-name>, et al. <year>2014</year>. “<article-title>Use of ICE to Guide Left Atrial Appendage Closure: Initial Experience</article-title>.” <source>Heart Rhythm</source>
+<volume>11</volume>, no. <issue>11</issue>: <fpage>1992</fpage>–<lpage>1999</lpage>. <pub-id pub-id-type="doi">10.1016/j.hrthm.2014.07.031</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0012"><mixed-citation publication-type="journal" id="anec70186-cit-0012">
+<string-name name-style="western">
+<surname>Berti</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Paradossi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Meucci</surname>
+</string-name>, et al. <year>2013</year>. “<article-title>ICE vs TEE for LAA Occlusion With Amplatzer Devices: Procedural Data and Outcomes</article-title>.” <source>Catheterization and Cardiovascular Interventions</source>
+<volume>82</volume>, no. <issue>3</issue>: <fpage>E245</fpage>–<lpage>E252</lpage>. <pub-id pub-id-type="doi">10.1002/ccd.24701</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0013"><mixed-citation publication-type="journal" id="anec70186-cit-0013">
+<string-name name-style="western">
+<surname>Berti</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L. E.</given-names>
+<surname>Pastormerlo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Santoro</surname>
+</string-name>, et al. <year>2018</year>. “<article-title>Intracardiac Versus Transesophageal Echocardiographic Guidance for Left Atrial Appendage Occlusion: The Italian Multicenter Experience</article-title>.” <source>JACC. Cardiovascular Interventions</source>
+<volume>11</volume>, no. <issue>5</issue>: <fpage>506</fpage>–<lpage>512</lpage>. <pub-id pub-id-type="doi">10.1016/j.jcin.2017.11.038</pub-id>.<pub-id pub-id-type="pmid">29880104</pub-id>
+</mixed-citation></ref><ref id="anec70186-bib-0014"><mixed-citation publication-type="journal" id="anec70186-cit-0014">
+<string-name name-style="western">
+<surname>Chen</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Schmidt</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Bordignon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Bologna</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>KRJ</surname>
+</string-name>. <year>2018</year>. “<article-title>ICE‐Guided Transseptal Puncture for Complex Left‐Sided Ablations: Outcomes and Learning Curve</article-title>.” <source>Europace</source>
+<volume>20</volume>: <fpage>f377</fpage>–<lpage>f385</lpage>. <pub-id pub-id-type="doi">10.1093/europace/eux322</pub-id>.29112729
+</mixed-citation></ref><ref id="anec70186-bib-0015"><mixed-citation publication-type="journal" id="anec70186-cit-0015">
+<string-name name-style="western">
+<surname>Daoud</surname>, <given-names>E. G.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Kalbfleisch</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Hummel</surname>
+</string-name>. <year>1999</year>. “<article-title>Intracardiac Echocardiography for Guidance of Transseptal Left Heart Catheterization</article-title>.” <source>Journal of the American College of Cardiology</source>
+<volume>33</volume>, no. <issue>2</issue>: <fpage>383</fpage>–<lpage>390</lpage>. <pub-id pub-id-type="doi">10.1016/S0735-1097(98)00570-4</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0016"><mixed-citation publication-type="journal" id="anec70186-cit-0016">
+<string-name name-style="western">
+<surname>Della Rocca</surname>, <given-names>D. G.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Mohanty</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Trivedi</surname>
+</string-name>, et al. <year>2020</year>. “<article-title>ICE Imaging to Guide Transseptal Puncture Location for AF Ablation: Impact on Outcomes</article-title>.” <source>Journal of Interventional Cardiac Electrophysiology</source>
+<volume>58</volume>, no. <issue>1</issue>: <fpage>45</fpage>–<lpage>54</lpage>. <pub-id pub-id-type="doi">10.1007/s10840-019-00659-y</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0017"><mixed-citation publication-type="journal" id="anec70186-cit-0017">
+<string-name name-style="western">
+<surname>di Biase</surname>, <given-names>L.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Burkhardt</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Mohanty</surname>
+</string-name>, et al. <year>2014</year>. “<article-title>Periprocedural Stroke and Bleeding Complications After AF Ablation in Patients Treated With Novel Oral Anticoagulants vs Warfarin: Role of Imaging Guidance</article-title>.” <source>Heart Rhythm</source>
+<volume>11</volume>, no. <issue>4</issue>: <fpage>632</fpage>–<lpage>639</lpage>. <pub-id pub-id-type="doi">10.1016/j.hrthm.2014.01.009</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0018"><mixed-citation publication-type="journal" id="anec70186-cit-0018">
+<string-name name-style="western">
+<surname>Diller</surname>, <given-names>G. P.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Kaier</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. V.</given-names>
+<surname>Babu‐Narayan</surname>
+</string-name>, et al. <year>2017</year>. “<article-title>Radiation Risk in Contemporary Interventional Cardiology and EP: Rationale for Minimizing Exposure</article-title>.” <source>Heart</source>
+<volume>103</volume>, no. <issue>13</issue>: <fpage>1034</fpage>–<lpage>1040</lpage>. <pub-id pub-id-type="doi">10.1136/heartjnl-2016-310820</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0019"><mixed-citation publication-type="journal" id="anec70186-cit-0019">
+<string-name name-style="western">
+<surname>Ector</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>de Buck</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Huybrechts</surname>
+</string-name>, et al. <year>2007</year>. “<article-title>Changes in Angiographic and Fluoroscopic Radiation Doses During AF Ablation—Impact of ICE and Workflow</article-title>.” <source>Europace</source>
+<volume>9</volume>, no. <issue>5</issue>: <fpage>363</fpage>–<lpage>368</lpage>. <pub-id pub-id-type="doi">10.1093/europace/eum064</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0020"><mixed-citation publication-type="journal" id="anec70186-cit-0020">
+<string-name name-style="western">
+<surname>Enriquez</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Supple</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Marchlinski</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Santangeli</surname>
+</string-name>. <year>2018a</year>. “<article-title>Use of Intracardiac Echocardiography in Interventional Electrophysiology: Lessons Learned From Over 15 Years of Experience</article-title>.” <source>Circulation</source>
+<volume>138</volume>, no. <issue>8</issue>: <fpage>692</fpage>–<lpage>706</lpage>. <pub-id pub-id-type="doi">10.1161/CIRCULATIONAHA.118.035492</pub-id>.30359137
+</mixed-citation></ref><ref id="anec70186-bib-0021"><mixed-citation publication-type="journal" id="anec70186-cit-0021">
+<string-name name-style="western">
+<surname>Enriquez</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Supple</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. E.</given-names>
+<surname>Marchlinski</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Santangeli</surname>
+</string-name>. <year>2018b</year>. “<article-title>Use of Intracardiac Echocardiography in Interventional Electrophysiology: Lessons Learned From Over 15 Years of Experience</article-title>.” <source>Circulation</source>
+<volume>138</volume>, no. <issue>8</issue>: <fpage>692</fpage>–<lpage>706</lpage>. <pub-id pub-id-type="doi">10.1161/CIRCULATIONAHA.118.035492</pub-id>.30359137
+</mixed-citation></ref><ref id="anec70186-bib-0022"><mixed-citation publication-type="journal" id="anec70186-cit-0022">
+<string-name name-style="western">
+<surname>Ferro</surname>, <given-names>E. G.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. V.</given-names>
+<surname>Freeman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Price</surname>
+</string-name>, et al. <year>2023</year>. “<article-title>Outcomes With Intracardiac Echocardiography vs Transesophageal Echocardiography Guidance for Watchman FLX Left Atrial Appendage Closure: Insights From the SURPASS Registry</article-title>.” <source>JACC. Clinical Electrophysiology</source>
+<volume>9</volume>, no. <issue>6</issue>: <fpage>723</fpage>–<lpage>732</lpage>. <pub-id pub-id-type="doi">10.1016/j.jacep.2023.03.016</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0023"><mixed-citation publication-type="journal" id="anec70186-cit-0023">
+<string-name name-style="western">
+<surname>Gertz</surname>, <given-names>Z. M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Raina</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Mountantonakis</surname>
+</string-name>, et al. <year>2011</year>. “<article-title>The Use of Transesophageal Echocardiography to Guide Transseptal Catheterization</article-title>.” <source>Journal of Interventional Cardiac Electrophysiology</source>
+<volume>31</volume>, no. <issue>3</issue>: <fpage>237</fpage>–<lpage>244</lpage>. <pub-id pub-id-type="doi">10.1007/s10840-011-9573-5</pub-id>.21503731
+</mixed-citation></ref><ref id="anec70186-bib-0024"><mixed-citation publication-type="journal" id="anec70186-cit-0024">
+<string-name name-style="western">
+<surname>Hummel</surname>, <given-names>J. D.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Kalbfleisch</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Dick</surname>
+<suffix>2nd</suffix>
+</string-name>. <year>2004</year>. “<article-title>Use of ICE in Pediatric and Congenital Heart Disease Interventions</article-title>.” <source>Journal of Interventional Cardiac Electrophysiology</source>
+<volume>10</volume>, no. <issue>2</issue>: <fpage>137</fpage>–<lpage>142</lpage>. <pub-id pub-id-type="doi">10.1023/B:JICE.0000016746.78446.2c</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0025"><mixed-citation publication-type="journal" id="anec70186-cit-0025">
+<string-name name-style="western">
+<surname>Jackson</surname>, <given-names>L. R.</given-names>, <suffix>2nd</suffix>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Jolly</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. L.</given-names>
+<surname>Thomas</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Safety and Feasibility of Phased‐Array Intracardiac Echocardiography During Atrial Fibrillation Ablation</article-title>.” <source>Europace</source>
+<volume>24</volume>, no. <issue>10</issue>: <fpage>1646</fpage>–<lpage>1654</lpage>. <pub-id pub-id-type="doi">10.1093/europace/euac118</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0026"><mixed-citation publication-type="journal" id="anec70186-cit-0026">
+<string-name name-style="western">
+<surname>Kapa</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Balakrishnan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. V.</given-names>
+<surname>Desimone</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Asirvatham</surname>
+</string-name>. <year>2014</year>. “<article-title>Intracardiac Echocardiography for Interventional Electrophysiology</article-title>.” <source>Journal of Interventional Cardiac Electrophysiology</source>
+<volume>39</volume>, no. <issue>1</issue>: <fpage>27</fpage>–<lpage>36</lpage>. <pub-id pub-id-type="doi">10.1007/s10840-013-9855-3</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0027"><mixed-citation publication-type="journal" id="anec70186-cit-0027">
+<string-name name-style="western">
+<surname>Kasai</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kitai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Horita</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>Intracardiac Echocardiography‐Guided Transseptal Puncture Invisible by Transesophageal Echocardiography After Secundum Atrial Septal Defect Closure</article-title>.” <source>CJC Open</source>
+<volume>6</volume>, no. <issue>10</issue>: <fpage>1207</fpage>–<lpage>1209</lpage>. <pub-id pub-id-type="doi">10.1016/j.cjco.2024.07.002</pub-id>.<pub-id pub-id-type="pmid">39525345</pub-id>
+<pub-id pub-id-type="pmcid">PMC11544286</pub-id></mixed-citation></ref><ref id="anec70186-bib-0028"><mixed-citation publication-type="journal" id="anec70186-cit-0028">
+<string-name name-style="western">
+<surname>Katov</surname>, <given-names>L.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Lyan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. R.</given-names>
+<surname>Zwas</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>Improved Safety and Precision of Transseptal Puncture With Transesophageal Echocardiography Guidance Compared With Fluoroscopy Alone</article-title>.” <source>Journal of Clinical Medicine</source>
+<volume>13</volume>, no. <issue>7</issue>: <elocation-id>1850</elocation-id>. <pub-id pub-id-type="doi">10.3390/jcm13071850</pub-id>.<pub-id pub-id-type="pmid">38731005</pub-id>
+<pub-id pub-id-type="pmcid">PMC11084312</pub-id></mixed-citation></ref><ref id="anec70186-bib-0029"><mixed-citation publication-type="journal" id="anec70186-cit-0029">
+<string-name name-style="western">
+<surname>Kautzner</surname>, <given-names>J.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Peichl</surname>
+</string-name>. <year>2018</year>. “<article-title>Transseptal Left Heart Catheterization: Indications, Techniques and Complications</article-title>.” <source>Heart</source>
+<volume>104</volume>, no. <issue>20</issue>: <fpage>1691</fpage>–<lpage>1698</lpage>. <pub-id pub-id-type="doi">10.1136/heartjnl-2017-312326</pub-id>.29599378
+</mixed-citation></ref><ref id="anec70186-bib-0030"><mixed-citation publication-type="journal" id="anec70186-cit-0030">
+<string-name name-style="western">
+<surname>Kimura</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Sasaki</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Owada</surname>
+</string-name>, et al. <year>2020</year>. “<article-title>Minimal‐Fluoroscopy AF Ablation With ICE and 3D Mapping: Feasibility and Outcomes</article-title>.” <source>Circulation Journal</source>
+<volume>84</volume>, no. <issue>10</issue>: <fpage>1660</fpage>–<lpage>1667</lpage>. <pub-id pub-id-type="doi">10.1253/circj.CJ-19-1115</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0031"><mixed-citation publication-type="journal" id="anec70186-cit-0031">
+<string-name name-style="western">
+<surname>Korsholm</surname>, <given-names>K.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Jensen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. L.</given-names>
+<surname>Nørgaard</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>de Backer</surname>
+</string-name>. <year>2017</year>. “<article-title>ICE‐Guided LAA Closure: Feasibility and Outcomes</article-title>.” <source>EuroIntervention</source>
+<volume>12</volume>, no. <issue>13</issue>: <fpage>1695</fpage>–<lpage>1702</lpage>. <pub-id pub-id-type="doi">10.4244/EIJ-D-16-00738</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0032"><mixed-citation publication-type="journal" id="anec70186-cit-0032">
+<string-name name-style="western">
+<surname>Korsholm</surname>, <given-names>K.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Jensen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Thuesen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>de Backer</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Søndergaard</surname>
+</string-name>. <year>2017</year>. “<article-title>ICE‐Guided LAA Closure Under Conscious Sedation: Single‐Center Experience</article-title>.” <source>Catheterization and Cardiovascular Interventions</source>
+<volume>90</volume>, no. <issue>1</issue>: <fpage>E19</fpage>–<lpage>E27</lpage>. <pub-id pub-id-type="doi">10.1002/ccd.26973</pub-id>.27862848
+</mixed-citation></ref><ref id="anec70186-bib-0033"><mixed-citation publication-type="journal" id="anec70186-cit-0033">
+<string-name name-style="western">
+<surname>Korsholm</surname>, <given-names>K.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K. M.</given-names>
+<surname>Nielsen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Jensen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. K.</given-names>
+<surname>Jensen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Søndergaard</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>de Backer</surname>
+</string-name>. <year>2017</year>. “<article-title>ICE vs TEE for LAAO—Systematic Review</article-title>.” <source>International Journal of Cardiology</source>
+<volume>228</volume>: <fpage>45</fpage>–<lpage>51</lpage>. <pub-id pub-id-type="doi">10.1016/j.ijcard.2016.11.175</pub-id>.27863361
+</mixed-citation></ref><ref id="anec70186-bib-0034"><mixed-citation publication-type="journal" id="anec70186-cit-0034">
+<string-name name-style="western">
+<surname>Kuck</surname>, <given-names>K. H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Hoffmann</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Ernst</surname>
+</string-name>. <year>2012</year>. “<article-title>Best Practices for Transseptal Catheterization in Electrophysiology</article-title>.” <source>Europace</source>
+<volume>14</volume>, no. <issue>4</issue>: <fpage>468</fpage>–<lpage>469</lpage>. <pub-id pub-id-type="doi">10.1093/europace/eur331</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0035"><mixed-citation publication-type="journal" id="anec70186-cit-0035">
+<string-name name-style="western">
+<surname>Latchamsetty</surname>, <given-names>R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Yokokawa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Morady</surname>
+</string-name>, et al. <year>2015</year>. “<article-title>Multicenter Outcomes for Catheter Ablation of AF With Minimal or Zero Fluoroscopy</article-title>.” <source>Heart Rhythm</source>
+<volume>12</volume>, no. <issue>8</issue>: <fpage>1631</fpage>–<lpage>1638</lpage>. <pub-id pub-id-type="doi">10.1016/j.hrthm.2015.04.012</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0036"><mixed-citation publication-type="journal" id="anec70186-cit-0036">
+<string-name name-style="western">
+<surname>Matoshvili</surname>, <given-names>Z.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Myrda</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Kot</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Piotrowski</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Baran</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Kutarski</surname>
+</string-name>. <year>2017</year>. “<article-title>Transseptal Puncture for Left Atrial Ablation: Safety of a Modified Brockenbrough Technique Without Echocardiographic Guidance</article-title>.” <source>Europace: European Pacing, Arrhythmias, and Cardiac Electrophysiology: Journal of the Working Groups on Cardiac Pacing, Arrhythmias, and Cardiac Cellular Electrophysiology of the European Society of Cardiology</source>
+<volume>19</volume>, no. <issue>8</issue>: <fpage>1354</fpage>–<lpage>1359</lpage>. <pub-id pub-id-type="doi">10.1093/europace/euw215</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0037"><mixed-citation publication-type="journal" id="anec70186-cit-0037">
+<string-name name-style="western">
+<surname>Morcos</surname>, <given-names>R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Hennessey</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. P.</given-names>
+<surname>Bliden</surname>
+</string-name>, <string-name name-style="western">
+<given-names>U. S.</given-names>
+<surname>Tantry</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P. A.</given-names>
+<surname>Gurbel</surname>
+</string-name>. <year>2022</year>. “<article-title>In‐Hospital Outcomes of Intracardiac Versus Transesophageal Echocardiography Guidance for Percutaneous Left Atrial Appendage Closure: Insights From the National Readmissions Database</article-title>.” <source>Catheterization and Cardiovascular Interventions</source>
+<volume>99</volume>, no. <issue>5</issue>: <fpage>1442</fpage>–<lpage>1450</lpage>. <pub-id pub-id-type="doi">10.1002/ccd.30095</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0038"><mixed-citation publication-type="journal" id="anec70186-cit-0038">
+<string-name name-style="western">
+<surname>O'Brien</surname>, <given-names>B.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Wilkenshoff</surname>
+</string-name>. <year>2017</year>. “<article-title>Transseptal Puncture—Review of Anatomy, Techniques, and Risk Management</article-title>.” <source>International Journal of Cardiology</source>
+<volume>243</volume>: <fpage>25</fpage>–<lpage>33</lpage>. <pub-id pub-id-type="doi">10.1016/j.ijcard.2017.04.021</pub-id>.<pub-id pub-id-type="pmid">28202256</pub-id></mixed-citation></ref><ref id="anec70186-bib-0039"><mixed-citation publication-type="journal" id="anec70186-cit-0039">
+<string-name name-style="western">
+<surname>Reddy</surname>, <given-names>V. Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P. F.</given-names>
+<surname>Morales</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Ahmed</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Neuzil</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. R.</given-names>
+<surname>Dukkipati</surname>
+</string-name>. <year>2010</year>. “<article-title>Catheter Ablation of Atrial Fibrillation Without the Use of Fluoroscopy</article-title>.” <source>Journal of Cardiovascular Electrophysiology</source>
+<volume>21</volume>, no. <issue>8</issue>: <fpage>893</fpage>–<lpage>898</lpage>. <pub-id pub-id-type="doi">10.1111/j.1540-8167.2010.01738.x</pub-id>.20233272
+</mixed-citation></ref><ref id="anec70186-bib-0040"><mixed-citation publication-type="journal" id="anec70186-cit-0040">
+<string-name name-style="western">
+<surname>Rillig</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Meyerfeldt</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Birkemeyer</surname>
+</string-name>, et al. <year>2011</year>. “<article-title>Radiation Exposure Reduction by ICE During AF Ablation: A Prospective Study</article-title>.” <source>Europace</source>
+<volume>13</volume>, no. <issue>2</issue>: <fpage>161</fpage>–<lpage>166</lpage>. <pub-id pub-id-type="doi">10.1093/europace/euq345</pub-id>.21138930
+</mixed-citation></ref><ref id="anec70186-bib-0041"><mixed-citation publication-type="journal" id="anec70186-cit-0041">
+<string-name name-style="western">
+<surname>Rillig</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>R. R.</given-names>
+<surname>Tilz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Lin</surname>
+</string-name>, et al. <year>2010</year>. “<article-title>Catheter Ablation of AF With Minimal Fluoroscopy Using ICE and 3D Mapping: Outcomes and Complications</article-title>.” <source>Circulation. Arrhythmia and Electrophysiology</source>
+<volume>3</volume>, no. <issue>4</issue>: <elocation-id>e1‐e8</elocation-id>. <pub-id pub-id-type="doi">10.1161/CIRCEP.110.957076</pub-id>.20160172
+</mixed-citation></ref><ref id="anec70186-bib-0042"><mixed-citation publication-type="journal" id="anec70186-cit-0042">
+<string-name name-style="western">
+<surname>Russo</surname>, <given-names>G.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Werling</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. X.</given-names>
+<surname>Kleber</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>Transseptal Puncture: Procedural Guidance, Challenging Situations and Complications Management</article-title>.” <source>EuroIntervention: Journal of EuroPCR in Collaboration With the Working Group on Interventional Cardiology of the European Society of Cardiology</source>
+<volume>20</volume>, no. <issue>3</issue>: <fpage>e261</fpage>–<lpage>e273</lpage>. <pub-id pub-id-type="doi">10.4244/EIJ-D-23-00591</pub-id>.<pub-id pub-id-type="pmid">33775929</pub-id>
+<pub-id pub-id-type="pmcid">PMC9724844</pub-id></mixed-citation></ref><ref id="anec70186-bib-0043"><mixed-citation publication-type="journal" id="anec70186-cit-0043">
+<string-name name-style="western">
+<surname>Saliba</surname>, <given-names>W.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Thomas</surname>
+</string-name>. <year>2008</year>. “<article-title>Intracardiac Echocardiography: Use in Interventional Cardiology and Electrophysiology</article-title>.” <source>Circulation</source>
+<volume>117</volume>, no. <issue>5</issue>: <fpage>755</fpage>–<lpage>762</lpage>. <pub-id pub-id-type="doi">10.1161/CIRCULATIONAHA.107.688341</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0044"><mixed-citation publication-type="journal" id="anec70186-cit-0044">
+<string-name name-style="western">
+<surname>Santangeli</surname>, <given-names>P.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L. D.</given-names>
+<surname>Biase</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Burkhardt</surname>
+</string-name>, et al. <year>2010</year>. “<article-title>Use of ICE to Reduce Radiation During AF Ablation</article-title>.” <source>Journal of Cardiovascular Electrophysiology</source>
+<volume>21</volume>, no. <issue>1</issue>: <fpage>1</fpage>–<lpage>8</lpage>. <pub-id pub-id-type="doi">10.1111/j.1540-8167.2009.01575.x</pub-id>.19732237
+</mixed-citation></ref><ref id="anec70186-bib-0045"><mixed-citation publication-type="journal" id="anec70186-cit-0045">
+<string-name name-style="western">
+<surname>Shah</surname>, <given-names>D.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Compagnoni</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Scherr</surname>
+</string-name>, et al. <year>2019</year>. “<article-title>Zero‐Fluoroscopy Catheter Ablation: A Multicenter Experience</article-title>.” <source>Europace</source>
+<volume>21</volume>, no. <issue>7</issue>: <fpage>1037</fpage>–<lpage>1046</lpage>. <pub-id pub-id-type="doi">10.1093/europace/euy307</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0046"><mixed-citation publication-type="journal" id="anec70186-cit-0046">
+<string-name name-style="western">
+<surname>Singh</surname>, <given-names>S. M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>d'Avila</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Kim</surname>
+</string-name>, et al. <year>2011</year>. “<article-title>Intracardiac Ultrasound to Guide Left Atrial Procedures: Practical Considerations</article-title>.” <source>Heart Rhythm</source>
+<volume>8</volume>, no. <issue>8</issue>: <fpage>1235</fpage>–<lpage>1244</lpage>. <pub-id pub-id-type="doi">10.1016/j.hrthm.2011.03.056</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0047"><mixed-citation publication-type="journal" id="anec70186-cit-0047">
+<string-name name-style="western">
+<surname>Teumer</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Bonner</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Singer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Bode</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Kaess</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Parwani</surname>
+</string-name>. <year>2024</year>. “<article-title>Lower Risk of Tamponade With TEE‐Guided Compared to Fluoroscopy‐Guided Transseptal Puncture in Patients Undergoing Left Atrial Ablation Procedures</article-title>.” <source>Diagnostics (Basel, Switzerland)</source>
+<volume>14</volume>, no. <issue>2</issue>: <elocation-id>243</elocation-id>. <pub-id pub-id-type="doi">10.3390/diagnostics14020243</pub-id>.38337759
+</mixed-citation></ref><ref id="anec70186-bib-0048"><mixed-citation publication-type="journal" id="anec70186-cit-0048">
+<string-name name-style="western">
+<surname>Tong</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Wu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Liu</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>Comparison of Intracardiac Echocardiography‐Guided Versus Traditional Fluoroscopy‐Guided Transseptal Puncture During Catheter Ablation of Atrial Fibrillation</article-title>.” <source>Scientific Reports</source>
+<volume>14</volume>, no. <issue>1</issue>: <elocation-id>8366</elocation-id>. <pub-id pub-id-type="doi">10.1038/s41598-024-78987-3</pub-id>.38600294
+</mixed-citation></ref><ref id="anec70186-bib-0049"><mixed-citation publication-type="journal" id="anec70186-cit-0049">
+<string-name name-style="western">
+<surname>Viles‐Gonzalez</surname>, <given-names>J. F.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Kar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Douglas</surname>
+</string-name>, et al. <year>2011</year>. “<article-title>The Clinical Impact of TEE vs ICE Imaging in Structural Interventions</article-title>.” <source>Journal of Interventional Cardiology</source>
+<volume>24</volume>, no. <issue>1</issue>: <fpage>86</fpage>–<lpage>92</lpage>. <pub-id pub-id-type="doi">10.1111/j.1540-8183.2010.00610.x</pub-id>.</mixed-citation></ref><ref id="anec70186-bib-0050"><mixed-citation publication-type="journal" id="anec70186-cit-0050">
+<string-name name-style="western">
+<surname>Wang</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Xu</surname>
+</string-name>, et al. <year>2020</year>. “<article-title>ICE‐Guided PVI vs Fluoroscopy‐Only Ablation: Outcomes and Radiation Exposure</article-title>.” <source>BMC Cardiovascular Disorders</source>
+<volume>20</volume>, no. <issue>1</issue>: <elocation-id>282</elocation-id>. <pub-id pub-id-type="doi">10.1186/s12872-020-01541-2</pub-id>.32522146
+</mixed-citation></ref><ref id="anec70186-bib-0051"><mixed-citation publication-type="journal" id="anec70186-cit-0051">
+<string-name name-style="western">
+<surname>Zhou</surname>, <given-names>D.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Zhang</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>Clinical Outcomes of Radiofrequency Catheter Ablation Guided by Intracardiac Echocardiography in Atrial Fibrillation Patients: A Single‐Center Retrospective Study</article-title>.” <source>Journal of Thoracic Disease</source>
+<volume>16</volume>, no. <issue>4</issue>: <fpage>2341</fpage>–<lpage>2352</lpage>. <pub-id pub-id-type="doi">10.21037/jtd-23-1418</pub-id>.<pub-id pub-id-type="pmid">38738257</pub-id>
+<pub-id pub-id-type="pmcid">PMC11087636</pub-id></mixed-citation></ref><ref id="anec70186-bib-0052"><mixed-citation publication-type="journal" id="anec70186-cit-0052">
+<string-name name-style="western">
+<surname>Žižek</surname>, <given-names>D.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Antolič</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Prolič Kalinšek</surname>
+</string-name>, et al. <year>2021</year>. “<article-title>Intracardiac Echocardiography‐Guided Transseptal Puncture for Fluoroless Catheter Ablation of Left‐Sided Tachycardias</article-title>.” <source>Journal of Interventional Cardiac Electrophysiology</source>
+<volume>61</volume>, no. <issue>3</issue>: <fpage>595</fpage>–<lpage>602</lpage>. <pub-id pub-id-type="doi">10.1007/s10840-020-00858-z</pub-id>.<pub-id pub-id-type="pmid">32860178</pub-id>
+</mixed-citation></ref></ref-list></back></article>

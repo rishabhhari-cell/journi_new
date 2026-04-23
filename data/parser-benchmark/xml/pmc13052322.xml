@@ -1,0 +1,606 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="edm270217" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Endocrinol Diabetes Metab</journal-id><journal-id journal-id-type="iso-abbrev">Endocrinol Diabetes Metab</journal-id><journal-id journal-id-type="pmc-domain-id">3614</journal-id><journal-id journal-id-type="pmc-domain">edm</journal-id><journal-id journal-id-type="publisher-id">EDM2</journal-id><journal-title-group><journal-title>Endocrinology, Diabetes &amp; Metabolism</journal-title></journal-title-group><issn pub-type="epub">2398-9238</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13052322</article-id><article-id pub-id-type="pmcid-ver">PMC13052322.1</article-id><article-id pub-id-type="pmcaid">13052322</article-id><article-id pub-id-type="pmcaiid">13052322</article-id><article-id pub-id-type="pmid">41937314</article-id><article-id pub-id-type="doi">10.1002/edm2.70217</article-id><article-id pub-id-type="publisher-id">EDM270217</article-id><article-id pub-id-type="other">1423306</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Review Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Review Article</subject></subj-group></article-categories><title-group><article-title>Comparative Efficacy and Safety of Ecnoglutide in Type 2 Diabetes: A Systematic Review and Meta‐Analysis</article-title></title-group><contrib-group><contrib id="edm270217-cr-0001" contrib-type="author"><name name-style="western"><surname>Kumar</surname><given-names initials="M">Mukesh</given-names></name><xref rid="edm270217-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270217-cr-0002" contrib-type="author"><name name-style="western"><surname>Kumar</surname><given-names initials="S">Sumet</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0004-2215-311X</contrib-id><xref rid="edm270217-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270217-cr-0003" contrib-type="author"><name name-style="western"><surname>Ali</surname><given-names initials="SME">Sheikh Muhammad Ebtehaj</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0008-2223-4488</contrib-id><xref rid="edm270217-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="edm270217-cr-0004" contrib-type="author"><name name-style="western"><surname>Qazi</surname><given-names initials="H">Hadia</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0002-9406-3776</contrib-id><xref rid="edm270217-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270217-cr-0005" contrib-type="author"><name name-style="western"><surname>Janjua</surname><given-names initials="AA">Arshia Arif</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0002-6779-483X</contrib-id><xref rid="edm270217-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270217-cr-0006" contrib-type="author"><name name-style="western"><surname>Ahmed</surname><given-names initials="H">Hanzlah</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0009-0336-1446</contrib-id><xref rid="edm270217-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270217-cr-0007" contrib-type="author"><name name-style="western"><surname>Babar</surname><given-names initials="R">Rayan</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0000-3641-1651</contrib-id><xref rid="edm270217-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270217-cr-0008" contrib-type="author"><name name-style="western"><surname>Sheikh</surname><given-names initials="RI">Rumaisa Imtiaz</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0000-0488-7938</contrib-id><xref rid="edm270217-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270217-cr-0009" contrib-type="author"><name name-style="western"><surname>Kumar</surname><given-names initials="L">Laksh</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0002-6978-5080</contrib-id><xref rid="edm270217-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270217-cr-0010" contrib-type="author"><name name-style="western"><surname>Ali</surname><given-names initials="SM">Sana Mohammad</given-names></name><xref rid="edm270217-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270217-cr-0011" contrib-type="author"><name name-style="western"><surname>Hanif</surname><given-names initials="F">Fatima</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0006-7995-5169</contrib-id><xref rid="edm270217-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270217-cr-0012" contrib-type="author"><name name-style="western"><surname>Gul</surname><given-names initials="K">Khizra</given-names></name><xref rid="edm270217-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270217-cr-0013" contrib-type="author"><name name-style="western"><surname>Ali</surname><given-names initials="AS">Ayesha Sarwar</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0005-5322-1709</contrib-id><xref rid="edm270217-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270217-cr-0014" contrib-type="author"><name name-style="western"><surname>Bukhari</surname><given-names initials="SUR">Shehzadi Umme Rubab</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0000-3123-3497</contrib-id><xref rid="edm270217-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270217-cr-0015" contrib-type="author"><name name-style="western"><surname>Raja</surname><given-names initials="A">Adarsh</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0003-2964-9452</contrib-id><xref rid="edm270217-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270217-cr-0016" contrib-type="author" corresp="yes"><name name-style="western"><surname>Chaulagain</surname><given-names initials="A">Aayush</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0001-9259-0612</contrib-id><xref rid="edm270217-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref><address><email>aayush.researcher1@gmail.com</email></address></contrib></contrib-group><aff id="edm270217-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Department of Medicine</named-content>
+<institution>Shaheed Mohtarma Benazir Bhutto Medical College Lyari</institution>
+<city>Karachi</city>
+<country country="PK">Pakistan</country>
+</aff><aff id="edm270217-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<institution>Department of Medicine, Abbasi Shaheed Hospital</institution>
+<city>Karachi</city>
+<country country="PK">Pakistan</country>
+</aff><aff id="edm270217-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Department of Medicine</named-content>
+<institution>Patan Academy of Health Sciences</institution>
+<city>Lalitpur</city>
+<country country="NP">Nepal</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold>
+<break/>
+Aayush Chaulagain (<email>aayush.researcher@gmail.com</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>05</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>5</month><year>2026</year></pub-date><volume>9</volume><issue seq="160">3</issue><issue-id pub-id-type="pmc-issue-id">511031</issue-id><issue-id pub-id-type="doi">10.1002/edm2.v9.3</issue-id><elocation-id>e70217</elocation-id><history><date date-type="rev-recd"><day>24</day><month>2</month><year>2026</year></date><date date-type="received"><day>07</day><month>12</month><year>2025</year></date><date date-type="accepted"><day>19</day><month>3</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>05</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>07</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-07 11:25:14.653"><day>07</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Endocrinology, Diabetes &amp; Metabolism</italic> published by John Wiley &amp; Sons Ltd.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="EDM2-9-e70217.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:EDM2-9-e70217.pdf"/><abstract><title>ABSTRACT</title><sec id="edm270217-sec-0001"><title>Background</title><p>Type 2 diabetes mellitus (T2DM) affects over 500 million people worldwide, with traditional therapies often failing to maintain long‐term glycaemic control. Ecnoglutide, a novel long‐acting GLP‐1 receptor agonist, has emerged as a promising therapeutic option. This systematic review and meta‐analysis evaluated the efficacy and safety of ecnoglutide in adults with T2DM.</p></sec><sec id="edm270217-sec-0002"><title>Methods</title><p>Following PRISMA guidelines, we systematically searched PubMed, Cochrane Library, ScienceDirect, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://clinicaltrials.gov" ext-link-type="uri">ClinicalTrials.gov</ext-link>, and Google Scholar through September 2025. Randomized controlled trials comparing ecnoglutide with placebo or active comparators in adults with T2DM were included. Primary outcomes were changes in HbA1c and body weight. Secondary outcomes included fasting plasma glucose, insulin resistance markers, lipid profile, liver enzymes, and adverse events. Risk of bias was assessed using the Cochrane RoB‐2 tool. Meta‐analysis was performed using random‐effects models, with mean differences and risk ratios calculated at 95% confidence intervals.</p></sec><sec id="edm270217-sec-0003"><title>Results</title><p>Four RCTs comprising 1643 participants (1162 receiving ecnoglutide, 444 controls) were included. Ecnoglutide significantly reduced HbA1c (MD = −0.44, 95% CI −0.55 to −0.33, <italic toggle="no">p</italic> &lt; 0.00001), body weight (MD = −5.63, 95% CI −7.90 to −3.35, <italic toggle="no">p</italic> &lt; 0.01), and fasting plasma glucose (MD = −0.81, 95% CI −1.03 to −0.59, <italic toggle="no">p</italic> &lt; 0.00001). Improvements were observed in insulin sensitivity, lipid profile, and liver enzymes. Adverse events occurred more frequently with ecnoglutide (RR = 1.09, <italic toggle="no">p</italic> &lt; 0.01), although predominantly gastrointestinal and mild‐to‐moderate, with no significant differences in serious adverse events.</p></sec><sec id="edm270217-sec-0004"><title>Conclusions</title><p>Ecnoglutide demonstrates robust efficacy in glycaemic control, weight reduction, and cardiometabolic parameters with an acceptable safety profile in adults with T2DM, supporting its therapeutic potential as a next‐generation GLP‐1 receptor agonist.</p></sec></abstract><abstract abstract-type="graphical"><p>Ecnoglutide, a once‐weekly GLP‐1 receptor agonist, significantly improves glycaemic control and promotes meaningful weight loss compared with placebo in type 2 diabetes. This systematic review and meta‐analysis of four RCTs demonstrates favourable efficacy with mostly mild gastrointestinal adverse events and no increase in serious safety concerns.<boxed-text position="anchor" content-type="graphic" id="edm270217-blkfxd-0001" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="EDM2-9-e70217-g006.jpg"/></boxed-text>
+</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="edm270217-kwd-0001">Ecnoglutide</kwd><kwd id="edm270217-kwd-0002">GLP‐1 receptor agonist</kwd><kwd id="edm270217-kwd-0003">glycaemic control</kwd><kwd id="edm270217-kwd-0004">meta‐analysis</kwd><kwd id="edm270217-kwd-0005">type 2 diabetes mellitus</kwd></kwd-group><counts><fig-count count="7"/><table-count count="2"/><page-count count="13"/><word-count count="7400"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>May 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:06.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body id="edm270217-body-0001"><sec id="edm270217-sec-0005"><label>1</label><title>Inroduction</title><p>More than 500 million individuals are affected by diabetes mellitus worldwide, resulting in 6.7 million deaths annually by chronic kidney diseases, cardiovascular diseases, and microvascular complications [<xref rid="edm270217-bib-0001" ref-type="bibr">1</xref>]. Nationwide analysis of the United States highlights diabetes mellitus as a leading cause of renal failure, cardiovascular morbidity, blindness, lower limb amputations, and microvascular complications [<xref rid="edm270217-bib-0002" ref-type="bibr">2</xref>]. Insulin resistance, β‐cell dysfunction, and impaired glucose regulation are the hallmarks of type 2 diabetes mellitus (T2DM), a chronic and progressive metabolic disease [<xref rid="edm270217-bib-0003" ref-type="bibr">3</xref>]. Despite advancements in pharmacotherapy, T2DM individuals fail to achieve controlled glycaemic status and significantly experience treatment‐related side effects [<xref rid="edm270217-bib-0003" ref-type="bibr">3</xref>, <xref rid="edm270217-bib-0004" ref-type="bibr">4</xref>]. T2DM is one of the most important non‐communicable health issues in the world, and its burden has increased due to the rising prevalence of obesity, sedentary lifestyles, and poor eating habits [<xref rid="edm270217-bib-0002" ref-type="bibr">2</xref>].</p><p>The traditional treatment of type 2 diabetes involves pharmacological therapy in conjunction with lifestyle changes like diet, exercise, and weight control. Metformin, sulphonylureas, DPP‐4 inhibitors, SGLT2 inhibitors, and insulin are examples of common glucose‐lowering medications [<xref rid="edm270217-bib-0005" ref-type="bibr">5</xref>, <xref rid="edm270217-bib-0006" ref-type="bibr">6</xref>]. Despite their effectiveness in lowering blood glucose, these medications frequently do not preserve long‐term glycaemic stability and can result in adverse effects such as weight gain, hypoglycaemia, and gastrointestinal intolerance [<xref rid="edm270217-bib-0007" ref-type="bibr">7</xref>]. As a result, there is a growing demand for newer medications with long‐lasting effectiveness, weight benefits, and advantageous cardiometabolic profiles [<xref rid="edm270217-bib-0008" ref-type="bibr">8</xref>].</p><p>By treating the glycaemic and metabolic components of type 2 diabetes, glucagon‐like peptide‐1 receptor agonists, or GLP‐1 RAs, have revolutionized the treatment of diabetes. They improve cardiovascular outcomes while promoting notable decreases in HbA1c and body weight through glucose‐dependent insulin release, glucagon suppression, delayed gastric emptying, and appetite regulation [<xref rid="edm270217-bib-0009" ref-type="bibr">9</xref>, <xref rid="edm270217-bib-0010" ref-type="bibr">10</xref>, <xref rid="edm270217-bib-0011" ref-type="bibr">11</xref>].</p><p>The next development in this therapeutic class is Ecnoglutide, a long‐acting novel GLP‐1 RA. According to the recent randomized controlled trials, significantly lowers body weight, insulin resistance indices, fasting plasma glucose, and HbA1c. It also has positive effects on lipid and liver profiles [<xref rid="edm270217-bib-0012" ref-type="bibr">12</xref>, <xref rid="edm270217-bib-0013" ref-type="bibr">13</xref>]. Compared with previous GLP‐1 analogues, its longer half‐life and once‐weekly dosage may improve adherence and tolerability. Moreover, due to the long‐acting nature of Ecnoglutide with distinct pharmacodynamic properties, it was selected as a novel intervention for this insightful review. Prolonged half‐life, enhanced resistance to dipeptidyl peptidase degradation and prominently improving selectivity of receptors from clinical data signifies the role of ecnoglutide, over other established GLP‐1 RAs like semaglutide and dulaglutide [<xref rid="edm270217-bib-0013" ref-type="bibr">13</xref>]. Phase 2 and phase 3 trials of ecnoglutide, as an investigational agent, provide growing trial evidence of the clinical efficacy of this promising intervention.</p><p>In light of these encouraging results, the purpose of this systematic review and meta‐analysis is to thoroughly assess the placebo effectiveness of Ecnoglutide in adults with type 2 diabetes mellitus by contrasting it with active treatments or a placebo. To ascertain its overall therapeutic potential in the contemporary management of type 2 diabetes, the analysis focuses on the primary outcomes of HbA1c and body weight, as well as the secondary outcomes of fasting plasma glucose, insulin resistance, lipid profile, liver enzymes, and adverse events.</p></sec><sec sec-type="methods" id="edm270217-sec-0006"><label>2</label><title>Methods</title><p>We conducted this systematic review and meta‐analysis in accordance with AMSTAR 2 tool and PRISMA guidelines, adhering to established standards for the rigorous conduct and transparent reporting of research syntheses [<xref rid="edm270217-bib-0014" ref-type="bibr">14</xref>]. Applying these guidelines ensured clear documentation of our methods and strengthened the reliability and reproducibility of our findings, ultimately supporting the overall credibility of our conclusions. As per the TITAN Guidelines 2025 governing transparent AI implementation in scholarly publications, AI assistance was confined exclusively to linguistic enhancement during manuscript development, with no involvement in designing the study, collecting data, performing analyses, or interpreting results [<xref rid="edm270217-bib-0015" ref-type="bibr">15</xref>]. The review protocol is available in the PROSPERO database under registration number CRD420261284992.</p><sec id="edm270217-sec-0007"><label>2.1</label><title>Search Strategy and Study Selection</title><p>A comprehensive search was carried out in PubMed, Cochrane Library, ScienceDirect, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://clinicaltrials.gov" ext-link-type="uri">ClinicalTrials.gov</ext-link>, and Google Scholar up to September 2025. The search terms used were “Ecnoglutide,” “GLP‐1 receptor agonist,” “type 2 diabetes,” “HbA1c,” and “randomized controlled trial.” Reference lists of related reviews and included studies were also checked to identify additional eligible trials (Table <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S1</xref>).</p><p>The study selection followed the PRISMA framework. All search results were imported into EndNote X7.5 to remove duplicates. Two reviewers independently screened titles and abstracts, followed by full‐text reviews to identify eligible studies. Disagreements were resolved through discussion or consultation with a third reviewer.</p><p>Inclusion criteria were randomized controlled trials (RCTs) involving adults (≥ 18 years) with type 2 diabetes mellitus (T2DM), comparing Ecnoglutide with either placebo or active comparators, and reporting at least one measurable outcome related to glycaemic or metabolic control such as HbA1c, fasting plasma glucose (FPG), insulin resistance, body weight, or adverse events.</p><p>Exclusion criteria included non‐randomized or observational studies, preclinical or single‐arm studies, and trials lacking comparative quantitative outcomes. Narrative reviews, editorials, and conference abstracts were also excluded.</p></sec><sec id="edm270217-sec-0008"><label>2.2</label><title>Data Extraction</title><p>Data extraction was performed using a standardized Excel sheet. Extracted data included study name, publication year, clinical trial registration number, sample size, participant characteristics (age, BMI, HbA1c, diabetes duration), intervention and comparator details, dose and treatment duration, and reported outcomes. The main outcomes assessed included measures of glycaemic and insulin regulation, such as glycated haemoglobin (HbA1c), fasting plasma glucose (FPG), 2‐h post‐prandial blood glucose, seven‐point self‐monitored blood glucose (SMBG), fasting insulin, and the homeostatic model assessment of insulin resistance (HOMA‐IR). Additional outcomes covered anthropometric measures including body weight, body mass index (BMI), and waist circumference (WC), as well as lipid profile parameters such as total cholesterol, low‐density lipoprotein cholesterol (LDL‐C), triglycerides (TG), and high‐density lipoprotein cholesterol (HDL‐C). Liver function was evaluated using alanine aminotransferase (ALT) and aspartate aminotransferase (AST). Safety assessments included any adverse events, serious adverse events, treatment‐related serious adverse events, and adverse events leading to treatment discontinuation. Two reviewers conducted the extraction independently, and any differences were resolved by consensus.</p></sec><sec id="edm270217-sec-0009"><label>2.3</label><title>Risk of Bias Assessment</title><p>The quality of the included studies was assessed using the Cochrane Risk of Bias Tool (RoB‐2) [<xref rid="edm270217-bib-0016" ref-type="bibr">16</xref>]. Each trial was evaluated for randomization, blinding, allocation concealment, completeness of outcome data, and selective reporting. Two reviewers independently assessed bias risk, and disagreements were resolved through discussion.</p></sec><sec id="edm270217-sec-0010"><label>2.4</label><title>Certainty of Evidence (<styled-content style="fixed-case" toggle="no">GRADE</styled-content> Assessment)</title><p>The certainty of evidence for key outcomes was evaluated using the <bold>Grading of Recommendations Assessment, Development and Evaluation (GRADE)</bold> approach. As all included studies were RCTs, evidence initially started at high certainty and was downgraded based on predefined criteria, including risk of bias, inconsistency, indirectness, imprecision, and publication bias. GRADE assessments were performed independently by two reviewers, and summary judgements were presented in the RCTs; evidence initially started at high certainty and was downgraded based on predefined criteria, including risk of bias, inconsistency, indirectness, imprecision, and publication bias [<xref rid="edm270217-bib-0017" ref-type="bibr">17</xref>].</p></sec><sec id="edm270217-sec-0011"><label>2.5</label><title>Statistical Analysis</title><p>Statistical analysis was conducted using Review Manager (RevMan 5.4). Continuous outcomes were presented as mean differences (MDs) with 95% confidence intervals (CIs), while dichotomous outcomes were expressed as risk ratios (RRs) with 95% CIs. We pooled different doses of ecnoglutide in the primary analysis to estimate the overall class‐level efficacy of ecnoglutide compared with control, consistent with previous meta‐analyses of incretin‐based therapies [<xref rid="edm270217-bib-0018" ref-type="bibr">18</xref>, <xref rid="edm270217-bib-0019" ref-type="bibr">19</xref>]. A random‐effects model was applied to account for variability among studies. Heterogeneity was assessed using the I<sup>2</sup> statistic, with values above 50% indicating significant heterogeneity [<xref rid="edm270217-bib-0020" ref-type="bibr">20</xref>]. Sensitivity analysis was performed by excluding one study at a time to check the robustness of results. Subgroup analyses were conducted to explore potential sources of heterogeneity. These were performed on the dosage categories used across studies (0.4 mg, 0.6 mg, 0.8 mg, 1.2 mg, 1.8 mg, and 2.4 mg) and on follow‐up duration, which was classified as short‐term (20–24 weeks), intermediate‐term (32–40 weeks), and long‐term (48–52 weeks). A <italic toggle="yes">p</italic>‐value of less than 0.05 was considered statistically significant. Due to the limited number of trials per individual dose, all available doses were pooled in the primary analysis to enhance statistical power, with dose‐stratified subgroup analyses conducted to explore potential dose–response effects.</p></sec></sec><sec sec-type="results" id="edm270217-sec-0012"><label>3</label><title>Results</title><sec id="edm270217-sec-0013"><label>3.1</label><title>Study Selection and Characteristics</title><p>The systematic literature search identified 141 records across five databases: Google Scholar (<italic toggle="yes">n</italic> = 112), Science Direct (<italic toggle="yes">n</italic> = 14), PubMed (<italic toggle="yes">n</italic> = 7), Cochrane Library (<italic toggle="yes">n</italic> = 5), and <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://clinicaltrials.gov" ext-link-type="uri">ClinicalTrials.gov</ext-link> (<italic toggle="yes">n</italic> = 3). After removing 46 duplicates, 95 unique records underwent title and abstract screening, of which 81 were excluded for not meeting inclusion criteria. Full‐text assessment of 14 articles resulted in the exclusion of 10 articles due to non‐compliance with eligibility or PICO criteria. Ultimately, 4 RCTs were included in the meta‐analysis. The selection process is illustrated in the PRISMA flow diagram (Figure <xref rid="edm270217-fig-0001" ref-type="fig">1</xref>).</p><fig position="float" fig-type="FIGURE" id="edm270217-fig-0001" orientation="portrait"><label>FIGURE 1</label><caption><p>PRISMA flow chart.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="EDM2-9-e70217-g001.jpg"/></fig><p>The included trials were published between 2023 and 2025, comprising a total of 1643 participants (1162 receiving ecnoglutide and 444 receiving placebo or active comparator). Three studies were phase 3 trials, and one was a phase 2 trial. Dalong et al. 2023 was a multicentre, double‐blind, placebo‐controlled phase 2 trial; Yang et al. 2025 was an open‐label, active‐controlled phase 3 trial (EECOH‐2); Linong et al. 2025 was a multicentre, double‐blind, placebo‐controlled phase 3 trial (SLIMMER); and Bing et al. 2025 was a double‐blind, placebo‐controlled phase 3 trial. The mean age of participants ranged from 34 to 54 years across treatment groups, with males comprising 50%–68% of participants. Mean baseline HbA1c ranged from 5.3% to 8.67%, and mean BMI ranged from 25.8 to 32.9 kg/m<sup>2</sup>. Ecnoglutide was administered subcutaneously at doses ranging from 0.4 mg to 2.4 mg. The primary outcomes included change in HbA1c from baseline and percentage change in bodyweight. Detailed study characteristics are presented in Tables <xref rid="edm270217-tbl-0001" ref-type="table">1</xref> and <xref rid="edm270217-tbl-0002" ref-type="table">2</xref>.</p><table-wrap position="float" id="edm270217-tbl-0001" content-type="TABLE" orientation="portrait"><label>TABLE 1</label><caption><p>Study characteristics.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" rowspan="2" valign="bottom" colspan="1">Study</th><th align="center" rowspan="2" valign="bottom" colspan="1">Clinical trial no</th><th align="center" rowspan="2" valign="bottom" colspan="1">Patient category</th><th align="center" rowspan="2" valign="bottom" colspan="1">Dose</th><th align="center" rowspan="2" valign="bottom" colspan="1">Total sample</th><th align="center" colspan="2" valign="bottom" rowspan="1">Sample size</th><th align="center" rowspan="2" valign="bottom" colspan="1">Study design</th><th align="center" rowspan="2" valign="bottom" colspan="1">Primary outcome</th></tr><tr style="border-bottom:solid 1px #000000"><th align="center" valign="bottom" rowspan="1" colspan="1">Ecnoglutide</th><th align="center" valign="bottom" rowspan="1" colspan="1">Control</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Dalong et al. 2023</td><td align="center" valign="top" rowspan="1" colspan="1">CTR20211014</td><td align="center" valign="top" rowspan="1" colspan="1">The ecnoglutide group had a mean age of 50.2 years, a higher proportion of males (67.9%), and a longer diabetes duration (49.7 months) compared with the placebo group (49.7 years, 52.8% male, 40.4 months).</td><td align="center" valign="top" rowspan="1" colspan="1">0.4 mg, 0.8 mg, 1.2 mg</td><td align="center" valign="top" rowspan="1" colspan="1">145</td><td align="center" valign="top" rowspan="1" colspan="1">109</td><td align="center" valign="top" rowspan="1" colspan="1">36</td><td align="center" valign="top" rowspan="1" colspan="1">This completed Phase 2, multicenter, randomized, double‐blind, placebo‐controlled clinical trial</td><td align="center" valign="top" rowspan="1" colspan="1">HbA1c levels declined for all ecnoglutide dose groups over the course of treatment</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Yang et al. 2025</td><td align="center" valign="top" rowspan="1" colspan="1"><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmc:clinical-trial" xlink:href="NCT05680129">NCT05680129</ext-link></td><td align="center" valign="top" rowspan="1" colspan="1">Eligible participants were adults aged 18–75 years with BMI 20–35 kg/m<sup>2</sup>, diagnosed with type 2 diabetes for ≥ 3 months, and on stable metformin monotherapy (≥ 1500 mg/day or ≥ 1000 mg/day if intolerant) plus diet and exercise for the 8 weeks before screening.</td><td align="center" valign="top" rowspan="1" colspan="1">0.6 mg, 1.2 mg</td><td align="center" valign="top" rowspan="1" colspan="1">623</td><td align="center" valign="top" rowspan="1" colspan="1">414</td><td align="center" valign="top" rowspan="1" colspan="1">207</td><td align="center" valign="top" rowspan="1" colspan="1">EECOH‐2 was an open‐label, active‐controlled, randomized, phase 3 trial</td><td align="center" valign="top" rowspan="1" colspan="1">The primary efficacy endpoint was the change from baseline in HbA1c to week 32.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Linong et al. 2025</td><td align="center" valign="top" rowspan="1" colspan="1"><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmc:clinical-trial" xlink:href="NCT05813795">NCT05813795</ext-link></td><td align="center" valign="top" rowspan="1" colspan="1">Eligible adults were 18–75 years old with BMI ≥ 28 kg/m<sup>2</sup>, or ≥ 24 kg/m<sup>2</sup> with multiple weight‐related comorbidities and had ≤ 5% self‐reported weight loss with diet and exercise in the 3 months before screening.</td><td align="center" valign="top" rowspan="1" colspan="1">1.2 mg, 1.8 mg, 2.4 mg</td><td align="center" valign="top" rowspan="1" colspan="1">664</td><td align="center" valign="top" rowspan="1" colspan="1">499</td><td align="center" valign="top" rowspan="1" colspan="1">165</td><td align="center" valign="top" rowspan="1" colspan="1">SLIMMER was a multicentre, randomized, double blind, placebo‐controlled, phase 3 trial</td><td align="center" valign="top" rowspan="1" colspan="1">The coprimary efficacy endpoints were the percentage change in bodyweight from baseline and the proportion of participants with reduction of 5% or more in bodyweight at week 40.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Bing et al. 2025</td><td align="center" valign="top" rowspan="1" colspan="1"><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmc:clinical-trial" xlink:href="NCT05680155">NCT05680155</ext-link></td><td align="center" valign="top" rowspan="1" colspan="1">Mean (SD) age was 52.0 (10.9) years, 60.2% were male, with mean (SD) HbA1c 8.52% (0.81), BMI 26.93 kg/m<sup>2</sup> (3.40), and T2DM duration 3.58 (3.78) years.</td><td align="center" valign="top" rowspan="1" colspan="1">0.6 mg, 1.2 mg</td><td align="center" valign="top" rowspan="1" colspan="1">211</td><td align="center" valign="top" rowspan="1" colspan="1">140</td><td align="center" valign="top" rowspan="1" colspan="1">36</td><td align="center" valign="top" rowspan="1" colspan="1">arandomized, double‐blind, placebo‐controlled, phase 3 trial</td><td align="center" valign="top" rowspan="1" colspan="1">The primary endpoint was met, and both doses of ecnoglutide signi cantly reduced HbA1c more than placebo for both primary and secondary e cacy estimands.</td></tr></tbody></table></table-wrap><table-wrap position="float" id="edm270217-tbl-0002" content-type="TABLE" orientation="portrait"><label>TABLE 2</label><caption><p>Baseline characteristics.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" rowspan="2" valign="bottom" colspan="1">Characteristics</th><th align="center" colspan="4" valign="bottom" rowspan="1">Dalong et al. 2023</th><th align="center" colspan="3" valign="bottom" rowspan="1">Yang et al. 2025</th><th align="center" colspan="4" valign="bottom" rowspan="1">Linong et al. 2025</th><th align="center" colspan="3" valign="bottom" rowspan="1">Bing et al. 2025</th></tr><tr style="border-bottom:solid 1px #000000"><th align="center" valign="bottom" rowspan="1" colspan="1">Ecnoglutide 0.4 mg</th><th align="center" valign="bottom" rowspan="1" colspan="1">Ecnoglutide 0.8 mg</th><th align="center" valign="bottom" rowspan="1" colspan="1">Ecnoglutide 1.2 mg</th><th align="center" valign="bottom" rowspan="1" colspan="1">Placebo</th><th align="center" valign="bottom" rowspan="1" colspan="1">Ecnoglutide 1.2 mg</th><th align="center" valign="bottom" rowspan="1" colspan="1">Ecnoglutide 0.6 mg</th><th align="center" valign="bottom" rowspan="1" colspan="1">Dulaglutide</th><th align="center" valign="bottom" rowspan="1" colspan="1">Ecnoglutide 1.2 mg</th><th align="center" valign="bottom" rowspan="1" colspan="1">Ecnoglutide 1.8 mg</th><th align="center" valign="bottom" rowspan="1" colspan="1">Ecnoglutide 2.4 mg</th><th align="center" valign="bottom" rowspan="1" colspan="1">Placebo</th><th align="center" valign="bottom" rowspan="1" colspan="1">Ecnoglutide 1.2 mg</th><th align="center" valign="bottom" rowspan="1" colspan="1">Ecnoglutide 0.6 mg</th><th align="center" valign="bottom" rowspan="1" colspan="1">Placebo</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Age (years)</td><td align="center" valign="top" rowspan="1" colspan="1">49.1 (8.87)</td><td align="center" valign="top" rowspan="1" colspan="1">51.8 (10.34)</td><td align="center" valign="top" rowspan="1" colspan="1">49.6 (9.65)</td><td align="center" valign="top" rowspan="1" colspan="1">49.7 (10.54)</td><td align="center" valign="top" rowspan="1" colspan="1">54.1 (10.11)</td><td align="center" valign="top" rowspan="1" colspan="1">54.2 (10.89)</td><td align="center" valign="top" rowspan="1" colspan="1">53.4 (9.28)</td><td align="center" valign="top" rowspan="1" colspan="1">34.0 (7.3)</td><td align="center" valign="top" rowspan="1" colspan="1">34.1 (7.7)</td><td align="center" valign="top" rowspan="1" colspan="1">35.0 (7.9)</td><td align="center" valign="top" rowspan="1" colspan="1">33.8 (7.2)</td><td align="center" valign="top" rowspan="1" colspan="1">52.5 (11.5)</td><td align="center" valign="top" rowspan="1" colspan="1">52.1 (10.8)</td><td align="center" valign="top" rowspan="1" colspan="1">51.4 (10.4)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Male</td><td align="center" valign="top" rowspan="1" colspan="1">25 (67.6)</td><td align="center" valign="top" rowspan="1" colspan="1">28 (77.8)</td><td align="center" valign="top" rowspan="1" colspan="1">21 (58.3)</td><td align="center" valign="top" rowspan="1" colspan="1">19 (52.8)</td><td align="center" valign="top" rowspan="1" colspan="1">113 (54%)</td><td align="center" valign="top" rowspan="1" colspan="1">120 (58%)</td><td align="center" valign="top" rowspan="1" colspan="1">114 (55%)</td><td align="center" valign="top" rowspan="1" colspan="1">83 (50%)</td><td align="center" valign="top" rowspan="1" colspan="1">76 (46%)</td><td align="center" valign="top" rowspan="1" colspan="1">94 (56%)</td><td align="center" valign="top" rowspan="1" colspan="1">82 (50%)</td><td align="center" valign="top" rowspan="1" colspan="1">43 (61%)</td><td align="center" valign="top" rowspan="1" colspan="1">39 (57%)</td><td align="center" valign="top" rowspan="1" colspan="1">45 (63%)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Female</td><td align="center" valign="top" rowspan="1" colspan="1">12 (32.4)</td><td align="center" valign="top" rowspan="1" colspan="1">8 (22.2)</td><td align="center" valign="top" rowspan="1" colspan="1">15 (41.7)</td><td align="center" valign="top" rowspan="1" colspan="1">17 (47.2)</td><td align="center" valign="top" rowspan="1" colspan="1">95 (46%)</td><td align="center" valign="top" rowspan="1" colspan="1">86 (42%)</td><td align="center" valign="top" rowspan="1" colspan="1">93 (45%)</td><td align="center" valign="top" rowspan="1" colspan="1">83 (50%)</td><td align="center" valign="top" rowspan="1" colspan="1">90 (54%)</td><td align="center" valign="top" rowspan="1" colspan="1">73 (44%)</td><td align="center" valign="top" rowspan="1" colspan="1">83 (50%)</td><td align="center" valign="top" rowspan="1" colspan="1">28 (39%)</td><td align="center" valign="top" rowspan="1" colspan="1">30 (43%)</td><td align="center" valign="top" rowspan="1" colspan="1">26 (37%)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Body weight (kg)</td><td align="center" valign="top" rowspan="1" colspan="1">72.8 (14.6)</td><td align="center" valign="top" rowspan="1" colspan="1">76.6 (13.4)</td><td align="center" valign="top" rowspan="1" colspan="1">72.5 (12.1)</td><td align="center" valign="top" rowspan="1" colspan="1">71.8 (12.2)</td><td align="center" valign="top" rowspan="1" colspan="1">74.22 (12.27)</td><td align="center" valign="top" rowspan="1" colspan="1">73.73 (12.90)</td><td align="center" valign="top" rowspan="1" colspan="1">72.77 (14.15)</td><td align="center" valign="top" rowspan="1" colspan="1">92.2 (17.4)</td><td align="center" valign="top" rowspan="1" colspan="1">91.4 (14.9)</td><td align="center" valign="top" rowspan="1" colspan="1">90.6 (16.0)</td><td align="center" valign="top" rowspan="1" colspan="1">91.0 (16.3)</td><td align="center" valign="top" rowspan="1" colspan="1">71.53 (12.05)</td><td align="center" valign="top" rowspan="1" colspan="1">74.25 (15.20)</td><td align="center" valign="top" rowspan="1" colspan="1">73.69 (11.31)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">BMI (kg/m2)</td><td align="center" valign="top" rowspan="1" colspan="1">25.8 (3.7)</td><td align="center" valign="top" rowspan="1" colspan="1">26.6 (3.4)</td><td align="center" valign="top" rowspan="1" colspan="1">26.2 (3.0)</td><td align="center" valign="top" rowspan="1" colspan="1">26.4 (3.2)</td><td align="center" valign="top" rowspan="1" colspan="1">27.22 (3.59)</td><td align="center" valign="top" rowspan="1" colspan="1">26.87 (3.45)</td><td align="center" valign="top" rowspan="1" colspan="1">26.64 (3.65)</td><td align="center" valign="top" rowspan="1" colspan="1">32.8 (4.4)</td><td align="center" valign="top" rowspan="1" colspan="1">32.9 (4.3)</td><td align="center" valign="top" rowspan="1" colspan="1">31.9 (3.6)</td><td align="center" valign="top" rowspan="1" colspan="1">32.4 (4.1)</td><td align="center" valign="top" rowspan="1" colspan="1">26.35 (3.31)</td><td align="center" valign="top" rowspan="1" colspan="1">27.23 (3.65)</td><td align="center" valign="top" rowspan="1" colspan="1">27.23 (3.20)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Waist circumference, cm</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">95.97 (9.18)</td><td align="center" valign="top" rowspan="1" colspan="1">95.56 (9.56)</td><td align="center" valign="top" rowspan="1" colspan="1">94.44 (10.32)</td><td align="center" valign="top" rowspan="1" colspan="1">104.4 (11.8)</td><td align="center" valign="top" rowspan="1" colspan="1">104.4 (10.8)</td><td align="center" valign="top" rowspan="1" colspan="1">103.2 (9.9)</td><td align="center" valign="top" rowspan="1" colspan="1">104.0 (10.4)</td><td align="center" valign="top" rowspan="1" colspan="1">93.26 (8.94)</td><td align="center" valign="top" rowspan="1" colspan="1">94.02 (10.55)</td><td align="center" valign="top" rowspan="1" colspan="1">94.60 (8.36)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">HbA1c (%)</td><td align="center" valign="top" rowspan="1" colspan="1">8.45 (0.64)</td><td align="center" valign="top" rowspan="1" colspan="1">8.65 (0.76)</td><td align="center" valign="top" rowspan="1" colspan="1">8.67 (0.75)</td><td align="center" valign="top" rowspan="1" colspan="1">8.44 (0.67)</td><td align="center" valign="top" rowspan="1" colspan="1">8.41% (0.78)</td><td align="center" valign="top" rowspan="1" colspan="1">8.39% (0.79)</td><td align="center" valign="top" rowspan="1" colspan="1">8.40% (0.78)</td><td align="center" valign="top" rowspan="1" colspan="1">5.3 (0.3)</td><td align="center" valign="top" rowspan="1" colspan="1">5.4 (0.3)</td><td align="center" valign="top" rowspan="1" colspan="1">5.3 (0.3)</td><td align="center" valign="top" rowspan="1" colspan="1">5.3 (0.4)</td><td align="center" valign="top" rowspan="1" colspan="1">8.51 (0.83)</td><td align="center" valign="top" rowspan="1" colspan="1">8.54 (0.80)</td><td align="center" valign="top" rowspan="1" colspan="1">8.51 (0.81)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">HbA1c, mmol/mol</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">68.40 (8.47)</td><td align="center" valign="top" rowspan="1" colspan="1">68.15 (8.62)</td><td align="center" valign="top" rowspan="1" colspan="1">68.28 (8.56)</td><td align="center" valign="top" rowspan="1" colspan="1">34.6 (3.4)</td><td align="center" valign="top" rowspan="1" colspan="1">35.0 (3.8)</td><td align="center" valign="top" rowspan="1" colspan="1">34.2 (3.8)</td><td align="center" valign="top" rowspan="1" colspan="1">34.2 (4.1)</td><td align="center" valign="top" rowspan="1" colspan="1">69.51 (9.10)</td><td align="center" valign="top" rowspan="1" colspan="1">69.84 (8.72)</td><td align="center" valign="top" rowspan="1" colspan="1">69.51 (8.89)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">FPG (mmol/L)</td><td align="center" valign="top" rowspan="1" colspan="1">9.70 (1.605)</td><td align="center" valign="top" rowspan="1" colspan="1">11.08 (1.678)</td><td align="center" valign="top" rowspan="1" colspan="1">10.00 (1.889)</td><td align="center" valign="top" rowspan="1" colspan="1">10.50 (1.800)</td><td align="center" valign="top" rowspan="1" colspan="1">9.56 (1.82)</td><td align="center" valign="top" rowspan="1" colspan="1">9.50 (1.95)</td><td align="center" valign="top" rowspan="1" colspan="1">9.51 (1.93)</td><td align="center" valign="top" rowspan="1" colspan="1">5.3 (0.4)</td><td align="center" valign="top" rowspan="1" colspan="1">5.3 (0.5)</td><td align="center" valign="top" rowspan="1" colspan="1">5.3 (0.5)</td><td align="center" valign="top" rowspan="1" colspan="1">5.2 (0.5)</td><td align="center" valign="top" rowspan="1" colspan="1">9.67 (1.86)</td><td align="center" valign="top" rowspan="1" colspan="1">9.67 (1.76)</td><td align="center" valign="top" rowspan="1" colspan="1">9.81 (1.82)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Fasting insulin, μU/mL</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">9.40 (6.32–15.19)</td><td align="center" valign="top" rowspan="1" colspan="1">9.62 (5.82–15.80)</td><td align="center" valign="top" rowspan="1" colspan="1">9.18 (5.46–14.73)</td><td align="center" valign="top" rowspan="1" colspan="1">22.7 (14.8)</td><td align="center" valign="top" rowspan="1" colspan="1">21.4 (12.8)</td><td align="center" valign="top" rowspan="1" colspan="1">21.4 (13.5)</td><td align="center" valign="top" rowspan="1" colspan="1">20.7 (10.5)</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Diabetes duration (months)</td><td align="center" valign="top" rowspan="1" colspan="1">46.23 (51.93)</td><td align="center" valign="top" rowspan="1" colspan="1">57.64 (44.18)</td><td align="center" valign="top" rowspan="1" colspan="1">45.39 (49.55)</td><td align="center" valign="top" rowspan="1" colspan="1">40.36 (35.58)</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Diabetes duration, years</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">6.35 (3.30–10.20)</td><td align="center" valign="top" rowspan="1" colspan="1">5.40 (3.30–9.50)</td><td align="center" valign="top" rowspan="1" colspan="1">5.30 (3.30–9.90)</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">3.66 (3.99)</td><td align="center" valign="top" rowspan="1" colspan="1">4.10 (4.20)</td><td align="center" valign="top" rowspan="1" colspan="1">3.00 (3.02)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Previous antihyperglycemic treatment, <italic toggle="yes">n</italic> (%)</td><td align="center" valign="top" rowspan="1" colspan="1">15 (40.5)</td><td align="center" valign="top" rowspan="1" colspan="1">23 (63.9)</td><td align="center" valign="top" rowspan="1" colspan="1">22 (61.1)</td><td align="center" valign="top" rowspan="1" colspan="1">19 (52.8)</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">35 (49)</td><td align="center" valign="top" rowspan="1" colspan="1">41 (59)</td><td align="center" valign="top" rowspan="1" colspan="1">26 (37)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">eGFR, mL/min per 1.73 m2</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">119.431 (27.27)</td><td align="center" valign="top" rowspan="1" colspan="1">126.081 (35.79)</td><td align="center" valign="top" rowspan="1" colspan="1">121.77 (29.45)</td><td align="center" valign="top" rowspan="1" colspan="1">103.4 (16.2)</td><td align="center" valign="top" rowspan="1" colspan="1">104.3 (17.5)</td><td align="center" valign="top" rowspan="1" colspan="1">104.0 (16.9)</td><td align="center" valign="top" rowspan="1" colspan="1">104.4 (18.0)</td><td align="center" valign="top" rowspan="1" colspan="1">124.7 (35.1)</td><td align="center" valign="top" rowspan="1" colspan="1">122.0 (29.9)</td><td align="center" valign="top" rowspan="1" colspan="1">113.5 (25.9)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Systolic blood pressure, mm Hg</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">125.6 (11.57)</td><td align="center" valign="top" rowspan="1" colspan="1">125.0 (11.76)</td><td align="center" valign="top" rowspan="1" colspan="1">125.4 (11.43)</td><td align="center" valign="top" rowspan="1" colspan="1">121.1 (11.1)</td><td align="center" valign="top" rowspan="1" colspan="1">120.8 (12.0)</td><td align="center" valign="top" rowspan="1" colspan="1">122.7 (12.1)</td><td align="center" valign="top" rowspan="1" colspan="1">120.6 (10.6)</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Diastolic blood pressure, mm Hg</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">81.9 (7.92)</td><td align="center" valign="top" rowspan="1" colspan="1">81.4 (7.71)</td><td align="center" valign="top" rowspan="1" colspan="1">82.0 (7.63)</td><td align="center" valign="top" rowspan="1" colspan="1">83.0 (8.0)</td><td align="center" valign="top" rowspan="1" colspan="1">82.5 (8.5)</td><td align="center" valign="top" rowspan="1" colspan="1">82.5 (8.3)</td><td align="center" valign="top" rowspan="1" colspan="1">82.7 (7.9)</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td></tr></tbody></table></table-wrap></sec><sec id="edm270217-sec-0014"><label>3.2</label><title>Risk of Bias Assessment</title><p>The risk of bias was assessed using the Cochrane Risk of Bias Tool. Overall, 3 studies were rated as low risk of bias, whereas 1 study (Yang et al. 2025) [<xref rid="edm270217-bib-0013" ref-type="bibr">13</xref>] was rated as high risk due to its open‐label design. All studies demonstrated adequate randomization using computer‐generated sequences or interactive web response systems with appropriate stratification by baseline HbA1c or BMI. Allocation concealment was ensured through centralized randomization systems in all trials. The main methodological concern was performance bias in Yang et al. 2025, where blinding of participants and personnel was not possible due to differences in injection devices. No concerns were identified regarding incomplete outcome data, selective reporting, or other sources of bias across all included studies. The risk of bias is presented in Figures <xref rid="edm270217-fig-0002" ref-type="fig">2A</xref> and <xref rid="edm270217-fig-0002" ref-type="fig">2B</xref> and detailed in Table <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S2</xref>. The certainty of evidence for Key outcome was appraised using the GRADE (Grading of Recommendations Assessment, Development and Evaluation) framework (Table <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S3</xref>).</p><fig position="float" fig-type="FIGURE" id="edm270217-fig-0002" orientation="portrait"><label>FIGURE 2</label><caption><p>Risk of bias graph (A) and risk of bias summary (B).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="EDM2-9-e70217-g002.jpg"/></fig></sec><sec id="edm270217-sec-0015"><label>3.3</label><title>Glycaemic Control Outcomes</title><p>Across the included studies, Ecnoglutide was associated with significant reductions in glycaemic control outcomes. HbA1c (%) decreased significantly (MD = −0.44, 95% CI −0.55 to −0.33, <italic toggle="yes">p</italic> &lt; 0.00001) (Figure <xref rid="edm270217-fig-0003" ref-type="fig">3</xref>), and HbA1c expressed in mmol/mol showed a similar decline (MD = −8.31, 95% CI −14.03 to −2.59, <italic toggle="yes">p</italic> = 0.004) (Figure <xref rid="edm270217-fig-0004" ref-type="fig">4</xref>). The proportion of participants achieving HbA1c targets was lower with Ecnoglutide compared with control (RR = 1.94, 95% CI 1.67 to 2.25, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="edm270217-fig-0005" ref-type="fig">5</xref>).</p><fig position="float" fig-type="FIGURE" id="edm270217-fig-0003" orientation="portrait"><label>FIGURE 3</label><caption><p>Forest plot of change in HbA1c (%).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="EDM2-9-e70217-g007.jpg"/></fig><fig position="float" fig-type="FIGURE" id="edm270217-fig-0004" orientation="portrait"><label>FIGURE 4</label><caption><p>Forest plot of change in HbA1c (mmol/mol).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="EDM2-9-e70217-g005.jpg"/></fig><fig position="float" fig-type="FIGURE" id="edm270217-fig-0005" orientation="portrait"><label>FIGURE 5</label><caption><p>Forest plot of participants achieving HbA1c targets.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-11" orientation="portrait" xlink:href="EDM2-9-e70217-g004.jpg"/></fig><p>Fasting plasma glucose was reduced (MD = −0.81, 95% CI −1.03 to −0.59, <italic toggle="yes">p</italic> &lt; 0.00001) (Figure <xref rid="edm270217-fig-0006" ref-type="fig">6</xref>), and 2‐h post‐prandial blood glucose also decreased (MD = −1.98, 95% CI −3.48 to −0.47, <italic toggle="yes">p</italic> = 0.01) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S11</xref>). Seven‐point SMBG values showed a significant reduction (MD = −0.91, 95% CI −1.18 to −0.64, <italic toggle="yes">p</italic> &lt; 0.00001) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S12</xref>).</p><fig position="float" fig-type="FIGURE" id="edm270217-fig-0006" orientation="portrait"><label>FIGURE 6</label><caption><p>Forest plot of fasting plasma glucose (mmol/L).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-13" orientation="portrait" xlink:href="EDM2-9-e70217-g003.jpg"/></fig></sec><sec id="edm270217-sec-0016"><label>3.4</label><title>Insulin Sensitivity</title><p>Improvements were observed in insulin‐related measures. Fasting insulin declined (MD = −3.20, 95% CI −5.47 to −0.93, <italic toggle="yes">p</italic> = 0.006) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S13</xref>), and HOMA‐IR was similarly reduced (MD = −1.04, 95% CI −1.62 to −0.46, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S14</xref>).</p></sec><sec id="edm270217-sec-0017"><label>3.5</label><title>Anthropometric Outcomes</title><p>Bodyweight was reduced with Ecnoglutide (MD = −5.63, 95% CI −7.90 to −3.35, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S15</xref>), as was percentage change in bodyweight (MD = −7.15, 95% CI −9.98 to −4.32, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S16</xref>). A decrease was also observed in BMI (MD = −2.14, 95% CI −3.39 to −0.88, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S17</xref>) and waist circumference (MD = −3.84, 95% CI −5.71 to −1.97, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S18</xref>).</p><p>In contrast, a higher proportion of participants achieved predefined weight‐loss thresholds in the control group (RR = 5.72, 95% CI 4.15 to 7.86, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S19</xref>).</p></sec><sec id="edm270217-sec-0018"><label>3.6</label><title>Lipid Profile</title><p>Significant reductions were observed in percentage change from baseline in total cholesterol (MD = −0.16, 95% CI −0.25 to −0.06, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S110</xref>), LDL‐cholesterol (MD = −0.08, 95% CI −0.14 to −0.02, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S111</xref>), and triglycerides (MD = −0.37, 95% CI −0.48 to −0.25, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S112</xref>). HDL‐cholesterol increased to a greater extent in the control group (MD = 0.05, 95% CI 0.02 to 0.07, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S113</xref>).</p></sec><sec id="edm270217-sec-0019"><label>3.7</label><title>Liver Enzyme Markers</title><p>Reductions were noted in alanine aminotransferase (MD = −9.18, 95% CI −13.12 to −5.23, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S1.14</xref>) and aspartate aminotransferase (MD = −3.46, 95% CI −4.97 to −1.95, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S1.15</xref>).</p></sec><sec id="edm270217-sec-0020"><label>3.8</label><title>Safety Outcomes</title><p>Adverse events occurred more frequently in the Ecnoglutide group (RR = 1.09, 95% CI 1.04 to 1.14, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S116</xref>). No significant differences were found in serious adverse events (RR = 1.29, 95% CI 0.94 to 1.77, <italic toggle="yes">p</italic> = 0.11) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S117</xref>) or treatment‐related serious adverse events (RR = 4.79, 95% CI 0.82 to 27.89, <italic toggle="yes">p</italic> = 0.08) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S118</xref>). Adverse events leading to treatment discontinuation were similar between groups (RR = 1.40, 95% CI 0.72 to 2.70, <italic toggle="yes">p</italic> = 0.32) (Figure <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S119</xref>).</p></sec><sec id="edm270217-sec-0021"><label>3.9</label><title>Sensitivity Analyses and Heterogeneity</title><p>Heterogeneity was assessed for all outcomes, and sensitivity analyses were conducted for those with substantial variability (I<sup>2</sup> &gt; 50%). Exclusion of influential studies markedly reduced heterogeneity across multiple outcomes. For glycaemic parameters, removing Bing et al., 2025 decreased heterogeneity for HbA1c, fasting plasma glucose, and 2‐h post‐prandial glucose. Insulin‐related outcomes (fasting insulin and HOMA‐IR) became homogeneous after excluding Linong et al., 2025. High heterogeneity in bodyweight‐related measures, BMI, and waist circumference was also substantially reduced following the same exclusion. Similarly, lipid and hepatic biomarkers showed minimal variability after removing influential studies. Overall, these analyses confirmed that the pooled effect estimates were robust, and the direction and significance of effects remained consistent, despite initial heterogeneity (see Figures <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S2.1–S2.15</xref>).</p></sec><sec id="edm270217-sec-0022"><label>3.10</label><title>Subgroup Analyses by Dosage</title><p>To explore potential dose–response effects, the outcomes were analysed according to Ecnoglutide dosage (0.4 mg, 0.6 mg, 0.8 mg, 1.2 mg, 1.8 mg, 2.4 mg). Ecnoglutide demonstrated strong, dose‐dependent effects on several outcomes. Higher doses consistently produced larger improvements in glycaemic control, with the most pronounced reductions in HbA1c (%) and fasting plasma glucose observed at 1.8 mg and 2.4 mg, whereas lower doses showed smaller effects. Fasting insulin and HOMA‐IR also improved progressively with dose, reflecting enhanced insulin sensitivity at higher doses. Anthropometric measures, including bodyweight, BMI, waist circumference, and percentage bodyweight reduction, exhibited clear dose–response relationships, with maximal reductions at the highest doses. HDL‐C and triglycerides similarly increased or decreased, respectively, in a dose‐dependent manner. Hepatic biomarkers, ALT and AST, showed progressively larger reductions with increasing doses, peaking at 1.8–2.4 mg. These findings indicate that for glycaemic, anthropometric, lipid (HDL‐C and triglycerides), and hepatic outcomes, the effect of Ecnoglutide is strongly modulated by dose.</p><p>In contrast, some outcomes were minimally affected by dosage or showed no clear dose–response relationship. HbA1c in mmol/mol and 2‐h post‐prandial glucose demonstrated high variability across doses, with no statistically significant differences between low and high doses. Hip circumference reductions were similar across the lower doses, suggesting limited additional benefit at higher doses. Total cholesterol and LDL‐cholesterol showed modest reductions that were largely independent of dose. These observations indicate that for these specific outcomes, the magnitude of ecnoglutide's effect does not appear to be strongly influenced by dosage, and lower doses provide comparable benefits to higher doses. Detailed results are provided in Figures <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S3.1–S3.17</xref>.</p></sec><sec id="edm270217-sec-0023"><label>3.11</label><title>Subgroup Analysis by Follow‐Up Duration</title><p>Outcomes were also analysed according to follow‐up duration: short‐term (20–24 weeks), intermediate‐term (32–40 weeks), and long‐term (48–52 weeks). Ecnoglutide's effects on glycaemic, anthropometric, and metabolic outcomes were significantly modulated by follow‐up duration for several measures. HbA1c in mmol/mol, fasting plasma glucose, 2‐h post‐prandial glucose, bodyweight, percentage bodyweight reduction, BMI, and waist circumference all demonstrated clear duration‐dependent effects. Short‐term follow‐up (20–24 weeks) showed substantial initial improvements in glycaemia and bodyweight, which generally increased or were maintained with intermediate‐ and long‐term follow‐up, with the largest effects observed in the long‐term (48–52 weeks) subgroups. Fasting insulin and HOMA‐IR also showed numerically greater reductions with longer follow‐up, though statistical tests for subgroup differences were not significant. These findings indicate that for these outcomes, longer treatment duration enhances the magnitude of benefit.</p><p>In contrast, some outcomes were minimally affected by follow‐up duration. HbA1c (%) reductions were significant across all durations but showed no statistically meaningful differences between subgroups. Hip circumference, total cholesterol, LDL‐cholesterol, HDL‐cholesterol, and triglycerides exhibited small or modest changes across follow‐up periods, and tests for subgroup differences were largely non‐significant, indicating that treatment duration did not substantially alter the effect for these outcomes. These results suggest that while Ecnoglutide provides consistent benefits over time for these measures, extending treatment duration does not meaningfully change the magnitude of effect. Detailed results are provided in Figures <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">S4.1–S4.15</xref>.</p></sec></sec><sec sec-type="discussion" id="edm270217-sec-0024"><label>4</label><title>Discussion</title><p>Several novel drugs have been introduced to improve quality of life in individuals with type 2 diabetes mellitus. This study evaluates the efficacy and safety of ecnoglutide, a novel glucagon‐like peptide‐1 receptor agonist (GLP‐1 RA) [<xref rid="edm270217-bib-0021" ref-type="bibr">21</xref>]. Pooled analysis of four randomized controlled trials (RCTs) including 1643 participants demonstrated reductions in HbA1c, body weight, fasting, and postprandial glucose levels compared with placebo. These outcomes suggest that ecnoglutide may be a promising metabolic therapy for achieving glycaemic control and weight reduction, consistent with the effects reported for other GLP‐1 RAs such as semaglutide and dulaglutide. However, the limited number of trials observed heterogeneity; the differences in population characteristics, comparator arms, dosing regimens, and follow‐up durations should be considered when interpreting these findings [<xref rid="edm270217-bib-0022" ref-type="bibr">22</xref>].</p><p>Dose stratified analyses indicate apparent trends towards dose‐dependent improvements in outcomes such as HbA1c, body weight, insulin resistance, and hepatic biomarkers, reflecting biological plausibility and enhanced receptor engagement at higher doses [<xref rid="edm270217-bib-0023" ref-type="bibr">23</xref>]. Nevertheless, these subgroup analyses were exploratory, and a formal dose response meta‐analysis was not feasible due to the small number of trials.</p><p>Ecnoglutide participants experienced reductions in fasting blood glucose and HbA1c levels, with a higher proportion achieving HbA1c &lt; 7% compared with control groups. While these findings support the glycaemic efficacy of ecnoglutide in treatment‐naïve or metformin‐treated individuals, comparisons with high‐dose semaglutide reported in SUSTAIN trials or other GLP‐1 RAs should be interpreted cautiously, as no direct head‐to‐head trials or network meta‐analyses were conducted [<xref rid="edm270217-bib-0024" ref-type="bibr">24</xref>, <xref rid="edm270217-bib-0025" ref-type="bibr">25</xref>]. Similarly, improvements in fasting insulin and HOMA‐IR levels suggest enhanced insulin sensitivity, though indirect comparisons with other GLP‐1 RAs remain exploratory.</p><p>Participants also experienced weight reductions alongside decreases in waist circumference and BMI [<xref rid="edm270217-bib-0026" ref-type="bibr">26</xref>, <xref rid="edm270217-bib-0027" ref-type="bibr">27</xref>]. While these effects appear consistent with the known GLP‐1 receptor‐mediated mechanisms, comparisons of magnitude with other agents (e.g., semaglutide in STEP trials) are indirect and intended for contextual discussion rather than evidence of superiority [<xref rid="edm270217-bib-0028" ref-type="bibr">28</xref>]. One study reported a higher proportion of weight‐loss responders in the control group, likely reflecting study specific factors or reporting variability. These observations highlight the need for future studies with weight‐specific endpoints to confirm and quantify weight‐reducing effects.</p><p>Ecnoglutide also showed favourable trends in lipid metabolism, with reductions in total cholesterol, LDL‐C, and triglycerides, and modest improvements in HDL‐C [<xref rid="edm270217-bib-0012" ref-type="bibr">12</xref>]. Hepatic biomarkers such as ALT and AST declined in line with patterns observed with other GLP‐1 RAs, supporting potential benefits in metabolic‐associated steatotic liver disease (MASLD) [<xref rid="edm270217-bib-0029" ref-type="bibr">29</xref>]. These findings are consistent with known pharmacologic effects, though no direct comparative evidence is available.</p><p>The safety profile of ecnoglutide was generally consistent with other GLP‐1 RAs. Mild to moderate gastrointestinal adverse events, including nausea, diarrhoea, and reduced appetite, were observed, while serious adverse events such as pancreatitis, major hypoglycaemia, or thyroid‐related events were not reported. These observations suggest a tolerable safety profile at the doses studied [<xref rid="edm270217-bib-0030" ref-type="bibr">30</xref>]. However, the limited number of trials and inconsistent reporting of dose‐specific adverse events preclude definitive conclusions regarding rare or long‐term safety outcomes.</p><p>Overall, these findings suggest that ecnoglutide may be a promising incretin‐based therapy with potential metabolic benefits. Dose‐dependent trends and improvements in glycaemic and anthropometric measures support further investigation. Importantly, comparisons with other GLP‐1 RAs should be interpreted as <bold>indirect and exploratory</bold>, given the absence of head‐to‐head trials or cardiovascular outcome data. Future studies are needed to evaluate cardiovascular and renal outcomes, long‐term safety, and real‐world adherence to fully establish the clinical profile of ecnoglutide.</p></sec><sec id="edm270217-sec-0025"><label>5</label><title>Limitations</title><p>This meta‐analysis has several important limitations that should be acknowledged. First, only four randomized controlled trials comprising 1643 participants were included. This limited evidence base substantially restricts statistical power, limits the precision of pooled estimates, and prevents reliable assessment of rare or infrequent adverse events [<xref rid="edm270217-bib-0031" ref-type="bibr">31</xref>]. With a small number of trials, pooled estimates remain susceptible to evidential fragility, small‐study effects, and potential overestimation of treatment effects. In the primary analysis, different ecnoglutide doses were pooled to preserve statistical power, as the limited number of trials and uneven dose distribution precluded reliable dose‐specific pooled estimates. Although dose‐stratified subgroup analyses were performed, pooling across doses may have obscured potential dose‐dependent differences and should be interpreted with caution. Second, clinical heterogeneity represents a central limitation of this analysis. Despite moderate statistical heterogeneity in several pooled analyses, there was considerable variability across trials in baseline patient characteristics, disease duration, background glucose‐lowering therapies, and study duration [<xref rid="edm270217-bib-0032" ref-type="bibr">32</xref>]. Such variability may confound pooled efficacy and safety estimates and limit direct comparability across studies.</p><p>Third, the included populations were relatively homogeneous, with most trials enrolling individuals with shorter diabetes duration and excluding patients with advanced renal impairment or significant cardiovascular comorbidities. This restricts the external validity and generalizability of our findings to broader, higher‐risk real‐world populations.</p><p>Fourth, one included phase 3 trial used an open‐label design, introducing unavoidable performance and detection bias [<xref rid="edm270217-bib-0033" ref-type="bibr">33</xref>]. Lack of blinding may particularly influence subjective outcomes such as weight‐related behaviours, dietary adherence, and patient‐reported adverse events, especially gastrointestinal symptoms. Participants aware of receiving active treatment may modify lifestyle behaviours or report adverse events differently, potentially exaggerating treatment effects or safety signals. Although sensitivity analyses did not materially alter pooled estimates, the influence of open‐label design remains a significant methodological limitation and should be considered when interpreting the findings.</p><p>Fifth, most included studies had relatively short follow‐up durations (&lt; 40 weeks), limiting evaluation of long‐term cardiovascular safety, durability of glycaemic control, and sustained weight effects [<xref rid="edm270217-bib-0034" ref-type="bibr">34</xref>]. Longer outcome‐driven trials are required to establish the long‐term benefit–risk profile of ecnoglutide.</p><p>Sixth, the higher incidence of gastrointestinal adverse events observed with ecnoglutide, consistent with the known class effects of GLP‐1 receptor agonists, may influence treatment adherence and real‐world tolerability [<xref rid="edm270217-bib-0035" ref-type="bibr">35</xref>]. However, long‐term adherence data remain limited.</p><p>Finally, the absence of a formal dose–response meta‐analysis due to limited and inconsistently reported dose regimens across trials precludes quantitative assessment of dose‐dependent efficacy and safety endpoints. This further underscores the need for cautious interpretation of pooled findings.</p><p>Taking together, although current evidence suggests promising metabolic benefits, the limited number of trials and relatively small cumulative sample size highlight the need for larger, well‐powered, long‐term randomized controlled trials to confirm these findings.</p></sec><sec sec-type="conclusions" id="edm270217-sec-0026"><label>6</label><title>Conclusion</title><p>This meta‐analysis highlights the potential clinical benefits of ecnoglutide, a novel GLP‐1 analogue, in adults with type 2 diabetes mellitus. The available evidence suggests improvements in glycaemic control, body weight, lipid parameters, and hepatic biomarkers. The safety profile appears generally consistent with other GLP‐1 receptor agonists, with mostly mild to moderate gastrointestinal adverse events reported. Comparisons with other GLP‐1 analogues should be interpreted cautiously, as no direct head‐to‐head trials or cardiovascular outcome data are currently available. Although these findings are promising, they are based on a limited number of trials and relatively short follow‐up durations. Future research, including long‐term cardiovascular outcome studies and well‐powered head‐to‐head comparisons, is needed to more fully evaluate the therapeutic potential, safety, and real‐world applicability of ecnoglutide.</p></sec><sec id="edm270217-sec-0027"><title>Author Contributions</title><p>
+<bold>Mukesh Kumar:</bold> Conceptualization, Methodology, Data curation, Formal analysis, Writing – original draft, Software. <bold>Sumet Kumar:</bold> Conceptualization, Methodology, Software, Writing – original draft, Visualization. <bold>Sheikh Muhammad Ebtehaj Ali:</bold> Writing – original draft, Data Curation, Formal analysis, Software. <bold>Arshia Arif Janjua:</bold> writing – original draft, formal analysis, software. <bold>Hadia Qazi:</bold> writing – original draft, formal analysis, software. <bold>Fatima Hanif:</bold> methodology, writing – original draft. <bold>Sana Mohammad Ali:</bold> writing – original draft, methodology. <bold>Rayan Babar:</bold> writing – original draft, visualization, data curation. <bold>Laksh Kumar:</bold> writing – review and editing. <bold>Rumaisa Imtiaz Sheikh:</bold> methodology, writing – original draft. <bold>Hanzlah Ahmed:</bold> writing – original draft, visualization, data curation. <bold>Aayush Chaulagain:</bold> supervision, writing – review and editing. <bold>Khizra Gul:</bold> writing – original draft. <bold>Ayesha Sarwar Ali:</bold> Writing – original draft. <bold>Shehzadi Umme Rubab Bukhari:</bold> writing – original draft. <bold>Adarsh Raja:</bold> supervision, writing – review and editing, validation.</p></sec><sec id="edm270217-sec-0029"><title>Funding</title><p>The authors have nothing to report.</p></sec><sec sec-type="conclusions" id="edm270217-sec-0030"><title>Consent</title><p>The authors have nothing to report.</p></sec><sec sec-type="COI-statement" id="edm270217-sec-0031"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="edm270217-supitem-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Table S1:</bold> Search strategy.</p><p>
+<bold>Table S2:</bold> Risk of bias assessment.</p><p>
+<bold>Table S3:</bold> GRADE table for outcomes.</p><p>
+<bold>Figure S1:</bold> 1: 2‐h post‐prandial blood glucose, mmol/L.</p><p>
+<bold>Figure S1:</bold> 2: 7‐point SMBG, mmol/L.</p><p>
+<bold>Figure S1:</bold> 3: Fasting insulin, μU/mL.</p><p>
+<bold>Figure S1:</bold> 4: HOMA‐IR.</p><p>
+<bold>Figure S1:</bold> 5: Absolute change in Bodyweight, kg.</p><p>
+<bold>Figure S1:</bold> 6: Percentage change in bodyweight.</p><p>
+<bold>Figure S1:</bold> 7: BMI, kg/m2.</p><p>
+<bold>Figure S1:</bold> 8: Waist circumference, cm.</p><p>
+<bold>Figure S1:</bold> 9: Participants with % bodyweight reduction.</p><p>
+<bold>Figure S1:</bold> 10: Percentage change from baseline in total cholesterol.</p><p>
+<bold>Figure S1:</bold> 11: Percentage change from baseline in LDL‐cholesterol.</p><p>
+<bold>Figure S1:</bold> 12: Triglycerides, mmol/L.</p><p>
+<bold>Figure S1:</bold> 13: Percentage change from baseline in HDL‐cholesterol.</p><p>
+<bold>Figure S1:</bold> 14: Alanine aminotransferase, U/L.</p><p>
+<bold>Figure S1:</bold> 15: Aspartate aminotransferase, U/L.</p><p>
+<bold>Figure S1:</bold> 16: Any adverse events.</p><p>
+<bold>Figure S1:</bold> 17: Serious adverse events.</p><p>
+<bold>Figure S1:</bold> 18: Treatment‐related serious adverse events.</p><p>
+<bold>Figure S1:</bold> 19: Adverse events leading to treatment discontinuation.</p><p>
+<bold>Figure S2:</bold> 1: HbA1C % (‐Bing et al. 2025).</p><p>
+<bold>Figure S2:</bold> 2: HbA1c, mmol/mol (‐Bing et al. 2025).</p><p>
+<bold>Figure S2:</bold> 3: Fasting plasma glucose, mmol/L (‐Bing et al. 2025).</p><p>
+<bold>Figure S2:</bold> 4: 2 h post‐prandial blood glucose, mmol/L (‐Bing et al. 2025).</p><p>
+<bold>Figure S2:</bold> 5: fasting insulin, μU/mL (‐Linong et al. 2025).</p><p>
+<bold>Figure S2:</bold> 6: HOMA‐IR (‐Linong et al. 2025).</p><p>
+<bold>Figure S2:</bold> 7: Bodyweight, kg (‐Linong et al. 2025).</p><p>
+<bold>Figure S2:</bold> 8: Percentage changes in bodyweight (‐Linong et al. 2025).</p><p>
+<bold>Figure S2:</bold> 9: BMI, kg/m2 (‐Linong et al. 2025).</p><p>
+<bold>Figure S2:</bold> 10: Waist circumference, cm (‐Linong et al. 2025).</p><p>
+<bold>Figure S2:</bold> 11: Percentage change from baseline in total cholesterol (‐Linong et al. 2025).</p><p>
+<bold>Figure S2:</bold> 12: Percentage change from baseline in HDL‐cholesterol (‐Linong et al. 2025).</p><p>
+<bold>Figure S2:</bold> 13: Triglycerides, mmol/L (‐Linong et al. 2025).</p><p>
+<bold>Figure S2:</bold> 14: Alanine aminotransferase, U/L (‐Linong et al. 2025).</p><p>
+<bold>Figure S2:</bold> 15: Aspartate aminotransferase, U/L (‐Linong et al. 2025) Forest Plot of Subgroup Analysis by Dosage.</p><p>
+<bold>Figure S3:</bold> 1: HbA1C %.</p><p>
+<bold>Figure S3:</bold> 2: HbA1c, mmol/mol.</p><p>
+<bold>Figure S3:</bold> 3: Fasting plasma glucose, mmol/L.</p><p>
+<bold>Figure S3:</bold> 4: 2 h post‐prandial blood glucose, mmol/L.</p><p>
+<bold>Figure S3:</bold> 5: Fasting insulin, μU/mL.</p><p>
+<bold>Figure S3:</bold> 6: HOMA‐IR.</p><p>
+<bold>Figure S3:</bold> 7: Bodyweight, kg.</p><p>
+<bold>Figure S3:</bold> 8: Percentage change in bodyweight.</p><p>
+<bold>Figure S3:</bold> 9: BMI, kg/m2.</p><p>
+<bold>Figure S3:</bold> 10: Waist circumference, cm.</p><p>
+<bold>Figure S3:</bold> 11: Hip circumference, cm.</p><p>
+<bold>Figure S3:</bold> 12: Percentage change from baseline in total cholesterol.</p><p>
+<bold>Figure S3:</bold> 13: Percentage change from baseline in LDL‐cholesterol.</p><p>
+<bold>Figure S3:</bold> 14: Percentage change from baseline in HDL‐cholesterol.</p><p>
+<bold>Figure S3:</bold> 15: Triglycerides, mmol/L.</p><p>
+<bold>Figure S3:</bold> 16: Alanine aminotransferase, U/L.</p><p>
+<bold>Figure S3:</bold> 17: Aspartate aminotransferase, U/L Forest Plot of Subgroup Analysis by Follow‐up Duration.</p><p>
+<bold>Figure S4:</bold> 1: HbA1C %.</p><p>
+<bold>Figure S4:</bold> 2: HbA1c, mmol/mol.</p><p>
+<bold>Figure S4:</bold> 3: Fasting plasma glucose, mmol/L.</p><p>
+<bold>Figure S4:</bold> 4: 2 h post‐prandial blood glucose, mmol/L.</p><p>
+<bold>Figure S4:</bold> 5: Fasting insulin, μU/mL.</p><p>
+<bold>Figure S4:</bold> 6: HOMA‐IR.</p><p>
+<bold>Figure S4:</bold> 7: Bodyweight, kg.</p><p>
+<bold>Figure S4:</bold> 8: Percentage change in bodyweight.</p><p>
+<bold>Figure S4:</bold> 9: BMI, kg/m2 10: Waist circumference, cm.</p><p>
+<bold>Figure S4:</bold> 11: Hip circumference, cm.</p><p>
+<bold>Figure S4:</bold> 12: Percentage change from baseline in total cholesterol.</p><p>
+<bold>Figure S4:</bold> 13: Percentage change from baseline in LDL‐cholesterol.</p><p>
+<bold>Figure S4:</bold> 14: Percentage change from baseline in HDL‐cholesterol.</p><p>
+<bold>Figure S4:</bold> 15: Triglycerides, mmol/L.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="EDM2-9-e70217-s001.docx" position="float" orientation="portrait"/></supplementary-material></sec></body><back><ack id="edm270217-sec-0028"><title>Acknowledgements</title><p>The authors have nothing to report.</p></ack><sec sec-type="data-availability" id="edm270217-sec-0033"><title>Data Availability Statement</title><p>The data that supports the findings of this study are available in the <xref rid="edm270217-supitem-0001" ref-type="supplementary-material">Supporting Information</xref> of this article.</p></sec><ref-list content-type="cited-references" id="edm270217-bibl-0001"><title>References</title><ref id="edm270217-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="edm270217-cit-0001">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Pan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Cao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Fang</surname>
+</string-name>, et al., “<article-title>Global Burden of Diabetes Mellitus 1990–2021: Epidemiological Trends, Geospatial Disparities, and Risk Factor Dynamics</article-title>,” <source>Frontiers in Endocrinology</source>
+<volume>16</volume> (<year>2025</year>): <elocation-id>1596127</elocation-id>, <pub-id pub-id-type="doi">10.3389/FENDO.2025.1596127/BIBTEX</pub-id>.<pub-id pub-id-type="pmid">40666058</pub-id>
+<pub-id pub-id-type="pmcid">PMC12259457</pub-id></mixed-citation></ref><ref id="edm270217-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="edm270217-cit-0002">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Zheng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. H.</given-names>
+<surname>Ley</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F. B.</given-names>
+<surname>Hu</surname>
+</string-name>, “<article-title>Global Aetiology and Epidemiology of Type 2 Diabetes Mellitus and Its Complications</article-title>,” <source>Nature Reviews. Endocrinology</source>
+<volume>14</volume>, no. <issue>2</issue> (<year>2018</year>): <fpage>88</fpage>–<lpage>98</lpage>, <pub-id pub-id-type="doi">10.1038/NRENDO.2017.151</pub-id>. PubMed PMID: 29219149.<pub-id pub-id-type="pmid">29219149</pub-id></mixed-citation></ref><ref id="edm270217-bib-0003"><label>3</label><mixed-citation publication-type="book" id="edm270217-cit-0003">
+<string-name name-style="western">
+<given-names>D. J.</given-names>
+<surname>Magliano</surname>
+</string-name> and <string-name name-style="western">
+<given-names>E. J.</given-names>
+<surname>Boyko</surname>
+</string-name>, “<part-title>International Diabetes Federation</part-title>,” in <source>IDF Diabetes Atlas</source>, <edition designator="10">10th ed.</edition> (<publisher-name>International Diabetes Federation</publisher-name>, <year>2021</year>). PubMed PMID: 35914061.<pub-id pub-id-type="pmid">35914061</pub-id></mixed-citation></ref><ref id="edm270217-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="edm270217-cit-0004">
+<string-name name-style="western">
+<given-names>N. H.</given-names>
+<surname>Cho</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>Shaw</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Karuranga</surname>
+</string-name>, et al., “<article-title>IDF Diabetes Atlas: Global Estimates of Diabetes Prevalence for 2017 and Projections for 2045</article-title>,” <source>Diabetes Research and Clinical Practice</source>
+<volume>138</volume> (<year>2018</year>): <fpage>271</fpage>–<lpage>281</lpage>, <pub-id pub-id-type="doi">10.1016/j.diabres.2018.02.023</pub-id>. PubMed PMID: 29496507.<pub-id pub-id-type="pmid">29496507</pub-id>
+</mixed-citation></ref><ref id="edm270217-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="edm270217-cit-0005">
+<string-name name-style="western">
+<given-names>J. B.</given-names>
+<surname>Buse</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. J.</given-names>
+<surname>Wexler</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Tsapas</surname>
+</string-name>, et al., “<article-title>2019 Update to: Management of Hyperglycemia in Type 2 Diabetes, 2018. A Consensus Report by the American Diabetes Association (ADA) and the European Association for the Study of Diabetes (EASD)</article-title>,” <source>Diabetes Care</source>
+<volume>43</volume>, no. <issue>2</issue> (<year>2020</year>): <fpage>487</fpage>–<lpage>493</lpage>, <pub-id pub-id-type="doi">10.2337/DCI19-0066</pub-id>. PubMed PMID: 31857443.<pub-id pub-id-type="pmid">31857443</pub-id>
+<pub-id pub-id-type="pmcid">PMC6971782</pub-id></mixed-citation></ref><ref id="edm270217-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="edm270217-cit-0006">
+<string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Davies</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V. R.</given-names>
+<surname>Aroda</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. S.</given-names>
+<surname>Collins</surname>
+</string-name>, et al., “<article-title>Management of Hyperglycemia in Type 2 Diabetes, 2022. A Consensus Report by the American Diabetes Association (ADA) and the European Association for the Study of Diabetes (EASD)</article-title>,” <source>Diabetes Care</source>
+<volume>45</volume>, no. <issue>11</issue> (<year>2022</year>): <fpage>2753</fpage>–<lpage>2786</lpage>, <pub-id pub-id-type="doi">10.2337/DCI22-0034</pub-id>. PubMed PMID: 36148880.<pub-id pub-id-type="pmid">36148880</pub-id>
+<pub-id pub-id-type="pmcid">PMC10008140</pub-id></mixed-citation></ref><ref id="edm270217-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="edm270217-cit-0007">
+<string-name name-style="western">
+<given-names>S. C.</given-names>
+<surname>Palmer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Mavridis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Nicolucci</surname>
+</string-name>, et al., “<article-title>Comparison of Clinical Outcomes and Adverse Events Associated With Glucose‐Lowering Drugs in Patients With Type 2 Diabetes: A Meta‐Analysis</article-title>,” <source>Journal of the American Medical Association</source>
+<volume>316</volume>, no. <issue>3</issue> (<year>2016</year>): <fpage>313</fpage>–<lpage>324</lpage>, <pub-id pub-id-type="doi">10.1001/JAMA.2016.9400</pub-id>. PubMed PMID: 27434443.<pub-id pub-id-type="pmid">27434443</pub-id>
+</mixed-citation></ref><ref id="edm270217-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="edm270217-cit-0008">
+<string-name name-style="western">
+<given-names>K. H.</given-names>
+<surname>Saunders</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Umashanker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. I.</given-names>
+<surname>Igel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. B.</given-names>
+<surname>Kumar</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L. J.</given-names>
+<surname>Aronne</surname>
+</string-name>, “<article-title>Obesity Pharmacotherapy</article-title>,” <source>Medical Clinics of North America</source>
+<volume>102</volume>, no. <issue>1</issue> (<year>2018</year>): <fpage>48</fpage>–<lpage>135</lpage>, <pub-id pub-id-type="doi">10.1016/J.MCNA.2017.08.010</pub-id>. PubMed PMID: 29156182.<pub-id pub-id-type="pmid">29156182</pub-id></mixed-citation></ref><ref id="edm270217-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="edm270217-cit-0009">
+<string-name name-style="western">
+<given-names>S. P.</given-names>
+<surname>Marso</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. H.</given-names>
+<surname>Daniels</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Brown‐Frandsen</surname>
+</string-name>, et al., “<article-title>Liraglutide and Cardiovascular Outcomes in Type 2 Diabetes</article-title>,” <source>New England Journal of Medicine</source>
+<volume>375</volume>, no. <issue>4</issue> (<year>2016</year>): <fpage>101</fpage>, <pub-id pub-id-type="doi">10.1056/NEJMOA1603827</pub-id>. PubMed PMID: 27295427.<pub-id pub-id-type="pmid">27295427</pub-id>
+<pub-id pub-id-type="pmcid">PMC4985288</pub-id></mixed-citation></ref><ref id="edm270217-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="edm270217-cit-0010">
+<string-name name-style="western">
+<given-names>H. C.</given-names>
+<surname>Gerstein</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. M.</given-names>
+<surname>Colhoun</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. R.</given-names>
+<surname>Dagenais</surname>
+</string-name>, et al., “<article-title>Dulaglutide and Cardiovascular Outcomes in Type 2 Diabetes (REWIND): A Double‐Blind, Randomised Placebo‐Controlled Trial</article-title>,” <source>Lancet</source>
+<volume>394</volume>, no. <issue>10193</issue> (<year>2019</year>): <fpage>121</fpage>–<lpage>130</lpage>, <pub-id pub-id-type="doi">10.1016/S0140-6736(19)31149-3</pub-id>. PubMed PMID: 31189511.<pub-id pub-id-type="pmid">31189511</pub-id>
+</mixed-citation></ref><ref id="edm270217-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="edm270217-cit-0011">
+<string-name name-style="western">
+<given-names>J. P. H.</given-names>
+<surname>Wilding</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. L.</given-names>
+<surname>Batterham</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Calanna</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Davies</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. F.</given-names>
+<surname>Van Gaal</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Lingvay</surname>
+</string-name>, “<article-title>Once‐Weekly Semaglutide in Adults With Overweight or Obesity</article-title>,” <source>New England Journal of Medicine</source>
+<volume>384</volume>, no. <issue>11</issue> (<year>2021</year>): <fpage>989</fpage>–<lpage>1002</lpage>, <pub-id pub-id-type="doi">10.1056/NEJMOA2032183</pub-id>. PubMed PMID: 33567185.<pub-id pub-id-type="pmid">33567185</pub-id>
+</mixed-citation></ref><ref id="edm270217-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="edm270217-cit-0012">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Zhu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Tong</surname>
+</string-name>, et al., “<article-title>Efficacy and Safety of GLP‐1 Analog Ecnoglutide in Adults With Type 2 Diabetes: A Randomized, Double‐Blind, Placebo‐Controlled Phase 2 Trial</article-title>,” <source>Nature Communications</source>
+<volume>15</volume>, no. <issue>1</issue> (<year>2024</year>): <elocation-id>8408</elocation-id>, <pub-id pub-id-type="doi">10.1038/S41467-024-52353-Y</pub-id>. PubMed PMID: 39333121.<pub-id pub-id-type="pmcid">PMC11437099</pub-id><pub-id pub-id-type="pmid">39333121</pub-id></mixed-citation></ref><ref id="edm270217-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="edm270217-cit-0013">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>He</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Mi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Cheng</surname>
+</string-name>, et al., “<article-title>Efficacy and Safety of cAMP‐Biased GLP‐1 Receptor Agonist Ecnoglutide Versus Dulaglutide in Patients With Type 2 Diabetes and Elevated Glucose Concentrations on Metformin Monotherapy (EECOH‐2): A 52‐Week, Multicentre, Open‐Label, Non‐Inferiority, Randomi…</article-title>,” <source>Lancet Diabetes &amp; Endocrinology</source>
+<volume>13</volume>, no. <issue>10</issue> (<year>2025</year>): <fpage>73</fpage>–<lpage>863</lpage>, <pub-id pub-id-type="doi">10.1016/S2213-8587(25)00196-2</pub-id>. PubMed PMID: 40854315.<pub-id pub-id-type="pmid">40854315</pub-id></mixed-citation></ref><ref id="edm270217-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="edm270217-cit-0014">
+<string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Page</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>McKenzie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. M.</given-names>
+<surname>Bossuyt</surname>
+</string-name>, et al., “<article-title>The PRISMA 2020 Statement: An Updated Guideline for Reporting Systematic Reviews</article-title>,” <source>BMJ (Clinical Research Ed.)</source>
+<volume>372</volume> (<year>2021</year>): <elocation-id>n71</elocation-id>, <pub-id pub-id-type="doi">10.1136/bmj.n71</pub-id>.<pub-id pub-id-type="pmcid">PMC8005924</pub-id><pub-id pub-id-type="pmid">33782057</pub-id></mixed-citation></ref><ref id="edm270217-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="edm270217-cit-0015">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Agha</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Mathew</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Rashid</surname>
+</string-name>, et al., “<article-title>Transparency in the Reporting of Artificial INtelligence – The TITAN Guideline</article-title>,” <source>Premier Journal of Science</source> (<year>2025</year>), <pub-id pub-id-type="doi">10.70389/PJS.100082</pub-id>.</mixed-citation></ref><ref id="edm270217-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="edm270217-cit-0016">
+<string-name name-style="western">
+<given-names>J. A. C.</given-names>
+<surname>Sterne</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Savović</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Page</surname>
+</string-name>, et al., “<article-title>RoB 2: A Revised Tool for Assessing Risk of Bias in Randomised Trials</article-title>,” <source>BMJ</source>
+<volume>366</volume> (<year>2019</year>): <elocation-id>l4898</elocation-id>, <pub-id pub-id-type="doi">10.1136/BMJ.L4898</pub-id>. PubMed PMID: 31462531.<pub-id pub-id-type="pmid">31462531</pub-id>
+</mixed-citation></ref><ref id="edm270217-bib-0017"><label>17</label><mixed-citation publication-type="miscellaneous" id="edm270217-cit-0017">
+<collab collab-type="authors">Cochrane</collab>
+, <article-title>GRADE</article-title>.</mixed-citation></ref><ref id="edm270217-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="edm270217-cit-0018">
+<string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Waldrop</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Zhong</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Peters</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Goud</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. H.</given-names>
+<surname>Chen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. N.</given-names>
+<surname>Davis</surname>
+</string-name>, “<article-title>Incretin‐Based Therapy in Type 2 Diabetes: An Evidence Based Systematic Review and Meta‐Analysis</article-title>,” <source>Journal of Diabetes and its Complications</source>
+<volume>32</volume>, no. <issue>1</issue> (<year>2018</year>): <fpage>113</fpage>–<lpage>122</lpage>, <pub-id pub-id-type="doi">10.1016/J.JDIACOMP.2016.08.018</pub-id>. PubMed PMID: 29074120.<pub-id pub-id-type="pmid">29074120</pub-id>
+</mixed-citation></ref><ref id="edm270217-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="edm270217-cit-0019">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Ayesh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Suhail</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Ayesh</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Niswender</surname>
+</string-name>, “<article-title>Comparative Efficacy and Safety of Weekly Dulaglutide Versus Weekly Insulin in Type 2 Diabetes: A Network Meta‐Analysis of Randomized Clinical Trials</article-title>,” <source>Metabol Open</source>
+<volume>22</volume> (<year>2024</year>): <elocation-id>100284</elocation-id>, <pub-id pub-id-type="doi">10.1016/J.METOP.2024.100284</pub-id>.<pub-id pub-id-type="pmid">38699397</pub-id>
+<pub-id pub-id-type="pmcid">PMC11064603</pub-id></mixed-citation></ref><ref id="edm270217-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="edm270217-cit-0020">
+<string-name name-style="western">
+<given-names>J. P. T.</given-names>
+<surname>Higgins</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. G.</given-names>
+<surname>Thompson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. J.</given-names>
+<surname>Deeks</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D. G.</given-names>
+<surname>Altman</surname>
+</string-name>, “<article-title>Measuring Inconsistency in Meta‐Analyses</article-title>,” <source>British Medical Journal</source>
+<volume>327</volume>, no. <issue>7414</issue> (<year>2003</year>): <fpage>557</fpage>–<lpage>560</lpage>, <pub-id pub-id-type="doi">10.1136/BMJ.327.7414.557</pub-id>. PubMed PMID: 12958120.<pub-id pub-id-type="pmid">12958120</pub-id>
+<pub-id pub-id-type="pmcid">PMC192859</pub-id></mixed-citation></ref><ref id="edm270217-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="edm270217-cit-0021">
+<string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Guo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Zou</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Li</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Feng</surname>
+</string-name>, “<article-title>Discovery of Ecnoglutide – A Novel, Long‐Acting, cAMP‐Biased Glucagon‐Like Peptide‐1 (GLP‐1) Analog</article-title>,” <source>Molecular Metabolism</source>
+<volume>75</volume> (<year>2023</year>): <elocation-id>101762</elocation-id>, <pub-id pub-id-type="doi">10.1016/J.MOLMET.2023.101762</pub-id>. PubMed PMID: 37364710.<pub-id pub-id-type="pmid">37364710</pub-id>
+<pub-id pub-id-type="pmcid">PMC10339203</pub-id></mixed-citation></ref><ref id="edm270217-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="edm270217-cit-0022">
+<string-name name-style="western">
+<given-names>R. E.</given-names>
+<surname>Pratley</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V. R.</given-names>
+<surname>Aroda</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. M.</given-names>
+<surname>Catarig</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Lingvay</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Ludemann</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Yildirim</surname>
+</string-name>, “<article-title>Impact of Patient Characteristics on Efficacy and Safety of Once‐Weekly Semaglutide Versus Dulaglutide: SUSTAIN 7 Post Hoc Analyses</article-title>,” <source>BMJ Open</source>
+<volume>10</volume>, no. <issue>11</issue> (<year>2020</year>): <elocation-id>e037883</elocation-id>, <pub-id pub-id-type="doi">10.1136/BMJOPEN-2020-037883</pub-id>. PubMed PMID: 33199417.<pub-id pub-id-type="pmcid">PMC7670946</pub-id><pub-id pub-id-type="pmid">33199417</pub-id></mixed-citation></ref><ref id="edm270217-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="edm270217-cit-0023">
+<string-name name-style="western">
+<given-names>Q. Q.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. Y.</given-names>
+<surname>Xu</surname>
+</string-name>, et al., “<article-title>Dose‐Response Relationship of Glucagon‐Like Peptide‐1 Receptor Agonists on HbA1c and Body Weight in Type 2 Diabetes Mellitus: A Systematic Review and Network Meta‐Analysis</article-title>,” <source>Endocrine Practice</source>
+<volume>31</volume>, no. <issue>2</issue> (<year>2025</year>): <fpage>188</fpage>–<lpage>197</lpage>, <pub-id pub-id-type="doi">10.1016/j.eprac.2024.11.013</pub-id>. PubMed PMID: 39638244.<pub-id pub-id-type="pmid">39638244</pub-id>
+</mixed-citation></ref><ref id="edm270217-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="edm270217-cit-0024">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Sorli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. i.</given-names>
+<surname>Harashima</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. M.</given-names>
+<surname>Tsoukas</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Unger</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Karsbøl</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Hansen</surname>
+</string-name>, “<article-title>Efficacy and Safety of Once‐Weekly Semaglutide Monotherapy Versus Placebo in Patients With Type 2 Diabetes (SUSTAIN 1): A Double‐Blind, Randomised, Placebo‐Controlled, Parallel‐Group, Multinational, Multicentre Phase 3a Trial</article-title>,” <source>Lancet Diabetes and Endocrinology</source>
+<volume>5</volume>, no. <issue>4</issue> (<year>2017</year>): <fpage>251</fpage>–<lpage>260</lpage>, <pub-id pub-id-type="doi">10.1016/S2213-8587(17)30013-X</pub-id>. PubMed PMID: 28110911.<pub-id pub-id-type="pmid">28110911</pub-id>
+</mixed-citation></ref><ref id="edm270217-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="edm270217-cit-0025">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Ahrén</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Masmiquel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Kumar</surname>
+</string-name>, et al., “<article-title>Efficacy and Safety of Once‐Weekly Semaglutide Versus Once‐Daily Sitagliptin as an Add‐On to Metformin, Thiazolidinediones, or Both, in Patients With Type 2 Diabetes (SUSTAIN 2): A 56‐Week, Double‐Blind, Phase 3a, Randomised Trial</article-title>,” <source>Lancet Diabetes and Endocrinology</source>
+<volume>5</volume>, no. <issue>5</issue> (<year>2017</year>): <fpage>341</fpage>–<lpage>354</lpage>, <pub-id pub-id-type="doi">10.1016/S2213-8587(17)30092-X</pub-id>. PubMed PMID: 28385659.<pub-id pub-id-type="pmid">28385659</pub-id>
+</mixed-citation></ref><ref id="edm270217-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="edm270217-cit-0026">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Kokkorakis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Chakhtoura</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Rhayem</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Al Rifai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Ghezzawi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Valenzuela‐Vallejo</surname>
+</string-name>, “<article-title>Emerging Pharmacotherapies for Obesity: A Systematic Review</article-title>,” <source>Pharmacological Reviews</source>
+<volume>77</volume>, no. <issue>1</issue> (<year>2025</year>): <elocation-id>100002</elocation-id>, <pub-id pub-id-type="doi">10.1124/PHARMREV.123.001045</pub-id>. PubMed PMID: 39952695.<pub-id pub-id-type="pmid">39952695</pub-id>
+</mixed-citation></ref><ref id="edm270217-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="edm270217-cit-0027">
+<string-name name-style="western">
+<given-names>A. J.</given-names>
+<surname>Scheen</surname>
+</string-name>, “<article-title>Ecnoglutide, a Biased GLP‐1 Receptor Agonist as a Potential New Player for Type 2 Diabetes Management?</article-title>,” <source>Lancet Diabetes and Endocrinology</source>
+<volume>13</volume>, no. <issue>10</issue> (<year>2025</year>): <fpage>818</fpage>–<lpage>820</lpage>, <pub-id pub-id-type="doi">10.1016/S2213-8587(25)00219-0</pub-id>. PubMed PMID: 40854316.<pub-id pub-id-type="pmid">40854316</pub-id>
+</mixed-citation></ref><ref id="edm270217-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="edm270217-cit-0028">
+<string-name name-style="western">
+<given-names>W. T.</given-names>
+<surname>Garvey</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. L.</given-names>
+<surname>Batterham</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Bhatta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Buscemi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. N.</given-names>
+<surname>Christensen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Frias</surname>
+</string-name>, “<article-title>Two‐Year Effects of Semaglutide in Adults With Overweight or Obesity: The STEP 5 Trial</article-title>,” <source>Nature Medicine</source>
+<volume>28</volume>, no. <issue>10</issue> (<year>2022</year>): <fpage>2083</fpage>–<lpage>2091</lpage>, <pub-id pub-id-type="doi">10.1038/s41591-022-02026-4</pub-id>. PubMed PMID: 36216945.<pub-id pub-id-type="pmcid">PMC9556320</pub-id><pub-id pub-id-type="pmid">36216945</pub-id></mixed-citation></ref><ref id="edm270217-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="edm270217-cit-0029">
+<string-name name-style="western">
+<given-names>P. N.</given-names>
+<surname>Newsome</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. J.</given-names>
+<surname>Sanyal</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. A.</given-names>
+<surname>Engebretsen</surname>
+</string-name>, et al., “<article-title>Semaglutide 2.4 Mg in Participants With Metabolic Dysfunction‐Associated Steatohepatitis: Baseline Characteristics and Design of the Phase 3 ESSENCE Trial</article-title>,” <source>Alimentary Pharmacology &amp; Therapeutics</source>
+<volume>60</volume>, no. <issue>11–12</issue> (<year>2024</year>): <fpage>1525</fpage>–<lpage>1533</lpage>, <pub-id pub-id-type="doi">10.1111/APT.18331</pub-id>. PubMed PMID: 39412509.<pub-id pub-id-type="pmid">39412509</pub-id>
+<pub-id pub-id-type="pmcid">PMC11599791</pub-id></mixed-citation></ref><ref id="edm270217-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="edm270217-cit-0030">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Zafer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Tavaglione</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Romero‐Gómez</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Loomba</surname>
+</string-name>, “<article-title>Review Article: GLP‐1 Receptor Agonists and Glucagon/GIP/GLP‐1 Receptor Dual or Triple Agonists—Mechanism of Action and Emerging Therapeutic Landscape in MASLD</article-title>,” <source>Alimentary Pharmacology &amp; Therapeutics</source>
+<volume>61</volume>, no. <issue>12</issue> (<year>2025</year>): <fpage>1872</fpage>–<lpage>1888</lpage>. PubMed PMID: 40364529.<pub-id pub-id-type="pmid">40364529</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/apt.70196</pub-id><pub-id pub-id-type="pmcid">PMC12323726</pub-id></mixed-citation></ref><ref id="edm270217-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="edm270217-cit-0031">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Cao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. C.</given-names>
+<surname>Chen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A. J.</given-names>
+<surname>Katz</surname>
+</string-name>, “<article-title>Why Is a Small Sample Size Not Enough?</article-title>,” <source>Oncologist</source>
+<volume>29</volume>, no. <issue>9</issue> (<year>2024</year>): <fpage>761</fpage>–<lpage>763</lpage>, <pub-id pub-id-type="doi">10.1093/ONCOLO/OYAE162</pub-id>. PubMed PMID: 38934301.<pub-id pub-id-type="pmid">38934301</pub-id>
+<pub-id pub-id-type="pmcid">PMC11379640</pub-id></mixed-citation></ref><ref id="edm270217-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="edm270217-cit-0032">
+<string-name name-style="western">
+<given-names>G. J.</given-names>
+<surname>Choi</surname>
+</string-name> and <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Kang</surname>
+</string-name>, “<article-title>Heterogeneity in Meta‐Analyses: An Unavoidable Challenge Worth Exploring</article-title>,” <source>Korean Journal of Anesthesiology</source>
+<volume>78</volume>, no. <issue>4</issue> (<year>2025</year>): <fpage>301</fpage>–<lpage>314</lpage>, <pub-id pub-id-type="doi">10.4097/KJA.25001</pub-id>. PubMed PMID: 39956636.<pub-id pub-id-type="pmid">39956636</pub-id>
+<pub-id pub-id-type="pmcid">PMC12326561</pub-id></mixed-citation></ref><ref id="edm270217-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="edm270217-cit-0033">
+<string-name name-style="western">
+<given-names>B. C.</given-names>
+<surname>Kahan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Cro</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. J.</given-names>
+<surname>Doré</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. J.</given-names>
+<surname>Bratton</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Rehal</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>N. A.</given-names>
+<surname>Maskell</surname>
+</string-name>, “<article-title>Reducing Bias in Open‐Label Trials Where Blinded Outcome Assessment Is Not Feasible: Strategies From Two Randomised Trials</article-title>,” <source>Trials</source>
+<volume>15</volume> (<year>2014</year>): <elocation-id>456</elocation-id>, <pub-id pub-id-type="doi">10.1186/1745-6215-15-456</pub-id>. PubMed PMID: 25416527.<pub-id pub-id-type="pmid">25416527</pub-id>
+<pub-id pub-id-type="pmcid">PMC4247637</pub-id></mixed-citation></ref><ref id="edm270217-bib-0034"><label>34</label><mixed-citation publication-type="miscellaneous" id="edm270217-cit-0034">
+<collab collab-type="authors">Cochrane Training</collab>
+, <article-title>“Strengths and Limitations of RCTs ‐ Inclusion of Nonrandomized Studies of Interventions in Systematic Reviews of Intervention Effectiveness: An Update ‐ NCBI Bookshelf,”</article-title>.<pub-id pub-id-type="pmid">36153934</pub-id></mixed-citation></ref><ref id="edm270217-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="edm270217-cit-0035">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Ismaiel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. G. M.</given-names>
+<surname>Scarlata</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Boitos</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. C.</given-names>
+<surname>Leucuta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. L.</given-names>
+<surname>Popa</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Al Srouji</surname>
+</string-name>, “<article-title>Gastrointestinal Adverse Events Associated With GLP‐1 RA in Non‐Diabetic Patients With Overweight or Obesity: A Systematic Review and Network Meta‐Analysis</article-title>,” <source>International Journal of Obesity</source>
+<volume>49</volume>, no. <issue>10</issue> (<year>2025</year>): <fpage>57</fpage>–<lpage>1946</lpage>, <pub-id pub-id-type="doi">10.1038/s41366-025-01859-6</pub-id>.<pub-id pub-id-type="pmcid">PMC12532569</pub-id><pub-id pub-id-type="pmid">40804463</pub-id></mixed-citation></ref></ref-list></back></article>

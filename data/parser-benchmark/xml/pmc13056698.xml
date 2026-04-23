@@ -1,0 +1,639 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="edm270218" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Endocrinol Diabetes Metab</journal-id><journal-id journal-id-type="iso-abbrev">Endocrinol Diabetes Metab</journal-id><journal-id journal-id-type="pmc-domain-id">3614</journal-id><journal-id journal-id-type="pmc-domain">edm</journal-id><journal-id journal-id-type="publisher-id">EDM2</journal-id><journal-title-group><journal-title>Endocrinology, Diabetes &amp; Metabolism</journal-title></journal-title-group><issn pub-type="epub">2398-9238</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13056698</article-id><article-id pub-id-type="pmcid-ver">PMC13056698.1</article-id><article-id pub-id-type="pmcaid">13056698</article-id><article-id pub-id-type="pmcaiid">13056698</article-id><article-id pub-id-type="pmid">41947319</article-id><article-id pub-id-type="doi">10.1002/edm2.70218</article-id><article-id pub-id-type="publisher-id">EDM270218</article-id><article-id pub-id-type="other">3771177</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Review Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Review Article</subject></subj-group></article-categories><title-group><article-title>Comparative Efficacy and Safety of Resmetirom and Efruxifermin for Metabolic Dysfunction‐Associated Steatohepatitis: A Network Meta‐Analysis of Randomized Controlled Trials</article-title></title-group><contrib-group><contrib id="edm270218-cr-0001" contrib-type="author" corresp="yes"><name name-style="western"><surname>Jaber</surname><given-names initials="D">Doha</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0007-8047-5768</contrib-id><xref rid="edm270218-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>dohajaber17@gmail.com</email></address></contrib><contrib id="edm270218-cr-0002" contrib-type="author"><name name-style="western"><surname>Jaber</surname><given-names initials="I">Inas</given-names></name><xref rid="edm270218-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270218-cr-0003" contrib-type="author"><name name-style="western"><surname>Lehia</surname><given-names initials="AA">Ayah Abu</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0003-4670-5065</contrib-id><xref rid="edm270218-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270218-cr-0004" contrib-type="author"><name name-style="western"><surname>Asad</surname><given-names initials="T">Thekrayat</given-names></name><xref rid="edm270218-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="edm270218-cr-0005" contrib-type="author"><name name-style="western"><surname>Ayesh</surname><given-names initials="H">Hazem</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-8231-705X</contrib-id><xref rid="edm270218-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib></contrib-group><aff id="edm270218-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Faculty of Medicine</named-content>
+<institution>Al‐Quds University</institution>
+<city>Jerusalem</city>
+<country country="PS">Palestine</country>
+</aff><aff id="edm270218-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Department of Internal Medicine</named-content>
+<institution>Unity Hospital, Rochester Regional Health</institution>
+<city>Rochester</city>
+<named-content content-type="country-part">New York</named-content>
+<country country="US">USA</country>
+</aff><aff id="edm270218-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<institution>Deaconess Health System</institution>
+<city>Evansville</city>
+<named-content content-type="country-part">Indiana</named-content>
+<country country="US">USA</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold>
+<break/>
+Doha Jaber (<email>dohajaber17@gmail.com</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>07</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>5</month><year>2026</year></pub-date><volume>9</volume><issue seq="170">3</issue><issue-id pub-id-type="pmc-issue-id">511031</issue-id><issue-id pub-id-type="doi">10.1002/edm2.v9.3</issue-id><elocation-id>e70218</elocation-id><history><date date-type="rev-recd"><day>14</day><month>3</month><year>2026</year></date><date date-type="received"><day>16</day><month>1</month><year>2026</year></date><date date-type="accepted"><day>23</day><month>3</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>07</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>09</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-09 07:25:15.440"><day>09</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Endocrinology, Diabetes &amp; Metabolism</italic> published by John Wiley &amp; Sons Ltd.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="EDM2-9-e70218.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:EDM2-9-e70218.pdf"/><abstract><title>ABSTRACT</title><sec id="edm270218-sec-0001"><title>Background and Aim</title><p>Metabolic dysfunction‐associated steatohepatitis (MASH) is a progressive liver condition and a major cause of cirrhosis, hepatocellular carcinoma, and liver transplantation. Resmetirom, a thyroid hormone receptor β agonist, and Efruxifermin, a fibroblast growth factor 21 analogue, have shown promise in improving hepatic fat fraction (HFF) and liver enzyme levels. This study systematically compares the efficacy and safety of Resmetirom and Efruxifermin in treating MASH.</p></sec><sec id="edm270218-sec-0002"><title>Methods</title><p>A systematic search of PubMed, Cochrane, and Scopus identified 211 studies, of which eight randomized controlled trials (RCTs) were included. Primary outcomes included reductions in liver enzyme levels. Secondary outcomes assessed HFF measured by magnetic resonance imaging‐derived proton density fat fraction (MRI‐PDFF), as well as lipid profiles. Safety outcomes consist of serious adverse events and events leading to treatment discontinuation.</p></sec><sec id="edm270218-sec-0003"><title>Results</title><p>Efruxifermin was associated with significant improvement in MRI‐PDFF with an mean difference (MD) of −62.83% (95% CI: −72.30 to −53.36, <italic toggle="no">p</italic> = 0.00), followed by Resmetirom with an MD of −37.15% (95% CI: −44.43 to −29.88, <italic toggle="no">p</italic> = 0.00), additionally Efruxifermin was associated with significant reduction in aspartate transferase (AST) level, with an MD of −14.32 (95% CI: −23.92 to −4.72, <italic toggle="no">p</italic> = 0.003), compared to Resmetirom (MD: −2.81; 95% CI: −12.40 to 6.79, <italic toggle="no">p</italic> = 0.56). For lipid profiles, Efruxifermin showed a significant reduction in triglyceride levels with an MD of −36.95 (95% CI: −52.67 to −21.24, <italic toggle="no">p</italic> = 0), while Resmetirom had an MD of −24.72 (95% CI: −33.31 to −16.14, <italic toggle="no">p</italic> = 0.00).</p></sec><sec id="edm270218-sec-0004"><title>Conclusion</title><p>Efruxifermin demonstrated a slightly greater effect on MRI‐PDFF and AST, along with more favourable safety outcomes.</p></sec></abstract><abstract abstract-type="graphical"><p>This meta‐analysis compared Resmetirom and Efruxifermin in patients with MASH, focusing on improvements in key biochemical and non‐invasive markers. Efruxifermin is associated with favourable outcomes with a slightly greater effect on MRI‐PDFF and AST, along with more comparable safety outcomes.<boxed-text position="anchor" content-type="graphic" id="edm270218-blkfxd-0001" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="EDM2-9-e70218-g002.jpg"/></boxed-text>
+</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="edm270218-kwd-0002">Efruxifermin</kwd><kwd id="edm270218-kwd-0003">Hepatology</kwd><kwd id="edm270218-kwd-0008">Metabolic dysfunction–associated steatohepatitis</kwd><kwd id="edm270218-kwd-0005">network meta‐analysis</kwd><kwd id="edm270218-kwd-0006">Non‐alcoholic steatohepatitis</kwd><kwd id="edm270218-kwd-0007">Resmetirom</kwd></kwd-group><counts><fig-count count="13"/><table-count count="0"/><page-count count="11"/><word-count count="7000"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>May 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:08.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body id="edm270218-body-0001"><def-list list-content="abbreviations" id="edm270218-dl-0001"><title>Abbreviations</title><def-item><term id="edm270218-li-0001">ALT</term><def id="edm270218-li-0002"><p>Alanine aminotransferase</p></def></def-item><def-item><term id="edm270218-li-0003">AST</term><def id="edm270218-li-0004"><p>Aspartate aminotransferase</p></def></def-item><def-item><term id="edm270218-li-0005">BMI</term><def id="edm270218-li-0006"><p>Body mass index</p></def></def-item><def-item><term id="edm270218-li-0007">CINeMA</term><def id="edm270218-li-0008"><p>Confidence in Network Meta‐Analysis</p></def></def-item><def-item><term id="edm270218-li-0009">DM</term><def id="edm270218-li-0010"><p>Diabetes mellitus</p></def></def-item><def-item><term id="edm270218-li-0011">FDA</term><def id="edm270218-li-0012"><p>the Food and Drug Administration</p></def></def-item><def-item><term id="edm270218-li-0013">FGF21</term><def id="edm270218-li-0014"><p>Fibroblast growth factor 21</p></def></def-item><def-item><term id="edm270218-li-0015">GLP‐1</term><def id="edm270218-li-0016"><p>Glucagon‐like peptide‐1</p></def></def-item><def-item><term id="edm270218-li-0017">HCC</term><def id="edm270218-li-0018"><p>Hepatocellular carcinoma</p></def></def-item><def-item><term id="edm270218-li-0019">HDL</term><def id="edm270218-li-0020"><p>High‐density lipoproteins</p></def></def-item><def-item><term id="edm270218-li-0021">HFF</term><def id="edm270218-li-0022"><p>Hepatic fat fraction</p></def></def-item><def-item><term id="edm270218-li-0023">HTN</term><def id="edm270218-li-0024"><p>Hypertension</p></def></def-item><def-item><term id="edm270218-li-0025">LDL</term><def id="edm270218-li-0026"><p>Low‐density lipoproteins</p></def></def-item><def-item><term id="edm270218-li-0027">MASH</term><def id="edm270218-li-0028"><p>Metabolic dysfunction‐associated steatohepatitis</p></def></def-item><def-item><term id="edm270218-li-0029">MASLD</term><def id="edm270218-li-0030"><p>Metabolic dysfunction‐associated steatotic liver disease</p></def></def-item><def-item><term id="edm270218-li-0031">MD</term><def id="edm270218-li-0032"><p>Mean difference</p></def></def-item><def-item><term id="edm270218-li-0033">MRI‐PDFF</term><def id="edm270218-li-0034"><p>Magnetic resonance imaging‐derived proton density fat fraction</p></def></def-item><def-item><term id="edm270218-li-0035">NASH</term><def id="edm270218-li-0036"><p>Non‐alcoholic steatohepatitis</p></def></def-item><def-item><term id="edm270218-li-0037">OSF</term><def id="edm270218-li-0038"><p>Open Science Framework</p></def></def-item><def-item><term id="edm270218-li-0039">PRISMA</term><def id="edm270218-li-0040"><p>Preferred Reporting Items for Systematic Reviews and Meta‐Analyses</p></def></def-item><def-item><term id="edm270218-li-0041">RCT</term><def id="edm270218-li-0042"><p>Randomized controlled trial</p></def></def-item><def-item><term id="edm270218-li-0043">RCTs</term><def id="edm270218-li-0044"><p>Randomized controlled trials</p></def></def-item><def-item><term id="edm270218-li-0045">RR</term><def id="edm270218-li-0046"><p>Relative risks</p></def></def-item><def-item><term id="edm270218-li-0047">SAEs</term><def id="edm270218-li-0048"><p>Serious adverse events</p></def></def-item><def-item><term id="edm270218-li-0049">SE</term><def id="edm270218-li-0050"><p>Standard error</p></def></def-item><def-item><term id="edm270218-li-0051">TEAEs</term><def id="edm270218-li-0052"><p>Treatment‐emergent adverse events</p></def></def-item><def-item><term id="edm270218-li-0053">THR</term><def id="edm270218-li-0054"><p>Thyroid hormone receptor</p></def></def-item></def-list><sec id="edm270218-sec-0005"><label>1</label><title>Introduction</title><p>Metabolic dysfunction‐associated steatohepatitis (MASH) is a condition characterized by chronic liver injury and inflammation, representing the more severe form of metabolic dysfunction‐associated steatotic liver disease (MASLD) [<xref rid="edm270218-bib-0001" ref-type="bibr">1</xref>]. It features steatosis, hepatocellular ballooning, and lobular inflammation, and may include varying degrees of fibrosis, which can progress to cirrhosis and hepatocellular carcinoma (HCC) [<xref rid="edm270218-bib-0001" ref-type="bibr">1</xref>, <xref rid="edm270218-bib-0002" ref-type="bibr">2</xref>]. The prevalence of MASH has risen alongside the increasing prevalence of obesity and metabolic syndrome worldwide; also, MASH‐associated HCC has increased 10‐fold in the past decades [<xref rid="edm270218-bib-0003" ref-type="bibr">3</xref>]. Currently, MASH HCC is considered a major indication for liver transplantation worldwide [<xref rid="edm270218-bib-0003" ref-type="bibr">3</xref>, <xref rid="edm270218-bib-0004" ref-type="bibr">4</xref>, <xref rid="edm270218-bib-0005" ref-type="bibr">5</xref>]. Therefore, understanding the global burden and progression of MASH and MASLD, along with their hepatic and extrahepatic complications, is essential for effective patient management [<xref rid="edm270218-bib-0006" ref-type="bibr">6</xref>, <xref rid="edm270218-bib-0007" ref-type="bibr">7</xref>].</p><p>The mainstay of management of MASH is lifestyle intervention and physical activity [<xref rid="edm270218-bib-0008" ref-type="bibr">8</xref>]. Although various pharmacological agents have been studied, with variable efficacy, Resmetirom (MGL‐3196) is a liver‐targeted, thyroid hormone receptor (THR)‐β‐selective drug that has been approved as the first drug for treating MASH and associated fibrosis, offering a new pharmacological option for patients with moderate to advanced fibrosis without cirrhosis [<xref rid="edm270218-bib-0009" ref-type="bibr">9</xref>, <xref rid="edm270218-bib-0010" ref-type="bibr">10</xref>, <xref rid="edm270218-bib-0011" ref-type="bibr">11</xref>].</p><p>Efruxifermin, a bivalent Fc‐fibroblast growth factor 21 (FGF21) analogue, has diverse metabolic benefits in the treatment of MASH and dyslipidemia [<xref rid="edm270218-bib-0012" ref-type="bibr">12</xref>]. A recent systematic review and network meta‐analysis indicate that Efruxifermin has significant efficacy in treating MASH without worsening fibrosis, alongside its favourable tolerability profile and its role in reducing body weight and liver fat content [<xref rid="edm270218-bib-0010" ref-type="bibr">10</xref>]. These results provide evidence for Efruxifermin as a promising therapeutic agent for MASH‐related fibrosis. However, a major gap in the literature is the absence of a direct head‐to‐head comparison between therapeutic agents, which is considered essential to validate treatment results [<xref rid="edm270218-bib-0010" ref-type="bibr">10</xref>, <xref rid="edm270218-bib-0013" ref-type="bibr">13</xref>, <xref rid="edm270218-bib-0014" ref-type="bibr">14</xref>].</p><p>The recent approval of specific therapies for MASH underscores the progress in the field; however, the continued concentration in histologic and clinical endpoints across trials highlights our goal to present non‐invasive measurements of Hepatic fat fraction (HFF) measured by magnetic resonance imaging‐derived proton density fat fraction (MRI‐PDFF) and biochemical outcomes as key markers of metabolic activity and treatment response to refined strategies to optimize patient selection, safety monitoring, and efficacy assessment [<xref rid="edm270218-bib-0015" ref-type="bibr">15</xref>]. Given the complex pathophysiology of MASH and the diverse mechanisms of emerging agents, direct head‐to‐head RCTs between all available therapies are impractical. Therefore, a network meta‐analysis is essential to integrate evidence across trials and enable indirect comparisons to clarify the relative efficacy and safety profiles and guide therapeutic decision‐making [<xref rid="edm270218-bib-0015" ref-type="bibr">15</xref>, <xref rid="edm270218-bib-0016" ref-type="bibr">16</xref>, <xref rid="edm270218-bib-0017" ref-type="bibr">17</xref>].</p><p>In our study, we systematically compare the efficacy and safety of Resmetirom and Efruxifermin in treating MASH using the Network Meta‐analysis approach to synthesize clinical evidence. We focus on non‐invasive approaches—specifically HFF (MRI‐PDFF) and biochemical markers—to address a significant gap in the existing evidence for personalized management of MASH.</p></sec><sec sec-type="materials-and-methods" id="edm270218-sec-0006"><label>2</label><title>Materials and Methods</title><p>The study protocol is registered on the Open Science Framework (OSF) at (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://osf.io/98p6u" ext-link-type="uri">https://osf.io/98p6u</ext-link>, accessed on May 3, 2025). The Preferred Reporting Items for Systematic reviews and Meta‐Analyses (PRISMA) checklist was followed throughout the study in Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S11</xref>.</p><sec id="edm270218-sec-0007"><label>2.1</label><title>Search Strategy</title><p>A comprehensive literature search for randomized controlled trials was performed across PubMed, Cochrane, and Scopus to identify relevant studies from the inception of the databases to January 25, 2025. The search terms included: (((MASH OR (Metabolic dysfunction‐associated steatohepatitis) OR (NASH OR Nonalcoholic Steatohepatitis OR nonalcoholic fatty liver disease OR NAFLD OR Metabolic Dysfunction‐Associated Steatotic Liver Disease OR MASLD)) AND ((Resmetirom OR MGL‐3196) OR (thyroid hormone receptor‐β agonist)) OR (Efruxifermin OR AKR‐001)) AND (RCT OR trial OR (Randomized Controlled Trial))). The detailed search strategy is reported in Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S1</xref>.</p></sec><sec id="edm270218-sec-0008"><label>2.2</label><title>Screening Process</title><p>Two authors (IJ and A‐AL) independently screened the titles and abstracts of retrieved studies. Full‐text articles were reviewed for eligibility. Discrepancies were resolved through discussion with a third author (DJ) if necessary.</p></sec><sec id="edm270218-sec-0009"><label>2.3</label><title>Eligibility Criteria and Study Selection</title><p>We included RCTs evaluating <bold>Resmetirom</bold> or <bold>Efruxifermin</bold> in adults with <bold>MASH</bold>, with or without fibrosis. Eligible studies were required to compare these agents with placebo in adult patients with biopsy‐proven MASH, with a minimum follow‐up duration of 12 weeks. In line with the American Association for the Study of Liver Diseases (AASLD), our study emphasizes the efficacy endpoints, including changes in liver enzymes (ALT, AST), HFF assessed by MRI‐PDFF, and changes in metabolic or lipid profiles [<xref rid="edm270218-bib-0018" ref-type="bibr">18</xref>]. Safety outcomes included serious adverse events, treatment discontinuations, and common adverse effects such as diarrhoea and nausea. Only studies published in English were considered for inclusion.</p><p>Studies were excluded if they involved paediatric populations, patients with chronic liver diseases other than MASH, or populations that did not meet MASH diagnostic criteria. Trials were also excluded if they did not evaluate Resmetirom or Efruxifermin, if they were published in languages other than English, if only an abstract was available without full‐text access, or if they were non‐comparative designs such as case reports, case series, or review articles.</p></sec><sec id="edm270218-sec-0010"><label>2.4</label><title>Data Extraction</title><p>Data extracted from each eligible study included the following information: baseline characteristics, intervention details, and outcome measures (Table 1, Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S2</xref>). Specifically, age, gender, body mass index (BMI), diabetes (DM), hypertension (HTN), liver enzyme levels, MRI‐PDFF, and serum lipid parameters, e.g., high‐density lipoprotein (HDL), low‐density lipoprotein (LDL), total cholesterol, and triglyceride levels were extracted (Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S3</xref>) [<xref rid="edm270218-bib-0019" ref-type="bibr">19</xref>, <xref rid="edm270218-bib-0020" ref-type="bibr">20</xref>, <xref rid="edm270218-bib-0021" ref-type="bibr">21</xref>, <xref rid="edm270218-bib-0022" ref-type="bibr">22</xref>, <xref rid="edm270218-bib-0023" ref-type="bibr">23</xref>, <xref rid="edm270218-bib-0024" ref-type="bibr">24</xref>, <xref rid="edm270218-bib-0025" ref-type="bibr">25</xref>, <xref rid="edm270218-bib-0026" ref-type="bibr">26</xref>]. Safety outcomes, including treatment discontinuation due to adverse events and serious events, were also obtained. Data on study design, randomization, study duration, and phase were also extracted.</p><p>When the data were presented graphically, we used WebPlot Digitizer version 4.3 to estimate the values [<xref rid="edm270218-bib-0027" ref-type="bibr">27</xref>].</p></sec><sec id="edm270218-sec-0011"><label>2.5</label><title>Statistical Analysis</title><p>To determine the relative efficacy of each treatment, we conducted a network meta‐analysis to compare one‐to‐one comparisons through the analysis of the included studies. Statistical analyses were conducted using a random‐effects model to account for heterogeneity among studies. MD for continuous outcomes and relative risks (RR) for dichotomous outcomes were calculated. Heterogeneity was evaluated using tau‐squared (<italic toggle="yes">τ</italic>
+<sup>2</sup>), <italic toggle="yes">I</italic>
+<sup>2</sup> statistics, and <italic toggle="yes">Q</italic> statistics to assess consistency under the assumption of a full design‐by‐treatment interaction random effects model [<xref rid="edm270218-bib-0028" ref-type="bibr">28</xref>]. P‐scores were used to rank treatments based on their estimated effect sizes. Egger's test was used to assess funnel plot asymmetry by testing for a linear relationship between effect size and study precision (See Figures <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S5.1–S5.11</xref>) [<xref rid="edm270218-bib-0029" ref-type="bibr">29</xref>]. Significant results (<italic toggle="yes">p</italic> &lt; 0.05) may indicate publication bias, though other factors can also cause asymmetry.</p><p>The outcomes evaluated include the following: Changes in liver enzyme levels include ALT and AST, which are indicators of liver injury; MRI‐PDFF measures the alteration in liver fat content over the study period; and lipid profiles. Safety outcomes include serious adverse events, treatment discontinuation due to treatment‐emergent adverse events (TEAEs), and the incidence of nausea and diarrhoea among participants. Leave‐out approach evaluated sensitivity, and meta‐regression analysis was performed using different statistical techniques to investigate the influence of study characteristics on the outcomes.</p><p>Statistical analysis for this network meta‐analysis was conducted using R (version 4.5.0), alongside using netmeta (version 3.2.0), which enables indirect comparisons among treatment arms [<xref rid="edm270218-bib-0030" ref-type="bibr">30</xref>, <xref rid="edm270218-bib-0031" ref-type="bibr">31</xref>]. Confidence in Network Meta‐Analysis (CINeMA) framework, endorsed by the Cochrane Collaboration was used to determine the certainty of evidence of all estimates [<xref rid="edm270218-bib-0032" ref-type="bibr">32</xref>].</p></sec><sec id="edm270218-sec-0012"><label>2.6</label><title>Risk of Bias of Individual Studies</title><p>We used the Cochrane randomized trial Risk of Bias tool (version 2.0) to assess the risk of bias in the included trials, including these domains: randomization, allocation concealment, blinding of participants and personnel, measurement of the outcome, missing outcome data, and selective reporting (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S12</xref>) [<xref rid="edm270218-bib-0033" ref-type="bibr">33</xref>]. Two authors (DJ and A‐AL) independently assessed the risk of bias. Disagreements were resolved through discussion or by consulting a third author (IJ).</p></sec></sec><sec sec-type="results" id="edm270218-sec-0013"><label>3</label><title>Results</title><sec id="edm270218-sec-0014"><label>3.1</label><title>Study Selection and Characteristics</title><p>We identified 211 trials using the search strategy, and 35 duplicates were eliminated. After 176 trials were screened for titles and abstracts, nine trials were received for full‐text screening. Finally, a total of eight RCTs with 2534 participants were included in the systematic review and network meta‐analysis (Table 1, Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S2</xref>) [<xref rid="edm270218-bib-0019" ref-type="bibr">19</xref>, <xref rid="edm270218-bib-0020" ref-type="bibr">20</xref>, <xref rid="edm270218-bib-0021" ref-type="bibr">21</xref>, <xref rid="edm270218-bib-0022" ref-type="bibr">22</xref>, <xref rid="edm270218-bib-0023" ref-type="bibr">23</xref>, <xref rid="edm270218-bib-0024" ref-type="bibr">24</xref>, <xref rid="edm270218-bib-0025" ref-type="bibr">25</xref>, <xref rid="edm270218-bib-0026" ref-type="bibr">26</xref>]. Four studies evaluated the efficacy and safety of daily Resmetirom; four studies evaluated the efficacy and safety of once‐weekly subcutaneous Efruxifermin; and one study was excluded due to a lack of outcome data (see Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S9</xref>) [<xref rid="edm270218-bib-0034" ref-type="bibr">34</xref>]. The details of study screening and trial selection are illustrated in the PRISMA flowchart (Figure <xref rid="edm270218-fig-0001" ref-type="fig">1</xref>). The mean age was 55.67 years (SD 11.41), with 43.67% of participants being male and a mean BMI of 35.72 kg/m2 (SD 6.43). Liver function tests showed a mean ALT level of 46.43 IU/L (SD 30.58) and a mean AST level of 33.79 IU/L (SD 21.55). Glycaemic control, measured by HbA1c, had a mean of 6.49% (SD 1.08). Lipid profiles showed a mean triglyceride level of 109.47 mg/dL (SD 114.04), a mean LDL level of 107.54 mg/dL (SD 37.47), and a mean HDL level of 43.67 mg/dL (SD 13.14).</p><fig position="float" fig-type="FIGURE" id="edm270218-fig-0001" orientation="portrait"><label>FIGURE 1</label><caption><p>PRISMA flowchart of study screening and selection. PRISMA, Preferred Reporting Items for Systematic Reviews and Meta‐Analyses.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="EDM2-9-e70218-g001.jpg"/></fig></sec><sec id="edm270218-sec-0015"><label>3.2</label><title>Sensitivity Analysis and Meta‐Regression</title><p>We conducted a meta‐regression analysis to ensure validity of our findings. In our meta‐regression, we included key variables such as study duration, age, male gender, and BMI (See Figures <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S10.1–S10.11</xref>). Sensitivity analysis was conducted using a leave‐one‐out approach for each outcome, in order to ensure robustness of the results and to evaluate the influence of individual studies on the overall pooled estimates.</p></sec><sec id="edm270218-sec-0016"><label>3.3</label><title>Imaging Outcomes</title><sec id="edm270218-sec-0017"><label>3.3.1</label><title>Percent Change in <styled-content style="fixed-case" toggle="no">MRI</styled-content>‐<styled-content style="fixed-case" toggle="no">PDFF</styled-content>
+</title><p>Efruxifermin was associated with significant improvement in MRI‐PDFF with an MD of −62.83% (95% CI: −72.30 to −53.36, <italic toggle="yes">p</italic> = 0.00), followed by Resmetirom with an MD of −37.15% (95% CI: −44.43 to −29.88, <italic toggle="yes">p</italic> = 0.00) (see Figure <xref rid="edm270218-fig-0002" ref-type="fig">2</xref> and Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7</xref>, Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7.1</xref>), in the indirect comparison between treatments, Efruxifermin was associated with a significant reduction in the MRI‐PDFF than Resmetirom with an MD of −25.68% (95% CI: −37.62 to −13.74) (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6.1</xref>), and the corresponding network plot is shown in Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S8.1</xref>. The heterogeneity analysis revealed moderate heterogeneity, with <italic toggle="yes">I</italic>
+<sup>2</sup> = 40.6%, <italic toggle="yes">τ</italic>
+<sup>2</sup> = 20.37. After conducting a leave‐one‐out analysis and excluding Harrison 2021_b, heterogeneity decreased significantly to 0%. However, the treatment ranking remains unchanged. BMI, male, and duration differences among studies contributed significantly to the high heterogeneity and the meta‐regression analysis (Coef = −9.62, <italic toggle="yes">p</italic> = 0.01), (Coef = 287.47, <italic toggle="yes">p</italic> = 0.05), and (Coef = 0.68, <italic toggle="yes">p</italic> = 0.05), respectively. Among treatment arms, Efruxifermin ranked highest based on network analysis with a <italic toggle="yes">p</italic>‐score of 1.00. According to the CINeMA framework, the certainty of evidence for the comparison between Resmetirom and Efruxifermin showed low certainty, due to major concerns with heterogeneity and some concerns regarding within‐study bias, reporting bias, and imprecision (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4.1</xref>).</p><fig position="float" fig-type="FIGURE" id="edm270218-fig-0002" orientation="portrait"><label>FIGURE 2</label><caption><p>Network meta‐analysis results for percent change in MRI‐PDFF.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="EDM2-9-e70218-g005.jpg"/></fig></sec></sec><sec id="edm270218-sec-0018"><label>3.4</label><title>Biochemical Markers</title><sec id="edm270218-sec-0019"><label>3.4.1</label><title>Change in <styled-content style="fixed-case" toggle="no">ALT</styled-content>
+</title><p>In the random effects model assessing the change in ALT, Efruxifermin demonstrated a non‐significant effect with an MD of −10.57 (95% CI: −24.10 to 2.96, <italic toggle="yes">p</italic> = 0.12). Resmetirom with an MD of −9.29 (95% CI: −23.18 to 4.60, <italic toggle="yes">p</italic> = 0.19), also not reaching significance (see Figure <xref rid="edm270218-fig-0003" ref-type="fig">3</xref> and Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7</xref>, Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7.2</xref>), no significant difference was observed between Efruxifermin and Resmetirom, MD of −1.28% (95% CI: −20.68 to 18.11) (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6.2</xref>), and the corresponding network plot is shown in Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S8.2</xref>. The heterogeneity analysis revealed significant heterogeneity with an <italic toggle="yes">I</italic>
+<sup>2</sup> of 90.1%. Tests of heterogeneity within designs were significant (Q = 60.46, df = 6, <italic toggle="yes">p</italic> &lt; 0.0001). Despite conducting the leave‐one‐out analysis, the heterogeneity remains significant, indicating that no specific study was considered responsible for the result variability. The P‐scores, which rank treatments based on their effectiveness, were highest for Efruxifermin (p‐score = 0.74).</p><fig position="float" fig-type="FIGURE" id="edm270218-fig-0003" orientation="portrait"><label>FIGURE 3</label><caption><p>Network meta‐analysis results for change in ALT.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="EDM2-9-e70218-g012.jpg"/></fig><p>The certainty of evidence for the comparison between Resmetirom and Efruxifermin exhibited some concerns regarding within‐study bias and reporting bias. Major concerns were noted for imprecision and heterogeneity (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4.2</xref>).</p></sec><sec id="edm270218-sec-0020"><label>3.4.2</label><title>Change in <styled-content style="fixed-case" toggle="no">AST</styled-content>
+</title><p>Using a random effects model to assess the change in AST, Efruxifermin was associated with highest effect with an MD of −14.32 (95% CI: −23.92 to −4.72, <italic toggle="yes">p</italic> = 0.003). Resmetirom did not show a significant effect with an MD of −2.81 (95% CI: −12.40 to 6.79, <italic toggle="yes">p</italic> = 0.56) (see Figure <xref rid="edm270218-fig-0004" ref-type="fig">4</xref> and Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7</xref>, Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7.3</xref>), and no significant difference between the two treatments with an MD of −11.52 (95% CI: −25.09 to 2.06) (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6.3</xref>), and the corresponding network plot is shown in Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S8.3</xref>. Across all therapeutic options, Efruxifermin ranked highest regarding effectiveness with a p‐score of 0.97.</p><fig position="float" fig-type="FIGURE" id="edm270218-fig-0004" orientation="portrait"><label>FIGURE 4</label><caption><p>Network meta‐analysis results for change in AST.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="EDM2-9-e70218-g007.jpg"/></fig><p>High heterogeneity was observed (<italic toggle="yes">I</italic>
+<sup>2</sup> = 90%, <italic toggle="yes">τ</italic>
+<sup>2</sup> = 85.49). Tests of heterogeneity within designs were significant (<italic toggle="yes">Q</italic> = 59.96, df = 6, <italic toggle="yes">p</italic> = 0.00). BMI difference among studies contributed significantly to the high heterogeneity and the meta regression analysis (Coef = −6.80, <italic toggle="yes">p</italic> = 0.02).</p><p>According to the CINeMA framework, the certainty of evidence for Resmetirom vs. Efruxifermin showed major concerns related to imprecision and heterogeneity. Also, there were some concerns regarding within‐study bias and reporting bias (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4.3</xref>). The risk of publication bias was low.</p></sec></sec><sec id="edm270218-sec-0021"><label>3.5</label><title>Lipid Profiles</title><sec id="edm270218-sec-0022"><label>3.5.1</label><title>Percentage Change in Triglyceride</title><p>Efruxifermin showed a significant change in triglyceride levels with an MD of −36.95% (95% CI: −52.67 to −21.24, <italic toggle="yes">p</italic> = 0), compared to Resmetirom with an MD of −24.72% (95% CI: −33.31 to −16.14, <italic toggle="yes">p</italic> = 0.00) (see Figure <xref rid="edm270218-fig-0005" ref-type="fig">5</xref> and Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7</xref>, Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7.4</xref>). No significant difference was observed in the indirect comparison between two treatments with an MD of −12.23% (95% CI: −30.14 to 5.68) (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6.4</xref>), and the corresponding network plot is shown in Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S8.4</xref>. The heterogeneity analysis revealed moderate heterogeneity (<italic toggle="yes">I</italic>
+<sup>2</sup> of 33.8%, <italic toggle="yes">τ</italic>
+<sup>2</sup> of 24.32). After performing a leave‐one‐out analysis and excluding Harrion‐2019 and Harrion‐2024, heterogeneity decreased significantly. However, the treatment ranking remains unchanged. The P‐scores, which rank treatments based on effectiveness, were highest for Efruxifermin (p‐score = 0.95).</p><fig position="float" fig-type="FIGURE" id="edm270218-fig-0005" orientation="portrait"><label>FIGURE 5</label><caption><p>Network meta‐analysis results for percentage change in triglyceride.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-11" orientation="portrait" xlink:href="EDM2-9-e70218-g013.jpg"/></fig><p>For the CINeMA framework, the certainty of evidence for Resmetirom and Efruxifermin indicated very low certainty with major concerns, especially regarding heterogeneity and imprecision, and some concerns due to within‐study bias and reporting bias (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4.4</xref>).</p></sec><sec id="edm270218-sec-0023"><label>3.5.2</label><title>Percentage Change in <styled-content style="fixed-case" toggle="no">LDL</styled-content>
+</title><p>Resmetirom represented the most significant effect in LDL levels with an MD of −15.66 (95% CI: −18.64 to −12.67, <italic toggle="yes">p</italic> = 0) compared to placebo. Efruxifermin showed a non‐significant effect with an MD of −1.87 (95% CI: −19.08 to 15.34, <italic toggle="yes">p</italic> = 0.83) (see Figure <xref rid="edm270218-fig-0006" ref-type="fig">6</xref> and Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7</xref>, Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7.5</xref>). In the indirect comparison between Efruxifermin and Resmetirom, no significant difference was observed, with an MD of 13.79% (95% CI: −3.68 to 31.25) (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6.5</xref>), and the corresponding network plot is shown in Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S8.5</xref>. No significant heterogeneity was detected, with <italic toggle="yes">I</italic>
+<sup>2</sup> = 0%, <italic toggle="yes">τ</italic>
+<sup>2</sup> = 0.00. Resmetirom was ranked highest based on its effectiveness with a p score of 0.96.</p><fig position="float" fig-type="FIGURE" id="edm270218-fig-0006" orientation="portrait"><label>FIGURE 6</label><caption><p>Network meta‐analysis results for percentage change in LDL.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-13" orientation="portrait" xlink:href="EDM2-9-e70218-g009.jpg"/></fig><p>For the CINeMA framework, the certainty of evidence for the Resmetirom and Efruxifermin indicated low certainty with major concerns due to imprecision and some concerns due to reporting bias (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4.5</xref>). The risk of bias was rated as low (<italic toggle="yes">p</italic> = 0.73).</p></sec><sec id="edm270218-sec-0024"><label>3.5.3</label><title>Percentage Change in <styled-content style="fixed-case" toggle="no">HDL</styled-content>
+</title><p>Based on a random effects model assessing the percentage change in HDL, Efruxifermin was associated with a marked increase in HDL levels with an MD of 35.31 (95% CI: 21.55 to 49.07, <italic toggle="yes">p</italic> = 0.00) compared to placebo, and in the indirect comparison with Resmetirom, Efruxifermin also was associated with a significant increase in the HDL levels with an MD of 33.16% (95% CI: 19.20 to 47.12) (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6.6</xref>), and the corresponding network plot is shown in Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S8.6</xref>. Resmetirom showed a non‐significant increase with an MD of 2.15 (95% CI: −0.20 to 4.49, <italic toggle="yes">p</italic> = 0.07) (see Figure <xref rid="edm270218-fig-0007" ref-type="fig">7</xref> and Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7</xref>, Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7.6</xref>).</p><fig position="float" fig-type="FIGURE" id="edm270218-fig-0007" orientation="portrait"><label>FIGURE 7</label><caption><p>Network meta‐analysis results for percentage change in HDL.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-15" orientation="portrait" xlink:href="EDM2-9-e70218-g011.jpg"/></fig><p>Regarding the heterogeneity analysis, no significant heterogeneity was detected, with <italic toggle="yes">I</italic>
+<sup>2</sup> = 0%, <italic toggle="yes">τ</italic>
+<sup>2</sup> = 0.00. The P‐scores, which rank treatments based on their effectiveness, were highest for Efruxifermin (P‐score = 1.00).</p><p>The certainty of evidence using the CINeMA framework, Resmetirom versus Efruxifermin, was moderate with some concerns due to reporting bias and imprecision (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4.6</xref>). No evidence of publication bias.</p></sec></sec><sec id="edm270218-sec-0025"><label>3.6</label><title>Adverse Event Outcomes</title><sec id="edm270218-sec-0026"><label>3.6.1</label><title>Serious Adverse Events</title><p>Efruxifermin was associated with a non‐significant increase in the risk of SAEs with an RR of 1.93 (95% CI: 0.31 to 11.96, <italic toggle="yes">p</italic> = 0.48). Resmetirom also had a non‐significant decrease, with an RR of 0.49 (95% CI: 0.06 to 4.37, <italic toggle="yes">p</italic> = 0.52) (see Figure <xref rid="edm270218-fig-0008" ref-type="fig">8</xref> and Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7</xref>, Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7.7</xref>). There is no significant difference between Efruxifermin and Resmetirom, with an RR of 3.92 (95% CI: 0.23 to 67.45) (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6.7</xref>), and the corresponding network plot is shown in Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S8.7</xref>. The heterogeneity analysis showed moderate heterogeneity, with <italic toggle="yes">I</italic>
+<sup>2</sup> = 58.7%, <italic toggle="yes">τ</italic>
+<sup>2</sup> = 2.08, with significant heterogeneity within designs (<italic toggle="yes">Q</italic> = 12.12, df = 5, <italic toggle="yes">p</italic> = 0.03). BMI emerged as a statistical moderator with a possible effect on the estimates (<italic toggle="yes">p</italic> = 0.026). Despite conducting the leave‐one‐out analysis, the heterogeneity remains significant except when Harrison 2023_c was excluded; heterogeneity decreased with <italic toggle="yes">I</italic>
+<sup>2</sup> = 0%, and the treatment ranking remains the same. Conversely, excluding small sample size studies‐Harrison 2021_b, Harrison 2023_b, and Harrison 2025‐ decreases the heterogeneity <italic toggle="yes">I</italic>
+<sup>2</sup> = 0%, <italic toggle="yes">τ</italic>
+<sup>2</sup> = 0. Resmetirom was ranked the highest based on its effectiveness, with a <italic toggle="yes">p</italic>‐score of 0.78.</p><fig position="float" fig-type="FIGURE" id="edm270218-fig-0008" orientation="portrait"><label>FIGURE 8</label><caption><p>Network meta‐analysis results for serious adverse events.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-17" orientation="portrait" xlink:href="EDM2-9-e70218-g003.jpg"/></fig><p>The certainty of evidence for Resmetirom vs. Efruxifermin was very low, due to major concerns related to imprecision and heterogeneity, and some concerns due to within‐study bias and reporting bias (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4.7</xref>).</p><p>Regarding publication bias, significantly high concerns of bias were detected (<italic toggle="yes">p</italic> = 0.04).</p></sec><sec id="edm270218-sec-0027"><label>3.6.2</label><title>Treatment Discontinuation</title><p>Resmetirom showed a significant increase in the risk of discontinuation after random assessment with an RR of 2.24 (95% CI: 1.26 to 3.97, <italic toggle="yes">p</italic> = 0.005) compared to placebo. Efruxifermin showed a non‐significant increase in the risk of discontinuation with an RR of 2.10 (95% CI: 0.70 to 6.31, <italic toggle="yes">p</italic> = 0.18) (see Figure <xref rid="edm270218-fig-0009" ref-type="fig">9</xref> and Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7</xref>, Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7.8</xref>). The indirect comparison between Resmetirom and Efruxifermin with an RR of 0.94 (95% CI: 0.27 to 3.24), indicating no significant difference in the two treatment discontinuation rates (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6.8</xref>), and the corresponding network plot is shown in Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S8.8</xref>. The heterogeneity analysis revealed no significant heterogeneity, with <italic toggle="yes">I</italic>
+<sup>2</sup> = 0%, <italic toggle="yes">τ</italic>
+<sup>2</sup> = 0.00.</p><fig position="float" fig-type="FIGURE" id="edm270218-fig-0009" orientation="portrait"><label>FIGURE 9</label><caption><p>Network meta‐analysis results for treatment discontinuation.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-19" orientation="portrait" xlink:href="EDM2-9-e70218-g006.jpg"/></fig><p>According to the CINeMA framework, the certainty of evidence in comparison between Resmetirom and Efruxifermin was low, due to within‐study bias, reporting bias, and imprecision (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4.8</xref>).</p></sec><sec id="edm270218-sec-0028"><label>3.6.3</label><title>Nausea</title><p>Efruxifermin significantly increased the risk of nausea, with an RR of 3.23 (95% CI: 1.66 to 6.29, <italic toggle="yes">p</italic> = 0.0006) compared to placebo. Resmetirom also showed an increased risk of nausea with an RR of 1.84 (95% CI: 1.39 to 2.42, <italic toggle="yes">p</italic> = 0.00) (see Figure <xref rid="edm270218-fig-0010" ref-type="fig">10</xref> and Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7</xref>, Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7.9</xref>). In the indirect comparison between Efruxifermin and Resmetirom, there is no significant difference, with an RR of 1.76 (95% CI: 0.85 to 3.62) (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6.9</xref>), and the corresponding network plot is shown in Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S8.9</xref>. The heterogeneity analysis revealed no significant heterogeneity, with <italic toggle="yes">I</italic>
+<sup>2</sup> = 0%, <italic toggle="yes">τ</italic>
+<sup>2</sup> = 0.00, indicating consistency among study results. The check of the transitivity assumption was valid, although there was a significant imbalance for study duration (<italic toggle="yes">p</italic> = 0.003).</p><fig position="float" fig-type="FIGURE" id="edm270218-fig-0010" orientation="portrait"><label>FIGURE 10</label><caption><p>Network meta‐analysis results for nausea.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-21" orientation="portrait" xlink:href="EDM2-9-e70218-g004.jpg"/></fig><p>The level of confidence in the certainty of evidence using the CINeMA model for the Resmetirom vs. Efruxifermin was ranked as moderate, due to some concerns with within‐study bias and reporting bias (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4.9</xref>). There was a high level of concern regarding publication bias.</p></sec><sec id="edm270218-sec-0029"><label>3.6.4</label><title>Diarrhoea</title><p>Resmetirom and Efruxifermin were both associated with a significant increase in the risk of diarrhoea with an RR of 2.28 (95% CI: 1.77 to 2.93, <italic toggle="yes">p</italic> = 0.00) and 1.81 (95% CI: 1.02 to 3.23, <italic toggle="yes">p</italic> = 0.04), respectively (see Figure <xref rid="edm270218-fig-0011" ref-type="fig">11</xref> and Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7</xref>, Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7.10</xref>). There is no significant difference in the indirect comparison between Efruxifermin and Resmetirom, with an RR of 0.79 (95% CI: 0.42 to 1.49) (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6.10</xref>), and the corresponding network plot is shown in Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S8.10</xref>. Analysis showed low heterogeneity, with <italic toggle="yes">I</italic>
+<sup>2</sup> = 9.7%, <italic toggle="yes">τ</italic>
+<sup>2</sup> = 0.01, representing consistency among the study results.</p><fig position="float" fig-type="FIGURE" id="edm270218-fig-0011" orientation="portrait"><label>FIGURE 11</label><caption><p>Network meta‐analysis results for diarrhoea.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-23" orientation="portrait" xlink:href="EDM2-9-e70218-g008.jpg"/></fig><p>Regarding the transitivity assumption validity, a significant imbalance was detected for study duration (<italic toggle="yes">p</italic> = 0.003). No evidence of publication bias among the included studies was detected (<italic toggle="yes">p</italic> = 0.13).</p><p>According to the CINeMA framework, the certainty of evidence for Resmetirom vs. Efruxifermin was ranked as moderate, due to some concerns about within‐study bias and reporting bias (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4.10</xref>).</p></sec><sec id="edm270218-sec-0030"><label>3.6.5</label><title>Abdominal Pain</title><p>Applying the random effects framework to assess the abdominal pain incidence showed a significant increase in Resmetirom group for abdominal pain with an RR of 1.61 (95% CI: 1.05 to 2.46, <italic toggle="yes">p</italic> = 0.03). While Efruxifermin showed non‐significant increase of abdominal pain with an RR of 1.42 (95% CI: 0.39 to 5.14, <italic toggle="yes">p</italic> = 0.58) (see Figure <xref rid="edm270218-fig-0012" ref-type="fig">12</xref> and Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7</xref>, Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S7.11</xref>). In the indirect comparison between Efruxifermin and Resmetirom, there is no significant difference with an RR of 0.88 (95% CI: 0.23 to 3.43) (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S6.11</xref>), and the corresponding network plot is shown in Figure <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S8.11</xref>. No heterogeneity was detected between studies with <italic toggle="yes">I</italic>
+<sup>2</sup> = 0.0%, <italic toggle="yes">τ</italic>
+<sup>2</sup>= 0, and non‐significant heterogeneity within designs (<italic toggle="yes">Q</italic> = 1.62, df = 2, <italic toggle="yes">p</italic> = 0.44).</p><fig position="float" fig-type="FIGURE" id="edm270218-fig-0012" orientation="portrait"><label>FIGURE 12</label><caption><p>Network meta‐analysis results for abdominal pain.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-25" orientation="portrait" xlink:href="EDM2-9-e70218-g010.jpg"/></fig><p>According to the CINeMA framework, the certainty of evidence was rated as low for Resmetirom vs. Efruxifermin because of major concerns about imprecision and some concerns with within‐study bias and reporting bias (Supporting Information <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4</xref>, Table <xref rid="edm270218-supitem-0002" ref-type="supplementary-material">S4.11</xref>).</p><p>There was little evidence of publication bias among the included studies (<italic toggle="yes">p</italic> = 0.51).</p></sec></sec></sec><sec sec-type="discussion" id="edm270218-sec-0031"><label>4</label><title>Discussion</title><p>In this systematic review and network meta‐analysis, 8 RCTs were included, aiming to comprehensively assess the effect of Resmetirom in comparison to Efruxifermin for MASH on hepatic steatosis and fibrosis, with particular focus on presenting the impact on liver enzymes, liver fat content, lipid profiles, and safety profile. Efruxifermin demonstrated substantial efficacy, particularly in reducing liver fat content (MRI‐PDFF), AST, ALT, and triglyceride levels. Resmetirom was associated with significant hepatic steatosis reduction, improving liver enzymes, and reducing LDL.</p><p>In regard to safety outcomes, Resmetirom was associated with higher risks of treatment discontinuation and increased risk of diarrhoea and abdominal pain; in contrast, Efruxifermin demonstrated a higher risk of nausea.</p><p>To our knowledge, no comprehensive meta‐analysis in the literature has investigated a head‐to‐head comparison between Resmetirom and Efruxifermin among patients with MASH, evaluating their impact on non‐invasive outcomes, biochemical markers, and metabolic endpoints, as well as their safety profiles. Importantly, the combination of MRI‐PDFF response and improvements in liver enzymes is clinically relevant, with higher odds of histological response or MASH resolution, which can serve as predictors of histological improvements [<xref rid="edm270218-bib-0035" ref-type="bibr">35</xref>, <xref rid="edm270218-bib-0036" ref-type="bibr">36</xref>, <xref rid="edm270218-bib-0037" ref-type="bibr">37</xref>]. Therefore, we conducted this systematic meta‐analysis to address this gap and provide a therapeutic comparison, highlighting the relevance of biochemical and non‐invasive imaging endpoints, along with metabolic and safety outcomes for clinical decision‐making.</p><p>Resmetirom (MGL‐3196) is a liver‐targeted, thyroid hormone receptor (THR)‐β‐selective drug [<xref rid="edm270218-bib-0011" ref-type="bibr">11</xref>]. Besides reducing liver steatosis and hepatic fibrogenesis, leading to improved lipid profile and reducing inflammation, Resmetirom induces iodothyronine deiodinase 1 (DIO1), which converts Thyroxine (T4) into the metabolically active free triiodothyronine (T3) in the liver [<xref rid="edm270218-bib-0011" ref-type="bibr">11</xref>]. The T3 then binds to its nuclear thyroid receptor β (THR‐β), which heterodimerizes with retinoid X receptor (RXR) to regulate carnitine palmitoyltransferase I (CPT1) in hepatocytes [<xref rid="edm270218-bib-0011" ref-type="bibr">11</xref>]. This enzyme plays a key role in hepatic de novo lipogenesis by controlling mitochondrial fatty acid oxidation (FAO), and Sterol regulatory element binding transcription factor 1 (SREBF1) leads to a rapid decrease and robust lowering of non‐HDL‐C and hepatic triglyceride accumulation, consistent with our network findings [<xref rid="edm270218-bib-0011" ref-type="bibr">11</xref>, <xref rid="edm270218-bib-0038" ref-type="bibr">38</xref>, <xref rid="edm270218-bib-0039" ref-type="bibr">39</xref>].</p><p>Efruxifermin, a bivalent Fc‐fibroblast growth factor 21 (FGF21) analogue, FGF21 has been recognized as important for the control of glucose and lipid metabolism, leading to reduced dyslipidemia, body weight, and hepatic steatosis, besides increasing insulin sensitivity [<xref rid="edm270218-bib-0012" ref-type="bibr">12</xref>]. In addition, Efruxifermin showed promising results, including improvement in non‐invasive markers of liver injury such as AST and ALT, as well as improvements in fibrosis, aligned with our network results [<xref rid="edm270218-bib-0012" ref-type="bibr">12</xref>, <xref rid="edm270218-bib-0013" ref-type="bibr">13</xref>, <xref rid="edm270218-bib-0040" ref-type="bibr">40</xref>, <xref rid="edm270218-bib-0041" ref-type="bibr">41</xref>].</p><p>The management of patients with MASH consists of a multimodal intervention that covers multiple aspects, like weight reduction, lifestyle modifications, and pharmacological intervention [<xref rid="edm270218-bib-0042" ref-type="bibr">42</xref>]. Decreasing MASH‐related mortality, resolution of steatohepatitis without worsening of fibrosis, or regression of fibrosis without worsening of steatohepatitis, and more recently, a combined resolution of steatohepatitis and regression of fibrosis, as well, reducing progression to cirrhosis or HCC, are considered the mainstay for assessing treatment efficacy [<xref rid="edm270218-bib-0005" ref-type="bibr">5</xref>, <xref rid="edm270218-bib-0043" ref-type="bibr">43</xref>].</p><p>The phase 3 trial MAESTRO‐ NASH showed the efficacy of Resmetirom 100 mg on both MASH resolution without fibrosis impairment and ≥ 1 stage improvement in fibrosis without MASH impairment, compared to placebo, for 52 weeks [<xref rid="edm270218-bib-0021" ref-type="bibr">21</xref>]. Based on these results and a surrogate clinical endpoint, the Food and Drug Administration (FDA) approved Resmetirom for MASLD patients with F2–F3 fibrosis [<xref rid="edm270218-bib-0021" ref-type="bibr">21</xref>, <xref rid="edm270218-bib-0044" ref-type="bibr">44</xref>].</p><p>The findings of our study revealed that Efruxifermin has a superior hepatic response through hepatic fat reduction and improving hepatic enzymes and lipid profile, such as HDL and TG. Our results align with a recent meta‐analysis that supports Efruxifermin's potential as a multifaceted and effective treatment for MASH. Although Efruxifermin is not yet approved by the FDA for the treatment of MASH, Efruxifermin's biochemical and metabolic enhancements, alongside its reassuring safety profile, suggest its potential to become a cornerstone in the future clinical guidelines and treatment strategies of MASH, offering a more comprehensive approach to combating the disease [<xref rid="edm270218-bib-0013" ref-type="bibr">13</xref>, <xref rid="edm270218-bib-0045" ref-type="bibr">45</xref>, <xref rid="edm270218-bib-0046" ref-type="bibr">46</xref>].</p><p>The strength of our study lies in addressing one‐to‐one treatment comparisons using only RCTs, the gold standard for evaluating the effectiveness of an intervention. It must be mentioned that in this network meta‐analysis, we had some limitations: firstly, the number of participants in some RCTs was small and relatively short study duration, also the heterogeneity among trials—such as differences in inclusion criteria, dosing regimens, and follow‐up duration; secondly, although using the network meta‐analysis structure allowed us to generate comparative effects in the absence of direct head‐to‐head evidence, this structure relies on indirect comparisons, which potentially introduces uncertainty into the estimated treatment effects with misleading ranking. Finally, a significant heterogeneity was found in the measurement of change in ALT, AST, triglycerides, and serious adverse events. This could be clarified by variation in the patient population, disease severity, and lack of standardization through the studies on medication dosage or duration of treatment.</p><p>Most comparisons between treatments were based on indirect evidence; therefore, these data inform the need for one‐to‐one comparison between different treatment methods in future clinical trials to validate the promising results in the literature, which may help the development of combination therapies and decision‐making process by providing evidence‐based data to guide patient treatment based on individual patient needs and health conditions [<xref rid="edm270218-bib-0010" ref-type="bibr">10</xref>, <xref rid="edm270218-bib-0047" ref-type="bibr">47</xref>].</p></sec><sec sec-type="conclusions" id="edm270218-sec-0032"><label>5</label><title>Conclusion</title><p>Using network meta‐analysis, we observed that Resmetirom and Efruxifermin are superior to placebo and comparable to one another in improving key biochemical and non‐invasive markers. Large comparative RCTs, particularly head‐to‐head trials with longer duration, are warranted to further establish the comparative efficacy of different interventions for MASH.</p></sec><sec id="edm270218-sec-0041"><title>Author Contributions</title><p>
+<bold>Thekrayat Asad:</bold> conceptualization, resources, writing – review and editing, data curation. <bold>Doha Jaber:</bold> conceptualization, methodology, writing – original draft, writing – review and editing, resources, project administration, visualization, supervision, validation, investigation, data curation. <bold>Hazem Ayesh:</bold> conceptualization, methodology, software, formal analysis, writing – original draft, writing – review and editing, project administration. <bold>Ayah Abu Lehia:</bold> conceptualization, data curation, resources, writing – review and editing. <bold>Inas Jaber:</bold> conceptualization, data curation, investigation, resources, writing – review and editing.</p></sec><sec id="edm270218-sec-0037"><title>Funding</title><p>The authors have nothing to report.</p></sec><sec sec-type="COI-statement" id="edm270218-sec-0040"><title>Disclosure</title><p>Permission to reproduce material from other sources: Not applicable; this article is a meta‐analysis of previously published clinical trials that are appropriately cited.</p></sec><sec id="edm270218-sec-0038"><title>Ethics Statement</title><p>This article is a meta‐analysis of previously published clinical trials; it does not contain any new studies with human or animal participants. Therefore, ethics approval and informed consent were not required.</p></sec><sec sec-type="conclusions" id="edm270218-sec-0039"><title>Consent</title><p>The authors have nothing to report.</p></sec><sec sec-type="COI-statement" id="edm270218-sec-0034"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="edm270218-supitem-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Data S1:</bold> edm270218‐sup‐0001‐SupinfoS1.docx.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="EDM2-9-e70218-s002.docx" position="float" orientation="portrait"/></supplementary-material><supplementary-material id="edm270218-supitem-0002" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Data S2:</bold> edm270218‐sup‐0002‐SupinfoS2.docx.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="EDM2-9-e70218-s001.docx" position="float" orientation="portrait"/></supplementary-material></sec></body><back><ack id="edm270218-sec-0033"><title>Acknowledgements</title><p>Artificial intelligence tools are used to assist with grammar review during manuscript preparation. These tools were utilized, and the authors took full responsibility for reviewing and editing the content as needed to create the final publication.</p></ack><sec sec-type="data-availability" id="edm270218-sec-0036"><title>Data Availability Statement</title><p>Original data generated and analyzed during this study are included in this published article or in the data repositories listed in References. <xref rid="edm270218-supitem-0001" ref-type="supplementary-material">Supporting Information</xref> contains additional data.</p></sec><ref-list content-type="cited-references" id="edm270218-bibl-0001"><title>References</title><ref id="edm270218-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="edm270218-cit-0001">
+<string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Manne</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Handa</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K. V.</given-names>
+<surname>Kowdley</surname>
+</string-name>, “<article-title>Pathophysiology of Nonalcoholic Fatty Liver Disease/Nonalcoholic Steatohepatitis</article-title>,” <source>Clinics in Liver Disease</source>
+<volume>22</volume>, no. <issue>1</issue> (<year>2018</year>): <fpage>23</fpage>–<lpage>37</lpage>, <pub-id pub-id-type="doi">10.1016/j.cld.2017.08.007</pub-id>.<pub-id pub-id-type="pmid">29128059</pub-id>
+</mixed-citation></ref><ref id="edm270218-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="edm270218-cit-0002">
+<string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. L.</given-names>
+<surname>Poulsen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Wu</surname>
+</string-name>, et al., “<article-title>Targeted Therapeutics and Novel Signaling Pathways in Non‐Alcohol‐Associated Fatty Liver/Steatohepatitis (NAFL/NASH)</article-title>,” <source>Signal Transduction and Targeted Therapy</source>
+<volume>7</volume>, no. <issue>1</issue> (<year>2022</year>): <elocation-id>287</elocation-id>, <pub-id pub-id-type="doi">10.1038/s41392-022-01119-3</pub-id>.<pub-id pub-id-type="pmid">35963848</pub-id>
+<pub-id pub-id-type="pmcid">PMC9376100</pub-id></mixed-citation></ref><ref id="edm270218-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="edm270218-cit-0003">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Li</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Wang</surname>
+</string-name>, “<article-title>Liver Transplantation for NASH‐Related Hepatocellular Carcinoma Versus Non‐NASH Etiologies of Hepatocellular Carcinoma: A Systematic Review and Meta‐Analysis</article-title>,” <source>PLoS One</source>
+<volume>20</volume>, no. <issue>3</issue> (<year>2025</year>): <elocation-id>e0317730</elocation-id>, <pub-id pub-id-type="doi">10.1371/journal.pone.0317730</pub-id>.<pub-id pub-id-type="pmid">40106456</pub-id>
+<pub-id pub-id-type="pmcid">PMC11922278</pub-id></mixed-citation></ref><ref id="edm270218-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="edm270218-cit-0004">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Hwang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Hwang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Shin</surname>
+</string-name>, et al., “<article-title>Bariatric Intervention Improves Metabolic Dysfunction‐Associated Steatohepatitis in Patients With Obesity: A Systematic Review and Meta‐Analysis</article-title>,” <source>Clinical and Molecular Hepatology</source>
+<volume>30</volume>, no. <issue>3</issue> (<year>2024</year>): <fpage>561</fpage>–<lpage>576</lpage>, <pub-id pub-id-type="doi">10.3350/cmh.2023.0384</pub-id>.<pub-id pub-id-type="pmid">38830642</pub-id>
+<pub-id pub-id-type="pmcid">PMC11261233</pub-id></mixed-citation></ref><ref id="edm270218-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="edm270218-cit-0005">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Zeng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. G.</given-names>
+<surname>Fan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Francque</surname>
+</string-name>, “<article-title>Therapeutic Management of Metabolic Dysfunction Associated Steatotic Liver Disease</article-title>,” <source>United European Gastroenterology Journal</source>
+<volume>12</volume>, no. <issue>2</issue> (<year>2024</year>): <fpage>177</fpage>–<lpage>186</lpage>, <pub-id pub-id-type="doi">10.1002/ueg2.12525</pub-id>.<pub-id pub-id-type="pmid">38193865</pub-id>
+<pub-id pub-id-type="pmcid">PMC10954426</pub-id></mixed-citation></ref><ref id="edm270218-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="edm270218-cit-0006">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Saiman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Duarte‐Rojo</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. E.</given-names>
+<surname>Rinella</surname>
+</string-name>, “<article-title>Fatty Liver Disease: Diagnosis and Stratification</article-title>,” <source>Annual Review of Medicine</source>
+<volume>73</volume> (<year>2022</year>): <fpage>529</fpage>–<lpage>544</lpage>, <pub-id pub-id-type="doi">10.1146/annurev-med-042220-020407</pub-id>.<pub-id pub-id-type="pmcid">PMC10074159</pub-id><pub-id pub-id-type="pmid">34809436</pub-id></mixed-citation></ref><ref id="edm270218-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="edm270218-cit-0007">
+<string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Younossi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Q. M.</given-names>
+<surname>Anstee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Marietti</surname>
+</string-name>, et al., “<article-title>Global Burden of NAFLD and NASH: Trends, Predictions, Risk Factors and Prevention</article-title>,” <source>Nature Reviews. Gastroenterology &amp; Hepatology</source>
+<volume>15</volume>, no. <issue>1</issue> (<year>2018</year>): <fpage>11</fpage>–<lpage>20</lpage>, <pub-id pub-id-type="doi">10.1038/nrgastro.2017.109</pub-id>.<pub-id pub-id-type="pmid">28930295</pub-id>
+</mixed-citation></ref><ref id="edm270218-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="edm270218-cit-0008">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Singh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Khera</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. M.</given-names>
+<surname>Allen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. H.</given-names>
+<surname>Murad</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Loomba</surname>
+</string-name>, “<article-title>Comparative Effectiveness of Pharmacological Interventions for Nonalcoholic Steatohepatitis: A Systematic Review and Network Meta‐Analysis</article-title>,” <source>Hepatology</source>
+<volume>62</volume>, no. <issue>5</issue> (<year>2015</year>): <fpage>1417</fpage>–<lpage>1432</lpage>, <pub-id pub-id-type="doi">10.1002/hep.27999</pub-id>.<pub-id pub-id-type="pmid">26189925</pub-id>
+</mixed-citation></ref><ref id="edm270218-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="edm270218-cit-0009">
+<string-name name-style="western">
+<given-names>M. M.</given-names>
+<surname>Azam</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Mukhtar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Haris</surname>
+</string-name>, et al., “<article-title>FDA'S Approval of Resmetirom (Rezdiffra): A Breakthrough in MASH Management</article-title>,” <source>Exploration of Drug Science</source>
+<volume>2</volume>, no. <issue>6</issue> (<year>2024</year>): <fpage>867</fpage>–<lpage>874</lpage>, <pub-id pub-id-type="doi">10.37349/eds.2024.00078</pub-id>.</mixed-citation></ref><ref id="edm270218-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="edm270218-cit-0010">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Souza</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Al‐Sharif</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V. L. J.</given-names>
+<surname>Antunes</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. Q.</given-names>
+<surname>Huang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Loomba</surname>
+</string-name>, “<article-title>Comparison of Pharmacological Therapies in Metabolic Dysfunction‐Associated Steatohepatitis for Fibrosis Regression and MASH Resolution: Systematic Review and Network Meta‐Analysis</article-title>,” <source>Hepatology</source>
+<volume>82</volume> (<year>2025</year>): <fpage>1523</fpage>–<lpage>1533</lpage>, <pub-id pub-id-type="doi">10.1097/HEP.0000000000001254</pub-id>.<pub-id pub-id-type="pmid">39903735</pub-id>
+<pub-id pub-id-type="pmcid">PMC12614381</pub-id></mixed-citation></ref><ref id="edm270218-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="edm270218-cit-0011">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Petta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Targher</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Romeo</surname>
+</string-name>, et al., “<article-title>The First MASH Drug Therapy on the Horizon: Current Perspectives of Resmetirom</article-title>,” <source>Liver International</source>
+<volume>44</volume>, no. <issue>7</issue> (<year>2024</year>): <fpage>1526</fpage>–<lpage>1536</lpage>, <pub-id pub-id-type="doi">10.1111/liv.15930</pub-id>.<pub-id pub-id-type="pmid">38578141</pub-id>
+</mixed-citation></ref><ref id="edm270218-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="edm270218-cit-0012">
+<string-name name-style="western">
+<given-names>E. J.</given-names>
+<surname>Tillman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W. J.</given-names>
+<surname>Brock</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Rolph</surname>
+</string-name>, “<article-title>Efruxifermin, a Long‐Acting Fc‐Fusion FGF21 Analogue, Reduces Body Weight Gain but Does Not Increase Sympathetic Tone or Urine Volume in Sprague Dawley Rats</article-title>,” <source>British Journal of Pharmacology</source>
+<volume>179</volume>, no. <issue>7</issue> (<year>2022</year>): <fpage>1384</fpage>–<lpage>1394</lpage>, <pub-id pub-id-type="doi">10.1111/bph.15725</pub-id>.<pub-id pub-id-type="pmid">34773249</pub-id>
+<pub-id pub-id-type="pmcid">PMC9306736</pub-id></mixed-citation></ref><ref id="edm270218-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="edm270218-cit-0013">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Zou</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Zhou</surname>
+</string-name>, et al., “<article-title>A Systematic Review and Meta‐Analysis of Efruxifermin's Efficacy in Improving Liver Fibrosis in Patients With NASH/MASH</article-title>,” <source>Frontiers in Pharmacology</source>
+<volume>16</volume> (<year>2025</year>): <elocation-id>1594091</elocation-id>, <pub-id pub-id-type="doi">10.3389/fphar.2025.1594091</pub-id>.<pub-id pub-id-type="pmid">40520164</pub-id>
+<pub-id pub-id-type="pmcid">PMC12163238</pub-id></mixed-citation></ref><ref id="edm270218-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="edm270218-cit-0014">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Nassir</surname>
+</string-name>, “<article-title>NAFLD: Mechanisms, Treatments, and Biomarkers</article-title>,” <source>Biomolecules</source>
+<volume>12</volume>, no. <issue>6</issue> (<year>2022</year>): <elocation-id>824</elocation-id>, <pub-id pub-id-type="doi">10.3390/biom12060824</pub-id>.<pub-id pub-id-type="pmid">35740949</pub-id>
+<pub-id pub-id-type="pmcid">PMC9221336</pub-id></mixed-citation></ref><ref id="edm270218-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="edm270218-cit-0015">
+<string-name name-style="western">
+<given-names>A. J.</given-names>
+<surname>Kovalic</surname>
+</string-name>, “<article-title>Pharmacotherapeutic Impact on Nonalcoholic Steatohepatitis Histology: A Systematic Review and Network Meta‐Analysis</article-title>,” <source>Journal of Clinical and Experimental Hepatology</source>
+<volume>12</volume>, no. <issue>4</issue> (<year>2022</year>): <fpage>1057</fpage>–<lpage>1068</lpage>, <pub-id pub-id-type="doi">10.1016/j.jceh.2022.01.011</pub-id>.<pub-id pub-id-type="pmid">35814516</pub-id>
+<pub-id pub-id-type="pmcid">PMC9257887</pub-id></mixed-citation></ref><ref id="edm270218-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="edm270218-cit-0016">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Ayesh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Beran</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Suhail</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Ayesh</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Niswender</surname>
+</string-name>, “<article-title>Comparative Analysis of Resmetirom vs. FGF21 Analogs vs. GLP‐1 Agonists in MASLD and MASH: Network Meta‐Analysis of Clinical Trials</article-title>,” <source>Biomedicine</source>
+<volume>12</volume>, no. <issue>10</issue> (<year>2024</year>): <elocation-id>2328</elocation-id>, <pub-id pub-id-type="doi">10.3390/biomedicines12102328</pub-id>.<pub-id pub-id-type="pmcid">PMC11505228</pub-id><pub-id pub-id-type="pmid">39457640</pub-id></mixed-citation></ref><ref id="edm270218-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="edm270218-cit-0017">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Noureddin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Charlton</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Harrison</surname>
+</string-name>, et al., “<article-title>Expert Panel Recommendations: Practical Clinical Applications for Initiating and Monitoring Resmetirom in Patients With MASH/NASH and Moderate to Noncirrhotic Advanced Fibrosis</article-title>,” <source>Clinical Gastroenterology and Hepatology</source>
+<volume>22</volume>, no. <issue>12</issue> (<year>2024</year>): <fpage>2367</fpage>–<lpage>2377</lpage>, <pub-id pub-id-type="doi">10.1016/j.cgh.2024.07.003</pub-id>.<pub-id pub-id-type="pmid">39038768</pub-id>
+</mixed-citation></ref><ref id="edm270218-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="edm270218-cit-0018">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Chalasani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Younossi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>Lavine</surname>
+</string-name>, et al., “<article-title>The Diagnosis and Management of Nonalcoholic Fatty Liver Disease: Practice Guidance From the American Association for the Study of Liver Diseases</article-title>,” <source>Hepatology</source>
+<volume>67</volume>, no. <issue>1</issue> (<year>2018</year>): <fpage>328</fpage>–<lpage>357</lpage>, <pub-id pub-id-type="doi">10.1002/hep.29367</pub-id>.<pub-id pub-id-type="pmid">28714183</pub-id>
+</mixed-citation></ref><ref id="edm270218-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="edm270218-cit-0019">
+<string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Harrison</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Bashir</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. E.</given-names>
+<surname>Moussa</surname>
+</string-name>, et al., “<article-title>Effects of Resmetirom on Noninvasive Endpoints in a 36‐Week Phase 2 Active Treatment Extension Study in Patients With NASH</article-title>,” <source>Hepatology Communications</source>
+<volume>5</volume>, no. <issue>4</issue> (<year>2021</year>): <fpage>573</fpage>–<lpage>588</lpage>, <pub-id pub-id-type="doi">10.1002/hep4.1657</pub-id>.<pub-id pub-id-type="pmid">33860116</pub-id>
+<pub-id pub-id-type="pmcid">PMC8034581</pub-id></mixed-citation></ref><ref id="edm270218-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="edm270218-cit-0020">
+<string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Harrison</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Bashir</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. D.</given-names>
+<surname>Guy</surname>
+</string-name>, et al., “<article-title>Resmetirom (MGL‐3196) for the Treatment of Non‐Alcoholic Steatohepatitis: A Multicentre, Randomised, Double‐Blind, Placebo‐Controlled, Phase 2 Trial</article-title>,” <source>Lancet</source>
+<volume>394</volume>, no. <issue>10213</issue> (<year>2019</year>): <fpage>2012</fpage>–<lpage>2024</lpage>, <pub-id pub-id-type="doi">10.1016/S0140-6736(19)32517-6</pub-id>.<pub-id pub-id-type="pmid">31727409</pub-id>
+</mixed-citation></ref><ref id="edm270218-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="edm270218-cit-0021">
+<string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Harrison</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Bedossa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. D.</given-names>
+<surname>Guy</surname>
+</string-name>, et al., “<article-title>A Phase 3, Randomized, Controlled Trial of Resmetirom in NASH With Liver Fibrosis</article-title>,” <source>New England Journal of Medicine</source>
+<volume>390</volume>, no. <issue>6</issue> (<year>2024</year>): <fpage>497</fpage>–<lpage>509</lpage>, <pub-id pub-id-type="doi">10.1056/NEJMoa2309000</pub-id>.<pub-id pub-id-type="pmid">38324483</pub-id>
+</mixed-citation></ref><ref id="edm270218-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="edm270218-cit-0022">
+<string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Harrison</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Frias</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. J.</given-names>
+<surname>Lucas</surname>
+</string-name>, et al., “<article-title>Safety and Efficacy of Efruxifermin in Combination With a GLP‐1 Receptor Agonist in Patients With NASH/MASH and Type 2 Diabetes in a Randomized Phase 2 Study</article-title>,” <source>Clinical Gastroenterology and Hepatology</source>
+<volume>23</volume>, no. <issue>1</issue> (<year>2025</year>): <fpage>103</fpage>–<lpage>113</lpage>, <pub-id pub-id-type="doi">10.1016/j.cgh.2024.02.022</pub-id>.<pub-id pub-id-type="pmid">38447814</pub-id>
+</mixed-citation></ref><ref id="edm270218-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="edm270218-cit-0023">
+<string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Harrison</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Frias</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Neff</surname>
+</string-name>, et al., “<article-title>Safety and Efficacy of Once‐Weekly Efruxifermin Versus Placebo in Non‐Alcoholic Steatohepatitis (HARMONY): A Multicentre, Randomised, Double‐Blind, Placebo‐Controlled, Phase 2b Trial</article-title>,” <source>Lancet Gastroenterology &amp; Hepatology</source>
+<volume>8</volume>, no. <issue>12</issue> (<year>2023</year>): <fpage>1080</fpage>–<lpage>1093</lpage>, <pub-id pub-id-type="doi">10.1016/S2468-1253(23)00272-8</pub-id>.<pub-id pub-id-type="pmid">37802088</pub-id>
+</mixed-citation></ref><ref id="edm270218-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="edm270218-cit-0024">
+<string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Harrison</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. J.</given-names>
+<surname>Ruane</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Freilich</surname>
+</string-name>, et al., “<article-title>A Randomized, Double‐Blind, Placebo‐Controlled Phase IIa Trial of Efruxifermin for Patients With Compensated NASH Cirrhosis</article-title>,” <source>JHEP Reports</source>
+<volume>5</volume>, no. <issue>1</issue> (<year>2023</year>): <elocation-id>100563</elocation-id>, <pub-id pub-id-type="doi">10.1016/j.jhepr.2022.100563</pub-id>.<pub-id pub-id-type="pmid">36644237</pub-id>
+<pub-id pub-id-type="pmcid">PMC9832280</pub-id></mixed-citation></ref><ref id="edm270218-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="edm270218-cit-0025">
+<string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Harrison</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. J.</given-names>
+<surname>Ruane</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. L.</given-names>
+<surname>Freilich</surname>
+</string-name>, et al., “<article-title>Efruxifermin in Non‐Alcoholic Steatohepatitis: A Randomized, Double‐Blind, Placebo‐Controlled, Phase 2a Trial</article-title>,” <source>Nature Medicine</source>
+<volume>27</volume>, no. <issue>7</issue> (<year>2021</year>): <fpage>1262</fpage>–<lpage>1271</lpage>, <pub-id pub-id-type="doi">10.1038/s41591-021-01425-3</pub-id>.<pub-id pub-id-type="pmid">34239138</pub-id></mixed-citation></ref><ref id="edm270218-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="edm270218-cit-0026">
+<string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Harrison</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Taub</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. W.</given-names>
+<surname>Neff</surname>
+</string-name>, et al., “<article-title>Resmetirom for Nonalcoholic Fatty Liver Disease: A Randomized, Double‐Blind, Placebo‐Controlled Phase 3 Trial</article-title>,” <source>Nature Medicine</source>
+<volume>29</volume>, no. <issue>11</issue> (<year>2023</year>): <fpage>2919</fpage>–<lpage>2928</lpage>, <pub-id pub-id-type="doi">10.1038/s41591-023-02603-1</pub-id>.<pub-id pub-id-type="pmcid">PMC10667098</pub-id><pub-id pub-id-type="pmid">37845512</pub-id></mixed-citation></ref><ref id="edm270218-bib-0027"><label>27</label><mixed-citation publication-type="miscellaneous" id="edm270218-cit-0027">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Rohatgi</surname>
+</string-name>, <article-title>“WebPlotDigitizer (Version 4.3),”</article-title> Automeris, accessed February 22, 2025, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://automeris.io/WebPlotDigitizer" ext-link-type="uri">https://automeris.io/WebPlotDigitizer</ext-link>.</mixed-citation></ref><ref id="edm270218-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="edm270218-cit-0028">
+<string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Higgins</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. G.</given-names>
+<surname>Thompson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. J.</given-names>
+<surname>Deeks</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D. G.</given-names>
+<surname>Altman</surname>
+</string-name>, “<article-title>Measuring Inconsistency in Meta‐Analyses</article-title>,” <source>BMJ (Clinical Research Ed.)</source>
+<volume>327</volume>, no. <issue>7414</issue> (<year>2003</year>): <fpage>557</fpage>–<lpage>560</lpage>, <pub-id pub-id-type="doi">10.1136/bmj.327.7414.557</pub-id>.<pub-id pub-id-type="pmcid">PMC192859</pub-id><pub-id pub-id-type="pmid">12958120</pub-id></mixed-citation></ref><ref id="edm270218-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="edm270218-cit-0029">
+<string-name name-style="western">
+<given-names>J. A.</given-names>
+<surname>Sterne</surname>
+</string-name> and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Egger</surname>
+</string-name>, “<article-title>Funnel Plots for Detecting Bias in Meta‐Analysis: Guidelines on Choice of Axis</article-title>,” <source>Journal of Clinical Epidemiology</source>
+<volume>54</volume>, no. <issue>10</issue> (<year>2001</year>): <fpage>1046</fpage>–<lpage>1055</lpage>, <pub-id pub-id-type="doi">10.1016/s0895-4356(01)00377-8</pub-id>.<pub-id pub-id-type="pmid">11576817</pub-id>
+</mixed-citation></ref><ref id="edm270218-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="edm270218-cit-0030">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Balduzzi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Rücker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Nikolakopoulou</surname>
+</string-name>, et al., “<article-title>Netmeta: An R Package for Network Meta‐Analysis Using Frequentist Methods</article-title>,” <source>Journal of Statistical Software</source>
+<volume>106</volume>, no. <issue>2</issue> (<year>2023</year>): <fpage>1</fpage>–<lpage>40</lpage>, <pub-id pub-id-type="doi">10.18637/jss.v106.i02</pub-id>.37138589
+</mixed-citation></ref><ref id="edm270218-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="edm270218-cit-0031">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Balduzzi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Rücker</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Schwarzer</surname>
+</string-name>, “<article-title>How to Perform a Meta‐Analysis With R: A Practical Tutorial</article-title>,” <source>Evidence‐Based Mental Health</source>
+<volume>22</volume>, no. <issue>4</issue> (<year>2019</year>): <fpage>153</fpage>–<lpage>160</lpage>, <pub-id pub-id-type="doi">10.1136/ebmental-2019-300117</pub-id>.<pub-id pub-id-type="pmid">31563865</pub-id>
+<pub-id pub-id-type="pmcid">PMC10231495</pub-id></mixed-citation></ref><ref id="edm270218-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="edm270218-cit-0032">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Papakonstantinou</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Nikolakopoulou</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. P. T.</given-names>
+<surname>Higgins</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Egger</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Salanti</surname>
+</string-name>, “<article-title>CINeMA: Software for Semiautomated Assessment of the Confidence in the Results of Network Meta‐Analysis</article-title>,” <source>Campbell Systematic Reviews</source>
+<volume>16</volume>, no. <issue>1</issue> (<year>2020</year>): <elocation-id>e1080</elocation-id>, <pub-id pub-id-type="doi">10.1002/cl2.1080</pub-id>.<pub-id pub-id-type="pmid">37131978</pub-id>
+<pub-id pub-id-type="pmcid">PMC8356302</pub-id></mixed-citation></ref><ref id="edm270218-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="edm270218-cit-0033">
+<string-name name-style="western">
+<given-names>J. A. C.</given-names>
+<surname>Sterne</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Savovic</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Page</surname>
+</string-name>, et al., “<article-title>RoB 2: A Revised Tool for Assessing Risk of Bias in Randomised Trials</article-title>,” <source>BMJ</source>
+<volume>366</volume> (<year>2019</year>): <elocation-id>l4898</elocation-id>, <pub-id pub-id-type="doi">10.1136/bmj.l4898</pub-id>.<pub-id pub-id-type="pmid">31462531</pub-id>
+</mixed-citation></ref><ref id="edm270218-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="edm270218-cit-0034">
+<string-name name-style="western">
+<given-names>Z. M.</given-names>
+<surname>Younossi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Stepanova</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. A.</given-names>
+<surname>Taub</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Barbone</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Harrison</surname>
+</string-name>, “<article-title>Hepatic Fat Reduction due to Resmetirom in Patients With Nonalcoholic Steatohepatitis Is Associated With Improvement of Quality of Life</article-title>,” <source>Clinical Gastroenterology and Hepatology</source>
+<volume>20</volume>, no. <issue>6</issue> (<year>2022</year>): <fpage>1354</fpage>–<lpage>1361.e7</lpage>, <pub-id pub-id-type="doi">10.1016/j.cgh.2021.07.039</pub-id>.<pub-id pub-id-type="pmid">34329774</pub-id>
+</mixed-citation></ref><ref id="edm270218-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="edm270218-cit-0035">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Loomba</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Amangurbanova</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Bettencourt</surname>
+</string-name>, et al., “<article-title>MASH Resolution Index: Development and Validation of a Non‐Invasive Score to Detect Histological Resolution of MASH</article-title>,” <source>Gut</source>
+<volume>73</volume>, no. <issue>8</issue> (<year>2024</year>): <fpage>1343</fpage>–<lpage>1349</lpage>, <pub-id pub-id-type="doi">10.1136/gutjnl-2023-331401</pub-id>.<pub-id pub-id-type="pmid">38418210</pub-id>
+<pub-id pub-id-type="pmcid">PMC12355936</pub-id></mixed-citation></ref><ref id="edm270218-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="edm270218-cit-0036">
+<string-name name-style="western">
+<given-names>D. Q.</given-names>
+<surname>Huang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. R.</given-names>
+<surname>Sharpton</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Amangurbanova</surname>
+</string-name>, et al., “<article-title>Clinical Utility of Combined MRI‐PDFF and ALT Response in Predicting Histologic Response in Nonalcoholic Fatty Liver Disease</article-title>,” <source>Clinical Gastroenterology and Hepatology</source>
+<volume>21</volume>, no. <issue>10</issue> (<year>2023</year>): <fpage>2682</fpage>–<lpage>2685.e4</lpage>, <pub-id pub-id-type="doi">10.1016/j.cgh.2022.08.036</pub-id>.<pub-id pub-id-type="pmid">36075503</pub-id>
+</mixed-citation></ref><ref id="edm270218-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="edm270218-cit-0037">
+<string-name name-style="western">
+<given-names>Y. X.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. P.</given-names>
+<surname>Feng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. L.</given-names>
+<surname>You</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L. Y.</given-names>
+<surname>Zhang</surname>
+</string-name>, “<article-title>The Diagnostic Value of MRI‐PDFF in Hepatic Steatosis of Patients With Metabolic Dysfunction‐Associated Steatotic Liver Disease: A Systematic Review and Meta‐Analysis</article-title>,” <source>BMC Gastroenterology</source>
+<volume>25</volume>, no. <issue>1</issue> (<year>2025</year>): <elocation-id>451</elocation-id>, <pub-id pub-id-type="doi">10.1186/s12876-025-04017-4</pub-id>.<pub-id pub-id-type="pmid">40596891</pub-id>
+<pub-id pub-id-type="pmcid">PMC12210736</pub-id></mixed-citation></ref><ref id="edm270218-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="edm270218-cit-0038">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Knezovic</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Hefer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Blazanovic</surname>
+</string-name>, et al., “<article-title>Drug Pipeline for MASLD: What Can be Learned From the Successful Story of Resmetirom</article-title>,” <source>Current Issues in Molecular Biology</source>
+<volume>47</volume>, no. <issue>3</issue> (<year>2025</year>): <fpage>154</fpage>, <pub-id pub-id-type="doi">10.3390/cimb47030154</pub-id>.<pub-id pub-id-type="pmid">40136408</pub-id>
+<pub-id pub-id-type="pmcid">PMC11941580</pub-id></mixed-citation></ref><ref id="edm270218-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="edm270218-cit-0039">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Taub</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Chiang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Chabot‐Blanchet</surname>
+</string-name>, et al., “<article-title>Lipid Lowering in Healthy Volunteers Treated With Multiple Doses of MGL‐3196, a Liver‐Targeted Thyroid Hormone Receptor‐Beta Agonist</article-title>,” <source>Atherosclerosis</source>
+<volume>230</volume>, no. <issue>2</issue> (<year>2013</year>): <fpage>373</fpage>–<lpage>380</lpage>, <pub-id pub-id-type="doi">10.1016/j.atherosclerosis.2013.07.056</pub-id>.<pub-id pub-id-type="pmid">24075770</pub-id>
+</mixed-citation></ref><ref id="edm270218-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="edm270218-cit-0040">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Clayton‐Chubb</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W. W.</given-names>
+<surname>Kemp</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Majeed</surname>
+</string-name>, et al., “<article-title>Steatotic Liver Disease in Older Adults: Clinical Implications and Unmet Needs</article-title>,” <source>Nutrients</source>
+<volume>17</volume>, no. <issue>13</issue> (<year>2025</year>): <fpage>2189</fpage>, <pub-id pub-id-type="doi">10.3390/nu17132189</pub-id>.<pub-id pub-id-type="pmid">40647291</pub-id>
+<pub-id pub-id-type="pmcid">PMC12251929</pub-id></mixed-citation></ref><ref id="edm270218-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="edm270218-cit-0041">
+<string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Gallego‐Escuredo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Gomez‐Ambrosi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Catalan</surname>
+</string-name>, et al., “<article-title>Opposite Alterations in FGF21 and FGF19 Levels and Disturbed Expression of the Receptor Machinery for Endocrine FGFs in Obese Patients</article-title>,” <source>International Journal of Obesity (London, England: 2005)</source>
+<volume>39</volume>, no. <issue>1</issue> (<year>2015</year>): <fpage>121</fpage>–<lpage>129</lpage>, <pub-id pub-id-type="doi">10.1038/ijo.2014.76</pub-id>.<pub-id pub-id-type="pmid">24813368</pub-id></mixed-citation></ref><ref id="edm270218-bib-0042"><label>42</label><mixed-citation publication-type="journal" id="edm270218-cit-0042">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Pouwels</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Sakran</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Graham</surname>
+</string-name>, et al., “<article-title>Non‐Alcoholic Fatty Liver Disease (NAFLD): A Review of Pathophysiology, Clinical Management and Effects of Weight Loss</article-title>,” <source>BMC Endocrine Disorders</source>
+<volume>22</volume>, no. <issue>1</issue> (<year>2022</year>): <elocation-id>63</elocation-id>, <pub-id pub-id-type="doi">10.1186/s12902-022-00980-1</pub-id>.<pub-id pub-id-type="pmid">35287643</pub-id>
+<pub-id pub-id-type="pmcid">PMC8919523</pub-id></mixed-citation></ref><ref id="edm270218-bib-0043"><label>43</label><mixed-citation publication-type="journal" id="edm270218-cit-0043">
+<collab collab-type="authors">European Association for the Study of the L</collab>
+, <collab collab-type="authors">European Association for the Study of D</collab>
+, and <collab collab-type="authors">European Association for the Study of O</collab>
+, “<article-title>EASL‐EASD‐EASO Clinical Practice Guidelines on the Management of Metabolic Dysfunction‐Associated Steatotic Liver Disease (MASLD)</article-title>,” <source>Obesity Facts</source>
+<volume>17</volume>, no. <issue>4</issue> (<year>2024</year>): <fpage>374</fpage>–<lpage>444</lpage>, <pub-id pub-id-type="doi">10.1159/000539371</pub-id>.<pub-id pub-id-type="pmid">38852583</pub-id>
+<pub-id pub-id-type="pmcid">PMC11299976</pub-id></mixed-citation></ref><ref id="edm270218-bib-0044"><label>44</label><mixed-citation publication-type="journal" id="edm270218-cit-0044">
+<string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Pennisi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Di Maria</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Enea</surname>
+</string-name>, et al., “<article-title>A Markov Model Unveiling the Impact of Resmetirom on the Natural History of MASLD Patients: A Sistematic Review and Meta‐Analysis</article-title>,” <source>Liver International</source>
+<volume>45</volume>, no. <issue>4</issue> (<year>2025</year>): <elocation-id>e70056</elocation-id>, <pub-id pub-id-type="doi">10.1111/liv.70056</pub-id>.<pub-id pub-id-type="pmid">40066918</pub-id>
+<pub-id pub-id-type="pmcid">PMC11894919</pub-id></mixed-citation></ref><ref id="edm270218-bib-0045"><label>45</label><mixed-citation publication-type="journal" id="edm270218-cit-0045">
+<string-name name-style="western">
+<given-names>A. B. M.</given-names>
+<surname>Kamrul‐Hasan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Borozan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Jena</surname>
+</string-name>, et al., “<article-title>Safety and Efficacy of Efruxifermin in Metabolic Dysfunction‐Associated Steatohepatitis: A Systematic Review</article-title>,” <source>World Journal of Gastrointestinal Pharmacology and Therapeutics</source>
+<volume>16</volume>, no. <issue>3</issue> (<year>2025</year>): <elocation-id>110709</elocation-id>.<pub-id pub-id-type="pmid">40937291</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.4292/wjgpt.v16.i3.110709</pub-id><pub-id pub-id-type="pmcid">PMC12421389</pub-id></mixed-citation></ref><ref id="edm270218-bib-0046"><label>46</label><mixed-citation publication-type="journal" id="edm270218-cit-0046">
+<string-name name-style="western">
+<given-names>I. J.</given-names>
+<surname>Ogieuhi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Olatunji</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Kokori</surname>
+</string-name>, et al., “<article-title>Resmetirom in the Management of Metabolic Associated Steatohepatitis (MASH): A Review of Efficacy and Safety Data From Clinical Trials</article-title>,” <source>Egyptian Journal of Internal Medicine</source>
+<volume>37</volume>, no. <issue>1</issue> (<year>2025</year>): <fpage>78</fpage>, <pub-id pub-id-type="doi">10.1186/s43162-025-00468-z</pub-id>.</mixed-citation></ref><ref id="edm270218-bib-0047"><label>47</label><mixed-citation publication-type="journal" id="edm270218-cit-0047">
+<string-name name-style="western">
+<given-names>C. M.</given-names>
+<surname>Sergi</surname>
+</string-name>, “<article-title>NAFLD (MASLD)/NASH (MASH): Does It Bother to Label at All? A Comprehensive Narrative Review</article-title>,” <source>International Journal of Molecular Sciences</source>
+<volume>25</volume>, no. <issue>15</issue> (<year>2024</year>): <elocation-id>8462</elocation-id>, <pub-id pub-id-type="doi">10.3390/ijms25158462</pub-id>.<pub-id pub-id-type="pmid">39126031</pub-id>
+<pub-id pub-id-type="pmcid">PMC11313354</pub-id></mixed-citation></ref></ref-list></back></article>

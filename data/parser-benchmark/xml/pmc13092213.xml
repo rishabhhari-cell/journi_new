@@ -1,0 +1,717 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="hsr272412" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Health Sci Rep</journal-id><journal-id journal-id-type="iso-abbrev">Health Sci Rep</journal-id><journal-id journal-id-type="pmc-domain-id">3569</journal-id><journal-id journal-id-type="pmc-domain">hscirep</journal-id><journal-id journal-id-type="publisher-id">HSR2</journal-id><journal-title-group><journal-title>Health Science Reports</journal-title></journal-title-group><issn pub-type="epub">2398-8835</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13092213</article-id><article-id pub-id-type="pmcid-ver">PMC13092213.1</article-id><article-id pub-id-type="pmcaid">13092213</article-id><article-id pub-id-type="pmcaiid">13092213</article-id><article-id pub-id-type="pmid">42011280</article-id><article-id pub-id-type="doi">10.1002/hsr2.72412</article-id><article-id pub-id-type="publisher-id">HSR272412</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Systematic Review</subject></subj-group><subj-group subj-group-type="heading"><subject>Systematic Review</subject></subj-group></article-categories><title-group><article-title>Impact of <italic toggle="yes">Mycoplasma hominis</italic> on Sperm Quality Among Infertile Men: A Systematic Review and Meta‐Analysis</article-title></title-group><contrib-group><contrib id="hsr272412-cr-0001" contrib-type="author" corresp="yes"><name name-style="western"><surname>Boujemaa</surname><given-names initials="S">Safa</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-1199-0519</contrib-id><xref rid="hsr272412-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>safa-boujemaa@hotmail.fr</email></address></contrib><contrib id="hsr272412-cr-0002" contrib-type="author"><name name-style="western"><surname>Suri</surname><given-names initials="GS">Gurparsad Singh</given-names></name><xref rid="hsr272412-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="hsr272412-cr-0003" contrib-type="author"><name name-style="western"><surname>Kaur</surname><given-names initials="G">Gurleen</given-names></name><xref rid="hsr272412-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib></contrib-group><aff id="hsr272412-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<institution>Biologica Training and Consulting La Marsa</institution>
+<city>Tunis</city>
+<country country="TN">Tunisia</country>
+</aff><aff id="hsr272412-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Department of Osteopathic Medicine</named-content>
+<institution>Lincoln Memorial University‐DeBusk College of Osteopathic Medicine</institution>
+<city>Harrogate</city>
+<named-content content-type="country-part">Tennessee</named-content>
+<country country="US">USA</country>
+</aff><aff id="hsr272412-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Department of Biological Sciences</named-content>
+<institution>Bluefield University</institution>
+<city>Bluefield</city>
+<named-content content-type="country-part">Virginia</named-content>
+<country country="US">USA</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold> Safa Boujemaa (<email>safa-boujemaa@hotmail.fr</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>19</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>9</volume><issue seq="20">4</issue><issue-id pub-id-type="pmc-issue-id">510729</issue-id><issue-id pub-id-type="doi">10.1002/hsr2.v9.4</issue-id><elocation-id>e72412</elocation-id><history><date date-type="rev-recd"><day>02</day><month>4</month><year>2026</year></date><date date-type="received"><day>08</day><month>2</month><year>2026</year></date><date date-type="accepted"><day>13</day><month>4</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>19</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>20</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-21 09:25:15.350"><day>21</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Health Science Reports</italic> published by Wiley Periodicals LLC.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="HSR2-9-e72412.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:HSR2-9-e72412.pdf"/><abstract><title>ABSTRACT</title><sec id="hsr272412-sec-0010"><title>Background and Aims</title><p>Infections are an important cause of male infertility, yet the effects of <italic toggle="yes">Mycoplasma hominis</italic> on specific semen parameters remain unclear. In this meta‐analysis, we evaluated the impact of <italic toggle="yes">M. hominis</italic> infection on sperm quality.</p></sec><sec id="hsr272412-sec-0020"><title>Methods</title><p>Comprehensive searches were performed in PubMed, Embase, Web of Science, Scopus, the Cochrane Library, Google Scholar, and the Cumulative Index to Nursing and Allied Health Literature (CINAHL) from their inception through October 2025. Standardized mean differences (SMDs) and 95% confidence intervals (CIs) were calculated. Egger's regression test and examination of funnel plots were applied to evaluate potential publication bias. Subgroup and meta‐regression analyses were carried out to identify possible sources of heterogeneity, and sensitivity analysis was performed to verify the robustness of the overall estimates.</p></sec><sec id="hsr272412-sec-0030"><title>Results</title><p>Across 11 eligible studies, our analyses demonstrated that infertile men harboring <italic toggle="yes">M. hominis</italic> presented significantly lower sperm concentration (SMD = −0.815; 95% CI: −1.314 to −0.317; <italic toggle="yes">p</italic> = 0.001), progressive motility (SMD = −0.360; 95% CI: −0.683 to −0.037; <italic toggle="yes">p</italic> = 0.03), sperm viability (SMD = −0.831; 95% CI: −1.410 to −0.253; <italic toggle="yes">p</italic> = 0.005), and normal morphology (SMD = −0.631; 95% CI: −1.178 to −0.083; <italic toggle="yes">p</italic> = 0.02) compared to uninfected patients. Conversely, seminal fluid pH was consistently higher among infected subjects (SMD = 0.586; 95% CI: 0.167 to 1.006; <italic toggle="yes">p</italic> = 0.006). Subgroup and meta‐regression analysis suggested that study geographic location and diagnostic technique contributed to the observed heterogeneity. However, no statistically significant publication bias was detected based on Egger's test (<italic toggle="yes">p</italic> = 0.10), and sensitivity analysis confirmed the robustness of the results.</p></sec><sec id="hsr272412-sec-0040"><title>Conclusion</title><p>Collectively, these findings support a potential relationship between <italic toggle="yes">M. hominis</italic> infection and deteriorated semen quality. More rigorously designed prospective studies are needed to clarify causality and enhance diagnostic guidelines.</p></sec></abstract><kwd-group><kwd id="hsr272412-kwd-0001">infertility</kwd><kwd id="hsr272412-kwd-0002"><italic toggle="yes">Mycoplasma hominis</italic></kwd><kwd id="hsr272412-kwd-0003">pH</kwd><kwd id="hsr272412-kwd-0004">sperm concentration</kwd><kwd id="hsr272412-kwd-0005">sperm motility</kwd></kwd-group><counts><fig-count count="13"/><table-count count="3"/><page-count count="15"/><word-count count="6685"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:19.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec id="hsr272412-sec-0050"><label>1</label><title>Introduction</title><p>Infertility affects an estimated 8%–12% of couples worldwide, representing a major global health concern. Among these cases, male factors contribute substantially, accounting for nearly 30%–50% of cases [<xref rid="hsr272412-bib-0001" ref-type="bibr">1</xref>]. A considerable portion of male infertility is attributed to infections within the reproductive tract, which may lead to chronic inflammation, structural damage, and long‐term impairment of sperm function [<xref rid="hsr272412-bib-0002" ref-type="bibr">2</xref>]. Approximately 15% of male infertility cases are believed to stem from genital tract infections [<xref rid="hsr272412-bib-0003" ref-type="bibr">3</xref>]. The mechanisms through which infections disrupt male fertility often involve inflammatory mediators, oxidative stress, and immune responses. Elevated reactive oxygen species (ROS) levels and pro‐inflammatory cytokines can alter cellular function, reduce sperm motility, and compromise viability [<xref rid="hsr272412-bib-0004" ref-type="bibr">4</xref>]. Persistent inflammatory processes may also cause microenvironmental changes within the reproductive tract, interfere with sperm maturation, and eventually contribute to tissue scarring or obstruction [<xref rid="hsr272412-bib-0005" ref-type="bibr">5</xref>]. Among the microorganisms implicated in male reproductive tract infections, <italic toggle="yes">Mycoplasma hominis</italic> (<italic toggle="yes">M. hominis</italic>) stands out as a clinically relevant species. <italic toggle="yes">M. hominis</italic> belongs to the <italic toggle="yes">Mollicutes</italic> class, characterized by its small genome, absence of a cell wall, and reliance on host‐derived nutrients. It is capable of colonizing the urogenital tract asymptomatically, yet can also act as an opportunistic pathogen [<xref rid="hsr272412-bib-0006" ref-type="bibr">6</xref>, <xref rid="hsr272412-bib-0007" ref-type="bibr">7</xref>]. <italic toggle="yes">M. hominis</italic> has been associated with non‐gonococcal urethritis, prostatitis, epididymitis, and may play a potential role in male infertility [<xref rid="hsr272412-bib-0008" ref-type="bibr">8</xref>]. Only a few studies have explored the relationship between <italic toggle="yes">M. hominis</italic> infection and semen quality. While some investigations suggest that the organism adversely affects semen characteristics—such as sperm motility, concentration, and morphology—and that antimicrobial therapy may lead to improvements [<xref rid="hsr272412-bib-0009" ref-type="bibr">9</xref>, <xref rid="hsr272412-bib-0010" ref-type="bibr">10</xref>, <xref rid="hsr272412-bib-0011" ref-type="bibr">11</xref>], other studies have reported no meaningful association between <italic toggle="yes">M. hominis</italic> and semen quality or male infertility [<xref rid="hsr272412-bib-0012" ref-type="bibr">12</xref>, <xref rid="hsr272412-bib-0013" ref-type="bibr">13</xref>]. Consequently, the existing evidence is both limited and inconsistent.</p><p>To address these discrepancies, the present meta‐analysis aimed to evaluate the effect of <italic toggle="yes">M. hominis</italic> infection on male infertility by comparing semen parameters between infected and uninfected infertile men.</p></sec><sec sec-type="methods" id="hsr272412-sec-0060"><label>2</label><title>Methods</title><p>Ethical approval and informed consent were not required for this study, as it is a systematic review and meta‐analysis based on previously published data.</p><p>This systematic review and meta‐analysis was performed in accordance with the Preferred Reporting Items for Systematic Reviews and Meta‐Analyses (PRISMA) guidelines [<xref rid="hsr272412-bib-0014" ref-type="bibr">14</xref>]. The study protocol, including the eligibility criteria and planned analytical approach, was prospectively registered in PROSPERO (CRD420251072578). We structured the review using the PECOS framework: the population comprised infertile men; the exposure of interest was <italic toggle="yes">M. hominis</italic> detected in semen samples; and the comparator group consisted of infertile men whose semen tested negative for <italic toggle="yes">M. hominis</italic>.</p><p>Outcomes evaluated included ejaculate volume (mL), seminal pH, total motile count (TMC), leukocyte concentration (×10⁶/mL), sperm concentration (×10⁶/mL), rapid progressive motility (%), progressive motility (%), total motility (%), sperm viability (%), and normal morphology (%). Both cross‐sectional and cohort studies were eligible for inclusion, with no geographical restrictions.</p><sec id="hsr272412-sec-0070"><label>2.1</label><title>Search Strategy</title><p>A comprehensive literature search was conducted across Medline/PubMed, Embase, Web of Science, Scopus, the Cochrane Library, Google Scholar, and the Cumulative Index to Nursing and Allied Health Literature (CINAHL) to identify studies assessing the presence of <italic toggle="yes">M. hominis</italic> in the semen of men with infertility, covering the period from database inception to 31 October 2025. The search combined terms including “<italic toggle="yes">Mycoplasma hominis</italic>” AND (“sperm” OR “semen” OR “seminal”) AND (“infertility” OR “infertile”) AND (“man” OR “men” OR “male” OR “males”), with the full search strategy detailed in the Supporting File. Additionally, conference abstracts and reference lists of all eligible studies were manually reviewed, and relevant narrative and systematic reviews were examined to identify further potentially eligible publications.</p><p>All retrieval steps were performed independently by two authors (SB and GSS). Any disagreements were resolved through discussion with a third author (GK).</p></sec><sec id="hsr272412-sec-0080"><label>2.2</label><title>Inclusion and Exclusion Criteria</title><p>Following the removal of duplicate records, all retrieved articles were initially screened by title and abstract to identify studies potentially addressing the impact of <italic toggle="yes">M. hominis</italic> on semen quality in men with infertility. Full texts of potentially eligible studies were subsequently examined to confirm inclusion. Studies were considered eligible if they fulfilled the following criteria: (1) cohort or cross‐sectional design assessing the effect of <italic toggle="yes">M. hominis</italic> on semen parameters; (2) study population comprising men diagnosed with infertility; (3) semen analysis conducted according to WHO guidelines; (4) presence of an experimental group of infertile men infected with <italic toggle="yes">M. hominis</italic> and a control group of infertile men without the infection; and (5) availability of sufficient data to compute standardized mean differences (SMDs) and 95% confidence intervals (CIs).</p><p>Studies were excluded if they met any of the following conditions: (1) specimens other than semen were examined; (2) full text was not electronically available; (3) the article was published in a language other than English; (4) publication type was a comment, letter, editorial, protocol, guideline, abstract, or review; (5) the study involved animals or in vitro experiments; or (6) outcome data were insufficient for analysis.</p></sec><sec id="hsr272412-sec-0090"><label>2.3</label><title>Data Extraction Process</title><p>Two authors (SB and GK) independently conducted the literature screening and data extraction based on the predefined eligibility criteria. Any discrepancies between the reviewers were resolved through discussion, and if necessary, a third author (GSS) was consulted to reach consensus.</p><p>From each included study, the following information was extracted: first author and year of publication, country, study design, sample size of infertile participants, participant age, method of <italic toggle="yes">M. hominis</italic> detection, number of infected cases (positive/total), number of uninfected controls (negative/total), and reported outcomes. Outcomes of interest were recorded as means and standard deviations (SDs). When data were reported in alternative formats, means and SDs were calculated from the available information whenever feasible.</p></sec><sec id="hsr272412-sec-0100"><label>2.4</label><title>Risk of Bias Assessment</title><p>The methodological quality of the included studies was evaluated using the Newcastle–Ottawa Scale (NOS) [<xref rid="hsr272412-bib-0015" ref-type="bibr">15</xref>]. The NOS assesses three key domains: (1) selection of exposed (infected infertile men) and control groups (uninfected infertile men), with a maximum score of 4 stars for cohort studies and 5 stars for cross‐sectional studies; (2) comparability between study groups, allowing up to 2 stars; and (3) outcome assessment, with a maximum of 3 stars. Consequently, the total NOS score ranged from 0 to 9 for cohort studies and 0 to 10 for cross‐sectional studies. Two authors (SB and GSS) independently performed the quality assessment, with any disagreements resolved through discussion with a third author (GK). Studies were classified as good quality if they scored 7–10, fair quality if 4–6, and poor quality if 0–3.</p></sec><sec id="hsr272412-sec-0110"><label>2.5</label><title>Statistical Analysis</title><p>All statistical analyses were conducted using Comprehensive Meta‐Analysis version 3 (Biostat Inc. USA). Effect sizes were expressed as standardized mean differences (SMDs) with corresponding 95% confidence intervals (CIs), using the Mantel–Haenszel method [<xref rid="hsr272412-bib-0016" ref-type="bibr">16</xref>]. Statistical significance was defined as a two‐sided <italic toggle="yes">p</italic> value &lt; 0.05. Between‐study heterogeneity was assessed using Cochran's Q test (with <italic toggle="yes">p</italic> &lt; 0.05 indicating statistical heterogeneity) and quantified using the I² statistic. Heterogeneity was interpreted as low (I² &lt; 25%), moderate (25%–50%), or substantial (&gt; 50%). A random‐effects model was applied in the presence of moderate to high heterogeneity (I² ≥ 50%), whereas a fixed‐effects model was used when heterogeneity was low [<xref rid="hsr272412-bib-0017" ref-type="bibr">17</xref>]. Subgroup analysis was performed based on study design, diagnostic method, and geographic region to explore potential sources of heterogeneity. Meta‐regression analysis was conducted to evaluate the influence of these variables on effect size estimates. Sensitivity analysis was performed using a leave‐one‐out approach to assess the robustness of pooled estimates. Publication bias was evaluated through visual inspection of funnel plots and Egger's regression test, with consideration of the limited power of these methods when the number of studies is small.</p></sec></sec><sec sec-type="results" id="hsr272412-sec-0120"><label>3</label><title>Results</title><sec id="hsr272412-sec-0130"><label>3.1</label><title>Study Identification, Screening, and Inclusion</title><p>The systematic search across the seven databases identified a total of 1138 articles. After removing duplicates, studies without accessible full texts, and those published in languages other than English, 168 articles remained for full‐text review. Based on the predefined inclusion and exclusion criteria, 157 studies were excluded upon detailed assessment, resulting in 11 studies that fulfilled all eligibility criteria and were included in the meta‐analysis (Figure <xref rid="hsr272412-fig-0001" ref-type="fig">1</xref>).</p><fig position="float" fig-type="Figure" id="hsr272412-fig-0001" orientation="portrait"><label>Figure 1</label><caption><p>Flow chart for PRISMA‐based literature screening.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="HSR2-9-e72412-g006.jpg"/></fig></sec><sec id="hsr272412-sec-0140"><label>3.2</label><title>Characteristics of Included Studies</title><p>The 11 studies included in the analysis were published between 2003 and 2023 and were conducted in eight countries: China (<italic toggle="yes">n</italic> = 3), Tunisia (<italic toggle="yes">n</italic> = 2), Jordan (<italic toggle="yes">n</italic> = 1), Kuwait (<italic toggle="yes">n</italic> = 1), Korea (<italic toggle="yes">n</italic> = 1), Brazil (n = 1), Argentina (<italic toggle="yes">n</italic> = 1), and India (<italic toggle="yes">n</italic> = 1). Among these, eight were cohort studies and three were cross‐sectional studies. Altogether, the meta‐analysis encompassed 20797 infertile men, of whom 881 (4.23%) tested positive for <italic toggle="yes">M. hominis</italic>. Methods used to detect <italic toggle="yes">M. hominis</italic> included culture (<italic toggle="yes">n</italic> = 3), PCR (<italic toggle="yes">n</italic> = 7), and flow‐through hybridization (<italic toggle="yes">n</italic> = 1). The main characteristics of the included studies are summarized in Table <xref rid="hsr272412-tbl-0001" ref-type="table">1</xref>.</p><table-wrap position="float" id="hsr272412-tbl-0001" content-type="Table" orientation="portrait"><label>Table 1</label><caption><p>Characteristics of the included studies.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">First author and year of publication</th><th align="center" valign="bottom" rowspan="1" colspan="1">Country</th><th align="center" valign="bottom" rowspan="1" colspan="1">Study design</th><th align="center" valign="bottom" rowspan="1" colspan="1">Sample size (infertile patients)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Age, mean ± SD or median (range)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Method of detection</th><th align="center" valign="bottom" rowspan="1" colspan="1">Case/total (<italic toggle="yes">M. hominis</italic> positive)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Control/total (<italic toggle="yes">M. hominis</italic> negative)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Outcomes</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Al‐Daghistani and Abdel‐Dayem, 2009 [<xref rid="hsr272412-bib-0018" ref-type="bibr">18</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Jordan</td><td align="center" valign="top" rowspan="1" colspan="1">Cohort</td><td align="center" valign="top" rowspan="1" colspan="1">99</td><td align="center" valign="top" rowspan="1" colspan="1">30.4 ± 0.47</td><td align="center" valign="top" rowspan="1" colspan="1">PCR</td><td align="center" valign="top" rowspan="1" colspan="1">21/99</td><td align="center" valign="top" rowspan="1" colspan="1">78/99</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Sperm concentration (X 106/mL)</p></list-item></list>
+</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Al‐Sweih et al. 2012 [<xref rid="hsr272412-bib-0019" ref-type="bibr">19</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Kuwait</td><td align="center" valign="top" rowspan="1" colspan="1">Cohort</td><td align="center" valign="top" rowspan="1" colspan="1">127</td><td align="center" valign="top" rowspan="1" colspan="1">ND</td><td align="center" valign="top" rowspan="1" colspan="1">PCR</td><td align="center" valign="top" rowspan="1" colspan="1">25/127</td><td align="center" valign="top" rowspan="1" colspan="1">102/127</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Volume (mL)</p></list-item><list-item><label>–</label><p>Sperm concentration (X 106/mL)</p></list-item><list-item><label>–</label><p>Sperm rapid progressive motility (%)</p></list-item><list-item><label>–</label><p>Sperm progressive motility (%)</p></list-item><list-item><label>–</label><p>Leucocytes concentration (X 106/mL)</p></list-item><list-item><label>–</label><p>pH</p></list-item></list>
+</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Andrade‐Rocha, 2003 [<xref rid="hsr272412-bib-0012" ref-type="bibr">12</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Brazil</td><td align="center" valign="top" rowspan="1" colspan="1">Cohort</td><td align="center" valign="top" rowspan="1" colspan="1">234</td><td align="center" valign="top" rowspan="1" colspan="1">17–60</td><td align="center" valign="top" rowspan="1" colspan="1">Culture</td><td align="center" valign="top" rowspan="1" colspan="1">145/234</td><td align="center" valign="top" rowspan="1" colspan="1">89/234</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Sperm concentration (X 106/mL)</p></list-item><list-item><label>–</label><p>Sperm rapid progressive motility (%)</p></list-item><list-item><label>–</label><p>Sperm progressive motility (%)</p></list-item><list-item><label>–</label><p>Leucocytes concentration (X 106/mL)</p></list-item><list-item><label>–</label><p>Sperm viability (%)</p></list-item><list-item><label>–</label><p>Normal sperm morphology (%)</p></list-item></list>
+</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Bai et al. 2021 [<xref rid="hsr272412-bib-0013" ref-type="bibr">13</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">China</td><td align="center" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">195</td><td align="center" valign="top" rowspan="1" colspan="1">31.9 ± 6.3</td><td align="center" valign="top" rowspan="1" colspan="1">flow‐through hybridization</td><td align="center" valign="top" rowspan="1" colspan="1">16/195</td><td align="center" valign="top" rowspan="1" colspan="1">179/195</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Volume (mL)</p></list-item><list-item><label>–</label><p>Sperm concentration (X 106/mL)</p></list-item><list-item><label>–</label><p>Sperm progressive motility (%)</p></list-item><list-item><label>–</label><p>Sperm total mobility (%)</p></list-item><list-item><label>–</label><p>Normal sperm morphology (%)</p></list-item><list-item><label>–</label><p>Leucocytes concentration (X 106/mL)</p></list-item></list>
+</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Gdoura et al. 2007 [<xref rid="hsr272412-bib-0011" ref-type="bibr">11</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Tunisia</td><td align="center" valign="top" rowspan="1" colspan="1">Cohort</td><td align="center" valign="top" rowspan="1" colspan="1">120</td><td align="center" valign="top" rowspan="1" colspan="1">36.9 (26–58)</td><td align="center" valign="top" rowspan="1" colspan="1">PCR</td><td align="center" valign="top" rowspan="1" colspan="1">5/120</td><td align="center" valign="top" rowspan="1" colspan="1">115/120</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Volume (mL)</p></list-item><list-item><label>–</label><p>Sperm concentration (X 106/mL)</p></list-item><list-item><label>–</label><p>Sperm rapid progressive motility (%)</p></list-item><list-item><label>–</label><p>Sperm progressive motility (%)</p></list-item><list-item><label>–</label><p>Normal sperm morphology (%)</p></list-item><list-item><label>–</label><p>Leucocytes concentration (X 106/mL)</p></list-item><list-item><label>–</label><p>Sperm viability (%)</p></list-item><list-item><label>–</label><p>pH</p></list-item></list>
+</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Gdoura et al. 2008 [<xref rid="hsr272412-bib-0020" ref-type="bibr">20</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Tunisia</td><td align="center" valign="top" rowspan="1" colspan="1">Cohort</td><td align="center" valign="top" rowspan="1" colspan="1">93</td><td align="center" valign="top" rowspan="1" colspan="1">37 (26–58)</td><td align="center" valign="top" rowspan="1" colspan="1">PCR</td><td align="center" valign="top" rowspan="1" colspan="1">7/93</td><td align="center" valign="top" rowspan="1" colspan="1">86/93</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Volume (mL)</p></list-item><list-item><label>–</label><p>Sperm concentration (X 106/mL)</p></list-item><list-item><label>–</label><p>Sperm rapid progressive motility (%)</p></list-item><list-item><label>–</label><p>Sperm progressive motility (%)</p></list-item><list-item><label>–</label><p>Normal sperm morphology (%)</p></list-item><list-item><label>–</label><p>Leucocytes concentration (X 106/mL)</p></list-item><list-item><label>–</label><p>Sperm viability (%)</p></list-item></list>
+</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Huang et al. 2016 [<xref rid="hsr272412-bib-0009" ref-type="bibr">9</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">China</td><td align="center" valign="top" rowspan="1" colspan="1">Cohort</td><td align="center" valign="top" rowspan="1" colspan="1">19 098</td><td align="center" valign="top" rowspan="1" colspan="1">28.6 ± 7.2</td><td align="center" valign="top" rowspan="1" colspan="1">Culture</td><td align="center" valign="top" rowspan="1" colspan="1">604/19 098</td><td align="center" valign="top" rowspan="1" colspan="1">18 494/19 098</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Volume (mL)</p></list-item><list-item><label>–</label><p>Sperm concentration (X 106/mL)</p></list-item><list-item><label>–</label><p>Sperm progressive motility (%)</p></list-item><list-item><label>–</label><p>Sperm total mobility (%)</p></list-item><list-item><label>–</label><p>Normal sperm morphology (%)</p></list-item><list-item><label>–</label><p>pH</p></list-item><list-item><label>–</label><p>TMC</p></list-item></list>
+</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Karthikeyan et al. 2021 [<xref rid="hsr272412-bib-0021" ref-type="bibr">21</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">India</td><td align="center" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">48</td><td align="center" valign="top" rowspan="1" colspan="1">35 (32–38.75)</td><td align="center" valign="top" rowspan="1" colspan="1">PCR</td><td align="center" valign="top" rowspan="1" colspan="1">3/48</td><td align="center" valign="top" rowspan="1" colspan="1">45/48</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Volume (mL)</p></list-item><list-item><label>–</label><p>Sperm concentration (X 106/mL)</p></list-item><list-item><label>–</label><p>Sperm progressive motility (%)</p></list-item><list-item><label>–</label><p>Normal sperm morphology (%)</p></list-item></list>
+</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lee et al. 2013 [<xref rid="hsr272412-bib-0010" ref-type="bibr">10</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Korea</td><td align="center" valign="top" rowspan="1" colspan="1">Cohort</td><td align="center" valign="top" rowspan="1" colspan="1">98</td><td align="center" valign="top" rowspan="1" colspan="1">Mean 34.0</td><td align="center" valign="top" rowspan="1" colspan="1">Culture</td><td align="center" valign="top" rowspan="1" colspan="1">10/98</td><td align="center" valign="top" rowspan="1" colspan="1">88/98</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Volume (mL)</p></list-item><list-item><label>–</label><p>Sperm concentration (X 106/mL)</p></list-item><list-item><label>–</label><p>Sperm total mobility (%)</p></list-item><list-item><label>–</label><p>Normal sperm morphology (%)</p></list-item><list-item><label>–</label><p>Sperm viability (%)</p></list-item><list-item><label>–</label><p>TMC</p></list-item></list>
+</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Liu et al. 2014 [<xref rid="hsr272412-bib-0022" ref-type="bibr">22</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">China</td><td align="center" valign="top" rowspan="1" colspan="1">Cohort</td><td align="center" valign="top" rowspan="1" colspan="1">615</td><td align="center" valign="top" rowspan="1" colspan="1">ND</td><td align="center" valign="top" rowspan="1" colspan="1">PCR</td><td align="center" valign="top" rowspan="1" colspan="1">30/615</td><td align="center" valign="top" rowspan="1" colspan="1">585/615</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Volume (mL)</p></list-item><list-item><label>–</label><p>Sperm concentration (X 106/mL)</p></list-item><list-item><label>–</label><p>Sperm progressive motility (%)</p></list-item><list-item><label>–</label><p>Sperm total mobility (%)</p></list-item><list-item><label>–</label><p>Sperm viability (%)</p></list-item><list-item><label>–</label><p>TMC</p></list-item></list>
+</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Paira et al. 2023 [<xref rid="hsr272412-bib-0023" ref-type="bibr">23</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Argentina</td><td align="center" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">70</td><td align="center" valign="top" rowspan="1" colspan="1">18–50</td><td align="center" valign="top" rowspan="1" colspan="1">PCR</td><td align="center" valign="top" rowspan="1" colspan="1">15/70</td><td align="center" valign="top" rowspan="1" colspan="1">55/70</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="simple"><list-item><label>–</label><p>Volume (mL)</p></list-item><list-item><label>–</label><p>Sperm concentration (X 106/mL)</p></list-item><list-item><label>–</label><p>Sperm progressive motility (%)</p></list-item><list-item><label>–</label><p>Sperm total mobility (%)</p></list-item><list-item><label>–</label><p>Sperm viability (%)</p></list-item><list-item><label>–</label><p>pH</p></list-item><list-item><label>–</label><p>Normal sperm morphology (%)</p></list-item></list>
+</p>
+</td></tr></tbody></table><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap></sec><sec id="hsr272412-sec-0150"><label>3.3</label><title>Risk of Bias Assessment</title><p>The overall quality scores of the included studies ranged from 5 to 8. Three studies were rated as good quality, whereas the remaining eight were considered of fair quality. A summary of the quality assessment for all studies is provided in Table <xref rid="hsr272412-tbl-0002" ref-type="table">2</xref>.</p><table-wrap position="float" id="hsr272412-tbl-0002" content-type="Table" orientation="portrait"><label>Table 2</label><caption><p>Newcastle‐Ottawa quality assessment scale for studies included in the meta‐analysis.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Study</th><th align="center" valign="bottom" rowspan="1" colspan="1">Selection</th><th align="center" valign="bottom" rowspan="1" colspan="1">Comparability</th><th align="center" valign="bottom" rowspan="1" colspan="1">Outcome</th><th align="center" valign="bottom" rowspan="1" colspan="1">Overall score (quality)</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Al‐Daghistani and Abdel‐Dayem, 2009 [<xref rid="hsr272412-bib-0018" ref-type="bibr">18</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">★</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">5 (Fair)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Al‐Sweih et al. 2012 [<xref rid="hsr272412-bib-0019" ref-type="bibr">19</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">★</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">5 (Fair)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Andrade‐Rocha, 2003 [<xref rid="hsr272412-bib-0012" ref-type="bibr">12</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">6 (Fair)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Bai et al. 2021 [<xref rid="hsr272412-bib-0013" ref-type="bibr">13</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">★★★</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">★★★</td><td align="center" valign="top" rowspan="1" colspan="1">8 (Good)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Gdoura et al. 2007 [<xref rid="hsr272412-bib-0011" ref-type="bibr">11</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">★</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">5 (Fair)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Gdoura et al. 2008 [<xref rid="hsr272412-bib-0020" ref-type="bibr">20</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">★</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">5 (Fair)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Huang et al. 2016 [<xref rid="hsr272412-bib-0009" ref-type="bibr">9</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">6 (Fair)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Karthikeyan et al. 2021 [<xref rid="hsr272412-bib-0021" ref-type="bibr">21</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">★★★</td><td align="center" valign="top" rowspan="1" colspan="1">★</td><td align="center" valign="top" rowspan="1" colspan="1">★★★</td><td align="center" valign="top" rowspan="1" colspan="1">7 (Good)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lee et al. 2013 [<xref rid="hsr272412-bib-0010" ref-type="bibr">10</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">★</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">5 (Fair)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Liu et al. 2014 [<xref rid="hsr272412-bib-0022" ref-type="bibr">22</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">★</td><td align="center" valign="top" rowspan="1" colspan="1">★★</td><td align="center" valign="top" rowspan="1" colspan="1">5 (Fair)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Paira et al. 2023 [<xref rid="hsr272412-bib-0023" ref-type="bibr">23</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">★★★</td><td align="center" valign="top" rowspan="1" colspan="1">★</td><td align="center" valign="top" rowspan="1" colspan="1">★★★</td><td align="center" valign="top" rowspan="1" colspan="1">7 (Good)</td></tr></tbody></table><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap></sec><sec id="hsr272412-sec-0160"><label>3.4</label><title>Selection</title><p>Cohort studies received 2 stars and cross‐sectional studies 3 stars in the selection domain. None of the studies achieved the maximum score due to the following reasons: (1) the sample was not fully representative of the target population, (2) sample sizes were not justified, and (3) there was no confirmation that the outcome of interest was absent at baseline.</p></sec><sec id="hsr272412-sec-0170"><label>3.5</label><title>Comparability</title><p>Three studies accounted for both outcomes and additional confounding factors (e.g., age), earning 2 stars. The remaining eight studies controlled for outcomes only and received 1 star.</p></sec><sec id="hsr272412-sec-0180"><label>3.6</label><title>Outcome</title><p>All cross‐sectional studies (<italic toggle="yes">n</italic> = 3) employed validated assessment tools and appropriate statistical analyses, scoring 3 stars. Cohort studies were assigned 2 stars as none of them provided information on the follow‐up period.</p></sec><sec id="hsr272412-sec-0190"><label>3.7</label><title>Outcomes</title><sec id="hsr272412-sec-0200"><label>3.7.1</label><title>Sperm Concentration (×10<sup>6</sup>/mL)</title><p>Eleven studies assessed the effect of <italic toggle="yes">M. hominis</italic> infection on sperm concentration in infertile men (Figure <xref rid="hsr272412-fig-0002" ref-type="fig">2</xref>). Substantial between‐study heterogeneity was observed (Cochran's Q = 170.347, <italic toggle="yes">p</italic> &lt; 0.001; I² = 94%), prompting the use of a random‐effects model. The meta‐analysis revealed that infertile men infected with <italic toggle="yes">M. hominis</italic> had significantly lower sperm concentrations compared to uninfected men (SMD = −0.815; 95% CI: −1.314 to −0.317; <italic toggle="yes">p</italic> = 0.001).</p><fig position="float" fig-type="Figure" id="hsr272412-fig-0002" orientation="portrait"><label>Figure 2</label><caption><p>Effect of <italic toggle="yes">M. hominis</italic> on sperm concentration.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="HSR2-9-e72412-g008.jpg"/></fig></sec><sec id="hsr272412-sec-0210"><label>3.7.2</label><title>Volume (mL)</title><p>Nine studies evaluated the effect of <italic toggle="yes">M. hominis</italic> infection on ejaculate volume in infertile men (Figure <xref rid="hsr272412-fig-0003" ref-type="fig">3</xref>). Substantial between‐study heterogeneity was observed (Cochran's Q = 18.66, <italic toggle="yes">p</italic> = 0.02; I² = 57%), leading to the use of a random‐effects model. The meta‐analysis showed that infection with <italic toggle="yes">M. hominis</italic> did not significantly affect ejaculate volume compared to uninfected men (SMD = ‐0.083; 95% CI: −0.307 to 0.140; <italic toggle="yes">p</italic> = 0.47).</p><fig position="float" fig-type="Figure" id="hsr272412-fig-0003" orientation="portrait"><label>Figure 3</label><caption><p>Effect of <italic toggle="yes">M. hominis</italic> on ejaculate volume.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="HSR2-9-e72412-g009.jpg"/></fig></sec><sec id="hsr272412-sec-0220"><label>3.7.3</label><title>Seminal Fluid pH</title><p>Four studies investigated the effect of <italic toggle="yes">M. hominis</italic> infection on seminal fluid pH in infertile men (Figure <xref rid="hsr272412-fig-0004" ref-type="fig">4</xref>). Substantial between‐study heterogeneity was observed (Cochran's Q = 11.00, <italic toggle="yes">p</italic> = 0.01; I² = 72%), and a random‐effects model was therefore applied. The meta‐analysis indicated that infertile men infected with <italic toggle="yes">M. hominis</italic> had significantly higher seminal fluid pH compared to uninfected men (SMD = 0.586; 95% CI: 0.167 to 1.006; <italic toggle="yes">p</italic> = 0.006).</p><fig position="float" fig-type="Figure" id="hsr272412-fig-0004" orientation="portrait"><label>Figure 4</label><caption><p>Effect of <italic toggle="yes">M. hominis</italic> on seminal fluid pH.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="HSR2-9-e72412-g012.jpg"/></fig></sec><sec id="hsr272412-sec-0230"><label>3.7.4</label><title>Total Motile Count (TMC)</title><p>Three studies examined the effect of <italic toggle="yes">M. hominis</italic> infection on total motile count (TMC) in infertile men (Figure <xref rid="hsr272412-fig-0005" ref-type="fig">5</xref>). Substantial between‐study heterogeneity was observed (Cochran's Q = 7.18, <italic toggle="yes">p</italic> = 0.01; I² = 72%), prompting the use of a random‐effects model. The meta‐analysis showed that <italic toggle="yes">M. hominis</italic> infection did not significantly influence TMC compared to uninfected men (SMD = −0.294; 95% CI: −0.666 to 0.078; <italic toggle="yes">p</italic> = 0.12).</p><fig position="float" fig-type="Figure" id="hsr272412-fig-0005" orientation="portrait"><label>Figure 5</label><caption><p>Effect of <italic toggle="yes">M. hominis</italic> on TMC.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="HSR2-9-e72412-g007.jpg"/></fig></sec><sec id="hsr272412-sec-0240"><label>3.7.5</label><title>Leucocytes Concentration (×10<sup>6</sup>/mL)</title><p>Five studies assessed the effect of <italic toggle="yes">M. hominis</italic> infection on leukocyte concentration in infertile men (Figure <xref rid="hsr272412-fig-0006" ref-type="fig">6</xref>). No significant between‐study heterogeneity was observed (Cochran's Q = 8.88, <italic toggle="yes">p</italic> = 0.06; I² = 55%), so a fixed‐effects model was applied. The meta‐analysis indicated that <italic toggle="yes">M. hominis</italic> infection did not significantly alter leukocyte concentration compared to uninfected men (SMD = 0.130; 95% CI: ‐0.083 to 0.344; <italic toggle="yes">p</italic> = 0.23).</p><fig position="float" fig-type="Figure" id="hsr272412-fig-0006" orientation="portrait"><label>Figure 6</label><caption><p>Effect of <italic toggle="yes">M. hominis</italic> on leucocytes concentration.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-11" orientation="portrait" xlink:href="HSR2-9-e72412-g002.jpg"/></fig></sec><sec id="hsr272412-sec-0250"><label>3.7.6</label><title>Sperm Rapid Progressive Motility (%)</title><p>Four studies evaluated the effect of <italic toggle="yes">M. hominis</italic> infection on sperm rapid progressive motility in infertile men (Figure <xref rid="hsr272412-fig-0007" ref-type="fig">7</xref>). Substantial between‐study heterogeneity was observed (Cochran's Q = 43.02, <italic toggle="yes">p</italic> &lt; 0.001; I² = 93%), and a random‐effects model was therefore applied. The meta‐analysis showed that <italic toggle="yes">M. hominis</italic> infection did not significantly affect sperm rapid progressive motility compared to uninfected men (SMD = ‐0.536; 95% CI: ‐1.533 to 0.460; <italic toggle="yes">p</italic> = 0.29).</p><fig position="float" fig-type="Figure" id="hsr272412-fig-0007" orientation="portrait"><label>Figure 7</label><caption><p>Effect of <italic toggle="yes">M. hominis</italic> on sperm rapid progressive motility.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-13" orientation="portrait" xlink:href="HSR2-9-e72412-g010.jpg"/></fig></sec><sec id="hsr272412-sec-0260"><label>3.7.7</label><title>Sperm Progressive Motility (%)</title><p>Nine studies examined the effect of <italic toggle="yes">M. hominis</italic> infection on sperm progressive motility in infertile men (Figure <xref rid="hsr272412-fig-0008" ref-type="fig">8</xref>). Substantial between‐study heterogeneity was observed (Cochran's Q = 46.56, <italic toggle="yes">p</italic> &lt; 0.001; I² = 82%), leading to the use of a random‐effects model. The meta‐analysis indicated that infertile men infected with <italic toggle="yes">M. hominis</italic> had significantly lower sperm progressive motility compared to uninfected men (SMD = −0.360; 95% CI: −0.683 to −0.037; <italic toggle="yes">p</italic> = 0.03).</p><fig position="float" fig-type="Figure" id="hsr272412-fig-0008" orientation="portrait"><label>Figure 8</label><caption><p>Effect of <italic toggle="yes">M. hominis</italic> on sperm progressive motility.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-15" orientation="portrait" xlink:href="HSR2-9-e72412-g003.jpg"/></fig></sec><sec id="hsr272412-sec-0270"><label>3.7.8</label><title>Sperm Total Motility (%)</title><p>Five studies evaluated the effect of <italic toggle="yes">M. hominis</italic> infection on sperm total motility in infertile men (Figure <xref rid="hsr272412-fig-0009" ref-type="fig">9</xref>). Substantial between‐study heterogeneity was observed (Cochran's Q = 24.10, <italic toggle="yes">p</italic> &lt; 0.001; I² = 83%), and a random‐effects model was therefore applied. The meta‐analysis showed that <italic toggle="yes">M. hominis</italic> infection did not significantly impact sperm total motility compared to uninfected men (SMD = −0.399; 95% CI: −0.798 to 0.000; <italic toggle="yes">p</italic> = 0.05).</p><fig position="float" fig-type="Figure" id="hsr272412-fig-0009" orientation="portrait"><label>Figure 9</label><caption><p>Effect of <italic toggle="yes">M. hominis</italic> on sperm total motility.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-17" orientation="portrait" xlink:href="HSR2-9-e72412-g013.jpg"/></fig></sec><sec id="hsr272412-sec-0280"><label>3.7.9</label><title>Sperm Viability (%)</title><p>Six studies assessed the effect of <italic toggle="yes">M. hominis</italic> infection on sperm viability in infertile men (Figure <xref rid="hsr272412-fig-0010" ref-type="fig">10</xref>). Substantial between‐study heterogeneity was observed (Cochran's Q = 35.18, <italic toggle="yes">p</italic> &lt; 0.001; I² = 85%), prompting the use of a random‐effects model. The meta‐analysis indicated that infertile men infected with <italic toggle="yes">M. hominis</italic> had significantly lower sperm viability compared to uninfected men (SMD = −0.831; 95% CI: −1.410 to −0.253; <italic toggle="yes">p</italic> = 0.005).</p><fig position="float" fig-type="Figure" id="hsr272412-fig-0010" orientation="portrait"><label>Figure 10</label><caption><p>Effect of <italic toggle="yes">M. hominis</italic> on sperm viability.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-19" orientation="portrait" xlink:href="HSR2-9-e72412-g011.jpg"/></fig></sec><sec id="hsr272412-sec-0290"><label>3.7.10</label><title>Normal Sperm Morphology (%)</title><p>Eight studies examined the effect of <italic toggle="yes">M. hominis</italic> infection on normal sperm morphology in infertile men (Figure <xref rid="hsr272412-fig-0011" ref-type="fig">11</xref>). Substantial between‐study heterogeneity was observed (Cochran's Q = 87.68, <italic toggle="yes">p</italic> &lt; 0.001; I² = 92%), leading to the use of a random‐effects model. The meta‐analysis demonstrated that infertile men infected with <italic toggle="yes">M. hominis</italic> had significantly lower rates of normal sperm morphology compared to uninfected men (SMD = −0.631; 95% CI: −1.178 to −0.083; <italic toggle="yes">p</italic> = 0.02).</p><fig position="float" fig-type="Figure" id="hsr272412-fig-0011" orientation="portrait"><label>Figure 11</label><caption><p>Effect of <italic toggle="yes">M. hominis</italic> on normal sperm morphology.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-21" orientation="portrait" xlink:href="HSR2-9-e72412-g005.jpg"/></fig></sec></sec><sec id="hsr272412-sec-0300"><label>3.8</label><title>Publication Bias</title><p>Publication bias was assessed using Egger's regression test and visual inspection of funnel plot symmetry. Egger's test did not indicate statistically significant small‐study effects (<italic toggle="yes">p</italic> = 0.10). The funnel plot appeared broadly symmetrical. However, these findings should be interpreted with caution due to the limited number of included studies, which may reduce the reliability of publication bias detection methods (Figure <xref rid="hsr272412-fig-0012" ref-type="fig">12</xref>).</p><fig position="float" fig-type="Figure" id="hsr272412-fig-0012" orientation="portrait"><label>Figure 12</label><caption><p>Funnel plot of the effect of <italic toggle="yes">M. hominis</italic> on sperm concentration. The circles represent the eleven included studies. The horizontal axis represents the standardized mean differences of sperm concentration, while the vertical axis represents the standard error. The fixed effects summary estimate is indicated by the vertical line, and the expected 95% CI of the standard error is indicated by the two lines either side.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-23" orientation="portrait" xlink:href="HSR2-9-e72412-g001.jpg"/></fig></sec><sec id="hsr272412-sec-0310"><label>3.9</label><title>Subgroups and Meta‐Regression Analysis</title><p>Subgroup analysis was conducted to explore potential sources of heterogeneity in the association between <italic toggle="yes">Mycoplasma hominis</italic> infection and sperm concentration, based on continent, study design, and method of detection (Table <xref rid="hsr272412-tbl-0003" ref-type="table">3</xref>).</p><table-wrap position="float" id="hsr272412-tbl-0003" content-type="Table" orientation="portrait"><label>Table 3</label><caption><p>Subgroup and meta‐regression analyses based on sperm concentration outcomes.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Moderators</th><th align="center" valign="bottom" rowspan="1" colspan="1">Subgroups</th><th align="center" valign="bottom" rowspan="1" colspan="1">Number of studies</th><th align="center" valign="bottom" rowspan="1" colspan="1">SMD (95% CI) <italic toggle="yes">p</italic>
+</th><th align="center" valign="bottom" rowspan="1" colspan="1">Heterogeneity</th><th align="center" valign="bottom" rowspan="1" colspan="1">Difference between subgroups</th><th align="center" valign="bottom" rowspan="1" colspan="1">Meta‐regression <italic toggle="yes">p</italic>
+</th></tr></thead><tbody valign="top"><tr><td valign="middle" rowspan="3" align="left" colspan="1">Continent</td><td align="center" valign="top" rowspan="1" colspan="1">Asia</td><td align="center" valign="top" rowspan="1" colspan="1">7</td><td align="center" valign="top" rowspan="1" colspan="1">−0.131 (−0.206; −0.056), <italic toggle="yes">p</italic> = 0.01<xref rid="hsr272412-tbl3-note-0002" ref-type="table-fn">*</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>I<sup>2</sup> = 61%</p>
+<p>
+<italic toggle="yes">p</italic> = 0.01<xref rid="hsr272412-tbl3-note-0002" ref-type="table-fn">*</xref>
+</p>
+</td><td valign="middle" rowspan="3" align="center" colspan="1">
+<italic toggle="yes">p</italic> &lt; 0.001<xref rid="hsr272412-tbl3-note-0002" ref-type="table-fn">*</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.02*</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">Africa</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">−2.809 (−3.421; −2.197), <italic toggle="yes">p</italic> &lt; 0.001<xref rid="hsr272412-tbl3-note-0002" ref-type="table-fn">*</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>I<sup>2</sup> = 98%</p>
+<p>
+<italic toggle="yes">p</italic> = &lt; 0.001<xref rid="hsr272412-tbl3-note-0002" ref-type="table-fn">*</xref>
+</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">South America</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">−0.089 (−0.409; 0.232), <italic toggle="yes">p</italic> = 0.59</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>I<sup>2</sup> = 0%</p>
+<p>
+<italic toggle="yes">p</italic> = 0.50</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1"/></tr><tr><td valign="middle" rowspan="2" align="left" colspan="1">Study design</td><td align="center" valign="top" rowspan="1" colspan="1">Cohort</td><td align="center" valign="top" rowspan="1" colspan="1">8</td><td align="center" valign="top" rowspan="1" colspan="1">−1.016 (−1.665; −0.368), <italic toggle="yes">p</italic> = 0.002<xref rid="hsr272412-tbl3-note-0002" ref-type="table-fn">*</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>I<sup>2</sup> = 95%</p>
+<p>
+<italic toggle="yes">p</italic> = &lt; 001<xref rid="hsr272412-tbl3-note-0002" ref-type="table-fn">*</xref>
+</p>
+</td><td valign="middle" rowspan="2" align="center" colspan="1">
+<italic toggle="yes">p</italic> = 0.04<xref rid="hsr272412-tbl3-note-0002" ref-type="table-fn">*</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.36</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">3</td><td align="center" valign="top" rowspan="1" colspan="1">−0.190 (−0.655; 0.274), <italic toggle="yes">p</italic> = 0.42</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>I<sup>2</sup> = 38%</p>
+<p>
+<italic toggle="yes">p</italic> = 0.20</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1"/></tr><tr><td valign="middle" rowspan="3" align="left" colspan="1">Method of detection</td><td align="center" valign="top" rowspan="1" colspan="1">PCR</td><td align="center" valign="top" rowspan="1" colspan="1">7</td><td align="center" valign="top" rowspan="1" colspan="1">−1.213 (−2.286; −0.140), <italic toggle="yes">p</italic> = 0.03<xref rid="hsr272412-tbl3-note-0002" ref-type="table-fn">*</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>I<sup>2</sup> = 95%</p>
+<p>
+<italic toggle="yes">p</italic> &lt; 0.001<xref rid="hsr272412-tbl3-note-0002" ref-type="table-fn">*</xref>
+</p>
+</td><td valign="middle" rowspan="3" align="center" colspan="1">
+<italic toggle="yes">p</italic> &lt; 0.001<xref rid="hsr272412-tbl3-note-0002" ref-type="table-fn">*</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.001*</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">Culture</td><td align="center" valign="top" rowspan="1" colspan="1">3</td><td align="center" valign="top" rowspan="1" colspan="1">−0.342 (−0.773; 0.088), <italic toggle="yes">p</italic> = 0.12</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>I<sup>2</sup> = 77%</p>
+<p>
+<italic toggle="yes">p</italic> = 0.01<xref rid="hsr272412-tbl3-note-0002" ref-type="table-fn">*</xref>
+</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">Flow‐through hybridization</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">−0.142 (−0.567; 0.284), <italic toggle="yes">p</italic> = 0.51</td><td align="center" valign="top" rowspan="1" colspan="1">ND</td><td align="center" valign="top" rowspan="1" colspan="1"/></tr></tbody></table><table-wrap-foot><fn id="hsr272412-tbl3-note-0001"><p>
+<italic toggle="yes">Note:</italic> ND: Not Defined.</p></fn><fn id="hsr272412-tbl3-note-0002"><label>*</label><p>Significant value.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap></sec><sec id="hsr272412-sec-0320"><label>3.10</label><title>Continent</title><p>A statistically significant difference between continental subgroups was observed (test for subgroup differences, <italic toggle="yes">p</italic> &lt; 0.001). Studies conducted in Asia (SMD = −0.131, 95%CI: −0.206; −0.056, <italic toggle="yes">p</italic> = 0.01) and Africa (SMD = −2.809, 95%CI: −3.421; −2.197, <italic toggle="yes">p</italic> &lt; 0.001) showed a statistically significant reduction in sperm concentration among <italic toggle="yes">M. hominis</italic>–infected infertile men compared with uninfected controls, although high heterogeneity remained within these subgroups. In contrast, studies from South America (SMD = −0.089, 95%CI: −0.409; 0.232, <italic toggle="yes">p</italic> = 0.59) did not demonstrate statistically significant pooled effects.</p></sec><sec id="hsr272412-sec-0330"><label>3.11</label><title>Study Design</title><p>Subgroup analysis by study design revealed a statistically significant difference between cohort and cross‐sectional studies (test for subgroup differences <italic toggle="yes">p</italic> = 0.04). Cohort studies showed a significant negative association between <italic toggle="yes">M. hominis</italic> infection and sperm concentration (SMD = −1.016, 95%CI: −1.665; −0.368, <italic toggle="yes">p</italic> = 0.002), whereas cross‐sectional studies did not demonstrate a statistically significant effect (SMD = −0.190, 95%CI: −0.655; 0.274, <italic toggle="yes">p</italic> = 0.42). Substantial heterogeneity persisted among cohort studies (I² = 95%).</p></sec><sec id="hsr272412-sec-0340"><label>3.12</label><title>Method of Detection</title><p>The method used to detect <italic toggle="yes">M. hominis</italic> significantly influenced effect estimates (test for subgroup differences, <italic toggle="yes">p</italic> &lt; 0.001). Studies using PCR‐based methods reported a statistically significant reduction in sperm concentration among infected men (SMD = −1.213, 95%CI: −2.286; −0.140, <italic toggle="yes">p</italic> = 0.03), whereas studies using culture‐based methods (SMD = −0.342, 95%CI: −0.773; 0.088, <italic toggle="yes">p</italic> = 0.12) or flow‐through hybridization (SMD = −0.142, 95%CI: −0.567; 0.284, <italic toggle="yes">p</italic> = 0.51) showed no statistically significant associations. High heterogeneity was observed among PCR‐based studies (I² = 95%).</p><p>The meta‐regression analysis demonstrated that continent (<italic toggle="yes">p</italic> = 0.02) and method of detection (<italic toggle="yes">p</italic> = 0.001) were statistically significant moderators of the association between <italic toggle="yes">M. hominis</italic> infection and sperm concentration, suggesting that they accounted for a meaningful proportion of the observed heterogeneity. In contrast, study design was not a statistically significant moderator in the meta‐regression model (<italic toggle="yes">p</italic> = 0.36), despite showing differences in subgroup analysis.</p></sec><sec id="hsr272412-sec-0350"><label>3.13</label><title>Sensitivity Analysis</title><p>A leave‐one‐out sensitivity analysis was performed to assess the robustness of the pooled estimates. Sequential omission of individual studies did not materially alter the direction or magnitude of the overall effect size for sperm concentration. The pooled SMD ranged from −0.954 (95% CI: −1.654 to −0.254), <italic toggle="yes">p</italic> = 0.008 to −0.256 (95% CI: −0.440 to −0.073), <italic toggle="yes">p</italic> = 0.006, indicating that the results were not driven by any single study and are therefore considered robust (Figure <xref rid="hsr272412-fig-0013" ref-type="fig">13</xref>).</p><fig position="float" fig-type="Figure" id="hsr272412-fig-0013" orientation="portrait"><label>Figure 13</label><caption><p>Leave‐one‐out sensitivity analysis of the impact of <italic toggle="yes">M. hominis</italic> on sperm concentration.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-25" orientation="portrait" xlink:href="HSR2-9-e72412-g004.jpg"/></fig></sec></sec><sec sec-type="discussion" id="hsr272412-sec-0360"><label>4</label><title>Discussion</title><p>Male infertility is estimated to be linked to genital tract infections in approximately 15% of the cases [<xref rid="hsr272412-bib-0024" ref-type="bibr">24</xref>]. Both acute and chronic urogenital infections can disrupt spermatogenesis, leading to impaired sperm fertilization capacity [<xref rid="hsr272412-bib-0004" ref-type="bibr">4</xref>]. <italic toggle="yes">M. hominis</italic> has been closely associated with several urogenital disorders, including epididymitis, non‐gonococcal urethritis, and infertility [<xref rid="hsr272412-bib-0008" ref-type="bibr">8</xref>]. However, its role as a primary etiological factor in male infertility remains debated [<xref rid="hsr272412-bib-0022" ref-type="bibr">22</xref>]. For example, Ahmadi et al. reported a higher prevalence of <italic toggle="yes">M. hominis</italic> in the semen of infertile men (14.5%) compared to fertile controls (3.6%) [<xref rid="hsr272412-bib-0025" ref-type="bibr">25</xref>], whereas other studies report infection rates ranging from 5% to 14% among infertile patient [<xref rid="hsr272412-bib-0022" ref-type="bibr">22</xref>, <xref rid="hsr272412-bib-0025" ref-type="bibr">25</xref>, <xref rid="hsr272412-bib-0026" ref-type="bibr">26</xref>].</p><p>Although many carriers of <italic toggle="yes">M. hominis</italic> are asymptomatic, the bacterium can act as an opportunistic pathogen under certain conditions [<xref rid="hsr272412-bib-0027" ref-type="bibr">27</xref>]. Implementing screening programs for sexually active men may help reduce asymptomatic carriage and prevent unnoticed infections. Several studies have reported associations between <italic toggle="yes">M. hominis</italic> infection and impaired semen quality [<xref rid="hsr272412-bib-0009" ref-type="bibr">9</xref>, <xref rid="hsr272412-bib-0011" ref-type="bibr">11</xref>], while others have found no significant correlation [<xref rid="hsr272412-bib-0012" ref-type="bibr">12</xref>, <xref rid="hsr272412-bib-0013" ref-type="bibr">13</xref>]. These inconsistencies may stem from variations in study design, patient populations, diagnostic techniques, and the specific infections assessed [<xref rid="hsr272412-bib-0013" ref-type="bibr">13</xref>].</p><p>To our knowledge, this is the first systematic review and meta‐analysis examining the impact of <italic toggle="yes">M. hominis</italic> on ten distinct semen parameters. Our findings indicate that infection with <italic toggle="yes">M. hominis</italic> is significantly associated with poorer semen quality, including reduced sperm concentration, progressive motility, viability, and normal morphology. The discrepancy observed between progressive motility and rapid progressive motility may be explained by the broader definition of progressive motility, which includes both rapid and slower forward‐moving spermatozoa. In contrast, rapid progressive motility represents a more restricted subgroup, potentially reducing statistical power to detect significant differences. Additionally, variations in assessment methods and reporting criteria across studies may have contributed to this inconsistency.</p><p>Our results are consistent with Farahani et al., who also reported negative effects of <italic toggle="yes">M. hominis</italic> on sperm concentration, motility, and morphology [<xref rid="hsr272412-bib-0028" ref-type="bibr">28</xref>]. Evidence suggests that <italic toggle="yes">M. hominis</italic> may cause largely asymptomatic chronic infections that impair semen quality and disrupt accessory sex gland function [<xref rid="hsr272412-bib-0029" ref-type="bibr">29</xref>]. Conversely, some studies suggest that its presence in infertile men may represent a silent infection [<xref rid="hsr272412-bib-0030" ref-type="bibr">30</xref>], although in vitro studies demonstrate the organism's ability to attach to and invade human sperm cells [<xref rid="hsr272412-bib-0031" ref-type="bibr">31</xref>, <xref rid="hsr272412-bib-0032" ref-type="bibr">32</xref>].</p><p>The mechanisms by which <italic toggle="yes">M. hominis</italic> impairs semen quality are multifactorial. The bacterium can reduce sperm concentration by inducing agglutination and impair motility through direct adhesion to sperm cells. Additionally, it may trigger inflammation within the male reproductive tract, resulting in immune‐mediated sperm damage and decreased fertility [<xref rid="hsr272412-bib-0008" ref-type="bibr">8</xref>].</p><p>Infection can also elevate seminal anti‐sperm antibody levels, indirectly impairing sperm motility and the ability to penetrate the oocyte [<xref rid="hsr272412-bib-0033" ref-type="bibr">33</xref>]. Elevated nitric oxide levels in seminal fluid may further compromise sperm function, independent of direct microbial involvement [<xref rid="hsr272412-bib-0034" ref-type="bibr">34</xref>]. Diaz‐Garcia et al. demonstrated that <italic toggle="yes">M. hominis</italic> localizes intracellularly within human spermatozoa, preferentially binding to the head and tail regions [<xref rid="hsr272412-bib-0032" ref-type="bibr">32</xref>]. Sulfogalactoglycerolipid (SGG), the primary sulfated glycolipid in the sperm plasma membrane, serves as the receptor for <italic toggle="yes">M. hominis</italic> adhesion, facilitating its attachment and potential internalization [<xref rid="hsr272412-bib-0035" ref-type="bibr">35</xref>]. SGG is highly abundant in human spermatozoa, providing <italic toggle="yes">M. hominis</italic> with numerous receptor sites that facilitate adhesion and potential internalization. The SGG‐binding ligand of <italic toggle="yes">M. hominis</italic> is thought to be a 70 kDa molecule associated with heat shock proteins [<xref rid="hsr272412-bib-0036" ref-type="bibr">36</xref>].</p><p>Several studies have shown that urogenital infections caused by <italic toggle="yes">M. hominis</italic> are associated with elevated inflammatory markers and reduced sperm quality, which may improve following antimicrobial therapy [<xref rid="hsr272412-bib-0025" ref-type="bibr">25</xref>]. However, other studies have not confirmed these associations [<xref rid="hsr272412-bib-0012" ref-type="bibr">12</xref>, <xref rid="hsr272412-bib-0030" ref-type="bibr">30</xref>], leaving the relationship between <italic toggle="yes">M. hominis</italic>, male reproductive tract inflammation, and semen quality unresolved. Our meta‐analysis also demonstrated that <italic toggle="yes">M. hominis</italic> infection is associated with increased seminal fluid pH, likely due to ammonia production from arginine catabolism [<xref rid="hsr272412-bib-0037" ref-type="bibr">37</xref>].</p><p>Based on these findings, screening for <italic toggle="yes">M. hominis</italic> should be considered in sexually active men, especially those undergoing infertility evaluation. Future research is needed to clarify the pathogen's role in male infertility and to establish optimal diagnostic and therapeutic strategies. It is important to consider that co‐infections with other uropathogens—including bacteria (<italic toggle="yes">E. coli, Proteus mirabilis, Enterococcus faecalis</italic>, <italic toggle="yes">Chlamydia trachomatis</italic>, <italic toggle="yes">Mycoplasma genitalium</italic>, <italic toggle="yes">Ureaplasma spp</italic>., and others), viruses (HPV, HSV‐1, HSV‐2), parasites (<italic toggle="yes">Trichomonas vaginalis</italic>), and fungi (<italic toggle="yes">Candida spp</italic>.)—can also negatively impact semen quality.</p><p>From a clinical perspective, management of <italic toggle="yes">M. hominis</italic> infection typically involves antibiotic therapy, including agents such as tetracyclines, macrolides, and fluoroquinolones [<xref rid="hsr272412-bib-0038" ref-type="bibr">38</xref>]. However, treatment efficacy may be influenced by emerging antimicrobial resistance and variability in susceptibility patterns [<xref rid="hsr272412-bib-0039" ref-type="bibr">39</xref>]. Moreover, the benefit of routine screening and treatment in asymptomatic individuals or in the context of male infertility remains uncertain. Further prospective studies are needed to determine whether targeted treatment can improve reproductive outcomes.</p><p>In addition to <italic toggle="yes">M. hominis</italic>, other <italic toggle="yes">Mycoplasma</italic> species may also play a role in male infertility. For instance, <italic toggle="yes">Mycoplasma genitalium</italic> and <italic toggle="yes">Ureaplasma urealyticum</italic> have been reported to be associated with impaired semen parameters, including reduced sperm motility and increased inflammatory responses within the male reproductive tract [<xref rid="hsr272412-bib-0040" ref-type="bibr">40</xref>]. However, the clinical significance of these findings remains controversial due to heterogeneity among studies, differences in detection methods, and variability in study populations. Further well‐designed studies are required to clarify the role of these microorganisms in male reproductive health.</p><p>This study has several limitations. First, substantial heterogeneity was observed across included studies, which is common in meta‐analyses and can affect interpretability [<xref rid="hsr272412-bib-0041" ref-type="bibr">41</xref>]. While several associations reached statistical significance, the presence of substantial heterogeneity and the observational nature of the included studies warrant cautious interpretation of these results. Although subgroup and meta‐regression analyses identified continent and diagnostic method as significant moderators, residual heterogeneity remained substantial, indicating that additional unmeasured factors—such as co‐infections, differences in WHO semen analysis editions, and antimicrobial exposure—may also contribute. Second, the number of included studies was relatively small, and some had limited sample sizes. Third, co‐infections with other uropathogens may act as confounders. Therefore, the results should be interpreted cautiously, and further research is warranted to validate these findings.</p><p>Despite these limitations, this meta‐analysis has notable strengths. The included studies were of good or fair quality, sensitivity analyses confirmed the robustness of the results, and no evidence of publication bias was detected. These factors suggest that the findings are reliable and likely generalizable to the broader population.</p></sec><sec sec-type="conclusions" id="hsr272412-sec-0370"><label>5</label><title>Conclusion</title><p>This meta‐analysis provides updated evidence suggesting an association between <italic toggle="yes">M. hominis</italic> and impaired semen quality. Infection was associated with lower sperm concentration, progressive motility, viability, and normal morphology. However, given the observational nature of the included studies and the presence of substantial heterogeneity, these findings should be interpreted with caution. Further well‐designed prospective studies are required to clarify causality and inform clinical practice. While screening for <italic toggle="yes">M. hominis</italic> in semen may provide additional information during infertility evaluation, its clinical utility and impact on management strategies remain to be established.</p></sec><sec id="hsr272412-sec-0380"><title>Author Contributions</title><p>
+<bold>Safa Boujemaa:</bold> conceptualization, methodology, formal analysis, data curation, writing – original draft, writing – review and editing. <bold>Gurparsad Singh Suri:</bold> conceptualization, writing – review and editing, supervision. <bold>Gurleen Kaur:</bold> validation, writing – review and editing.</p></sec><sec id="hsr272412-sec-0390"><title>Funding</title><p>The authors have nothing to report.</p></sec><sec sec-type="COI-statement" id="hsr272412-sec-0400"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec id="hsr272412-sec-0430"><title>Transparency Statement</title><p>The lead author Safa Boujemaa affirms that this manuscript is an honest, accurate, and transparent account of the study being reported; that no important aspects of the study have been omitted; and that any discrepancies from the study as planned (and, if relevant, registered) have been explained.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="hsr272412-suppl-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Table 1:</bold> Search strategy.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="HSR2-9-e72412-s001.doc" position="float" orientation="portrait"/></supplementary-material></sec></body><back><sec sec-type="data-availability" id="hsr272412-sec-0420"><title>Data Availability Statement</title><p>The authors confirm that the data supporting the findings of this study are available within the article and its supporting materials.</p></sec><ref-list content-type="cited-references" id="hsr272412-bibl-0001"><title>References</title><ref id="hsr272412-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="hsr272412-cit-0001">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Black</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Ølgaard</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. A.</given-names>
+<surname>Khoei</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Glazer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. A.</given-names>
+<surname>Ohl</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C. F. S.</given-names>
+<surname>Jensen</surname>
+</string-name>, “<article-title>The Genetic Landscape of Male Factor Infertility and Implications for Men's Health and Future Generations</article-title>,” <source>Uro</source>
+<volume>5</volume>, no. <issue>1</issue> (<year>2025</year>): <elocation-id>2</elocation-id>, <pub-id pub-id-type="doi">10.3390/uro5010002</pub-id>.</mixed-citation></ref><ref id="hsr272412-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="hsr272412-cit-0002">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Yao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Li</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Deng</surname>
+</string-name>, “<article-title>Bacterial Infections Affect Male Fertility: A Focus on the Oxidative Stress‐Autophagy Axis</article-title>,” <source>Frontiers in Cell and Developmental Biology</source>
+<volume>9</volume> (<year>2021</year>): <elocation-id>727812</elocation-id>, <pub-id pub-id-type="doi">10.3389/fcell.2021.727812</pub-id>.<pub-id pub-id-type="pmid">34746124</pub-id>
+<pub-id pub-id-type="pmcid">PMC8566953</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0003"><label>3</label><mixed-citation publication-type="book" id="hsr272412-cit-0003">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Mesbah</surname>
+</string-name> and <string-name name-style="western">
+<given-names>H. K.</given-names>
+<surname>Salem</surname>
+</string-name>, “<part-title>Genital Tract Infection as a Cause of Male Infertility</part-title>.” in <source>Genital Infections and Infertility [Internet]</source>, eds. <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>A. M.</given-names>
+<surname>Darwish</surname>
+</string-name>
+</person-group>. <publisher-name>InTech</publisher-name>, <year>2016</year>), <pub-id pub-id-type="doi">10.5772/62740</pub-id>.</mixed-citation></ref><ref id="hsr272412-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="hsr272412-cit-0004">
+<string-name name-style="western">
+<given-names>H. C.</given-names>
+<surname>Schuppe</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Pilatz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Hossain</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Diemer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Wagenlehner</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Weidner</surname>
+</string-name>, “<article-title>Urogenital Infection as a Risk Factor for Male Infertility</article-title>,” <source>Deutsches Ärzteblatt International</source>
+<volume>114</volume> (<year>2017</year>): <fpage>339</fpage>–<lpage>346</lpage>, <pub-id pub-id-type="doi">10.3238/arztebl.2017.0339</pub-id>.<pub-id pub-id-type="pmid">28597829</pub-id>
+<pub-id pub-id-type="pmcid">PMC5470348</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="hsr272412-cit-0005">
+<string-name name-style="western">
+<given-names>F. M.</given-names>
+<surname>Köhn</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Erdmann</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Oeda</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. F. E.</given-names>
+<surname>Mulla</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. G.</given-names>
+<surname>Schiefer</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>W. B.</given-names>
+<surname>Schill</surname>
+</string-name>, “<article-title>Influence of Urogenital Infections on Sperm Functions</article-title>,” <source>Andrologia</source>
+<volume>30</volume>, no. <issue>S1</issue> (<year>2009</year>): <fpage>73</fpage>–<lpage>80</lpage>, <pub-id pub-id-type="doi">10.1111/j.1439-0272.1998.tb02829.x</pub-id>.<pub-id pub-id-type="pmid">9629446</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="hsr272412-cit-0006">
+<string-name name-style="western">
+<given-names>O. V.</given-names>
+<surname>Pobeguts</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. A.</given-names>
+<surname>Galaymina</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. V.</given-names>
+<surname>Sikamov</surname>
+</string-name>, et al., “<article-title>Unraveling the Adaptive Strategies of Mycoplasma hominis Through Proteogenomic Profiling of Clinical Isolates</article-title>,” <source>Frontiers in Cellular and Infection Microbiology</source>
+<volume>14</volume> (<year>2024</year>): <elocation-id>1398706</elocation-id>, <pub-id pub-id-type="doi">10.3389/fcimb.2024.1398706</pub-id>.<pub-id pub-id-type="pmid">38756231</pub-id>
+<pub-id pub-id-type="pmcid">PMC11096450</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="hsr272412-cit-0007">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Naicker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Dessai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Singh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Mitchev</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Tinarwo</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>N. S.</given-names>
+<surname>Abbai</surname>
+</string-name>, “<article-title>Mycoplasma hominis Does Not Share Common Risk Factors With Other Genital Pathogens': Findings From a South African Pregnant Cohort</article-title>,” <source>Southern African Journal of Infectious Diseases</source>
+<volume>36</volume>, no. <issue>1</issue> (<year>2021</year>): <elocation-id>207</elocation-id>, <pub-id pub-id-type="doi">10.4102/sajid.v36i1.207</pub-id>.<pub-id pub-id-type="pmid">34485492</pub-id>
+<pub-id pub-id-type="pmcid">PMC8377787</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="hsr272412-cit-0008">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Cutoiu</surname>
+</string-name> and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Boda</surname>
+</string-name>, “<article-title>An Overview Regarding the Relationship Between Mollicutes, Infertility and Antibiotic Resistance (Review)</article-title>,” <source>Biomedical Reports</source>
+<volume>21</volume>, no. <issue>2</issue> (<year>2024</year>): <elocation-id>119</elocation-id>, <pub-id pub-id-type="doi">10.3892/br.2024.1807</pub-id>.<pub-id pub-id-type="pmid">38938741</pub-id>
+<pub-id pub-id-type="pmcid">PMC11209857</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="hsr272412-cit-0009">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Huang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Long</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Jing</surname>
+</string-name>, et al., “<article-title>Ureaplasma urealyticum and Mycoplasma hominis Infections and Semen Quality in 19,098 Infertile Men in China</article-title>,” <source>World Journal of Urology</source>
+<volume>34</volume>, no. <issue>7</issue> (<year>2016</year>): <fpage>1039</fpage>–<lpage>1044</lpage>, <pub-id pub-id-type="doi">10.1007/s00345-015-1724-z</pub-id>.<pub-id pub-id-type="pmid">26537883</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="hsr272412-cit-0010">
+<string-name name-style="western">
+<given-names>J. S.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. T.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. S.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. M.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. T.</given-names>
+<surname>Seo</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. H.</given-names>
+<surname>Choe</surname>
+</string-name>, “<article-title>Concordance of Ureaplasma urealyticum and Mycoplasma hominis in Infertile Couples: Impact on Semen Parameters</article-title>,” <source>Urology (Ridgewood NJ)</source>
+<volume>81</volume>, no. <issue>6</issue> (<year>2013</year>): <fpage>1219</fpage>–<lpage>1224</lpage>, <pub-id pub-id-type="doi">10.1016/j.urology.2013.02.044</pub-id>.<pub-id pub-id-type="pmid">23602797</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="hsr272412-cit-0011">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Gdoura</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Kchaou</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Chaari</surname>
+</string-name>, et al., “<article-title>Ureaplasma urealyticum, Ureaplasma parvum, Mycoplasma hominis and Mycoplasma genitalium Infections and Semen Quality of Infertile Men</article-title>,” <source>BMC Infectious Diseases</source>
+<volume>7</volume>, no. <issue>1</issue> (<year>2007</year>): <elocation-id>129</elocation-id>, <pub-id pub-id-type="doi">10.1186/1471-2334-7-129</pub-id>.<pub-id pub-id-type="pmid">17988404</pub-id>
+<pub-id pub-id-type="pmcid">PMC2194714</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="hsr272412-cit-0012">
+<string-name name-style="western">
+<given-names>F. T.</given-names>
+<surname>Andrade‐Rocha</surname>
+</string-name>, “<article-title>
+<italic toggle="yes">Ureaplasma Urealyticum</italic> and <italic toggle="yes">Mycoplasma Hominis</italic> in Men Attending for Routine Semen Analysis</article-title>,” <source>Urologia Internationalis</source>
+<volume>71</volume>, no. <issue>4</issue> (<year>2003</year>): <fpage>377</fpage>–<lpage>381</lpage>, <pub-id pub-id-type="doi">10.1159/000074089</pub-id>.<pub-id pub-id-type="pmid">14646436</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="hsr272412-cit-0013">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Bai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Wan</surname>
+</string-name>, et al., “<article-title>Sexually Transmitted Infections and Semen Quality From Subfertile Men With and Without Leukocytospermia</article-title>,” <source>Reproductive Biology and Endocrinology</source>
+<volume>19</volume>, no. <issue>1</issue> (<year>2021</year>): <elocation-id>92</elocation-id>, <pub-id pub-id-type="doi">10.1186/s12958-021-00769-2</pub-id>.<pub-id pub-id-type="pmid">34154600</pub-id>
+<pub-id pub-id-type="pmcid">PMC8218447</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="hsr272412-cit-0014">
+<string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Page</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>McKenzie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. M.</given-names>
+<surname>Bossuyt</surname>
+</string-name>, et al., “<article-title>The PRISMA 2020 Statement: An Updated Guideline for Reporting Systematic Reviews</article-title>,” <source>BMJ</source>
+<volume>372</volume> (<year>2021</year>): <elocation-id>n71</elocation-id>, <pub-id pub-id-type="doi">10.1136/bmj.n71</pub-id>.<pub-id pub-id-type="pmid">33782057</pub-id>
+<pub-id pub-id-type="pmcid">PMC8005924</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="hsr272412-cit-0015">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Stang</surname>
+</string-name>, “<article-title>Critical Evaluation of the Newcastle‐Ottawa Scale for the Assessment of the Quality of Nonrandomized Studies in Meta‐Analyses</article-title>,” <source>European Journal of Epidemiology</source>
+<volume>25</volume>, no. <issue>9</issue> (<year>2010</year>): <fpage>603</fpage>–<lpage>605</lpage>, <pub-id pub-id-type="doi">10.1007/s10654-010-9491-z</pub-id>.<pub-id pub-id-type="pmid">20652370</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="hsr272412-cit-0016">
+<string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Fidler</surname>
+</string-name> and <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Nagelkerke</surname>
+</string-name>, “<article-title>The Mantel‐Haenszel Procedure Revisited: Models and Generalizations</article-title>,” <source>PLoS ONE</source>
+<volume>8</volume>, no. <issue>3</issue> (<year>2013</year>): <elocation-id>e58327</elocation-id>, <pub-id pub-id-type="doi">10.1371/journal.pone.0058327</pub-id>.<pub-id pub-id-type="pmid">23516463</pub-id>
+<pub-id pub-id-type="pmcid">PMC3596394</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="hsr272412-cit-0017">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Borenstein</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. V.</given-names>
+<surname>Hedges</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. P. T.</given-names>
+<surname>Higgins</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H. R.</given-names>
+<surname>Rothstein</surname>
+</string-name>, “<article-title>A Basic Introduction to Fixed‐Effect and Random‐Effects Models for Meta‐Analysis</article-title>,” <source>Research Synthesis Methods</source>
+<volume>1</volume>, no. <issue>2</issue> (<year>2010</year>): <fpage>97</fpage>–<lpage>111</lpage>, <pub-id pub-id-type="doi">10.1002/jrsm.12</pub-id>.<pub-id pub-id-type="pmid">26061376</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="hsr272412-cit-0018">
+<string-name name-style="western">
+<given-names>H. I.</given-names>
+<surname>Al‐Daghistani</surname>
+</string-name> and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Abdel‐Dayem</surname>
+</string-name>, “<article-title>Clinical Significance of Asymptomatic Urogenital Mycoplasma hominis and Ureaplasma urealyticum in Relation to Seminal Fluid Parameters Among Infertile Jordanian Males</article-title>,” <source>Middle East Fertility Society Journal</source>
+<volume>15</volume>, no. <issue>1</issue> (<year>2010</year>): <fpage>29</fpage>–<lpage>34</lpage>, <pub-id pub-id-type="doi">10.1016/j.mefs.2010.03.003</pub-id>.</mixed-citation></ref><ref id="hsr272412-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="hsr272412-cit-0019">
+<string-name name-style="western">
+<given-names>N. A.</given-names>
+<surname>Al‐Sweih</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. H.</given-names>
+<surname>Al‐Fadli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. E.</given-names>
+<surname>Omu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>V. O.</given-names>
+<surname>Rotimi</surname>
+</string-name>, “<article-title>Prevalence of <italic toggle="yes">Chlamydia trachomatis, Mycoplasma hominis, Mycoplasma genitalium</italic>, and <italic toggle="yes">Ureaplasma urealyticum</italic> Infections and Seminal Quality in Infertile and Fertile Men in Kuwait</article-title>,” <source>Journal of Andrology</source>
+<volume>33</volume>, no. <issue>6</issue> (<year>2012</year>): <fpage>1323</fpage>–<lpage>1329</lpage>, <pub-id pub-id-type="doi">10.2164/jandrol.111.013821</pub-id>.<pub-id pub-id-type="pmid">22052774</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="hsr272412-cit-0020">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Gdoura</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Kchaou</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Ammar‐Keskes</surname>
+</string-name>, et al., “<article-title>Assessment of <italic toggle="yes">Chlamydia trachomatis, Ureaplasma urealyticum, Ureaplasma parvum, Mycoplasma hominis</italic>, and <italic toggle="yes">Mycoplasma genitalium</italic> in Semen and First Void Urine Specimens of Asymptomatic Male Partners of Infertile Couples</article-title>,” <source>Journal of Andrology</source>
+<volume>29</volume>, no. <issue>2</issue> (<year>2008</year>): <fpage>198</fpage>–<lpage>206</lpage>, <pub-id pub-id-type="doi">10.2164/jandrol.107.003566</pub-id>.<pub-id pub-id-type="pmid">18077823</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="hsr272412-cit-0021">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Karthikeyan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>N.s</surname>.</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Singh</surname>
+</string-name>, “<article-title>Association of Semen Bacteriological Profile With Infertility—A Cross‐Sectional Study in a Tertiary Care Center</article-title>,” <source>Journal of Human Reproductive Sciences</source>
+<volume>14</volume>, no. <issue>3</issue> (<year>2021</year>): <fpage>260</fpage>–<lpage>266</lpage>, <pub-id pub-id-type="doi">10.4103/jhrs.jhrs_49_21</pub-id>.<pub-id pub-id-type="pmid">34759615</pub-id>
+<pub-id pub-id-type="pmcid">PMC8527068</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="hsr272412-cit-0022">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Ji</surname>
+</string-name>, et al., “<article-title>Prevalence of Ureaplasma Urealyticum, Mycoplasma Hominis, Chlamydia Trachomatis Infections, and Semen Quality in Infertile and Fertile Men in China</article-title>,” <source>Urology (Ridgewood NJ)</source>
+<volume>83</volume>, no. <issue>4</issue> (<year>2014</year>): <fpage>795</fpage>–<lpage>799</lpage>, <pub-id pub-id-type="doi">10.1016/j.urology.2013.11.009</pub-id>.<pub-id pub-id-type="pmid">24411218</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="hsr272412-cit-0023">
+<string-name name-style="western">
+<given-names>D. A.</given-names>
+<surname>Paira</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Olivera</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. D.</given-names>
+<surname>Tissera</surname>
+</string-name>, et al., “<article-title>
+<italic toggle="yes">Ureaplasma urealyticum</italic> and <italic toggle="yes">Mycoplasma hominis</italic> Urogenital Infections Associate With Semen Inflammation and Decreased Sperm Quality</article-title>,” <source>Journal of Leukocyte Biology</source>
+<volume>113</volume>, no. <issue>1</issue> (<year>2023</year>): <fpage>18</fpage>–<lpage>26</lpage>, <pub-id pub-id-type="doi">10.1093/jleuko/qiac006</pub-id>.<pub-id pub-id-type="pmid">36822158</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="hsr272412-cit-0024">
+<string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Rivero</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Kulkarni</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Thirumavalavan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Ramasamy</surname>
+</string-name>, “<article-title>Evaluation and Management of Male Genital Tract Infections in the Setting of Male Infertility: An Updated Review</article-title>,” <source>Current Opinion in Urology</source>
+<volume>33</volume>, no. <issue>3</issue> (<year>2023</year>): <fpage>180</fpage>–<lpage>186</lpage>, <pub-id pub-id-type="doi">10.1097/MOU.0000000000001081</pub-id>.<pub-id pub-id-type="pmid">36861760</pub-id>
+<pub-id pub-id-type="pmcid">PMC10073322</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="hsr272412-cit-0025">
+<string-name name-style="western">
+<given-names>M. H.</given-names>
+<surname>Ahmadi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Mirsalehian</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. A.</given-names>
+<surname>Sadighi Gilani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Bahador</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Talebi</surname>
+</string-name>, “<article-title>Asymptomatic Infection With Mycoplasma hominis Negatively Affects Semen Parameters and Leads to Male Infertility as Confirmed by Improved Semen Parameters After Antibiotic Treatment</article-title>,” <source>Urology (Ridgewood NJ)</source>
+<volume>100</volume> (<year>2017</year>): <fpage>97</fpage>–<lpage>102</lpage>, <pub-id pub-id-type="doi">10.1016/j.urology.2016.11.018</pub-id>.<pub-id pub-id-type="pmid">27871827</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="hsr272412-cit-0026">
+<string-name name-style="western">
+<given-names>M. M.</given-names>
+<surname>Al‐Jebouri</surname>
+</string-name> and <string-name name-style="western">
+<given-names>A. A.</given-names>
+<surname>Mohamed</surname>
+</string-name>, “<article-title>A Study on Infertility of Males Infected With <italic toggle="yes">Mycoplasma Hominis</italic> With Reference to Sperm Morphology</article-title>,” <source>Open Journal of Pathology</source>
+<volume>11</volume>, no. <issue>01</issue> (<year>2021</year>): <fpage>7</fpage>–<lpage>21</lpage>, <pub-id pub-id-type="doi">10.4236/ojpathology.2021.111002</pub-id>.</mixed-citation></ref><ref id="hsr272412-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="hsr272412-cit-0027">
+<string-name name-style="western">
+<given-names>K. B.</given-names>
+<surname>Waites</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. L.</given-names>
+<surname>Schelonka</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Xiao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. L.</given-names>
+<surname>Grigsby</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Novy</surname>
+</string-name>, “<article-title>Congenital and Opportunistic Infections: Ureaplasma Species and Mycoplasma hominis</article-title>,” <source>Seminars in Fetal and Neonatal Medicine</source>
+<volume>14</volume>, no. <issue>4</issue> (<year>2009</year>): <fpage>190</fpage>–<lpage>199</lpage>, <pub-id pub-id-type="doi">10.1016/j.siny.2008.11.009</pub-id>.<pub-id pub-id-type="pmid">19109084</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="hsr272412-cit-0028">
+<string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Farahani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Tharakan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Yap</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. W.</given-names>
+<surname>Ramsay</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. N.</given-names>
+<surname>Jayasena</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Minhas</surname>
+</string-name>, “<article-title>The Semen Microbiome and Its Impact on Sperm Function and Male Fertility: A Systematic Review and Meta‐Analysis</article-title>,” <source>Andrology</source>
+<volume>9</volume>, no. <issue>1</issue> (<year>2021</year>): <fpage>115</fpage>–<lpage>144</lpage>, <pub-id pub-id-type="doi">10.1111/andr.12886</pub-id>.<pub-id pub-id-type="pmid">32794312</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="hsr272412-cit-0029">
+<string-name name-style="western">
+<given-names>A. E.</given-names>
+<surname>Calogero</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Duca</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. A.</given-names>
+<surname>Condorelli</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>La Vignera</surname>
+</string-name>, “<article-title>Male Accessory Gland Inflammation, Infertility, and Sexual Dysfunctions: A Practical Approach to Diagnosis and Therapy</article-title>,” <source>Andrology</source>
+<volume>5</volume>, no. <issue>6</issue> (<year>2017</year>): <fpage>1064</fpage>–<lpage>1072</lpage>, <pub-id pub-id-type="doi">10.1111/andr.12427</pub-id>.<pub-id pub-id-type="pmid">28992374</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="hsr272412-cit-0030">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Dankert</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Pannekoek</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. W.</given-names>
+<surname>Trum</surname>
+</string-name>, <string-name name-style="western">
+<given-names>O. P.</given-names>
+<surname>Bleker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Van Der Veen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Spanjaard</surname>
+</string-name>, “<article-title>Cytokine Concentrations in Seminal Plasma From Subfertile Men are not Indicative of the Presence of Ureaplasma urealyticum or Mycoplasma hominis in the Lower Genital Tract</article-title>,” <source>Journal of Medical Microbiology</source>
+<volume>49</volume>, no. <issue>8</issue> (<year>2000</year>): <fpage>697</fpage>–<lpage>700</lpage>, <pub-id pub-id-type="doi">10.1099/0022-1317-49-8-697</pub-id>.<pub-id pub-id-type="pmid">10933253</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="hsr272412-cit-0031">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Baczynska</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Fedder</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Schougaard</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Christiansen</surname>
+</string-name>, “<article-title>Prevalence of Mycoplasmas in the Semen and Vaginal Swabs of Danish Stallions and Mares</article-title>,” <source>Veterinary Microbiology</source>
+<volume>121</volume>, no. <issue>1–2</issue> (<year>2007</year>): <fpage>138</fpage>–<lpage>143</lpage>, <pub-id pub-id-type="doi">10.1016/j.vetmic.2006.11.021</pub-id>.<pub-id pub-id-type="pmid">17178442</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="hsr272412-cit-0032">
+<string-name name-style="western">
+<given-names>F. J.</given-names>
+<surname>Díaz‐García</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. P.</given-names>
+<surname>Herrera‐Mendoza</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Giono‐Cerezo</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F. M.</given-names>
+<surname>Guerra‐Infante</surname>
+</string-name>, “<article-title>Mycoplasma hominis Attaches to and Locates Intracellularly in Human Spermatozoa</article-title>,” <source>Human Reproduction</source>
+<volume>21</volume>, no. <issue>6</issue> (<year>2006</year>): <fpage>1591</fpage>–<lpage>1598</lpage>, <pub-id pub-id-type="doi">10.1093/humrep/del032</pub-id>.<pub-id pub-id-type="pmid">16549424</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="hsr272412-cit-0033">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Soffer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Ron‐El</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Golan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Herman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Caspi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Samra</surname>
+</string-name>, “<article-title>Male Genital Mycoplasmas and Chlamydia trachomatis Culture: Its Relationship With Accessory Gland Function, Sperm Quality, and Autoimmunity</article-title>,” <source>Fertility and Sterility</source>
+<volume>53</volume>, no. <issue>2</issue> (<year>1990</year>): <fpage>331</fpage>–<lpage>336</lpage>, <pub-id pub-id-type="doi">10.1016/S0015-0282(16)53290-7</pub-id>.<pub-id pub-id-type="pmid">2298315</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="hsr272412-cit-0034">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Mehraban</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Ansari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Keyhan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Sedighi Gilani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Naderi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Esfehani</surname>
+</string-name>, “<article-title>Comparison of Nitric Oxide Concentration in Seminal Fluid Between Infertile Patients With and Without Varicocele and Normal Fertile Men</article-title>,” <source>Urology Journal</source>
+<volume>2</volume>, no. <issue>2</issue> (<year>2005</year>): <fpage>106</fpage>–<lpage>110</lpage>.<pub-id pub-id-type="pmid">17629881</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="hsr272412-cit-0035">
+<string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Vos</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Lopes‐Cardozo</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>B. M.</given-names>
+<surname>Gadella</surname>
+</string-name>, “<article-title>Metabolic and Functional Aspects of Sulfogalactolipids</article-title>,” <source>Biochimica et Biophysica Acta (BBA) ‐ Lipids and Lipid Metabolism</source>
+<volume>1211</volume>, no. <issue>2</issue> (<year>1994</year>): <fpage>125</fpage>–<lpage>149</lpage>, <pub-id pub-id-type="doi">10.1016/0005-2760(94)90262-3</pub-id>.<pub-id pub-id-type="pmid">8117740</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="hsr272412-cit-0036">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Boulanger</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Faulds</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. M.</given-names>
+<surname>Eddy</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C. A.</given-names>
+<surname>Lingwood</surname>
+</string-name>, “<article-title>Members of the 70 kDa Heat Shock Protein Family Specifically Recognize Sulfoglycolipids: Role in Gamete Recognition and Mycoplasma‐Related Infertility</article-title>,” <source>Journal of Cellular Physiology</source>
+<volume>165</volume>, no. <issue>1</issue> (<year>1995</year>): <fpage>7</fpage>–<lpage>17</lpage>, <pub-id pub-id-type="doi">10.1002/jcp.1041650103</pub-id>.<pub-id pub-id-type="pmid">7559808</pub-id>
+</mixed-citation></ref><ref id="hsr272412-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="hsr272412-cit-0037">
+<string-name name-style="western">
+<given-names>D. V.</given-names>
+<surname>Evsyutina</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T. A.</given-names>
+<surname>Semashko</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. A.</given-names>
+<surname>Galyamina</surname>
+</string-name>, et al., “<article-title>Molecular Basis of the Slow Growth of Mycoplasma hominis on Different Energy Sources</article-title>,” <source>Frontiers in Cellular and Infection Microbiology</source>
+<volume>12</volume> (<year>2022</year>): <elocation-id>918557</elocation-id>, <pub-id pub-id-type="doi">10.3389/fcimb.2022.918557</pub-id>.<pub-id pub-id-type="pmid">35873139</pub-id>
+<pub-id pub-id-type="pmcid">PMC9301678</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="hsr272412-cit-0038">
+<string-name name-style="western">
+<given-names>S. L.</given-names>
+<surname>Santos Silva</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. V.</given-names>
+<surname>Amaral</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. V.</given-names>
+<surname>Amaral</surname>
+</string-name>, et al., “<article-title>Evaluating the Antibiotic Resistance Patterns in Mycoplasma Hominis and Ureaplasma spp. Infections in Salvador, Brazil</article-title>,” <source>Venereology</source>
+<volume>4</volume>, no. <issue>3</issue> (<year>2025</year>): <elocation-id>12</elocation-id>, <pub-id pub-id-type="doi">10.3390/venereology4030012</pub-id>.</mixed-citation></ref><ref id="hsr272412-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="hsr272412-cit-0039">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Boujemaa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Mlik</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Mardassi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Ben Abdelmoumen Mardassi</surname>
+</string-name>, “<article-title>Clonal Spread of Tetracycline Resistance Among <italic toggle="yes">Mycoplasma hominis</italic> Clinical Strains, Tunisia</article-title>,” <source>Infection and Drug Resistance</source>
+<volume>13</volume> (<year>2020</year>): <fpage>2093</fpage>–<lpage>2097</lpage>, <pub-id pub-id-type="doi">10.2147/IDR.S249630</pub-id>.<pub-id pub-id-type="pmid">32669861</pub-id>
+<pub-id pub-id-type="pmcid">PMC7337446</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="hsr272412-cit-0040">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Tam Le</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Nguyen Nguyen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Bach Nguyen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Quynh Tram Ngo</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Quoc Huy Nguyen</surname>
+</string-name>, “<article-title>Ureaplasma Urealyticum and Mycoplasma Genitalium Detection and Sperm Quality: A Cross‐Sectional Study in Vietnam</article-title>,” <source>International Journal of Reproductive BioMedicine (IJRM)</source>
+<volume>20</volume>, no. <issue>3</issue> (<year>2022</year>): <fpage>185</fpage>–<lpage>194</lpage>, <pub-id pub-id-type="doi">10.18502/ijrm.v20i3.10710</pub-id>.<pub-id pub-id-type="pmid">35571499</pub-id>
+<pub-id pub-id-type="pmcid">PMC9099368</pub-id></mixed-citation></ref><ref id="hsr272412-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="hsr272412-cit-0041">
+<string-name name-style="western">
+<given-names>P. B.</given-names>
+<surname>Imrey</surname>
+</string-name>, “<article-title>Limitations of Meta‐Analyses of Studies With High Heterogeneity</article-title>,” <source>JAMA Network Open</source>
+<volume>3</volume>, no. <issue>1</issue> (<year>2020</year>): <elocation-id>e1919325</elocation-id>, <pub-id pub-id-type="doi">10.1001/jamanetworkopen.2019.19325</pub-id>.<pub-id pub-id-type="pmid">31922554</pub-id>
+</mixed-citation></ref></ref-list></back></article>

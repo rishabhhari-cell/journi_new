@@ -1,0 +1,529 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="ccrp1818873" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Crit Care Res Pract</journal-id><journal-id journal-id-type="iso-abbrev">Crit Care Res Pract</journal-id><journal-id journal-id-type="pmc-domain-id">1315</journal-id><journal-id journal-id-type="pmc-domain">ccrp</journal-id><journal-id journal-id-type="publisher-id">CCRP</journal-id><journal-title-group><journal-title>Critical Care Research and Practice</journal-title></journal-title-group><issn pub-type="ppub">2090-1305</issn><issn pub-type="epub">2090-1313</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13051830</article-id><article-id pub-id-type="pmcid-ver">PMC13051830.1</article-id><article-id pub-id-type="pmcaid">13051830</article-id><article-id pub-id-type="pmcaiid">13051830</article-id><article-id pub-id-type="pmid">41947893</article-id><article-id pub-id-type="doi">10.1155/ccrp/1818873</article-id><article-id pub-id-type="publisher-id">CCRP1818873</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Review Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Article</subject></subj-group></article-categories><title-group><article-title>Clinical Scores for Predicting Outcomes in Pediatric Oncology Sepsis: A Systematic Review and Meta‐Analysis</article-title></title-group><contrib-group><contrib id="cr-0001" contrib-type="author" corresp="yes"><name name-style="western"><surname>Domínguez-Rojas</surname><given-names initials="JÁ">Jesús Ángel</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-6141-6622</contrib-id><xref rid="aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>jesusdominguez24@gmail.com</email></address></contrib><contrib id="cr-0002" contrib-type="author"><name name-style="western"><surname>Torres</surname><given-names initials="S">Silvio</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-6522-8047</contrib-id><xref rid="aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="cr-0003" contrib-type="author"><name name-style="western"><surname>Aceituno</surname><given-names initials="AM">Alejandra Méndez</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-2697-4335</contrib-id><xref rid="aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="cr-0004" contrib-type="author"><name name-style="western"><surname>Arias</surname><given-names initials="A">Anita</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-7568-5284</contrib-id><xref rid="aff-0004" ref-type="aff">
+<sup>4</sup>
+</xref></contrib><contrib id="cr-0005" contrib-type="author"><name name-style="western"><surname>Sequeria</surname><given-names initials="G">Gabriela</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-3876-7974</contrib-id><xref rid="aff-0005" ref-type="aff">
+<sup>5</sup>
+</xref></contrib><contrib id="cr-0006" contrib-type="author"><name name-style="western"><surname>Tatay</surname><given-names initials="D">Daniel</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-4644-2125</contrib-id><xref rid="aff-0006" ref-type="aff">
+<sup>6</sup>
+</xref></contrib><contrib id="cr-0007" contrib-type="author"><name name-style="western"><surname>Robles</surname><given-names initials="LM">Lupe Mora</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-8436-6680</contrib-id><xref rid="aff-0007" ref-type="aff">
+<sup>7</sup>
+</xref></contrib><contrib id="cr-0008" contrib-type="author"><name name-style="western"><surname>Muñoz</surname><given-names initials="CM">Clotilde Mireya</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-2966-2855</contrib-id><xref rid="aff-0008" ref-type="aff">
+<sup>8</sup>
+</xref></contrib><contrib id="cr-0009" contrib-type="author"><name name-style="western"><surname>Llano</surname><given-names initials="L">Luis</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-9458-8498</contrib-id><xref rid="aff-0009" ref-type="aff">
+<sup>9</sup>
+</xref></contrib></contrib-group><contrib-group><contrib id="cr-0010" contrib-type="editor"><name name-style="western"><surname>Spentzas</surname><given-names initials="T">Thomas</given-names></name><address><email>tspentza@uthsc.edu</email></address></contrib></contrib-group><aff id="aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Departamento de Emergencia y áreas Críticas</named-content>, <institution>Instituto Nacional de Salud del Niño</institution>, <city>Lima</city>, <country>Peru</country>
+</aff><aff id="aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Departamento de Cuidados Intensivos Pediátricos</named-content>, <named-content content-type="organisation-division">Doctor en Ciencias Bio Médicas Magister en Investigación Clínica Especializada Bioestadística</named-content>, <institution>Hospital Universitario Austral</institution>, <city>Buenos Aires</city>, <country>Argentina</country>, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://hospitalaustral.edu.ar" ext-link-type="uri">hospitalaustral.edu.ar</ext-link>
+</aff><aff id="aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Departamento de Cuidados Intensivos Pediátricos</named-content>, <institution>Hospital Nacional de Oncología Pediátrica</institution>, <city>Ciudad de Guatemala</city>, <country>Guatemala</country>
+</aff><aff id="aff-0004">
+<label>
+<sup>4</sup>
+</label>
+<named-content content-type="organisation-division">Departamento de Medicina Pediátrica Global</named-content>, <institution>St. Jude Children’s Research Hospital</institution>, <city>Memphis</city>, Tennessee, <country>USA</country>, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://stjude.org" ext-link-type="uri">stjude.org</ext-link>
+</aff><aff id="aff-0005">
+<label>
+<sup>5</sup>
+</label>
+<named-content content-type="organisation-division">Departamento de Cuidados Intensivos Pediátricos</named-content>, <institution>Centro Hospitalario Pereira Rossell</institution>, <city>Montevideo</city>, <country>Uruguay</country>
+</aff><aff id="aff-0006">
+<label>
+<sup>6</sup>
+</label>
+<named-content content-type="organisation-division">Departamento de Cuidados Intensivos Pediátricos</named-content>, <named-content content-type="organisation-division">Departamento de Pediatra</named-content>, <institution>Hospital de Niños de la Santísima Trinidad</institution>, <city>Córdoba</city>, <country>Argentina</country>
+</aff><aff id="aff-0007">
+<label>
+<sup>7</sup>
+</label>
+<named-content content-type="organisation-division">Departamento de Cuidados Intensivos Pediátricos</named-content>, <institution>Máster Docencia Universitario Profesor de la Universidad de Cuenca</institution>, <city>Cuenca</city>, <country>Ecuador</country>
+</aff><aff id="aff-0008">
+<label>
+<sup>8</sup>
+</label>
+<named-content content-type="organisation-division">Departamento de Cuidados Intensivos Pediátricos</named-content>, <institution>Instituto Nacional de Pediatría</institution>, <city>México City</city>, <country>Mexico</country>, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pediatria.gob.mx" ext-link-type="uri">pediatria.gob.mx</ext-link>
+</aff><aff id="aff-0009">
+<label>
+<sup>9</sup>
+</label>
+<named-content content-type="organisation-division">Departamento de Cuidados Intensivos Pediátricos</named-content>, <institution>Hospital Humberto Notti</institution>, <city>Mendoza</city>, <country>Argentina</country>
+</aff><pub-date pub-type="epub"><day>06</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><year>2026</year></pub-date><volume>2026</volume><issue-id pub-id-type="pmc-issue-id">504891</issue-id><elocation-id>1818873</elocation-id><history><date date-type="rev-recd"><day>22</day><month>2</month><year>2026</year></date><date date-type="received"><day>02</day><month>11</month><year>2025</year></date><date date-type="accepted"><day>24</day><month>2</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>06</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>07</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-08 09:25:13.790"><day>08</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">Copyright © 2026 Jesús Ángel Domínguez-Rojas et al. Critical Care Research and Practice published by John Wiley &amp; Sons Ltd.</copyright-statement><copyright-year>2026</copyright-year><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="CCRP-2026-1818873.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:CCRP-2026-1818873.pdf"/><abstract><sec id="sec-0001"><title>Background</title><p>Pediatric oncology patients with sepsis are at high risk of morbidity and mortality due to immunosuppression and acute or fulminant multiorgan dysfunction. There have been many clinical scores proposed for risk of mortality prediction (PELOD‐2, pSOFA, and Phoenix), but it remains unknown how well these scores predict risk in pediatric oncology patients with sepsis.</p></sec><sec id="sec-0002"><title>Objective</title><p>To systematically review and meta‐analysis the predictive performance of clinical scores and evaluate the incremental benefit of biomarkers in pediatric oncology patients.</p></sec><sec id="sec-0003"><title>Methods</title><p>A systematic search was conducted in PubMed, Web of Science, Scopus, and Embase through 2025. Eligible studies were those that assessed PELOD‐2, pSOFA, Phoenix, or prognostic scores in pediatric oncology patients with sepsis. Risk of bias assessment was completed using QUADAS‐2. Random‐effects meta‐analysis was used to pool sensitivity, specificity, and area under the curve (AUC) estimates across studies.</p></sec><sec id="sec-0004"><title>Results</title><p>A total of 32 articles were summarized with cohorts of 50–1200 patients per study. PELOD‐2 and pSOFA demonstrated consistent and strong discrimination for mortality (AUC 0.78–0.88) while the Phoenix score demonstrated moderate discriminatory ability (AUC 0.72–0.83) and little validation. Procalcitonin, C‐reactive protein, lactate, and other biomarkers improved predictive accuracy when combined with clinical scores. In summary, the overall risk of bias was rated to be moderate, largely due to predominately retrospective designs.</p></sec><sec id="sec-0005"><title>Conclusions</title><p>PELOD‐2 and pSOFA are the most validated prognostic tools for pediatric oncology patients with sepsis, while the Phoenix score may be useful in selected settings. Integration of biomarkers improves risk stratification. Prospective multicenter studies are needed to refine prognostic models and guide early interventions in this high‐risk population.</p></sec></abstract><kwd-group><title>Keywords</title><kwd id="kwd-0001">oncology</kwd><kwd id="kwd-0002">organ dysfunction scores</kwd><kwd id="kwd-0003">pediatric sepsis</kwd><kwd id="kwd-0004">Phoenix sepsis score</kwd><kwd id="kwd-0005">prognosis</kwd></kwd-group><counts><fig-count count="4"/><table-count count="4"/><ref-count count="32"/><page-count count="10"/><word-count count="4309"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:06.04.2026</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation publication-type="journal" id="ccrp1818873-cit-2001">
+<string-name name-style="western">
+<surname>Domínguez‐Rojas</surname>, <given-names>Jesús Ángel</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Torres</surname>, <given-names>Silvio</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Aceituno</surname>, <given-names>Alejandra Méndez</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Arias</surname>, <given-names>Anita</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Sequeria</surname>, <given-names>Gabriela</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Tatay</surname>, <given-names>Daniel</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Robles</surname>, <given-names>Lupe Mora</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Muñoz</surname>, <given-names>Clotilde Mireya</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Llano</surname>, <given-names>Luis</given-names>
+</string-name>, 
+<article-title>Clinical Scores for Predicting Outcomes in Pediatric Oncology Sepsis: A Systematic Review and Meta‐Analysis</article-title>, 
+<source>Critical Care Research and Practice</source>, <volume>2026</volume>, <elocation-id>1818873</elocation-id>, 10 pages, <year>2026</year>. 
+<pub-id pub-id-type="doi">10.1155/ccrp/1818873</pub-id>
+</mixed-citation>
+</p><fn-group><fn id="note-0001"><p>
+<bold>Academic Editor:</bold> Thomas Spentzas</p></fn></fn-group></notes></front><body><sec id="sec-0006"><title>1. Introduction</title><p>Sepsis remains a leading cause of morbidity and mortality in pediatric oncology and a major determinant of outcomes in immunocompromised children [<xref rid="bib-0001" ref-type="bibr">1</xref>–<xref rid="bib-0003" ref-type="bibr">3</xref>]. The combined effects of immunosuppression and chemotherapy, hematopoietic stem cell transplantation, and prolonged neutropenia greatly increased the risk of severe infection. This also makes early identification, assessment of risk, and timely intervention difficult, which ultimately increases the risk of death.</p><p>Standardized, robust prognostic assessment of organ dysfunction and/or failure is necessary to aid clinical decision‐making and communication in this high‐risk population. The Pediatric Logistic Organ Dysfunction score (PELOD‐2) is very well validated for assessing the severity of multiorgan dysfunction and predicting in‐hospital mortality in a pediatric critical care contexts [<xref rid="bib-0004" ref-type="bibr">4</xref>–<xref rid="bib-0008" ref-type="bibr">8</xref>]. The pediatric sequential organ failure assessment (pSOFA), modified from the adult SOFA score, provides a reliable early bedside assessment of organ dysfunction in recent studies of several cohorts in the pediatric ICU [<xref rid="bib-0008" ref-type="bibr">8</xref>–<xref rid="bib-0010" ref-type="bibr">10</xref>].</p><p>The Phoenix score is a new prognostic assessment that uses clinical and laboratory parameters to classify pediatric patients who are at higher risk for death due to sepsis, but assessment of its predictive capacity has only been examined in limited pediatric cohorts [<xref rid="bib-0011" ref-type="bibr">11</xref>–<xref rid="bib-0013" ref-type="bibr">13</xref>]. Moreover, there has been no direct comparative evidence for the Phoenix score compared to PELOD‐2 and pSOFA in pediatric oncology populations.</p><p>Adjunctive biomarkers such as procalcitonin (PCT), C‐reactive protein (CRP), and lactate may refine prognostic stratification. PCT indicates levels of systemic inflammation and correlates with severity of sepsis, espbnecially in febrile neutropenic patients [<xref rid="bib-0014" ref-type="bibr">14</xref>–<xref rid="bib-0016" ref-type="bibr">16</xref>]. Lactate elevation reflects tissue hypoperfusion and organ dysfunction and is an independent predictor of mortality in pediatric oncology ICU cohorts [<xref rid="bib-0017" ref-type="bibr">17</xref>, <xref rid="bib-0018" ref-type="bibr">18</xref>]. Including biomarkers with clinical scores may allow for earlier identification of high‐risk patients and enable early intervention targeting. Despite the widespread use of organ dysfunction scores in pediatric critical care, their prognostic performance in pediatric oncology patients with sepsis remains uncertain, particularly regarding the emerging Phoenix score and the added value of biomarkers.</p><p>Current evidence is limited by retrospective, single‐center design and heterogeneous populations, resulting in variability in predictive ability and limited generalizability. A systematic evaluation of clinical scores with biomarkers would likely improve risk stratification, resource allocation, and outcomes in this already vulnerable population.</p><p>The current systematic review and meta‐analysis aim to evaluate the prognostic performance of the PELOD‐2, pSOFA, and Phoenix scores and evaluate the incremental value of biomarkers in predicting outcomes in pediatric oncology patients with sepsis.</p><p>Despite the growing use of organ dysfunction scores in pediatric critical care, their prognostic performance in pediatric oncology patients with sepsis remains uncertain, particularly regarding the emerging Phoenix score and the added value of biomarkers.</p></sec><sec id="sec-0007"><title>2. Methods</title><p>This research operation adhered to the PRISMA guideline methodology [<xref rid="bib-0019" ref-type="bibr">19</xref>] for systematic reviews and meta‐analyses and was preregistered with PROSPERO (CRD420251102081).</p><sec id="sec-0008"><title>2.1. Study Design</title><p>This project was conducted as systematic review and meta‐analysis in accordance with the Preferred Reporting Items for Systematic Reviews and Meta‐Analyses (PRISMA) guidelines (Figure <xref rid="fig-0001" ref-type="fig">1</xref>) [<xref rid="bib-0019" ref-type="bibr">19</xref>]. The aim of the review was to identify, critically appraise, and synthesize evidence about the predictive performance of clinical scores and biomarkers among pediatric oncology patients diagnosed with sepsis.</p><fig position="float" fig-type="FIGURE" id="fig-0001" orientation="portrait"><label>FIGURE 1</label><caption><p>PRISMA flow diagram. During the screening process, 1050 records were identified. After removal of duplicates, 920 records were excluded during title and abstract screening because they did not meet inclusion criteria (e.g., adult populations, nononcology cohorts, absence of prognostic scores, or nonoriginal studies). A total of 130 full‐text articles were assessed for eligibility, of which 98 were excluded for reasons such as insufficient outcome data, lack of pediatric oncology subgroup analysis, or absence of relevant prognostic measures. Finally, 32 studies were included in the qualitative and quantitative syntheses.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="CCRP-2026-1818873-g004.jpg"/></fig></sec><sec id="sec-0009"><title>2.2. Search Strategy and Study Period</title><p>A thorough literature search was performed in PubMed, Scopus, Web of Science, and Embase, to August 31, 2025, utilizing the following search strategy to combine controlled vocabulary (MeSH terms) and free text keywords: “Pediatric sepsis” AND “oncology” AND (“PELOD” OR “PELOD‐2” OR “pSOFA” OR “Phoenix score”) AND “mortality”.</p><p>Although the primary search strategy focused on “PELOD,” “PELOD‐2,” “pSOFA,” and “Phoenix score,” additional studies evaluating other prognostic tools or biomarkers were also captured through broader terms related to “pediatric sepsis,” “organ dysfunction scores,” and “mortality prediction.”</p><p>The search strategy was designed to identify studies evaluating clinical prognostic scores in pediatric oncology patients with sepsis. Although the search string specifically included “PELOD,” “PELOD‐2,” “pSOFA,” and “Phoenix score,” additional studies evaluating other prognostic tools or biomarkers were also captured through broader terms such as “pediatric sepsis,” “organ dysfunction scores,” and “mortality prediction.”</p><p>Furthermore, the reference lists of eligible studies and related reviews were manually screened to identify additional relevant studies evaluating prognostic biomarkers or alternative scoring systems not explicitly included in the initial search terms.</p><p>Study collection dates: For the included studies, recruitment periods ranged from 2000 to 2025. Dates were located to capture the temporal component of the body of evidence.</p></sec><sec id="sec-0010"><title>2.3. Inclusion and Exclusion Criteria</title><sec id="sec-0011"><title>2.3.1. Inclusion Criteria</title><p>Inclusion criteria were studies that evaluated PELOD, PELOD‐2, pSOFA, Phoenix, or other prognostic scores in pediatric oncology patients with sepsis, outcomes that included in‐hospital or PICU mortality, organ dysfunction, or length of PICU stay, and study designs that included prospective or retrospective cohort studies and case‐control studies.</p><p>Patient recruitment period reported that each study was between 2000 and 2025.</p></sec><sec id="sec-0012"><title>2.3.2. Exclusion Criteria</title><p>Exclusion criteria were adult populations or studies that did not report pediatric oncology subgroups; reviews, editorials, and conference abstracts without primary data; and studies that had insufficient data (e.g., AUC, sensitivity, and specificity) to evaluate score performance.</p></sec></sec><sec id="sec-0013"><title>2.4. Data Extraction</title><p>The definition of sepsis used in each included study was extracted when reported.</p><p>Two independent reviewers obtained data from studies using a standardized form and extracted the following information:</p><p>Study characteristics (country, setting, design, sample size, dates, and patient recruitment).</p><p>Patient characteristics (age, malignancy type, and severity of illness).</p><p>Scores included PELOD, PELOD‐2, pSOFA, and Phoenix.</p><p>Biomarkers included PCT, CRP, and lactate.</p><p>Outcomes included mortality, organ dysfunction, and PICU length of stay.</p><p>Differences between two reviewers were resolved through discussion or a third reviewer.</p></sec><sec id="sec-0014"><title>2.5. Risk of Bias Assessment</title><p>The QUADAS‐2 tool was utilized to assess risk of bias and applicability concerns for the included diagnostic accuracy studies [<xref rid="bib-0020" ref-type="bibr">20</xref>]. Risk of bias assessment domains were patient selection, index test, reference standard, and flow/timing.</p></sec><sec id="sec-0015"><title>2.6. Data Synthesis and Statistical Analysis</title><p>
+<list list-type="simple"><list-item><label>•</label><p>Primary outcome was predictive capacity of clinical scores for mortality.</p></list-item><list-item><label>•</label><p>Analysis: Random‐effects meta‐analysis was used to obtain pooled sensitivity, specificity, and area under the curve (AUC).</p></list-item><list-item><label>•</label><p>Heterogeneity is evaluated using the <italic toggle="yes">I</italic>
+<sup>2</sup> statistic; <italic toggle="yes">I</italic>
+<sup>2</sup> &gt; 50% was considered to indicate substantial heterogeneity.</p></list-item><list-item><label>•</label><p>Publication bias is evaluated by using funnel plots and Egger’s regression test [<xref rid="bib-0021" ref-type="bibr">21</xref>].</p></list-item></list>
+</p><p>Biomarkers were variably reported across studies and were analyzed as continuous variables, often using absolute values according to predefined clinical thresholds. Some studies dichotomized biomarker levels (e.g., elevated vs. normal) to assess their incremental prognostic value when combined with clinical scores.</p></sec><sec id="sec-0016"><title>2.7. PRISMA Flow Diagram</title><p>The PRISMA flow diagram was used to record the process of selection of studies:<list list-type="simple"><list-item><label>•</label><p>Identification: Overall records identified through database search and manual search.</p></list-item><list-item><label>•</label><p>Screening: Duplicates were removed, and titles and abstracts were screened for relevance.</p></list-item><list-item><label>•</label><p>Eligibility: Full‐text articles are reviewed, and reasons for exclusion are documented (e.g., adult population, insufficient data).</p></list-item><list-item><label>•</label><p>Included: Final group of studies is included in qualitative and quantitative syntheses (meta‐analysis).</p></list-item></list>
+</p><p>A figure of the PRISMA flow diagram will be included (Figure <xref rid="fig-0001" ref-type="fig">1</xref>) indicating number of studies at each selection phase as well as indicating the total period for patient recruitment from 2003 to 2024.</p></sec></sec><sec id="sec-0017"><title>3. Results</title><sec id="sec-0018"><title>3.1. Study Selection and Characteristics</title><p>Thirty‐two studies met the inclusion criteria, comprising 50 to 1200 pediatric oncology patients with sepsis (Table <xref rid="tbl-0001" ref-type="table">1</xref>). Studies were conducted across North and South America, Europe, and Asia [<xref rid="bib-0009" ref-type="bibr">9</xref>, <xref rid="bib-0020" ref-type="bibr">20</xref>]. Recruitment periods ranged from 2003 to 2024 [<xref rid="bib-0012" ref-type="bibr">12</xref>, <xref rid="bib-0027" ref-type="bibr">27</xref>, <xref rid="bib-0029" ref-type="bibr">29</xref>]. The majority were single‐center retrospective cohort studies, with a smaller number of prospective and multicenter cohorts [<xref rid="bib-0019" ref-type="bibr">19</xref>, <xref rid="bib-0027" ref-type="bibr">27</xref>] (Figures <xref rid="fig-0002" ref-type="fig">2</xref>, <xref rid="fig-0003" ref-type="fig">3</xref>, and <xref rid="fig-0004" ref-type="fig">4</xref>).</p><table-wrap position="float" id="tbl-0001" content-type="TABLE" orientation="portrait"><label>TABLE 1</label><caption><p>Prognostic scores in the PICU.</p></caption><table frame="hsides" rules="groups"><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><thead><tr><th align="left" rowspan="1" colspan="1">Study (year)</th><th align="center" rowspan="1" colspan="1">Country/setting</th><th align="center" rowspan="1" colspan="1">Sample size (<italic toggle="yes">n</italic>)</th><th align="center" rowspan="1" colspan="1">Score/biomarker</th><th align="center" rowspan="1" colspan="1">Outcome (s)</th><th align="center" rowspan="1" colspan="1">Key findings</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Weiss et al., 2020 [<xref rid="bib-0001" ref-type="bibr">1</xref>]</td><td align="center" rowspan="1" colspan="1">Multinational</td><td align="center" rowspan="1" colspan="1">1200</td><td align="center" rowspan="1" colspan="1">PELOD‐2, pSOFA</td><td align="center" rowspan="1" colspan="1">Mortality, organ dysfunction</td><td align="center" rowspan="1" colspan="1">Both scores accurately predicted mortality; higher scores linked to worse outcomes</td></tr><tr><td align="left" rowspan="1" colspan="1">Hockenberry, 2004 [<xref rid="bib-0002" ref-type="bibr">2</xref>]</td><td align="center" rowspan="1" colspan="1">USA</td><td align="center" rowspan="1" colspan="1">200</td><td align="center" rowspan="1" colspan="1">Symptom management scores</td><td align="center" rowspan="1" colspan="1">Mortality, symptom burden</td><td align="center" rowspan="1" colspan="1">Early symptom assessment linked to improved outcomes</td></tr><tr><td align="left" rowspan="1" colspan="1">Aljabari et al., 2018 [<xref rid="bib-0003" ref-type="bibr">3</xref>]</td><td align="center" rowspan="1" colspan="1">USA</td><td align="center" rowspan="1" colspan="1">300</td><td align="center" rowspan="1" colspan="1">PELOD‐2</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">PELOD‐2 AUC 0.81 in oncology patients</td></tr><tr><td align="left" rowspan="1" colspan="1">Leteurtre et al., 2013 [<xref rid="bib-0004" ref-type="bibr">4</xref>]</td><td align="center" rowspan="1" colspan="1">France</td><td align="center" rowspan="1" colspan="1">500</td><td align="center" rowspan="1" colspan="1">PELOD‐2</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Updated and validated PELOD‐2 in PICU patients</td></tr><tr><td align="left" rowspan="1" colspan="1">El‐Nawawy et al., 2017 [<xref rid="bib-0005" ref-type="bibr">5</xref>]</td><td align="center" rowspan="1" colspan="1">Egypt</td><td align="center" rowspan="1" colspan="1">200</td><td align="center" rowspan="1" colspan="1">PELOD, PELOD‐2</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">PELOD‐2 outperformed PELOD; AUC 0.84</td></tr><tr><td align="left" rowspan="1" colspan="1">Wulandari et al., 2019 [<xref rid="bib-0006" ref-type="bibr">6</xref>]</td><td align="center" rowspan="1" colspan="1">Indonesia</td><td align="center" rowspan="1" colspan="1">180</td><td align="center" rowspan="1" colspan="1">PELOD‐2, pSOFA</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Both predictive; PELOD‐2 slightly superior</td></tr><tr><td align="left" rowspan="1" colspan="1">Anh Tuan and Lan, 2019 [<xref rid="bib-0007" ref-type="bibr">7</xref>]</td><td align="center" rowspan="1" colspan="1">Vietnam</td><td align="center" rowspan="1" colspan="1">120</td><td align="center" rowspan="1" colspan="1">PELOD‐2</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">AUC 0.80 for predicting multiorgan dysfunction</td></tr><tr><td align="left" rowspan="1" colspan="1">Rubnitz et al., 2023 [<xref rid="bib-0008" ref-type="bibr">8</xref>]</td><td align="center" rowspan="1" colspan="1">USA</td><td align="center" rowspan="1" colspan="1">150</td><td align="center" rowspan="1" colspan="1">PELOD‐2, Phoenix</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">PELOD‐2 superior; Phoenix promising but less validated</td></tr><tr><td align="left" rowspan="1" colspan="1">Wösten‐van Asperen et al., 2025 [<xref rid="bib-0009" ref-type="bibr">9</xref>]</td><td align="center" rowspan="1" colspan="1">Europe</td><td align="center" rowspan="1" colspan="1">180</td><td align="center" rowspan="1" colspan="1">Phoenix</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Phoenix AUC 0.78; multicenter cohort</td></tr><tr><td align="left" rowspan="1" colspan="1">Jalil et al., 2025 [<xref rid="bib-0010" ref-type="bibr">10</xref>]</td><td align="center" rowspan="1" colspan="1">Pakistan</td><td align="center" rowspan="1" colspan="1">120</td><td align="center" rowspan="1" colspan="1">pSOFA</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">pSOFA AUC 0.80; feasible bedside use</td></tr><tr><td align="left" rowspan="1" colspan="1">Sanchez‐Pinto et al., 2024 [<xref rid="bib-0011" ref-type="bibr">11</xref>]</td><td align="center" rowspan="1" colspan="1">USA</td><td align="center" rowspan="1" colspan="1">200</td><td align="center" rowspan="1" colspan="1">Phoenix</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Phoenix criteria development; AUC 0.75</td></tr><tr><td align="left" rowspan="1" colspan="1">Han et al., 2025 [<xref rid="bib-0012" ref-type="bibr">12</xref>]</td><td align="center" rowspan="1" colspan="1">Korea</td><td align="center" rowspan="1" colspan="1">110</td><td align="center" rowspan="1" colspan="1">Phoenix</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">External validation; AUC 0.73</td></tr><tr><td align="left" rowspan="1" colspan="1">Schlapbach et al., 2018 [<xref rid="bib-0022" ref-type="bibr">22</xref>]</td><td align="center" rowspan="1" colspan="1">Australia</td><td align="center" rowspan="1" colspan="1">500</td><td align="center" rowspan="1" colspan="1">PELOD‐2, SOFA, SIRS, qSOFA</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">PELOD‐2 best predictor of in‐hospital mortality</td></tr><tr><td align="left" rowspan="1" colspan="1">Han et al., 2003 [<xref rid="bib-0023" ref-type="bibr">23</xref>]</td><td align="center" rowspan="1" colspan="1">USA</td><td align="center" rowspan="1" colspan="1">400</td><td align="center" rowspan="1" colspan="1">Early reversal score</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Rapid reversal of septic shock improved outcomes</td></tr><tr><td align="left" rowspan="1" colspan="1">Matics, 2017 [<xref rid="bib-0024" ref-type="bibr">24</xref>]</td><td align="center" rowspan="1" colspan="1">USA</td><td align="center" rowspan="1" colspan="1">450</td><td align="center" rowspan="1" colspan="1">pSOFA</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Pediatric adaptation; AUC 0.82, comparable to PELOD‐2</td></tr><tr><td align="left" rowspan="1" colspan="1">Li et al., 2024 [<xref rid="bib-0025" ref-type="bibr">25</xref>]</td><td align="center" rowspan="1" colspan="1">China</td><td align="center" rowspan="1" colspan="1">350</td><td align="center" rowspan="1" colspan="1">PELOD‐2, pSOFA</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Validated in infection cohort</td></tr><tr><td align="left" rowspan="1" colspan="1">Wittmann Dayagi et al., 2024 [<xref rid="bib-0026" ref-type="bibr">26</xref>]</td><td align="center" rowspan="1" colspan="1">Israel</td><td align="center" rowspan="1" colspan="1">200</td><td align="center" rowspan="1" colspan="1">Novel survival risk score</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Proposed new score for pediatric hemato‐oncology ICU patients</td></tr><tr><td align="left" rowspan="1" colspan="1">Jordan et al., 2024 [<xref rid="bib-0027" ref-type="bibr">27</xref>]</td><td align="center" rowspan="1" colspan="1">LMIC multicenter</td><td align="center" rowspan="1" colspan="1">600</td><td align="center" rowspan="1" colspan="1">PELOD‐2, pSOFA, Phoenix</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">PELOD‐2 most consistent; Phoenix emerging</td></tr><tr><td align="left" rowspan="1" colspan="1">Fan et al., 2025 [<xref rid="bib-0028" ref-type="bibr">28</xref>]</td><td align="center" rowspan="1" colspan="1">China</td><td align="center" rowspan="1" colspan="1">160</td><td align="center" rowspan="1" colspan="1">Phoenix</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Phoenix AUC 0.77; single‐center retrospective</td></tr><tr><td align="left" rowspan="1" colspan="1">Rech et al., 2022 [<xref rid="bib-0019" ref-type="bibr">19</xref>]</td><td align="center" rowspan="1" colspan="1">Brazil</td><td align="center" rowspan="1" colspan="1">130</td><td align="center" rowspan="1" colspan="1">PELOD‐2</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Severity scores associated with mortality</td></tr></tbody></table></table-wrap><fig position="float" fig-type="FIGURE" id="fig-0002" orientation="portrait"><label>FIGURE 2</label><caption><p>Predictive performance of the PELOD‐2 score for mortality in pediatric intensive care. The pooled analysis (AUC = 0.83) indicates that PELOD‐2 provides reliable mortality prediction, with consistent performance across diverse pediatric intensive care settings.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="CCRP-2026-1818873-g001.jpg"/></fig><fig position="float" fig-type="FIGURE" id="fig-0003" orientation="portrait"><label>FIGURE 3</label><caption><p>Predictive performance of the pSOFA score for mortality in pediatric intensive care. Across the included studies, pSOFA showed consistent discriminative ability (AUC range 0.80–0.83), with a pooled estimate of 0.82, supporting its role as a reliable prognostic tool.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="CCRP-2026-1818873-g002.jpg"/></fig><fig position="float" fig-type="FIGURE" id="fig-0004" orientation="portrait"><label>FIGURE 4</label><caption><p>Predictive performance of the phoenix score for mortality in pediatric intensive care. The Phoenix score demonstrated moderate discriminative ability across the included studies (AUC range: 0.73–0.80), with a pooled estimate of 0.76, suggesting its potential utility as a prognostic tool, though with lower performance compared to PELOD‐2 and pSOFA.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="CCRP-2026-1818873-g003.jpg"/></fig></sec><sec id="sec-0019"><title>3.2. Performance of Clinical Scores</title><p>
+<list list-type="simple"><list-item><label>•</label><p>PELOD‐2 demonstrated consistent discrimination for mortality across studies, with reported AUC values between 0.78 and 0.88. Higher scores were associated with increased in‐hospital mortality [<xref rid="bib-0004" ref-type="bibr">4</xref>–<xref rid="bib-0008" ref-type="bibr">8</xref>]. PELOD‐2 performance was particularly strong in multicenter cohorts and in patients with hematologic malignancies [<xref rid="bib-0003" ref-type="bibr">3</xref>, <xref rid="bib-0010" ref-type="bibr">10</xref>].</p></list-item><list-item><label>•</label><p>pSOFA showed comparable predictive performance to PELOD‐2, with AUC ranging from 0.77 to 0.85. Its bedside applicability and simplified structure make it feasible for use in resource‐limited settings [<xref rid="bib-0008" ref-type="bibr">8</xref>, <xref rid="bib-0009" ref-type="bibr">9</xref>, <xref rid="bib-0010" ref-type="bibr">10</xref>].</p></list-item><list-item><label>•</label><p>Phoenix score is an emerging tool with AUC 0.72–0.83. Most studies were single center or retrospective, and validation was limited to European and Chinese cohorts [<xref rid="bib-0011" ref-type="bibr">11</xref>–<xref rid="bib-0013" ref-type="bibr">13</xref>, <xref rid="bib-0027" ref-type="bibr">27</xref>]. Despite its novelty, Phoenix performed well in identifying high‐risk patients, though less consistently than PELOD‐2 or pSOFA [<xref rid="bib-0013" ref-type="bibr">13</xref>, <xref rid="bib-0029" ref-type="bibr">29</xref>].</p></list-item></list>
+</p></sec><sec id="sec-0020"><title>3.3. Integration of Biomarkers</title><p>Several studies evaluated biomarkers in combination with clinical scores:<list list-type="simple"><list-item><label>•</label><p>PCT and CRP improved predictive accuracy when combined with PELOD‐2 or pSOFA, particularly in patients with febrile neutropenia [<xref rid="bib-0014" ref-type="bibr">14</xref>–<xref rid="bib-0016" ref-type="bibr">16</xref>].</p></list-item><list-item><label>•</label><p>Lactate is independently associated with mortality, reflecting tissue hypoperfusion and organ dysfunction [<xref rid="bib-0017" ref-type="bibr">17</xref>, <xref rid="bib-0018" ref-type="bibr">18</xref>]. Integration of lactate with clinical scores further refined risk stratification.</p></list-item></list>
+</p></sec><sec id="sec-0021"><title>3.4. Risk of Bias</title><p>Risk of bias was moderate across studies, primarily due to retrospective designs, single‐center settings, heterogeneous inclusion criteria, and variable definitions of sepsis [<xref rid="bib-0020" ref-type="bibr">20</xref>].</p></sec><sec id="sec-0022"><title>3.5. Summary of Key Findings</title><p>Overall, PELOD‐2 and pSOFA demonstrated reliable prognostic performance for mortality in pediatric oncology patients with sepsis. The Phoenix score is promising, particularly for early risk stratification, but requires further validation in multicenter prospective cohorts. Biomarkers, when combined with clinical scores, consistently enhanced predictive accuracy.</p><p>Definitions of sepsis varied according to publication period. Studies published prior to 2016 predominantly applied the International Pediatric Sepsis Consensus Conference (2005) definition based on systemic inflammatory response syndrome (SIRS) criteria, whereas more recent studies incorporated organ dysfunction–based definitions aligned with the Sepsis‐3 conceptual framework. This temporal variability likely contributed to heterogeneity in reported prognostic performance.</p></sec></sec><sec id="sec-0023"><title>4. Discussion</title><p>This systematic review and meta‐analysis offer an extensive overview of the prognostic capabilities of clinical scores to identify critically ill pediatric oncology patients with sepsis. The findings support PELOD‐2 and pSOFA which continued to have the most evidence base, both demonstrating consistently high discrimination for in‐hospital mortality (AUC 0.77–0.88) [<xref rid="bib-0004" ref-type="bibr">4</xref>–<xref rid="bib-0010" ref-type="bibr">10</xref>].</p><p>The robustness of PELOD‐2 and pSOFA across heterogenous pediatric oncology cohorts suggests that these tools remain valid despite the complex physiology associated with malignancy, chemotherapy, stem cell transplantation, and prolonged neutropenia [<xref rid="bib-0008" ref-type="bibr">8</xref>, <xref rid="bib-0030" ref-type="bibr">30</xref>]. PELOD‐2 provides a comprehensive description of multiorgan dysfunction, and pSOFA establishes rapid assessment at the bedside—together they offer complementary approaches to early risk stratification in high‐risk children [<xref rid="bib-0008" ref-type="bibr">8</xref>, <xref rid="bib-0010" ref-type="bibr">10</xref>].</p><sec id="sec-0024"><title>4.1. Phoenix Score and Novel Tools</title><p>The Phoenix score is a new prognostic tool developed to facilitate the early identification of pediatric patients at high risk of sepsis‐related death that combines clinical and laboratory factors [<xref rid="bib-0011" ref-type="bibr">11</xref>–<xref rid="bib-0013" ref-type="bibr">13</xref>, <xref rid="bib-0027" ref-type="bibr">27</xref>]. Although the AUC reported ranges were 0.72–0.83, the majority of studies was retrospective or based on single‐center cohorts that limit the external validity [<xref rid="bib-0013" ref-type="bibr">13</xref>, <xref rid="bib-0029" ref-type="bibr">29</xref>]. Nonetheless, Phoenix has shown promise for early identification of high‐risk pediatric oncology patients, especially in the European and Asian PICU cohorts. Before the tool is widely recommended for implementation in the critical care arena, it needs to be subjected to prospective multicenter validation trials, as well as head‐to‐head comparisons against standardized clinical scores such as PELOD‐2 and pSOFA [<xref rid="bib-0013" ref-type="bibr">13</xref>, <xref rid="bib-0029" ref-type="bibr">29</xref>]. Such studies are essential to determine whether Phoenix offers incremental prognostic value beyond existing tools, particularly in immunocompromised populations with complex baseline organ dysfunction.</p></sec><sec id="sec-0025"><title>4.2. Combining Biomarkers With Clinical Scores</title><p>Biomarkers such as PCT, CRP, and lactate significantly increase the accuracy of predictions when added to clinical scoring systems. PCT is a reflection of a systemic inflammatory response and is associated with the severity of sepsis, especially in febrile neutropenic oncology patients [<xref rid="bib-0014" ref-type="bibr">14</xref>–<xref rid="bib-0016" ref-type="bibr">16</xref>]. Lactate is elevated in states of tissue hypoperfusion and early organ dysfunction and is an independent mortality risk predictor of patients in hospital and pediatric ICU with oncology conditions [<xref rid="bib-0017" ref-type="bibr">17</xref>, <xref rid="bib-0018" ref-type="bibr">18</xref>]. While CRP is less specific, it gives additional information about the inflammatory state and can enhance discrimination when combined with clinical scoring [<xref rid="bib-0015" ref-type="bibr">15</xref>, <xref rid="bib-0016" ref-type="bibr">16</xref>]. The dual assessment with clinical scoring and a biomarker allows for a more accurate risk stratification of children with suspected infection, emphasizing early escalation of care, optimization of antimicrobial therapy, and triage of intensivist care in relationship with other children in an PICU, especially in resource‐limited critical care settings (Table <xref rid="tbl-0002" ref-type="table">2</xref>).</p><table-wrap position="float" id="tbl-0002" content-type="TABLE" orientation="portrait"><label>TABLE 2</label><caption><p>Biomarkers and biochemical predictors.</p></caption><table frame="hsides" rules="groups"><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><thead><tr><th align="left" rowspan="1" colspan="1">Study (year)</th><th align="center" rowspan="1" colspan="1">Country/setting</th><th align="center" rowspan="1" colspan="1">Sample size (<italic toggle="yes">n</italic>)</th><th align="center" rowspan="1" colspan="1">Score/biomarker</th><th align="center" rowspan="1" colspan="1">Outcome (<italic toggle="yes">s</italic>)</th><th align="center" rowspan="1" colspan="1">Key findings</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Ma et al., 2023 [<xref rid="bib-0015" ref-type="bibr">15</xref>]</td><td align="center" rowspan="1" colspan="1">China</td><td align="center" rowspan="1" colspan="1">220</td><td align="center" rowspan="1" colspan="1">Lactate</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Elevated lactate independently predicted mortality</td></tr><tr><td align="left" rowspan="1" colspan="1">Bozgul et al., 2024 [<xref rid="bib-0016" ref-type="bibr">16</xref>]</td><td align="center" rowspan="1" colspan="1">Turkey</td><td align="center" rowspan="1" colspan="1">90</td><td align="center" rowspan="1" colspan="1">Lactate</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Lactate predictive in hematologic malignancy ICU patients</td></tr><tr><td align="left" rowspan="1" colspan="1">Vassallo et al., 2021 [<xref rid="bib-0017" ref-type="bibr">17</xref>]</td><td align="center" rowspan="1" colspan="1">Italy</td><td align="center" rowspan="1" colspan="1">100</td><td align="center" rowspan="1" colspan="1">PELOD‐2 + procalcitonin</td><td align="center" rowspan="1" colspan="1">Infection</td><td align="center" rowspan="1" colspan="1">Combination improved predictive accuracy</td></tr><tr><td align="left" rowspan="1" colspan="1">Ruggiero et al., 2019 [<xref rid="bib-0018" ref-type="bibr">18</xref>]</td><td align="center" rowspan="1" colspan="1">Italy</td><td align="center" rowspan="1" colspan="1">85</td><td align="center" rowspan="1" colspan="1">Procalcitonin, CRP</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Biomarkers predicted sepsis in febrile neutropenia</td></tr><tr><td align="left" rowspan="1" colspan="1">Pierrakos and Vincent, 2010 [<xref rid="bib-0020" ref-type="bibr">20</xref>]</td><td align="center" rowspan="1" colspan="1">Review</td><td align="center" rowspan="1" colspan="1">—</td><td align="center" rowspan="1" colspan="1">Sepsis biomarkers</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Summary of biomarker predictive performance</td></tr><tr><td align="left" rowspan="1" colspan="1">Meisner, 2014 [<xref rid="bib-0021" ref-type="bibr">21</xref>]</td><td align="center" rowspan="1" colspan="1">Germany</td><td align="center" rowspan="1" colspan="1">—</td><td align="center" rowspan="1" colspan="1">Procalcitonin</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Updated prognostic value of procalcitonin</td></tr><tr><td align="left" rowspan="1" colspan="1">Simon et al., 2004 [<xref rid="bib-0029" ref-type="bibr">29</xref>]</td><td align="center" rowspan="1" colspan="1">Canada</td><td align="center" rowspan="1" colspan="1">350</td><td align="center" rowspan="1" colspan="1">Procalcitonin, CRP</td><td align="center" rowspan="1" colspan="1">Bacterial infection</td><td align="center" rowspan="1" colspan="1">Biomarkers useful adjuncts to clinical scores</td></tr></tbody></table></table-wrap></sec><sec id="sec-0026"><title>4.3. Comparison With Previous Literature</title><p>Our results corroborate and mirror previous reviews of pediatric sepsis prognostic models which have systematically established the superiority of multiorgan dysfunction scores over single‐parameter scores to predict mortality [<xref rid="bib-0008" ref-type="bibr">8</xref>, <xref rid="bib-0030" ref-type="bibr">30</xref>]. The PELOD‐2 consistently has higher AUCs than the older or simplified versions [<xref rid="bib-0005" ref-type="bibr">5</xref>, <xref rid="bib-0006" ref-type="bibr">6</xref>]. The pSOFA exhibited comparable predictive ability but has the added benefit of being able to be rapidly completed at the bedside, while also confirming the results of similar validation studies in the PICU [<xref rid="bib-0008" ref-type="bibr">8</xref>, <xref rid="bib-0010" ref-type="bibr">10</xref>]. The Phoenix score, although promising, is not yet validated and must be further validated in heterogeneous pediatric oncology critical care populations (Table <xref rid="tbl-0003" ref-type="table">3</xref>) [<xref rid="bib-0011" ref-type="bibr">11</xref>–<xref rid="bib-0013" ref-type="bibr">13</xref>, <xref rid="bib-0027" ref-type="bibr">27</xref>].</p><table-wrap position="float" id="tbl-0003" content-type="TABLE" orientation="portrait"><label>TABLE 3</label><caption><p>Definitions, consensus, and methodological tools.</p></caption><table frame="hsides" rules="groups"><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><thead><tr><th align="left" rowspan="1" colspan="1">Study (year)</th><th align="center" rowspan="1" colspan="1">Country/setting</th><th align="center" rowspan="1" colspan="1">Sample size (<italic toggle="yes">n</italic>)</th><th align="center" rowspan="1" colspan="1">Score/biomarker</th><th align="center" rowspan="1" colspan="1">Outcome (s)</th><th align="center" rowspan="1" colspan="1">Key findings</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Goldstein et al., 2005 [<xref rid="bib-0030" ref-type="bibr">30</xref>]</td><td align="center" rowspan="1" colspan="1">Multinational</td><td align="center" rowspan="1" colspan="1">—</td><td align="center" rowspan="1" colspan="1">Consensus definitions</td><td align="center" rowspan="1" colspan="1">Mortality, organ dysfunction</td><td align="center" rowspan="1" colspan="1">Standardized pediatric sepsis and MODS definitions</td></tr><tr><td align="left" rowspan="1" colspan="1">Singer et al., 2016 [<xref rid="bib-0031" ref-type="bibr">31</xref>]</td><td align="center" rowspan="1" colspan="1">Multinational</td><td align="center" rowspan="1" colspan="1">—</td><td align="center" rowspan="1" colspan="1">Sepsis‐3 definitions</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Adult‐based; influenced pediatric criteria</td></tr><tr><td align="left" rowspan="1" colspan="1">Miranda and Nadel, 2023 [<xref rid="bib-0032" ref-type="bibr">32</xref>]</td><td align="center" rowspan="1" colspan="1">Review</td><td align="center" rowspan="1" colspan="1">—</td><td align="center" rowspan="1" colspan="1">Pediatric sepsis definitions</td><td align="center" rowspan="1" colspan="1">Mortality</td><td align="center" rowspan="1" colspan="1">Updated summary of definitions and management</td></tr><tr><td align="left" rowspan="1" colspan="1">Whiting et al., 2011 [<xref rid="bib-0013" ref-type="bibr">13</xref>]</td><td align="center" rowspan="1" colspan="1">—</td><td align="center" rowspan="1" colspan="1">—</td><td align="center" rowspan="1" colspan="1">QUADAS‐2</td><td align="center" rowspan="1" colspan="1">Risk of bias</td><td align="center" rowspan="1" colspan="1">Tool to assess diagnostic study quality</td></tr><tr><td align="left" rowspan="1" colspan="1">Egger et al., 1997 [<xref rid="bib-0014" ref-type="bibr">14</xref>]</td><td align="center" rowspan="1" colspan="1">—</td><td align="center" rowspan="1" colspan="1">—</td><td align="center" rowspan="1" colspan="1">Egger’s test</td><td align="center" rowspan="1" colspan="1">Publication bias</td><td align="center" rowspan="1" colspan="1">Detects small‐study bias in meta‐analysis</td></tr></tbody></table></table-wrap></sec><sec id="sec-0027"><title>4.4. Clinical Implications in Pediatric Oncology Critical Care</title><p>Accurate and timely risk stratification becomes extremely important among pediatric oncology patients with sepsis since they classically deteriorate quickly and are more likely to develop multiorgan failure. Early identification of very sick patients allows for the prompt escalation of supportive care, individualized antimicrobials, and safe allocation of critical resources. Using PELOD‐2 or pSOFA as standard scoring tools, in addition to investigating biomarkers, would allow improvements in clinical decision‐making, decrease the risk of PICU mortality, and allow better selection for patients in interventional clinical trials [<xref rid="bib-0014" ref-type="bibr">14</xref>, <xref rid="bib-0015" ref-type="bibr">15</xref>, <xref rid="bib-0019" ref-type="bibr">19</xref>, <xref rid="bib-0031" ref-type="bibr">31</xref>] and support standardized communication among multidisciplinary teams.</p></sec><sec id="sec-0028"><title>4.5. Heterogeneity and Limitations</title><p>This review has several limitations. Substantial. Substantial heterogeneity exists within the included studies related to differing sepsis definitions, inclusion criteria, study designs, and patient populations. The majority of studies were retrospective and single‐site studies, thereby introducing potential selection bias and limiting generalizability beyond the immediate PICU oncology patient population [<xref rid="bib-0018" ref-type="bibr">18</xref>, <xref rid="bib-0020" ref-type="bibr">20</xref>]. The emphasis on short‐term outcomes (e.g., in‐hospital or PICU mortality) does not provide sufficient information on potential medium‐ to long‐term effects on outcomes that include continued organ dysfunction, functional recovery to presepsis levels, and reduced quality of life [<xref rid="bib-0031" ref-type="bibr">31</xref>]. There is also significant variability in definitions and measurements of biomarker cross studies, which increases difficulty in conducting comparisons or understanding the implications of variation in biomarker definitions and measurements [<xref rid="bib-0014" ref-type="bibr">14</xref>–<xref rid="bib-0018" ref-type="bibr">18</xref>].</p><p>An additional limitation relates to heterogeneity in the definitions of sepsis used across studies. Earlier studies relied primarily on SIRS‐based pediatric consensus definitions, while more recent investigations incorporated organ dysfunction–based definitions aligned with Sepsis‐3 concepts. These variations may influence patient selection and reported prognostic performance of clinical scores.</p></sec><sec id="sec-0029"><title>4.6. Future Directions</title><p>There is an urgent need for prospective, multicenter studies, with standardized definitions of sepsis and standardized data collection to validate and compare PELOD‐2, pSOFA, and Phoenix scores in pediatric oncology patients requiring critical care. Adding to these definitions and measurements, real‐time monitoring of clinical variables, serial measurements of biomarkers, and more advanced analytics (e.g., machine learning) may improve risk predictions in real‐time monitoring and assessment of patients and inform personalized treatment strategies [<xref rid="bib-0019" ref-type="bibr">19</xref>, <xref rid="bib-0031" ref-type="bibr">31</xref>]. Finally, composite models integrating clinical scores with biomarkers, and potential genomic or immunologic markers, may further improve risk stratification and support precision‐based approaches to care in this particularly vulnerable population. Standardized frameworks for integrating biomarkers into prognostic models are also needed, as current approaches vary widely across studies.</p><p>According the present analysis, it is much important to state that integration of Scores (PELOD‐2, pSOFA, and Phoenix) with biomarkers such as PCT, CRP, and lactate further enhances predictive accuracy, enabling refined and individualized risk stratification (Table <xref rid="tbl-0004" ref-type="table">4</xref>).</p><table-wrap position="float" id="tbl-0004" content-type="TABLE" orientation="portrait"><label>TABLE 4</label><caption><p>Prognostic performance of clinical scores and biomarkers.</p></caption><table frame="hsides" rules="groups"><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><thead><tr><th align="left" rowspan="1" colspan="1">Score/biomarker</th><th align="center" rowspan="1" colspan="1">Number of studies</th><th align="center" rowspan="1" colspan="1">Sample size (range)</th><th align="center" rowspan="1" colspan="1">AUC range</th><th align="center" rowspan="1" colspan="1">Sensitivity</th><th align="center" rowspan="1" colspan="1">Specificity</th><th align="center" rowspan="1" colspan="1">Key notes</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">PELOD‐2</td><td align="center" rowspan="1" colspan="1">20</td><td align="center" rowspan="1" colspan="1">50–1200</td><td align="center" rowspan="1" colspan="1">0.78–0.88</td><td align="center" rowspan="1" colspan="1">0.75–0.85</td><td align="center" rowspan="1" colspan="1">0.70–0.82</td><td align="center" rowspan="1" colspan="1">Consistently strong predictor of mortality [<xref rid="bib-0004" ref-type="bibr">4</xref>–<xref rid="bib-0007" ref-type="bibr">7</xref>, <xref rid="bib-0024" ref-type="bibr">24</xref>, <xref rid="bib-0025" ref-type="bibr">25</xref>]</td></tr><tr><td align="left" rowspan="1" colspan="1">pSOFA</td><td align="center" rowspan="1" colspan="1">12</td><td align="center" rowspan="1" colspan="1">120–500</td><td align="center" rowspan="1" colspan="1">0.77–0.85</td><td align="center" rowspan="1" colspan="1">0.72–0.83</td><td align="center" rowspan="1" colspan="1">0.68–0.80</td><td align="center" rowspan="1" colspan="1">Comparable to PELOD‐2; feasible at bedside [<xref rid="bib-0010" ref-type="bibr">10</xref>, <xref rid="bib-0024" ref-type="bibr">24</xref>, <xref rid="bib-0025" ref-type="bibr">25</xref>]</td></tr><tr><td align="left" rowspan="1" colspan="1">Phoenix</td><td align="center" rowspan="1" colspan="1">7</td><td align="center" rowspan="1" colspan="1">110–200</td><td align="center" rowspan="1" colspan="1">0.72–0.83</td><td align="center" rowspan="1" colspan="1">0.70–0.78</td><td align="center" rowspan="1" colspan="1">0.65–0.74</td><td align="center" rowspan="1" colspan="1">Emerging prognostic tool; limited multicenter validation [<xref rid="bib-0009" ref-type="bibr">9</xref>, <xref rid="bib-0011" ref-type="bibr">11</xref>, <xref rid="bib-0012" ref-type="bibr">12</xref>, <xref rid="bib-0028" ref-type="bibr">28</xref>]</td></tr><tr><td align="left" rowspan="1" colspan="1">Procalcitonin (PCT)</td><td align="center" rowspan="1" colspan="1">5</td><td align="center" rowspan="1" colspan="1">85–350</td><td align="center" rowspan="1" colspan="1">0.70–0.82</td><td align="center" rowspan="1" colspan="1">0.68–0.80</td><td align="center" rowspan="1" colspan="1">0.65–0.77</td><td align="center" rowspan="1" colspan="1">Enhances predictive accuracy when combined with PELOD‐2/pSOFA [<xref rid="bib-0017" ref-type="bibr">17</xref>, <xref rid="bib-0018" ref-type="bibr">18</xref>, <xref rid="bib-0029" ref-type="bibr">29</xref>]</td></tr><tr><td align="left" rowspan="1" colspan="1">CRP</td><td align="center" rowspan="1" colspan="1">4</td><td align="center" rowspan="1" colspan="1">85–350</td><td align="center" rowspan="1" colspan="1">0.68–0.80</td><td align="center" rowspan="1" colspan="1">0.65–0.78</td><td align="center" rowspan="1" colspan="1">0.63–0.75</td><td align="center" rowspan="1" colspan="1">Complementary biomarker; improves discrimination [<xref rid="bib-0018" ref-type="bibr">18</xref>, <xref rid="bib-0029" ref-type="bibr">29</xref>]</td></tr><tr><td align="left" rowspan="1" colspan="1">Lactate</td><td align="center" rowspan="1" colspan="1">3</td><td align="center" rowspan="1" colspan="1">90–220</td><td align="center" rowspan="1" colspan="1">0.71–0.81</td><td align="center" rowspan="1" colspan="1">0.70–0.79</td><td align="center" rowspan="1" colspan="1">0.66–0.76</td><td align="center" rowspan="1" colspan="1">Independent predictor of mortality [<xref rid="bib-0015" ref-type="bibr">15</xref>, <xref rid="bib-0016" ref-type="bibr">16</xref>]</td></tr></tbody></table><table-wrap-foot><fn id="note-0002"><p>
+<italic toggle="yes">Note:</italic> PELOD‐2 and pSOFA consistently demonstrated the strongest prognostic performance, with pooled AUC values ranging from 0.78 to 0.88 and 0.77 to 0.85, respectively. The Phoenix score showed moderate discriminative ability but remains less validated across multicenter settings. Among biomarkers, PCT and CRP provided a complementary value, particularly when combined with clinical scores, while lactate emerged as an independent predictor of mortality.</p></fn></table-wrap-foot></table-wrap><p>These tools can guide timely interventions, optimize allocation of critical care resources, and improve outcomes in high‐risk immunocompromised children.</p><p>There is currently no standardized approach for integrating biomarkers with clinical scoring systems. Most studies evaluated biomarkers either as continuous variables or using predefined thresholds, highlighting the need for standardized approaches to biomarker integration in prognostic models.</p></sec></sec><sec id="sec-0030"><title>5. Conclusion</title><p>PELOD‐2 and pSOFA are validated and reliable prognostic tools for critically ill pediatric oncology patients with sepsis, demonstrating consistent discrimination for in‐hospital mortality. The Phoenix score shows potential for early risk identification but broader multicenter validation before routine implementation. Integration of biomarkers with clinical scoring systems enhances predictive accuracy and may support more refined, individualized risk stratification, timely intervention, and improved outcomes in high‐risk immunocompromised children.</p></sec><sec id="sec-0032"><title>Funding</title><p>No funding was received for this study.</p></sec><sec id="sec-0033"><title>Disclosure</title><p>This manuscript complies with all instructions to authors.</p><p>The authorship requirements have been met, and the final manuscript was approved by all authors.</p><p>This manuscript has not been published elsewhere and is not under consideration by another journal.</p><p>We use a reporting checklist (PRISMA).</p></sec><sec sec-type="COI-statement" id="sec-0034"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec></body><back><ack id="sec-0031"><title>Acknowledgments</title><p>The authors would like to thank Oncocritical Committee of the Latin American Society of Pediatric Intensive Care.</p></ack><ref-list><ref id="bib-0001"><label>1</label><mixed-citation publication-type="journal" id="cit-0001">
+<string-name name-style="western">
+<surname>Weiss</surname>
+<given-names>S. L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Peters</surname>
+<given-names>M. J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Alhazzani</surname>
+<given-names>W.</given-names>
+</string-name> et al., <article-title>Surviving Sepsis Campaign International Guidelines for the Management of Septic Shock and Sepsis-Associated Organ Dysfunction in Children</article-title>, <source>Pediatric Critical Care Medicine</source>. (<year>2020</year>) <volume>21</volume>, no. 2, <fpage>52</fpage>–<lpage>106</lpage>, <pub-id pub-id-type="doi">10.1097/PCC.0000000000002198</pub-id>.<pub-id pub-id-type="pmid">32032273</pub-id></mixed-citation></ref><ref id="bib-0002"><label>2</label><mixed-citation publication-type="journal" id="cit-0002">
+<string-name name-style="western">
+<surname>Hockenberry</surname>
+<given-names>M.</given-names>
+</string-name>, <article-title>Symptom Management Research in Children With Cancer</article-title>, <source>Journal of Pediatric Oncology Nursing</source>. (<year>2004</year>) <volume>21</volume>, no. 3, <fpage>132</fpage>–<lpage>136</lpage>, <pub-id pub-id-type="doi">10.1177/1043454204264387</pub-id>, 2-s2.0-4043160519.<pub-id pub-id-type="pmid">15296040</pub-id>
+</mixed-citation></ref><ref id="bib-0003"><label>3</label><mixed-citation publication-type="journal" id="cit-0003">
+<string-name name-style="western">
+<surname>Aljabari</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Balch</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Larsen</surname>
+<given-names>G. Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Fluchel</surname>
+<given-names>M.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Workman</surname>
+<given-names>J. K.</given-names>
+</string-name>, <article-title>Severe Sepsis-Associated Morbidity and Mortality Among Critically Ill Children With Cancer</article-title>, <source>Journal of Pediatric Intensive Care</source>. (<year>2018</year>) <volume>21</volume>, no. 03, <fpage>122</fpage>–<lpage>129</lpage>, <pub-id pub-id-type="doi">10.1055/s-0038-1676658</pub-id>.<pub-id pub-id-type="pmcid">PMC6687451</pub-id><pub-id pub-id-type="pmid">31404226</pub-id></mixed-citation></ref><ref id="bib-0004"><label>4</label><mixed-citation publication-type="journal" id="cit-0004">
+<string-name name-style="western">
+<surname>Leteurtre</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Duhamel</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Salleron</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Grandbastien</surname>
+<given-names>B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Lacroix</surname>
+<given-names>J.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Leclerc</surname>
+<given-names>F.</given-names>
+</string-name>, <article-title>PELOD- 2: An Update of the Pediatric Logistic Organ Dysfunction Score</article-title>, <source>Critical Care Medicine</source>. (<year>2013</year>) <volume>41</volume>, no. 7, <fpage>1761</fpage>–<lpage>1773</lpage>, <pub-id pub-id-type="doi">10.1097/CCM.0b013e31828a2bbd</pub-id>, 2-s2.0-84880572125.<pub-id pub-id-type="pmid">23685639</pub-id>
+</mixed-citation></ref><ref id="bib-0005"><label>5</label><mixed-citation publication-type="journal" id="cit-0005">
+<string-name name-style="western">
+<surname>El-Nawawy</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Abdel Mohsen</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Abdel-Malik</surname>
+<given-names>M.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Taman</surname>
+<given-names>S. O.</given-names>
+</string-name>, <article-title>Performance of the Pediatric Logistic Organ Dysfunction (PELOD) and (PELOD-2) Scores in a Pediatric Intensive Care Unit of a Developing Country</article-title>, <source>European Journal of Pediatrics</source>. (<year>2017</year>) <volume>176</volume>, no. 7, <fpage>849</fpage>–<lpage>855</lpage>, <pub-id pub-id-type="doi">10.1007/s00431-017-2916-x</pub-id>, 2-s2.0-85019059196.<pub-id pub-id-type="pmid">28492972</pub-id>
+</mixed-citation></ref><ref id="bib-0006"><label>6</label><mixed-citation publication-type="journal" id="cit-0006">
+<string-name name-style="western">
+<surname>Wulandari</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Pudjiastuti</surname>
+<given-names>P.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Martuti</surname>
+<given-names>S.</given-names>
+</string-name>, <article-title>Severe Sepsis Criteria, PELOD-2, and pSOFA as Predictors of Mortality in Critically Ill Children With Sepsis</article-title>, <source>Paediatrica Indonesiana</source>. (<year>2019</year>) <volume>59</volume>, no. 6, <fpage>318</fpage>–<lpage>324</lpage>, <pub-id pub-id-type="doi">10.14238/pi59.6</pub-id>.</mixed-citation></ref><ref id="bib-0007"><label>7</label><mixed-citation publication-type="journal" id="cit-0007">
+<string-name name-style="western">
+<surname>Anh Tuan</surname>
+<given-names>T.</given-names>
+</string-name> and 
+<string-name name-style="western">
+<surname>Lan</surname>
+<given-names>D. T.</given-names>
+</string-name>, <article-title>PELOD-2 Score Mortality Prediction Ability in Children With Multiple Organ Dysfunction</article-title>, <article-title>Journal of Science: Medical and Pharmaceutical Sciences</article-title>, <volume>37</volume>, no. 3, <fpage>78</fpage>–<lpage>83</lpage>, <pub-id pub-id-type="doi">10.25073/2588-1132/vnumps.4302</pub-id>.</mixed-citation></ref><ref id="bib-0008"><label>8</label><mixed-citation publication-type="journal" id="cit-0008">
+<string-name name-style="western">
+<surname>Rubnitz</surname>
+<given-names>Z.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Sun</surname>
+<given-names>Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Agulnik</surname>
+<given-names>A.</given-names>
+</string-name> et al., <article-title>Prediction of Attributable Mortality in Pediatric Patients With Cancer Admitted to the Intensive Care Unit for Suspected Infection: A Comprehensive Evaluation of Risk Scores</article-title>, <source>Cancer Medicine</source>. (<year>2023</year>) <volume>27</volume>, no. 23, <fpage>21287</fpage>–<lpage>21292</lpage>, <pub-id pub-id-type="doi">10.1002/cam4.6709</pub-id>.<pub-id pub-id-type="pmcid">PMC10726759</pub-id><pub-id pub-id-type="pmid">38011018</pub-id></mixed-citation></ref><ref id="bib-0009"><label>9</label><mixed-citation publication-type="journal" id="cit-0009">
+<string-name name-style="western">
+<surname>Wösten-van</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Roelie</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Dohna-Schwake</surname>
+<given-names>C.</given-names>
+</string-name> et al., <article-title>The Phoenix Sepsis Score in Pediatric Oncology Patients With Sepsis at PICU Admission: Test of Performance in a European Multicenter Cohort, 2018-2020</article-title>, <source>Pediatric Critical Care Medicine</source>. (February <year>2025</year>) <volume>26</volume>, no. 2, <fpage>e177</fpage>–<lpage>e185</lpage>, <pub-id pub-id-type="doi">10.1097/PCC.0000000000003683</pub-id>.<pub-id pub-id-type="pmid">39982155</pub-id>
+<pub-id pub-id-type="pmcid">PMC11792984</pub-id></mixed-citation></ref><ref id="bib-0010"><label>10</label><mixed-citation publication-type="journal" id="cit-0010">
+<string-name name-style="western">
+<surname>Jalil</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Omer</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Khanum</surname>
+<given-names>A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Ajmal</surname>
+<given-names>M. U.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Ali</surname>
+<given-names>H.</given-names>
+</string-name>, <article-title>Pediatric Sequential Organ Failure Assessment (pSOFA) Scoring as a Predictor of Mortality in Critically Unwell Oncology Patients With Sepsis: An Experience From an ICU of a Cancer Center</article-title>, <source>Anaesthesia, Pain and Intensive Care</source>. (<year>2025</year>) <volume>29</volume>, no. 3, <fpage>377</fpage>–<lpage>383</lpage>, <pub-id pub-id-type="doi">10.35975/apic.v29i3.2787</pub-id>.</mixed-citation></ref><ref id="bib-0011"><label>11</label><mixed-citation publication-type="journal" id="cit-0011">
+<string-name name-style="western">
+<surname>Sanchez-Pinto</surname>
+<given-names>L. N.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Bennett</surname>
+<given-names>T. D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>DeWitt</surname>
+<given-names>P. E.</given-names>
+</string-name> et al., <article-title>Development and Validation of the Phoenix Criteria for Pediatric Sepsis and Septic Shock</article-title>, <source>Jama</source>. (<year>2024</year>) <volume>21</volume>, no. 8, <fpage>675</fpage>–<lpage>686</lpage>, <pub-id pub-id-type="doi">10.1001/jama.2024.0196</pub-id>.<pub-id pub-id-type="pmcid">PMC10900964</pub-id><pub-id pub-id-type="pmid">38245897</pub-id></mixed-citation></ref><ref id="bib-0012"><label>12</label><mixed-citation publication-type="journal" id="cit-0012">
+<string-name name-style="western">
+<surname>Han</surname>
+<given-names>C. H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Kim</surname>
+<given-names>H.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Park</surname>
+<given-names>M.</given-names>
+</string-name> et al., <article-title>Validation of the Phoenix Criteria for Sepsis and Septic Shock in a Pediatric Intensive Care Unit</article-title>, <source>Journal of Korean Medical Science</source>. (<year>2025</year>) <volume>17</volume>, no. 10, <pub-id pub-id-type="doi">10.3346/jkms.2025.40.e106</pub-id>.<pub-id pub-id-type="pmcid">PMC11913626</pub-id><pub-id pub-id-type="pmid">40098493</pub-id></mixed-citation></ref><ref id="bib-0013"><label>13</label><mixed-citation publication-type="journal" id="cit-0013">
+<string-name name-style="western">
+<surname>Whiting</surname>
+<given-names>P. F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Rutjes</surname>
+<given-names>A. W.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Westwood</surname>
+<given-names>M. E.</given-names>
+</string-name> et al., <article-title>QUADAS- 2: A Revised Tool for the Quality Assessment of Diagnostic Accuracy Studies</article-title>, <source>Annals of Internal Medicine</source>. (<year>2011</year>) <volume>18</volume>, no. 8, <fpage>529</fpage>–<lpage>536</lpage>, <pub-id pub-id-type="doi">10.7326/0003-4819-155-8-201110180-00009</pub-id>, 2-s2.0-80054740636.<pub-id pub-id-type="pmid">22007046</pub-id></mixed-citation></ref><ref id="bib-0014"><label>14</label><mixed-citation publication-type="journal" id="cit-0014">
+<string-name name-style="western">
+<surname>Egger</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Smith</surname>
+<given-names>G. D.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Schneider</surname>
+<given-names>M.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Minder</surname>
+<given-names>C.</given-names>
+</string-name>, <article-title>Bias in Meta-Analysis Detected by a Simple, Graphical Test</article-title>, <source>BMJ</source>. (<year>1997</year>) <volume>13</volume>, no. 7109, <fpage>629</fpage>–<lpage>634</lpage>, <pub-id pub-id-type="doi">10.1136/bmj.315.7109.629</pub-id>.<pub-id pub-id-type="pmcid">PMC2127453</pub-id><pub-id pub-id-type="pmid">9310563</pub-id></mixed-citation></ref><ref id="bib-0015"><label>15</label><mixed-citation publication-type="journal" id="cit-0015">
+<string-name name-style="western">
+<surname>Ma</surname>
+<given-names>X.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Li</surname>
+<given-names>J.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Zhou</surname>
+<given-names>Q.</given-names>
+</string-name>, <article-title>Serum Lactate and the Mortality of Critically Ill Patients in the Emergency Department: A Retrospective Study</article-title>, <source>Experimental and Therapeutic Medicine</source>. (<year>2023</year>) <volume>26</volume>, no. 2, <pub-id pub-id-type="doi">10.3892/etm.2023.12070</pub-id>.<pub-id pub-id-type="pmcid">PMC10320652</pub-id><pub-id pub-id-type="pmid">37415838</pub-id></mixed-citation></ref><ref id="bib-0016"><label>16</label><mixed-citation publication-type="journal" id="cit-0016">
+<string-name name-style="western">
+<surname>Bozgul</surname>
+<given-names>S. M. K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Akgun Kurtulmus</surname>
+<given-names>I.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gunes</surname>
+<given-names>A.</given-names>
+</string-name> et al., <article-title>Lactate Level Is an Independent Predictor of Mortality in Patients With Hematologic Malignancy Receiving Urgent Chemotherapy in Intensive Care Unit</article-title>, <source>Current Research in Translational Medicine</source>. (<year>2024</year>) <volume>72</volume>, no. 4, <pub-id pub-id-type="doi">10.1016/j.retram.2024.103451</pub-id>.<pub-id pub-id-type="pmid">38677199</pub-id></mixed-citation></ref><ref id="bib-0017"><label>17</label><mixed-citation publication-type="journal" id="cit-0017">
+<string-name name-style="western">
+<surname>Vassallo</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Michelangeli</surname>
+<given-names>C.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Fabre</surname>
+<given-names>R.</given-names>
+</string-name> et al., <article-title>Procalcitonin and C-Reactive Protein/Procalcitonin Ratio as Markers of Infection in Patients With Solid Tumors</article-title>, <source>Frontiers of Medicine</source>. (<year>2021</year>) <volume>8</volume>, <pub-id pub-id-type="doi">10.3389/fmed.2021.627967</pub-id>.<pub-id pub-id-type="pmcid">PMC7994271</pub-id><pub-id pub-id-type="pmid">33777975</pub-id></mixed-citation></ref><ref id="bib-0018"><label>18</label><mixed-citation publication-type="journal" id="cit-0018">
+<string-name name-style="western">
+<surname>Wösten-van Asperen</surname>
+<given-names>R. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>la Roi-Teeuw</surname>
+<given-names>H. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Rombout</surname>
+<given-names>B. E. van A.</given-names>
+</string-name> et al., <article-title>Distinct Clinical Phenotypes in Paediatric Cancer Patients With Sepsis Are Associated With Different Outcomes—An International Multicentre Retrospective Study</article-title>, <source>eClinicalMedicine</source>. (<year>2023</year>) <volume>65</volume>, <pub-id pub-id-type="doi">10.1016/j.eclinm.2023.102252</pub-id>.<pub-id pub-id-type="pmcid">PMC10570699</pub-id><pub-id pub-id-type="pmid">37842550</pub-id></mixed-citation></ref><ref id="bib-0019"><label>19</label><mixed-citation publication-type="journal" id="cit-0019">
+<string-name name-style="western">
+<surname>Rech</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Sousa</surname>
+<given-names>I. T. E.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Tonial</surname>
+<given-names>C. T.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Piva</surname>
+<given-names>J. P.</given-names>
+</string-name>, <article-title>Epidemiology and Outcomes of Septic Shock in Children With Complex Chronic Conditions in a Developing Country PICU.</article-title>, <source>Jornal de Pediatria</source>. (<year>2022</year>) <volume>98</volume>, no. 6, <fpage>614</fpage>–<lpage>620</lpage>, <pub-id pub-id-type="doi">10.1016/j.jped.2022.03.005</pub-id>.<pub-id pub-id-type="pmid">35561755</pub-id>
+<pub-id pub-id-type="pmcid">PMC9617278</pub-id></mixed-citation></ref><ref id="bib-0020"><label>20</label><mixed-citation publication-type="journal" id="cit-0020">
+<string-name name-style="western">
+<surname>Pierrakos</surname>
+<given-names>C.</given-names>
+</string-name> and 
+<string-name name-style="western">
+<surname>Vincent</surname>
+<given-names>J. L.</given-names>
+</string-name>, <article-title>Sepsis Biomarkers: A Review</article-title>, <source>Critical Care</source>. (<year>2010</year>) <volume>14</volume>, no. 1, <pub-id pub-id-type="doi">10.1186/cc8872</pub-id>, 2-s2.0-77956628404.<pub-id pub-id-type="pmcid">PMC2875530</pub-id><pub-id pub-id-type="pmid">20144219</pub-id></mixed-citation></ref><ref id="bib-0021"><label>21</label><mixed-citation publication-type="journal" id="cit-0021">
+<string-name name-style="western">
+<surname>Meisner</surname>
+<given-names>M.</given-names>
+</string-name>, <article-title>Update on Procalcitonin Measurements</article-title>, <source>Annals of Laboratory Medicine</source>. (<year>2014</year>) <volume>34</volume>, no. 4, <fpage>263</fpage>–<lpage>273</lpage>, <pub-id pub-id-type="doi">10.3343/alm.2014.34.4.263</pub-id>, 2-s2.0-84904416980.<pub-id pub-id-type="pmid">24982830</pub-id>
+<pub-id pub-id-type="pmcid">PMC4071182</pub-id></mixed-citation></ref><ref id="bib-0022"><label>22</label><mixed-citation publication-type="journal" id="cit-0022">
+<string-name name-style="western">
+<surname>Schlapbach</surname>
+<given-names>L. J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Straney</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Bellomo</surname>
+<given-names>R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>MacLaren</surname>
+<given-names>G.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Pilcher</surname>
+<given-names>D.</given-names>
+</string-name>, <article-title>Prognostic Accuracy of Age-Adapted SOFA, SIRS, PELOD-2, and qSOFA for in-Hospital Mortality Among Children Wth Suspected Infection Admitted to the Intensive Care Unit</article-title>, <source>Intensive Care Medicine</source>. (<year>2018</year>) <volume>44</volume>, no. 2, <fpage>179</fpage>–<lpage>188</lpage>, <pub-id pub-id-type="doi">10.1007/s00134-017-5021-8</pub-id>, 2-s2.0-85038365418.<pub-id pub-id-type="pmid">29256116</pub-id>
+<pub-id pub-id-type="pmcid">PMC5816088</pub-id></mixed-citation></ref><ref id="bib-0023"><label>23</label><mixed-citation publication-type="journal" id="cit-0023">
+<string-name name-style="western">
+<surname>Han</surname>
+<given-names>Y. Y.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Carcillo</surname>
+<given-names>J. A.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Dragotta</surname>
+<given-names>M. A.</given-names>
+</string-name> et al., <article-title>Early Reversal of Pediatric-Neonatal Septic Shock by Community Physicians Is Associated With Improved Outcome</article-title>, <source>Pediatrics</source>. (<year>2003</year>) <volume>112</volume>, no. 4, <fpage>793</fpage>–<lpage>799</lpage>, <pub-id pub-id-type="doi">10.1542/peds.112.4.793</pub-id>, 2-s2.0-0141924691.<pub-id pub-id-type="pmid">14523168</pub-id>
+</mixed-citation></ref><ref id="bib-0024"><label>24</label><mixed-citation publication-type="journal" id="cit-0024">
+<string-name name-style="western">
+<surname>Matics</surname>
+<given-names>T. J.</given-names>
+</string-name>, <article-title>Sanchez-Pinto LN: Adaptation and Validation of a Pediatric Sequential Organ Failure Assessment Score and Comparison With the PELOD-2 Score</article-title>, <source>Jama Pediatrics</source>. (<year>2017</year>) <volume>2</volume>, <pub-id pub-id-type="doi">10.1001/jamapediatrics.2017.2352</pub-id>, 2-s2.0-85030763021.<pub-id pub-id-type="pmcid">PMC6583375</pub-id><pub-id pub-id-type="pmid">28783810</pub-id></mixed-citation></ref><ref id="bib-0025"><label>25</label><mixed-citation publication-type="journal" id="cit-0025">
+<string-name name-style="western">
+<surname>Li</surname>
+<given-names>S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Tan</surname>
+<given-names>T.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Li</surname>
+<given-names>J.</given-names>
+</string-name> et al., <article-title>Validating the Performance of Organ Dysfunction Scores in Children With Infection: A Cohort Study</article-title>, <source>PLoS One</source>. (<year>2024</year>) <volume>19</volume>, no. 7, <pub-id pub-id-type="doi">10.1371/journal.pone.0306172</pub-id>.<pub-id pub-id-type="pmcid">PMC11259267</pub-id><pub-id pub-id-type="pmid">39028682</pub-id></mixed-citation></ref><ref id="bib-0026"><label>26</label><mixed-citation publication-type="journal" id="cit-0026">
+<string-name name-style="western">
+<surname>Wittmann Dayagi</surname>
+<given-names>T.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Nirel</surname>
+<given-names>R.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Avrahami</surname>
+<given-names>G.</given-names>
+</string-name> et al., <article-title>A Need for a Novel Survival Risk Scoring System for Intensive Care Admissions Due to Sepsis in Pediatric Hematology/Oncology Patients</article-title>, <source>Journal of Intensive Care Medicine</source>. (<year>2024</year>) <volume>39</volume>, no. 5, <fpage>484</fpage>–<lpage>492</lpage>, <pub-id pub-id-type="doi">10.1177/08850666231216362</pub-id>.<pub-id pub-id-type="pmid">37981801</pub-id>
+</mixed-citation></ref><ref id="bib-0027"><label>27</label><mixed-citation publication-type="journal" id="cit-0027">
+<string-name name-style="western">
+<surname>Jordan</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Nguyen</surname>
+<given-names>C. M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Fletcher</surname>
+<given-names>L. M.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Garbern</surname>
+<given-names>S. C.</given-names>
+</string-name>, <article-title>Clinical Prognostic Models in Children With Sepsis in Low- and Middleincome Countries: A Systematic Review and Meta-Analysis</article-title>, <source>Frontiers in Pediatrics</source>. (<year>2024</year>) <volume>12</volume>, <pub-id pub-id-type="doi">10.3389/fped.2024.1463986</pub-id>.<pub-id pub-id-type="pmcid">PMC11524808</pub-id><pub-id pub-id-type="pmid">39483529</pub-id></mixed-citation></ref><ref id="bib-0028"><label>28</label><mixed-citation publication-type="journal" id="cit-0028">
+<string-name name-style="western">
+<surname>Fan</surname>
+<given-names>J.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Shen</surname>
+<given-names>H.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Zhu</surname>
+<given-names>L.</given-names>
+</string-name>, <article-title>The Phoenix Sepsis Score Criteria in Critically Ill Children: Evaluation Using a Retrospective, Single-Center PICU Cohort in China, 2019–2024</article-title>, <source>Pediatric Critical Care Medicine</source>. (<year>2025</year>) <volume>24</volume>, <pub-id pub-id-type="doi">10.1097/PCC.0000000000003833</pub-id>.<pub-id pub-id-type="pmid">40990596</pub-id></mixed-citation></ref><ref id="bib-0029"><label>29</label><mixed-citation publication-type="journal" id="cit-0029">
+<string-name name-style="western">
+<surname>Simon</surname>
+<given-names>L.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Gauvin</surname>
+<given-names>F.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Amre</surname>
+<given-names>D. K.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Saint-Louis</surname>
+<given-names>P.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Lacroix</surname>
+<given-names>J.</given-names>
+</string-name>, <article-title>Serum Procalcitonin and C-Reactive Protein Levels as Markers of Bacterial Infection: A Systematic Review and Meta-Analysis</article-title>, <source>Clinical Infectious Diseases: An Official Publication of the Infectious Diseases Society of America</source>. (July <year>2004</year>) <volume>39</volume>, no. 2, <fpage>206</fpage>–<lpage>217</lpage>, <pub-id pub-id-type="doi">10.1086/421997</pub-id>, 2-s2.0-3242810355.<pub-id pub-id-type="pmid">15307030</pub-id>
+</mixed-citation></ref><ref id="bib-0030"><label>30</label><mixed-citation publication-type="journal" id="cit-0030">
+<string-name name-style="western">
+<surname>Goldstein</surname>
+<given-names>B.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Giroir</surname>
+<given-names>B.</given-names>
+</string-name>, and 
+<string-name name-style="western">
+<surname>Randolph</surname>
+<given-names>A.</given-names>
+</string-name>, <article-title>International Pediatric Sepsis Consensus Conference: Definitions for Sepsis and Organ Dysfunction in Pediatrics</article-title>, <source>Pediatric Critical Care Medicine</source>. (<year>2005</year>) <volume>6</volume>, no. 1, <fpage>2</fpage>–<lpage>8</lpage>, <pub-id pub-id-type="doi">10.1097/01.PCC.0000149131.72248.E6</pub-id>, 2-s2.0-21644438082.<pub-id pub-id-type="pmid">15636651</pub-id>
+</mixed-citation></ref><ref id="bib-0031"><label>31</label><mixed-citation publication-type="journal" id="cit-0031">
+<string-name name-style="western">
+<surname>Singer</surname>
+<given-names>M.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Deutschman</surname>
+<given-names>C. S.</given-names>
+</string-name>, 
+<string-name name-style="western">
+<surname>Seymour</surname>
+<given-names>C. W.</given-names>
+</string-name> et al., <article-title>The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)</article-title>, <source>Jama</source>. (<year>2016</year>) <volume>23</volume>, no. 8, <fpage>801</fpage>–<lpage>810</lpage>, <pub-id pub-id-type="doi">10.1001/jama.2016.0287</pub-id>, 2-s2.0-84959273475.<pub-id pub-id-type="pmcid">PMC4968574</pub-id><pub-id pub-id-type="pmid">26903338</pub-id></mixed-citation></ref><ref id="bib-0032"><label>32</label><mixed-citation publication-type="journal" id="cit-0032">
+<string-name name-style="western">
+<surname>Miranda</surname>
+<given-names>M.</given-names>
+</string-name> and 
+<string-name name-style="western">
+<surname>Nadel</surname>
+<given-names>S.</given-names>
+</string-name>, <article-title>Pediatric Sepsis: A Summary of Current Definitions and Management Recommendations</article-title>, <source>Current Pediatric Research</source>. (<year>2023</year>) <volume>9</volume>, no. 2, <fpage>29</fpage>–<lpage>39</lpage>, <pub-id pub-id-type="doi">10.1007/s40124-023-00286-3</pub-id>.<pub-id pub-id-type="pmcid">PMC10169116</pub-id><pub-id pub-id-type="pmid">37252329</pub-id></mixed-citation></ref></ref-list></back></article>

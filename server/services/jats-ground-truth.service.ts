@@ -22,13 +22,25 @@ function ensureArray<T>(value: T | T[] | undefined | null): T[] {
   return value == null ? [] : [value];
 }
 
+function pickNode(record: Record<string, unknown> | undefined, ...keys: string[]): unknown {
+  if (!record) return undefined;
+  for (const key of keys) {
+    if (key in record) return record[key];
+  }
+  return undefined;
+}
+
 function textFromNode(node: unknown): string {
   if (node == null) return "";
   if (typeof node === "string") return node;
   if (typeof node === "number" || typeof node === "boolean") return String(node);
   if (Array.isArray(node)) return node.map((entry) => textFromNode(entry)).join(" ");
   if (typeof node === "object") {
-    return Object.entries(node as Record<string, unknown>)
+    const record = node as Record<string, unknown>;
+    if ("#text" in record) {
+      return textFromNode(record["#text"]);
+    }
+    return Object.entries(record)
       .filter(([key]) => !key.startsWith("@_"))
       .map(([, value]) => textFromNode(value))
       .join(" ");
@@ -120,16 +132,18 @@ function collectSections(secNodes: unknown, sections: GroundTruthSection[], orde
 }
 
 function extractAuthors(articleMeta: Record<string, unknown>): string[] {
-  const contribGroups = ensureArray(articleMeta.contribGroup);
+  const contribGroups = ensureArray(pickNode(articleMeta, "contrib-group", "contribGroup"));
   const authors: string[] = [];
 
   for (const contribGroup of contribGroups) {
     const contribs = ensureArray((contribGroup as Record<string, unknown>).contrib);
     for (const contrib of contribs) {
       const node = contrib as Record<string, unknown>;
-      if (node["contrib-type"] && String(node["contrib-type"]) !== "author") continue;
-      const surname = normalizeWhitespace(textFromNode(node.name && (node.name as Record<string, unknown>).surname));
-      const givenNames = normalizeWhitespace(textFromNode(node.name && (node.name as Record<string, unknown>).givenNames));
+      const contribType = String(pickNode(node, "contrib-type", "contribType") ?? "");
+      if (contribType && contribType !== "author") continue;
+      const nameNode = pickNode(node, "name") as Record<string, unknown> | undefined;
+      const surname = normalizeWhitespace(textFromNode(pickNode(nameNode, "surname")));
+      const givenNames = normalizeWhitespace(textFromNode(pickNode(nameNode, "given-names", "givenNames")));
       const collab = normalizeWhitespace(textFromNode(node.collab));
       const fullName = collab || [givenNames, surname].filter(Boolean).join(" ").trim();
       if (fullName) authors.push(fullName);
@@ -140,7 +154,7 @@ function extractAuthors(articleMeta: Record<string, unknown>): string[] {
 }
 
 function extractInstitutions(articleMeta: Record<string, unknown>): string[] {
-  const affiliations = ensureArray(articleMeta.aff)
+  const affiliations = ensureArray(pickNode(articleMeta, "aff"))
     .map((aff) => normalizeWhitespace(textFromNode(aff)))
     .filter(Boolean);
   return Array.from(new Set(affiliations));
@@ -149,23 +163,24 @@ function extractInstitutions(articleMeta: Record<string, unknown>): string[] {
 function extractReferences(backNode: Record<string, unknown> | undefined): GroundTruthReference[] {
   if (!backNode) return [];
   const refLists = ensureArray(backNode.refList);
+  const fallbackRefLists = ensureArray(pickNode(backNode, "ref-list", "refList"));
   const refs: GroundTruthReference[] = [];
 
-  for (const refList of refLists) {
+  for (const refList of (refLists.length > 0 ? refLists : fallbackRefLists)) {
     for (const ref of ensureArray((refList as Record<string, unknown>).ref)) {
       const citationNode =
-        (ref as Record<string, unknown>).elementCitation ||
-        (ref as Record<string, unknown>).mixedCitation ||
+        pickNode(ref as Record<string, unknown>, "element-citation", "elementCitation") ||
+        pickNode(ref as Record<string, unknown>, "mixed-citation", "mixedCitation") ||
         (ref as Record<string, unknown>).citation;
       const rawText = normalizeWhitespace(textFromNode(citationNode || ref));
       if (!rawText) continue;
-      const title = normalizeWhitespace(textFromNode((citationNode as Record<string, unknown> | undefined)?.articleTitle));
+      const title = normalizeWhitespace(textFromNode(pickNode(citationNode as Record<string, unknown> | undefined, "article-title", "articleTitle")));
       const yearText = normalizeWhitespace(textFromNode((citationNode as Record<string, unknown> | undefined)?.year));
       const year = /^\d{4}$/.test(yearText) ? Number(yearText) : undefined;
       const doi = normalizeWhitespace(
         textFromNode(
-          ensureArray((citationNode as Record<string, unknown> | undefined)?.pubId).find((pubId) => {
-            return typeof pubId === "object" && (pubId as Record<string, unknown>)["pub-id-type"] === "doi";
+          ensureArray(pickNode(citationNode as Record<string, unknown> | undefined, "pub-id", "pubId")).find((pubId) => {
+            return typeof pubId === "object" && String(pickNode(pubId as Record<string, unknown>, "pub-id-type", "pubIdType")) === "doi";
           }),
         ),
       ) || rawText.match(/\b10\.\d{4,9}\/[-._;()/:A-Za-z0-9]+\b/)?.[0];
@@ -238,41 +253,59 @@ export function extractJatsGroundTruth(xml: string): JatsGroundTruth {
   }
 
   const front = article.front as Record<string, unknown> | undefined;
-  const articleMeta = front?.articleMeta as Record<string, unknown> | undefined;
-  const journalMeta = front?.journalMeta as Record<string, unknown> | undefined;
+  const articleMeta = pickNode(front, "article-meta", "articleMeta") as Record<string, unknown> | undefined;
+  const journalMeta = pickNode(front, "journal-meta", "journalMeta") as Record<string, unknown> | undefined;
   const body = article.body as Record<string, unknown> | undefined;
   const back = article.back as Record<string, unknown> | undefined;
 
   const title = normalizeWhitespace(
-    textFromNode(articleMeta?.titleGroup && (articleMeta.titleGroup as Record<string, unknown>).articleTitle),
+    textFromNode(
+      pickNode(
+        pickNode(articleMeta, "title-group", "titleGroup") as Record<string, unknown> | undefined,
+        "article-title",
+        "articleTitle",
+      ),
+    ),
   );
   const abstractText = normalizeWhitespace(textFromNode(articleMeta?.abstract));
   const pmid = normalizeWhitespace(
     textFromNode(
-      ensureArray(articleMeta?.articleId).find((item) => {
-        return typeof item === "object" && (item as Record<string, unknown>)["pub-id-type"] === "pmid";
+      ensureArray(pickNode(articleMeta, "article-id", "articleId")).find((item) => {
+        return typeof item === "object" && String(pickNode(item as Record<string, unknown>, "pub-id-type", "pubIdType")) === "pmid";
       }),
     ),
   ) || undefined;
   const pmcid = normalizeWhitespace(
     textFromNode(
-      ensureArray(articleMeta?.articleId).find((item) => {
-        return typeof item === "object" && (item as Record<string, unknown>)["pub-id-type"] === "pmcid";
+      ensureArray(pickNode(articleMeta, "article-id", "articleId")).find((item) => {
+        return typeof item === "object" && String(pickNode(item as Record<string, unknown>, "pub-id-type", "pubIdType")) === "pmcid";
       }),
     ),
   ) || undefined;
   const doi = normalizeWhitespace(
     textFromNode(
-      ensureArray(articleMeta?.articleId).find((item) => {
-        return typeof item === "object" && (item as Record<string, unknown>)["pub-id-type"] === "doi";
+      ensureArray(pickNode(articleMeta, "article-id", "articleId")).find((item) => {
+        return typeof item === "object" && String(pickNode(item as Record<string, unknown>, "pub-id-type", "pubIdType")) === "doi";
       }),
     ),
   ) || undefined;
   const journal = normalizeWhitespace(
-    textFromNode(journalMeta?.journalTitleGroup && (journalMeta.journalTitleGroup as Record<string, unknown>).journalTitle),
+    textFromNode(
+      pickNode(
+        pickNode(journalMeta, "journal-title-group", "journalTitleGroup") as Record<string, unknown> | undefined,
+        "journal-title",
+        "journalTitle",
+      ),
+    ),
   ) || undefined;
   const publisherName = normalizeWhitespace(
-    textFromNode(journalMeta?.publisher && (journalMeta.publisher as Record<string, unknown>).publisherName),
+    textFromNode(
+      pickNode(
+        pickNode(journalMeta, "publisher") as Record<string, unknown> | undefined,
+        "publisher-name",
+        "publisherName",
+      ),
+    ),
   ) || undefined;
 
   const sections: GroundTruthSection[] = [];

@@ -20,6 +20,7 @@ import {
   fetchPmcXmlByPmcid,
   fetchPmcidMap,
   fetchPubmedArticles,
+  resolvePmcAwsArticleObjects,
   resolvePmcPdfUrl,
   searchPubmedIds,
 } from "../services/parser-benchmark-source.service";
@@ -28,7 +29,7 @@ import { matchPublisherBucket, normalizePublicationTypes } from "../services/pub
 import { ensureDir, readJsonl, sha256Buffer, slugify, writeJsonl } from "../services/parser-benchmark.utils";
 
 const MAX_RESULTS_PER_STUDY_BUCKET = Number(process.env.BENCHMARK_DISCOVERY_MAX_RESULTS ?? 5000);
-const XML_FETCH_CONCURRENCY = Number(process.env.BENCHMARK_XML_DISCOVERY_CONCURRENCY ?? 3);
+const XML_FETCH_CONCURRENCY = Number(process.env.BENCHMARK_XML_DISCOVERY_CONCURRENCY ?? 1);
 
 function makeArtifactPath(rootDir: string, basename: string, ext: string): string {
   return path.join(rootDir, `${slugify(basename)}.${ext}`);
@@ -45,6 +46,7 @@ async function main() {
     const requiredPerPublisher = Math.ceil(STUDY_BUCKET_TARGETS[studyBucket] * DISCOVERY_OVERSAMPLE_MULTIPLIER);
     const query = buildPubmedDiscoveryQuery(studyBucket, PUBMED_STUDY_QUERY_BY_BUCKET[studyBucket]);
     console.log(`Discovering ${studyBucket} candidates with query: ${query}`);
+    let discoveredForBucket = 0;
 
     let retstart = 0;
     while (retstart < MAX_RESULTS_PER_STUDY_BUCKET) {
@@ -53,12 +55,34 @@ async function main() {
         break;
       }
 
-      const { ids } = await searchPubmedIds(query, retstart, DEFAULT_DISCOVERY_BATCH_SIZE);
-      if (ids.length === 0) break;
+      const { ids, totalCount } = await searchPubmedIds(query, retstart, DEFAULT_DISCOVERY_BATCH_SIZE);
+      if (retstart === 0) {
+        console.log(`PubMed returned ${totalCount} candidate ids for ${studyBucket}.`);
+      }
+      if (ids.length === 0) {
+        console.log(`No more PubMed ids for ${studyBucket} at offset ${retstart}.`);
+        break;
+      }
       retstart += ids.length;
 
       const articles = await fetchPubmedArticles(ids);
-      const pmcidMap = await fetchPmcidMap(articles.map((article) => article.pmid));
+      const pmcidMap = new Map(
+        articles
+          .filter((article) => article.pmcid)
+          .map((article) => [article.pmid, article.pmcid as string]),
+      );
+      const missingPmids = articles
+        .filter((article) => !article.pmcid)
+        .map((article) => article.pmid);
+      if (missingPmids.length > 0) {
+        const fallbackMap = await fetchPmcidMap(missingPmids);
+        for (const [pmid, pmcid] of fallbackMap.entries()) {
+          pmcidMap.set(pmid, pmcid);
+        }
+      }
+      console.log(
+        `${studyBucket}: fetched ${articles.length} PubMed articles, ${articles.filter((article) => article.pmcid).length} had direct PMCID values, ${pmcidMap.size} total had PMCID mappings in this page.`,
+      );
 
       for (let index = 0; index < articles.length; index += XML_FETCH_CONCURRENCY) {
         const slice = articles.slice(index, index + XML_FETCH_CONCURRENCY);
@@ -87,7 +111,7 @@ async function main() {
 
               let pdfUrl: string | undefined;
               try {
-                pdfUrl = await resolvePmcPdfUrl(pmcid);
+                pdfUrl = (await resolvePmcAwsArticleObjects(pmcid))?.pdfUrl ?? await resolvePmcPdfUrl(pmcid);
               } catch (error) {
                 pdfUrl = undefined;
                 console.warn(`PDF URL lookup failed for ${pmcid}: ${(error as Error).message}`);
@@ -131,9 +155,19 @@ async function main() {
               };
 
               manifestByPmid.set(article.pmid, row);
+              discoveredForBucket += 1;
               console.log(`Discovered ${article.pmid} (${publisherMatch.bucket}, ${normalizedStudy.bucket})`);
             } catch (error) {
-              console.warn(`Discovery failed for PMID ${article.pmid}: ${(error as Error).message}`);
+              const message = (error as Error).message;
+              if (
+                message.includes("JATS XML did not contain an article root node") ||
+                message.includes("<eFetchResult>") ||
+                message.includes("PMC OA archive did not contain")
+              ) {
+                console.log(`Skipped PMID ${article.pmid}: no usable JATS XML source.`);
+              } else {
+                console.warn(`Discovery failed for PMID ${article.pmid}: ${message}`);
+              }
             }
           }),
         );
@@ -141,6 +175,8 @@ async function main() {
 
       await writeJsonl(MANIFEST_PATH, Array.from(manifestByPmid.values()));
     }
+
+    console.log(`Finished ${studyBucket}: discovered ${discoveredForBucket} rows this run.`);
   }
 
   await writeJsonl(MANIFEST_PATH, Array.from(manifestByPmid.values()));

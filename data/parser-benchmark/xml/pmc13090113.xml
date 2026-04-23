@@ -1,0 +1,683 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="jgh370406" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">JGH Open</journal-id><journal-id journal-id-type="iso-abbrev">JGH Open</journal-id><journal-id journal-id-type="pmc-domain-id">3550</journal-id><journal-id journal-id-type="pmc-domain">jghopen</journal-id><journal-id journal-id-type="publisher-id">JGH3</journal-id><journal-title-group><journal-title>JGH Open: An Open Access Journal of Gastroenterology and Hepatology</journal-title></journal-title-group><issn pub-type="epub">2397-9070</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13090113</article-id><article-id pub-id-type="pmcid-ver">PMC13090113.1</article-id><article-id pub-id-type="pmcaid">13090113</article-id><article-id pub-id-type="pmcaiid">13090113</article-id><article-id pub-id-type="pmid">42006860</article-id><article-id pub-id-type="doi">10.1002/jgh3.70406</article-id><article-id pub-id-type="publisher-id">JGH370406</article-id><article-id pub-id-type="other">2311851</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Systematic Review</subject></subj-group><subj-group subj-group-type="heading"><subject>Systematic Review</subject></subj-group></article-categories><title-group><article-title>Tegoprazan in Gastroesophageal Reflux Disease and Related Acid‐Mediated Conditions: A Systematic Review and Meta‐Analysis</article-title></title-group><contrib-group><contrib id="jgh370406-cr-0001" contrib-type="author" corresp="yes"><name name-style="western"><surname>Bandyopadhyay</surname><given-names initials="S">Sanjay</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0007-0812-2810</contrib-id><xref rid="jgh370406-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>drsanjaygastro@gmail.com</email></address></contrib><contrib id="jgh370406-cr-0002" contrib-type="author"><name name-style="western"><surname>Goenka</surname><given-names initials="M">Mahesh</given-names></name><xref rid="jgh370406-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jgh370406-cr-0003" contrib-type="author"><name name-style="western"><surname>Routh</surname><given-names initials="D">Debapratim</given-names></name><xref rid="jgh370406-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="jgh370406-cr-0004" contrib-type="author"><name name-style="western"><surname>Ramesh</surname><given-names initials="GN">G. N.</given-names></name><xref rid="jgh370406-aff-0004" ref-type="aff">
+<sup>4</sup>
+</xref></contrib><contrib id="jgh370406-cr-0005" contrib-type="author"><name name-style="western"><surname>Lawate</surname><given-names initials="P">Parimal</given-names></name><xref rid="jgh370406-aff-0005" ref-type="aff">
+<sup>5</sup>
+</xref></contrib></contrib-group><aff id="jgh370406-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<institution>ILS Hospital, Dumdum</institution>
+<city>Kolkata</city>
+<country country="IN">India</country>
+</aff><aff id="jgh370406-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<institution>Institute of Gastrosciences, Apollo Gleneagles Hospitals</institution>
+<city>Kolkata</city>
+<country country="IN">India</country>
+</aff><aff id="jgh370406-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<institution>Charnock Hospital</institution>
+<city>Kolkata</city>
+<country country="IN">India</country>
+</aff><aff id="jgh370406-aff-0004">
+<label>
+<sup>4</sup>
+</label>
+<institution>Aster Medcity</institution>
+<city>Kochi</city>
+<country country="IN">India</country>
+</aff><aff id="jgh370406-aff-0005">
+<label>
+<sup>5</sup>
+</label>
+<institution>Deenanath Mangeshkar Hospital</institution>
+<city>Pune</city>
+<country country="IN">India</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold>
+<break/>
+Sanjay Bandyopadhyay (<email>drsanjaygastro@gmail.com</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>17</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>10</volume><issue seq="200">4</issue><issue-id pub-id-type="pmc-issue-id">510805</issue-id><issue-id pub-id-type="doi">10.1002/jgh3.v10.4</issue-id><elocation-id>e70406</elocation-id><history><date date-type="rev-recd"><day>28</day><month>3</month><year>2026</year></date><date date-type="received"><day>20</day><month>12</month><year>2025</year></date><date date-type="accepted"><day>02</day><month>4</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>17</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>19</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-20 15:25:19.677"><day>20</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">JGH Open</italic> published by Journal of Gastroenterology and Hepatology Foundation and John Wiley &amp; Sons Australia, Ltd.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbyncndlicense">https://creativecommons.org/licenses/by-nc-nd/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc-nd/4.0/">http://creativecommons.org/licenses/by-nc-nd/4.0/</ext-link> License, which permits use and distribution in any medium, provided the original work is properly cited, the use is non‐commercial and no modifications or adaptations are made.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="JGH3-10-e70406.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:JGH3-10-e70406.pdf"/><abstract><title>ABSTRACT</title><p>Gastroesophageal reflux disease (GERD) is a chronic relapsing disorder often inadequately controlled with proton pump inhibitors (PPIs), particularly in patients with nocturnal acid breakthrough (NAB) or non‐erosive reflux disease (NERD). Tegoprazan, a potassium‐competitive acid blocker (PCAB), offers rapid, potent, and CYP2C19‐independent acid suppression. This systematic review and meta‐analysis evaluated randomized controlled trials comparing Tegoprazan with PPIs in adults with GERD and related disorders. Databases searched included PubMed, Cochrane, Wiley, and <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://clinicaltrials.gov" ext-link-type="uri">ClinicalTrials.gov</ext-link> (2015–2026). Eighteen studies met inclusion criteria. In erosive esophagitis, Tegoprazan 50 mg once daily achieved mucosal healing rates of 91.1%–99.1%, non‐inferior to PPIs (93.5%–98.9%; pooled RR = 1.01, 95% CI 0.98–1.05). Pharmacodynamic and clinical studies demonstrated faster acid suppression and improved nocturnal pH control versus PPIs, achieving pH ≥ 4 within 30–60 min and maintaining levels throughout the 12‐h period. In nocturnal symptom analyses, Tegoprazan achieved earlier relief (1.5 vs. 3 days to first heartburn‐free night) and higher proportions of heartburn‐free nights (57.8% vs. 43.1%), with significantly greater complete (<italic toggle="no">p</italic> = 0.038) and partial (<italic toggle="no">p</italic> = 0.034) nighttime symptom resolution than Esomeprazole. In NERD, symptom resolution ranged from 42.5% to 48.9% versus 24.2% with placebo. In open‐label functional dyspepsia cohorts, improvements ranged from 74.6% to 86.7% in open‐label cohorts. Seven trials (<italic toggle="no">n</italic> = 2492) showed higher <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> eradication with Tegoprazan‐based therapy (RR = 1.05, 95% CI 1.01–1.09; <italic toggle="no">p</italic> = 0.006; <italic toggle="no">I</italic>
+<sup>2</sup> = 0%). Adverse events were mild and comparable to PPIs. Tegoprazan provides rapid, sustained acid suppression, effective nocturnal symptom control, and a modest but statistically significant improvement in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> eradication, representing a potential alternative to PPIs for patients with persistent or CYP2C19‐related variable response.</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="jgh370406-kwd-0001">gastroesophageal reflux disease</kwd><kwd id="jgh370406-kwd-0002">heartburn</kwd><kwd id="jgh370406-kwd-0003"><styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content></kwd><kwd id="jgh370406-kwd-0004">nocturnal acid breakthrough</kwd><kwd id="jgh370406-kwd-0005">Tegoprazan</kwd></kwd-group><funding-group><award-group id="funding-0001"><funding-source>
+<institution-wrap><institution>Dr Reddy's Laboratories limited</institution></institution-wrap>
+</funding-source></award-group></funding-group><counts><fig-count count="5"/><table-count count="1"/><page-count count="12"/><word-count count="7600"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC-ND</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:17.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body id="jgh370406-body-0001"><sec id="jgh370406-sec-0001"><label>1</label><title>Introduction</title><p>Gastroesophageal reflux disease (GERD) is a chronic, relapsing gastrointestinal disorder characterized by heartburn, regurgitation, and retrosternal discomfort. GERD affects ~14% of the global population, with regional variations ranging from 7.6% to 30%, primarily influenced by dietary patterns, obesity, lack of physical activity, and urbanization rates [<xref rid="jgh370406-bib-0001" ref-type="bibr">1</xref>, <xref rid="jgh370406-bib-0002" ref-type="bibr">2</xref>, <xref rid="jgh370406-bib-0003" ref-type="bibr">3</xref>]. In India, GERD remains a significant health concern with an estimated 181.6 million cases reported in 2019 [<xref rid="jgh370406-bib-0004" ref-type="bibr">4</xref>].</p><p>The Indian position paper on GERD (2019) recommends the use of antacids or histamine‐2 receptor antagonists (H<sub>2</sub>RAs) for mild or sporadic symptoms, and proton pump inhibitors (PPIs) for frequent or severe disease [<xref rid="jgh370406-bib-0005" ref-type="bibr">5</xref>], However, despite standard‐dose PPI therapy, up to 30%–40% of patients continue to experience troublesome symptoms with persistent discomfort and low treatment satisfaction [<xref rid="jgh370406-bib-0006" ref-type="bibr">6</xref>, <xref rid="jgh370406-bib-0007" ref-type="bibr">7</xref>]. PPIs have several pharmacological limitations, such as instability in the acidic milieu of the stomach, necessitating enteric coating and delayed onset of action. Other well‐documented challenges include inadequate nocturnal acid control leading to the nocturnal acid breakthrough (NAB) phenomenon, variable <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> eradication rates and marked interindividual variability of efficacy in metabolism via CYP2C19 [<xref rid="jgh370406-bib-0008" ref-type="bibr">8</xref>, <xref rid="jgh370406-bib-0009" ref-type="bibr">9</xref>]. These therapeutic gaps have prompted the development of newer acid‐suppressive drugs. Potassium‐competitive acid blockers (PCABs) directly inhibit H<sup>+</sup>/K<sup>+</sup>‐ATPase enzyme activity, producing immediate and reversible suppression of acid secretion [<xref rid="jgh370406-bib-0010" ref-type="bibr">10</xref>, <xref rid="jgh370406-bib-0011" ref-type="bibr">11</xref>]. Unlike PPIs, PCABs such as Tegoprazan are primarily metabolized by CYP3A4 rather than CYP2C19, thereby reducing the dependence on CYP2C19‐mediated clearance [<xref rid="jgh370406-bib-0012" ref-type="bibr">12</xref>, <xref rid="jgh370406-bib-0013" ref-type="bibr">13</xref>]. Since CYP3A4 is abundantly expressed and loss‐of‐function variants are rare, PCABs demonstrate relatively stable metabolic profiles across individuals. Their clearance also involves multiple parallel pathways, including Phase I oxidation and Phase II conjugation, limiting interindividual pharmacokinetic variability. In contrast, PPIs rely predominantly on CYP2C19, making systemic exposure more susceptible to genotype‐related differences. Individuals with reduced or absent CYP2C19 activity, common in many Asian populations, demonstrate variable PPI efficacy and clinical response. PCABs are acid‐stable, do not require enteric coating or strict pre‐meal dosing, and exhibit pharmacokinetics that are less influenced by CYP2C19 status. Notably, CYP2C19 polymorphisms are highly prevalent in Indians, with CYP2C19*2 allele frequencies reported at ~30% in North Indians, 27.5% in South Indians, and up to 46% in recent multicentric data [<xref rid="jgh370406-bib-0014" ref-type="bibr">14</xref>, <xref rid="jgh370406-bib-0015" ref-type="bibr">15</xref>, <xref rid="jgh370406-bib-0016" ref-type="bibr">16</xref>, <xref rid="jgh370406-bib-0017" ref-type="bibr">17</xref>]. However, genotype‐stratified comparative clinical outcome data between PPIs and PCABs remain limited.</p><p>Tegoprazan [<xref rid="jgh370406-bib-0018" ref-type="bibr">18</xref>], a second‐generation potassium‐competitive acid blocker, was first approved in South Korea in 2019 and has subsequently received regulatory approval in several countries across Asia and Latin America, including China and select Southeast Asian markets [<xref rid="jgh370406-bib-0019" ref-type="bibr">19</xref>, <xref rid="jgh370406-bib-0020" ref-type="bibr">20</xref>, <xref rid="jgh370406-bib-0021" ref-type="bibr">21</xref>]. Tegoprazan is indicated for erosive GERD, non‐erosive reflux disease (NERD), gastric ulcer, <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> eradication and the maintenance of healed GERD. Its safety and efficacy have also been evaluated in the Indian population, supporting broader applicability across diverse demographics [<xref rid="jgh370406-bib-0019" ref-type="bibr">19</xref>, <xref rid="jgh370406-bib-0020" ref-type="bibr">20</xref>, <xref rid="jgh370406-bib-0021" ref-type="bibr">21</xref>]. Tegoprazan has demonstrated a rapid onset of action (within 30–60 min of dosing), sustained intragastric pH ≥ 4 for extended durations, and consistent efficacy across CYP2C19 phenotypes [<xref rid="jgh370406-bib-0019" ref-type="bibr">19</xref>, <xref rid="jgh370406-bib-0020" ref-type="bibr">20</xref>, <xref rid="jgh370406-bib-0021" ref-type="bibr">21</xref>]. The pharmacological stability of Tegoprazan allows once‐daily dosing without regard to meals, enhancing adherence and minimizing drug–drug interactions [<xref rid="jgh370406-bib-0019" ref-type="bibr">19</xref>, <xref rid="jgh370406-bib-0020" ref-type="bibr">20</xref>, <xref rid="jgh370406-bib-0021" ref-type="bibr">21</xref>]. In developing countries, eradication of <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> is an essential component in managing gastroduodenal ulcers, chronic gastritis, and GERD [<xref rid="jgh370406-bib-0021" ref-type="bibr">21</xref>]. Tegoprazan's potent and sustained acid inhibition provides a theoretical advantage in improving <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> eradication outcomes [<xref rid="jgh370406-bib-0021" ref-type="bibr">21</xref>]. Previous meta‐analyses have reported non‐inferior mucosal healing rates of PCABs compared with PPIs in erosive esophagitis and improved symptom control in NERD. A consolidated assessment of Tegoprazan's clinical value relative to other PCABs can be achieved through early‐stage meta‐analytic synthesis. Although the evidence of Tegoprazan's efficacy in nocturnal acid breakthrough (NAB) and <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> eradication are limited, periodical meta analyses of studies conducted and published thus far may help evaluate the utility of a relatively newer PCAB with unique pharmacological characteristics. While individual randomized trials have reported outcomes in specific indications, an integrated synthesis incorporating recent 2024–2026 randomized data across therapeutic and mechanistic domains has not been performed. This analysis aims to provide a unified and up‐to‐date evaluation of Tegoprazan's clinical role across acid‐mediated gastrointestinal disorders. Given that Tegoprazan's mechanism targets gastric acid suppression, its clinical utility was assessed in four hierarchically related domains: (1) Mucosal healing in erosive esophagitis (EE), (2) Symptom control in non‐erosive and upper GI acid‐related disorders (NERD, FD, LPRD), (3) Nocturnal acid breakthrough (NAB) control and symptom relief, and (4) optimization of acid suppression in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> eradication regimens. By structuring the analysis along this pathophysiologic continuum, we aim to provide a coherent evaluation of Tegoprazan's role in acid‐dependent disease management.</p></sec><sec sec-type="methods" id="jgh370406-sec-0002"><label>2</label><title>Methods</title><sec id="jgh370406-sec-0003"><label>2.1</label><title>Study Design</title><p>This systematic review and meta‐analysis was conducted in accordance with the Preferred Reporting Items for Systematic Reviews and Meta‐Analyses (PRISMA 2020) guidelines to ensure transparency and methodological rigor (Figure <xref rid="jgh370406-fig-0001" ref-type="fig">1</xref>, Table <xref rid="jgh370406-supitem-0001" ref-type="supplementary-material">S1</xref>).</p><fig position="float" fig-type="FIGURE" id="jgh370406-fig-0001" orientation="portrait"><label>FIGURE 1</label><caption><p>PRISMA Flow Diagram Outline.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="JGH3-10-e70406-g004.jpg"/></fig></sec><sec id="jgh370406-sec-0004"><label>2.2</label><title>Search Strategy</title><p>A comprehensive electronic search for literature was performed in PubMed, Cochrane Library, Wiley Online Library, and <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://clinicaltrials.gov" ext-link-type="uri">ClinicalTrials.gov</ext-link>. The search covered publications in English from January 2015 to January 2026. The following search terms and Boolean combinations were used (“Tegoprazan” OR “K‐CAB”) AND (“proton pump inhibitor” OR “PPI” OR “Omeprazole” OR “Lansoprazole” OR “Rabeprazole” OR “Esomeprazole” OR “Dexlansoprazole”) AND (“GERD” OR “erosive esophagitis” OR “non‐erosive reflux disease” OR “NERD” OR “functional dyspepsia” OR “laryngopharyngeal reflux” OR “<styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content>”). Reference lists of eligible studies and relevant reviews were manually screened to identify additional articles. A detailed search strategy is provided in the Table <xref rid="jgh370406-supitem-0001" ref-type="supplementary-material">S2</xref>.</p></sec><sec id="jgh370406-sec-0005"><label>2.3</label><title>Inclusion Criteria</title><p>Studies were included if they enrolled adults (≥ 18 years) diagnosed with gastroesophageal reflux disease (GERD), including erosive reflux disease (ERD) and non‐erosive reflux disease (NERD) or other upper gastrointestinal acid‐related disorders. Pharmacodynamic crossover studies in healthy volunteers were included for mechanistic evaluation of nocturnal acid suppression but were not pooled in therapeutic outcome meta‐analyses. Eligible interventions included Tegoprazan, compared directly to any proton pump inhibitor (PPI), such as Omeprazole, Lansoprazole, Dexlansoprazole, Pantoprazole, and Rabeprazole. Included studies were required to report on at least one of the following endpoints: mucosal healing or maintenance (endoscopic healing rate, EE healing rate), symptom relief or response rate (heartburn, regurgitation, dyspepsia), nocturnal acid breakthrough (NAB) parameters, <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> eradication rate, adverse events (AEs), or discontinuation due to AEs.</p></sec><sec id="jgh370406-sec-0006"><label>2.4</label><title>Exclusion Criteria</title><p>Studies were excluded if they involved pediatric populations or were based on animal or in vitro models. Non‐comparative studies and abstracts without accessible full texts were also excluded.</p></sec><sec id="jgh370406-sec-0007"><label>2.5</label><title>Interventions and Comparators</title><p>For the purposes of this systematic review and meta‐analysis, the intervention of interest was Tegoprazan administered at any therapeutic dose. Across the included clinical trials, Tegoprazan was primarily evaluated at 50 mg once daily for the treatment of GERD and erosive esophagitis, while some pharmacodynamic studies assessed higher doses such as 100 mg and 200 mg. For <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> eradication studies, Tegoprazan 50 mg once daily was used as part of triple or quadruple antibiotic regimens. Comparator interventions included any proton pump inhibitor (PPI) used at standard approved doses for GERD (e.g., Esomeprazole 40 mg, Lansoprazole 30 mg, Dexlansoprazole 60 mg, Rabeprazole 20 mg, Omeprazole 20–40 mg). Studies using different PPI doses were included as long as the comparator arm represented an approved therapeutic regimen. Both monotherapy trials and eradication‐regimen trials were eligible.</p></sec><sec id="jgh370406-sec-0008"><label>2.6</label><title>Outcomes</title><p>Primary outcome measures were endoscopic mucosal healing at 4–8 weeks (EE), symptom response/resolution in NERD/FD/LPRD, <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> eradication (ITT and PP). Secondary outcomes were nocturnal acid breakthrough (duration, percentage time pH ≥ 4), adverse events (overall, TEAEs, serious AEs), and treatment discontinuation due to AEs.</p></sec><sec id="jgh370406-sec-0009"><label>2.7</label><title>Data Extraction and Quality Assessment</title><p>Data were independently extracted by two reviewers and included study characteristics, sample size, patient population, interventions, outcome definitions, and results. Risk of bias was assessed using the Cochrane Risk of Bias tool (RoB 2.0). Discrepancies were resolved through discussion or consultation with a third reviewer until consensus was reached. Dosing regimens and treatment durations varied across included trials, and these differences were documented during data extraction.</p></sec><sec id="jgh370406-sec-0010"><label>2.8</label><title>Statistical Analysis</title><p>Pooled quantitative analyses were conducted using Review Manager (RevMan) version 5.4.1 (Cochrane Collaboration, 2020). For dichotomous outcomes, pooled risk ratios (RRs) with 95% confidence intervals (CIs) were calculated, while for continuous outcomes, mean differences (MDs) or standardized mean differences (SMDs) were used as appropriate. Forest plots were generated to visualize pooled estimates for the key outcomes of mucosal healing, symptom relief, nocturnal acid breakthrough (NAB) control, and adverse events. Sensitivity analyses were pre‐specified; however, they were not performed due to the limited number of studies contributing to each outcome, which could compromise estimate stability. Excluding individual trials could have substantially reduced statistical precision and compromised the interpretability of the pooled estimates. Therefore, all studies meeting the predefined inclusion criteria were retained to ensure completeness and transparency of reporting. This approach is consistent with recommended practice when evidence bases are small.</p><p>Heterogeneity across studies was quantified using the <italic toggle="yes">I</italic>
+<sup>2</sup> statistic, with thresholds of &lt; 50% indicating low heterogeneity (analyzed using a fixed‐effects model) and ≥ 50% indicating moderate to high heterogeneity (analyzed using a random‐effects model based on the DerSimonian–Laird method). In instances of considerable heterogeneity or limited data, where quantitative pooling was not feasible, findings from individual studies were narratively synthesized to provide a comprehensive summary of results. Where multiple Tegoprazan doses were reported, the 50 mg standard dose was selected for primary pooling to ensure consistency across studies. Because fewer than 10 studies were available per outcome, formal publication bias assessments (e.g., funnel plots or Egger's test) were not performed. Sensitivity analyses were planned by sequential omission of studies (“leave‐one‐out” approach) where applicable. For eradication outcomes, pooled analyses used the intention‐to‐treat denominators reported in each trial; therefore, denominators in meta‐analyses may differ from total randomized sample sizes shown in Table <xref rid="jgh370406-tbl-0001" ref-type="table">1</xref>. For trials with multiple Tegoprazan dosing arms, a single clinically standard dose arm (50 mg once daily where applicable) was selected for pooling to maintain independence of comparisons and prevent double‐counting of control participants. The protocol was registered with PROSPERO (Registration ID: 1233115).</p><table-wrap position="float" id="jgh370406-tbl-0001" content-type="TABLE" orientation="portrait"><label>TABLE 1</label><caption><p>Summary of study characteristics of included randomized and non‐randomized clinical trials evaluating Tegoprazan.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Study</th><th align="center" valign="bottom" rowspan="1" colspan="1">Country</th><th align="center" valign="bottom" rowspan="1" colspan="1">Study design</th><th align="center" valign="bottom" rowspan="1" colspan="1">Sample size</th><th align="center" valign="bottom" rowspan="1" colspan="1">Intervention and comparator</th><th align="center" valign="bottom" rowspan="1" colspan="1">Population</th><th align="center" valign="bottom" rowspan="1" colspan="1">Primary outcome</th><th align="center" valign="bottom" rowspan="1" colspan="1">Follow‐up</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Agarwal et al., 2025 [<xref rid="jgh370406-bib-0022" ref-type="bibr">22</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">India/Russia/SA</td><td align="center" valign="top" rowspan="1" colspan="1">Phase III, multicentre, double‐blind RCT</td><td align="center" valign="top" rowspan="1" colspan="1">255</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan 50 mg vs. Esomeprazole 40 mg</td><td align="center" valign="top" rowspan="1" colspan="1">Erosive esophagitis (EE)</td><td align="center" valign="top" rowspan="1" colspan="1">Endoscopic healing</td><td align="center" valign="top" rowspan="1" colspan="1">8 weeks</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Cho YJ et al., 2022 [<xref rid="jgh370406-bib-0023" ref-type="bibr">23</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Korea</td><td align="center" valign="top" rowspan="1" colspan="1">Multicenter randomized controlled trial</td><td align="center" valign="top" rowspan="1" colspan="1">350</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan‐based triple vs. PPI‐based triple</td><td align="center" valign="top" rowspan="1" colspan="1">
+<styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> infection</td><td align="center" valign="top" rowspan="1" colspan="1">Eradication rate (ITT)</td><td align="center" valign="top" rowspan="1" colspan="1">Post‐treatment UBT</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Cho et al., 2023 [<xref rid="jgh370406-bib-0024" ref-type="bibr">24</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Korea</td><td align="center" valign="top" rowspan="1" colspan="1">Randomized, double‐blind, active‐controlled</td><td align="center" valign="top" rowspan="1" colspan="1">199</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan 50 mg vs. Lansoprazole</td><td align="center" valign="top" rowspan="1" colspan="1">Healed mild EE (maintenance)</td><td align="center" valign="top" rowspan="1" colspan="1">Maintenance of healing</td><td align="center" valign="top" rowspan="1" colspan="1">24 weeks</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Han et al., 2023 [<xref rid="jgh370406-bib-0025" ref-type="bibr">25</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Korea</td><td align="center" valign="top" rowspan="1" colspan="1">Randomized crossover pharmacodynamic study</td><td align="center" valign="top" rowspan="1" colspan="1">24</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan 50–200 mg vs. Dexlansoprazole</td><td align="center" valign="top" rowspan="1" colspan="1">Healthy volunteers</td><td align="center" valign="top" rowspan="1" colspan="1">% time pH &gt; 4</td><td align="center" valign="top" rowspan="1" colspan="1">24 h</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Huh et al., 2024 [<xref rid="jgh370406-bib-0026" ref-type="bibr">26</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Korea</td><td align="center" valign="top" rowspan="1" colspan="1">Prospective multicenter single‐arm study</td><td align="center" valign="top" rowspan="1" colspan="1">~100</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan 50 mg</td><td align="center" valign="top" rowspan="1" colspan="1">Functional dyspepsia (FD)</td><td align="center" valign="top" rowspan="1" colspan="1">Symptom relief</td><td align="center" valign="top" rowspan="1" colspan="1">8 weeks</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Jeon et al., 2023 [<xref rid="jgh370406-bib-0027" ref-type="bibr">27</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Korea</td><td align="center" valign="top" rowspan="1" colspan="1">Double‐blind RCT</td><td align="center" valign="top" rowspan="1" colspan="1">35</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan 50 mg vs. Placebo</td><td align="center" valign="top" rowspan="1" colspan="1">Laryngopharyn‐geal reflux disease (LPRD)</td><td align="center" valign="top" rowspan="1" colspan="1">RSI/RFS improvement</td><td align="center" valign="top" rowspan="1" colspan="1">8 weeks</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Kim JS et al., 2023 [<xref rid="jgh370406-bib-0028" ref-type="bibr">28</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Korea</td><td align="center" valign="top" rowspan="1" colspan="1">Randomized, double‐blind, active‐controlled RCT</td><td align="center" valign="top" rowspan="1" colspan="1">217</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan‐based BQT vs. PPI‐based BQT</td><td align="center" valign="top" rowspan="1" colspan="1">
+<styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> infection</td><td align="center" valign="top" rowspan="1" colspan="1">Eradication rate (ITT/PP)</td><td align="center" valign="top" rowspan="1" colspan="1">6–8 weeks</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Kim JS et al., 2023 [<xref rid="jgh370406-bib-0029" ref-type="bibr">29</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Korea</td><td align="center" valign="top" rowspan="1" colspan="1">Multicenter double‐blind RCT</td><td align="center" valign="top" rowspan="1" colspan="1">351</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan 50 mg vs. Esomeprazole 40 mg</td><td align="center" valign="top" rowspan="1" colspan="1">GERD with nighttime heartburn</td><td align="center" valign="top" rowspan="1" colspan="1">Night time symptom relief</td><td align="center" valign="top" rowspan="1" colspan="1">4 weeks</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Kim SH et al., 2021 [<xref rid="jgh370406-bib-0030" ref-type="bibr">30</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Korea</td><td align="center" valign="top" rowspan="1" colspan="1">Phase III double‐blind placebo‐con‐trolled RCT</td><td align="center" valign="top" rowspan="1" colspan="1">324</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan 50/100 mg vs. Placebo</td><td align="center" valign="top" rowspan="1" colspan="1">NERD</td><td align="center" valign="top" rowspan="1" colspan="1">Complete symptom resolution</td><td align="center" valign="top" rowspan="1" colspan="1">4 weeks</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Kong Q et al., 2024 [<xref rid="jgh370406-bib-0031" ref-type="bibr">31</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">China</td><td align="center" valign="top" rowspan="1" colspan="1">Multicenter open‐label RCT</td><td align="center" valign="top" rowspan="1" colspan="1">368</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan–AMX dual vs. Esomeprazole–AMX dual</td><td align="center" valign="top" rowspan="1" colspan="1">
+<styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> infection</td><td align="center" valign="top" rowspan="1" colspan="1">Eradication rate</td><td align="center" valign="top" rowspan="1" colspan="1">6–8 weeks</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lee JW et al., 2024 [<xref rid="jgh370406-bib-0032" ref-type="bibr">32</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Korea</td><td align="center" valign="top" rowspan="1" colspan="1">Prospective randomized study</td><td align="center" valign="top" rowspan="1" colspan="1">406</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan sequential vs. Esomeprazole sequential</td><td align="center" valign="top" rowspan="1" colspan="1">
+<styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> infection</td><td align="center" valign="top" rowspan="1" colspan="1">Eradication rate</td><td align="center" valign="top" rowspan="1" colspan="1">Post‐treatment test</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lee et al., 2019 [<xref rid="jgh370406-bib-0033" ref-type="bibr">33</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Korea</td><td align="center" valign="top" rowspan="1" colspan="1">Phase III multicenter double‐blind RCT</td><td align="center" valign="top" rowspan="1" colspan="1">302</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan 50/100 mg vs. Esomeprazole 40 mg</td><td align="center" valign="top" rowspan="1" colspan="1">EE</td><td align="center" valign="top" rowspan="1" colspan="1">Cumulative healing</td><td align="center" valign="top" rowspan="1" colspan="1">8 weeks</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lin X et al., 2024 [<xref rid="jgh370406-bib-0034" ref-type="bibr">34</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">China</td><td align="center" valign="top" rowspan="1" colspan="1">Multicenter randomized controlled trial</td><td align="center" valign="top" rowspan="1" colspan="1">321</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan‐based dual vs. BQT</td><td align="center" valign="top" rowspan="1" colspan="1">
+<styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> infection</td><td align="center" valign="top" rowspan="1" colspan="1">ITT eradication rate</td><td align="center" valign="top" rowspan="1" colspan="1">6 weeks</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Park JY et al., 2026 [<xref rid="jgh370406-bib-0035" ref-type="bibr">35</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Korea</td><td align="center" valign="top" rowspan="1" colspan="1">Phase III multicenter randomized double‐blind active‐con‐trolled trial</td><td align="center" valign="top" rowspan="1" colspan="1">382</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan 50 mg + AMX + CLR vs. Tegoprazan 100 mg + AMX + CLR vs. Lansopra‐zole 30 mg + AMX + CLR (14 days)</td><td align="center" valign="top" rowspan="1" colspan="1">Treatment‐naïve <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> infection</td><td align="center" valign="top" rowspan="1" colspan="1">mITT eradication rate</td><td align="center" valign="top" rowspan="1" colspan="1">Post‐treatment test</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Shin et al., 2025 [<xref rid="jgh370406-bib-0036" ref-type="bibr">36</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Korea</td><td align="center" valign="top" rowspan="1" colspan="1">Phase 4 multicenter double‐blind RCT</td><td align="center" valign="top" rowspan="1" colspan="1">218</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan 50 mg vs. Lansoprazole 30 mg</td><td align="center" valign="top" rowspan="1" colspan="1">EE</td><td align="center" valign="top" rowspan="1" colspan="1">Healing up to week 4</td><td align="center" valign="top" rowspan="1" colspan="1">4 weeks</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Song et al., 2025 [<xref rid="jgh370406-bib-0037" ref-type="bibr">37</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">China</td><td align="center" valign="top" rowspan="1" colspan="1">Multicenter double‐blind double‐dummy RCT</td><td align="center" valign="top" rowspan="1" colspan="1">561</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan‐based BQT vs. PPI‐based BQT</td><td align="center" valign="top" rowspan="1" colspan="1">
+<styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> infection</td><td align="center" valign="top" rowspan="1" colspan="1">Eradication rate</td><td align="center" valign="top" rowspan="1" colspan="1">6–8 weeks</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Yang et al., 2022 [<xref rid="jgh370406-bib-0038" ref-type="bibr">38</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Korea</td><td align="center" valign="top" rowspan="1" colspan="1">Randomized crossover pharmacodynamic study</td><td align="center" valign="top" rowspan="1" colspan="1">19</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan 50 mg vs. Esomeprazole vs. Vonoprazan</td><td align="center" valign="top" rowspan="1" colspan="1">Healthy volunteers</td><td align="center" valign="top" rowspan="1" colspan="1">Night‐time pH control</td><td align="center" valign="top" rowspan="1" colspan="1">24 h</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Zhu et al., 2024 [<xref rid="jgh370406-bib-0039" ref-type="bibr">39</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">China</td><td align="center" valign="top" rowspan="1" colspan="1">Phase III multicenter double‐blind RCT</td><td align="center" valign="top" rowspan="1" colspan="1">261</td><td align="center" valign="top" rowspan="1" colspan="1">Tegoprazan 50 mg vs. Esomeprazole 40 mg</td><td align="center" valign="top" rowspan="1" colspan="1">EE</td><td align="center" valign="top" rowspan="1" colspan="1">Cumulative healing</td><td align="center" valign="top" rowspan="1" colspan="1">8 weeks</td></tr></tbody></table><table-wrap-foot id="jgh370406-ntgp-0001"><fn id="jgh370406-note-0001"><p>
+<italic toggle="yes">Note:</italic> Sample size shown is total randomized/enrolled; denominators used in pooled eradication analyses reflect ITT populations as reported in individual trials.</p></fn></table-wrap-foot></table-wrap></sec></sec><sec sec-type="results" id="jgh370406-sec-0011"><label>3</label><title>Results</title><p>Eighteen clinical studies, including randomized controlled trials and pharmacodynamic crossover studies, published between 2019 and 2026 were included in the final analysis (Table <xref rid="jgh370406-tbl-0001" ref-type="table">1</xref>). These studies evaluated the efficacy and safety of Tegoprazan compared with various proton pump inhibitors (PPIs)—including Esomeprazole, Lansoprazole, Dexlansoprazole, and Rabeprazole—across populations with erosive esophagitis (EE), non‐erosive reflux disease (NERD), functional dyspepsia (FD), laryngopharyngeal reflux disease (LPRD), and <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> infection.</p><p>Sample sizes ranged from 35 to 514 participants per trial, with follow‐up durations between 2 and 8 weeks for GERD/NERD outcomes and up to 12 weeks for <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> eradication studies. Most trials were multicenter, conducted in Korea, China, India, and Russia, and used a parallel‐group, double‐blind design.</p><p>All studies included adult patients (≥ 18 years) with confirmed acid‐related disorders diagnosed through endoscopy or symptom‐based clinical criteria. Tegoprazan was administered primarily at 50 mg once daily, although doses up to 200 mg were evaluated in pharmacodynamic and crossover trials.</p><sec id="jgh370406-sec-0012"><label>3.1</label><title>Risk of Bias Summary</title><p>Most studies were rated as having a low overall risk of bias, including the domains related to randomization, outcome measurement, and reporting (Figures <xref rid="jgh370406-supitem-0001" ref-type="supplementary-material">S1</xref> and <xref rid="jgh370406-supitem-0001" ref-type="supplementary-material">S2</xref>). A few studies showed moderate to high risk due to deviations from intended interventions or measurement bias. Only one study, Cho et al., 2023 [<xref rid="jgh370406-bib-0024" ref-type="bibr">24</xref>] had a high risk due to missing outcome data. Overall, the evidence base was considered methodologically robust.</p></sec><sec id="jgh370406-sec-0013"><label>3.2</label><title>Healing of Erosive Esophagitis (<styled-content style="fixed-case" toggle="no">EE</styled-content>) at 8 Weeks</title><p>Five randomized controlled trials [<xref rid="jgh370406-bib-0022" ref-type="bibr">22</xref>, <xref rid="jgh370406-bib-0024" ref-type="bibr">24</xref>, <xref rid="jgh370406-bib-0033" ref-type="bibr">33</xref>, <xref rid="jgh370406-bib-0036" ref-type="bibr">36</xref>, <xref rid="jgh370406-bib-0039" ref-type="bibr">39</xref>] evaluated the efficacy of Tegoprazan 50 mg once daily versus standard‐dose PPIs (Esomeprazole 40 mg or Lansoprazole 30 mg) for endoscopic healing of erosive esophagitis over 4–8 weeks as the primary endpoint.</p><p>Across studies, pooled healing rates for Tegoprazan ranged from 91.1% to 99.1%, while the comparator PPI arms showed healing rates between 93.5% and 98.9%. Meta‐analysis of the pooled data (<italic toggle="yes">n</italic> = 514 Tegoprazan; <italic toggle="yes">n</italic> = 506 PPI) demonstrated no statistically significant difference between groups (Risk Ratio [RR] = 1.01; 95% CI 0.98–1.05; <italic toggle="yes">p</italic> = 0.45), confirming non‐inferior efficacy of Tegoprazan relative to standard PPIs (Figure <xref rid="jgh370406-fig-0002" ref-type="fig">2</xref>). The multicountry double‐blind trial conducted across India, Russia, and South Africa [<xref rid="jgh370406-bib-0022" ref-type="bibr">22</xref>] evaluated the efficacy and safety of Tegoprazan in these diverse populations. It reported an endoscopic healing rate of 99.1% (95% CI 95.25–99.98) with Tegoprazan versus 97.2% (95% CI 92.17–99.43) with Esomeprazole, confirming non‐inferiority. Similarly, Zhu et al., 2024 [<xref rid="jgh370406-bib-0039" ref-type="bibr">39</xref>] and Shin et al., 2024 [<xref rid="jgh370406-bib-0036" ref-type="bibr">36</xref>] demonstrated statistically comparable healing rates between Tegoprazan and PPIs, while Cho YK et al. [<xref rid="jgh370406-bib-0024" ref-type="bibr">24</xref>] in a study primarily on patients with gastric ulcer, also reported consistent mucosal healing outcomes supporting inclusion in the pooled analysis.</p><fig position="float" fig-type="FIGURE" id="jgh370406-fig-0002" orientation="portrait"><label>FIGURE 2</label><caption><p>Tegoprazan versus Comparator in Endoscopic Healing of Erosive GERD at 4 Weeks: Meta‐analysis of Randomized Controlled Trials. Figure <xref rid="jgh370406-fig-0002" ref-type="fig">2</xref> Forest plot of randomized controlled trials comparing Tegoprazan with proton pump inhibitors (PPIs) and other comparators for 4‐week endoscopic healing rates in erosive gastroesophageal reflux disease (GERD) [<xref rid="jgh370406-bib-0022" ref-type="bibr">22</xref>, <xref rid="jgh370406-bib-0024" ref-type="bibr">24</xref>, <xref rid="jgh370406-bib-0033" ref-type="bibr">33</xref>, <xref rid="jgh370406-bib-0036" ref-type="bibr">36</xref>, <xref rid="jgh370406-bib-0039" ref-type="bibr">39</xref>]. Risk ratios (RR) with 95% confidence intervals (CI) were calculated using a random‐effects model. Each study is represented by a blue square (size proportional to study weight), with horizontal lines indicating 95% CIs. The pooled estimate is shown as a black diamond.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="JGH3-10-e70406-g005.jpg"/></fig><p>Across all studies, treatment‐emergent adverse events (TEAEs) were mild to moderate in severity and comparable between Tegoprazan and PPIs, with headache, diarrhea, nausea, and abdominal pain being the most commonly reported events. No serious drug‐related adverse reactions were noted.</p><p>Overall, these findings demonstrate that Tegoprazan achieves endoscopic mucosal healing rates comparable to conventional PPIs, with a favorable tolerability profile and consistent efficacy across diverse populations and comparator agents.</p></sec><sec id="jgh370406-sec-0014"><label>3.3</label><title>Tegoprazan on Symptom Relief in Non‐Erosive and Upper Gastrointestinal Disorders</title><p>Heartburn or reflux‐related symptom relief in non‐erosive reflux disease (NERD), functional dyspepsia (FD), and laryngopharyngeal reflux disease (LPRD) was evaluated across three clinical studies [<xref rid="jgh370406-bib-0026" ref-type="bibr">26</xref>, <xref rid="jgh370406-bib-0027" ref-type="bibr">27</xref>, <xref rid="jgh370406-bib-0030" ref-type="bibr">30</xref>] Due to differences in inclusion criteria, symptom assessment tools, and study endpoints, a quantitative meta‐analysis was not feasible. Results were synthesized narratively and summarized graphically in Figure <xref rid="jgh370406-fig-0003" ref-type="fig">3</xref>.</p><fig position="float" fig-type="FIGURE" id="jgh370406-fig-0003" orientation="portrait"><label>FIGURE 3</label><caption><p>Symptom relief in non‐erosive and upper gastrointestinal acid‐related disorders. (A) Forest plot summarizing the absolute difference in symptom resolution rates between Tegoprazan and placebo in controlled studies of non‐erosive reflux disease (NERD) [<xref rid="jgh370406-bib-0030" ref-type="bibr">30</xref>] and laryngopharyngeal reflux disease (LPRD) [<xref rid="jgh370406-bib-0027" ref-type="bibr">27</xref>]. Data are presented as percentage differences versus placebo, with numbers needed to treat (NNT) indicated beside each point. Tegoprazan 50 mg and 100 mg demonstrated higher response rates than placebo in NERD, while changes in LPRD were not statistically significant. (B) Bar graph depicting symptom‐relief rates in functional dyspepsia (FD) from the single‐arm interventional study by Huh et al. [<xref rid="jgh370406-bib-0026" ref-type="bibr">26</xref>] FD, functional dyspepsia; LPRD, laryngopharyngeal reflux disease; NERD, non‐erosive reflux disease; NNT, number needed to treat.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="JGH3-10-e70406-g001.jpg"/></fig><p>In NERD Kim et al. 2021 [<xref rid="jgh370406-bib-0030" ref-type="bibr">30</xref>], Tegoprazan showed higher complete symptom resolution rates than placebo (42.5%–48.9% vs. 24.2%) with statistically significant improvements in heartburn and regurgitation at 4 weeks.</p><p>In LPRD Jeon et al. 2023 [<xref rid="jgh370406-bib-0027" ref-type="bibr">27</xref>] reported greater reductions in Reflux Symptom Index (RSI) and Reflux Finding Score (RFS) with Tegoprazan than with placebo after 4 and 8 weeks, although between‐group differences did not reach statistical significance because of small sample size.</p><p>In functional dyspepsia Huh et al. 2024 [<xref rid="jgh370406-bib-0026" ref-type="bibr">26</xref>] observed satisfactory symptom relief in 74.6% of patients at 4 weeks and 86.7% at 8 weeks, accompanied by significant improvement in dyspepsia‐related quality‐of‐life scores (GERD‐HRQL and NDI‐K). The study was single‐arm but provided supportive evidence for Tegoprazan's benefit in acid‐sensitive dyspepsia subtypes. Across these trials, Tegoprazan consistently improved patient‐reported symptom scores and daily‐life quality metrics in diverse non‐erosive acid‐related disorders. Adverse events were mild and infrequent, primarily headache or transient gastrointestinal discomfort, with no serious drug‐related events reported.</p></sec><sec id="jgh370406-sec-0015"><label>3.4</label><title>Nocturnal Gastric Acid Control and Symptom Relief</title><p>For nocturnal acid control and symptom relief, the evaluated outcomes included: (1) kinetics of the rise in intragastric pH, (2) time duration to achieve symptom relief, (3) proportion of patients with symptom relief, and (4) effect on symptom‐free nights.</p><p>In the two pharmacodynamic studies by Han et al., 2023 [<xref rid="jgh370406-bib-0025" ref-type="bibr">25</xref>] and Yang et al., 2022 [<xref rid="jgh370406-bib-0038" ref-type="bibr">38</xref>] Tegoprazan demonstrated a rapid onset of action, achieving intragastric pH ≥ 4 within 30–60 min, whereas proton pump inhibitors (PPIs) showed a slower response—Dexlansoprazole required ~7–9 h and Esomeprazole exhibited a gradual rise over 3–5 h (Figure <xref rid="jgh370406-fig-0004" ref-type="fig">4A</xref>). Once achieved, Tegoprazan maintained sustained acid suppression, with pH levels remaining consistently above four throughout the 12‐h observation period, confirming reproducible efficacy across independent trials. The baseline (placebo) curve remained stable around pH 1.2–1.6, indicating the absence of spontaneous nocturnal variation in gastric acidity.</p><fig position="float" fig-type="FIGURE" id="jgh370406-fig-0004" orientation="portrait"><label>FIGURE 4</label><caption><p>Nocturnal acid suppression and symptom relief outcomes with Tegoprazan across pharmacodynamic and clinical studies. (A) Composite nocturnal or intragastric pH–time profiles from Yang et al., 2022 [<xref rid="jgh370406-bib-0038" ref-type="bibr">38</xref>] and Han et al., 2023 [<xref rid="jgh370406-bib-0025" ref-type="bibr">25</xref>], showing faster onset and sustained maintenance of pH ≥ 4 following Tegoprazan administration compared with proton‐pump inhibitors (Esomeprazole 40 mg and DexLansoprazole 60 mg). (B) Percentage of time with intragastric pH ≥ 4 over the nocturnal period, comparing Tegoprazan doses (50–200 mg) with Esomeprazole 40 mg and DexLansoprazole 60 mg. Data represent consistent nocturnal pH maintenance across independent study designs. (C) Clinical outcomes from Kim et al., 2023 [<xref rid="jgh370406-bib-0029" ref-type="bibr">29</xref>], summarizing nocturnal symptom‐relief metrics, including time to first nighttime heartburn‐free interval, proportion of symptom‐free nights, and changes in sleep‐related symptom scores. Favorable mean differences indicate faster or greater symptom relief with Tegoprazan versus Esomeprazole. EE, erosive esophagitis; GERD, gastroesophageal reflux disease; KESS, Korean Epworth Sleepiness Scale; KGSRS, Korean Gastroesophageal Symptom Rating Scale; NAB, nocturnal acid breakthrough; PPIs, proton‐pump inhibitors.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="JGH3-10-e70406-g002.jpg"/></fig><p>As shown in Figure <xref rid="jgh370406-fig-0004" ref-type="fig">4B</xref>, the proportion of time with intragastric pH ≥ 4 during the nocturnal period was consistently higher with Tegoprazan across both studies compared with PPI comparators. In Yang et al., 2022 [<xref rid="jgh370406-bib-0038" ref-type="bibr">38</xref>] Tegoprazan maintained higher nocturnal pH control than Esomeprazole, while in Han et al., 2023 [<xref rid="jgh370406-bib-0025" ref-type="bibr">25</xref>], all Tegoprazan doses demonstrated greater nocturnal acid suppression than Dexlansoprazole, with a clear dose–response pattern observed across the 50–200 mg range. In the subgroup analysis of Kim et al. [<xref rid="jgh370406-bib-0029" ref-type="bibr">29</xref>], the rate of complete resolution and relief of nighttime heartburn was evaluated during the final 7 days of treatment. Relief was defined as a daily diary score of “none” on ≥ 6 of 7 days (allowing one “mild” entry), and complete resolution as “none” for 7 consecutive days. Compared with Esomeprazole, Tegoprazan yielded a higher rate of complete nighttime heartburn resolution (<italic toggle="yes">p</italic> = 0.038) and a greater proportion of patients with nighttime heartburn relief (<italic toggle="yes">p</italic> = 0.034), demonstrating superior nocturnal symptom control and a more sustained 12‐h intragastric pH maintenance (Figure <xref rid="jgh370406-fig-0004" ref-type="fig">4C</xref>).</p><p>In Yang et al., 2022 [<xref rid="jgh370406-bib-0038" ref-type="bibr">38</xref>], nighttime administration of Tegoprazan 50 mg produced a rapid rise in intragastric pH and greater nocturnal acid suppression compared with Esomeprazole 40 mg and Vonoprazan 20 mg. Similarly, in the crossover study by Han et al., 2023 [<xref rid="jgh370406-bib-0025" ref-type="bibr">25</xref>], all Tegoprazan doses (50, 100, and 200 mg) achieved the target pH within 2 h, whereas Dexlansoprazole required ~7 h. During the first 12 h post‐dose, Tegoprazan exhibited stronger acid‐suppressive activity and a dose‐dependent increase in the proportion of time at pH &gt; 4 and pH &gt; 6.</p><p>The clinical study by Kim et al., 2023 [<xref rid="jgh370406-bib-0029" ref-type="bibr">29</xref>] (Figure <xref rid="jgh370406-fig-0004" ref-type="fig">4C</xref>) evaluated nocturnal symptom relief outcomes. Tegoprazan 50 mg achieved faster resolution of nighttime heartburn, a higher proportion of heartburn‐free nights, and greater rates of complete or partial symptom resolution compared with Esomeprazole 40 mg. Improvements in sleep disturbance and overall tolerability were comparable between the two treatment groups.</p><p>Across all studies, acid suppression with Tegoprazan remained consistent across CYP2C19 phenotypes, and Esomeprazole demonstrated phenotype dependence, with extensive metabolizers exhibiting lower nocturnal pH control compared with intermediate and poor metabolizers [<xref rid="jgh370406-bib-0038" ref-type="bibr">38</xref>].</p></sec><sec id="jgh370406-sec-0016"><label>3.5</label><title>Tegoprazan in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> Eradication</title><p>Seven randomized controlled trials (<italic toggle="yes">n</italic> = 2492) [<xref rid="jgh370406-bib-0023" ref-type="bibr">23</xref>, <xref rid="jgh370406-bib-0028" ref-type="bibr">28</xref>, <xref rid="jgh370406-bib-0031" ref-type="bibr">31</xref>, <xref rid="jgh370406-bib-0032" ref-type="bibr">32</xref>, <xref rid="jgh370406-bib-0034" ref-type="bibr">34</xref>, <xref rid="jgh370406-bib-0035" ref-type="bibr">35</xref>, <xref rid="jgh370406-bib-0037" ref-type="bibr">37</xref>] evaluated Tegoprazan‐based therapies, including triple or quadruple regimens compared with standard PPI‐based therapies for first or second‐line <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> eradication. Treatment durations ranged from 7 to 14 days, most commonly combining Tegoprazan 50 mg once daily with clarithromycin‐ or amoxicillin‐based regimens. The pooled meta‐analysis demonstrated a modest but statistically significant improvement in eradication rate with Tegoprazan‐containing regimens (Risk Ratio [RR]: 1.05, 95% CI: 1.01–1.09; <italic toggle="yes">p</italic> = 0.006), compared with standard PPI‐based therapy (Figure <xref rid="jgh370406-fig-0005" ref-type="fig">5</xref>). There was no statistical heterogeneity across studies (<italic toggle="yes">I</italic>
+<sup>2</sup> = 0%, <italic toggle="yes">p</italic> = 0.92), indicating a consistent effect. Although statistical heterogeneity was low, it is important to recognize that clinical heterogeneity existed across included trials, particularly in terms of antibiotic regimens, treatment durations, and regional resistance patterns. Therefore, the pooled estimate should be interpreted as reflecting a consistent relative treatment effect within individual randomized comparisons, rather than implying absolute superiority of Tegoprazan‐based regimens across all therapeutic settings. Despite differences in regimen structure, comparisons were made within standardized treatment protocols in each randomized trial, isolating the effect of the acid suppressant component. This supports the methodological appropriateness of pooling relative treatment effects; however, these findings should be interpreted cautiously in the context of regimen‐level variability across studies. Among individual trials, Kwon et al., 2023 assessed the efficacy of Tegoprazan‐based triple therapy for <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> eradication [<xref rid="jgh370406-bib-0040" ref-type="bibr">40</xref>]. The intention‐to‐treat (ITT) eradication rate was 90.5% (76/84); 95% CI: 82.1%–95.8%, and the per‐protocol (PP) rate was 96.2% (76/79); 95% CI: 83.4%–97.6%, both exceeding the generally accepted clinical threshold of 90% for first‐line therapies. Across all trials, adverse events were mild and transient, most commonly dysgeusia, diarrhea, or abdominal discomfort, with no serious treatment‐related events. Treatment discontinuations were rare (&lt; 2%). There were no significant differences in the occurrence of major adverse events between the comparator groups. Collectively, these data show that Tegoprazan‐based eradication regimens provide show favorable eradication outcomes, supporting its clinical use as an alternative to conventional PPI‐based therapy.</p><fig position="float" fig-type="FIGURE" id="jgh370406-fig-0005" orientation="portrait"><label>FIGURE 5</label><caption><p>Pooled risk ratio of <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> eradication with Tegoprazan‐based regimens versus comparator therapies (random‐effects model). Forest plot showing the pooled analysis of studies [<xref rid="jgh370406-bib-0023" ref-type="bibr">23</xref>, <xref rid="jgh370406-bib-0028" ref-type="bibr">28</xref>, <xref rid="jgh370406-bib-0031" ref-type="bibr">31</xref>, <xref rid="jgh370406-bib-0032" ref-type="bibr">32</xref>, <xref rid="jgh370406-bib-0034" ref-type="bibr">34</xref>, <xref rid="jgh370406-bib-0035" ref-type="bibr">35</xref>, <xref rid="jgh370406-bib-0037" ref-type="bibr">37</xref>] comparing Tegoprazan with proton pump inhibitors (PPIs) and other comparators for <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> eradication rate. The risk ratio (RR) and 95% confidence interval (CI) were calculated using a random‐effects model. Individual study estimates are represented by blue squares, with the size proportional to study weight, and horizontal lines represent 95% CIs. The pooled effect is shown as a black diamond.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="JGH3-10-e70406-g003.jpg"/></fig></sec></sec><sec sec-type="discussion" id="jgh370406-sec-0017"><label>4</label><title>Discussion</title><p>This systematic review and meta‐analysis provide a comprehensive synthesis of recent randomized evidence evaluating Tegoprazan across erosive esophagitis, maintenance therapy, nocturnal acid control, and <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> eradication within a unified mechanistic framework. The review encompassed both pharmacodynamic and clinical aspects of Tegoprazan therapy, focusing on its role in erosive and non‐erosive reflux disease, functional dyspepsia, nocturnal acid breakthrough (NAB), and <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">H. pylori</italic>
+</styled-content> eradication. While concerns may arise regarding the maturity of the evidence base, it is important to note that multiple randomized controlled trials across key clinical indications are now available, including recent studies published between 2024 and 2026. In such contexts, early meta‐analyses serve a critical role in synthesizing emerging evidence, identifying consistent treatment effects, and informing clinical decision‐making while highlighting areas requiring further investigation. The present analysis therefore represents a structured evaluation of currently available randomized data rather than a definitive assessment, and its findings should be interpreted within this evolving evidence landscape.</p><sec id="jgh370406-sec-0018"><label>4.1</label><title>Efficacy in Erosive Reflux Disease</title><p>Across studies, Tegoprazan demonstrated rapid acid suppression, durable pH maintenance, and consistent symptom relief, together with a safety profile comparable to PPIs. These findings suggest that Tegoprazan may address certain limitations associated with conventional acid‐suppressive therapy, although interpretations should consider variability in study designs and treatment contexts across the included evidence base.</p><p>Tegoprazan, a potassium‐competitive acid blocker (PCAB), differs mechanistically from proton‐pump inhibitors (PPIs) through acid stability, direct H<sup>+</sup>/K<sup>+</sup>‐ATPase inhibition, and CYP2C19‐independent metabolism, leading to a faster and more predictable onset [<xref rid="jgh370406-bib-0010" ref-type="bibr">10</xref>, <xref rid="jgh370406-bib-0011" ref-type="bibr">11</xref>, <xref rid="jgh370406-bib-0018" ref-type="bibr">18</xref>, <xref rid="jgh370406-bib-0038" ref-type="bibr">38</xref>]. These properties align well with the primary therapeutic objective in GERD management, achievement of rapid symptom relief, sustained mucosal healing, and restoration of quality of life. The characteristics of the pharmacological design explain the consistently observed faster rise in intragastric pH and earlier symptom response compared with PPIs. In erosive esophagitis, Tegoprazan achieved mucosal healing rates exceeding 90% and comparable to Esomeprazole or Lansoprazole, as summarized in Figure <xref rid="jgh370406-fig-0002" ref-type="fig">2</xref>. The multicenter trial spanning India, Russia, and South Africa confirmed healing rates &gt; 99%, supporting Tegoprazan's clinical utility in diverse populations.</p></sec><sec id="jgh370406-sec-0019"><label>4.2</label><title>Symptom Relief in Non‐Erosive and Functional Disorders</title><p>Symptom control in non‐erosive reflux disease (NERD) and functional dyspepsia (FD) remains challenging because symptoms arise from acid hypersensitivity rather than mucosal injury. In the placebo‐controlled trial by Kim et al., 2021 [<xref rid="jgh370406-bib-0030" ref-type="bibr">30</xref>], Tegoprazan achieved a nearly twofold higher rate of complete symptom resolution versus placebo, with significant reductions in heartburn and regurgitation scores (Figure <xref rid="jgh370406-fig-0003" ref-type="fig">3A</xref>). In functional dyspepsia, symptom relief was reported in ~75% at 4 weeks and &gt; 85% at 8 weeks [<xref rid="jgh370406-bib-0026" ref-type="bibr">26</xref>], and in laryngopharyngeal reflux disease (LPRD), improvements in the Reflux Symptom Index and Finding Score were also observed (Figure <xref rid="jgh370406-fig-0003" ref-type="fig">3B</xref>). Although statistical significance varied, these consistent trends demonstrate Tegoprazan's symptomatic benefit across the acid‐hypersensitive spectrum, likely reflecting its rapid, sustained suppression of gastric acid.</p></sec><sec id="jgh370406-sec-0020"><label>4.3</label><title>Nocturnal Acid Breakthrough and Nighttime Symptoms</title><p>Nocturnal acid breakthrough (NAB) remains a persistent limitation of conventional PPI therapy, leading to nighttime heartburn and poor sleep quality. Pharmacodynamic crossover studies [<xref rid="jgh370406-bib-0025" ref-type="bibr">25</xref>, <xref rid="jgh370406-bib-0038" ref-type="bibr">38</xref>] demonstrated that Tegoprazan produced a faster and more sustained nocturnal pH elevation than Esomeprazole or Dexlansoprazole (Figure <xref rid="jgh370406-fig-0004" ref-type="fig">4A,B</xref>). Tegoprazan achieved pH ≥ 4 within 30–60 min and maintained that level for most of the 12‐h observation period, showing clear dose‐dependent improvement and CYP2C19 independence.</p><p>The Bayesian network meta‐analysis of 55 RCTs [<xref rid="jgh370406-bib-0041" ref-type="bibr">41</xref>] further validated these findings; Tegoprazan was ranked among higher‐performing agents in nocturnal acid control (SUCRA 91.8%), closely followed by Vonoprazan (91.0%) and outperforming all PPI and H<sub>2</sub>RA regimens. This supports Tegoprazan's consistent nocturnal acid suppression, corroborated by clinical data from Kim et al., 2023 [<xref rid="jgh370406-bib-0029" ref-type="bibr">29</xref>], where Tegoprazan achieved faster nighttime symptom relief and a higher proportion of heartburn‐free nights (Figure <xref rid="jgh370406-fig-0004" ref-type="fig">4C</xref>).</p><p>Together, these data support Tegoprazan as an effective agent for nighttime acid and symptom control, an area of persistent unmet clinical need.</p></sec><sec id="jgh370406-sec-0021"><label>4.4</label><title>
+<styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> Eradication</title><p>The pooled meta‐analysis of seven RCTs (<italic toggle="yes">n</italic> = 2492) demonstrated a statistically significant improvement in eradication rates with Tegoprazan‐based regimens compared with PPI‐based therapy (RR 1.05, 95% CI 1.01–1.09; <italic toggle="yes">p</italic> = 0.006), with no observed statistical heterogeneity (<italic toggle="yes">I</italic>
+<sup>2</sup> = 0%) (Figure <xref rid="jgh370406-fig-0005" ref-type="fig">5</xref>). While this consistency strengthens confidence in the direction of effect, it should be interpreted in the context of underlying clinical heterogeneity, including variations in antibiotic combinations, treatment durations, and regional resistance profiles.</p><p>Importantly, these pooled results reflect relative treatment effects within individual randomized trials, where Tegoprazan and comparator PPIs were evaluated within the same regimen framework. As such, the findings support a consistent acid‐suppression–related advantage of Tegoprazan, rather than definitive superiority across all eradication strategies.</p><p>The observed benefit is biologically plausible, given Tegoprazan's rapid and sustained elevation of intragastric pH, which may enhance antibiotic stability and bacterial susceptibility. However, absolute eradication rates remain influenced by antibiotic resistance patterns and regimen composition and therefore should be interpreted within the clinical context of each study.</p><p>Overall, Tegoprazan‐based therapy represents an effective and well‐tolerated alternative to PPI‐based regimens, with evidence supporting its role in optimizing eradication outcomes when used within standardized treatment protocols.</p></sec><sec id="jgh370406-sec-0022"><label>4.5</label><title>Pharmacologic Rationale and Clinical Implications</title><p>Tegoprazan is commonly described as a second‐generation P‐CAB, reflecting refinements in pharmacokinetic and pharmacodynamic characteristics compared with earlier agents in this class. These include rapid onset of acid suppression, sustained intragastric pH control throughout the dosing interval, and reduced genotype‐dependent variability. Such properties may contribute to consistent acid suppression across clinical contexts, although direct head‐to‐head comparative trials within the P‐CAB class remain limited. Tegoprazan exerts direct, reversible inhibition of H<sup>+</sup>/K<sup>+</sup>‐ATPase without acid activation, allowing immediate bioavailability and CYP2C19‐independent metabolism. As Tegoprazan is predominantly metabolized via CYP3A4, co‐administration with strong CYP3A4 inhibitors or inducers may influence systemic exposure [<xref rid="jgh370406-bib-0012" ref-type="bibr">12</xref>]. Collectively, these pharmacologic characteristics support predictable acid suppression and provide an alternative therapeutic option in the management of acid‐mediated disorders.</p><p>Clinically, Tegoprazan offers once‐daily, predictable efficacy across erosive, non‐erosive, and functional reflux disorders, providing a therapeutic alternative in patients with PPI resistance, nocturnal symptoms, or complex polypharmacy. Its pharmacodynamic consistency and rapid symptom control support its potential role as an alternative or step‐up option in selected patients in modern GERD management.</p></sec></sec><sec id="jgh370406-sec-0023"><label>5</label><title>Limitations</title><p>Although randomized evidence was available, the number of trials per indication remains limited and the evidence base should be considered evolving. These findings represent an early synthesis rather than definitive conclusions across all settings. While evidence for erosive esophagitis and <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> is robust, studies addressing NERD, FD, and NAB were fewer and heterogeneous, using variable symptom‐assessment tools and inconsistent NAB definitions with limited quantitative pooling. Most trials were short‐term (≤ 8 weeks), and direct head‐to‐head comparisons between PCABs remain limited. Future work should employ standardized NAB definitions, harmonized symptom metrics, and stratification by CYP2C19 phenotype to clarify Tegoprazan's distinct clinical advantages and long‐term efficacy in maintenance therapy. A sensitivity analysis was not conducted due to the limited number of studies contributing to each outcome. Antibiotic resistance influences absolute eradication rates in <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> treatment; however, most included trials did not consistently report susceptibility data. Consequently, resistance‐based subgroup analyses were not feasible. Although statistical heterogeneity was low for certain outcomes, particularly <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> eradication, underlying clinical heterogeneity in antibiotic regimens, treatment durations, and geographic resistance patterns may influence the generalizability of pooled estimates. Therefore, the results should be interpreted as reflecting consistent within‐trial comparative effects rather than uniform efficacy across all clinical settings. Future studies should incorporate standardized resistance reporting to better clarify treatment effects. Variability in dosing regimens and treatment durations across studies may have influenced clinical outcomes; however, the limited number of trials per indication precluded formal subgroup or dose–response analyses.</p></sec><sec sec-type="conclusions" id="jgh370406-sec-0024"><label>6</label><title>Conclusions</title><p>Tegoprazan provides rapid and sustained acid suppression, with mucosal healing rates comparable to proton pump inhibitors and consistent improvements in nocturnal acid control and symptom outcomes across available studies.</p><p>In <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> eradication, pooled evidence suggests a modest but statistically significant improvement when used within standardized regimens. However, given the clinical and methodological heterogeneity across studies, these findings should be interpreted as reflecting consistent within‐trial comparative effects rather than uniform superiority across all treatment settings.</p><p>Tegoprazan may represent an alternative therapeutic option in selected patients, particularly those with persistent symptoms or nocturnal acid breakthrough. Further long‐term and head‐to‐head comparative studies are required to better define its role in routine clinical practice.</p></sec><sec id="jgh370406-sec-0029"><title>Funding</title><p>The services of Wiley's medical writing are funded by Dr. Reddy's Laboratories limited.</p></sec><sec id="jgh370406-sec-0030"><title>Ethics Statement</title><p>Ethical approval was not required as this study is a systematic review and meta‐analysis based solely on previously published data.</p></sec><sec sec-type="COI-statement" id="jgh370406-sec-0026"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="jgh370406-supitem-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Table S1:</bold> PRISMA 2020 Checklist.</p><p>
+<bold>Table S2:</bold> Detailed Electronic Search Strategy.</p><p>
+<bold>Figure S1:</bold> Risk of bias summary for included randomized and non‐randomized studies evaluating Tegoprazan.</p><p>
+<bold>Figure S2:</bold> Proportion of studies rated at low, unclear, or high risk of bias across the seven Cochrane Risk of Bias domains.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="JGH3-10-e70406-s001.docx" position="float" orientation="portrait"/></supplementary-material></sec></body><back><ack id="jgh370406-sec-0025"><title>Acknowledgments</title><p>Wiley India Private Limited, a company incorporated in India under the laws of India with its registered office at 4436/7, Second Floor, Ansari Road, Daryaganj, New Delhi 110002, India, engaged with Medlish Communications in providing medical writing support in the development of this manuscript and unconditionally funded by Dr. Reddy's Laboratories limited. The external sponsor had no role in study design, collection of evidence, interpretation of data, writing the manuscript or decision to publish.</p></ack><sec sec-type="data-availability" id="jgh370406-sec-0028"><title>Data Availability Statement</title><p>The data that support the findings of this study are available from the corresponding author upon reasonable request.</p></sec><ref-list content-type="cited-references" id="jgh370406-bibl-0001"><title>References</title><ref id="jgh370406-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="jgh370406-cit-0001">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Taraszewska</surname>
+</string-name>, “<article-title>Risk Factors for Gastroesophageal Reflux Disease Symptoms Related to Lifestyle and Diet</article-title>,” <source>Roczniki Państwowego Zakładu Higieny</source>
+<volume>72</volume> (<year>2021</year>): <fpage>21</fpage>–<lpage>28</lpage>, <pub-id pub-id-type="doi">10.32394/rpzh.2021.0145</pub-id>.<pub-id pub-id-type="pmid">33882662</pub-id>
+</mixed-citation></ref><ref id="jgh370406-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="jgh370406-cit-0002">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Rai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Kulkarni</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>U. C.</given-names>
+<surname>Ghoshal</surname>
+</string-name>, “<article-title>Prevalence and Risk Factors for Gastroesophageal Reflux Disease in the Indian Population: Meta‐Analysis and Meta‐Regression Study</article-title>,” <source>Indian Journal of Gastroenterology</source>
+<volume>40</volume> (<year>2021</year>): <fpage>209</fpage>–<lpage>219</lpage>, <pub-id pub-id-type="doi">10.1007/s12664-020-01104-0</pub-id>.<pub-id pub-id-type="pmid">33409947</pub-id>
+</mixed-citation></ref><ref id="jgh370406-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="jgh370406-cit-0003">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Baklola</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Terra</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Badr</surname>
+</string-name>, et al., “<article-title>Prevalence of Gastro‐Oesophageal Reflux Disease and Associated Risk Factors Among Medical Students: Nation‐Based Cross‐Sectional Study</article-title>,” <source>BMC Gastroenterology</source>
+<volume>23</volume> (<year>2023</year>): <fpage>269</fpage>, <pub-id pub-id-type="doi">10.1186/s12876-023-02899-w</pub-id>.<pub-id pub-id-type="pmid">37550667</pub-id>
+<pub-id pub-id-type="pmcid">PMC10405472</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="jgh370406-cit-0004">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W. L.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. H.</given-names>
+<surname>Cai</surname>
+</string-name>, et al., “<article-title>Burden of Gastroesophageal Reflux Disease in 204 Countries and Territories, 1990–2019: Systematic Analysis for GBD 2019</article-title>,” <source>BMC Public Health</source>
+<volume>23</volume> (<year>2023</year>): <fpage>582</fpage>, <pub-id pub-id-type="doi">10.1186/s12889-023-15272-z</pub-id>.<pub-id pub-id-type="pmid">36978027</pub-id>
+<pub-id pub-id-type="pmcid">PMC10053627</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="jgh370406-cit-0005">
+<string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Bhatia</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. K.</given-names>
+<surname>Makharia</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Abraham</surname>
+</string-name>, et al., “<article-title>Indian Consensus on Gastroesophageal Reflux Disease in Adults</article-title>,” <source>Indian Journal of Gastroenterology</source>
+<volume>38</volume> (<year>2019</year>): <fpage>411</fpage>–<lpage>440</lpage>, <pub-id pub-id-type="doi">10.1007/s12664-019-00979-y</pub-id>.<pub-id pub-id-type="pmid">31802441</pub-id>
+</mixed-citation></ref><ref id="jgh370406-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="jgh370406-cit-0006">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Ang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. H.</given-names>
+<surname>How</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T. L.</given-names>
+<surname>Ang</surname>
+</string-name>, “<article-title>Persistent Gastro‐Oesophageal Reflux Symptoms Despite Proton Pump Inhibitor Therapy</article-title>,” <source>Singapore Medical Journal</source>
+<volume>57</volume> (<year>2016</year>): <fpage>546</fpage>–<lpage>551</lpage>, <pub-id pub-id-type="doi">10.11622/smedj.2016167</pub-id>.<pub-id pub-id-type="pmid">27779277</pub-id>
+<pub-id pub-id-type="pmcid">PMC5075954</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="jgh370406-cit-0007">
+<string-name name-style="western">
+<given-names>D. S.</given-names>
+<surname>Strand</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Kim</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D. A.</given-names>
+<surname>Peura</surname>
+</string-name>, “<article-title>25 Years of Proton Pump Inhibitors: Comprehensive Review</article-title>,” <source>Gut Liver</source>
+<volume>11</volume> (<year>2017</year>): <fpage>27</fpage>–<lpage>37</lpage>, <pub-id pub-id-type="doi">10.5009/gnl15502</pub-id>.<pub-id pub-id-type="pmid">27840364</pub-id>
+<pub-id pub-id-type="pmcid">PMC5221858</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="jgh370406-cit-0008">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Furuta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Ohashi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kamata</surname>
+</string-name>, et al., “<article-title>Effect of Genetic Differences in Omeprazole Metabolism on Cure Rates for <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> Infection and Peptic Ulcer</article-title>,” <source>Annals of Internal Medicine</source>
+<volume>129</volume> (<year>1998</year>): <fpage>1027</fpage>–<lpage>1030</lpage>, <pub-id pub-id-type="doi">10.7326/0003-4819-129-12-199812150-00006</pub-id>.<pub-id pub-id-type="pmid">9867757</pub-id>
+</mixed-citation></ref><ref id="jgh370406-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="jgh370406-cit-0009">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Hagymási</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Müllner</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Herszényi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Tulassay</surname>
+</string-name>, “<article-title>Update on the Pharmacogenomics of Proton Pump Inhibitors</article-title>,” <source>Pharmacogenomics</source>
+<volume>12</volume> (<year>2011</year>): <fpage>873</fpage>–<lpage>888</lpage>, <pub-id pub-id-type="doi">10.2217/pgs.11.4</pub-id>.<pub-id pub-id-type="pmid">21692617</pub-id>
+</mixed-citation></ref><ref id="jgh370406-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="jgh370406-cit-0010">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Scarpignato</surname>
+</string-name> and <string-name name-style="western">
+<given-names>R. H.</given-names>
+<surname>Hunt</surname>
+</string-name>, “<article-title>Potassium‐Competitive Acid Blockers: Current Clinical Use and Future Developments</article-title>,” <source>Current Gastroenterology Reports</source>
+<volume>26</volume> (<year>2024</year>): <fpage>273</fpage>–<lpage>293</lpage>, <pub-id pub-id-type="doi">10.1007/s11894-024-00939-3</pub-id>.<pub-id pub-id-type="pmid">39145848</pub-id>
+<pub-id pub-id-type="pmcid">PMC11401795</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="jgh370406-cit-0011">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Patel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Laine</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Moayyedi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Wu</surname>
+</string-name>, “<article-title>AGA Clinical Practice Update on Integrating Potassium‐Competitive Acid Blockers Into Clinical Practice: Expert Review</article-title>,” <source>Gastroenterology</source>
+<volume>167</volume> (<year>2024</year>): <fpage>1228</fpage>–<lpage>1238</lpage>, <pub-id pub-id-type="doi">10.1053/j.gastro.2024.06.038</pub-id>.<pub-id pub-id-type="pmid">39269391</pub-id>
+</mixed-citation></ref><ref id="jgh370406-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="jgh370406-cit-0012">
+<string-name name-style="western">
+<given-names>H. C.</given-names>
+<surname>Jeong</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. G.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Wei</surname>
+</string-name>, et al., “<article-title>Integration of a Physiologically Based Pharmacokinetic–Pharmacodynamic Model for Tegoprazan and Its Metabolite: Application for Predicting Food Effect and Intragastric pH Alterations</article-title>,” <source>Pharmaceutics</source>
+<volume>14</volume> (<year>2022</year>): <elocation-id>1298</elocation-id>, <pub-id pub-id-type="doi">10.3390/pharmaceutics14061298</pub-id>.<pub-id pub-id-type="pmid">35745870</pub-id>
+<pub-id pub-id-type="pmcid">PMC9230797</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="jgh370406-cit-0013">
+<string-name name-style="western">
+<given-names>D. Y.</given-names>
+<surname>Yoon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I. J.</given-names>
+<surname>Jang</surname>
+</string-name>, et al., “<article-title>Prediction of Drug–Drug Interaction Potential of Tegoprazan Using Physiologically Based Pharmacokinetic Modeling and Simulation</article-title>,” <source>Pharmaceutics</source>
+<volume>13</volume> (<year>2021</year>): <elocation-id>1489</elocation-id>, <pub-id pub-id-type="doi">10.3390/pharmaceutics13091489</pub-id>.<pub-id pub-id-type="pmid">34575565</pub-id>
+<pub-id pub-id-type="pmcid">PMC8464955</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="jgh370406-cit-0014">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Devendran</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. R.</given-names>
+<surname>Uppugunduri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Sundaram</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. G.</given-names>
+<surname>Shewade</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Rajagopal</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Chandrasekaran</surname>
+</string-name>, “<article-title>Copy Number Variations of CYP2C19 in South Indian Population</article-title>,” <source>Molecular Biology International</source>
+<volume>2012</volume> (<year>2012</year>): <elocation-id>643856</elocation-id>, <pub-id pub-id-type="doi">10.1155/2012/643856</pub-id>.<pub-id pub-id-type="pmid">22792463</pub-id>
+<pub-id pub-id-type="pmcid">PMC3389726</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="jgh370406-cit-0015">
+<string-name name-style="western">
+<given-names>M. P.</given-names>
+<surname>Mehta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N. D.</given-names>
+<surname>Gajjar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. J.</given-names>
+<surname>Patel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. P.</given-names>
+<surname>Joshi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G. B.</given-names>
+<surname>Shah</surname>
+</string-name>, “<article-title>Prevalence of CYP2C9 and CYP2C19 Variants and Impact on Clopidogrel Efficacy in CYP2C19*2 Carriers</article-title>,” <source>Indian Journal of Pharmacology</source>
+<volume>55</volume> (<year>2023</year>): <fpage>27</fpage>–<lpage>33</lpage>, <pub-id pub-id-type="doi">10.4103/ijp.ijp_706_22</pub-id>.<pub-id pub-id-type="pmid">36960518</pub-id>
+<pub-id pub-id-type="pmcid">PMC10204895</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="jgh370406-cit-0016">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Sukumaran</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V. S.</given-names>
+<surname>Aswathy</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. M.</given-names>
+<surname>Xavier</surname>
+</string-name>, et al., “<article-title>Prevalence of CYP2C19 Poor Metabolisers Among South Indian Psychiatric Patients</article-title>,” <source>Annals of Neurosciences</source> (<year>2025</year>): <elocation-id>379157</elocation-id>, <pub-id pub-id-type="doi">10.1177/09727531251379157</pub-id>.<pub-id pub-id-type="pmcid">PMC12500602</pub-id><pub-id pub-id-type="pmid">41063924</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="jgh370406-cit-0017">
+<string-name name-style="western">
+<given-names>J. K.</given-names>
+<surname>Lamba</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. K.</given-names>
+<surname>Dhiman</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K. K.</given-names>
+<surname>Kohli</surname>
+</string-name>, “<article-title>CYP2C19 Genetic Mutations in North Indians</article-title>,” <source>Clinical Pharmacology and Therapeutics</source>
+<volume>68</volume> (<year>2000</year>): <fpage>328</fpage>–<lpage>335</lpage>, <pub-id pub-id-type="doi">10.1067/mcp.2000.109365</pub-id>.<pub-id pub-id-type="pmid">11014415</pub-id>
+</mixed-citation></ref><ref id="jgh370406-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="jgh370406-cit-0018">
+<string-name name-style="western">
+<given-names>C. W.</given-names>
+<surname>Howden</surname>
+</string-name>, “<article-title>The Role of P‐CABs in GERD</article-title>,” <source>American Journal of Gastroenterology</source>
+<volume>120</volume> (<year>2025</year>): <fpage>993</fpage>–<lpage>998</lpage>, <pub-id pub-id-type="doi">10.14309/ajg.0000000000003140</pub-id>.<pub-id pub-id-type="pmid">39466255</pub-id>
+</mixed-citation></ref><ref id="jgh370406-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="jgh370406-cit-0019">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Ahmed</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Asghar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Khanzada</surname>
+</string-name>, et al., “<article-title>Comparing Proton Pump Inhibitors and Emerging Acid‐Suppressive Therapies in Gastroesophageal Reflux Disease: Systematic Review</article-title>,” <source>Cureus</source>
+<volume>17</volume> (<year>2025</year>): <elocation-id>e84311</elocation-id>, <pub-id pub-id-type="doi">10.7759/cureus.84311</pub-id>.<pub-id pub-id-type="pmid">40535413</pub-id>
+<pub-id pub-id-type="pmcid">PMC12174785</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="jgh370406-cit-0020">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Hussaini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T. M.</given-names>
+<surname>Kebede</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T. S.</given-names>
+<surname>Afework</surname>
+</string-name>, et al., “<article-title>Comparative Efficacy and Safety of Tegoprazan Versus Proton Pump Inhibitors for Erosive Esophagitis: Systematic Review and Meta‐Analysis</article-title>,” <source>Cureus</source>
+<volume>17</volume> (<year>2025</year>): <elocation-id>e83302</elocation-id>, <pub-id pub-id-type="doi">10.7759/cureus.83302</pub-id>.<pub-id pub-id-type="pmid">40452708</pub-id>
+<pub-id pub-id-type="pmcid">PMC12126153</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="jgh370406-cit-0021">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Purja</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Lee</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Kim</surname>
+</string-name>, “<article-title>Tegoprazan as First‐ and Second‐Line Therapy for Eradication of <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content>: Systematic Review and Meta‐Analysis</article-title>,” <source>Journal of Digestive Diseases</source>
+<volume>26</volume> (<year>2025</year>): <fpage>305</fpage>–<lpage>317</lpage>, <pub-id pub-id-type="doi">10.1111/1751-2980.70004</pub-id>.<pub-id pub-id-type="pmid">40826951</pub-id>
+<pub-id pub-id-type="pmcid">PMC12492059</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="jgh370406-cit-0022">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Agarwal</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. K.</given-names>
+<surname>Jha</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Somagoni</surname>
+</string-name>, et al., “<article-title>Efficacy and Safety of Tegoprazan in Patients With Erosive Gastroesophageal Reflux Disease: Multicountry Prospective Randomized Double‐Blind Active‐Controlled Parallel‐Group Study</article-title>,” <source>Journal of Gastroenterology</source>
+<volume>11</volume> (<year>2025</year>): <fpage>1</fpage>–<lpage>10</lpage>, <pub-id pub-id-type="doi">10.52338/jjogastro.2025.4829</pub-id>.</mixed-citation></ref><ref id="jgh370406-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="jgh370406-cit-0023">
+<string-name name-style="western">
+<given-names>Y. J.</given-names>
+<surname>Choi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. C.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Kim</surname>
+</string-name>, et al., “<article-title>Triple Therapy Based on Tegoprazan for First‐Line Treatment of <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> Infection: Randomized Double‐Blind Phase III Trial</article-title>,” <source>Gut and Liver</source>
+<volume>16</volume> (<year>2022</year>): <fpage>535</fpage>–<lpage>546</lpage>, <pub-id pub-id-type="doi">10.5009/gnl220055</pub-id>.<pub-id pub-id-type="pmid">35791797</pub-id>
+<pub-id pub-id-type="pmcid">PMC9289827</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="jgh370406-cit-0024">
+<string-name name-style="western">
+<given-names>Y. K.</given-names>
+<surname>Cho</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. H.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. S.</given-names>
+<surname>Kim</surname>
+</string-name>, et al., “<article-title>Randomised Clinical Trial: Comparison of Tegoprazan and Lansoprazole as Maintenance Therapy for Healed Mild Erosive Oesophagitis</article-title>,” <source>Alimentary Pharmacology &amp; Therapeutics</source>
+<volume>57</volume> (<year>2023</year>): <fpage>72</fpage>–<lpage>80</lpage>, <pub-id pub-id-type="doi">10.1111/apt.17255</pub-id>.<pub-id pub-id-type="pmid">36314172</pub-id>
+<pub-id pub-id-type="pmcid">PMC10092320</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="jgh370406-cit-0025">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Han</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. Y.</given-names>
+<surname>Choi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. H.</given-names>
+<surname>Kim</surname>
+</string-name>, et al., “<article-title>Comparison of Pharmacodynamics Between Tegoprazan and dexLansoprazole Regarding Nocturnal Acid Breakthrough: Randomized Crossover Study</article-title>,” <source>Gut and Liver</source>
+<volume>17</volume> (<year>2023</year>): <fpage>92</fpage>–<lpage>99</lpage>, <pub-id pub-id-type="doi">10.5009/gnl220050</pub-id>.<pub-id pub-id-type="pmid">36317518</pub-id>
+<pub-id pub-id-type="pmcid">PMC9840922</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="jgh370406-cit-0026">
+<string-name name-style="western">
+<given-names>C. W.</given-names>
+<surname>Huh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. H.</given-names>
+<surname>Youn</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. H.</given-names>
+<surname>Jung</surname>
+</string-name>, et al., “<article-title>Efficacy of Tegoprazan in Patients With Functional Dyspepsia: Prospective Multicenter Single‐Arm Study</article-title>,” <source>Journal of Neurogastroenterology and Motility</source>
+<volume>30</volume> (<year>2024</year>): <fpage>313</fpage>–<lpage>321</lpage>, <pub-id pub-id-type="doi">10.5056/jnm23150</pub-id>.<pub-id pub-id-type="pmid">38710534</pub-id>
+<pub-id pub-id-type="pmcid">PMC11238105</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="jgh370406-cit-0027">
+<string-name name-style="western">
+<given-names>H. K.</given-names>
+<surname>Jeon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. H.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. I.</given-names>
+<surname>Cheon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. C.</given-names>
+<surname>Shin</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>B. J.</given-names>
+<surname>Lee</surname>
+</string-name>, “<article-title>Efficacy of Tegoprazan in Patients With Laryngopharyngeal Reflux Disease: Preliminary Feasibility Study</article-title>,” <source>Journal of Clinical Medicine</source>
+<volume>12</volume> (<year>2023</year>): <elocation-id>6116</elocation-id>, <pub-id pub-id-type="doi">10.3390/jcm12196116</pub-id>.<pub-id pub-id-type="pmid">37834761</pub-id>
+<pub-id pub-id-type="pmcid">PMC10573336</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="jgh370406-cit-0028">
+<string-name name-style="western">
+<given-names>J. S.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Ko</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Chung</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T. H.</given-names>
+<surname>Kim</surname>
+</string-name>, “<article-title>Efficacy of Tegoprazan‐Based Bismuth Quadruple Therapy Compared With Bismuth Quadruple Therapy for <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> Infection: A Randomized, Double‐Blind, Active‐Controlled Study</article-title>,” <source>Helicobacter</source>
+<volume>28</volume> (<year>2023</year>): <elocation-id>e12977</elocation-id>, <pub-id pub-id-type="doi">10.1111/hel.12977</pub-id>.<pub-id pub-id-type="pmid">37083222</pub-id>
+</mixed-citation></ref><ref id="jgh370406-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="jgh370406-cit-0029">
+<string-name name-style="western">
+<given-names>J. S.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. I.</given-names>
+<surname>Seo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. H.</given-names>
+<surname>Kang</surname>
+</string-name>, et al., “<article-title>Effects of Tegoprazan Versus Esomeprazole on Nighttime Heartburn and Sleep Quality in Gastroesophageal Reflux Disease: Multicenter Double‐Blind Randomized Controlled Trial</article-title>,” <source>Journal of Neurogastroenterology and Motility</source>
+<volume>29</volume> (<year>2023</year>): <fpage>58</fpage>–<lpage>64</lpage>, <pub-id pub-id-type="doi">10.5056/jnm22104</pub-id>.<pub-id pub-id-type="pmid">36581325</pub-id>
+<pub-id pub-id-type="pmcid">PMC9837551</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="jgh370406-cit-0030">
+<string-name name-style="western">
+<given-names>S. H.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. B.</given-names>
+<surname>Cho</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. J.</given-names>
+<surname>Chun</surname>
+</string-name>, et al., “<article-title>Randomised Clinical Trial: Comparison of Tegoprazan and Placebo in Non‐Erosive Reflux Disease</article-title>,” <source>Alimentary Pharmacology &amp; Therapeutics</source>
+<volume>54</volume> (<year>2021</year>): <fpage>402</fpage>–<lpage>411</lpage>, <pub-id pub-id-type="doi">10.1111/apt.16477</pub-id>.<pub-id pub-id-type="pmid">34227708</pub-id>
+<pub-id pub-id-type="pmcid">PMC8361733</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="jgh370406-cit-0031">
+<string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Kong</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I. A.</given-names>
+<surname>Mirza</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Zhang</surname>
+</string-name>, et al., “<article-title>Fourteen‐Day Tegoprazan–Amoxicillin Dual Therapy as First‐Line Treatment of <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> Infection (SHARE2301): Multicenter Noninferiority Randomized Clinical Trial</article-title>,” <source>Helicobacter</source>
+<volume>29</volume> (<year>2024</year>): <elocation-id>e13098</elocation-id>, <pub-id pub-id-type="doi">10.1111/hel.13098</pub-id>.<pub-id pub-id-type="pmid">38853394</pub-id>
+</mixed-citation></ref><ref id="jgh370406-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="jgh370406-cit-0032">
+<string-name name-style="western">
+<given-names>J. W.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Jo</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Lee</surname>
+</string-name>, “<article-title>Efficacy of Tegoprazan‐Containing Sequential Eradication Treatment Compared to Esomeprazole ‐Containing Sequential Eradication of <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> in South Korea, a Region With High Antimicrobial Resistance: A Prospective, Randomized</article-title>,” <source>Single Tertiary Center Study. Helicobacter</source>
+<volume>29</volume> (<year>2024</year>): <elocation-id>e13143</elocation-id>, <pub-id pub-id-type="doi">10.1111/hel.13143</pub-id>.<pub-id pub-id-type="pmid">39434634</pub-id>
+</mixed-citation></ref><ref id="jgh370406-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="jgh370406-cit-0033">
+<string-name name-style="western">
+<given-names>K. J.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. K.</given-names>
+<surname>Son</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. H.</given-names>
+<surname>Kim</surname>
+</string-name>, et al., “<article-title>Randomised Phase 3 Trial: Tegoprazan vs Esomeprazole in Patients With Erosive Oesophagitis</article-title>,” <source>Alimentary Pharmacology &amp; Therapeutics</source>
+<volume>49</volume> (<year>2019</year>): <fpage>864</fpage>–<lpage>872</lpage>, <pub-id pub-id-type="doi">10.1111/apt.15185</pub-id>.<pub-id pub-id-type="pmid">30843245</pub-id>
+<pub-id pub-id-type="pmcid">PMC6594096</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="jgh370406-cit-0034">
+<string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Lin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Huang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Liu</surname>
+</string-name>, et al., “<article-title>Tegoprazan–Amoxicillin Dual Therapy for <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> Eradication: Prospective Randomized Multicenter Study in Fujian, China</article-title>,” <source>Helicobacter</source>
+<volume>29</volume> (<year>2024</year>): <elocation-id>e13151</elocation-id>, <pub-id pub-id-type="doi">10.1111/hel.13151</pub-id>.<pub-id pub-id-type="pmid">39523458</pub-id>
+</mixed-citation></ref><ref id="jgh370406-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="jgh370406-cit-0035">
+<string-name name-style="western">
+<given-names>J. Y.</given-names>
+<surname>Park</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Hong</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I. J.</given-names>
+<surname>Choi</surname>
+</string-name>, et al., “<article-title>Tegoprazan‐Based Triple Therapy for <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> Eradication: A Phase III Multicenter Randomized Clinical Trial</article-title>,” <source>Helicobacter</source>
+<volume>31</volume> (<year>2026</year>): <elocation-id>e70106</elocation-id>, <pub-id pub-id-type="doi">10.1111/hel.70106</pub-id>.<pub-id pub-id-type="pmid">41531249</pub-id>
+<pub-id pub-id-type="pmcid">PMC12800724</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="jgh370406-cit-0036">
+<string-name name-style="western">
+<given-names>C. M.</given-names>
+<surname>Shin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. C.</given-names>
+<surname>Choi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. W.</given-names>
+<surname>Cho</surname>
+</string-name>, et al., “<article-title>Comparison of Tegoprazan and Lansoprazole in Patients With Erosive Esophagitis up to 4 Weeks: Multicenter Randomized Double‐Blind Active‐Comparator Phase 4 Trial</article-title>,” <source>Neurogastroenterology and Motility</source>
+<volume>37</volume> (<year>2025</year>): <elocation-id>e14969</elocation-id>, <pub-id pub-id-type="doi">10.1111/nmo.14969</pub-id>.<pub-id pub-id-type="pmid">39587796</pub-id>
+<pub-id pub-id-type="pmcid">PMC11650551</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="jgh370406-cit-0037">
+<string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Song</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Li</surname>
+</string-name>, et al., “<article-title>Tegoprazan‐Based Versus Esomeprazole ‐Based Triple Therapy Plus Bismuth for First‐Line <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> Eradication: Nationwide Multicenter Double‐Blind Double‐Dummy Randomized Controlled Trial</article-title>,” <source>Chinese Medical Journal</source> (<year>2025</year>), <pub-id pub-id-type="doi">10.1097/CM9.0000000000003780</pub-id>.<pub-id pub-id-type="pmid">40846665</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="jgh370406-cit-0038">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Kim</surname>
+</string-name>, et al., “<article-title>Night‐Time Gastric Acid Suppression by Tegoprazan Compared to Vonoprazan or Esomeprazole</article-title>,” <source>British Journal of Clinical Pharmacology</source>
+<volume>88</volume> (<year>2022</year>): <fpage>3288</fpage>–<lpage>3296</lpage>, <pub-id pub-id-type="doi">10.1111/bcp.15268</pub-id>.<pub-id pub-id-type="pmid">35146797</pub-id>
+<pub-id pub-id-type="pmcid">PMC9305887</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="jgh370406-cit-0039">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Zhu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Xue</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Song</surname>
+</string-name>, et al., “<article-title>Efficacy and Safety of Tegoprazan (LXI‐15028) vs Esomeprazole in Patients With Erosive Esophagitis: Multicenter Randomized Double‐Blind Non‐Inferiority Phase 3 Trial</article-title>,” <source>Chinese Medical Journal</source>
+<volume>138</volume> (<year>2024</year>): <fpage>2464</fpage>–<lpage>2471</lpage>, <pub-id pub-id-type="doi">10.1097/CM9.0000000000003276</pub-id>.<pub-id pub-id-type="pmid">39474720</pub-id>
+<pub-id pub-id-type="pmcid">PMC12487912</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="jgh370406-cit-0040">
+<string-name name-style="western">
+<given-names>Y. H.</given-names>
+<surname>Kwon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. W.</given-names>
+<surname>Jeon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. Y.</given-names>
+<surname>Nam</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. W.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. H.</given-names>
+<surname>Park</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H. J.</given-names>
+<surname>Bae</surname>
+</string-name>, “<article-title>Ten‐Day Tegoprazan‐Based Concomitant Therapy as First‐Line Treatment for <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Helicobacter pylori</italic>
+</styled-content> Eradication</article-title>,” <source>Korean Journal of Internal Medicine</source>
+<volume>38</volume> (<year>2023</year>): <fpage>493</fpage>–<lpage>503</lpage>, <pub-id pub-id-type="doi">10.3904/kjim.2022.345</pub-id>.<pub-id pub-id-type="pmid">37369525</pub-id>
+<pub-id pub-id-type="pmcid">PMC10338248</pub-id></mixed-citation></ref><ref id="jgh370406-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="jgh370406-cit-0041">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Zou</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Ouyang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Cheng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Shi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Sun</surname>
+</string-name>, “<article-title>Acid‐Suppressive Drugs: Systematic Review and Network Meta‐Analysis of Their Nocturnal Acid‐Inhibitory Effect</article-title>,” <source>Pharmacotherapy</source>
+<volume>44</volume> (<year>2024</year>): <fpage>171</fpage>–<lpage>183</lpage>, <pub-id pub-id-type="doi">10.1002/phar.2899</pub-id>.<pub-id pub-id-type="pmid">38049205</pub-id>
+</mixed-citation></ref></ref-list></back></article>

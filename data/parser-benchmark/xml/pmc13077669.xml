@@ -1,0 +1,740 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="hsr272060" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Health Sci Rep</journal-id><journal-id journal-id-type="iso-abbrev">Health Sci Rep</journal-id><journal-id journal-id-type="pmc-domain-id">3569</journal-id><journal-id journal-id-type="pmc-domain">hscirep</journal-id><journal-id journal-id-type="publisher-id">HSR2</journal-id><journal-title-group><journal-title>Health Science Reports</journal-title></journal-title-group><issn pub-type="epub">2398-8835</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13077669</article-id><article-id pub-id-type="pmcid-ver">PMC13077669.1</article-id><article-id pub-id-type="pmcaid">13077669</article-id><article-id pub-id-type="pmcaiid">13077669</article-id><article-id pub-id-type="pmid">41988398</article-id><article-id pub-id-type="doi">10.1002/hsr2.72060</article-id><article-id pub-id-type="publisher-id">HSR272060</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Systematic Review</subject></subj-group><subj-group subj-group-type="heading"><subject>Systematic Review</subject></subj-group></article-categories><title-group><article-title>The Economic Burden of Gastric Cancer: A Systematic Review</article-title></title-group><contrib-group><contrib id="hsr272060-cr-0001" contrib-type="author"><name name-style="western"><surname>Ghanbari‐Jahromi</surname><given-names initials="M">Mohadeseh</given-names></name><xref rid="hsr272060-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="hsr272060-cr-0002" contrib-type="author"><name name-style="western"><surname>Bordbar</surname><given-names initials="N">Najmeh</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-9179-857X</contrib-id><xref rid="hsr272060-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="hsr272060-cr-0003" contrib-type="author" corresp="yes"><name name-style="western"><surname>Jalali</surname><given-names initials="FS">Faride Sadat</given-names></name><xref rid="hsr272060-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><address><email>fs.jalali@yahoo.com</email></address></contrib></contrib-group><aff id="hsr272060-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Research Center for Social Determinants of Health</named-content>
+<institution>Jahrom University of Medical Sciences</institution>
+<city>Jahrom</city>
+<country country="IR">Iran</country>
+</aff><aff id="hsr272060-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Health Human Resources Research Center, School of Health Management and Information Sciences</named-content>
+<institution>Shiraz University of Medical Sciences</institution>
+<city>Shiraz</city>
+<country country="IR">Iran</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold> Faride Sadat Jalali (<email>fs.jalali@yahoo.com</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>14</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>9</volume><issue seq="20">4</issue><issue-id pub-id-type="pmc-issue-id">510729</issue-id><issue-id pub-id-type="doi">10.1002/hsr2.v9.4</issue-id><elocation-id>e72060</elocation-id><history><date date-type="rev-recd"><day>28</day><month>9</month><year>2025</year></date><date date-type="received"><day>20</day><month>2</month><year>2025</year></date><date date-type="accepted"><day>03</day><month>3</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>14</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>15</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-16 09:25:13.197"><day>16</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Health Science Reports</italic> published by Wiley Periodicals LLC.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="HSR2-9-e72060.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:HSR2-9-e72060.pdf"/><abstract><title>ABSTRACT</title><sec id="hsr272060-sec-0010"><title>Background and Aims</title><p>Gastric cancer is the fifth most common cancer, as well as the fourth leading cause of cancer‐related mortality. It significantly burdens patients, families, and the healthcare system. Considering this large economic impact, this review study aims to evaluate the total economic burden of gastric cancer.</p></sec><sec id="hsr272060-sec-0020"><title>Methods</title><p>An extensive search was conducted in PubMed, Web of Science, ScienceDirect, Scopus, and ProQuest databases for all original research articles that evaluated/reported the economic burden of gastric cancer. No timing restrictions and studies up to December 2024 were included. The inclusion criteria were defined using the PICOTS model, and the quality of the selected studies was assessed using the Drummond checklist by two independent researchers. Data from each study were extracted using a standardized data extraction form.</p></sec><sec id="hsr272060-sec-0030"><title>Results</title><p>The cost data originated from 17 studies of gastric cancer. Most of the studies were performed in Asia, and the societal perspective was the most common approach for cost measurement. Direct medical costs would represent the most significant component of the economic burden of gastric cancer, the authors found. Chemotherapy was the dominant cost factor among these. In addition, indirect costs included a significant share of non‐medical costs, such as travel, lodging, and home care. These included indirect productivity loss above due to absenteeism, premature mortality, and time costs.</p></sec><sec id="hsr272060-sec-0040"><title>Conclusion</title><p>This review consolidates evidence that the economic burden of gastric cancer is multifaceted and substantial, driven predominantly by direct medical costs like chemotherapy but significantly amplified by indirect productivity losses. The variation in healthcare systems and stage at diagnosis are critical factors shaping this economic impact, underscoring the potential for early detection and tailored economic interventions to mitigate this burden.</p></sec></abstract><kwd-group><kwd id="hsr272060-kwd-0001">cancer</kwd><kwd id="hsr272060-kwd-0002">economic burden</kwd><kwd id="hsr272060-kwd-0003">gastric</kwd><kwd id="hsr272060-kwd-0004">review</kwd><kwd id="hsr272060-kwd-0005">stomach</kwd></kwd-group><counts><fig-count count="1"/><table-count count="3"/><page-count count="12"/><word-count count="6278"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:14.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body><def-list list-content="abbreviations"><title>Abbreviations</title><def-item><term>CPI</term><def><p>consumer price index</p></def></def-item><def-item><term>GC</term><def><p>gastric cancer</p></def></def-item><def-item><term>HICs</term><def><p>high‐income countries</p></def></def-item><def-item><term>
+<italic toggle="yes">H. pylori</italic>
+</term><def><p>
+<italic toggle="yes">Helicobacter pylori</italic>
+</p></def></def-item><def-item><term>LMICs</term><def><p>low‐ and middle‐income countries</p></def></def-item><def-item><term>WHO</term><def><p>World Health Organization</p></def></def-item></def-list><sec id="hsr272060-sec-0050"><label>1</label><title>Introduction</title><p>Gastric cancer (GC) ranks as the fifth most prevalent cancer globally and stands as the fourth leading cause of cancer‐related mortality [<xref rid="hsr272060-bib-0001" ref-type="bibr">1</xref>]. GC develops when abnormal cells in the stomach begin to grow and divide uncontrolled [<xref rid="hsr272060-bib-0002" ref-type="bibr">2</xref>]. According to the latest report by the World Health Organization (WHO), 970,000 new cases of GC were diagnosed in 2022, with 660,175 deaths reported that same year [<xref rid="hsr272060-bib-0003" ref-type="bibr">3</xref>]. According to studies by the International Agency for Research on Cancer in 2022, it is predicted that the number of patients with GC will reach 1.67 million by the end of 2045 [<xref rid="hsr272060-bib-0004" ref-type="bibr">4</xref>].</p><p>With increasing diagnostic and therapeutic technologies, lifestyle changes, and expectations from the healthcare system, healthcare spending and out‐of‐pocket expenses for patients' families are increasing [<xref rid="hsr272060-bib-0005" ref-type="bibr">5</xref>]. Additionally, there is evidence that cancer patients and their families are under considerable financial burdens [<xref rid="hsr272060-bib-0006" ref-type="bibr">6</xref>, <xref rid="hsr272060-bib-0007" ref-type="bibr">7</xref>]. Moreover, cancer, particularly GC, places a substantial financial burden on both households and the healthcare system. Beyond the direct impact of the disease, it also contributes to economic losses by reducing productivity and overall output. From a societal standpoint, these costs are considerable, accounting for 5%–10% of total healthcare expenditures in many developed nations [<xref rid="hsr272060-bib-0008" ref-type="bibr">8</xref>].</p><p>It is regarded as a severe disease in terms of management and treatment, with associated costs being nearly 10 times higher than those of non‐cancerous conditions, particularly as the disease progresses [<xref rid="hsr272060-bib-0009" ref-type="bibr">9</xref>]. Research conducted in 2016 estimated the total cost and economic burden of GC in Kohgilooyeh and Boyer‐Ahmad province, Iran, at $436,237, of which the majority was direct medical costs (59%) [<xref rid="hsr272060-bib-0009" ref-type="bibr">9</xref>]. According to a study by Jalilian et al. in Iran (2019), the average direct medical cost was estimated to be $3288.02, and the average direct non‐medical cost was $377.54 for GC. The average total cost was also $4170.97, with 35.5% of the cost being borne by the patient [<xref rid="hsr272060-bib-0007" ref-type="bibr">7</xref>]. Zhang et al. showed that the average total direct cost per patient was $9899 (medical cost 91.2%, non‐medical cost 8.8%), and the out‐of‐pocket cost of a patient with newly diagnosed GC was $5368 per year [<xref rid="hsr272060-bib-0006" ref-type="bibr">6</xref>]. Solanki et al. found that the average cost of care per inpatient for GC increased from $21710 in 2001 to $24706 in 2011 [<xref rid="hsr272060-bib-0010" ref-type="bibr">10</xref>]. Another study in China showed that the annual cost of illness for patients with gastric and esophageal cancer was $10,449 in urban areas and $2927 in rural areas, respectively [<xref rid="hsr272060-bib-0011" ref-type="bibr">11</xref>].</p><p>Timely estimation of the costs of cancer care helps assess the population's overall health in the current healthcare system. This assessment is crucial for national cancer programs and policies, as it supports the development of effective strategies to reduce the financial burden on families and society [<xref rid="hsr272060-bib-0006" ref-type="bibr">6</xref>]. Therefore, this study systematically compares the costs of GC in low‐ and middle‐income countries (LMICs) and high‐income countries (HICs) based on recent research on the cost of this disease, which has not been covered in previous reviews. This study examines the global and regional economic impact of GC. It comprehensively analyzes the social, healthcare, and individual perspectives, disaggregating this disease's direct and indirect costs. The findings of this pioneering review can serve as a valuable resource for cost‐effectiveness analyses of GC‐related diseases and for guiding the development and implementation of clinical guidelines.</p></sec><sec sec-type="methods" id="hsr272060-sec-0060"><label>2</label><title>Methods</title><p>This study conducted a systematic review in accordance with the Preferred Reporting Items for Systematic Reviews and Meta‐Analyses (PRISMA) guideline. The review utilized articles related to the economic burden of GC based on the PICOTS model to establish inclusion criteria, a standard framework recommended for structuring systematic review questions [<xref rid="hsr272060-bib-0012" ref-type="bibr">12</xref>, <xref rid="hsr272060-bib-0013" ref-type="bibr">13</xref>]. The study population comprised patients diagnosed with GC, while interventions encompassed various clinical treatments. No specific limitations were placed on comparators. The outcomes assessed included both direct and indirect costs associated with GC. The review considered studies published up to December 2024.</p><p>The development of the search strategy, including the identification of clinical and economic terms, was conducted in collaboration with a medical librarian to ensure its robustness and comprehensiveness across all selected databases.</p><p>The study design focused on cost‐benefit analyses that gathered cost‐related data from GC patients. A societal perspective was adopted for cost estimation, as it provides a comprehensive evaluation by incorporating all direct (medical and non‐medical) and indirect costs. This approach enables a thorough assessment of the financial impact of GC, making it the preferred perspective over others. Unlike narrower approaches, the societal perspective examines not only the economic effects on the patient or healthcare provider but also the broader implications for families and the healthcare system as a whole [<xref rid="hsr272060-bib-0014" ref-type="bibr">14</xref>]. Relevant studies were identified and retrieved using a structured search strategy (Table <xref rid="hsr272060-tbl-0001" ref-type="table">1</xref>).</p><table-wrap position="float" id="hsr272060-tbl-0001" content-type="Table" orientation="portrait"><label>Table 1</label><caption><p>Search strategy for the economic burden of gastric cancer literature review.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Database</th><th align="center" valign="bottom" rowspan="1" colspan="1">Search string</th><th align="center" valign="bottom" rowspan="1" colspan="1">
+<italic toggle="yes">N</italic>
+</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Scopus</td><td align="left" valign="top" rowspan="1" colspan="1">(TITLE (neoplasm OR cancer) AND TITLE (stomach OR gastric) AND TITLE (cost OR expenditure OR “cost of illness” OR “cost analysis” OR economics OR “burden of illness” OR “economic burden” OR “illness burden” OR “direct cost” OR “indirect cost” OR “financial burden” OR expense)) AND (LIMIT‐TO (LANGUAGE, “English”))</td><td align="center" valign="top" rowspan="1" colspan="1">156</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">PubMed</td><td align="left" valign="top" rowspan="1" colspan="1">Search: ((neoplasm[Title] OR cancer[Title]) AND (Stomach[Title] OR Gastric[Title])) AND (cost[Title] OR expenditure[Title] OR “cost of illness”[Title] OR “cost analysis”[Title] OR economics[Title] OR “burden of illness”[Title] OR “economic burden”[Title] OR “illness burden”[Title] OR “direct cost”[Title]c OR “indirect cost”[Title] OR “financial burden”[Title] OR expense[Title]) Filters: English</td><td align="center" valign="top" rowspan="1" colspan="1">122</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">WOS</td><td align="left" valign="top" rowspan="1" colspan="1">neoplasm OR cancer (Title) and Stomach OR Gastric (Title) and cost OR expenditure OR “cost of illness” OR “cost analysis” OR economics OR “burden of illness” OR “economic burden” OR “illness burden” OR “direct cost” OR “indirect cost” OR “financial burden” OR expense (Title) and English (Languages)</td><td align="center" valign="top" rowspan="1" colspan="1">231</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">ProQuest</td><td align="left" valign="top" rowspan="1" colspan="1">title(neoplasm OR cancer) AND title (Stomach OR Gastric) AND title(cost OR expenditure OR “cost of illness” OR “cost analysis” OR economics OR “burden of illness” OR “economic burden” OR “illness burden” OR “direct cost” OR “indirect cost” OR “financial burden” OR expense) Limits applied</td><td align="center" valign="top" rowspan="1" colspan="1">49</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Science Direct</td><td align="left" valign="top" rowspan="1" colspan="1">title(neoplasm OR cancer) AND title (Stomach OR Gastric) AND title(cost OR expenditure OR “cost of illness” OR “cost analysis” OR economics OR “burden of illness” OR “economic burden” OR “illness burden” OR “direct cost” OR “indirect cost” OR “financial burden” OR expense)</td><td align="center" valign="top" rowspan="1" colspan="1">62</td></tr><tr><td align="left" colspan="2" valign="top" rowspan="1">Total</td><td align="center" valign="top" rowspan="1" colspan="1">620</td></tr></tbody></table><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><p>The selection of relevant studies was carried out in multiple stages. Initially, 620 articles were identified across all databases. Reference management and duplicate removal were performed using EndNote 20. After eliminating duplicate entries, 248 articles remained for further review. The subsequent screening of titles and abstracts was conducted independently by two researchers using the web‐based platform Rayyan (Qatar Computing Research Institute). After assessing titles and abstracts, 171 articles were excluded, leaving 77 for full‐text evaluation. Drummond's checklist was utilized to assess the quality of the studies, with modifications made to exclude sections unsuitable for costing studies. The results of the quality assessment are presented in Table <xref rid="hsr272060-suppl-0001" ref-type="supplementary-material">S1</xref>. Ultimately, the research team selected 17 articles for inclusion (Figure <xref rid="hsr272060-fig-0001" ref-type="fig">1</xref>).</p><fig position="float" fig-type="Figure" id="hsr272060-fig-0001" orientation="portrait"><label>Figure 1</label><caption><p>PRISMA flow diagram illustrating the systematic review process.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="HSR2-9-e72060-g001.jpg"/></fig><p>Two researchers conducted the selection process independently, with a third researcher resolving any discrepancies through consensus. In the final stage, a standardized data extraction form was used to collect relevant information from each study. The form was designed in Microsoft Word (version 2021), and all extracted data were compiled and managed in Microsoft Excel 2021 to ensure accuracy and facilitate analysis. Extracted data included publication year, research location, sample size, study perspective, costing methodology, types of costs assessed, and average direct medical, direct non‐medical, and indirect costs. Since the studies were conducted in various countries and across different years, cost figures were adjusted for comparability using the Consumer Price Index (CPI) data obtained from the World Bank [<xref rid="hsr272060-bib-0015" ref-type="bibr">15</xref>].</p></sec><sec sec-type="results" id="hsr272060-sec-0070"><label>3</label><title>Results</title><p>After evaluating the articles using the PICOTS model, data from 17 studies on the costs of GC patients were extracted. The findings of this review are summarized in Tables <xref rid="hsr272060-tbl-0002" ref-type="table">2</xref> and <xref rid="hsr272060-tbl-0003" ref-type="table">3</xref>.</p><table-wrap position="float" id="hsr272060-tbl-0002" content-type="Table" orientation="portrait"><label>Table 2</label><caption><p>Studies on the economic burden of gastric cancer.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">N</th><th align="center" valign="bottom" rowspan="1" colspan="1">Author</th><th align="center" valign="bottom" rowspan="1" colspan="1">Year</th><th align="center" valign="bottom" rowspan="1" colspan="1">Place</th><th align="center" valign="bottom" rowspan="1" colspan="1">Participants</th><th align="center" valign="bottom" rowspan="1" colspan="1">Study perspective</th><th align="center" valign="bottom" rowspan="1" colspan="1">Approach</th><th align="center" valign="bottom" rowspan="1" colspan="1">Measured cost type</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">1</td><td align="left" valign="top" rowspan="1" colspan="1">Abraham [<xref rid="hsr272060-bib-0016" ref-type="bibr">16</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2020</td><td align="left" valign="top" rowspan="1" colspan="1">US</td><td align="left" valign="top" rowspan="1" colspan="1">392 patients with advanced metastatic gastric cancer</td><td align="left" valign="top" rowspan="1" colspan="1">Societal perspective</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct costs</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">2</td><td align="left" valign="top" rowspan="1" colspan="1">Castro [<xref rid="hsr272060-bib-0017" ref-type="bibr">17</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2017</td><td align="left" valign="top" rowspan="1" colspan="1">US</td><td align="left" valign="top" rowspan="1" colspan="1">524 patients with gastric adenocarcinoma</td><td align="left" valign="top" rowspan="1" colspan="1">Patient perspective</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct costs and direct non‐medical costs</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">3</td><td align="left" valign="top" rowspan="1" colspan="1">Chen [<xref rid="hsr272060-bib-0018" ref-type="bibr">18</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2017</td><td align="left" valign="top" rowspan="1" colspan="1">China</td><td align="left" valign="top" rowspan="1" colspan="1">176 advanced gastric cancer</td><td align="left" valign="top" rowspan="1" colspan="1">Chinese healthcare payer</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct medical costs, direct non‐medical costs, and indirect costs</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">4</td><td align="left" valign="top" rowspan="1" colspan="1">Eghdami [<xref rid="hsr272060-bib-0009" ref-type="bibr">9</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2019</td><td align="left" valign="top" rowspan="1" colspan="1">Iran</td><td align="left" valign="top" rowspan="1" colspan="1">110 gastric cancer patients</td><td align="left" valign="top" rowspan="1" colspan="1">Patients' perspective</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct medical costs, direct non‐medical costs, and indirect costs</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">5</td><td align="left" valign="top" rowspan="1" colspan="1">Gourzoulidis [<xref rid="hsr272060-bib-0019" ref-type="bibr">19</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2021</td><td align="left" valign="top" rowspan="1" colspan="1">Greece</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="left" valign="top" rowspan="1" colspan="1">Public payer perspective</td><td align="left" valign="top" rowspan="1" colspan="1">Top‐down</td><td align="left" valign="top" rowspan="1" colspan="1">Total cost</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">6</td><td align="left" valign="top" rowspan="1" colspan="1">Haga [<xref rid="hsr272060-bib-0020" ref-type="bibr">20</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2013</td><td align="left" valign="top" rowspan="1" colspan="1">Japan</td><td align="left" valign="top" rowspan="1" colspan="1">127,690 stomach cancer</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct costs and indirect costs</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">7</td><td align="left" valign="top" rowspan="1" colspan="1">He [<xref rid="hsr272060-bib-0021" ref-type="bibr">21</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2013</td><td align="left" valign="top" rowspan="1" colspan="1">China</td><td align="left" valign="top" rowspan="1" colspan="1">188 gastric cancer (stage 2 and 3)</td><td align="left" valign="top" rowspan="1" colspan="1">Societal perspective</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct medical costs, direct non‐medical costs</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">8</td><td align="left" valign="top" rowspan="1" colspan="1">Hess [<xref rid="hsr272060-bib-0022" ref-type="bibr">22</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2016</td><td align="left" valign="top" rowspan="1" colspan="1">US</td><td align="left" valign="top" rowspan="1" colspan="1">5257 patients with gastric cancer</td><td align="left" valign="top" rowspan="1" colspan="1">Third‐party payer perspective and patient perspective</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct medical costs</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">9</td><td align="left" valign="top" rowspan="1" colspan="1">Hong [<xref rid="hsr272060-bib-0023" ref-type="bibr">23</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2017</td><td align="left" valign="top" rowspan="1" colspan="1">Taiwan</td><td align="left" valign="top" rowspan="1" colspan="1">82 advanced gastric cancer</td><td align="left" valign="top" rowspan="1" colspan="1">Societal perspective</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct medical costs, direct non‐medical costs, and indirect costs</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">10</td><td align="left" valign="top" rowspan="1" colspan="1">Izadi [<xref rid="hsr272060-bib-0024" ref-type="bibr">24</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2016</td><td align="left" valign="top" rowspan="1" colspan="1">Iran</td><td align="left" valign="top" rowspan="1" colspan="1">160 patients with stomach cancer</td><td align="left" valign="top" rowspan="1" colspan="1">Third payer's patient perspective</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct medical costs</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">11</td><td align="left" valign="top" rowspan="1" colspan="1">Jalilian [<xref rid="hsr272060-bib-0007" ref-type="bibr">7</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2019</td><td align="left" valign="top" rowspan="1" colspan="1">Iran</td><td align="left" valign="top" rowspan="1" colspan="1">102 with gastric cancer at the period of the first 6 months after diagnosis</td><td align="left" valign="top" rowspan="1" colspan="1">Perspective of society</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct medical costs, Direct non‐medical costs, and Indirect costs</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">12</td><td align="left" valign="top" rowspan="1" colspan="1">Karve [<xref rid="hsr272060-bib-0025" ref-type="bibr">25</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2015</td><td align="left" valign="top" rowspan="1" colspan="1">US</td><td align="left" valign="top" rowspan="1" colspan="1">2583 elderly patients diagnosed with advanced stage gastric cancer</td><td align="left" valign="top" rowspan="1" colspan="1">Third payer's perspective</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct medical costs</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">13</td><td align="left" valign="top" rowspan="1" colspan="1">Zhoua [<xref rid="hsr272060-bib-0026" ref-type="bibr">26</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2017</td><td align="left" valign="top" rowspan="1" colspan="1">Hong Kong</td><td align="left" valign="top" rowspan="1" colspan="1">58 advanced gastric cancer</td><td align="left" valign="top" rowspan="1" colspan="1">Healthcare societal perspectives.</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct medical costs and indirect costs</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">14</td><td align="left" valign="top" rowspan="1" colspan="1">Mohammadpour [<xref rid="hsr272060-bib-0027" ref-type="bibr">27</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2020</td><td align="left" valign="top" rowspan="1" colspan="1">Iran</td><td align="left" valign="top" rowspan="1" colspan="1">449 patients with gastric cancer</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct medical costs</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">15</td><td align="left" valign="top" rowspan="1" colspan="1">Quintana [<xref rid="hsr272060-bib-0028" ref-type="bibr">28</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2017</td><td align="left" valign="top" rowspan="1" colspan="1">Mexico</td><td align="left" valign="top" rowspan="1" colspan="1">180 advanced and metastatic gastric cancer</td><td align="left" valign="top" rowspan="1" colspan="1">Payer perspective</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct medical costs</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">16</td><td align="left" valign="top" rowspan="1" colspan="1">Saito [<xref rid="hsr272060-bib-0029" ref-type="bibr">29</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2017</td><td align="left" valign="top" rowspan="1" colspan="1">Japan</td><td align="left" valign="top" rowspan="1" colspan="1">Patients with advanced gastric cancer</td><td align="left" valign="top" rowspan="1" colspan="1">Healthcare payer's perspective</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct medical costs</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">17</td><td align="left" valign="top" rowspan="1" colspan="1">Bilici [<xref rid="hsr272060-bib-0030" ref-type="bibr">30</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2017</td><td align="left" valign="top" rowspan="1" colspan="1">Turkey</td><td align="left" valign="top" rowspan="1" colspan="1">8865</td><td align="left" valign="top" rowspan="1" colspan="1">Healthcare payer perspective</td><td align="left" valign="top" rowspan="1" colspan="1">Bottom‐up</td><td align="left" valign="top" rowspan="1" colspan="1">Direct medical costs, direct non‐medical costs, and indirect costs</td></tr></tbody></table><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><table-wrap position="float" id="hsr272060-tbl-0003" content-type="Table" orientation="portrait"><label>Table 3</label><caption><p>Average direct and indirect costs of the economic burden of gastric cancer (2023 USD).</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th valign="middle" rowspan="2" align="left" colspan="1">N</th><th valign="middle" rowspan="2" align="center" colspan="1">First author</th><th colspan="3" align="center" valign="bottom" rowspan="1">Direct medical costs</th><th colspan="3" align="center" valign="bottom" rowspan="1">Direct non‐medical costs</th><th align="center" colspan="3" valign="bottom" rowspan="1">Indirect costs</th><th align="center" colspan="2" valign="bottom" rowspan="1">Total cost</th></tr><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="center" valign="bottom" rowspan="1" colspan="1">Per patient (Mean)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Total</th><th align="center" valign="bottom" rowspan="1" colspan="1">Constituents</th><th align="center" valign="bottom" rowspan="1" colspan="1">Per patient (Mean)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Total</th><th align="left" valign="bottom" rowspan="1" colspan="1">Most constituents</th><th align="center" valign="bottom" rowspan="1" colspan="1">Per patient (Mean)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Total</th><th align="left" valign="bottom" rowspan="1" colspan="1">Most constituents</th><th align="center" valign="bottom" rowspan="1" colspan="1">Per Patient (Mean)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Total</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">Abraham [<xref rid="hsr272060-bib-0016" ref-type="bibr">16</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">617.42</td><td align="center" valign="top" rowspan="1" colspan="1">242,030.54</td><td align="left" valign="top" rowspan="1" colspan="1">Inpatient admissions (32.2%), emergency room visits (1.6%), Outpatient services (66.2%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref>, physician office visits, Physician other services, procedures, imaging, tests—lab, tests —other <xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>, durable medical equipment, medication and related services, PT/OT/speech, pharmacy prescriptions</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">Castro [<xref rid="hsr272060-bib-0017" ref-type="bibr">17</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">4536.47</td><td align="center" valign="top" rowspan="1" colspan="1">2,377,124.85</td><td align="left" valign="top" rowspan="1" colspan="1">Hospital admission (51.8%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref>, chemotherapy (29.2%), radiotherapy (9.3%), surgery (9.7%)<xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">3</td><td align="center" valign="top" rowspan="1" colspan="1">Chen [<xref rid="hsr272060-bib-0018" ref-type="bibr">18</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">257.95</td><td align="center" valign="top" rowspan="1" colspan="1">45,400.78</td><td align="left" valign="top" rowspan="1" colspan="1">Medicine (89.0%), outpatient services (1.4%), tests (6.6%)</td><td align="center" valign="top" rowspan="1" colspan="1">552.41</td><td align="center" valign="top" rowspan="1" colspan="1">97,225.04</td><td align="left" valign="top" rowspan="1" colspan="1">Travel (1.2%)</td><td align="center" valign="top" rowspan="1" colspan="1">855.16</td><td align="center" valign="top" rowspan="1" colspan="1">150,508.17</td><td align="left" valign="top" rowspan="1" colspan="1">Absenteeism (1.9%)</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">4</td><td align="center" valign="top" rowspan="1" colspan="1">Eghdami [<xref rid="hsr272060-bib-0009" ref-type="bibr">9</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">16,281.85</td><td align="center" valign="top" rowspan="1" colspan="1">1,790,768.40</td><td align="left" valign="top" rowspan="1" colspan="1">Physicians and oncologists' visits (8.57%), emergency department visits (2.53%), chemotherapy (14.14%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref>, surgical services (9.50%), laboratory tests (11.45%), ultrasonography (1.78%), MRI (1.01%), CT scan (1.18%), radiology (1.37%), radiotherapy (2.09%), endoscopy (3.26%), colonoscopy (1.09%), transfer by ambulance (0.07%)<xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>, patient hospitalization (6.64%), medications (35.32%)</td><td align="center" valign="top" rowspan="1" colspan="1">3616.65</td><td align="center" valign="top" rowspan="1" colspan="1">397,907.73</td><td align="left" valign="top" rowspan="1" colspan="1">Transportation (30.93%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref>, accommodation (21.94%), meals for the patient and relatives (15.99%), patient consumables (14.20%)<xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>, accommodation for people who visit the patient at his/her home (16.95%)</td><td align="center" valign="top" rowspan="1" colspan="1">7579.72</td><td align="center" valign="top" rowspan="1" colspan="1">833,769.50</td><td align="left" valign="top" rowspan="1" colspan="1">Patients' absence from work and daily activities caused by illness (43.74%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref>, absence of patients' families from work and daily activities caused by patient care (56.26%)<xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">27,478.23</td><td align="center" valign="top" rowspan="1" colspan="1">3,022,445.63</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">5</td><td align="center" valign="top" rowspan="1" colspan="1">Gourzoulidis [<xref rid="hsr272060-bib-0019" ref-type="bibr">19</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">5091.83</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">6</td><td align="center" valign="top" rowspan="1" colspan="1">Haga [<xref rid="hsr272060-bib-0020" ref-type="bibr">20</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">15,195.37</td><td align="center" valign="top" rowspan="1" colspan="1">1,940,296.6 (22.77%)</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">51,533.68</td><td align="center" valign="top" rowspan="1" colspan="1">6,580,335,806.06</td><td align="left" valign="top" rowspan="1" colspan="1">Mortality (72.38%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref>, Morbidity (4.85%)<xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">7</td><td align="center" valign="top" rowspan="1" colspan="1">He [<xref rid="hsr272060-bib-0021" ref-type="bibr">21</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">18,760.97</td><td align="center" valign="top" rowspan="1" colspan="1">3,533,226.51</td><td align="left" valign="top" rowspan="1" colspan="1">Chemotherapy (86.4%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref>, drugs, hospital bed cost (0.9%)<xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>, tests (9.8%), venous access (2.9%)</td><td align="center" valign="top" rowspan="1" colspan="1">70.76</td><td align="center" valign="top" rowspan="1" colspan="1">13,288.97</td><td align="left" valign="top" rowspan="1" colspan="1">Travel (43.2%)</td><td align="center" valign="top" rowspan="1" colspan="1">91.51</td><td align="center" valign="top" rowspan="1" colspan="1">17,422.56</td><td align="left" valign="top" rowspan="1" colspan="1">Time (56.8٪)</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">8</td><td align="center" valign="top" rowspan="1" colspan="1">Hess [<xref rid="hsr272060-bib-0022" ref-type="bibr">22</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">313.72</td><td align="center" valign="top" rowspan="1" colspan="1">681,434.27</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">9</td><td align="center" valign="top" rowspan="1" colspan="1">Hong [<xref rid="hsr272060-bib-0023" ref-type="bibr">23</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">31,430.40</td><td align="center" valign="top" rowspan="1" colspan="1">2,577,293.07</td><td align="left" valign="top" rowspan="1" colspan="1">Inpatient costs (28.64%), outpatient costs (11.80%)<xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>, Chemotherapy (59.56%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">5552.14</td><td align="center" valign="top" rowspan="1" colspan="1">455,275.30</td><td align="left" valign="top" rowspan="1" colspan="1">Caregiver costs (84.96%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref> Transportation (15.04%)<xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">180,451.02</td><td align="center" valign="top" rowspan="1" colspan="1">14,796,983.4</td><td align="left" valign="top" rowspan="1" colspan="1">Mortality (95.6%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref>, morbidity (4.4%)<xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">10</td><td align="center" valign="top" rowspan="1" colspan="1">Izadi [<xref rid="hsr272060-bib-0024" ref-type="bibr">24</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">19,283.19</td><td align="center" valign="top" rowspan="1" colspan="1">3,085,311.02</td><td align="left" valign="top" rowspan="1" colspan="1">Medications cost (56.3%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref>, chemotherapy cost (9.2%), surgery cost (16.7%), radiotherapy cost (6.9%), tests/radiology cost (5.9%), visit cost (5.0%)<xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">11</td><td align="center" valign="top" rowspan="1" colspan="1">Jalilian [<xref rid="hsr272060-bib-0007" ref-type="bibr">7</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">21,093.41</td><td align="center" valign="top" rowspan="1" colspan="1">2,151,527.33</td><td align="left" valign="top" rowspan="1" colspan="1">Physician visits (1.19%), emergency visits (0.34%), diagnostic services (3.45%), medicine (4.53%), surgery (2.65%), chemotherapy (5.15%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref>, complementary treatments (0.61%), medical equipment and supplies (0.26%)<xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">2422.01</td><td align="center" valign="top" rowspan="1" colspan="1">247,044.61</td><td align="left" valign="top" rowspan="1" colspan="1">Travel cost</td><td align="center" valign="top" rowspan="1" colspan="1">3242.32</td><td align="center" valign="top" rowspan="1" colspan="1">330,716.79</td><td align="left" valign="top" rowspan="1" colspan="1">Lost productivity</td><td align="center" valign="top" rowspan="1" colspan="1">26,757.73</td><td align="center" valign="top" rowspan="1" colspan="1">2,729,295.15</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">12</td><td align="center" valign="top" rowspan="1" colspan="1">Karve [<xref rid="hsr272060-bib-0025" ref-type="bibr">25</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">173,847</td><td align="center" valign="top" rowspan="1" colspan="1">242,485,158.75</td><td align="left" valign="top" rowspan="1" colspan="1">Radiation therapy (16.1%), biologic therapy (1.1%)<xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>, chemotherapy, overall (37.3%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref>, chemotherapy, drugs (29.0%), chemotherapy, administration (8.3%)</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">13</td><td align="center" valign="top" rowspan="1" colspan="1">Zhoua [<xref rid="hsr272060-bib-0026" ref-type="bibr">26</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">4060.27</td><td align="center" valign="top" rowspan="1" colspan="1">235,495.45</td><td align="left" valign="top" rowspan="1" colspan="1">Medication (27.6%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref>, day ward/inpatient (7.3%) visits<xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>, laboratory tests (13.9%), x‐rays and scans (9.3%), outpatient visits (13.4%)</td><td align="center" valign="top" rowspan="1" colspan="1">76.79</td><td align="center" valign="top" rowspan="1" colspan="1">4454.21</td><td align="left" valign="top" rowspan="1" colspan="1">Travel (8.8%)</td><td align="center" valign="top" rowspan="1" colspan="1">160.50</td><td align="center" valign="top" rowspan="1" colspan="1">9309.38</td><td align="left" valign="top" rowspan="1" colspan="1">Time lost (12%)</td><td align="center" valign="top" rowspan="1" colspan="1">4297.56</td><td align="center" valign="top" rowspan="1" colspan="1">249,258.38</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">14</td><td align="center" valign="top" rowspan="1" colspan="1">Mohammadpour [<xref rid="hsr272060-bib-0027" ref-type="bibr">27</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">10,451.62</td><td align="center" valign="top" rowspan="1" colspan="1">4,692,777.43</td><td align="left" valign="top" rowspan="1" colspan="1">Endoscopy (4.87%), biopsy (0.10%) <xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>, surgery (11.27%), gerafy (4.31%), scan (1.28%), radiotherapy (3.75%), laboratory (18.05%), chemotherapy (2.12%), hospitality (54.22%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">15</td><td align="center" valign="top" rowspan="1" colspan="1">Quintana [<xref rid="hsr272060-bib-0028" ref-type="bibr">28</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">22,842.70</td><td align="center" valign="top" rowspan="1" colspan="1">4,111,685.79</td><td align="left" valign="top" rowspan="1" colspan="1">Drug acquisition (14.1%), administration (47.6%)<xref rid="hsr272060-tbl3-note-0001" ref-type="table-fn">a</xref>, adverse events (0.4%) <xref rid="hsr272060-tbl3-note-0002" ref-type="table-fn">b</xref>, radiotherapy (0.7%), hospitalization (inpatient) (15.0%), outpatient visits (4.1%), supportive care (16.3%)</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">16</td><td align="center" valign="top" rowspan="1" colspan="1">Saito [<xref rid="hsr272060-bib-0029" ref-type="bibr">29</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">52,994.84</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">17</td><td align="center" valign="top" rowspan="1" colspan="1">Bilici [<xref rid="hsr272060-bib-0030" ref-type="bibr">30</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">61,561.17</td><td align="center" valign="top" rowspan="1" colspan="1">545,739,812.84</td><td align="left" valign="top" rowspan="1" colspan="1">Outpatient cost (3.3%), screening and laboratory costs (6%), hospitalization and medical interventions (14.2%), medication and application costs (36.8%), side effects and complication cost (39.6%)</td><td align="center" valign="top" rowspan="1" colspan="1">15,353.68</td><td align="center" valign="top" rowspan="1" colspan="1">136,110,402.25</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">753,475.67</td><td align="center" valign="top" rowspan="1" colspan="1">6,679,561,836.29</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">—</td></tr></tbody></table><table-wrap-foot><fn id="hsr272060-tbl3-note-0001"><label>
+<sup>a</sup>
+</label><p>Most.</p></fn><fn id="hsr272060-tbl3-note-0002"><label>
+<sup>b</sup>
+</label><p>Least.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><p>Table <xref rid="hsr272060-tbl-0002" ref-type="table">2</xref> presents the studies' characteristics, including the research year and location, sample size, costing methodologies, and the types of costs assessed. As shown in Table <xref rid="hsr272060-tbl-0002" ref-type="table">2</xref>, the majority of studies were conducted in Asia (64.71%), followed by the United States (29.41%), with one study from Europe (5.88%). The largest sample size included 127,690 participants. The societal perspective was the most commonly used approach for cost measurement. The predominant costing method employed in most studies was the population‐based approach (both prevalence‐based and bottom‐up). Most studies focused on direct costs, and nearly half included indirect costs. As outlined in Table <xref rid="hsr272060-tbl-0003" ref-type="table">3</xref>, four studies (23.53%) identified direct medical costs as the primary contributor to the economic burden of GC. In comparison, three studies (17.64%) highlighted indirect costs as the main factor driving the financial burden.</p><p>Among the 15 studies reporting direct medical costs, six (40%) identified chemotherapy costs as the primary component of these types of costs. Of the seven studies that reported direct non‐medical costs, five (71.4%) highlighted travel and accommodation costs, while two (28.5%) focused on home care costs as the most significant contributors. Additionally, eight studies examined the components of indirect costs. Among them, two studies (25%) cited absenteeism and premature death costs, and one study (12.5%) identified the cost of reduced productivity and time as the main drivers of indirect costs.</p><p>Table <xref rid="hsr272060-tbl-0003" ref-type="table">3</xref> indicates that the highest and lowest mean direct medical costs were observed in the United States ($173,847) and China ($25,795), respectively. Regarding direct non‐medical costs, the highest mean was reported in Turkey ($15,353.68) and the lowest in China ($70.76). For indirect costs, Turkey reported the highest average cost ($753,475.67), while China recorded the lowest ($91.50).</p><p>A detailed breakdown of cost components, expressed as a percentage of the total cost category, is provided for each study in Table <xref rid="hsr272060-tbl-0003" ref-type="table">3</xref>. For instance, in Hong et al., chemotherapy constituted the largest share of direct medical costs (59.56%), followed by inpatient costs (28.64%). In Jalilian et al. study, physician visits, emergency visits, and diagnostic services accounted for 1.19%, 0.34%, and 3.45% of direct medical costs, respectively. The analysis reveals considerable variation in the primary cost drivers across different healthcare systems and study perspectives. Chemotherapy was a major cost component in several studies, while hospitalization and medication costs dominated in others. Among indirect costs, mortality costs associated with productivity loss were the most significant factor in studies that reported them.</p></sec><sec sec-type="discussion" id="hsr272060-sec-0080"><label>4</label><title>Discussion</title><p>GC is among the most prevalent cancers globally and is ranked as the fifth leading cause of cancer‐related deaths worldwide in 2022 [<xref rid="hsr272060-bib-0031" ref-type="bibr">31</xref>, <xref rid="hsr272060-bib-0032" ref-type="bibr">32</xref>, <xref rid="hsr272060-bib-0033" ref-type="bibr">33</xref>]. <italic toggle="yes">Helicobacter pylori</italic> (<italic toggle="yes">H. pylori</italic>) infection is identified as the most important biological risk factor for GC, accounting for 78% of all cases [<xref rid="hsr272060-bib-0034" ref-type="bibr">34</xref>]. The cost of treatment is very high and causes tremendous strain on limited healthcare resources [<xref rid="hsr272060-bib-0035" ref-type="bibr">35</xref>]. Insights that can improve the functioning of health organizations at all levels can be gained by assessing the costs of illness [<xref rid="hsr272060-bib-0027" ref-type="bibr">27</xref>]. This study aimed to provide an overview of the economic burden of GC through a systematic review.</p><p>The costs incurred by the system were categorized into two primary groups: direct and indirect costs. Direct costs were further broken down into medical and non‐medical costs. Medical costs refer to the financial outlays related to healthcare services, such as diagnosis, treatment, and rehabilitation [<xref rid="hsr272060-bib-0009" ref-type="bibr">9</xref>, <xref rid="hsr272060-bib-0036" ref-type="bibr">36</xref>, <xref rid="hsr272060-bib-0037" ref-type="bibr">37</xref>]. In the studies examined in this research, direct medical costs were identified as the primary contributor to the economic burden faced by GC patients [<xref rid="hsr272060-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr272060-bib-0009" ref-type="bibr">9</xref>, <xref rid="hsr272060-bib-0018" ref-type="bibr">18</xref>, <xref rid="hsr272060-bib-0021" ref-type="bibr">21</xref>], and chemotherapy costs were the highest component of direct medical costs [<xref rid="hsr272060-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr272060-bib-0016" ref-type="bibr">16</xref>, <xref rid="hsr272060-bib-0022" ref-type="bibr">22</xref>, <xref rid="hsr272060-bib-0023" ref-type="bibr">23</xref>, <xref rid="hsr272060-bib-0025" ref-type="bibr">25</xref>, <xref rid="hsr272060-bib-0038" ref-type="bibr">38</xref>]. After that, hospitalization costs [<xref rid="hsr272060-bib-0017" ref-type="bibr">17</xref>, <xref rid="hsr272060-bib-0026" ref-type="bibr">26</xref>, <xref rid="hsr272060-bib-0027" ref-type="bibr">27</xref>] and medication costs [<xref rid="hsr272060-bib-0005" ref-type="bibr">5</xref>, <xref rid="hsr272060-bib-0009" ref-type="bibr">9</xref>] were the highest. The elevated expenses associated with Chemotherapy for GC patients may be attributed to the high prices of these medications. Karve et al., in their study in the USA, found that expenses associated with Chemotherapy, including both medication and administration costs, represented 68% of the overall treatment costs related to GC [<xref rid="hsr272060-bib-0025" ref-type="bibr">25</xref>]. In the study conducted by Castro et al. in Panama, the most significant expenses were linked to hospital admissions, while chemotherapy represented the second‐largest cost [<xref rid="hsr272060-bib-0017" ref-type="bibr">17</xref>]. In the study conducted by Izadi et al. in Iran, it was observed that the most significant proportion of costs was associated with surgical procedures in Stage I.</p><p>In contrast, medication costs were predominant in Stages II, III, and IV. Furthermore, the costs for medication and Chemotherapy escalated from Stage I to Stage IV, whereas the expenses related to surgery, radiation therapy, diagnostic tests, and consultations diminished [<xref rid="hsr272060-bib-0005" ref-type="bibr">5</xref>]. Therefore, it seems that the stage of GC is influential in estimating the costs and types of fees imposed on the health system [<xref rid="hsr272060-bib-0006" ref-type="bibr">6</xref>].</p><p>The results of this study revealed that the primary factors contributing to direct non‐medical costs include costs related to patients' travel, transportation, and accommodation [<xref rid="hsr272060-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr272060-bib-0009" ref-type="bibr">9</xref>, <xref rid="hsr272060-bib-0018" ref-type="bibr">18</xref>, <xref rid="hsr272060-bib-0021" ref-type="bibr">21</xref>, <xref rid="hsr272060-bib-0026" ref-type="bibr">26</xref>], caregiver costs [<xref rid="hsr272060-bib-0023" ref-type="bibr">23</xref>], and lodging for individuals visiting the patient at their home [<xref rid="hsr272060-bib-0009" ref-type="bibr">9</xref>]. The average non‐medical costs incurred by non‐native patients exceeded those of native patients. The absence of relevant medical facilities in the cities where individuals reside, coupled with insufficient public transportation for patients needing to travel to the capital for essential services and medical treatments, contributes to elevated transportation expenses [<xref rid="hsr272060-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr272060-bib-0009" ref-type="bibr">9</xref>, <xref rid="hsr272060-bib-0039" ref-type="bibr">39</xref>]. The study by Jalilian et al. in Iran found that the overall mean cost associated with GC was more significant for patients who delayed their treatment due to the considerable distance from the treatment center and financial constraints, as opposed to those who did not experience such delays [<xref rid="hsr272060-bib-0007" ref-type="bibr">7</xref>].</p><p>Also, in this study, the indirect cost was related to the absenteeism of patients and their families from work and daily activities [<xref rid="hsr272060-bib-0009" ref-type="bibr">9</xref>, <xref rid="hsr272060-bib-0018" ref-type="bibr">18</xref>], mortality, and premature death [<xref rid="hsr272060-bib-0023" ref-type="bibr">23</xref>, <xref rid="hsr272060-bib-0040" ref-type="bibr">40</xref>], the cost of reduced productivity and loss of time for patients and caregivers [<xref rid="hsr272060-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr272060-bib-0026" ref-type="bibr">26</xref>]. The likelihood of developing stomach cancer escalates with advancing age, with over 80% of cases diagnosed in individuals aged between 60 and 80 years. Consequently, members of this age group must be accompanied by at least one family member when visiting medical facilities for necessary services and treatment. This requirement has resulted in extended absences from work and daily activities for patients' families, leading to significant financial implications [<xref rid="hsr272060-bib-0001" ref-type="bibr">1</xref>, <xref rid="hsr272060-bib-0009" ref-type="bibr">9</xref>]. The time lost by patients and their families due to the Absence of a regular work schedule stemming from illness and treatment, which includes the time spent traveling to and from medical care, waiting for appointments, and similar activities, is regarded as an indirect economic consequence. Consequently, the loss of time is a significant aspect of the overall burden of illness experienced by both patients and their caregivers [<xref rid="hsr272060-bib-0006" ref-type="bibr">6</xref>], and in the study conducted by Hong et al. in Taiwan, mortality costs, accounting for 77.3%, emerged as the predominant factor contributing to the overall burden. This was followed by direct medical expenses, representing 16.3% [<xref rid="hsr272060-bib-0023" ref-type="bibr">23</xref>].</p><p>The study found that the highest average direct medical costs were reported in the United States, direct non‐medical and indirect costs in Turkey, and the lowest average costs were reported in China. GC is characterized by poor survival rates and is linked to the absence of established treatment protocols, especially after the first‐line therapy [<xref rid="hsr272060-bib-0022" ref-type="bibr">22</xref>]. Variations in average costs among studies conducted in various countries may be attributed to differing definitions of care types, as each report encompassed a diverse array of services in their cost assessments [<xref rid="hsr272060-bib-0017" ref-type="bibr">17</xref>]. In addition, age, gender, length of stay [<xref rid="hsr272060-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr272060-bib-0027" ref-type="bibr">27</xref>, <xref rid="hsr272060-bib-0040" ref-type="bibr">40</xref>], public or private hospital, education, employment status, stage of diseases, type of carcinoma, type of insurance scheme [<xref rid="hsr272060-bib-0005" ref-type="bibr">5</xref>, <xref rid="hsr272060-bib-0006" ref-type="bibr">6</xref>, <xref rid="hsr272060-bib-0007" ref-type="bibr">7</xref>], delays in treatment attributed to the considerable distance from the treatment center, delays due to financial and economic obstacles [<xref rid="hsr272060-bib-0007" ref-type="bibr">7</xref>], providing systems, and medical technology could affect the cost of illness in different health systems [<xref rid="hsr272060-bib-0040" ref-type="bibr">40</xref>].</p><p>A recently published systematic review by Sharma et al. also examined the economic impact of gastric cancer. Their review identified 19 economic evaluations, of which four were cost‐of‐illness studies. While their work focused specifically on the cost‐effectiveness of second‐line or later treatments for advanced disease, our study provides a comprehensive analysis of the cost‐of‐illness across all disease stages. Both reviews confirm the substantial economic burden of gastric cancer. However, our findings, which are based on a larger number of cost‐of‐illness studies (<italic toggle="yes">n</italic> = 17), offer a more detailed breakdown of cost components and their primary drivers, such as chemotherapy within direct medical costs. The variation in cost structures observed in our review aligns with the methodological heterogeneity reported by Sharma et al. across different healthcare systems [<xref rid="hsr272060-bib-0041" ref-type="bibr">41</xref>].</p><p>A comparative perspective with other major cancer types further illuminates the distinctive economic and clinical challenges posed by gastric cancer. An analysis suggests that while the absolute costs of GC may be lower than those of malignancies characterized by prolonged targeted therapies, such as breast or colorectal cancer [<xref rid="hsr272060-bib-0042" ref-type="bibr">42</xref>, <xref rid="hsr272060-bib-0043" ref-type="bibr">43</xref>, <xref rid="hsr272060-bib-0044" ref-type="bibr">44</xref>], its economic impact is particularly severe when considered in light of its typically late‐stage diagnosis and poor prognosis. The significant variation in cost structures across different countries is less a reflection of clinical practice and more a direct consequence of fundamental differences in healthcare financing and delivery systems [<xref rid="hsr272060-bib-0045" ref-type="bibr">45</xref>, <xref rid="hsr272060-bib-0046" ref-type="bibr">46</xref>, <xref rid="hsr272060-bib-0047" ref-type="bibr">47</xref>]. In insurance‐based models, for instance, high pharmaceutical costs are a primary driver of expenditures [<xref rid="hsr272060-bib-0048" ref-type="bibr">48</xref>, <xref rid="hsr272060-bib-0049" ref-type="bibr">49</xref>], whereas in tax‐funded systems, inpatient care and indirect productivity losses constitute a larger proportion of the total burden [<xref rid="hsr272060-bib-0050" ref-type="bibr">50</xref>]. These system‐level determinants are linked to disparities in patient access to care and survival rates. Consequently, managing the economic burden of GC necessitates policy interventions that are specifically tailored to address the unique inefficiencies and barriers within a given health system, moving beyond a one‐size‐fits‐all approach.</p><sec id="hsr272060-sec-0090"><label>4.1</label><title>Strengths and Limitations</title><p>This study stands out for its comprehensive analysis of the economic burden of GC, consolidating data from 17 studies worldwide and adopting a societal perspective to capture both direct and indirect costs. Its global relevance, methodological rigor, and actionable insights for policymakers make it a valuable contribution to the literature, particularly as the first systematic review to address this topic comprehensively. However, limitations include the geographic concentration of studies in Asia, variability in cost measurement methodologies, and the time lag in data collection. Additionally, the protocol for this systematic review was not prospectively registered, which may introduce potential hindsight bias in the study selection process. Furthermore, the review does not address intangible costs like emotional distress, lacks outcome‐based cost‐effectiveness analysis, and excludes non‐English studies, which may limit the generalizability of its findings.</p></sec></sec><sec sec-type="conclusions" id="hsr272060-sec-0100"><label>5</label><title>Conclusion</title><p>The results showed that GC causes high direct and indirect costs for patients. Also, these costs impose a significant economic burden on families and the health system. Considering the mentioned points, patients and the healthcare system face significant financial challenges related to this disease. Consequently, policymakers and decision‐makers must investigate the economic ramifications of GC, one of the most prevalent cancer types. Such an investigation yields important insights informing resource distribution and cost management initiatives. Implementing early detection and effective treatment protocols based on evidence‐based guidelines, conducting laboratory tests for <italic toggle="yes">Helicobacter pylori</italic> (the primary cause of GC) in all patients with gastrointestinal conditions, and offering educational programs on GC prevention from a young age can alleviate the economic impact of GC.</p></sec><sec id="hsr272060-sec-0110"><title>Author Contributions</title><p>F.S.J., N.B., and M.G.H‐J did the search, screening, and data extraction, raised the research idea, and supervised all phases of the research. All authors have equal contributions in drafting and reviewing the manuscript. All authors have read and approved the final manuscript.</p></sec><sec id="hsr272060-sec-0130"><title>Funding</title><p>The authors have nothing to report.</p></sec><sec id="hsr272060-sec-0140"><title>Ethics Statement</title><p>This is not applicable as the study is based on extracting data from published articles.</p></sec><sec sec-type="COI-statement" id="hsr272060-sec-0150"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec id="hsr272060-sec-0180"><title>Transparency Statement</title><p>The corresponding author, Faride Sadat Jalali, affirms that this manuscript is an honest, accurate, and transparent account of the study being reported; that no important aspects of the study have been omitted; and that any discrepancies from the study as planned (and, if relevant, registered) have been explained.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="hsr272060-suppl-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>Supporting File</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="HSR2-9-e72060-s001.docx" position="float" orientation="portrait"/></supplementary-material></sec></body><back><ack id="hsr272060-sec-0120"><title>Acknowledgments</title><p>Artificial intelligence (ChatGPT) was employed to assist with some figures.</p></ack><sec sec-type="data-availability" id="hsr272060-sec-0170"><title>Data Availability Statement</title><p>The study is based on extracting data from published articles; all data are included in the report.</p></sec><ref-list content-type="cited-references" id="hsr272060-bibl-0001"><title>References</title><ref id="hsr272060-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="hsr272060-cit-0001">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Ilic</surname>
+</string-name> and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Ilic</surname>
+</string-name>, “<article-title>Epidemiology of Stomach Cancer</article-title>,” <source>World Journal of Gastroenterology</source>
+<volume>28</volume>, no. <issue>12</issue> (<year>2022</year>): <fpage>1187</fpage>–<lpage>1203</lpage>.<pub-id pub-id-type="pmid">35431510</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3748/wjg.v28.i12.1187</pub-id><pub-id pub-id-type="pmcid">PMC8968487</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0002"><label>2</label><mixed-citation publication-type="miscellaneous" id="hsr272060-cit-0002">
+<collab collab-type="authors">Cancer Research UK</collab>
+. “About Cancer. Stomach Cancer. What Is Stomach Cancer?,” accessed June 30, 2022, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://wwwcancerresearchuk.org/about-cancer/stomach-cancer" ext-link-type="uri">https://wwwcancerresearchuk.org/about-cancer/stomach-cancer</ext-link>.</mixed-citation></ref><ref id="hsr272060-bib-0003"><label>3</label><mixed-citation publication-type="miscellaneous" id="hsr272060-cit-0003">
+<collab collab-type="authors">World Health Organization, International Agency for Research on Cancer</collab>
+, “Cancer Fact sheets. Digestive organs. Stomach,” accessed February 2024.</mixed-citation></ref><ref id="hsr272060-bib-0004"><label>4</label><mixed-citation publication-type="miscellaneous" id="hsr272060-cit-0004">
+<collab collab-type="authors">World Health Organization, International Agency for Research on Cancer</collab>
+,“International Agency for Research on Cancer. Estimated Number of New Cases From 2022 to 2045, Both Sexes, age [0–85+]. Stomach.”</mixed-citation></ref><ref id="hsr272060-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="hsr272060-cit-0005">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Izadi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Sirizi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Esmaeelpour</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Barouni</surname>
+</string-name>, “<article-title>Evaluating Direct Costs of Gastric Cancer Treatment in Iran‐Case Study in Kerman City in 2015</article-title>,” <source>Asian Pacific Journal of Cancer Prevention: APJCP</source>
+<volume>17</volume>, no. <issue>6</issue> (<year>2016</year>): <fpage>3007</fpage>–<lpage>3013</lpage>.<pub-id pub-id-type="pmid">27356726</pub-id>
+</mixed-citation></ref><ref id="hsr272060-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="hsr272060-cit-0006">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Yin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Huang</surname>
+</string-name>, et al., “<article-title>Expenditure and Financial Burden for Stomach Cancer Diagnosis and Treatment in China: A Multicenter Study</article-title>,” <source>Frontiers in Public Health</source>
+<volume>8</volume> (<year>2020</year>): <fpage>310</fpage>.<pub-id pub-id-type="pmid">32850573</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fpubh.2020.00310</pub-id><pub-id pub-id-type="pmcid">PMC7426494</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="hsr272060-cit-0007">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Jalilian</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Doshmangir</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Ajami</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Mir</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Siraneh</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Hasanpoor</surname>
+</string-name>, “<article-title>Economic Burden of Gastric Cancer in the First Six Months After Diagnosis</article-title>,” <source>International Journal of Pharmaceutical and Healthcare Marketing</source>
+<volume>13</volume>, no. <issue>4</issue> (<year>2019</year>): <fpage>436</fpage>–<lpage>446</lpage>.</mixed-citation></ref><ref id="hsr272060-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="hsr272060-cit-0008">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Peppercorn</surname>
+</string-name>, “<article-title>The Financial Burden of Cancer Care: Do Patients in the US Know What to Expect?</article-title>,” <source>Expert Review of Pharmacoeconomics &amp; Outcomes Research</source>
+<volume>14</volume>, no. <issue>6</issue> (<year>2014</year>): <fpage>835</fpage>–<lpage>842</lpage>.<pub-id pub-id-type="pmid">25269513</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1586/14737167.2014.963558</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="hsr272060-cit-0009">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Eghdami</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Ostovar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Jafari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. J.</given-names>
+<surname>Palmer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Bordbar</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Ravangard</surname>
+</string-name>, “<article-title>Economic Burden of Gastric Cancer: A Case of Iran</article-title>,” <source>Cancer Control</source>
+<volume>26</volume>, no. <issue>1</issue> (<year>2019</year>): <fpage>1</fpage>–<lpage>6</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/1073274819837185</pub-id><pub-id pub-id-type="pmcid">PMC6442094</pub-id><pub-id pub-id-type="pmid">30924358</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="hsr272060-cit-0010">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Solanki</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. C.</given-names>
+<surname>Chakinala</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. F.</given-names>
+<surname>Haq</surname>
+</string-name>, et al., “<article-title>Inpatient Burden of Gastric Cancer in the United States</article-title>,” <source>Annals of Translational Medicine</source>
+<volume>7</volume>, no. <issue>23</issue> (<year>2019</year>): <fpage>772</fpage>.<pub-id pub-id-type="pmid">32042788</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.21037/atm.2019.11.54</pub-id><pub-id pub-id-type="pmcid">PMC6990011</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="hsr272060-cit-0011">
+<string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Zeng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Xia</surname>
+</string-name>, et al., “<article-title>Annual Cost of Illness of Stomach and Esophageal Cancer Patients in Urban and Rural Areas in China: A Multi‐Center Study</article-title>,” <source>Chinese Journal of Cancer Research</source>
+<volume>30</volume>, no. <issue>4</issue> (<year>2018</year>): <fpage>439</fpage>–<lpage>448</lpage>.<pub-id pub-id-type="pmid">30210224</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.21147/j.issn.1000-9604.2018.04.07</pub-id><pub-id pub-id-type="pmcid">PMC6129568</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="hsr272060-cit-0012">
+<string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Page</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>McKenzie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. M.</given-names>
+<surname>Bossuyt</surname>
+</string-name>, et al., “<article-title>The PRISMA 2020 Statement: An Updated Guideline for Reporting Systematic Reviews</article-title>,” <source>PLoS Medicine</source>
+<volume>18</volume>, no. <issue>3</issue> (<year>2021</year>): <elocation-id>e1003583</elocation-id>.<pub-id pub-id-type="pmid">33780438</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pmed.1003583</pub-id><pub-id pub-id-type="pmcid">PMC8007028</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0013"><label>13</label><mixed-citation publication-type="miscellaneous" id="hsr272060-cit-0013">“PRISMA Statement,” <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.prisma-statement.org/prisma-2020" ext-link-type="uri">https://www.prisma-statement.org/prisma-2020</ext-link>.</mixed-citation></ref><ref id="hsr272060-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="hsr272060-cit-0014">
+<string-name name-style="western">
+<given-names>J. J.</given-names>
+<surname>Barron</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Quimbo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. T.</given-names>
+<surname>Nikam</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. M.</given-names>
+<surname>Amonkar</surname>
+</string-name>, “<article-title>Assessing the Economic Burden of Breast Cancer in a US Managed Care Population</article-title>,” <source>Breast Cancer Research and Treatment</source>
+<volume>109</volume>, no. <issue>2</issue> (<year>2008</year>): <fpage>367</fpage>–<lpage>377</lpage>.<pub-id pub-id-type="pmid">17674201</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10549-007-9650-4</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0015"><label>15</label><mixed-citation publication-type="miscellaneous" id="hsr272060-cit-0015">“Prices, Consumer Price Index, All items, Index,” <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://prosperitydata360.worldbank.org/en/indicator/IMF+CPI+PCPI_IX" ext-link-type="uri">https://prosperitydata360.worldbank.org/en/indicator/IMF+CPI+PCPI_IX</ext-link>.</mixed-citation></ref><ref id="hsr272060-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="hsr272060-cit-0016">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Abraham</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Jiang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Gricar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Tan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R. J.</given-names>
+<surname>Kelly</surname>
+</string-name>, “<article-title>Healthcare Utilization and Total Costs of Care Among Patients With Advanced Metastatic Gastric and Esophageal Cancer</article-title>,” <source>Future Oncology</source>
+<volume>17</volume>, no. <issue>3</issue> (<year>2021</year>): <fpage>291</fpage>–<lpage>299</lpage>.<pub-id pub-id-type="pmid">32996811</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2217/fon-2020-0516</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="hsr272060-cit-0017">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Castro</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Shahal</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Tarajia</surname>
+</string-name>, et al., “<article-title>Baseline Characteristics, Survival and Direct Costs Associated to Treatment of Gastric Cancer Patients at the National Oncology Institute of Panama From 2012 to 2015: A Hospital‐Based Observational Study</article-title>,” <source>BMJ Open</source>
+<volume>7</volume>, no. <issue>9</issue> (<year>2017</year>): <elocation-id>e017266</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/bmjopen-2017-017266</pub-id><pub-id pub-id-type="pmcid">PMC5623512</pub-id><pub-id pub-id-type="pmid">28947456</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="hsr272060-cit-0018">
+<string-name name-style="western">
+<given-names>H. D.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Zhou</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Wen</surname>
+</string-name>, et al., “<article-title>Cost‐Effectiveness Analysis of Apatinib Treatment for Chemotherapy‐Refractory Advanced Gastric Cancer</article-title>,” <source>Journal of Cancer Research and Clinical Oncology</source>
+<volume>143</volume>, no. <issue>2</issue> (<year>2017</year>): <fpage>361</fpage>–<lpage>368</lpage>.<pub-id pub-id-type="pmid">27798730</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00432-016-2296-z</pub-id><pub-id pub-id-type="pmcid">PMC11819018</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="hsr272060-cit-0019">
+<string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Gourzoulidis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Koulentaki</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Koumarianou</surname>
+</string-name>, et al., “<article-title>Cost‐Effectiveness of Trifluridine/Tipiracil as a Third‐Line Treatment of Metastatic Gastric Cancer, Including Adenocarcinoma of the Gastrohesophageal Junction, Among Patients Previously Treated in Greece</article-title>,” <source>Expert Review of Pharmacoeconomics &amp; Outcomes Research</source>
+<volume>22</volume>, no. <issue>2</issue> (<year>2022</year>): <fpage>259</fpage>–<lpage>269</lpage>.<pub-id pub-id-type="pmid">33900864</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/14737167.2021.1921576</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="hsr272060-cit-0020">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Haga</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Matsumoto</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kitazawa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Seto</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Fujita</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Hasegawa</surname>
+</string-name>, “<article-title>Cost of Illness of the Stomach Cancer in Japan—A Time Trend and Future Projections</article-title>,” <source>BMC Health Services Research</source>
+<volume>13</volume> (<year>2013</year>): <fpage>283</fpage>.<pub-id pub-id-type="pmid">23879739</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/1472-6963-13-283</pub-id><pub-id pub-id-type="pmcid">PMC3734213</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="hsr272060-cit-0021">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>He</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Wen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Yin</surname>
+</string-name>, et al., “<article-title>Cost Analysis of S1 and XELOX as Adjuvant Therapy for Gastric Cancer</article-title>,” <source>Anti‐Cancer Drugs</source>
+<volume>24</volume>, no. <issue>7</issue> (<year>2013</year>): <fpage>754</fpage>–<lpage>758</lpage>.<pub-id pub-id-type="pmid">23629479</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/CAD.0b013e328361bef2</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="hsr272060-cit-0022">
+<string-name name-style="western">
+<given-names>L. M.</given-names>
+<surname>Hess</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Michael</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. S.</given-names>
+<surname>Mytelka</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Beyrer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. M.</given-names>
+<surname>Liepa</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Nicol</surname>
+</string-name>, “<article-title>Chemotherapy Treatment Patterns, Costs, and Outcomes of Patients With Gastric Cancer in the United States: A Retrospective Analysis of Electronic Medical Record (EMR) and Administrative Claims Data</article-title>,” <source>Gastric Cancer</source>
+<volume>19</volume>, no. <issue>2</issue> (<year>2016</year>): <fpage>607</fpage>–<lpage>615</lpage>.<pub-id pub-id-type="pmid">25792290</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10120-015-0486-z</pub-id><pub-id pub-id-type="pmcid">PMC4824832</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="hsr272060-cit-0023">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Hong</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Tsai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Novick</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. C.</given-names>
+<surname>Hsiao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Cheng</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. S.</given-names>
+<surname>Chen</surname>
+</string-name>, “<article-title>The Economic Burden of Advanced Gastric Cancer in Taiwan</article-title>,” <source>BMC Health Services Research</source>
+<volume>17</volume>, no. <issue>1</issue> (<year>2017</year>): <fpage>663</fpage>.<pub-id pub-id-type="pmid">28915812</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12913-017-2609-1</pub-id><pub-id pub-id-type="pmcid">PMC5603025</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="hsr272060-cit-0024">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Izadi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Sirizi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Esmaeelpour</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Barouni</surname>
+</string-name>, “<article-title>Evaluating Direct Costs of Gastric Cancer Treatment in Iran—Case Study in Kerman City in 2015</article-title>,” <source>Asian Pacific Journal of Cancer Prevention: APJCP</source>
+<volume>17</volume>, no. <issue>6</issue> (<year>2016</year>): <fpage>3007</fpage>–<lpage>3013</lpage>.<pub-id pub-id-type="pmid">27356726</pub-id>
+</mixed-citation></ref><ref id="hsr272060-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="hsr272060-cit-0025">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Karve</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Lorenzo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. M.</given-names>
+<surname>Liepa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. M.</given-names>
+<surname>Hess</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. A.</given-names>
+<surname>Kaye</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Calingaert</surname>
+</string-name>, “<article-title>Treatment Patterns, Costs, and Survival Among Medicare‐Enrolled Elderly Patients Diagnosed With Advanced Stage Gastric Cancer: Analysis of a Linked Population‐Based Cancer Registry and Administrative Claims Database</article-title>,” <source>Journal of Gastric Cancer</source>
+<volume>15</volume>, no. <issue>2</issue> (<year>2015</year>): <fpage>87</fpage>–<lpage>104</lpage>.<pub-id pub-id-type="pmid">26161282</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.5230/jgc.2015.15.2.87</pub-id><pub-id pub-id-type="pmcid">PMC4496446</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="hsr272060-cit-0026">
+<string-name name-style="western">
+<given-names>K. R.</given-names>
+<surname>Zhou</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Cheng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W. T.</given-names>
+<surname>Ng</surname>
+</string-name>, et al., “<article-title>Cost Minimization Analysis of Capecitabine Versus 5‐Fluorouracil‐Based Treatment for Gastric Cancer Patients in Hong Kong</article-title>,” <source>Journal of Medical Economics</source>
+<volume>20</volume>, no. <issue>5</issue> (<year>2017</year>): <fpage>541</fpage>–<lpage>548</lpage>.<pub-id pub-id-type="pmid">28277030</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/13696998.2017.1296452</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="hsr272060-cit-0027">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Mohammadpour</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Niknam</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Javan‐Noughabi</surname>
+</string-name>, et al., “<article-title>The Factors Associated With Direct Medical Costs in Patients With Gastric Cancer: Quantile Regression Approach Compared With Gamma Regression</article-title>,” <source>Value in Health Regional Issues</source>
+<volume>21</volume> (<year>2020</year>): <fpage>127</fpage>–<lpage>132</lpage>.<pub-id pub-id-type="pmid">31783308</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.vhri.2019.08.479</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="hsr272060-cit-0028">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Quintana</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. A.</given-names>
+<surname>Toriz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Novick</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Jones</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. S.</given-names>
+<surname>Botello</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. A.</given-names>
+<surname>Silva</surname>
+</string-name>, “<article-title>Resources and Costs Associated With the Treatment of Advanced and Metastatic Gastric Cancer in the Mexican Public Sector: A Patient Chart Review</article-title>,” <source>PharmacoEconomics—Open</source>
+<volume>2</volume>, no. <issue>2</issue> (<year>2018</year>): <fpage>191</fpage>–<lpage>201</lpage>.<pub-id pub-id-type="pmid">29623621</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s41669-017-0043-2</pub-id><pub-id pub-id-type="pmcid">PMC5972114</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="hsr272060-cit-0029">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Saito</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Muneoka</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Ishikawa</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Akazawa</surname>
+</string-name>, “<article-title>Cost‐Effectiveness of Paclitaxel + Ramucirumab Combination Therapy for Advanced Gastric Cancer Progressing After First‐Line Chemotherapy in Japan</article-title>,” <source>Clinical Therapeutics</source>
+<volume>39</volume>, no. <issue>12</issue> (<year>2017</year>): <fpage>2380</fpage>–<lpage>2388</lpage>.<pub-id pub-id-type="pmid">29175097</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.clinthera.2017.10.017</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="hsr272060-cit-0030">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Bilici</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Gumus</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Malhan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Oksuz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Oksuzoglu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Yalcın</surname>
+</string-name>, “<article-title>Economic Burden of Gastric Cancer in Turkey</article-title>,” <source>Value in Health</source>
+<volume>20</volume>, no. <issue>9</issue> (<year>2017</year>): <fpage>A429</fpage>.</mixed-citation></ref><ref id="hsr272060-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="hsr272060-cit-0031">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Sung</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Ferlay</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. L.</given-names>
+<surname>Siegel</surname>
+</string-name>, et al., “<article-title>Global Cancer Statistics 2020: GLOBOCAN Estimates of Incidence and Mortality Worldwide for 36 Cancers in 185 Countries</article-title>,” <source>CA: A Cancer Journal for Clinicians</source>
+<volume>71</volume>, no. <issue>3</issue> (<year>2021</year>): <fpage>209</fpage>–<lpage>249</lpage>.<pub-id pub-id-type="pmid">33538338</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3322/caac.21660</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="hsr272060-cit-0032">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Lewis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Jimenez</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. H.</given-names>
+<surname>Mansour</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Horton</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>W. W. L.</given-names>
+<surname>Wong</surname>
+</string-name>, “<article-title>A Systematic Review of Cost‐Effectiveness Studies on Gastric Cancer Screening</article-title>,” <source>Cancers</source>
+<volume>16</volume>, no. <issue>13</issue> (<year>2024</year>): <fpage>2353</fpage>.<pub-id pub-id-type="pmid">39001415</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/cancers16132353</pub-id><pub-id pub-id-type="pmcid">PMC11240801</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="hsr272060-cit-0033">
+<string-name name-style="western">
+<given-names>J.‐L.</given-names>
+<surname>Lin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.‐X.</given-names>
+<surname>Lin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.‐T.</given-names>
+<surname>Lin</surname>
+</string-name>, et al., “<article-title>Global Incidence and Mortality Trends of Gastric Cancer and Predicted Mortality of Gastric Cancer by 2035</article-title>,” <source>BMC Public Health</source>
+<volume>24</volume>, no. <issue>1</issue> (<year>2024</year>): <fpage>1763</fpage>.<pub-id pub-id-type="pmid">38956557</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12889-024-19104-6</pub-id><pub-id pub-id-type="pmcid">PMC11221210</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="hsr272060-cit-0034">
+<string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Lansdorp‐Vogelaar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Meester</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Laszkowska</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. A.</given-names>
+<surname>Escudero</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z. J.</given-names>
+<surname>Ward</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Yeh</surname>
+</string-name>, “<article-title>Cost‐Effectiveness of Prevention and Early Detection of Gastric Cancer in Western Countries</article-title>,” <source>Best Practice &amp; Research Clinical Gastroenterology</source>
+<volume>50–51</volume> (<year>2021</year>): <elocation-id>101735</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.bpg.2021.101735</pub-id><pub-id pub-id-type="pmid">33975689</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="hsr272060-cit-0035">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Jeong</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. L.</given-names>
+<surname>Mahar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Zagorski</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Coburn</surname>
+</string-name>, “<article-title>Patient‐Level Costs of Treating Metastatic Gastric Cancer by Treatment Strategy</article-title>,” <source>American Society of Clinical Oncology</source>
+<volume>38</volume> (<year>2018</year>): <fpage>167</fpage>.</mixed-citation></ref><ref id="hsr272060-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="hsr272060-cit-0036">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Davari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Maracy</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Emami</surname>
+</string-name>, et al., “<article-title>The Direct Medical Costs of Colorectal Cancer in Iran; Analyzing the Patient's Level Data From a Cancer Specific Hospital in Isfahan</article-title>,” <source>International Journal of Preventive Medicine</source>
+<volume>3</volume>, no. <issue>12</issue> (<year>2012</year>): <fpage>887</fpage>.<pub-id pub-id-type="pmid">23272289</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.4103/2008-7802.104861</pub-id><pub-id pub-id-type="pmcid">PMC3530308</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="hsr272060-cit-0037">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Jafari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. A.</given-names>
+<surname>Hosseini</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F. S.</given-names>
+<surname>Jalali</surname>
+</string-name>, “<article-title>A Systematic Review of the Economic Burden of Colorectal Cancer</article-title>,” <source>Health Science Reports</source>
+<volume>7</volume>, no. <issue>8</issue> (<year>2024</year>): <elocation-id>e70002</elocation-id>.<pub-id pub-id-type="pmid">39170890</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/hsr2.70002</pub-id><pub-id pub-id-type="pmcid">PMC11336656</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="hsr272060-cit-0038">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Quintana</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. A.</given-names>
+<surname>Toriz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Novick</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Jones</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. S.</given-names>
+<surname>Botello</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. A.</given-names>
+<surname>Silva</surname>
+</string-name>, “<article-title>Resources and Costs Associated With the Treatment of Advanced and Metastatic Gastric Cancer in the Mexican Public Sector: A Patient Chart Review</article-title>,” <source>PharmacoEconomics‐Open</source>
+<volume>2</volume> (<year>2018</year>): <fpage>191</fpage>–<lpage>201</lpage>.<pub-id pub-id-type="pmid">29623621</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s41669-017-0043-2</pub-id><pub-id pub-id-type="pmcid">PMC5972114</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="hsr272060-cit-0039">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Jafari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. M.</given-names>
+<surname>Alamdarloo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Dehghani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Bastani</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Ravangard</surname>
+</string-name>, “<article-title>Economic Burden of Colorectal Cancer: A Case of Fars, Iran</article-title>,” <source>Cancer Control</source>
+<volume>28</volume> (<year>2021</year>): <elocation-id>10732748211009952</elocation-id>.<pub-id pub-id-type="pmid">33882706</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/10732748211009952</pub-id><pub-id pub-id-type="pmcid">PMC8204452</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="hsr272060-cit-0040">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Haga</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Matsumoto</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kitazawa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Seto</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Fujita</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Hasegawa</surname>
+</string-name>, “<article-title>Cost of Illness of the Stomach Cancer in Japan—A Time Trend and Future Projections</article-title>,” <source>BMC Health Services Research</source>
+<volume>13</volume> (<year>2013</year>): <fpage>283</fpage>.<pub-id pub-id-type="pmid">23879739</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/1472-6963-13-283</pub-id><pub-id pub-id-type="pmcid">PMC3734213</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="hsr272060-cit-0041">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Sharma</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Carey</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>McConnell</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Lowery</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>O'Sullivan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>McCullagh</surname>
+</string-name>, “<article-title>Systematic Review of Economic Evaluations of Systemic Treatments for Advanced and Metastatic Gastric Cancer</article-title>,” <source>PharmacoEconomics</source>
+<volume>42</volume>, no. <issue>10</issue> (<year>2024</year>): <fpage>1091</fpage>–<lpage>1110</lpage>.<pub-id pub-id-type="pmid">39060831</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s40273-024-01413-8</pub-id><pub-id pub-id-type="pmcid">PMC11405472</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0042"><label>42</label><mixed-citation publication-type="journal" id="hsr272060-cit-0042">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Irandoust</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Alipour</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Arabloo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Nahvijou</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Akbari</surname>
+</string-name>, “<article-title>Economic Burden of Five Common Cancers in Iran: A Systematic Review of Cost‐of‐Illness With a Focus on Healthcare Resource Utilization</article-title>,” <source>BMC Health Services Research</source>
+<volume>25</volume>, no. <issue>1</issue> (<year>2025</year>): <fpage>800</fpage>.<pub-id pub-id-type="pmid">40468339</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12913-025-12744-3</pub-id><pub-id pub-id-type="pmcid">PMC12139286</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0043"><label>43</label><mixed-citation publication-type="journal" id="hsr272060-cit-0043">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Casamayor</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Morlock</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Maeda</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Ajani</surname>
+</string-name>, “<article-title>Targeted Literature Review of the Global Burden of Gastric Cancer</article-title>,” <source>eCancerMedicalScience</source>
+<volume>12</volume> (<year>2018</year>): <fpage>883</fpage>.<pub-id pub-id-type="pmid">30679950</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3332/ecancer.2018.883</pub-id><pub-id pub-id-type="pmcid">PMC6345079</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0044"><label>44</label><mixed-citation publication-type="journal" id="hsr272060-cit-0044">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Rohani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. H.</given-names>
+<surname>Mousavi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Hashemy</surname>
+</string-name>, et al., “<article-title>Estimating the Cancer Treatment Cost for 5 Common Types of Cancer With Separating Out‐of‐Pocket and Governmental Costs in Afghanistan, 2020</article-title>,” <source>Asian Pacific Journal of Cancer Prevention</source>
+<volume>23</volume>, no. <issue>10</issue> (<year>2022</year>): <fpage>3273</fpage>–<lpage>3279</lpage>.<pub-id pub-id-type="pmid">36308349</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.31557/APJCP.2022.23.10.3273</pub-id><pub-id pub-id-type="pmcid">PMC9924314</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0045"><label>45</label><mixed-citation publication-type="journal" id="hsr272060-cit-0045">
+<string-name name-style="western">
+<given-names>A. R.</given-names>
+<surname>Sarker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Islam</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Tran‐Duy</surname>
+</string-name>, “<article-title>Out‐of‐Pocket Cost and Financial Catastrophe of Patients With Cancer: The Alarming Cost‐of‐Illness in Bangladesh</article-title>,” <source>International Journal for Equity in Health</source>
+<volume>24</volume>, no. <issue>1</issue> (<year>2025</year>): <fpage>186</fpage>.<pub-id pub-id-type="pmid">40598504</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12939-025-02421-6</pub-id><pub-id pub-id-type="pmcid">PMC12210594</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0046"><label>46</label><mixed-citation publication-type="journal" id="hsr272060-cit-0046">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Torkki</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.‐L.</given-names>
+<surname>Leskelä</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Bugge</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>Torfadottir</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Karjalainen</surname>
+</string-name>, “<article-title>Cancer‐Related Costs Should Be Allocated in a Comparable Way—Benchmarking Costs of Cancer in Nordic Countries 2012–2017</article-title>,” <source>Acta Oncologica</source>
+<volume>61</volume>, no. <issue>10</issue> (<year>2022</year>): <fpage>1216</fpage>–<lpage>1222</lpage>.<pub-id pub-id-type="pmid">36151990</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/0284186X.2022.2124883</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0047"><label>47</label><mixed-citation publication-type="journal" id="hsr272060-cit-0047">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Batouli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Jahanshahi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. P.</given-names>
+<surname>Gross</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. V.</given-names>
+<surname>Makarov</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. B.</given-names>
+<surname>Yu</surname>
+</string-name>, “<article-title>The Global Cancer Divide: Relationships Between National Healthcare Resources and Cancer Outcomes in High‐Income vs. Middle‐and Low‐Income Countries</article-title>,” <source>Journal of Epidemiology and Global Health</source>
+<volume>4</volume>, no. <issue>2</issue> (<year>2014</year>): <fpage>115</fpage>–<lpage>124</lpage>.<pub-id pub-id-type="pmid">24857179</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jegh.2013.10.004</pub-id><pub-id pub-id-type="pmcid">PMC7366371</pub-id></mixed-citation></ref><ref id="hsr272060-bib-0048"><label>48</label><mixed-citation publication-type="journal" id="hsr272060-cit-0048">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Blümel</surname>
+</string-name> and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Busse</surname>
+</string-name>, “<article-title>The German Health Care System, 2015</article-title>,” <source>International Profiles of Health Care Systems</source>
+<volume>3</volume> (<year>2015</year>): <fpage>69</fpage>–<lpage>76</lpage>.</mixed-citation></ref><ref id="hsr272060-bib-0049"><label>49</label><mixed-citation publication-type="journal" id="hsr272060-cit-0049">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Dietrich</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Mäurer</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Riemer‐Hommel</surname>
+</string-name>, “<article-title>Challenges for the German Health Care System—Pharmaceuticals</article-title>,” <source>Endoskopie Heute</source>
+<volume>27</volume>, no. <issue>01</issue> (<year>2014</year>): <fpage>45</fpage>–<lpage>53</lpage>.</mixed-citation></ref><ref id="hsr272060-bib-0050"><label>50</label><mixed-citation publication-type="book" id="hsr272060-cit-0050">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Folland</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. C.</given-names>
+<surname>Goodman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Stano</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Danagoulian</surname>
+</string-name>, <source>The Economics of Health and Health Care</source> (<publisher-name>Routledge</publisher-name>, <year>2024</year>).</mixed-citation></ref></ref-list></back></article>

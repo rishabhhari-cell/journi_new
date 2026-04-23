@@ -1,0 +1,645 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="fsn371752" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Food Sci Nutr</journal-id><journal-id journal-id-type="iso-abbrev">Food Sci Nutr</journal-id><journal-id journal-id-type="pmc-domain-id">2357</journal-id><journal-id journal-id-type="pmc-domain">fsn</journal-id><journal-id journal-id-type="publisher-id">FSN3</journal-id><journal-title-group><journal-title>Food Science &amp; Nutrition</journal-title></journal-title-group><issn pub-type="epub">2048-7177</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13092728</article-id><article-id pub-id-type="pmcid-ver">PMC13092728.1</article-id><article-id pub-id-type="pmcaid">13092728</article-id><article-id pub-id-type="pmcaiid">13092728</article-id><article-id pub-id-type="pmid">42016563</article-id><article-id pub-id-type="doi">10.1002/fsn3.71752</article-id><article-id pub-id-type="publisher-id">FSN371752</article-id><article-id pub-id-type="other">4460955</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Review</subject></subj-group><subj-group subj-group-type="heading"><subject>Review</subject></subj-group></article-categories><title-group><article-title>Effects of Canola Oil on Hepatic and Cardiometabolic Markers in Non‐Alcoholic Fatty Liver Disease: A Systematic Review and Meta‐Analysis</article-title></title-group><contrib-group><contrib id="fsn371752-cr-0001" contrib-type="author" corresp="yes"><name name-style="western"><surname>Ege Gündüz</surname><given-names initials="KB">Kardelen Büşra</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-6617-5637</contrib-id><xref rid="fsn371752-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>kardelenegegunduz@halic.edu.tr</email></address></contrib><contrib id="fsn371752-cr-0002" contrib-type="author"><name name-style="western"><surname>Bora</surname><given-names initials="S">Sümeyye</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-5807-4788</contrib-id><xref rid="fsn371752-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="fsn371752-cr-0003" contrib-type="author"><name name-style="western"><surname>Baştürk</surname><given-names initials="B">Berrak</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-6817-3141</contrib-id><xref rid="fsn371752-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="fsn371752-cr-0004" contrib-type="author"><name name-style="western"><surname>Okudu</surname><given-names initials="C">Ceyda</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-9676-4045</contrib-id><xref rid="fsn371752-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib></contrib-group><aff id="fsn371752-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Department of Nutrition and Dietetics</named-content>
+<institution>Haliç University</institution>
+<city>İstanbul</city>
+<country country="TR">Turkiye</country>
+</aff><aff id="fsn371752-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Department of Molecular Biology and Genetics</named-content>
+<institution>Atlas University</institution>
+<city>İstanbul</city>
+<country country="TR">Turkiye</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold>
+<break/>
+Kardelen Büşra Ege Gündüz (<email>kardelenegegunduz@halic.edu.tr</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>19</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>14</volume><issue seq="980">4</issue><issue-id pub-id-type="pmc-issue-id">510823</issue-id><issue-id pub-id-type="doi">10.1002/fsn3.v14.4</issue-id><elocation-id>e71752</elocation-id><history><date date-type="rev-recd"><day>24</day><month>3</month><year>2026</year></date><date date-type="received"><day>22</day><month>1</month><year>2026</year></date><date date-type="accepted"><day>27</day><month>3</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>19</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>21</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-22 09:25:17.680"><day>22</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Food Science &amp; Nutrition</italic> published by Wiley Periodicals LLC.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="FSN3-14-e71752.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:FSN3-14-e71752.pdf"/><abstract><title>ABSTRACT</title><p>Non‐alcoholic fatty liver disease (NAFLD) is closely associated with obesity, insulin resistance, and increased cardiometabolic risk. Dietary fat quality has emerged as a modifiable factor in NAFLD management; however, the specific effects of canola oil on hepatic and metabolic markers remain unclear. This systematic review and meta‐analysis evaluated randomized controlled trials investigating the effects of canola oil consumption in adults with NAFLD. Searches were conducted in PubMed, Web of Science, Scopus, and Cochrane Library databases through December 2024 in accordance with PRISMA guidelines (PROSPERO: CRD42024593566). Random‐effects models were applied to estimate pooled effect sizes. Risk of bias was assessed using the Cochrane Risk of Bias 2 tool, and certainty of evidence was graded using the GRADE framework. Three randomized controlled trials (four intervention arms; <italic toggle="no">n</italic> = 220 participants) were included. Canola oil consumption was associated with significant reductions in alanine aminotransferase (ALT) (effect size: −0.472, 95% CI: −0.711 to −0.233; <italic toggle="no">p</italic> &lt; 0.001) and aspartate aminotransferase (AST) (effect size: −0.505, 95% CI: −0.745 to −0.264; <italic toggle="no">p</italic> &lt; 0.001). Triglyceride levels were also significantly reduced (effect size: −0.593, 95% CI: −1.151 to −0.036; <italic toggle="no">p</italic> = 0.037), although heterogeneity was substantial. No significant effects were observed for HDL (effect size: 0.154, 95% CI: −0.604 to 0.912; <italic toggle="no">p</italic> = 0.69) or gamma‐glutamyl transferase (GGT) (effect size: 0.156, 95% CI: −0.173 to 0.486; <italic toggle="no">p</italic> = 0.352). The certainty of evidence was moderate for ALT and low for AST, triglycerides, HDL, and GGT, primarily because of small sample sizes and clinical heterogeneity. Dietary canola oil may contribute to modest improvements in hepatic enzymes and triglyceride levels in adults with NAFLD. However, the limited number of trials, variability in intervention protocols, and absence of long‐term clinical outcomes warrant cautious interpretation. Larger, well‐designed studies are needed to clarify its role within cardiometabolic risk management strategies for NAFLD.</p></abstract><abstract abstract-type="graphical"><p>Summary of the systematic review and meta‐analysis assessing the effects of canola oil on hepatic and cardio metabolic markers in adults with non‐alcoholic fatty liver disease (NAFLD). Based on 3 randomized controlled trials including 220 participants, canola oil was associated with significant reductions in ALT, AST, and triglyceride levels, whereas no significant effects were found for GGT or HDL cholesterol. Overall, canola oil may provide modest benefits for selected NAFLD‐related outcomes, although larger high‐quality randomized controlled trials are required to confirm the evidence.<boxed-text position="anchor" content-type="graphic" id="fsn371752-blkfxd-0001" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="FSN3-14-e71752-g005.jpg"/></boxed-text>
+</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="fsn371752-kwd-0001">canola oil</kwd><kwd id="fsn371752-kwd-0002">liver health</kwd><kwd id="fsn371752-kwd-0003">meta‐analysis</kwd><kwd id="fsn371752-kwd-0004">NAFLD</kwd></kwd-group><counts><fig-count count="5"/><table-count count="3"/><page-count count="12"/><word-count count="7300"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:20.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body id="fsn371752-body-0001"><sec id="fsn371752-sec-0001"><label>1</label><title>Introduction</title><p>Non‐alcoholic fatty liver disease (NAFLD) is characterized by abnormal hepatic fat accumulation in the absence of alcohol consumption. Due to its rising prevalence and long‐term complications, it has become a major public health concern and is strongly associated with obesity, insulin resistance, and metabolic syndrome. While the global prevalence is approximately 30%, studies from Turkey report higher rates ranging from 48.3% to 60% (Kaya <xref rid="fsn371752-bib-0012" ref-type="bibr">2019</xref>; Younossi et al. <xref rid="fsn371752-bib-0036" ref-type="bibr">2023</xref>). Although histopathology is the diagnostic gold standard, its invasiveness and high cost limit its routine use (Abdelmalek <xref rid="fsn371752-bib-0001" ref-type="bibr">2021</xref>).</p><p>Overnutrition is a key contributor to NAFLD development. Excess caloric intake promotes ectopic fat deposition and adipose tissue expansion, accompanied by inflammation and insulin resistance. Increased insulin resistance enhances de novo lipogenesis (DNL), leading to greater synthesis of saturated and monounsaturated fatty acids within very low‐density lipoproteins (VLDLs). This metabolic imbalance induces endoplasmic reticulum stress and oxidative stress in hepatocytes, contributing to inflammation and fibrosis (Heeren and Scheja <xref rid="fsn371752-bib-0009" ref-type="bibr">2021</xref>; Powell et al. <xref rid="fsn371752-bib-0025" ref-type="bibr">2021</xref>). Oxidative stress is also critical in the progression from steatosis to non‐alcoholic steatohepatitis (NASH) (Nagashimada and Ota <xref rid="fsn371752-bib-0021" ref-type="bibr">2019</xref>).</p><p>Most individuals remain asymptomatic in the precirrhotic stage, and NAFLD is often detected through elevated liver enzymes such as alanine aminotransferase (ALT), aspartate aminotransferase (AST), and gamma‐glutamyl transferase (GGT). However, these enzymes may remain normal even in advanced disease. NAFLD is frequently accompanied by metabolic abnormalities including dysglycemia, insulin resistance, hyperinsulinemia, dyslipidemia, and hypercholesterolemia (Kupčová et al. <xref rid="fsn371752-bib-0014" ref-type="bibr">2019</xref>).</p><p>Since no specific pharmacological treatment is available, lifestyle modification remains the cornerstone of NAFLD management. Healthy dietary patterns and regular physical activity may reduce disease risk and slow progression (Musazadeh et al. <xref rid="fsn371752-bib-0020" ref-type="bibr">2021</xref>). Dietary interventions such as the Mediterranean diet (MD) and ketogenic diet (KD) have shown beneficial effects (Hassani Zadeh et al. <xref rid="fsn371752-bib-0008" ref-type="bibr">2021</xref>; Luukkonen et al. <xref rid="fsn371752-bib-0015" ref-type="bibr">2020</xref>), and higher adherence to the Nordic diet has been associated with lower NAFLD risk (Rasoulizadeh et al. <xref rid="fsn371752-bib-0027" ref-type="bibr">2024</xref>). The New Nordic Diet, based on Scandinavian dietary traditions, uses canola oil as its primary fat source (Mithril et al. <xref rid="fsn371752-bib-0017" ref-type="bibr">2013</xref>). Calorie restriction combined with improved dietary fat quality may reduce hepatic fat accumulation, particularly in populations with low omega‐3 polyunsaturated fatty acid (PUFA) (Musazadeh et al. <xref rid="fsn371752-bib-0020" ref-type="bibr">2021</xref>).</p><p>Canola oil contains mainly oleic, linoleic, and palmitic acids, along with α‐ and γ‐tocopherol and other tocopherol derivatives (Matthaus et al. <xref rid="fsn371752-bib-0037" ref-type="bibr">2016</xref>). Due to its high monounsaturated fatty acid (MUFA) content and low saturated fat, it has been proposed as an alternative to extra virgin olive oil (Hoffman and Gerber <xref rid="fsn371752-bib-0010" ref-type="bibr">2014</xref>). Recent studies emphasize the relevance of dietary fat quality in NAFLD, highlighting MUFA‐rich oils such as canola oil (Farhangi et al. <xref rid="fsn371752-bib-0006" ref-type="bibr">2022</xref>; Musazadeh et al. <xref rid="fsn371752-bib-0020" ref-type="bibr">2021</xref>, <xref rid="fsn371752-bib-0019" ref-type="bibr">2022</xref>). USDA data indicate that canola oil provides approximately 60%–65% oleic acid, 17%–25% linoleic acid, and 7%–12% α‐linolenic acid, along with vitamin E components such as 17.3 mg α‐tocopherol and 41.3 mg γ‐tocopherol, which may enhance antioxidant capacity and protect against inflammation, oxidative stress, and hepatic lipid accumulation (Food Data Central Food Details Canola Oil <xref rid="fsn371752-bib-0031" ref-type="bibr">2019</xref>).</p><p>Vitamin E has demonstrated beneficial effects in NAFLD, and both AASLD and EASL recommend supplementation (Bril et al. <xref rid="fsn371752-bib-0005" ref-type="bibr">2019</xref>). Meta‐analyses suggest that vitamin E reduces AST and ALT levels and that doses above 600 IU/day may improve fibrosis severity (Ando and Jou <xref rid="fsn371752-bib-0004" ref-type="bibr">2021</xref>; Vogli et al. <xref rid="fsn371752-bib-0032" ref-type="bibr">2023</xref>; Wang et al. <xref rid="fsn371752-bib-0034" ref-type="bibr">2023</xref>). Dietary vitamin E intake has also been associated with a lower risk of NAFLD (Qi et al. <xref rid="fsn371752-bib-0026" ref-type="bibr">2024</xref>).</p><p>The increasing use of canola oil has drawn attention not only because of its vitamin E content but also because of its high phytosterol concentration. The total phytosterol content in rapeseed oil (4.6–9.0 mg/g) is approximately twice that in sunflower (2.1–4.5 mg/g) and soybean (2.3–4.7 mg/g) oils (Qi et al. <xref rid="fsn371752-bib-0026" ref-type="bibr">2024</xref>). Given its rich composition of vitamin E, a potent antioxidant, and phytosterols, canola oil consumption is suggested to have therapeutic effects on NAFLD, potentially delaying fibrosis progression. Although canola oil is widely recommended, cautious use has been suggested in certain contexts. For example, one review found moderate increases in waist circumference in specific subgroups despite overall improvements in weight outcomes (Mohtashamian et al. <xref rid="fsn371752-bib-0018" ref-type="bibr">2025</xref>).</p><p>Previous meta‐analyses have primarily evaluated the cardiometabolic effects of canola oil in general populations, focusing mainly on lipid profiles and cardiovascular risk markers (Amiri et al. <xref rid="fsn371752-bib-0003" ref-type="bibr">2020</xref>; Pourrajab et al. <xref rid="fsn371752-bib-0024" ref-type="bibr">2023</xref>). However, its role in individuals with established NAFLD, where hepatic steatosis and liver‐specific biomarkers are central outcomes, has not been systematically synthesized. Differences in comparator oils and intervention protocols further limit interpretation. Therefore, a focused evaluation of randomized controlled trials examining canola oil in the context of NAFLD is needed to clarify its hepatic and metabolic implications.</p><p>Therefore, this systematic review and meta‐analysis aimed to evaluate the effects of dietary canola oil consumption on hepatic biomarkers and cardiometabolic parameters in adults with non‐alcoholic fatty liver disease (NAFLD), based on evidence from randomized controlled trials.</p></sec><sec sec-type="methods" id="fsn371752-sec-0002"><label>2</label><title>Methods</title><sec id="fsn371752-sec-0003"><label>2.1</label><title>Search Strategy</title><p>Our study selection criteria were established on the basis of the PICOS (Participants, Intervention, Comparison, Outcomes, Study type) framework (presented in Table <xref rid="fsn371752-supitem-0003" ref-type="supplementary-material">S1</xref>), as outlined in the PRISMA (Preferred Reporting Items for Systematic Reviews and Meta‐Analyses) checklist (Page et al. <xref rid="fsn371752-bib-0023" ref-type="bibr">2021</xref>) (presented in Appendix <xref rid="fsn371752-supitem-0001" ref-type="supplementary-material">S1</xref>). The study protocol was prospectively registered in the PROSPERO international prospective register of systematic reviews (CRD42024593566) prior to study commencement. The keywords “canola oil, rapeseed oil, low erucic acid rapeseed, LEAR, colza oil, <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Brassica napus</italic>
+</styled-content>, NAFLD, nonalcoholic fatty liver, steatohepatitis, steatohepatitides, fatty liver, NASH” were searched in the PUBMED, Web of Science (WOS), Scopus and Cochrane databases until 16 December 2024 by one researcher (K.B.E.G.) (presented in Appendix <xref rid="fsn371752-supitem-0002" ref-type="supplementary-material">S2</xref>).</p></sec><sec id="fsn371752-sec-0004"><label>2.2</label><title>Eligibility Criteria</title><p>Randomized controlled trials (RCTs), nonrandomized controlled trials, cohort studies or cross‐sectional, observational studies were screened for eligibility. Only studies in which dietary or oil‐based interventions were applied to adults with hepatic steatosis (NAFLD) were included. Although observational and non‐randomized studies were initially screened according to the broader eligibility framework, only randomized controlled trials fulfilled the final inclusion criteria and reported sufficient quantitative outcome data to be synthesized. RCTs in which the mean ± standard deviation (SD) was used to report effect sizes. Meta‐analyses, systematic reviews, and animal and laboratory studies (not involving humans), for example, in vitro studies, were excluded. Two reviewers (K.B.E.G. and S.B.) independently screened the titles and abstracts of all retrieved records using predefined eligibility criteria. Full texts of potentially eligible articles were then evaluated in detail. Discrepancies were resolved by discussion or by consulting a third reviewer.</p></sec><sec id="fsn371752-sec-0005"><label>2.3</label><title>Quality Assessment of Studies and Data Extraction</title><p>Since all studies included in the systematic review were randomized controlled trials, the Cochrane Risk of Bias 2 tool was used for quality assessment, which is composed of the following domains: D1a: randomization process; D1b: timing of identification or recruitment of participants; D2: deviations from the intended interventions; D3: missing outcome data; D4: measurement of the outcome; and D5: selection of the reported result. Two researchers (K.B.E.G. and B.B.) assessed the studies.</p><p>Data extraction from the studies selected for inclusion was performed by two researchers (K.B.E.G. and S.B.). The extracted data included the first author's name, the year of publication, the country in which the study was conducted, the study design, sample size, population characteristics, mean age of participants, interventions and controls along with their respective dosages, study duration and type, and the primary outcomes of the study.</p></sec><sec id="fsn371752-sec-0006"><label>2.4</label><title>Statistical Methods</title><p>Comprehensive Meta‐Analysis software (CMA v3; Biostat, Englewood, NJ, USA) was used to perform the quantitative analyses due to its capacity to handle continuous outcomes in studies with small sample sizes. Although RevMan was initially specified in the PROSPERO protocol, the use of CMA did not alter the predefined analytical strategy and was considered a minor methodological adjustment.</p><p>Between‐study heterogeneity was assessed using Cochran's <italic toggle="yes">Q</italic> test and quantified with the <italic toggle="yes">I</italic>
+<sup>2</sup> statistic. Given the expected clinical variability across studies including differences in intervention dose, duration, comparator oils, and study populations, random‐effects models were applied for all pooled analyses regardless of <italic toggle="yes">I</italic>
+<sup>2</sup> values. Effect sizes were calculated as weighted mean differences (WMDs) when outcomes were reported in uniform units and as standardized mean differences (SMDs) when measurement scales differed.</p><p>Sensitivity analyses were conducted using a leave‐one‐out approach to evaluate the influence of individual studies on pooled estimates. Due to the limited number of included trials (&lt; 10 per outcome), formal statistical tests for publication bias were not considered reliable and were interpreted with caution. A two‐sided <italic toggle="yes">p</italic>‐value &lt; 0.05 was considered statistically significant.</p></sec></sec><sec sec-type="results" id="fsn371752-sec-0007"><label>3</label><title>Results</title><sec id="fsn371752-sec-0008"><label>3.1</label><title>Study Selection</title><p>357 results were found in the PUBMED database, 713 in WOS, 80 in Scopus and 21 in the Cochrane Library. A total of 1171 studies were found. Duplications were removed with the Rayyan AI‐powered systematic review management platform. In total, 274 of the 1171 studies were duplicates. The results of 6 clinical trial records could not be accessed due to unavailable full texts. A total of 696 studies were animal studies, 29 were reviews, 130 were unrelated to the subject, 13 were plant studies, 12 were in vitro studies, and 1 was an ex vivo study. The remaining 10 studies were identified by two researchers (K.B.E.G. and S.B.), and 5 of them were determined as wrong population, 2 as wrong application. The two reviewers demonstrated high agreement in study selection, with a 90% concordance rate. A PRISMA flow diagram of the study selection process is presented in Figure <xref rid="fsn371752-fig-0001" ref-type="fig">1</xref>.</p><fig position="float" fig-type="FIGURE" id="fsn371752-fig-0001" orientation="portrait"><label>FIGURE 1</label><caption><p>Identification of studies via databases and registers.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="FSN3-14-e71752-g001.jpg"/></fig></sec><sec id="fsn371752-sec-0009"><label>3.2</label><title>Quality Assessment</title><p>The three studies identified through screening were assessed for quality. In all the studies, the participants were randomly assigned to groups. Additionally, the timing of identification or recruitment of participants was considered low risk. However, in two studies (Kruse et al. <xref rid="fsn371752-bib-0013" ref-type="bibr">2020</xref>) and (Nigam et al. <xref rid="fsn371752-bib-0022" ref-type="bibr">2014</xref>), the reasons for participant dropout were not clearly specified. Only one study (Maleki Sedgi et al. <xref rid="fsn371752-bib-0016" ref-type="bibr">2024</xref>) explicitly stated that the analyst evaluating the data was blinded to the study conditions. Consequently, two studies (Kruse et al. <xref rid="fsn371752-bib-0013" ref-type="bibr">2020</xref>) and (Nigam et al. <xref rid="fsn371752-bib-0022" ref-type="bibr">2014</xref>) raised some concerns in this regard. Overall, two studies were rated as having some concerns, while one study was rated as low risk of bias (Figure <xref rid="fsn371752-fig-0002" ref-type="fig">2</xref>).</p><fig position="float" fig-type="FIGURE" id="fsn371752-fig-0002" orientation="portrait"><label>FIGURE 2</label><caption><p>Risk of bias assessment of included studies.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="FSN3-14-e71752-g003.jpg"/></fig><sec id="fsn371752-sec-0010"><label>3.2.1</label><title>Sensitivity and Influence Analyses</title><p>A leave‐one‐out influence analysis was conducted to assess the robustness of pooled estimates for all outcomes. Due to the limited number of included studies, formal statistical tests for publication bias were not performed. The full influence matrix is presented in Table <xref rid="fsn371752-tbl-0001" ref-type="table">1</xref>.</p><table-wrap position="float" id="fsn371752-tbl-0001" content-type="TABLE" orientation="portrait"><label>TABLE 1</label><caption><p>Leave‐one‐out influence analysis based on Hedges's <italic toggle="no">g</italic> effect sizes.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" rowspan="2" valign="bottom" colspan="1">Study</th><th align="center" rowspan="2" valign="bottom" colspan="1">Outcome</th><th align="center" colspan="5" valign="bottom" rowspan="1">One study removed</th><th align="center" colspan="5" valign="bottom" rowspan="1">Leave‐one‐out pooled estimate</th></tr><tr style="border-bottom:solid 1px #000000"><th align="center" valign="bottom" rowspan="1" colspan="1">Hedge's <italic toggle="yes">g</italic>
+</th><th align="center" valign="bottom" rowspan="1" colspan="1">SE</th><th align="center" valign="bottom" rowspan="1" colspan="1">Lower limit</th><th align="center" valign="bottom" rowspan="1" colspan="1">Upper limit</th><th align="center" valign="bottom" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic>
+</th><th align="center" valign="bottom" rowspan="1" colspan="1">Hedge's <italic toggle="yes">g</italic>
+</th><th align="center" valign="bottom" rowspan="1" colspan="1">SE</th><th align="center" valign="bottom" rowspan="1" colspan="1">Lower limit</th><th align="center" valign="bottom" rowspan="1" colspan="1">Upper limit</th><th align="center" valign="bottom" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic>
+</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Kruse, 2020</td><td align="center" valign="top" rowspan="1" colspan="1">AST</td><td align="center" valign="top" rowspan="1" colspan="1">−0.584</td><td align="center" valign="top" rowspan="1" colspan="1">0.175</td><td align="center" valign="top" rowspan="1" colspan="1">−0.927</td><td align="center" valign="top" rowspan="1" colspan="1">−0.24</td><td align="center" valign="top" rowspan="1" colspan="1">0.001</td><td align="center" valign="top" rowspan="1" colspan="1">0.166</td><td align="center" valign="top" rowspan="1" colspan="1">0.356</td><td align="center" valign="top" rowspan="1" colspan="1">−0.532</td><td align="center" valign="top" rowspan="1" colspan="1">0.864</td><td align="center" valign="top" rowspan="1" colspan="1">0.641</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Nigam, 2014, a</td><td align="center" valign="top" rowspan="1" colspan="1">AST</td><td align="center" valign="top" rowspan="1" colspan="1">−0.321</td><td align="center" valign="top" rowspan="1" colspan="1">0.262</td><td align="center" valign="top" rowspan="1" colspan="1">−0.834</td><td align="center" valign="top" rowspan="1" colspan="1">0.192</td><td align="center" valign="top" rowspan="1" colspan="1">0.220</td><td align="center" valign="top" rowspan="1" colspan="1">−0.760</td><td align="center" valign="top" rowspan="1" colspan="1">0.252</td><td align="center" valign="top" rowspan="1" colspan="1">−1254</td><td align="center" valign="top" rowspan="1" colspan="1">−0.266</td><td align="center" valign="top" rowspan="1" colspan="1">0.003</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Nigam, 2014, b</td><td align="center" valign="top" rowspan="1" colspan="1">AST</td><td align="center" valign="top" rowspan="1" colspan="1">−0.516</td><td align="center" valign="top" rowspan="1" colspan="1">0.252</td><td align="center" valign="top" rowspan="1" colspan="1">−1009</td><td align="center" valign="top" rowspan="1" colspan="1">−0.023</td><td align="center" valign="top" rowspan="1" colspan="1">0.040</td><td align="center" valign="top" rowspan="1" colspan="1">−0.210</td><td align="center" valign="top" rowspan="1" colspan="1">0.244</td><td align="center" valign="top" rowspan="1" colspan="1">−0.688</td><td align="center" valign="top" rowspan="1" colspan="1">0.269</td><td align="center" valign="top" rowspan="1" colspan="1">0.390</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Sedgi, 2024</td><td align="center" valign="top" rowspan="1" colspan="1">AST</td><td align="center" valign="top" rowspan="1" colspan="1">−0.308</td><td align="center" valign="top" rowspan="1" colspan="1">0.257</td><td align="center" valign="top" rowspan="1" colspan="1">−0.812</td><td align="center" valign="top" rowspan="1" colspan="1">0.197</td><td align="center" valign="top" rowspan="1" colspan="1">0.232</td><td align="center" valign="top" rowspan="1" colspan="1">−0.744</td><td align="center" valign="top" rowspan="1" colspan="1">0.196</td><td align="center" valign="top" rowspan="1" colspan="1">−1128</td><td align="center" valign="top" rowspan="1" colspan="1">−0.360</td><td align="center" valign="top" rowspan="1" colspan="1">&lt; 0.001</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Kruse, 2020</td><td align="center" valign="top" rowspan="1" colspan="1">ALT</td><td align="center" valign="top" rowspan="1" colspan="1">−0.493</td><td align="center" valign="top" rowspan="1" colspan="1">0.147</td><td align="center" valign="top" rowspan="1" colspan="1">−0.781</td><td align="center" valign="top" rowspan="1" colspan="1">−0.205</td><td align="center" valign="top" rowspan="1" colspan="1">0.001</td><td align="center" valign="top" rowspan="1" colspan="1">−0.297</td><td align="center" valign="top" rowspan="1" colspan="1">0.357</td><td align="center" valign="top" rowspan="1" colspan="1">−0.988</td><td align="center" valign="top" rowspan="1" colspan="1">0.403</td><td align="center" valign="top" rowspan="1" colspan="1">0.405</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Nigam, 2014, a</td><td align="center" valign="top" rowspan="1" colspan="1">ALT</td><td align="center" valign="top" rowspan="1" colspan="1">−0.397</td><td align="center" valign="top" rowspan="1" colspan="1">0.139</td><td align="center" valign="top" rowspan="1" colspan="1">−0.671</td><td align="center" valign="top" rowspan="1" colspan="1">−0.124</td><td align="center" valign="top" rowspan="1" colspan="1">0.004</td><td align="center" valign="top" rowspan="1" colspan="1">−0.716</td><td align="center" valign="top" rowspan="1" colspan="1">0.251</td><td align="center" valign="top" rowspan="1" colspan="1">−1208</td><td align="center" valign="top" rowspan="1" colspan="1">−0.223</td><td align="center" valign="top" rowspan="1" colspan="1">0.004</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Nigam, 2014, b</td><td align="center" valign="top" rowspan="1" colspan="1">ALT</td><td align="center" valign="top" rowspan="1" colspan="1">−0.569</td><td align="center" valign="top" rowspan="1" colspan="1">0.141</td><td align="center" valign="top" rowspan="1" colspan="1">−0.845</td><td align="center" valign="top" rowspan="1" colspan="1">−0.293</td><td align="center" valign="top" rowspan="1" colspan="1">&lt; 0.001</td><td align="center" valign="top" rowspan="1" colspan="1">−0.183</td><td align="center" valign="top" rowspan="1" colspan="1">0.244</td><td align="center" valign="top" rowspan="1" colspan="1">−0.660</td><td align="center" valign="top" rowspan="1" colspan="1">0.295</td><td align="center" valign="top" rowspan="1" colspan="1">0.454</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Sedgi, 2024</td><td align="center" valign="top" rowspan="1" colspan="1">ALT</td><td align="center" valign="top" rowspan="1" colspan="1">−0.412</td><td align="center" valign="top" rowspan="1" colspan="1">0.176</td><td align="center" valign="top" rowspan="1" colspan="1">−0.757</td><td align="center" valign="top" rowspan="1" colspan="1">−0.067</td><td align="center" valign="top" rowspan="1" colspan="1">0.019</td><td align="center" valign="top" rowspan="1" colspan="1">−0.561</td><td align="center" valign="top" rowspan="1" colspan="1">0.193</td><td align="center" valign="top" rowspan="1" colspan="1">−0.940</td><td align="center" valign="top" rowspan="1" colspan="1">−0.183</td><td align="center" valign="top" rowspan="1" colspan="1">0.004</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Kruse, 2020</td><td align="center" valign="top" rowspan="1" colspan="1">GGT</td><td align="center" valign="top" rowspan="1" colspan="1">0.028</td><td align="center" valign="top" rowspan="1" colspan="1">0.189</td><td align="center" valign="top" rowspan="1" colspan="1">−0.343</td><td align="center" valign="top" rowspan="1" colspan="1">0.399</td><td align="center" valign="top" rowspan="1" colspan="1">0.884</td><td align="center" valign="top" rowspan="1" colspan="1">0.633</td><td align="center" valign="top" rowspan="1" colspan="1">0.365</td><td align="center" valign="top" rowspan="1" colspan="1">−0.081</td><td align="center" valign="top" rowspan="1" colspan="1">1348</td><td align="center" valign="top" rowspan="1" colspan="1">0.082</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Sedgi, 2024</td><td align="center" valign="top" rowspan="1" colspan="1">GGT</td><td align="center" valign="top" rowspan="1" colspan="1">0.633</td><td align="center" valign="top" rowspan="1" colspan="1">0.365</td><td align="center" valign="top" rowspan="1" colspan="1">−0.081</td><td align="center" valign="top" rowspan="1" colspan="1">1348</td><td align="center" valign="top" rowspan="1" colspan="1">0.082</td><td align="center" valign="top" rowspan="1" colspan="1">0.028</td><td align="center" valign="top" rowspan="1" colspan="1">0.189</td><td align="center" valign="top" rowspan="1" colspan="1">−0.343</td><td align="center" valign="top" rowspan="1" colspan="1">0.399</td><td align="center" valign="top" rowspan="1" colspan="1">0.884</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Nigam, 2014, a</td><td align="center" valign="top" rowspan="1" colspan="1">TG</td><td align="center" valign="top" rowspan="1" colspan="1">−0.736</td><td align="center" valign="top" rowspan="1" colspan="1">0.392</td><td align="center" valign="top" rowspan="1" colspan="1">−1506</td><td align="center" valign="top" rowspan="1" colspan="1">0.033</td><td align="center" valign="top" rowspan="1" colspan="1">0.061</td><td align="center" valign="top" rowspan="1" colspan="1">−0.289</td><td align="center" valign="top" rowspan="1" colspan="1">0.245</td><td align="center" valign="top" rowspan="1" colspan="1">−0.768</td><td align="center" valign="top" rowspan="1" colspan="1">0.191</td><td align="center" valign="top" rowspan="1" colspan="1">0.238</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Nigam, 2014, b</td><td align="center" valign="top" rowspan="1" colspan="1">TG</td><td align="center" valign="top" rowspan="1" colspan="1">−0.714</td><td align="center" valign="top" rowspan="1" colspan="1">0.414</td><td align="center" valign="top" rowspan="1" colspan="1">−1526</td><td align="center" valign="top" rowspan="1" colspan="1">0.098</td><td align="center" valign="top" rowspan="1" colspan="1">0.085</td><td align="center" valign="top" rowspan="1" colspan="1">−0.332</td><td align="center" valign="top" rowspan="1" colspan="1">0.245</td><td align="center" valign="top" rowspan="1" colspan="1">−0.812</td><td align="center" valign="top" rowspan="1" colspan="1">0.148</td><td align="center" valign="top" rowspan="1" colspan="1">0.175</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Sedgi, 2024</td><td align="center" valign="top" rowspan="1" colspan="1">TG</td><td align="center" valign="top" rowspan="1" colspan="1">−0.310</td><td align="center" valign="top" rowspan="1" colspan="1">0.173</td><td align="center" valign="top" rowspan="1" colspan="1">−0.65</td><td align="center" valign="top" rowspan="1" colspan="1">0.029</td><td align="center" valign="top" rowspan="1" colspan="1">0.073</td><td align="center" valign="top" rowspan="1" colspan="1">−1117</td><td align="center" valign="top" rowspan="1" colspan="1">0.204</td><td align="center" valign="top" rowspan="1" colspan="1">−1517</td><td align="center" valign="top" rowspan="1" colspan="1">−0.718</td><td align="center" valign="top" rowspan="1" colspan="1">&lt; 0.001</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Nigam, 2014, a</td><td align="center" valign="top" rowspan="1" colspan="1">HDL</td><td align="center" valign="top" rowspan="1" colspan="1">0.305</td><td align="center" valign="top" rowspan="1" colspan="1">0.645</td><td align="center" valign="top" rowspan="1" colspan="1">−0.96</td><td align="center" valign="top" rowspan="1" colspan="1">1569</td><td align="center" valign="top" rowspan="1" colspan="1">0.637</td><td align="center" valign="top" rowspan="1" colspan="1">−0.132</td><td align="center" valign="top" rowspan="1" colspan="1">0.244</td><td align="center" valign="top" rowspan="1" colspan="1">−0.61</td><td align="center" valign="top" rowspan="1" colspan="1">0.345</td><td align="center" valign="top" rowspan="1" colspan="1">0.587</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Nigam, 2014, b</td><td align="center" valign="top" rowspan="1" colspan="1">HDL</td><td align="center" valign="top" rowspan="1" colspan="1">−0.254</td><td align="center" valign="top" rowspan="1" colspan="1">0.15</td><td align="center" valign="top" rowspan="1" colspan="1">−0.549</td><td align="center" valign="top" rowspan="1" colspan="1">0.04</td><td align="center" valign="top" rowspan="1" colspan="1">0.09</td><td align="center" valign="top" rowspan="1" colspan="1">0.962</td><td align="center" valign="top" rowspan="1" colspan="1">0.257</td><td align="center" valign="top" rowspan="1" colspan="1">0.457</td><td align="center" valign="top" rowspan="1" colspan="1">1466</td><td align="center" valign="top" rowspan="1" colspan="1">&lt; 0.001</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Sedgi, 2024</td><td align="center" valign="top" rowspan="1" colspan="1">HDL</td><td align="center" valign="top" rowspan="1" colspan="1">0.412</td><td align="center" valign="top" rowspan="1" colspan="1">0.547</td><td align="center" valign="top" rowspan="1" colspan="1">−0.66</td><td align="center" valign="top" rowspan="1" colspan="1">1484</td><td align="center" valign="top" rowspan="1" colspan="1">0.452</td><td align="center" valign="top" rowspan="1" colspan="1">−0.329</td><td align="center" valign="top" rowspan="1" colspan="1">0.191</td><td align="center" valign="top" rowspan="1" colspan="1">−0.703</td><td align="center" valign="top" rowspan="1" colspan="1">0.045</td><td align="center" valign="top" rowspan="1" colspan="1">0.084</td></tr></tbody></table><table-wrap-foot id="fsn371752-ntgp-0001"><fn id="fsn371752-note-0005"><p>
+<italic toggle="yes">Note:</italic> Nigam, 2014,a refers to comparison between the olive oil and canola oil groups; Nigam, 2014,b refers to comparison between the canola oil and safflower/soybean oil groups.</p></fn><fn id="fsn371752-note-0001"><p>Abbreviation: SE, standard error.</p></fn></table-wrap-foot></table-wrap></sec></sec><sec id="fsn371752-sec-0011"><label>3.3</label><title>Certainty of Evidence (<styled-content style="fixed-case" toggle="no">GRADE</styled-content> Assessment)</title><p>The certainty of evidence for each outcome was assessed using the GRADE methodology. The certainty of evidence was rated as moderate for ALT, primarily due to consistent findings and low heterogeneity across studies. For AST, TG, HDL, and GGT, the certainty of evidence was rated as low, driven by small sample sizes, imprecision in effect estimates, and substantial statistical heterogeneity for some outcomes. Overall, the evidence base was limited by small sample sizes, resulting in low‐to‐moderate certainty across outcomes. A summary of the GRADE assessments is provided in Table <xref rid="fsn371752-tbl-0002" ref-type="table">2</xref>.</p><table-wrap position="float" id="fsn371752-tbl-0002" content-type="TABLE" orientation="portrait"><label>TABLE 2</label><caption><p>Grade evidence profile for canola oil interventions in NAFLD.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Outcome</th><th align="center" valign="bottom" rowspan="1" colspan="1">Number of studies</th><th align="center" valign="bottom" rowspan="1" colspan="1">Study design</th><th align="center" valign="bottom" rowspan="1" colspan="1">Risk of bias</th><th align="center" valign="bottom" rowspan="1" colspan="1">Inconsistency</th><th align="center" valign="bottom" rowspan="1" colspan="1">Indirectness</th><th align="center" valign="bottom" rowspan="1" colspan="1">Imprecision</th><th align="center" valign="bottom" rowspan="1" colspan="1">Publication bias</th><th align="center" valign="bottom" rowspan="1" colspan="1">Overall certainty</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">ALT</td><td align="center" valign="top" rowspan="1" colspan="1">4 RCTs</td><td align="center" valign="top" rowspan="1" colspan="1">Randomized trials</td><td align="center" valign="top" rowspan="1" colspan="1">Not serious</td><td align="center" valign="top" rowspan="1" colspan="1">Not serious (<italic toggle="yes">I</italic>
+<sup>2</sup> = 0%)</td><td align="center" valign="top" rowspan="1" colspan="1">Not serious</td><td align="center" valign="top" rowspan="1" colspan="1">Serious (small sample)</td><td align="center" valign="top" rowspan="1" colspan="1">Not detected</td><td align="center" valign="top" rowspan="1" colspan="1">Moderate</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">AST</td><td align="center" valign="top" rowspan="1" colspan="1">4 RCTs</td><td align="center" valign="top" rowspan="1" colspan="1">Randomized trials</td><td align="center" valign="top" rowspan="1" colspan="1">Not serious</td><td align="center" valign="top" rowspan="1" colspan="1">Serious (<italic toggle="yes">I</italic>
+<sup>2</sup> = 60%)</td><td align="center" valign="top" rowspan="1" colspan="1">Not serious</td><td align="center" valign="top" rowspan="1" colspan="1">Serious</td><td align="center" valign="top" rowspan="1" colspan="1">Not detected</td><td align="center" valign="top" rowspan="1" colspan="1">Low</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">GGT</td><td align="center" valign="top" rowspan="1" colspan="1">2 RCTs</td><td align="center" valign="top" rowspan="1" colspan="1">Randomized trials</td><td align="center" valign="top" rowspan="1" colspan="1">Not serious</td><td align="center" valign="top" rowspan="1" colspan="1">Serious (<italic toggle="yes">I</italic>
+<sup>2</sup> = 4%)</td><td align="center" valign="top" rowspan="1" colspan="1">Not serious</td><td align="center" valign="top" rowspan="1" colspan="1">Serious</td><td align="center" valign="top" rowspan="1" colspan="1">Undetectable due to small number</td><td align="center" valign="top" rowspan="1" colspan="1">Low</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">HDL</td><td align="center" valign="top" rowspan="1" colspan="1">3 RCTs</td><td align="center" valign="top" rowspan="1" colspan="1">Randomized trials</td><td align="center" valign="top" rowspan="1" colspan="1">Not serious</td><td align="center" valign="top" rowspan="1" colspan="1">Very serious (<italic toggle="yes">I</italic>
+<sup>2</sup> = 88%)</td><td align="center" valign="top" rowspan="1" colspan="1">Not serious</td><td align="center" valign="top" rowspan="1" colspan="1">Serious</td><td align="center" valign="top" rowspan="1" colspan="1">Not detected</td><td align="center" valign="top" rowspan="1" colspan="1">Low</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Triglycerides (TG)</td><td align="center" valign="top" rowspan="1" colspan="1">3 RCTs</td><td align="center" valign="top" rowspan="1" colspan="1">Randomized trials</td><td align="center" valign="top" rowspan="1" colspan="1">Not serious</td><td align="center" valign="top" rowspan="1" colspan="1">Serious (<italic toggle="yes">I</italic>
+<sup>2</sup> = 78%)</td><td align="center" valign="top" rowspan="1" colspan="1">Not serious</td><td align="center" valign="top" rowspan="1" colspan="1">Serious</td><td align="center" valign="top" rowspan="1" colspan="1">Undetectable due to small number of studies</td><td align="center" valign="top" rowspan="1" colspan="1">Low</td></tr></tbody></table><table-wrap-foot id="fsn371752-ntgp-0002"><fn id="fsn371752-note-0002"><p>
+<italic toggle="yes">Note:</italic>
+<italic toggle="yes">I</italic>
+<sup>2</sup>: Heterogeneity.</p></fn></table-wrap-foot></table-wrap></sec><sec id="fsn371752-sec-0012"><label>3.4</label><title>Study Characteristics</title><p>Three studies were included in the review. In Nigam's study, participants were divided into two subgroups for more precise comparisons (Nigam et al. <xref rid="fsn371752-bib-0022" ref-type="bibr">2014</xref>). Nigam (2014a) focused on the comparison between the olive oil (OL) and canola oil (CA) groups, whereas Nigam (2014b) compared the CA group and safflower/soybean oil (SA) groups. The characteristics of the included studies are presented in Table <xref rid="fsn371752-tbl-0003" ref-type="table">3</xref>. All studies had parallel designs. The publication years of the studies ranged from 2014 to 2024. One study (Kruse et al. <xref rid="fsn371752-bib-0013" ref-type="bibr">2020</xref>) implemented an intervention in which canola oil was added for daily consumption, whereas the other two studies (Nigam et al. <xref rid="fsn371752-bib-0022" ref-type="bibr">2014</xref>) and (Maleki Sedgi et al. <xref rid="fsn371752-bib-0016" ref-type="bibr">2024</xref>) replaced dietary fats with canola oil. The intervention durations varied: Kruse conducted an 8‐week intervention, Sedgi implemented a 12‐week intervention, and Nigam carried out a 6‐month intervention.</p><table-wrap position="float" id="fsn371752-tbl-0003" content-type="TABLE" orientation="portrait"><label>TABLE 3</label><caption><p>Characteristics of the participants and interventions of the included studies.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Reference</th><th align="center" valign="bottom" rowspan="1" colspan="1">Study type</th><th align="center" valign="bottom" rowspan="1" colspan="1">Year</th><th align="center" valign="bottom" rowspan="1" colspan="1">Groups (<italic toggle="yes">n</italic>)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Mean age (SD or range)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Health status or clinical condition</th><th align="center" valign="bottom" rowspan="1" colspan="1">Intervention</th><th align="center" valign="bottom" rowspan="1" colspan="1">Intervention duration</th><th align="center" valign="bottom" rowspan="1" colspan="1">Dose</th><th align="center" valign="bottom" rowspan="1" colspan="1">Outcome preintervention (SD)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Outcome postintervention (SD)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Main result</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Kruse, 2020, Germany</td><td align="center" valign="top" rowspan="1" colspan="1">RCT</td><td align="center" valign="top" rowspan="1" colspan="1">N\A</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>Olive oil (OL): 11 men</p>
+<p>Canola/rapeseed oil (CA): 16 men</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>OL: 54 ± 3.95</p>
+<p>CA: 58 ± 2.64</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Overweight/obese men with NAFLD</td><td align="center" valign="top" rowspan="1" colspan="1">Additional 50 g/day oil intervention but participants asked not to change dietary habits</td><td align="center" valign="top" rowspan="1" colspan="1">8 weeks</td><td align="center" valign="top" rowspan="1" colspan="1">50 g/day</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<italic toggle="yes">AST (U/L)</italic>
+</p>
+<p>27.2 ± 2.8</p>
+<p>26.88 ± 2.3</p>
+<p>
+<italic toggle="yes">ALT (U/L)</italic>
+</p>
+<p>37.40 ± 5.8</p>
+<p>37.69 ± 3.0</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<italic toggle="yes">AST (U/L)</italic>
+</p>
+<p>26.04 ± 3.6</p>
+<p>26.59 ± 2.8</p>
+<p>
+<italic toggle="yes">ALT (U/L)</italic>
+</p>
+<p>36.28 ± 5.5</p>
+<p>35.00 ± 2.2</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">IHL ↓ in CA group</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Nigam, 2014a, India</td><td align="center" valign="top" rowspan="1" colspan="1">RCT</td><td align="center" valign="top" rowspan="1" colspan="1">May 2007 to December 2009</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>OL: 30 men</p>
+<p>CA: 33 men</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>OL: 37.2 ± 6.2</p>
+<p>CA: 38.0 ± 6.4</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Men with NAFLD</td><td align="center" valign="top" rowspan="1" colspan="1">20 g/day oil intervention as cooking media</td><td align="center" valign="top" rowspan="1" colspan="1">6 months</td><td align="center" valign="top" rowspan="1" colspan="1">20 g/day</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<italic toggle="yes">AST (U/L)</italic>
+</p>
+<p>OL: 35.8 ± 21.8</p>
+<p>CO: 33.1 ± 13.8</p>
+<p>
+<italic toggle="yes">ALT (U/L)</italic>
+</p>
+<p>OL: 39.8 ± 19.9</p>
+<p>CO: 33.9 ± 3.2</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<italic toggle="yes">AST (U/L)</italic>
+</p>
+<p>OL: 33.2 ± 4.6</p>
+<p>CO: 29 ± 6.2</p>
+<p>
+<italic toggle="yes">ALT (U/L)</italic>
+</p>
+<p>OL: 38.1 ± 11.3</p>
+<p>CO: 31.5 ± 6.2</p>
+</td><td align="center" rowspan="2" valign="top" colspan="1">
+<p>HDL ↑ in OL<xref rid="fsn371752-note-0003" ref-type="table-fn">
+<sup>*</sup>
+</xref>
+</p>
+<p>TG ↓ CA<xref rid="fsn371752-note-1003" ref-type="table-fn">
+<sup>**</sup>
+</xref>
+</p>
+<p>Liver fat accumulation ↓ in OL and CA groups</p>
+<p>Grade I, from 73.3% to 23.3% and from 60.5% to 20%, respectively grade II, from 20% to 10% and from 33.4% to 3.3%, respectively</p>
+<p>Grade III, from 6.7% to none and from 6.1% to none, respectively</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Nigam, 2014b, India</td><td align="center" valign="top" rowspan="1" colspan="1">RCT</td><td align="center" valign="top" rowspan="1" colspan="1">May 2007 to December 2009</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>CA: 33 men</p>
+<p>Safflower/soybean oil (SO): 30 men</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>CA: 38.0 ± 6.4</p>
+<p>SA: 36.2 ± 7.1</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Men with NAFLD</td><td align="center" valign="top" rowspan="1" colspan="1">20 g/day oil intervention as cooking media</td><td align="center" valign="top" rowspan="1" colspan="1">6 months</td><td align="center" valign="top" rowspan="1" colspan="1">20 g/day</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<italic toggle="yes">AST (U/L)</italic>
+</p>
+<p>CO: 33.1 ± 13.8</p>
+<p>SO: 31.7 ± 8.9</p>
+<p>
+<italic toggle="yes">ALT (U/L)</italic>
+</p>
+<p>CO: 33.9 ± 3.2</p>
+<p>SO: 34.7 ± 8.9</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<italic toggle="yes">AST (U/L)</italic>
+</p>
+<p>CO: 29 ± 6.2</p>
+<p>SO: 31.2 ± 13.3</p>
+<p>
+<italic toggle="yes">ALT (U/L)</italic>
+</p>
+<p>CO: 31.5 ± 6.2</p>
+<p>SO: 34 ± 18.1</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Sedgi, 2024, Iran</td><td align="center" valign="top" rowspan="1" colspan="1">RCT</td><td align="center" valign="top" rowspan="1" colspan="1">February to August 2022</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>CA: 55 people</p>
+<p>Ghee: 55 people</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>CA: 41.35 ± 9</p>
+<p>Ghee: 43 ± 10.1</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Patients with NAFLD</td><td align="center" valign="top" rowspan="1" colspan="1">Individuals use 3–8 servings (each serving considered as 5 g) ghee asked to replaced rapeseed oil</td><td align="center" valign="top" rowspan="1" colspan="1">12 weeks</td><td align="center" valign="top" rowspan="1" colspan="1">4–5 servings (5 g per serving)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<italic toggle="yes">AST</italic>
+</p>
+<p>27.5 ± 12.1</p>
+<p>30.8 ± 15.8</p>
+<p>
+<italic toggle="yes">ALT</italic>
+</p>
+<p>42.7 ± 31.9</p>
+<p>42.1 ± 22.9</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>
+<italic toggle="yes">AST</italic>
+</p>
+<p>20.1 ± 6.2</p>
+<p>26.7 ± 11</p>
+<p>
+<italic toggle="yes">ALT</italic>
+</p>
+<p>28.3 ± 14.3</p>
+<p>37.9 ± 19.13</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Steatosis ↓ϯ ALT ↓ GGT↓ Total Cholesterol ↓ TAG ↓, LDL ↓ in CA group</td></tr></tbody></table><table-wrap-foot id="fsn371752-ntgp-0003"><fn id="fsn371752-note-0003"><label>
+<sup>*</sup>
+</label><p>
+<italic toggle="yes">p</italic> = 0.004.</p></fn><fn id="fsn371752-note-1003"><label>
+<sup>**</sup>
+</label><p>
+<italic toggle="yes">p</italic> = 0.02.</p></fn></table-wrap-foot></table-wrap><p>The dosage of interventions also differed among the studies. Kruse provided an additional 50 g of oil, whereas Nigam used 20 g of oil for cooking. Sedgi, on the other hand, did not specify an exact gram measurement but administered the intervention in 4–5 servings, with one serving size equivalent to 5 g.</p></sec><sec id="fsn371752-sec-0013"><label>3.5</label><title>Energy Derived From Diet</title><p>In the study conducted by Kruse, changes in macronutrient distribution were observed in both the OL and CA groups over the 8‐week intervention period. The total daily caloric intake varied between the groups. In the OL group, the initial daily energy intake of 2255 ± 131 kcal increased to 2417 ± 161 kcal by the end of the study. In contrast, in the CA group, daily energy intake decreased from 2573 ± 210 kcal at baseline to 2322 ± 108 kcal after 8 weeks. In Nigam's study, before the intervention, participants' total energy intake (ln) was 7.6 ± 0.3 kcal in the OL group, 7.5 ± 0.2 kcal in the CA group, and 7.6 ± 0.26 kcal in the SA group. After the intervention, total energy intake was 7.3 ± 0.2 kcal across all groups. In Sedgi's study, only total calorie and fat intakes were reported, while data on the consumption of other macronutrients were not provided. Instead, the study presented information on the intake of food groups such as meat, dairy, fruits, and vegetables. Since the data were shared as figures, exact numerical values were unavailable. However, the study revealed that there was no statistically significant difference in dietary intake between the ghee and CA groups.</p></sec><sec id="fsn371752-sec-0014"><label>3.6</label><title>Assessment of Liver Fat</title><p>The degree of liver fat accumulation in participants was assessed via different methods. Kruse measured the intrahepatic lipid content (IHL), which was evaluated by determining the exact amount of fat via proton magnetic resonance spectroscopy (<sup>1</sup>H‐MRS). In contrast, the other two studies (Sedgi et al. <xref rid="fsn371752-bib-0039" ref-type="bibr">2024</xref>; Nigam et al. <xref rid="fsn371752-bib-0022" ref-type="bibr">2014</xref>) assessed fatty liver grades via ultrasonography, which was performed by an expert radiologist.</p><p>In Kruse's study, participants were assigned to groups with initial IHL levels of 13.3% ± 2.5% in the canola oil group and 13.1% ± 1.6% in the OL group. At the end of the 8‐week intervention, the IHL level decreased to 11.1% ± 1.6% in the canola oil group but increased to 15.7% ± 2.7% in the olive oil group. This reduction in IHL was significantly greater in the canola oil group than in the olive oil group (<italic toggle="yes">p</italic> = 0.038). In Nigam et al. (<xref rid="fsn371752-bib-0022" ref-type="bibr">2014</xref>) study, the distribution of hepatic steatosis grades among participants was assessed before and after the intervention. In the OL group, 22 patients were Grade I, 6 were Grade II, and 2 had Grade III hepatic steatosis before intervention. Postintervention, the number of patients with Grade I steatosis decreased to 7, whereas the number of Grade II and Grade III cases decreased to 3 and 0, respectively. A total of 20 patients were classified as having normal liver imaging results after the intervention. In the CA group, preintervention, 20 patients had Grade I steatosis, 11 had Grade II steatosis, and 2 had Grade III steatosis. Postintervention, the number of Grade I cases decreased to 9, Grade II cases to 1, and Grade III cases to 0. A total of 20 patients were classified as having normal liver imaging results after the intervention. In the RA group, before intervention, 17 patients had Grade I steatosis, 9 had Grade II steatosis, and 4 had Grade III steatosis. Postintervention, the number of Grade I cases increased to 19, while the number of Grade II cases slightly decreased to 8, and the number of Grade III cases decreased to 0. Only 3 participants were classified as having normal liver imaging results. The reduction in hepatic steatosis grade observed in both the OL and CA groups, particularly in the Grade II and normal liver categories, was statistically significant compared with that in the RA group (<italic toggle="yes">p</italic> &lt; 0.01). In Sedgi's study, in the CA group, there were no patients with normal liver imaging or Grade I steatosis before the intervention. However, by the end of the 12th week, 8 patients were classified as normal, and 31 patients had Grade I steatosis. Additionally, the number of Grade II patients decreased from 48 to 16, whereas Grade III patients were eliminated. The rate of steatosis grade reduction was 41.81%, whereas 8.18% of patients showed no change. Similarly, in the ghee group, there were no patients with normal liver imaging or Grade I steatosis before the intervention. The group initially included 46 patients with Grade II steatosis and 9 patients with Grade III steatosis. After 12 weeks of intervention, the number of normal patients remained at 0, while 10 patients had Grade I steatosis, 39 had Grade II steatosis, and 6 had Grade III steatosis. The rate of steatosis reduction in this group was 13.63%, with 36.54% of patients showing no change and 1.81% experiencing deterioration. The changes in hepatic steatosis levels in both the CA and ghee groups were statistically significant (<italic toggle="yes">p</italic> &lt; 0.001).</p></sec><sec id="fsn371752-sec-0015"><label>3.7</label><title>Effects of Canola Oil on Liver Enzymes</title><p>A meta‐analysis including four intervention arms from three randomized controlled trials was conducted for ALT and AST levels. Heterogeneity analysis showed <italic toggle="yes">Q</italic> = 2.803 (<italic toggle="yes">p</italic> = 0.423) and <italic toggle="yes">I</italic>
+<sup>2</sup> = 0% for ALT, and <italic toggle="yes">Q</italic> = 7.538 (<italic toggle="yes">p</italic> = 0.057) and <italic toggle="yes">I</italic>
+<sup>2</sup> = 60.2% for AST. Random‐effects models were applied for all pooled analyses.</p><p>The pooled effect size for ALT was −0.472 (95% CI: −0.711 to −0.233; <italic toggle="yes">p</italic> &lt; 0.001), indicating a statistically significant reduction. For AST, the pooled effect size was −0.505 (95% CI: −0.745 to −0.264; <italic toggle="yes">p</italic> &lt; 0.001), also demonstrating a significant decrease (Figure <xref rid="fsn371752-fig-0003" ref-type="fig">3</xref>).</p><fig position="float" fig-type="FIGURE" id="fsn371752-fig-0003" orientation="portrait"><label>FIGURE 3</label><caption><p>Forest plots showing the pooled effects of canola oil on (A) ALT, (B) AST, and (C) GGT levels in adults with NAFLD. Effect sizes were calculated using random‐effects models and are presented as standardized mean differences (SMDs) with 95% confidence intervals. Negative values indicate greater reductions in the canola oil group compared with comparator oils.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="FSN3-14-e71752-g004.jpg"/></fig><p>A leave‐one‐out influence analysis was conducted to assess robustness. For ALT, removal of individual studies resulted in effect sizes ranging from −0.493 to −0.397, with all iterations maintaining statistical significance, indicating stable findings. For AST, effect estimates ranged from −0.584 to −0.308, with the direction of association remaining consistent across iterations, although statistical significance varied in some cases. These findings suggest that ALT results are robust, whereas AST estimates should be interpreted with moderate caution.</p><p>For triglycerides, the pooled estimates ranged from −0.714 to −0.310, with most iterations maintaining the negative direction; however, <italic toggle="yes">p</italic>‐values fluctuated considerably. For GGT and HDL, both based on only three studies, the analyses showed substantial sensitivity to individual study removal. Overall, these analyses demonstrate that while ALT findings are robust, biomarkers represented by fewer studies require cautious interpretation. The complete leave‐one‐out influence matrix is presented in Table <xref rid="fsn371752-tbl-0001" ref-type="table">1</xref>. Due to the small number of included studies, publication bias could not be reliably assessed.</p><p>A meta‐analysis including two studies evaluated the effect of canola oil on GGT levels. Heterogeneity analysis yielded <italic toggle="yes">Q</italic> = 2.172 (<italic toggle="yes">p</italic> = 0.141) and <italic toggle="yes">I</italic>
+<sup>2</sup> = 53.9%. Using a random‐effects model, the pooled effect size was 0.156 (95% CI: −0.173 to 0.486; <italic toggle="yes">p</italic> = 0.352), indicating no statistically significant effect.</p></sec><sec id="fsn371752-sec-0016"><label>3.8</label><title>Effects of Canola Oil on Blood Lipids</title><p>Three studies were included in the meta‐analysis of HDL and triglyceride (TG) levels. Substantial heterogeneity was observed (HDL: <italic toggle="yes">Q</italic> = 17.068, <italic toggle="yes">p</italic> &lt; 0.001; <italic toggle="yes">I</italic>
+<sup>2</sup> = 88.3%; TG: <italic toggle="yes">Q</italic> = 9.124, <italic toggle="yes">p</italic> = 0.01; <italic toggle="yes">I</italic>
+<sup>2</sup> = 78.1%). Therefore, random‐effects models were applied. The pooled effect size for HDL was 0.154 (95% CI: −0.604 to 0.912; <italic toggle="yes">p</italic> = 0.69), indicating no significant effect. For TG, the pooled effect size was −0.593 (95% CI: −1.151 to −0.036; <italic toggle="yes">p</italic> = 0.037), demonstrating a statistically significant reduction (Figure <xref rid="fsn371752-fig-0004" ref-type="fig">4</xref>).</p><fig position="float" fig-type="FIGURE" id="fsn371752-fig-0004" orientation="portrait"><label>FIGURE 4</label><caption><p>Forest plots showing the pooled effects of canola oil on (A) HDL cholesterol and (B) triglyceride (TG) levels in adults with NAFLD. Random‐effects models were applied. Effect sizes are presented as standardized mean differences (SMDs) with 95% confidence intervals. Negative values favor canola oil for triglycerides, whereas positive values favor canola oil for HDL.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="FSN3-14-e71752-g002.jpg"/></fig><p>Given the limited number of included studies, formal statistical tests for publication bias were not considered reliable. Leave‐one‐out analyses indicated that TG results varied in magnitude across iterations, although the direction of effect remained predominantly negative.</p></sec></sec><sec sec-type="discussion" id="fsn371752-sec-0017"><label>4</label><title>Discussion</title><p>This systematic review and meta‐analysis evaluated three randomized controlled trials, including a total of 220 participants, with a focus on the effects of canola oil intervention on liver health. These findings suggest that canola oil consumption has beneficial effects on liver enzymes such as AST and ALT. Although statistically significant reductions in ALT and AST levels were observed, the clinical relevance of these changes should be interpreted with caution. Aminotransferases are biochemical markers of hepatocellular injury and do not necessarily reflect histological improvement or fibrosis regression. The effect sizes identified in this meta‐analysis suggest modest biochemical improvement rather than definitive structural recovery of the liver. Therefore, while these findings may indicate a potential supportive role of dietary canola oil in reducing hepatic metabolic stress, they should not be considered evidence of long‐term disease modification in NAFLD. The trends in ALT, AST, and triglyceride improvement observed in this meta‐analysis align with high‐impact reviews suggesting that canola oil modulates hepatic lipid turnover and inflammatory signaling (Farhangi et al. <xref rid="fsn371752-bib-0006" ref-type="bibr">2022</xref>; Musazadeh et al. <xref rid="fsn371752-bib-0020" ref-type="bibr">2021</xref>, <xref rid="fsn371752-bib-0019" ref-type="bibr">2022</xref>). Such evidence strengthens the biological plausibility of our results and highlights the clinical relevance of dietary fat composition in NAFLD management. Additionally, elevated GGT levels have been linked to cardiovascular diseases, with evidence suggesting associations with early‐onset coronary artery disease (Xuan et al. <xref rid="fsn371752-bib-0035" ref-type="bibr">2023</xref>) and acute coronary syndrome prediction in type 2 diabetes patients (Al‐Suhaimi and Al‐Rubaish <xref rid="fsn371752-bib-0002" ref-type="bibr">2024</xref>). However, no significant effects on GGT levels were detected. Elevated GGT levels are associated with hepatic insulin resistance and increased intrahepatic lipid accumulation (Thamer et al. <xref rid="fsn371752-bib-0030" ref-type="bibr">2005</xref>).</p><p>The effects of canola oil on serum lipids could only be assessed on the basis of studies by Nigam and Sedgi, which involved a total of 203 participants. Canola oil consumption was associated with reductions in serum TG levels. These findings suggest that canola oil may contribute to improvements in biochemical markers associated with NAFLD, a key pathological process in NAFLD development. Individual trials reported reductions in liver steatosis; however, differences in assessment methods precluded quantitative pooling. Amiri et al. reported that canola oil has beneficial effects on the TC, LDL, Apo B, TC/HDL, LDL/HDL, and Apo B/Apo A‐1 ratios (Amiri et al. <xref rid="fsn371752-bib-0003" ref-type="bibr">2020</xref>). These potential risks reinforce the need for balanced oil consumption and careful consideration of heat stability, particularly when applying dietary recommendations for NAFLD. Although triglyceride levels were significantly reduced in the pooled analysis, the degree of statistical heterogeneity was substantial, and sensitivity analyses indicated variability across individual studies. These factors indicate that the observed triglyceride reduction should be interpreted as suggestive rather than definitive. Differences in intervention dose, duration, comparator oils, and baseline metabolic characteristics may have contributed to the variability in effect estimates.</p><p>Despite the positive effects on TG levels, no statistically significant effect on HDL levels was observed. However, a notable increase in HDL was reported in a study comparing canola oil with safflower/soybean oil (Nigam 2014b). This discrepancy may be attributed to individual variations, differences in intervention dosages, or treatment durations. Moreover, compared with olive oil, canola oil is not expected to have a significantly greater effect on HDL levels. Leave‐one‐out sensitivity analysis did not materially change the direction of the pooled estimate, and HDL remained non‐significant across all iterations. Nevertheless, Pourrajab et al. (<xref rid="fsn371752-bib-0024" ref-type="bibr">2023</xref>) reported that compared with olive oil, canola oil has beneficial effects on LDL, TC, and the LDL/HDL ratio, suggesting its potential cardioprotective properties. Although LDL levels could not be assessed in this study, several meta‐analyses reported that canola oil consumption has a positive effect on total cholesterol and LDL (Ghobadi et al. <xref rid="fsn371752-bib-0007" ref-type="bibr">2019</xref>; Jafari Azad et al. <xref rid="fsn371752-bib-0011" ref-type="bibr">2020</xref>; Schoeneck and Iggman <xref rid="fsn371752-bib-0028" ref-type="bibr">2021</xref>; Voon et al. <xref rid="fsn371752-bib-0033" ref-type="bibr">2024</xref>). Interestingly, the metabolic effects of canola oil appeared comparable to those of olive oil, suggesting that oil quality rather than specific oil type may be more relevant in the context of NAFLD.</p><p>Given the heterogeneous metabolic responses to dietary fats, these findings underscore the importance of precision nutrition approaches in tailoring oil recommendations for individuals with NAFLD.</p><p>It is important to interpret these findings in light of the specific comparator oils used in the included trials. Olive oil, safflower/soybean oil, and ghee differ substantially in their fatty acid composition and metabolic effects. Therefore, the observed changes cannot be attributed solely to canola oil itself but rather to its relative composition compared with the alternative fat source. For instance, comparisons with olive oil primarily reflect differences within unsaturated fat profiles, whereas comparisons with ghee involve replacing saturated fat‐rich sources. These distinctions may partly explain variations in lipid and hepatic outcomes across studies, highlighting the importance of contextualizing dietary fat substitutions rather than referring broadly to control oils. NAFLD is closely linked to increased cardiovascular risk and has been associated with higher carotid intima–media thickness (CIMT), even after adjustment for traditional risk factors (Tarantino et al. <xref rid="fsn371752-bib-0029" ref-type="bibr">2014</xref>). Previous meta‐analyses have shown that canola oil may improve LDL cholesterol and other cardiometabolic markers due to its favorable fatty acid composition. Although the triglyceride reductions observed in this analysis may suggest a potential cardiometabolic benefit, none of the included trials assessed direct vascular outcomes such as CIMT or endothelial function. Therefore, conclusions regarding atherosclerotic progression or cardiovascular protection remain speculative and require confirmation in long‐term studies incorporating vascular endpoints.</p><p>In conclusion, evidence from a limited number of randomized controlled trials suggests that dietary canola oil may lead to modest improvements in hepatic enzymes and triglyceride levels in adults with NAFLD. Therefore, while canola oil may represent a reasonable unsaturated fat option within dietary strategies for NAFLD, larger and longer‐term trials are required to determine its clinical impact on disease progression and cardiometabolic risk.</p></sec><sec id="fsn371752-sec-0018"><label>5</label><title>Strengths</title><p>This study was conducted following the PRISMA and Cochrane guidelines and was verified via the PRISMA checklist. The risk of bias in the included studies was assessed via the Cochrane risk of bias tool. Statistical analyses were performed with Comprehensive Meta‐Analysis V3.3.070. Heterogeneity was quantified using standard statistical metrics (<italic toggle="yes">Q</italic> and <italic toggle="yes">I</italic>
+<sup>2</sup>). In addition, the certainty of evidence was formally graded using the GRADE approach, and a comprehensive leave‐one‐out influence analysis was performed to confirm the robustness and stability of the pooled estimates.</p></sec><sec id="fsn371752-sec-0019"><label>6</label><title>Limitations</title><p>This study has several limitations that should be acknowledged. The number of included randomized controlled trials was limited, resulting in relatively small pooled sample sizes and reduced statistical power. Substantial clinical heterogeneity existed across studies, including differences in intervention dose (20–50 g/day), duration (8 weeks to 6 months), comparator oils (olive oil, safflower/soybean oil, and ghee), and study design (replacement vs. supplementation approaches). And liver fat was assessed using different methodologies (<sup>1</sup>H‐MRS vs. ultrasonography), which vary in sensitivity and precision. This methodological variability may have influenced confidence in steatosis‐related outcomes. Furthermore, some trials were open‐label in design, and certain study populations were restricted (e.g., male‐only cohorts), limiting generalizability. Furthermore, intervention durations were relatively short, and no study evaluated long‐term clinical outcomes such as fibrosis progression, cirrhosis development, or cardiovascular events.</p></sec><sec id="fsn371752-sec-0027"><title>Author Contributions</title><p>
+<bold>Kardelen Büşra Ege Gündüz:</bold> conceptualization, investigation, methodology, software, data curation, formal analysis, funding acquisition, writing – original draft, writing – review and editing, visualization, project administration, resources. <bold>Sümeyye Bora:</bold> participated in the study screening process, provided feedback and contributed to manuscript writing. <bold>Berrak Baştürk:</bold> extracted and analysed the data, contributed to manuscript writing, provided feedback, and approved the final version. <bold>Ceyda Okudu:</bold> designed the research, contributed to final editing and revisions, provided feedback, and approved the final version.</p></sec><sec id="fsn371752-sec-0026"><title>Funding</title><p>The authors have nothing to report.</p></sec><sec id="fsn371752-sec-0021"><title>Ethics Statement</title><p>The authors have nothing to report.</p></sec><sec sec-type="conclusions" id="fsn371752-sec-0022"><title>Consent</title><p>All authors have approved the version of the manuscript submitted and agreed to publish this manuscript in Food Science &amp; Nutrition. All the authors declare that this study is not published or submitted elsewhere for peer review.</p></sec><sec sec-type="COI-statement" id="fsn371752-sec-0023"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="fsn371752-supitem-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Appendix S1:</bold> PRISMA checklist.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="FSN3-14-e71752-s001.docx" position="float" orientation="portrait"/></supplementary-material><supplementary-material id="fsn371752-supitem-0002" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Appendix S2:</bold> Search strategy.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="FSN3-14-e71752-s003.docx" position="float" orientation="portrait"/></supplementary-material><supplementary-material id="fsn371752-supitem-0003" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Table S1:</bold> Elegibility criteria for the systematic review according to PICOS framework.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="FSN3-14-e71752-s002.docx" position="float" orientation="portrait"/></supplementary-material></sec></body><back><ack id="fsn371752-sec-0020"><title>Acknowledgments</title><p>We acknowledge the authors of every study that was a part of this investigation. During the manuscript preparation, the ChatGPT 5.2 artificial intelligence tool was employed to enhance the clarity of the language.</p></ack><sec sec-type="data-availability" id="fsn371752-sec-0025"><title>Data Availability Statement</title><p>The data that support the findings of this study are available upon request from the corresponding author.</p></sec><ref-list content-type="cited-references" id="fsn371752-bibl-0001"><title>References</title><ref id="fsn371752-bib-0001"><mixed-citation publication-type="journal" id="fsn371752-cit-0001">
+<string-name name-style="western">
+<surname>Abdelmalek</surname>, <given-names>M. F.</given-names>
+</string-name>
+<year>2021</year>. “<article-title>Nonalcoholic Fatty Liver Disease: Another Leap Forward</article-title>.” <source>Nature Reviews. Gastroenterology &amp; Hepatology</source>
+<volume>18</volume>, no. <issue>2</issue>: <fpage>85</fpage>–<lpage>86</lpage>. <pub-id pub-id-type="doi">10.1038/s41575-020-00406-0</pub-id>.<pub-id pub-id-type="pmid">33420415</pub-id>
+<pub-id pub-id-type="pmcid">PMC7791336</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0002"><mixed-citation publication-type="journal" id="fsn371752-cit-0002">
+<string-name name-style="western">
+<surname>Al‐Suhaimi</surname>, <given-names>E. A.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>A. A.</given-names>
+<surname>Al‐Rubaish</surname>
+</string-name>. <year>2024</year>. “<article-title>Interplay of Serum Biomarkers Bilirubin and γ‐Glutamyltranspeptidase in Predicting Cardiovascular Complications in Type‐2 Diabetes Mellitus</article-title>.” <source>World Journal of Diabetes</source>
+<volume>15</volume>, no. <issue>6</issue>: <fpage>1074</fpage>–<lpage>1078</lpage>. <pub-id pub-id-type="doi">10.4239/wjd.v15.i6.1074</pub-id>.<pub-id pub-id-type="pmid">38983815</pub-id>
+<pub-id pub-id-type="pmcid">PMC11229956</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0003"><mixed-citation publication-type="journal" id="fsn371752-cit-0003">
+<string-name name-style="western">
+<surname>Amiri</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Raeisi‐Dehkordi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Sarrafzadegan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. C.</given-names>
+<surname>Forbes</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Salehi‐Abargouei</surname>
+</string-name>. <year>2020</year>. “<article-title>The Effects of Canola Oil on Cardiovascular Risk Factors: A Systematic Review and Meta‐Analysis With Dose‐Response Analysis of Controlled Clinical Trials</article-title>.” <source>Nutrition, Metabolism, and Cardiovascular Diseases</source>
+<volume>30</volume>, no. <issue>12</issue>: <fpage>2133</fpage>–<lpage>2145</lpage>. <pub-id pub-id-type="doi">10.1016/j.numecd.2020.06.007</pub-id>.<pub-id pub-id-type="pmid">33127255</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0004"><mixed-citation publication-type="journal" id="fsn371752-cit-0004">
+<string-name name-style="western">
+<surname>Ando</surname>, <given-names>Y.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>J. H.</given-names>
+<surname>Jou</surname>
+</string-name>. <year>2021</year>. “<article-title>Nonalcoholic Fatty Liver Disease and Recent Guideline Updates</article-title>.” <source>Clinical Liver Disease</source>
+<volume>17</volume>, no. <issue>1</issue>: <fpage>23</fpage>–<lpage>28</lpage>. <pub-id pub-id-type="doi">10.1002/cld.1045</pub-id>.<pub-id pub-id-type="pmid">33552482</pub-id>
+<pub-id pub-id-type="pmcid">PMC7849298</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0005"><mixed-citation publication-type="journal" id="fsn371752-cit-0005">
+<string-name name-style="western">
+<surname>Bril</surname>, <given-names>F.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D. M.</given-names>
+<surname>Biernacki</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Kalavalapalli</surname>
+</string-name>, et al. <year>2019</year>. “<article-title>Role of Vitamin E for Nonalcoholic Steatohepatitis in Patients With Type 2 Diabetes: A Randomized Controlled Trial</article-title>.” <source>Diabetes Care</source>
+<volume>42</volume>, no. <issue>8</issue>: <fpage>1481</fpage>–<lpage>1488</lpage>. <pub-id pub-id-type="doi">10.2337/dc19-0167</pub-id>.<pub-id pub-id-type="pmid">31332029</pub-id>
+</mixed-citation></ref><ref id="fsn371752-bib-0006"><mixed-citation publication-type="journal" id="fsn371752-cit-0006">
+<string-name name-style="western">
+<surname>Farhangi</surname>, <given-names>M. A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Dehghan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Musazadeh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Kavyani</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Maleki</surname>
+</string-name>. <year>2022</year>. “<article-title>Effectiveness of Omega‐3 and Prebiotics on Adiponectin, Leptin, Liver Enzymes Lipid Profile and Anthropometric Indices in Patients With Non‐Alcoholic Fatty Liver Disease: A Randomized Controlled Trial</article-title>.” <source>Journal of Functional Foods</source>
+<volume>92</volume>: <elocation-id>105074</elocation-id>. <pub-id pub-id-type="doi">10.1016/j.jff.2022.105074</pub-id>.</mixed-citation></ref><ref id="fsn371752-bib-0007"><mixed-citation publication-type="journal" id="fsn371752-cit-0007">
+<string-name name-style="western">
+<surname>Ghobadi</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>H.‐R.</given-names>
+<surname>Zahra</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Fatemeh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Morteza</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Faghih</surname>
+</string-name>. <year>2019</year>. “<article-title>Effects of Canola Oil Consumption on Lipid Profile: A Systematic Review and Meta‐Analysis of Randomized Controlled Clinical Trials</article-title>.” <source>Journal of the American College of Nutrition</source>
+<volume>38</volume>, no. <issue>2</issue>: <fpage>185</fpage>–<lpage>196</lpage>. <pub-id pub-id-type="doi">10.1080/07315724.2018.1475270</pub-id>.<pub-id pub-id-type="pmid">30381009</pub-id>
+</mixed-citation></ref><ref id="fsn371752-bib-0008"><mixed-citation publication-type="journal" id="fsn371752-cit-0008">
+<string-name name-style="western">
+<surname>Hassani Zadeh</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Mansoori</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Hosseinzadeh</surname>
+</string-name>. <year>2021</year>. “<article-title>Relationship Between Dietary Patterns and Non‐Alcoholic Fatty Liver Disease: A Systematic Review and Meta‐Analysis</article-title>.” <source>Journal of Gastroenterology and Hepatology</source>
+<volume>36</volume>, no. <issue>6</issue>: <fpage>1470</fpage>–<lpage>1478</lpage>. <pub-id pub-id-type="doi">10.1111/jgh.15363</pub-id>.<pub-id pub-id-type="pmid">33269500</pub-id>
+</mixed-citation></ref><ref id="fsn371752-bib-0009"><mixed-citation publication-type="journal" id="fsn371752-cit-0009">
+<string-name name-style="western">
+<surname>Heeren</surname>, <given-names>J.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Scheja</surname>
+</string-name>. <year>2021</year>. “<article-title>Metabolic‐Associated Fatty Liver Disease and Lipoprotein Metabolism</article-title>.” <source>Molecular Metabolism</source>
+<volume>50</volume>: <elocation-id>101238</elocation-id>. <pub-id pub-id-type="doi">10.1016/j.molmet.2021.101238</pub-id>.<pub-id pub-id-type="pmid">33892169</pub-id>
+<pub-id pub-id-type="pmcid">PMC8324684</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0010"><mixed-citation publication-type="journal" id="fsn371752-cit-0010">
+<string-name name-style="western">
+<surname>Hoffman</surname>, <given-names>R.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Gerber</surname>
+</string-name>. <year>2014</year>. “<article-title>Can Rapeseed Oil Replace Olive Oil as Part of a Mediterranean‐Style Diet?</article-title>” <source>British Journal of Nutrition</source>
+<volume>112</volume>, no. <issue>11</issue>: <fpage>1882</fpage>–<lpage>1895</lpage>. <pub-id pub-id-type="doi">10.1017/S0007114514002888</pub-id>.<pub-id pub-id-type="pmid">25322908</pub-id>
+</mixed-citation></ref><ref id="fsn371752-bib-0011"><mixed-citation publication-type="journal" id="fsn371752-cit-0011">
+<string-name name-style="western">
+<surname>Jafari Azad</surname>, <given-names>B.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Elnaz</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Azadbakht</surname>
+</string-name>. <year>2020</year>. “<article-title>Peanut and Cardiovascular Disease Risk Factors: A Systematic Review and Meta‐Analysis</article-title>.” <source>Critical Reviews in Food Science and Nutrition</source>
+<volume>60</volume>, no. <issue>7</issue>: <fpage>1123</fpage>–<lpage>1140</lpage>. <pub-id pub-id-type="doi">10.1080/10408398.2018.1558395</pub-id>.<pub-id pub-id-type="pmid">30638042</pub-id>
+</mixed-citation></ref><ref id="fsn371752-bib-0012"><mixed-citation publication-type="book" id="fsn371752-cit-0012">
+<string-name name-style="western">
+<surname>Kaya</surname>, <given-names>S. Y. E.</given-names>
+</string-name>
+<year>2019</year>. “<part-title>Epidemiology of Nonalcoholic Fatty Liver Disease in Turkey and in the World</part-title>.” In <source>Türkiye Klinikleri Gastroenterohepatoloji‐Özel Konular</source>, <fpage>1</fpage>–<lpage>7</lpage>. <publisher-name>Türkiye Klinikleri (Ortadoğu Reklam Tanıtım Yayıncılık)</publisher-name>.</mixed-citation></ref><ref id="fsn371752-bib-0013"><mixed-citation publication-type="journal" id="fsn371752-cit-0013">
+<string-name name-style="western">
+<surname>Kruse</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Kemper</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Gancheva</surname>
+</string-name>, et al. <year>2020</year>. “<article-title>Dietary Rapeseed Oil Supplementation Reduces Hepatic Steatosis in Obese Men – A Randomized Controlled Trial</article-title>.” <source>Molecular Nutrition &amp; Food Research</source>
+<volume>64</volume>, no. <issue>21</issue>: <elocation-id>e2000419</elocation-id>. <pub-id pub-id-type="doi">10.1002/mnfr.202000419</pub-id>.<pub-id pub-id-type="pmid">32920973</pub-id>
+</mixed-citation></ref><ref id="fsn371752-bib-0014"><mixed-citation publication-type="journal" id="fsn371752-cit-0014">
+<string-name name-style="western">
+<surname>Kupčová</surname>, <given-names>V.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Fedelešová</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Bulas</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Kozmonová</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Turecký</surname>
+</string-name>. <year>2019</year>. “<article-title>Overview of the Pathogenesis, Genetic, and Non‐Invasive Clinical, Biochemical, and Scoring Methods in the Assessment of NAFLD</article-title>.” <source>International Journal of Environmental Research and Public Health</source>
+<volume>16</volume>, no. <issue>19</issue>: <elocation-id>3570</elocation-id>. <pub-id pub-id-type="doi">10.3390/ijerph16193570</pub-id>.<pub-id pub-id-type="pmid">31554274</pub-id>
+<pub-id pub-id-type="pmcid">PMC6801903</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0015"><mixed-citation publication-type="journal" id="fsn371752-cit-0015">
+<string-name name-style="western">
+<surname>Luukkonen</surname>, <given-names>P. K.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Dufour</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Lyu</surname>
+</string-name>, et al. <year>2020</year>. “<article-title>Effect of a Ketogenic Diet on Hepatic Steatosis and Hepatic Mitochondrial Metabolism in Nonalcoholic Fatty Liver Disease</article-title>.” <source>Proceedings of the National Academy of Sciences of the United States of America</source>
+<volume>117</volume>, no. <issue>13</issue>: <fpage>7347</fpage>–<lpage>7354</lpage>. <pub-id pub-id-type="doi">10.1073/pnas.1922344117</pub-id>.<pub-id pub-id-type="pmid">32179679</pub-id>
+<pub-id pub-id-type="pmcid">PMC7132133</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0016"><mixed-citation publication-type="journal" id="fsn371752-cit-0016">
+<string-name name-style="western">
+<surname>Maleki Sedgi</surname>, <given-names>F.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Mohammad Hosseiniazar</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Alizadeh</surname>
+</string-name>. <year>2024</year>. “<article-title>The Effects of Replacing Ghee With Rapeseed Oil on Liver Steatosis and Enzymes, Lipid Profile, Insulin Resistance and Anthropometric Measurements in Patients With Non‐Alcoholic Fatty Liver Disease: A Randomised Controlled Clinical Trial</article-title>.” <source>British Journal of Nutrition</source>
+<volume>131</volume>, no. <issue>12</issue>: <fpage>1985</fpage>–<lpage>1996</lpage>. <pub-id pub-id-type="doi">10.1017/s0007114524000564</pub-id>.<pub-id pub-id-type="pmid">38501177</pub-id>
+</mixed-citation></ref><ref id="fsn371752-bib-0037"><mixed-citation publication-type="journal" id="fsn371752-cit-0037">
+<string-name name-style="western">
+<surname>Matthaus</surname>, <given-names>B.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M. M.</given-names>
+<surname>Özcan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Al Juhaimi</surname>
+</string-name>. <year>2016</year>. “<article-title>Some Rape/Canola Seed Oils: Fatty Acid Composition and Tocopherols</article-title>.” <source>Zeitschrift fuer Naturforschung, C: Journal of Biosciences</source>
+<volume>71</volume>, no. <issue>3‐4</issue>: <fpage>73</fpage>–<lpage>77</lpage>. <pub-id pub-id-type="doi">10.1515/znc-2016-0003</pub-id>.<pub-id pub-id-type="pmid">27023318</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0017"><mixed-citation publication-type="journal" id="fsn371752-cit-0017">
+<string-name name-style="western">
+<surname>Mithril</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L. O.</given-names>
+<surname>Dragsted</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Meyer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Tetens</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Biltoft‐Jensen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Astrup</surname>
+</string-name>. <year>2013</year>. “<article-title>Dietary Composition and Nutrient Content of the New Nordic Diet</article-title>.” <source>Public Health Nutrition</source>
+<volume>16</volume>, no. <issue>5</issue>: <fpage>777</fpage>–<lpage>785</lpage>. <pub-id pub-id-type="doi">10.1017/s1368980012004521</pub-id>.<pub-id pub-id-type="pmid">23089239</pub-id>
+<pub-id pub-id-type="pmcid">PMC10271429</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0018"><mixed-citation publication-type="journal" id="fsn371752-cit-0018">
+<string-name name-style="western">
+<surname>Mohtashamian</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Mahabady</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Bagheri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Barghchi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Aminianfar</surname>
+</string-name>. <year>2025</year>. “<article-title>Effects of Canola Oil on Body Weight and Composition in Adults: An Updated Systematic Review and Meta‐Analysis of 32 Randomized Controlled Trials</article-title>.” <source>Nutrition Journal</source>
+<volume>24</volume>, no. <issue>1</issue>: <fpage>55</fpage>. <pub-id pub-id-type="doi">10.1186/s12937-025-01117-5</pub-id>.<pub-id pub-id-type="pmid">40200305</pub-id>
+<pub-id pub-id-type="pmcid">PMC11980287</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0019"><mixed-citation publication-type="journal" id="fsn371752-cit-0019">
+<string-name name-style="western">
+<surname>Musazadeh</surname>, <given-names>V.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Dehghan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Khoshbaten</surname>
+</string-name>. <year>2022</year>. “<article-title>Efficacy of Omega‐3‐Rich <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Camelina sativa</italic>
+</styled-content> on the Metabolic and Clinical Markers in Nonalcoholic Fatty Liver Disease: A Randomized, Controlled Trial</article-title>.” <source>European Journal of Gastroenterology &amp; Hepatology</source>
+<volume>34</volume>, no. <issue>5</issue>: <fpage>537</fpage>–<lpage>545</lpage>. <pub-id pub-id-type="doi">10.1097/meg.0000000000002297</pub-id>.<pub-id pub-id-type="pmid">35421019</pub-id>
+</mixed-citation></ref><ref id="fsn371752-bib-0020"><mixed-citation publication-type="journal" id="fsn371752-cit-0020">
+<string-name name-style="western">
+<surname>Musazadeh</surname>, <given-names>V.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Dehghan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Saleh‐Ghadimi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Abbasalizad Farhangi</surname>
+</string-name>. <year>2021</year>. “<article-title>Omega 3‐Rich <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Camelina sativa</italic>
+</styled-content> Oil in the Context of a Weight Loss Program Improves Glucose Homeostasis, Inflammation and Oxidative Stress in Patients With NAFLD: A Randomised Placebo‐Controlled Clinical Trial</article-title>.” <source>International Journal of Clinical Practice</source>
+<volume>75</volume>, no. <issue>11</issue>: <elocation-id>e14744</elocation-id>. <pub-id pub-id-type="doi">10.1111/ijcp.14744</pub-id>.<pub-id pub-id-type="pmid">34423525</pub-id>
+</mixed-citation></ref><ref id="fsn371752-bib-0021"><mixed-citation publication-type="journal" id="fsn371752-cit-0021">
+<string-name name-style="western">
+<surname>Nagashimada</surname>, <given-names>M.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Ota</surname>
+</string-name>. <year>2019</year>. “<article-title>Role of Vitamin E in Nonalcoholic Fatty Liver Disease</article-title>.” <source>IUBMB Life</source>
+<volume>71</volume>, no. <issue>4</issue>: <fpage>516</fpage>–<lpage>522</lpage>. <pub-id pub-id-type="doi">10.1002/iub.1991</pub-id>.<pub-id pub-id-type="pmid">30592129</pub-id>
+</mixed-citation></ref><ref id="fsn371752-bib-0022"><mixed-citation publication-type="journal" id="fsn371752-cit-0022">
+<string-name name-style="western">
+<surname>Nigam</surname>, <given-names>P.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Bhatt</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Misra</surname>
+</string-name>, et al. <year>2014</year>. “<article-title>Effect of a 6‐Month Intervention With Cooking Oils Containing a High Concentration of Monounsaturated Fatty Acids (Olive and Canola Oils) Compared With Control Oil in Male Asian Indians With Nonalcoholic Fatty Liver Disease</article-title>.” <source>Diabetes Technology &amp; Therapeutics</source>
+<volume>16</volume>, no. <issue>4</issue>: <fpage>255</fpage>–<lpage>261</lpage>. <pub-id pub-id-type="doi">10.1089/dia.2013.0178</pub-id>.<pub-id pub-id-type="pmid">24625239</pub-id>
+</mixed-citation></ref><ref id="fsn371752-bib-0023"><mixed-citation publication-type="journal" id="fsn371752-cit-0023">
+<string-name name-style="western">
+<surname>Page</surname>, <given-names>M. J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>McKenzie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. M.</given-names>
+<surname>Bossuyt</surname>
+</string-name>, et al. <year>2021</year>. “<article-title>The PRISMA 2020 Statement: An Updated Guideline for Reporting Systematic Reviews</article-title>.” <source>BMJ (Clinical Research Ed.)</source>
+<volume>372</volume>: <elocation-id>n71</elocation-id>. <pub-id pub-id-type="doi">10.1136/bmj.n71</pub-id>.<pub-id pub-id-type="pmcid">PMC8005924</pub-id><pub-id pub-id-type="pmid">33782057</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0024"><mixed-citation publication-type="journal" id="fsn371752-cit-0024">
+<string-name name-style="western">
+<surname>Pourrajab</surname>, <given-names>B.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Sharifi‐Zahabi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Soltani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Shahinfar</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Shidfar</surname>
+</string-name>. <year>2023</year>. “<article-title>Comparison of Canola Oil and Olive Oil Consumption on the Serum Lipid Profile in Adults: A Systematic Review and Meta‐Analysis of Randomized Controlled Trials</article-title>.” <source>Critical Reviews in Food Science and Nutrition</source>
+<volume>63</volume>, no. <issue>33</issue>: <fpage>12270</fpage>–<lpage>12284</lpage>. <pub-id pub-id-type="doi">10.1080/10408398.2022.2100314</pub-id>.<pub-id pub-id-type="pmid">35866510</pub-id>
+</mixed-citation></ref><ref id="fsn371752-bib-0025"><mixed-citation publication-type="journal" id="fsn371752-cit-0025">
+<string-name name-style="western">
+<surname>Powell</surname>, <given-names>E. E.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>V. W.</given-names>
+<surname>Wong</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Rinella</surname>
+</string-name>. <year>2021</year>. “<article-title>Non‐Alcoholic Fatty Liver Disease</article-title>.” <source>Lancet (British Edition)</source>
+<volume>397</volume>, no. <issue>10290</issue>: <fpage>2212</fpage>–<lpage>2224</lpage>. <pub-id pub-id-type="doi">10.1016/s0140-6736(20)32511-3</pub-id>.<pub-id pub-id-type="pmid">33894145</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0026"><mixed-citation publication-type="journal" id="fsn371752-cit-0026">
+<string-name name-style="western">
+<surname>Qi</surname>, <given-names>X.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Guo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Li</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>Vitamin E Intake Is Inversely Associated With NAFLD Measured by Liver Ultrasound Transient Elastography</article-title>.” <source>Scientific Reports</source>
+<volume>14</volume>, no. <issue>1</issue>: <fpage>2592</fpage>. <pub-id pub-id-type="doi">10.1038/s41598-024-52482-w</pub-id>.<pub-id pub-id-type="pmid">38296998</pub-id>
+<pub-id pub-id-type="pmcid">PMC10831069</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0027"><mixed-citation publication-type="journal" id="fsn371752-cit-0027">
+<string-name name-style="western">
+<surname>Rasoulizadeh</surname>, <given-names>Z.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Namazi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. H.</given-names>
+<surname>Sohouli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Rohani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Hekmatdoost</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Hosseinzadeh</surname>
+</string-name>. <year>2024</year>. “<article-title>Association Between Baltic Sea Diet and Healthy Nordic Diet Index With Risk of Non‐Alcoholic Fatty Liver Disease: A Case‐Control Study</article-title>.” <source>Scientific Reports</source>
+<volume>14</volume>, no. <issue>1</issue>: <fpage>9537</fpage>. <pub-id pub-id-type="doi">10.1038/s41598-024-60400-3</pub-id>.<pub-id pub-id-type="pmid">38664485</pub-id>
+<pub-id pub-id-type="pmcid">PMC11045829</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0028"><mixed-citation publication-type="journal" id="fsn371752-cit-0028">
+<string-name name-style="western">
+<surname>Schoeneck</surname>, <given-names>M.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Iggman</surname>
+</string-name>. <year>2021</year>. “<article-title>The Effects of Foods on LDL Cholesterol Levels: A Systematic Review of the Accumulated Evidence From Systematic Reviews and Meta‐Analyses of Randomized Controlled Trials</article-title>.” <source>Nutrition, Metabolism, and Cardiovascular Diseases</source>
+<volume>31</volume>, no. <issue>5</issue>: <fpage>1325</fpage>–<lpage>1338</lpage>. <pub-id pub-id-type="doi">10.1016/j.numecd.2020.12.032</pub-id>.<pub-id pub-id-type="pmid">33762150</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0039"><mixed-citation publication-type="journal" id="fsn371752-cit-0039">
+<string-name name-style="western">
+<surname>Sedgi</surname>, <given-names>F. M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M. M.</given-names>
+<surname>Hosseiniazar</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Alizadeh</surname>
+</string-name>. <year>2024</year>. “<article-title>The Impact of Substituting Clarified Butter With Canola Oil on the Components of Metabolic Syndrome, Fatty Liver Index, and Insulin Resistance Among Individuals Diagnosed With Metabolic Syndrome: A Quasi‐Experimental Study</article-title>.” <source>Journal of Diabetes and Metabolic Disorders</source>
+<volume>23</volume>, no. <issue>2</issue>: <fpage>1977</fpage>–<lpage>1987</lpage>. <pub-id pub-id-type="doi">10.1007/s40200-024-01453-z</pub-id>.<pub-id pub-id-type="pmid">39610540</pub-id>
+<pub-id pub-id-type="pmcid">PMC11599835</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0029"><mixed-citation publication-type="journal" id="fsn371752-cit-0029">
+<string-name name-style="western">
+<surname>Tarantino</surname>, <given-names>G.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Costantini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Finelli</surname>
+</string-name>, et al. <year>2014</year>. “<article-title>Carotid Intima‐Media Thickness Is Predicted by Combined Eotaxin Levels and Severity of Hepatic Steatosis at Ultrasonography in Obese Patients With Nonalcoholic Fatty Liver Disease</article-title>.” <source>PLoS One</source>
+<volume>9</volume>, no. <issue>9</issue>: <elocation-id>e105610</elocation-id>. <pub-id pub-id-type="doi">10.1371/journal.pone.0105610</pub-id>.<pub-id pub-id-type="pmid">25268946</pub-id>
+<pub-id pub-id-type="pmcid">PMC4182088</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0030"><mixed-citation publication-type="journal" id="fsn371752-cit-0030">
+<string-name name-style="western">
+<surname>Thamer</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>Tschritter</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Haap</surname>
+</string-name>, et al. <year>2005</year>. “<article-title>Elevated Serum GGT Concentrations Predict Reduced Insulin Sensitivity and Increased Intrahepatic Lipids</article-title>.” <source>Hormone and Metabolic Research</source>
+<volume>37</volume>, no. <issue>4</issue>: <fpage>246</fpage>–<lpage>251</lpage>. <pub-id pub-id-type="doi">10.1055/s-2005-861411</pub-id>.<pub-id pub-id-type="pmid">15952086</pub-id>
+</mixed-citation></ref><ref id="fsn371752-bib-0031"><mixed-citation publication-type="book" id="fsn371752-cit-0031">
+<collab collab-type="authors">U.S. Department of Agriculture</collab>
+. <year>2019</year>. <source>Food Data Central Food Details Canola Oil</source>. <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://fdc.nal.usda.gov/food-details/748278/nutrients" ext-link-type="uri">https://fdc.nal.usda.gov/food‐details/748278/nutrients</ext-link>.</mixed-citation></ref><ref id="fsn371752-bib-0032"><mixed-citation publication-type="journal" id="fsn371752-cit-0032">
+<string-name name-style="western">
+<surname>Vogli</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Naska</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Marinos</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. I.</given-names>
+<surname>Kasdagli</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Orfanos</surname>
+</string-name>. <year>2023</year>. “<article-title>The Effect of Vitamin E Supplementation on Serum Aminotransferases in Non‐Alcoholic Fatty Liver Disease (NAFLD): A Systematic Review and Meta‐Analysis</article-title>.” <source>Nutrients</source>
+<volume>15</volume>, no. <issue>17</issue>: <elocation-id>3733</elocation-id>. <pub-id pub-id-type="doi">10.3390/nu15173733</pub-id>.<pub-id pub-id-type="pmid">37686767</pub-id>
+<pub-id pub-id-type="pmcid">PMC10490270</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0033"><mixed-citation publication-type="journal" id="fsn371752-cit-0033">
+<string-name name-style="western">
+<surname>Voon</surname>, <given-names>P. T.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C. M.</given-names>
+<surname>Ng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. T.</given-names>
+<surname>Ng</surname>
+</string-name>, et al. <year>2024</year>. “<article-title>Health Effects of Various Edible Vegetable Oil: An Umbrella Review</article-title>.” <source>Advances in Nutrition</source>
+<volume>15</volume>, no. <issue>9</issue>: <elocation-id>100276</elocation-id>. <pub-id pub-id-type="doi">10.1016/j.advnut.2024.100276</pub-id>.<pub-id pub-id-type="pmid">39053603</pub-id>
+<pub-id pub-id-type="pmcid">PMC11374968</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0034"><mixed-citation publication-type="journal" id="fsn371752-cit-0034">
+<string-name name-style="western">
+<surname>Wang</surname>, <given-names>M. Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Prabahar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. A.</given-names>
+<surname>Găman</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. L.</given-names>
+<surname>Zhang</surname>
+</string-name>. <year>2023</year>. “<article-title>Vitamin E Supplementation in the Treatment on Nonalcoholic Fatty Liver Disease (NAFLD): Evidence From an Umbrella Review of Meta‐Analysis on Randomized Controlled Trials</article-title>.” <source>Journal of Digestive Diseases</source>
+<volume>24</volume>, no. <issue>6–7</issue>: <fpage>380</fpage>–<lpage>389</lpage>. <pub-id pub-id-type="doi">10.1111/1751-2980.13210</pub-id>.<pub-id pub-id-type="pmid">37503812</pub-id>
+</mixed-citation></ref><ref id="fsn371752-bib-0035"><mixed-citation publication-type="journal" id="fsn371752-cit-0035">
+<string-name name-style="western">
+<surname>Xuan</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. H.</given-names>
+<surname>Liu</surname>
+</string-name>, et al. <year>2023</year>. “<article-title>Association Between Serum Gamma‐Glutamyltransferase and Early‐Onset Coronary Artery Disease: A Retrospective Case‐Control Study</article-title>.” <source>Annals of Medicine</source>
+<volume>55</volume>, no. <issue>2</issue>: <elocation-id>2289606</elocation-id>. <pub-id pub-id-type="doi">10.1080/07853890.2023.2289606</pub-id>.<pub-id pub-id-type="pmid">38061693</pub-id>
+<pub-id pub-id-type="pmcid">PMC10836269</pub-id></mixed-citation></ref><ref id="fsn371752-bib-0036"><mixed-citation publication-type="journal" id="fsn371752-cit-0036">
+<string-name name-style="western">
+<surname>Younossi</surname>, <given-names>Z. M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Golabi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Paik</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Henry</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Van Dongen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Henry</surname>
+</string-name>. <year>2023</year>. “<article-title>The Global Epidemiology of Nonalcoholic Fatty Liver Disease (NAFLD) and Nonalcoholic Steatohepatitis (NASH): A Systematic Review</article-title>.” <source>Hepatology</source>
+<volume>77</volume>, no. <issue>4</issue>: <fpage>1335</fpage>–<lpage>1347</lpage>. <pub-id pub-id-type="doi">10.1097/hep.0000000000000004</pub-id>.<pub-id pub-id-type="pmid">36626630</pub-id>
+<pub-id pub-id-type="pmcid">PMC10026948</pub-id></mixed-citation></ref></ref-list></back></article>

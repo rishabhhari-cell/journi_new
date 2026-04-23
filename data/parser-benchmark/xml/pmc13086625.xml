@@ -1,0 +1,566 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="hsr272338" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Health Sci Rep</journal-id><journal-id journal-id-type="iso-abbrev">Health Sci Rep</journal-id><journal-id journal-id-type="pmc-domain-id">3569</journal-id><journal-id journal-id-type="pmc-domain">hscirep</journal-id><journal-id journal-id-type="publisher-id">HSR2</journal-id><journal-title-group><journal-title>Health Science Reports</journal-title></journal-title-group><issn pub-type="epub">2398-8835</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13086625</article-id><article-id pub-id-type="pmcid-ver">PMC13086625.1</article-id><article-id pub-id-type="pmcaid">13086625</article-id><article-id pub-id-type="pmcaiid">13086625</article-id><article-id pub-id-type="pmid">42005674</article-id><article-id pub-id-type="doi">10.1002/hsr2.72338</article-id><article-id pub-id-type="publisher-id">HSR272338</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Systematic Review</subject></subj-group><subj-group subj-group-type="heading"><subject>Systematic Review</subject></subj-group></article-categories><title-group><article-title>Is Current Evidence Sufficient to Establish the Efficacy of Botulinum Toxin A in Treating Persistent Dry Eye Disease? A Systematic Review and Meta‐Analysis of Interventional Studies With a Critical Review Using GRADE Tool</article-title></title-group><contrib-group><contrib id="hsr272338-cr-0001" contrib-type="author"><name name-style="western"><surname>Abdollahi</surname><given-names initials="M">Mirsaeed</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-2444-1172</contrib-id><xref rid="hsr272338-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="hsr272338-cr-0002" contrib-type="author"><name name-style="western"><surname>Semnani</surname><given-names initials="F">Farbod</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-8964-419X</contrib-id><xref rid="hsr272338-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><xref rid="hsr272338-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="hsr272338-cr-0003" contrib-type="author"><name name-style="western"><surname>Vahedi</surname><given-names initials="H">Hadi</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0008-4769-451X</contrib-id><xref rid="hsr272338-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="hsr272338-cr-0004" contrib-type="author"><name name-style="western"><surname>Sobhi</surname><given-names initials="N">Navid</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-0663-850X</contrib-id><xref rid="hsr272338-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="hsr272338-cr-0005" contrib-type="author"><name name-style="western"><surname>Mohammadkhani</surname><given-names initials="M">Mahdi</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-8817-8257</contrib-id><xref rid="hsr272338-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="hsr272338-cr-0006" contrib-type="author"><name name-style="western"><surname>Nabavi</surname><given-names initials="A">Amin</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-1688-4245</contrib-id><xref rid="hsr272338-aff-0004" ref-type="aff">
+<sup>4</sup>
+</xref></contrib><contrib id="hsr272338-cr-0007" contrib-type="author" corresp="yes"><name name-style="western"><surname>Jafarizadeh</surname><given-names initials="A">Ali</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-4922-1923</contrib-id><xref rid="hsr272338-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>Jafarizadeha@tbzmed.ac.ir</email><email>Ali.jafarizadeh.md@gmail.com</email></address></contrib></contrib-group><aff id="hsr272338-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Nikookari Eye Center</named-content>
+<institution>Tabriz University of Medical Sciences</institution>
+<city>Tabriz</city>
+<country country="IR">Iran</country>
+</aff><aff id="hsr272338-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<institution>National Center for Health Insurance Research</institution>
+<city>Tehran</city>
+<country country="IR">Iran</country>
+</aff><aff id="hsr272338-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Translational Ophthalmology Research Center, Farabi Eye Hospital</named-content>
+<institution>Tehran University of Medical Sciences</institution>
+<city>Tehran</city>
+<country country="IR">Iran</country>
+</aff><aff id="hsr272338-aff-0004">
+<label>
+<sup>4</sup>
+</label>
+<named-content content-type="organisation-division">Department of Ophthalmology, Hamilton Eye Institute</named-content>
+<institution>University of Tennessee Health Science Center</institution>
+<city>Memphis</city>
+<named-content content-type="country-part">Tennessee</named-content>
+<country country="US">USA</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold> Ali Jafarizadeh (<email>Jafarizadeha@tbzmed.ac.ir</email>; <email>Ali.jafarizadeh.md@gmail.com</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>16</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>9</volume><issue seq="20">4</issue><issue-id pub-id-type="pmc-issue-id">510729</issue-id><issue-id pub-id-type="doi">10.1002/hsr2.v9.4</issue-id><elocation-id>e72338</elocation-id><history><date date-type="rev-recd"><day>28</day><month>3</month><year>2026</year></date><date date-type="received"><day>03</day><month>12</month><year>2025</year></date><date date-type="accepted"><day>08</day><month>4</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>16</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>18</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-20 15:25:19.677"><day>20</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Health Science Reports</italic> published by Wiley Periodicals LLC.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="HSR2-9-e72338.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:HSR2-9-e72338.pdf"/><abstract><title>ABSTRACT</title><sec id="hsr272338-sec-0010"><title>Background and Aims</title><p>Standard management of dry eye disease (DED) relies on artificial tears, anti‐inflammatory therapy, and punctal occlusion in selected cases. However, some patients continue to report persistent symptoms. The present article reviewed the efficacy of Botulinum Toxin A (BTX‐A) for DED that remained symptomatic after these interventions, excluding patients with blepharospasm or hemifacial spasm.</p></sec><sec id="hsr272338-sec-0020"><title>Methods</title><p>We conducted a comprehensive search of seven databases (PubMed, Embase, Web of Science, Scopus, CENTRAL, Science Direct, and ProQuest), supplemented by grey literature searches (ProQuest, Scopus, OATD), hand‐searching key ophthalmology journals, and investigating clinical trial registries (ClinicalTrials. gov, ICTRP, ISRCTN). Inclusion criteria were clinical trials and cohort studies assessing BTX‐A in primary DED. Outcomes included tear break‐up time (TBUT), Schirmer's test, and Ocular Surface Disease Index (OSDI). Meta‐analyses utilized STATA 17, combining standardized mean differences (SMD) for TBUT and Schirmer's test, and mean difference (MD) for OSDI. Evidence certainty was evaluated using GRADE.</p></sec><sec id="hsr272338-sec-0030"><title>Results</title><p>Out of 5,064 records, five studies (144 eyes) were included. Meta‐analysis indicated no significant improvements in TBUT (Hedges's g = 0.43, 95% CI: −1.34 to 2.20) or Schirmer's test (Hedges's g = 0.23, 95% CI: −0.78 to 1.24). However, OSDI scores showed a significant reduction (MD –14.23; 95% CI: −15.86 to −12.59, <italic toggle="yes">p</italic> &lt; 0.001), with moderate‐certainty evidence.</p></sec><sec id="hsr272338-sec-0040"><title>Conclusions</title><p>BTX‐A injections appear to offer symptom relief in persistent DED, though effects on objective measures remain inconclusive, limited by heterogeneity and low power. While initial safety data is favorable, the small number of methodologically weak studies highlights the need for larger, high‐quality trials to clarify BTX‐A's clinical role.</p></sec><sec id="hsr272338-sec-0050"><title>PROSPERO Registration</title><p>CRD420251031877.</p></sec></abstract><abstract abstract-type="highlights"><title>Summary</title><p>
+<list list-type="bullet"><list-item><p>Persistent dry eye disease can remain symptomatic despite standard options such as topical anti‐inflammatory agents, tear stimulants, artificial tears, and punctal plugs.</p></list-item><list-item><p>Botulinum toxin type A has emerged as a potential option because it alters tear dynamics in a way that may improve tear retention and symptom control.</p></list-item><list-item><p>This review indicates that BTX‐A injections provide moderate‐certainty improvement in patient‐reported symptoms (OSDI) in individuals with persistent DED without coexisting blepharospasm or hemifacial spasm.</p></list-item></list>
+</p></abstract><counts><fig-count count="6"/><table-count count="3"/><page-count count="14"/><word-count count="6778"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:17.04.2026</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation publication-type="journal" id="hsr272338-cit-1001">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Abdollahi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Semnani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Vahedi</surname>
+</string-name>, et al., “<article-title>Is Current Evidence Sufficient to Establish the Efficacy of Botulinum Toxin A in Treating Persistent Dry Eye Disease? A Systematic Review and Meta‐Analysis of Interventional Studies With a Critical Review Using GRADE Tool</article-title>,” <source>Health Science Reports</source>
+<volume>9</volume> (<year>2026</year>): <elocation-id>e72338</elocation-id>, <pub-id pub-id-type="doi">10.1002/hsr2.72338</pub-id>.</mixed-citation>
+</p><fn-group><fn id="hsr272338-note-0001"><p>Mirsaeed Abdollahi and Farbod Semnani contributed equally.</p></fn></fn-group></notes></front><body><def-list list-content="abbreviations"><title>Abbreviations</title><def-item><term>BEB</term><def><p>benign essential blepharospasm</p></def></def-item><def-item><term>BTX‐A</term><def><p>Botulinum Toxin A</p></def></def-item><def-item><term>CENTRAL</term><def><p>Cochrane Central Register of Controlled Trials</p></def></def-item><def-item><term>CGRP</term><def><p>calcitonin gene‐related peptide</p></def></def-item><def-item><term>CIs</term><def><p>confidence intervals</p></def></def-item><def-item><term>DED</term><def><p>dry eye disease</p></def></def-item><def-item><term>GRADE</term><def><p>Grading of Recommendations Assessment, Development, and Evaluation</p></def></def-item><def-item><term>HFS</term><def><p>hemifacial spasm</p></def></def-item><def-item><term>ICTRP</term><def><p>International Clinical Trials Registry Platform</p></def></def-item><def-item><term>MD</term><def><p>mean difference</p></def></def-item><def-item><term>MMP‐9</term><def><p>matrix metalloproteinase‐9</p></def></def-item><def-item><term>NOS</term><def><p>Newcastle‐Ottawa Scale</p></def></def-item><def-item><term>OATD</term><def><p>Open Access Theses and Dissertations</p></def></def-item><def-item><term>OSDI</term><def><p>Ocular Surface Disease Index</p></def></def-item><def-item><term>PICOS</term><def><p>participants, Intervention, Comparison, Outcome, and Study Design</p></def></def-item><def-item><term>PRISMA</term><def><p>Preferred Reporting Items for Systematic Reviews and Meta‐Analyses Statement</p></def></def-item><def-item><term>PROSPERO</term><def><p>International Prospective Register of Systematic Reviews</p></def></def-item><def-item><term>RCTs</term><def><p>randomized controlled trials</p></def></def-item><def-item><term>REM</term><def><p>random effects model</p></def></def-item><def-item><term>REML</term><def><p>restricted maximum likelihood</p></def></def-item><def-item><term>ROB</term><def><p>risk of bias</p></def></def-item><def-item><term>SEs</term><def><p>standard errors</p></def></def-item><def-item><term>SMDs</term><def><p>tandardized mean differences</p></def></def-item><def-item><term>TBUT</term><def><p>tear break‐up time</p></def></def-item><def-item><term>WOS</term><def><p>Web of Science</p></def></def-item></def-list><sec id="hsr272338-sec-0060"><label>1</label><title>Introduction</title><p>Dry eye disease (DED) is a prevalent disorder affecting between 5% and 50% of the general population. According to the International Dry Eye Workshop II, it is defined as a multifactorial disease resulting in symptoms such as ocular discomfort, pain, and fluctuating vision [<xref rid="hsr272338-bib-0001" ref-type="bibr">1</xref>].</p><p>Even with the availability of several therapeutic approaches, including topical anti‐inflammatory medications, tear stimulants, artificial tears, and punctal plugs, DED may remain intractable [<xref rid="hsr272338-bib-0002" ref-type="bibr">2</xref>, <xref rid="hsr272338-bib-0003" ref-type="bibr">3</xref>, <xref rid="hsr272338-bib-0004" ref-type="bibr">4</xref>]. Among emerging therapeutic alternatives, botulinum toxin type A (BTX‐A) has drawn attention due to its ability to modify tear dynamics, which may help retain tears on the surface of the eye and relieve the symptoms [<xref rid="hsr272338-bib-0005" ref-type="bibr">5</xref>, <xref rid="hsr272338-bib-0006" ref-type="bibr">6</xref>].</p><p>Recent meta‐analyses demonstrated the efficacy of botulinum toxin A (BTX‐A) in the treatment of DED [<xref rid="hsr272338-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr272338-bib-0008" ref-type="bibr">8</xref>]. However, they did not exclude patients with benign essential blepharospasm (BEB) or hemifacial spasm (HFS), both of which can substantially affect eyelid mechanics and ocular surface dynamics, thereby contributing to tear film instability [<xref rid="hsr272338-bib-0009" ref-type="bibr">9</xref>, <xref rid="hsr272338-bib-0010" ref-type="bibr">10</xref>, <xref rid="hsr272338-bib-0011" ref-type="bibr">11</xref>], and may influence the interpretation of treatment effects in DED populations. Additionally, subsequent methodological discussions have highlighted potential concerns regarding data extraction consistency across outcomes (e.g., TBUT, Schirmer test, TMH, and OSDI), as well as the importance of clearly defining question frameworks (e.g., PICO) to ensure appropriate study selection and outcome synthesis [<xref rid="hsr272338-bib-0012" ref-type="bibr">12</xref>, <xref rid="hsr272338-bib-0013" ref-type="bibr">13</xref>]. Furthermore, while previous systematic reviews had limitations in comprehensive literature search strategies (including grey literature, conference proceedings, key journals, clinical trial registries, or utilizing thesaurus systems to capture studies indexed under alternative terminologies or trade names for BTX‐A), it has also been emphasized that the choice between fixed‐ and random‐effects models should be guided by methodological heterogeneity rather than relying solely on statistical heterogeneity (I²), which may affect overall estimates [<xref rid="hsr272338-bib-0014" ref-type="bibr">14</xref>]. In addition, to assess the certainty and strength of evidence in clinical practice, we used the Grading of Recommendations Assessment, Development, and Evaluation (GRADE) tool. Finally, we increased the number of independent assessors at each stage of the review process to minimize the risk of false study exclusion and errors.</p><p>Therefore, this systematic review aims to critically evaluate and synthesize existing evidence through meta‐analysis to determine the effectiveness of botulinum toxin A (BTX‐A) in the treatment of patients with persistent dry eye disease.</p></sec><sec sec-type="materials-and-methods" id="hsr272338-sec-0070"><label>2</label><title>Materials and Methods</title><p>This study was designed and conducted in accordance with the Cochrane Handbook for Systematic Reviews [<xref rid="hsr272338-bib-0015" ref-type="bibr">15</xref>, <xref rid="hsr272338-bib-0016" ref-type="bibr">16</xref>] and was reported according to the Preferred Reporting Items for Systematic Reviews and Meta‐Analyses Statement (PRISMA)−2020 [<xref rid="hsr272338-bib-0017" ref-type="bibr">17</xref>] (File <xref rid="hsr272338-suppl-0001" ref-type="supplementary-material">S1</xref>).</p><sec id="hsr272338-sec-0080"><label>2.1</label><title>Protocol and Registration</title><p>The study protocol was registered in the International Prospective Register of Systematic Reviews (PROSPERO) online database. The registration number is CRD420251031877.</p></sec><sec id="hsr272338-sec-0090"><label>2.2</label><title>Information Source and Search Strategy</title><p>To build the search strategy, we used two thesaurus systems, MeSH terms and Emtree, and by consultation with experts, we made free‐text keywords. A comprehensive search was performed on 7 big databases by Mirsaeed Abdollahi, including PubMed, Embase, Web of Science (WOS), Scopus, Cochrane Central Register of Controlled Trials (CENTRAL), Science Direct, and ProQuest. Furthermore, as grey literature, we searched Scopus, ProQuest, and Open Access Theses and Dissertations (OATD) to identify additional documents. Moreover, we performed a hand‐search on two key journals, “Ophthalmic Plastic and Reconstructive Surgery” and “The Ocular Surface”. To identify unpublished studies, we searched the National Institute of Health Clinical Trials Register (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://clinicaltrials.gov/" ext-link-type="uri">https://clinicaltrials.gov/</ext-link>), the International Clinical Trials Registry Platform (ICTRP), and the UK's clinical study registry (ISRCTN). Finally, references of included studies were hand‐searched for additional relevant studies. All searches were performed manually from January 1990 to January 2025 via their official websites. No restrictions based on language, geographical area, race, or age were applied. The full search syntax for different databases Table <xref rid="hsr272338-suppl-0002" ref-type="supplementary-material">S1</xref> (Supporting file <xref rid="hsr272338-suppl-0002" ref-type="supplementary-material">2</xref>).</p></sec><sec id="hsr272338-sec-0100"><label>2.3</label><title>Eligibility Criteria</title><p>The study selection was based on the participants, Intervention, Comparison, Outcome, and Study Design (PICOS) framework. All intervention arms of any type of clinical trials and interventional cohort studies (Study design) in participants with persistent DED (Population), assessing the BTX‐A injection efficacy (intervention) in the management of DED (Outcome), compared to before intervention (Comparison). Given the absence of a single accepted standard intervention for persistent DED, the variability of control groups (e.g., sham or alternative treatments), and the primary focus of this study on the efficacy of BTX‐A, only the BTX‐A arm from each study was included in the analysis. The exclusion criteria were patients with eyelid abnormalities, blepharospasm, facial palsy, and unrelated ocular surface disease.</p></sec><sec id="hsr272338-sec-0110"><label>2.4</label><title>Selection Process</title><p>The titles and abstracts of studies were screened by Farbod Semnani and Mirsaeed Abdollahi to identify any relevant studies. Afterward, the full‐text assessment of the studies was performed independently by four researchers, Mirsaeed Abdollahi, Hadi Vahedi, Ali Jafarizadeh, and Farbod Semnani, to determine eligibility for inclusion. Disagreements were resolved through consensus.</p></sec><sec id="hsr272338-sec-0120"><label>2.5</label><title>Risk of Bias Assessment</title><p>The risk of bias (ROB) was assessed independently by the four authors: Mirsaeed Abdollahi, Hadi Vahedi, Ali Jafarizadeh, and Farbod Semnani, and any discord among authors was resolved through consensus. We used the Cochrane Risk of Bias 1 tool (RoB‐1) for assessing ROB in clinical trials [<xref rid="hsr272338-bib-0015" ref-type="bibr">15</xref>], which focuses on five main domains: selection bias (random sequence generation and allocation concealment), performance bias (blinding of participants or personnel), detection bias (blinding of outcome assessment), attrition bias (incomplete outcome data), and selective outcome reporting bias. We graded each item as low, high, or unclear risk of bias. Additionally, the Newcastle‐Ottawa Scale (NOS) tool was used for assessing the ROB in cohort studies [<xref rid="hsr272338-bib-0018" ref-type="bibr">18</xref>], which focuses on selection (Representativeness of the exposed cohort, Selection of the non‐exposed cohort, and Ascertainment of exposure), comparability, and outcome (Assessment of outcome, enough long follow‐up, and Adequacy of follow‐up). Then, studies were categorized into very high (0–2 points), high (3–6 points), and low risk of bias (7–9 points). Finally, we generated a graphical representation of the risk of bias assessment results using the “QUADAS” module in STATA 17 [<xref rid="hsr272338-bib-0019" ref-type="bibr">19</xref>].</p></sec><sec id="hsr272338-sec-0130"><label>2.6</label><title>Data Extraction</title><p>The data collection process was separately performed by four authors, Mirsaeed Abdollahi, Hadi Vahedi, Ali Jafarizadeh, and Farbod Semnani, and any discrepancies were resolved by discussion and consensus. The designed form for data extraction of studies includes the author's name, year of publication, location, study design/sample size, demographic data, inclusion/exclusion criteria, and assessed outcomes.</p></sec><sec id="hsr272338-sec-0140"><label>2.7</label><title>Statistical Analysis</title><p>Statistical analyses followed recommendations in standard references for meta‐analysis of interventional studies, including the Cochrane Handbook for Systematic Reviews of Interventions and Borenstein et al. [<xref rid="hsr272338-bib-0014" ref-type="bibr">14</xref>, <xref rid="hsr272338-bib-0015" ref-type="bibr">15</xref>].</p><p>In our meta‐analysis, the main outcomes were the baseline and the last post‐intervention tear break‐up time (TBUT), Schirmer's test, and ocular surface disease index (OSDI) score (the lower the OSDI score, the fewer the ocular symptoms). If the means and standard deviations (SDs) of included studies were not available, we estimated the values by using standard errors (SEs), confidence intervals (CIs), range, or sample size, by employing techniques provided by Wan et al. [<xref rid="hsr272338-bib-0020" ref-type="bibr">20</xref>]. Since Bukhari et al. [<xref rid="hsr272338-bib-0021" ref-type="bibr">21</xref>] presented the results of the TBUT and Schirmer's test as binary outcomes and one arm inclusion from each study, we reported it separately by calculating the risk ratio (RR). Mekhasingharak et al. [<xref rid="hsr272338-bib-0022" ref-type="bibr">22</xref>] included two intervention groups receiving 3.3 U and 2.5 U of BTX‐A, respectively. To avoid the risk of multiplicity, these groups were combined, and the mean values were calculated for subsequent analysis.</p><p>The meta‐analyses were performed via the ‘meta’ package in STATA software version 17 (StataCorp, College Station, Texas, USA). The random effects model (REM), as a conservative approach, was employed with the restricted maximum likelihood (REML) method and the Knapp‐Hartung adjustment. We employed the pooled standardized mean difference (SMD) as the effect size to assess the TBUT and Schirmer's test, and it was presented as Hedges’ g due to the pre‐post design of the intervention and to minimize any overestimation resulting from small sample numbers. The SMD was classified as trivial (≤ 0.19), mild (0.2–0.49), moderate (0.5–0.79), or high (≥ 0.80) [<xref rid="hsr272338-bib-0023" ref-type="bibr">23</xref>]. To assess the OSDI score changes and interpret the meta‐regression results regarding the magnitude of effect for each factor, we used the mean difference (MD).</p><p>The I² statistic was employed to evaluate statistical heterogeneity among studies and classified as 0%–40% indicating non‐significant heterogeneity, 30%–60% indicating moderate heterogeneity, 50%–90% indicating considerable heterogeneity, and 75%–100% indicating a high level of heterogeneity [<xref rid="hsr272338-bib-0024" ref-type="bibr">24</xref>].</p><p>Meta‐regression was conducted to explore the potential source of heterogeneity and assess the impact of follow‐up period, BTX‐A dosage, and mean participants' age (<italic toggle="yes">p</italic> &lt; 0.1). The power analysis for pooled SMD was performed using the “metapower” package in R 4.4.2 [<xref rid="hsr272338-bib-0025" ref-type="bibr">25</xref>].</p><p>All hypothesis tests were two‐sided with an a priori significance level of <italic toggle="yes">α</italic> = 0.05 unless otherwise specified.</p></sec><sec id="hsr272338-sec-0150"><label>2.8</label><title>Sensitivity Analysis</title><sec id="hsr272338-sec-0160"><label>2.8.1</label><title>Jackknife Method</title><p>A sensitivity analysis utilizing the leave‐one‐out approach was performed to evaluate the potential significant impact of any individual research on the overall results. The possible presence of the small study effect was evaluated using Egger's regression test (<italic toggle="yes">p</italic> &lt; 0.1).</p></sec><sec id="hsr272338-sec-0170"><label>2.8.2</label><title>The Best‐Case Scenario</title><p>We combined the first post‐intervention measurements as the best‐case scenario, assuming this time point most closely reflected the peak efficacy of BTX‐A in managing persistent DED.</p></sec></sec><sec id="hsr272338-sec-0180"><label>2.9</label><title>Certainty of Evidence</title><p>We used GRADE (Grading of Recommendations, Assessment, Development, and Evaluation) to classify the certainty of evidence [<xref rid="hsr272338-bib-0026" ref-type="bibr">26</xref>] into high, moderate, low, and very low categories. The initial grading was determined based on the study design: high for randomized controlled trials, moderate for non‐randomized controlled trials, and low for cohort studies. Afterward, we downgraded the evidence based on four domains: risk of bias, inconsistency, imprecision, and publication bias. In contrast, we upgraded the evidence based on three domains: a large effect size, a dose‐response relationship, and adjustment for confounders.</p></sec></sec><sec sec-type="results" id="hsr272338-sec-0190"><label>3</label><title>Result</title><sec id="hsr272338-sec-0200"><label>3.1</label><title>Study Selection</title><p>The PRISMA flowchart of this study is illustrated in Figure <xref rid="hsr272338-fig-0001" ref-type="fig">1</xref>. A total of 5,064 records were identified through all sources. Prior to screening, 1,139 studies were removed due to duplications, and 3,925 unique studies were identified. 14 studies were selected for full‐text assessment. Finally, 5 studies met our inclusion criteria and were included in this study [<xref rid="hsr272338-bib-0021" ref-type="bibr">21</xref>, <xref rid="hsr272338-bib-0022" ref-type="bibr">22</xref>, <xref rid="hsr272338-bib-0027" ref-type="bibr">27</xref>, <xref rid="hsr272338-bib-0028" ref-type="bibr">28</xref>, <xref rid="hsr272338-bib-0029" ref-type="bibr">29</xref>]. After scanning the references of included studies, no further studies were identified. The list of 9 studies excluded in the full‐text assessment step and the reasons are available in Table <xref rid="hsr272338-suppl-0002" ref-type="supplementary-material">S2</xref>.</p><fig position="float" fig-type="Figure" id="hsr272338-fig-0001" orientation="portrait"><label>Figure 1</label><caption><p>The Preferred Reporting Items for Systematic Reviews and Meta‐Analyses (PRISMA) flow diagram.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="HSR2-9-e72338-g003.jpg"/></fig></sec><sec id="hsr272338-sec-0210"><label>3.2</label><title>Study Characteristics</title><p>Table <xref rid="hsr272338-tbl-0001" ref-type="table">1</xref> outlines the key characteristics of the five included studies. Among these, four employed clinical trial designs [<xref rid="hsr272338-bib-0021" ref-type="bibr">21</xref>, <xref rid="hsr272338-bib-0022" ref-type="bibr">22</xref>, <xref rid="hsr272338-bib-0028" ref-type="bibr">28</xref>, <xref rid="hsr272338-bib-0029" ref-type="bibr">29</xref>] —including three randomized controlled trials (RCTs), two of which were double‐blinded—while one utilized a retrospective cohort design [<xref rid="hsr272338-bib-0027" ref-type="bibr">27</xref>]. All studies were published between 2014 and 2024, collectively involving 172 eyes.</p><table-wrap position="float" id="hsr272338-tbl-0001" content-type="Table" orientation="portrait"><label>Table 1</label><caption><p>Study Characteristics.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Study</th><th align="center" valign="bottom" rowspan="1" colspan="1">Country</th><th align="center" valign="bottom" rowspan="1" colspan="1">Design</th><th align="center" valign="bottom" rowspan="1" colspan="1">No. eyes</th><th align="center" valign="bottom" rowspan="1" colspan="1">Mean age</th><th align="center" valign="bottom" rowspan="1" colspan="1">Intervention protocol</th><th align="center" valign="bottom" rowspan="1" colspan="1">Exclusion criteria</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Bukhari et al. 2014</td><td align="left" valign="top" rowspan="1" colspan="1">Saudi Arabia</td><td align="left" valign="top" rowspan="1" colspan="1">Clinical trial</td><td align="center" valign="top" rowspan="1" colspan="1">48</td><td align="center" valign="top" rowspan="1" colspan="1">47.5</td><td align="left" valign="top" rowspan="1" colspan="1">Subcutaneous single dose of 0.1 ml (3.3 IU/0.1 ml), 2 mm inferior to the lid margin, medial to the lower punctum of both lower eyelids</td><td align="left" valign="top" rowspan="1" colspan="1">1. Patients who had any history of lacrimal disease, lacrimal surgery, facial palsy, or facial irradiation 2. Those were using any systemic medications that can interfere with tear secretion‐ or drainage‐like chemotherapeutic agents, or ocular medication other than artificial tears at the time of the study</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Serna‐Ojeda et al. 2016</td><td align="left" valign="top" rowspan="1" colspan="1">Mexico</td><td align="left" valign="top" rowspan="1" colspan="1">RCT</td><td align="center" valign="top" rowspan="1" colspan="1">20</td><td align="center" valign="top" rowspan="1" colspan="1">59.5</td><td align="left" valign="top" rowspan="1" colspan="1">Subcutaneous single dose of 4 IU in the medial part of the lower eyelid near the punctum, directed along the medial canthal tendon in one eyelid randomly</td><td align="left" valign="top" rowspan="1" colspan="1">1. Eyelid abnormalities (problems with the mechanism of blinking, poor eyelid position, and changes in position or structure of the eyelashes) 2. Those with nasolacrimal obstruction 3. Active corneal infection 4. Severe dry eye cases</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Choi et al. 2018</td><td align="left" valign="top" rowspan="1" colspan="1">South Korea</td><td align="left" valign="top" rowspan="1" colspan="1">Double‐blinded RCT</td><td align="center" valign="top" rowspan="1" colspan="1">26</td><td align="center" valign="top" rowspan="1" colspan="1">60.2</td><td align="left" valign="top" rowspan="1" colspan="1">Subcutaneous single dose of 2.5 IU/0.05 ml, medial fifth region of both upper and lower eyelids, as close as possible to the gray line at the pretarsal orbicularis muscle</td><td align="left" valign="top" rowspan="1" colspan="1">1. Eyelid abnormalities (problems with blinking, poor eyelid position, and changes in eyelash position or structure), blepharospasm 2. Active corneal or conjunctival infection 3. History of ocular surgery, including refractive surgery or BTX‐A injection within the past 6 months.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Choi et al. 2021</td><td align="left" valign="top" rowspan="1" colspan="1">South Korea</td><td align="left" valign="top" rowspan="1" colspan="1">Cohort</td><td align="center" valign="top" rowspan="1" colspan="1">56</td><td align="center" valign="top" rowspan="1" colspan="1">56.6</td><td align="left" valign="top" rowspan="1" colspan="1">Subcutaneous single dose of 2.5 IU injection was given near the punctum and was directed along the medial canthal tendon</td><td align="left" valign="top" rowspan="1" colspan="1">—</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Mekhasingharak et al. 2024</td><td align="left" valign="top" rowspan="1" colspan="1">Thailand</td><td align="left" valign="top" rowspan="1" colspan="1">Double‐blinded RCT</td><td align="center" valign="top" rowspan="1" colspan="1">22</td><td align="center" valign="top" rowspan="1" colspan="1">64.6</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Group 1: Subcutaneous single dose of 3.3 IU in the medial part of the lower eyelid, 2 mm inferior to the lid margin, and 5 mm medial to the lower punctum</p>
+<p>Group 2: Subcutaneous single dose of 2.5 IU in the medial part of the lower eyelid, 2 mm inferior to the lid margin, and 5 mm medial to the lower punctum</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">1. Patients with dry eye attributable to the eyelid abnormalities 2. Nasolacrimal duct obstruction 3. Active corneal infection 4. History of BTX‐A hypersensitivity</td></tr></tbody></table><table-wrap-foot><fn id="hsr272338-tbl1-note-0001"><p>Abbreviations: RCT, Randomized Controlled Trial; IU, International Unit; BTX‐A, Botulinum toxin A</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><p>The study populations were demographically diverse, comprising participants of both genders with mean ages ranging from 47.5 to 64.6 years. Before BTX‐A intervention, patients had received conventional treatments such as topical artificial tears, lubricants, or corticosteroids for at least 1 month without significant improvement. The studies applied similar exclusion criteria, which generally included a history of eyelid abnormalities (such as impaired blinking, malposition, blepharospasm, hemifacial spasm, or structural changes in eyelashes), active corneal or conjunctival infections, prior ocular surgeries, or known hypersensitivity to BTX‐A. However, one study excluded patients with severe dry eye cases to avoid possible discomfort or damage [<xref rid="hsr272338-bib-0029" ref-type="bibr">29</xref>].</p></sec><sec id="hsr272338-sec-0220"><label>3.3</label><title>Risk of Bias Assessment</title><p>As depicted in Figure <xref rid="hsr272338-fig-0002" ref-type="fig">2a</xref>, the majority of studies (50%–80%) were assessed as having a high risk of bias in the detection, performance, and outcome reporting domains, reflecting insufficient blinding of participants, personnel, outcome assessors, and reporting of outcomes not pre‐specified in study protocols. Furthermore, ~25% of the studies demonstrated a high risk of bias in the selection, confirming inadequate randomization methods and lack of allocation concealment. In contrast, the attrition bias domain was rated as low risk in the majority of studies (75%), with most providing thorough documentation of participant follow‐up and balanced explanations for any exclusions or missing data. As illustrated in Figure <xref rid="hsr272338-fig-0002" ref-type="fig">2b</xref>, the study conducted by Mekhasingharak et al. [<xref rid="hsr272338-bib-0022" ref-type="bibr">22</xref>] was identified as having the highest methodological quality, exhibiting a low risk of bias across all domains. According to the NOS tool result represented in Table <xref rid="hsr272338-tbl-0002" ref-type="table">2</xref>, Choi et al. [<xref rid="hsr272338-bib-0027" ref-type="bibr">27</xref>] had a high risk of bias, mostly due to the lack of any strategy to adjust for possible confounders.</p><fig position="float" fig-type="Figure" id="hsr272338-fig-0002" orientation="portrait"><label>Figure 2</label><caption><p>Risk of bias assessment (A presents the overall risk of bias summary across included studies and B presents the detailed risk of bias assessment for each individual study.).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="HSR2-9-e72338-g004.jpg"/></fig><table-wrap position="float" id="hsr272338-tbl-0002" content-type="Table" orientation="portrait"><label>Table 2</label><caption><p>Newcastle‐Ottawa score for cohort studies.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><thead valign="bottom"><tr valign="bottom"><th valign="middle" rowspan="2" align="left" colspan="1">Study</th><th colspan="4" style="border-bottom:solid 1px #000000" align="center" valign="bottom" rowspan="1">Selection</th><th align="center" valign="bottom" rowspan="1" colspan="1">Comparability</th><th align="center" colspan="3" style="border-bottom:solid 1px #000000" valign="bottom" rowspan="1">Outcome</th><th valign="middle" rowspan="2" align="center" colspan="1">Total score</th></tr><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="center" valign="bottom" rowspan="1" colspan="1">Representativeness of the cases</th><th align="center" valign="bottom" rowspan="1" colspan="1">Selection of the non‐exposed cohort</th><th align="center" valign="bottom" rowspan="1" colspan="1">Ascertainment of exposure</th><th align="center" valign="bottom" rowspan="1" colspan="1">Demonstration that outcome of interest was not present at start of study</th><th align="center" valign="bottom" rowspan="1" colspan="1">The potential confounders were investigated by subgroup analysis or multivariable analysis</th><th align="center" valign="bottom" rowspan="1" colspan="1">Assessment of the outcome</th><th align="center" valign="bottom" rowspan="1" colspan="1">Was follow‐up long enough for outcomes to occur</th><th align="center" valign="bottom" rowspan="1" colspan="1">Adequacy of follow‐up of cohorts</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Choi et al. 2021</td><td align="center" valign="top" rowspan="1" colspan="1">*</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">*</td><td align="center" valign="top" rowspan="1" colspan="1">*</td><td align="center" valign="top" rowspan="1" colspan="1">—</td><td align="center" valign="top" rowspan="1" colspan="1">*</td><td align="center" valign="top" rowspan="1" colspan="1">*</td><td align="center" valign="top" rowspan="1" colspan="1">*</td><td align="center" valign="top" rowspan="1" colspan="1">6</td></tr></tbody></table><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap></sec><sec id="hsr272338-sec-0230"><label>3.4</label><title>Data Synthesis</title><sec id="hsr272338-sec-0240"><label>3.4.1</label><title>Tear Break‐Up Time (TBUT)</title><p>The meta‐analysis of 4 studies [<xref rid="hsr272338-bib-0022" ref-type="bibr">22</xref>, <xref rid="hsr272338-bib-0027" ref-type="bibr">27</xref>, <xref rid="hsr272338-bib-0028" ref-type="bibr">28</xref>, <xref rid="hsr272338-bib-0029" ref-type="bibr">29</xref>] evaluating TBUT changes following BTX‐A injection on 124 eyes revealed no statistically significant overall effect (Hedges's g = 0.43, 95% CI: −1.34 to 2.20). The heterogeneity among the included studies was high (I² = 93.72%), suggesting considerable variability in study outcomes (Figure <xref rid="hsr272338-fig-0003" ref-type="fig">3a</xref>). Meta‐regression showed that the mean participants' age, measurement time, and BTX‐A dosage could not be the potential source of heterogeneity. Meta‐regression results on variables are available in Table <xref rid="hsr272338-suppl-0002" ref-type="supplementary-material">S3</xref>.</p><fig position="float" fig-type="Figure" id="hsr272338-fig-0003" orientation="portrait"><label>Figure 3</label><caption><p>Results of the meta‐analyses for Tear Break‐Up Time (TBUT) (a), Schirmer's Test (b), and the Ocular Surface Disease Index (OSDI) (c).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="HSR2-9-e72338-g005.jpg"/></fig></sec><sec id="hsr272338-sec-0250"><label>3.4.2</label><title>Schirmer's Test</title><p>Similarly, the pooled analysis evaluating Schirmer's test results on 4 studies [<xref rid="hsr272338-bib-0022" ref-type="bibr">22</xref>, <xref rid="hsr272338-bib-0027" ref-type="bibr">27</xref>, <xref rid="hsr272338-bib-0028" ref-type="bibr">28</xref>, <xref rid="hsr272338-bib-0029" ref-type="bibr">29</xref>] following BTX‐A injection on 124 eyes indicated no significant improvement in tear production (Hedges's g = 0.23, 95% CI: −0.78 to 1.24) with a high heterogeneity (I² = 81.60%) across studies (Figure <xref rid="hsr272338-fig-0003" ref-type="fig">3b</xref>). Meta‐regression showed that the mean participants’ age, measurement time, and BTX‐A dosage could not be the potential source of heterogeneity (Table <xref rid="hsr272338-suppl-0002" ref-type="supplementary-material">S3</xref>).</p></sec><sec id="hsr272338-sec-0260"><label>3.4.3</label><title>Ocular Surface Disease Index (OSDI)</title><p>Three studies [<xref rid="hsr272338-bib-0022" ref-type="bibr">22</xref>, <xref rid="hsr272338-bib-0027" ref-type="bibr">27</xref>, <xref rid="hsr272338-bib-0028" ref-type="bibr">28</xref>] assessed the OSDI score changes following BTX‐A injection on 104 eyes, which showed a significant improvement in symptoms with an overall reduction of 14.23 (95% CI: −15.86 to −12.59, <italic toggle="yes">p</italic> &lt; 0.001) in OSDI score without significant heterogeneity among studies (I² = 0.00%) (Figure <xref rid="hsr272338-fig-0003" ref-type="fig">3c</xref>). Meta‐regression showed that the mean participants' age, measurement time, and BTX‐A dosage could not be the potential source of heterogeneity (Table <xref rid="hsr272338-suppl-0002" ref-type="supplementary-material">S3</xref>).</p><p>Moreover, Bukhari et al. [<xref rid="hsr272338-bib-0021" ref-type="bibr">21</xref>] enrolled 24 eyes to assess the efficacy of BTX‐A and showed that all eyes significantly improved regarding TBUT (RR = 0.52; 95% CI: 0.37–0.72, <italic toggle="yes">p</italic> &lt; 0.001) and Shirmer's test (RR = 0.51; 95% CI: 0.26–0.98, <italic toggle="yes">p</italic> &lt; 0.001).</p></sec></sec><sec id="hsr272338-sec-0270"><label>3.5</label><title>Sensitivity Analysis</title><sec id="hsr272338-sec-0280"><label>3.5.1</label><title>Jackknife Method</title><p>The leave‐one‐out method was performed on the results of TBUT, Schirmer's test, and OSDI change scores. There was no outlier study to have a significant influence on the pooled estimates (Figure <xref rid="hsr272338-fig-0004" ref-type="fig">4</xref>).</p><fig position="float" fig-type="Figure" id="hsr272338-fig-0004" orientation="portrait"><label>Figure 4</label><caption><p>Results of the Jackknife method sensitivity analyses for Tear Break‐Up Time (TBUT) (a), Schirmer's Test (b), and the Ocular Surface Disease Index (OSDI) (c).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="HSR2-9-e72338-g001.jpg"/></fig></sec><sec id="hsr272338-sec-0290"><label>3.5.2</label><title>The Best‐Case Scenario</title><p>According to this scenario, there was no significant improvement in TBUT (Hedges's g = 0.67; 95% CI: −1.26 to 2.60, I² = 94.53%) and Schirmer's test (Hedges's g = 0.71; 95% CI: −0.44 to 1.86, I² = 85.24%) after BTX‐A intervention. Besides, the OSDI score remained significant (MD = −18.35; 95% CI: −31.08 to −5.61, <italic toggle="yes">p</italic> = 0.03, I² = 54.89%) (Figure <xref rid="hsr272338-fig-0005" ref-type="fig">5</xref>).</p><fig position="float" fig-type="Figure" id="hsr272338-fig-0005" orientation="portrait"><label>Figure 5</label><caption><p>Results of the best‐case scenario sensitivity analyses for Tear Break‐Up Time (TBUT) (a), Schirmer's Test (b), and the Ocular Surface Disease Index (OSDI) (c).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="HSR2-9-e72338-g002.jpg"/></fig></sec></sec><sec id="hsr272338-sec-0300"><label>3.6</label><title>Small Study Effect</title><p>The Egger's test showed that there was a low risk of small study effect on the results of TBUT (<italic toggle="yes">p</italic> = 0.61), Schirmer's test (<italic toggle="yes">p</italic> = 0.81), and OSDI change scores (<italic toggle="yes">p</italic> = 0.59).</p></sec><sec id="hsr272338-sec-0310"><label>3.7</label><title>Power Analysis</title><p>Power analysis indicates that the overall statistical power of the meta‐analysis for TBUT and Schirmer's test is 31% and 29%, respectively, indicating a relatively low power status. More studies are needed to achieve adequate power (≥ 80%). However, the meta‐analysis on OSDI demonstrates a high power of 97%.</p></sec><sec id="hsr272338-sec-0320"><label>3.8</label><title>Certainty of Evidence</title><p>The certainty of evidence for the analyzed outcomes, as assessed using the GRADE approach, is summarized in Table <xref rid="hsr272338-tbl-0003" ref-type="table">3</xref>. The overall certainty of evidence for TBUT and Schirmer's test was rated as low, suggesting limited utility in informing clinical decision‐making. In contrast, the certainty of evidence for the OSDI outcome was considered moderate, indicating its importance in guiding clinical decisions.</p><table-wrap position="float" id="hsr272338-tbl-0003" content-type="Table" orientation="portrait"><label>Table 3</label><caption><p>GRADE tool results.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th valign="middle" rowspan="2" align="left" colspan="1">Outcomes</th><th valign="middle" rowspan="2" align="center" colspan="1">Quality of evidence</th><th colspan="4" align="center" valign="bottom" rowspan="1">Downgrading</th><th align="center" colspan="3" valign="bottom" rowspan="1">Upgrading</th><th valign="middle" rowspan="2" align="center" colspan="1">Certainty</th></tr><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="center" valign="bottom" rowspan="1" colspan="1">ROB</th><th align="center" valign="bottom" rowspan="1" colspan="1">Inconsistency</th><th align="center" valign="bottom" rowspan="1" colspan="1">Imprecision</th><th align="center" valign="bottom" rowspan="1" colspan="1">Publication bias</th><th align="center" valign="bottom" rowspan="1" colspan="1">Effect size</th><th align="center" valign="bottom" rowspan="1" colspan="1">Dose‐response</th><th align="center" valign="bottom" rowspan="1" colspan="1">adjustment</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>TBUT</bold>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>⊕⊕⊕⊕</p>
+<p>High</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Low (0)</td><td align="left" valign="top" rowspan="1" colspan="1">Serious (−2)</td><td align="left" valign="top" rowspan="1" colspan="1">Moderate (−1)</td><td align="left" valign="top" rowspan="1" colspan="1">No (0)</td><td align="left" valign="top" rowspan="1" colspan="1">No (0)</td><td align="left" valign="top" rowspan="1" colspan="1">Upgraded ( + 1)</td><td align="left" valign="top" rowspan="1" colspan="1">No (0)</td><td align="left" valign="top" rowspan="1" colspan="1">Limited importance for making a decision</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>Schirmer's test</bold>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>⊕⊕⊕⊕</p>
+<p>High</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Low (0)</td><td align="left" valign="top" rowspan="1" colspan="1">Serious (−2)</td><td align="left" valign="top" rowspan="1" colspan="1">Moderate (−1)</td><td align="left" valign="top" rowspan="1" colspan="1">No (0)</td><td align="left" valign="top" rowspan="1" colspan="1">No (0)</td><td align="left" valign="top" rowspan="1" colspan="1">Upgraded ( + 1)</td><td align="left" valign="top" rowspan="1" colspan="1">No (0)</td><td align="left" valign="top" rowspan="1" colspan="1">Limited importance for making a decision</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>OSDI</bold>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>⊕⊕⊕⊕</p>
+<p>High</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Low (0)</td><td align="left" valign="top" rowspan="1" colspan="1">No (0)</td><td align="left" valign="top" rowspan="1" colspan="1">Serious (−2)</td><td align="left" valign="top" rowspan="1" colspan="1">No (0)</td><td align="left" valign="top" rowspan="1" colspan="1">Upgraded ( + 2)</td><td align="left" valign="top" rowspan="1" colspan="1">Upgraded ( + 1)</td><td align="left" valign="top" rowspan="1" colspan="1">No (0)</td><td align="left" valign="top" rowspan="1" colspan="1">Important for making a decision</td></tr></tbody></table><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap></sec></sec><sec sec-type="discussion" id="hsr272338-sec-0330"><label>4</label><title>Discussion</title><p>To the best of our knowledge, this is the first systematic review and meta‐analysis to assess the efficacy of BTX‐A injections in the treatment of persistent DED in patients without eyelid motor disorders, including BEB or HFS. These conditions inherently affect eyelid mechanics and ocular surface dynamics, potentially confounding the assessment of BTX‐A's efficacy in the DED population without underlying neuromuscular disorders [<xref rid="hsr272338-bib-0030" ref-type="bibr">30</xref>]. Moreover, the injection site, technique, and dosing of BTX‐A for treatment of the mentioned motor disorders, where higher doses and broader muscle paralysis are required, are vastly different from those for treatment of isolated DED [<xref rid="hsr272338-bib-0029" ref-type="bibr">29</xref>]. The results of the current study indicate a notable discrepancy between subjective (patient‐reported) outcomes and objective clinical indices. Accordingly, this analysis revealed a statistically significant and clinically meaningful improvement in OSDI scores following BTX‐A treatment. Nevertheless, no statistically significant overall changes were detected for TBUT or Schirmer's test values. However, the results regarding objective outcomes were inconclusive, as they were either characterized as having low statistical power or high heterogeneity.</p><p>A prominent finding of this systematic review is the marked improvement of about 14.23 scores in the OSDI scale, which is higher than the 8.72 [<xref rid="hsr272338-bib-0007" ref-type="bibr">7</xref>] and 7.51 [<xref rid="hsr272338-bib-0008" ref-type="bibr">8</xref>] improvement in the previous systematic reviews. This could be attributed to the higher baseline OSDI scores in the patients with persistent dry eye, whose symptoms' alleviation could result in a more pronounced reduction in OSDI score (32). The reported I<sup>2</sup> of zero for OSDI suggests consistency of this larger effect despite the relatively small number of pooled studies. The comparison between the best‐ and worst‐case scenarios indicated that OSDI improvement could be detected approximately from 2 weeks post‐injection, with the effect persisting for at least 4 months after the intervention. Considering this, clinicians may consider initial BTX‐A treatment cycles of 3–6 months for persistent DED with 2.5–4 IU per eyelid, followed by potential symptom‐guided re‐injections. However, this exploratory recommendation may warrant further studies to confirm or refine it.</p><p>Nonetheless, there lies the absence of corresponding significant improvements in common objective DED signs like TBUT and Schirmer's test results, contradictory to the previously mentioned systematic reviews. This could be due to the differences in the inclusion criteria (DED vs persistent DED in our study) and the differences in the underlying etiology of DED. BTX‐A injections influence blink mechanics, which can have differing effects in DED with no conspicuous underlying condition (as is the case in the present study) versus secondary DED (a substantial proportion of cases in our study's counterparts), such as that caused by conditions like BEB/HFS. In secondary DED, with abnormal blink patterns, BTX‐A may help normalize blinking and support tear film stability [<xref rid="hsr272338-bib-0031" ref-type="bibr">31</xref>, <xref rid="hsr272338-bib-0032" ref-type="bibr">32</xref>]. In contrast, in primary DED, where blink function is typically normal, BTX‐A may disrupt eyelid movement, reduce complete blinking, and increase tear evaporation, potentially counteracting the benefits of reduced tear drainage [<xref rid="hsr272338-bib-0033" ref-type="bibr">33</xref>]. On the other hand, the inherent limitations and variability of TBUT and Schirmer's test measurements could contribute to the lack of significant findings for these objective signs [<xref rid="hsr272338-bib-0034" ref-type="bibr">34</xref>, <xref rid="hsr272338-bib-0035" ref-type="bibr">35</xref>, <xref rid="hsr272338-bib-0036" ref-type="bibr">36</xref>]. However, the Schirmer's test may not have as good discriminability in milder forms of DED [<xref rid="hsr272338-bib-0037" ref-type="bibr">37</xref>, <xref rid="hsr272338-bib-0038" ref-type="bibr">38</xref>]. Even under the best‐case scenario at the time of maximal expected efficacy, no significant improvement was observed in TBUT or Schirmer's test results, reinforcing the negative objective findings.</p><p>The subjective‐objective and objective‐objective [<xref rid="hsr272338-bib-0022" ref-type="bibr">22</xref>, <xref rid="hsr272338-bib-0027" ref-type="bibr">27</xref>, <xref rid="hsr272338-bib-0039" ref-type="bibr">39</xref>, <xref rid="hsr272338-bib-0040" ref-type="bibr">40</xref>] discordance is not uncommon in DED research and warrants careful consideration. The OSDI captures a broader spectrum of patient experience, including ocular discomfort, functional visual limitations, and environmental triggers, which may not be solely dependent on tear volume or gross tear film stability. The significant symptomatic relief observed could be attributed to BTX‐A functionality beyond sheer modulation of tear volume or stability. BTX‐A could have anti‐inflammatory and neuro‐modulatory characteristics, as Choi et al. [<xref rid="hsr272338-bib-0028" ref-type="bibr">28</xref>] showed that BTX‐A injection led to a tear level reduction of the matrix metalloproteinase‐9 (MMP‐9), an inflammatory biomarker, and serotonin, which are involved in pain circuits. BTX‐A can exert similar effects by blocking the release of substance P and calcitonin gene‐related peptide (CGRP), which serve as inflammatory mediators from sensory nerves [<xref rid="hsr272338-bib-0041" ref-type="bibr">41</xref>]. Thus, by altering these pathways, BTX‐A could directly alleviate symptoms like pain and irritation, leading to improved OSDI scores without necessarily changing TBUT or Schirmer test values. Captivatingly, the TFOS DEWS II definition encompasses the neurosensory abnormalities in the list of DED etiological factors [<xref rid="hsr272338-bib-0001" ref-type="bibr">1</xref>]. The consistent and homogenous improvement in OSDI underscores the importance of patient‐reported outcomes in evaluating DED therapies, particularly for interventions like BTX‐A, where the mechanism of symptomatic relief might be multifactorial.</p><p>Despite the exclusive patient population of this review, the meta‐analyses for TBUT and Schirmer's test were marked by extremely high statistical heterogeneity (I<sup>2</sup> &gt; 90%). The meta‐regression conducted as part of this review, examining mean participant age, measurement time, and BTX‐A dosage, did not identify these factors as significant sources of heterogeneity.</p><p>The inability of the meta‐regression to fully explain this substantial variability suggests that other unexplored factors might be involved. These could include subtle differences in baseline DED severity or subtype (e.g., predominantly aqueous‐deficient versus evaporative [<xref rid="hsr272338-bib-0003" ref-type="bibr">3</xref>] even within the persistent DED cohort. Variations in BTX‐A intervention details, such as the precise injection technique (depth, number of points, exact anatomical targeting relative to the puncta and thus the level of orbicularis oculi muscle paralysis and variations in blink rate response), specific BTX‐A formulation used, and minor differences in outcome measurement protocols across the included studies, could also contribute significantly [<xref rid="hsr272338-bib-0008" ref-type="bibr">8</xref>]. Moreover, concomitant treatments, such as the permitted use of artificial tears (as Serna‐Ojeda et al. [<xref rid="hsr272338-bib-0029" ref-type="bibr">29</xref>] allowed them as needed), could modify the observed effects of BTX‐A.</p><p>The safety profile of BTX‐A is a of grave importance as well. Considering the five primary studies included in this systematic review, BTX‐A injections for persistent DED were generally well‐tolerated. Adverse events reported were typically mild, transient, and localized, consistent with the known muscle‐paralyzing effects of the toxin. Serna‐Ojeda et al. [<xref rid="hsr272338-bib-0029" ref-type="bibr">29</xref>] reported minimal lower lid retraction as the only adverse event, with no problematic lacrimation. Choi MG et al. [<xref rid="hsr272338-bib-0028" ref-type="bibr">28</xref>] observed no complications, and Choi EW et al. [<xref rid="hsr272338-bib-0027" ref-type="bibr">27</xref>] stated that no subjects complained of specific side effects. Mekhasingharak et al. [<xref rid="hsr272338-bib-0022" ref-type="bibr">22</xref>] noted minimal lower lid retraction in a minority of eyes with both 2.5 U and 3.3 U doses and one instance of increased lower eyelid laxity with the higher dose, but no serious adverse events like ectropion or strabismus. Bukhari [<xref rid="hsr272338-bib-0021" ref-type="bibr">21</xref>] reported that some patients experienced shampoo getting into their eyes (suggesting mild lagophthalmos) and a lack of improvement in foreign body sensation for a subgroup of patients. The functional disability noted by Bukhari (shampoo in eyes) depicts that even subtle muscle weakening can impact daily activities and should be part of patient counseling. Although, therapeutic peri‐punctal BTX‐A improved symptoms safely in persistent DED, aesthetic may yield short‐term tear film benefits (initial Schirmer increase 0–1 month post‐injection) but long‐term dry eye (more OSDI severity) via reduced blink completeness and TBUT decline at 1–6 months. Clinicians should screen DED patients pre‐aesthetically and counsel on risks, as symptoms often resolve post‐effect (3–6 months) [<xref rid="hsr272338-bib-0042" ref-type="bibr">42</xref>].</p><p>A key distinguishing feature of the present study is its focused inclusion criteria, specifically excluding patients with BEB or HFS, as to provide a clearer assessment of BTX‐A's efficacy in persistent DED. However, the conclusions of this review are inherently limited by the quantity and quality of the available primary studies. The strict inclusion criteria resulted in the inclusion of only five studies (four clinical trials and one cohort study, totaling 172 eyes for general characteristics). This small number of studies directly contributed to a critical finding of this review: the low statistical power for the TBUT (31%) and Schirmer's test (29%) meta‐analyses. This low power emphasizes a high probability of Type II error, delineating that the absence of a statistically significant effect for these objective outcomes should not be interpreted as definitive evidence of no effect.</p><p>Furthermore, the risk of bias assessment (Figure <xref rid="hsr272338-fig-0002" ref-type="fig">2a</xref>) revealed significant methodological drawbacks. This is also reflected in the GRADE assessment, which rated the certainty of evidence for TBUT and Schirmer's test outcomes as low, while the OSDI outcome was rated as moderate. Broader limitations in the current evidence base for BTX‐A in DED include considerable variability in BTX‐A protocols (dose, injection technique, formulation), small sample sizes in primary studies, and relatively short follow‐up durations, all of which preclude interpreting results in a conclusive manner.</p><p>Future research should prioritize large‐scale, multicenter, randomized controlled trials with more robust methodology, to minimize the risks of bias identified in Figure <xref rid="hsr272338-fig-0002" ref-type="fig">2a</xref>. These trials should preferably focus on DED populations similar to that studied here (i.e., without BEB/HFS) to further clarify BTX‐A's role. Standardization of BTX‐A treatment protocols (dose, injection technique, formulation) is paramount. Longer‐term follow‐up is warranted to assess the durability of effects and optimal re‐injection intervals (Figure <xref rid="hsr272338-fig-0006" ref-type="fig">6</xref>).</p><fig position="float" fig-type="Figure" id="hsr272338-fig-0006" orientation="portrait"><label>Figure 6</label><caption><p>The figure highlights three pathways through which periocular botulinum toxin A can improve dry eye disease, including reduced tear evaporation, attenuation of ocular surface inflammation and irritation, and increased tear volume.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-11" orientation="portrait" xlink:href="HSR2-9-e72338-g006.jpg"/></fig></sec><sec sec-type="conclusions" id="hsr272338-sec-0340"><label>5</label><title>Conclusion</title><p>In conclusion, this systematic review and meta‐analysis provides moderate‐certainty evidence that BTX‐A injections significantly improve patient‐reported symptoms (OSDI) in individuals with persistent DED without concomitant BEB or HFS. However, the effect on objective signs like TBUT and Schirmer's test is inconclusive due to high heterogeneity and low statistical power in this restricted population. While BTX‐A appears generally safe for this indication, the reliability of current evidence is hampered by the small number of studies and methodological shortcomings in some of the primary studies.</p></sec><sec id="hsr272338-sec-0350"><title>Author Contributions</title><p>Conceptualization: Ali Jafarizadeh Methodology: Mirsaeed Abdollahi, Farbod Semnani Software: Navid Sobhi Data curation: Farbod Semnani, Hadi Vahedi Investigation: Mirsaeed Abdollahi, Farbod Semnani, Ali Jafarizadeh Validation: Mirsaeed Abdollahi Formal analysis: Mirsaeed Abdollahi Supervision: Amin Nabavi, Ali Jafarizadeh Visualization: Navid Sobhi Project administration: Ali Jafarizadeh Resources: Ali Jafarizadeh Writing ‐ original draft: Mirsaeed Abdollahi, Farbod Semnani, Hadi Vahedi, Navid Sobhi, Mahdi Mohammadkhani, Ali Jafarizadeh Writing ‐ review &amp; editing: Mirsaeed Abdollahi, Navid Sobhi, Mahdi Mohammadkhani, Amin Nabavi, Ali Jafarizadeh. With their knowledge and criticism, all of the authors contributed to the development of this study. It should be noted that Mirsaeed Abdollahi and Farbod Semnani are co‐first authors of this manuscript. All authors read and approved the final manuscript.</p></sec><sec id="hsr272338-sec-0370"><title>Funding</title><p>The authors have nothing to report.</p></sec><sec id="hsr272338-sec-0380"><title>Ethics Statement</title><p>This study was conducted in accordance with the principles outlined in the Declaration of Helsinki.</p></sec><sec id="hsr272338-sec-0390"><title>Consent</title><p>The authors have nothing to report.</p></sec><sec sec-type="COI-statement" id="hsr272338-sec-0400"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec id="hsr272338-sec-0430"><title>Transparency Statement</title><p>The lead author Ali Jafarizadeh affirms that this manuscript is an honest, accurate, and transparent account of the study being reported; that no important aspects of the study have been omitted; and that any discrepancies from the study as planned (and, if relevant, registered) have been explained.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="hsr272338-suppl-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>Supporting File 1</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="HSR2-9-e72338-s001.docx" position="float" orientation="portrait"/></supplementary-material><supplementary-material id="hsr272338-suppl-0002" position="float" content-type="local-data" orientation="portrait"><caption><p>Supporting File 2</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="HSR2-9-e72338-s002.docx" position="float" orientation="portrait"/></supplementary-material></sec></body><back><ack id="hsr272338-sec-0360"><title>Acknowledgments</title><p>The authors used ref‐n‐write and Grammarly to facilitate paraphrasing and grammar checking during the preparation of this work.</p></ack><sec sec-type="data-availability" id="hsr272338-sec-0420"><title>Data Availability Statement</title><p>The authors confirm that the data supporting the findings of this study are available within the article and its supplementary materials.</p></sec><ref-list content-type="cited-references" id="hsr272338-bibl-0001"><title>References</title><ref id="hsr272338-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="hsr272338-cit-0001">
+<string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Nelson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Craig</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. K.</given-names>
+<surname>Akpek</surname>
+</string-name>, et al., “<article-title>TFOS DEW II Introduction</article-title>,” <source>The Ocular Surface</source>
+<volume>15</volume>, no. <issue>3</issue> (<year>2017</year>): <fpage>269</fpage>–<lpage>275</lpage>.<pub-id pub-id-type="pmid">28736334</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jtos.2017.05.005</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="hsr272338-cit-0002">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Murube</surname>
+</string-name> and <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Murube</surname>
+</string-name>, “<article-title>Treatment of Dry Eye by Blocking the Lacrimal Canaliculi</article-title>,” <source>Survey of Ophthalmology</source>
+<volume>40</volume>, no. <issue>6</issue> (<year>1996</year>): <fpage>463</fpage>–<lpage>480</lpage>.<pub-id pub-id-type="pmid">8724639</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s0039-6257(96)82013-3</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="hsr272338-cit-0003">
+<string-name name-style="western">
+<given-names>E. M.</given-names>
+<surname>Messmer</surname>
+</string-name>, “<article-title>The Pathophysiology, Diagnosis, and Treatment of Dry Eye Disease</article-title>,” <source>Deutsches Arzteblatt International</source>
+<volume>112</volume>, no. <issue>5</issue> (<year>2015</year>): <fpage>71</fpage>–<lpage>81</lpage>; quiz 82.<pub-id pub-id-type="pmid">25686388</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3238/arztebl.2015.0071</pub-id><pub-id pub-id-type="pmcid">PMC4335585</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="hsr272338-cit-0004">
+<string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Craig</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. K.</given-names>
+<surname>Nichols</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. K.</given-names>
+<surname>Akpek</surname>
+</string-name>, et al., “<article-title>TFOS DEWS II Definition and Classification Report</article-title>,” <source>Ocular Surface</source>
+<volume>15</volume>, no. <issue>3</issue> (<year>2017</year>): <fpage>276</fpage>–<lpage>283</lpage>.<pub-id pub-id-type="pmid">28736335</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jtos.2017.05.008</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="hsr272338-cit-0005">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Sahlin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kaugesaar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Almqvist</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Kjellberg</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Lennerstrand</surname>
+</string-name>, “<article-title>Effect of Eyelid Botulinum Toxin Injection on Lacrimal Drainage</article-title>,” <source>American Journal of Ophthalmology</source>
+<volume>129</volume>, no. <issue>4</issue> (<year>2000</year>): <fpage>481</fpage>–<lpage>486</lpage>.<pub-id pub-id-type="pmid">10764857</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s0002-9394(99)00408-0</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="hsr272338-cit-0006">
+<string-name name-style="western">
+<given-names>J. C.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. S.</given-names>
+<surname>Chun</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. S.</given-names>
+<surname>Chun</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. C.</given-names>
+<surname>Kim</surname>
+</string-name>, “<article-title>Treatment of Superior Limbic Keratoconjunctivitis With a Large‐Diameter Contact Lens and Botulium Toxin A</article-title>,” <source>Cornea</source>
+<volume>28</volume>, no. <issue>7</issue> (<year>2009</year>): <fpage>752</fpage>–<lpage>758</lpage>.<pub-id pub-id-type="pmid">19574913</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/ICO.0b013e3181967006</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="hsr272338-cit-0007">
+<string-name name-style="western">
+<given-names>A. Y.‐C.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Sloan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. L.</given-names>
+<surname>Misra</surname>
+</string-name>, “<article-title>The Effect of Botulinum Toxin A on Dry Eye Disease and Syndromes</article-title>,” <source>Clinical and Experimental Optometry</source>
+<volume>109</volume>, no. <issue>3</issue> (<year>2025</year>): <fpage>351</fpage>–<lpage>358</lpage>.<pub-id pub-id-type="pmid">40269470</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/08164622.2025.2488125</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="hsr272338-cit-0008">
+<string-name name-style="western">
+<given-names>K. Y.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. C.</given-names>
+<surname>Chan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C. M.</given-names>
+<surname>Chan</surname>
+</string-name>, “<article-title>Is Botulinum Toxin A Effective in Treating Dry Eye Disease? A Systematic Review and Meta‐Analysis</article-title>,” <source>Eye</source>
+<volume>39</volume>, no. <issue>8</issue> (<year>2025</year>): <fpage>1457</fpage>–<lpage>1464</lpage>.<pub-id pub-id-type="pmid">40204900</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41433-025-03790-6</pub-id><pub-id pub-id-type="pmcid">PMC12089326</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="hsr272338-cit-0009">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Evinger</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. B.</given-names>
+<surname>Bao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. S.</given-names>
+<surname>Powers</surname>
+</string-name>, et al., “<article-title>Dry Eye, Blinking, and Blepharospasm</article-title>,” <source>Movement Disorders</source>
+<volume>17</volume>, no. <issue>Suppl 2</issue> (<year>2002</year>): <fpage>S75</fpage>–<lpage>S78</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/mds.10065</pub-id><pub-id pub-id-type="pmcid">PMC3327285</pub-id><pub-id pub-id-type="pmid">11836761</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="hsr272338-cit-0010">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Shetty</surname>
+</string-name> and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Sethu</surname>
+</string-name>, “<article-title>Newer Paradigms in Dry Eye Disease Research</article-title>,” <source>Indian Journal of Ophthalmology</source>
+<volume>71</volume>, no. <issue>4</issue> (<year>2023</year>): <fpage>1064</fpage>.<pub-id pub-id-type="pmid">37026231</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.4103/IJO.IJO_599_23</pub-id><pub-id pub-id-type="pmcid">PMC10276670</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="hsr272338-cit-0011">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Gosal</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Das</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Khatri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Attri</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Jaiswal</surname>
+</string-name>, “<article-title>Contralateral Dry Eye in Hemifacial Spasm:” A New Clinical Sign</article-title>,” <source>Asian Journal of Neurosurgery</source>
+<volume>14</volume>, no. <issue>03</issue> (<year>2019</year>): <fpage>996</fpage>–<lpage>998</lpage>.<pub-id pub-id-type="pmid">31497150</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.4103/ajns.AJNS_48_19</pub-id><pub-id pub-id-type="pmcid">PMC6703023</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="hsr272338-cit-0012">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Vahedi</surname>
+</string-name> and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Jafarizadeh</surname>
+</string-name>, “<article-title>Botulinum Toxin a for Dry Eye Disease: Impact of Population Mixing and Statistical Issues</article-title>,” <source>Eye</source>
+<volume>40</volume>, no. <issue>3</issue> (<year>2026</year>): <fpage>435</fpage>–<lpage>436</lpage>.<pub-id pub-id-type="pmid">41484256</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41433-025-04229-8</pub-id><pub-id pub-id-type="pmcid">PMC12881343</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="hsr272338-cit-0013">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Vahedi</surname>
+</string-name> and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Jafarizadeh</surname>
+</string-name>, “<article-title>Re: ‘The Effect of Botulinum Toxin A on Dry Eye Disease and Syndromes’</article-title>,” <source>Clinical and Experimental Optometry</source>
+<volume>7</volume> (<year>2026</year>): <fpage>1</fpage>–<lpage>3</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/08164622.2026.2648949</pub-id><pub-id pub-id-type="pmid">41946353</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0014"><label>14</label><mixed-citation publication-type="miscellaneous" id="hsr272338-cit-0014">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Borenstein</surname>
+</string-name>, <article-title>
+Common Mistakes in Meta‐Analysis and How to Avoid Them
+</article-title>. Biostat, Incorporated, 2019, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://books.google.com/books?id=N4vXyAEACAAJ" ext-link-type="uri">https://books.google.com/books?id=N4vXyAEACAAJ</ext-link>.</mixed-citation></ref><ref id="hsr272338-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="hsr272338-cit-0015">
+<string-name name-style="western">
+<given-names>J. P. T.</given-names>
+<surname>Higgins</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. G.</given-names>
+<surname>Altman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. C.</given-names>
+<surname>Gotzsche</surname>
+</string-name>, et al., “<article-title>The Cochrane Collaboration's Tool for Assessing Risk of Bias in Randomised Trials</article-title>,” <source>BMJ</source>
+<volume>343</volume> (<year>2011</year>): <fpage>d5928</fpage>.<pub-id pub-id-type="pmid">22008217</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/bmj.d5928</pub-id><pub-id pub-id-type="pmcid">PMC3196245</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0016"><label>16</label><mixed-citation publication-type="miscellaneous" id="hsr272338-cit-0016">
+<string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Higgins</surname>
+</string-name>, <article-title>Cochrane Handbook for Systematic Reviews of Interventions, Version 5.0. 1. The Cochrane Collaboration</article-title>, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.cochrane-handbook.org" ext-link-type="uri">http://www.cochrane-handbook.org</ext-link>. <year>2008</year>.</mixed-citation></ref><ref id="hsr272338-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="hsr272338-cit-0017">
+<string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Page</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>McKenzie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. M.</given-names>
+<surname>Bossuyt</surname>
+</string-name>, et al., “<article-title>The PRISMA 2020 Statement: An Updated Guideline for Reporting Systematic Reviews</article-title>,” <source>International Journal of Surgery</source>
+<volume>88</volume> (<year>2021</year>): <elocation-id>105906</elocation-id>.<pub-id pub-id-type="pmid">33789826</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ijsu.2021.105906</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0018"><label>18</label><mixed-citation publication-type="miscellaneous" id="hsr272338-cit-0018">
+<string-name name-style="western">
+<given-names>G. A.</given-names>
+<surname>Wells</surname>
+</string-name>,<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Shea</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>O'Connell</surname>
+</string-name>, et al., The Newcastle‐Ottawa Scale (NOS) for Assessing the Quality of Nonrandomised Studies in Meta‐Analyses. (<year>2000</year>).</mixed-citation></ref><ref id="hsr272338-bib-0019"><label>19</label><mixed-citation publication-type="miscellaneous" id="hsr272338-cit-0019">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Dwamena</surname>
+</string-name>, <article-title>QUADAS: Stata Module to Provide Graphical Depiction of Quality Assessment in Diagnostic Accuracy Reviews</article-title>. <year>2010</year>.</mixed-citation></ref><ref id="hsr272338-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="hsr272338-cit-0020">
+<string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Wan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Liu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Tong</surname>
+</string-name>, “<article-title>Estimating the Sample Mean and Standard Deviation From the Sample Size, Median, Range And/Or Interquartile Range</article-title>,” <source>BMC Medical Research Methodology</source>
+<volume>14</volume> (<year>2014</year>): <fpage>135</fpage>.<pub-id pub-id-type="pmid">25524443</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/1471-2288-14-135</pub-id><pub-id pub-id-type="pmcid">PMC4383202</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="hsr272338-cit-0021">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Bukhari</surname>
+</string-name>, “<article-title>Botulinum Neurotoxin Type A Versus Punctal Plug Insertion in the Management of Dry Eye Disease</article-title>,” <source>Oman Journal of Ophthalmology</source>
+<volume>7</volume>, no. <issue>2</issue> (<year>2014</year>): <fpage>61</fpage>–<lpage>65</lpage>.<pub-id pub-id-type="pmid">25136228</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.4103/0974-620X.137142</pub-id><pub-id pub-id-type="pmcid">PMC4134547</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="hsr272338-cit-0022">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Mekhasingharak</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Sawatdiwithayayong</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Kosaiyaganonth</surname>
+</string-name>, “<article-title>Comparison of Two Doses of Botulinum Toxin A for Dry Eye Treatment by Injection Into the Medial Lower Eyelid: A Randomized, Comparative Pilot Study</article-title>,” <source>Journal of the Medical Association of Thailand</source>
+<volume>107</volume>, no. <issue>8</issue> (<year>2024</year>): <fpage>601</fpage>–<lpage>606</lpage>.</mixed-citation></ref><ref id="hsr272338-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="hsr272338-cit-0023">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Andrade</surname>
+</string-name>, “<article-title>Mean Difference, Standardized Mean Difference (SMD), and Their Use in Meta‐Analysis: As Simple as It Gets</article-title>,” <source>Journal of Clinical Psychiatry</source>
+<volume>81</volume>, no. <issue>5</issue> (<year>2020</year>): <elocation-id>11349</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.4088/JCP.20f13681</pub-id><pub-id pub-id-type="pmid">32965803</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0024"><label>24</label><mixed-citation publication-type="book" id="hsr272338-cit-0024">
+<string-name name-style="western">
+<given-names>J. P. T.</given-names>
+<surname>Higgins</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Thomas</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Chandler</surname>
+</string-name>, et al., “<source>Cochrane Handbook for Systematic Reviews of Interventions</source>,” <edition>2nd Edition</edition>., (<publisher-name>John Wiley &amp; Sons</publisher-name>, <year>2019</year>), <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/part-1" ext-link-type="uri">https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/part-1</ext-link>.</mixed-citation></ref><ref id="hsr272338-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="hsr272338-cit-0025">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Griffin</surname>
+</string-name>, “<article-title>Metapower: An R Package for Computing Meta‐Analytic Statistical Power</article-title>,” <source>R package version 0.2</source>
+<volume>1</volume> (<year>2020</year>), <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://CRAN.R-project.org/package=metapower" ext-link-type="uri">https://CRAN.R-project.org/package=metapower</ext-link>.</mixed-citation></ref><ref id="hsr272338-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="hsr272338-cit-0026">
+<string-name name-style="western">
+<given-names>G. H.</given-names>
+<surname>Guyatt</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. D.</given-names>
+<surname>Oxman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. E.</given-names>
+<surname>Vist</surname>
+</string-name>, et al., “<article-title>GRADE: An Emerging Consensus on Rating Quality of Evidence and Strength of Recommendations</article-title>,” <source>BMJ</source>
+<volume>336</volume>, no. <issue>7650</issue> (<year>2008</year>): <fpage>924</fpage>–<lpage>926</lpage>.<pub-id pub-id-type="pmid">18436948</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/bmj.39489.470347.AD</pub-id><pub-id pub-id-type="pmcid">PMC2335261</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="hsr272338-cit-0027">
+<string-name name-style="western">
+<given-names>E. W.</given-names>
+<surname>Choi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. J.</given-names>
+<surname>Yeom</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. Y.</given-names>
+<surname>Jang</surname>
+</string-name>, “<article-title>Botulinum Toxin a Injection for the Treatment of Intractable Dry Eye Disease</article-title>,” <source>Medicina</source>
+<volume>57</volume>, no. <issue>3</issue> (<year>2021</year>): <fpage>247</fpage>.<pub-id pub-id-type="pmid">33800125</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/medicina57030247</pub-id><pub-id pub-id-type="pmcid">PMC7998232</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="hsr272338-cit-0028">
+<string-name name-style="western">
+<given-names>M. G.</given-names>
+<surname>Choi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. H.</given-names>
+<surname>Yeo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. W.</given-names>
+<surname>Kang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. S.</given-names>
+<surname>Chun</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. K.</given-names>
+<surname>Lee</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. C.</given-names>
+<surname>Kim</surname>
+</string-name>, “<article-title>Effects of Botulinum Toxin Type A on the Treatment of Dry Eye Disease and Tear Cytokines</article-title>,” <source>Graefe's Archive for Clinical and Experimental Ophthalmology</source>
+<volume>257</volume> (<year>2019</year>): <fpage>331</fpage>–<lpage>338</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00417-018-4194-3</pub-id><pub-id pub-id-type="pmid">30552510</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="hsr272338-cit-0029">
+<string-name name-style="western">
+<given-names>J. C.</given-names>
+<surname>Serna‐Ojeda</surname>
+</string-name> and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Nava‐Castaneda</surname>
+</string-name>, “<article-title>Paralysis of the Orbicularis Muscle of the Eye Using Botulinum Toxin Type A in the Treatment for Dry Eye</article-title>,” <source>Acta Ophthalmologica</source>
+<volume>95</volume>, no. <issue>2</issue> (<year>2017</year>): <fpage>e132</fpage>–<lpage>e137</lpage>.<pub-id pub-id-type="pmid">27350144</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/aos.13140</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="hsr272338-cit-0030">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Yabumoto</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. H.</given-names>
+<surname>Osaki</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Osaki</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. R.</given-names>
+<surname>Gameiro</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Campos</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T. H.</given-names>
+<surname>Osaki</surname>
+</string-name>, “<article-title>Ocular Surface Metrics in Blepharospasm Patients After Treatment With Botulinum Toxin Injections</article-title>,” <source>Ophthalmic Plastic &amp; Reconstructive Surgery</source>
+<volume>39</volume>, no. <issue>5</issue> (<year>2023</year>): <fpage>475</fpage>–<lpage>478</lpage>.<pub-id pub-id-type="pmid">36928309</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/IOP.0000000000002375</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="hsr272338-cit-0031">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Abe</surname>
+</string-name> and <string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Loenneke</surname>
+</string-name>, “<article-title>Orbicularis Oculi Muscle Size and Function: Exploring the Influence of Aging and Exercise Training</article-title>,” <source>Cosmetics</source>
+<volume>8</volume>, no. <issue>2</issue> (<year>2021</year>): <fpage>29</fpage>.</mixed-citation></ref><ref id="hsr272338-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="hsr272338-cit-0032">
+<string-name name-style="western">
+<given-names>J. S.</given-names>
+<surname>Paik</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Kwon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. H.</given-names>
+<surname>Nam</surname>
+</string-name>, et al., “<article-title>Tear Film Lipid Layer Thickness and Blink Dynamics in Patients With Blepharospasm</article-title>,” <source>BMC Ophthalmology</source>
+<volume>25</volume>, no. <issue>1</issue> (<year>2025</year>): <fpage>22</fpage>.<pub-id pub-id-type="pmid">39819317</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12886-025-03852-z</pub-id><pub-id pub-id-type="pmcid">PMC11736965</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="hsr272338-cit-0033">
+<string-name name-style="western">
+<given-names>R. W.</given-names>
+<surname>Ho</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. C.</given-names>
+<surname>Fang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. H.</given-names>
+<surname>Chang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. P.</given-names>
+<surname>Liu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. T.</given-names>
+<surname>Kuo</surname>
+</string-name>, “<article-title>A Review of Periocular Botulinum Neurotoxin on the Tear Film Homeostasis and the Ocular Surface Change</article-title>,” <source>Toxins</source>
+<volume>11</volume>, no. <issue>2</issue> (<year>2019</year>): <fpage>66</fpage>.<pub-id pub-id-type="pmid">30678375</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/toxins11020066</pub-id><pub-id pub-id-type="pmcid">PMC6409927</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="hsr272338-cit-0034">
+<string-name name-style="western">
+<given-names>K. K.</given-names>
+<surname>Nichols</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. L.</given-names>
+<surname>Mitchell</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Zadnik</surname>
+</string-name>, “<article-title>The Repeatability of Clinical Measurements of Dry Eye</article-title>,” <source>Cornea</source>
+<volume>23</volume>, no. <issue>3</issue> (<year>2004</year>): <fpage>272</fpage>–<lpage>285</lpage>.<pub-id pub-id-type="pmid">15084861</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/00003226-200404000-00010</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="hsr272338-cit-0035">
+<string-name name-style="western">
+<given-names>J. S.</given-names>
+<surname>Wolffsohn</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Arita</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Chalmers</surname>
+</string-name>, et al., “<article-title>TFOS DEWS II Diagnostic Methodology Report</article-title>,” <source>Ocular Surface</source>
+<volume>15</volume>, no. <issue>3</issue> (<year>2017</year>): <fpage>539</fpage>–<lpage>574</lpage>.<pub-id pub-id-type="pmid">28736342</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jtos.2017.05.001</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="hsr272338-cit-0036">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Wu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Wang</surname>
+</string-name>, et al., “<article-title>Advances in Dry Eye Disease Examination Techniques</article-title>,” <source>Front Med (Lausanne)</source>
+<volume>8</volume> (<year>2021</year>): <elocation-id>826530</elocation-id>.<pub-id pub-id-type="pmid">35145982</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fmed.2021.826530</pub-id><pub-id pub-id-type="pmcid">PMC8823697</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="hsr272338-cit-0037">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Gong</surname>
+</string-name>, et al., “<article-title>The Role of Different Tear Volume Detection Methods in the Evaluation and Diagnosis of Mild Dry Eye Disease</article-title>,” <source>Translational Vision Science &amp; Technology</source>
+<volume>11</volume>, no. <issue>3</issue> (<year>2022</year>): <fpage>15</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1167/tvst.11.3.15</pub-id><pub-id pub-id-type="pmcid">PMC8934549</pub-id><pub-id pub-id-type="pmid">35285862</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="hsr272338-cit-0038">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Gemi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Watson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Narayanan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>d.</given-names>
+<surname>W Ousler</surname>
+</string-name>, “<article-title>Comparing Schirmer's Test With Other Clinical Outcomes in Dry Eye</article-title>,” <source>Investigative Ophthalmology &amp; Visual Science</source>
+<volume>62</volume>, no. <issue>8</issue> (<year>2021</year>): <fpage>1271</fpage>.</mixed-citation></ref><ref id="hsr272338-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="hsr272338-cit-0039">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Horwath‐Winter</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Bergloeff</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Floegel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.‐M.</given-names>
+<surname>Haller‐Schober</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>Schmut</surname>
+</string-name>, “<article-title>Botulinum Toxin A Treatment in Patients Suffering From Blepharospasm and Dry Eye</article-title>,” <source>British Journal of Ophthalmology</source>
+<volume>87</volume>, no. <issue>1</issue> (<year>2003</year>): <fpage>54</fpage>–<lpage>56</lpage>.<pub-id pub-id-type="pmid">12488263</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/bjo.87.1.54</pub-id><pub-id pub-id-type="pmcid">PMC1771456</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="hsr272338-cit-0040">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Venkateswaran</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Hwang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. J.</given-names>
+<surname>Rong</surname>
+</string-name>, et al., “<article-title>Periorbital Botulinum Toxin A Improves Photophobia and Sensations of Dryness in Patients Without Migraine: Case Series of Four Patients</article-title>,” <source>American Journal of Ophthalmology Case Reports</source>
+<volume>19</volume> (<year>2020</year>): <elocation-id>100809</elocation-id>.<pub-id pub-id-type="pmid">32671286</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ajoc.2020.100809</pub-id><pub-id pub-id-type="pmcid">PMC7350146</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="hsr272338-cit-0041">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Hong</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Kim</surname>
+</string-name>, “<article-title>Botulinum Toxin in the Field of Dermatology: Novel Indications</article-title>,” <source>Toxins</source>
+<volume>9</volume>, no. <issue>12</issue> (<year>2017</year>): <fpage>403</fpage>.<pub-id pub-id-type="pmid">29258169</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/toxins9120403</pub-id><pub-id pub-id-type="pmcid">PMC5744123</pub-id></mixed-citation></ref><ref id="hsr272338-bib-0042"><label>42</label><mixed-citation publication-type="journal" id="hsr272338-cit-0042">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Bulut</surname>
+</string-name> and <string-name name-style="western">
+<given-names>A. H.</given-names>
+<surname>Reyhan</surname>
+</string-name>, “<article-title>Short‐Term Effects on Tear Film Following Cosmetic Botulinum Toxin Injections in Healthy Individuals</article-title>,” <source>Cureus</source>
+<volume>17</volume>, no. <issue>1</issue> (<year>2025</year>): <elocation-id>e77688</elocation-id>.<pub-id pub-id-type="pmid">39974230</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.7759/cureus.77688</pub-id><pub-id pub-id-type="pmcid">PMC11836060</pub-id></mixed-citation></ref></ref-list></back></article>

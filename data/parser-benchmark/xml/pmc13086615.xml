@@ -1,0 +1,717 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="hsr272289" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Health Sci Rep</journal-id><journal-id journal-id-type="iso-abbrev">Health Sci Rep</journal-id><journal-id journal-id-type="pmc-domain-id">3569</journal-id><journal-id journal-id-type="pmc-domain">hscirep</journal-id><journal-id journal-id-type="publisher-id">HSR2</journal-id><journal-title-group><journal-title>Health Science Reports</journal-title></journal-title-group><issn pub-type="epub">2398-8835</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13086615</article-id><article-id pub-id-type="pmcid-ver">PMC13086615.1</article-id><article-id pub-id-type="pmcaid">13086615</article-id><article-id pub-id-type="pmcaiid">13086615</article-id><article-id pub-id-type="pmid">42005669</article-id><article-id pub-id-type="doi">10.1002/hsr2.72289</article-id><article-id pub-id-type="publisher-id">HSR272289</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="article-subject-classification"><subject>Critical Care Medicine</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Environmental Health</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Ethics</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Genetics and Genomics</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>General Medicine</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Epidemiology</subject></subj-group><subj-group subj-group-type="overline"><subject>Systematic Review</subject></subj-group><subj-group subj-group-type="heading"><subject>Systematic Review</subject></subj-group></article-categories><title-group><article-title>Therapeutic Update in Neonatal Opioid Withdrawal Syndrome: Comparative Effectiveness of Pharmacological Treatments and the ESC Assessment Model. A Systematic Review</article-title></title-group><contrib-group><contrib id="hsr272289-cr-0001" contrib-type="author" corresp="yes"><name name-style="western"><surname>Pérez‐Jiménez</surname><given-names initials="JM">José Miguel</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-5648-9365</contrib-id><xref rid="hsr272289-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="hsr272289-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><xref rid="hsr272289-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref><xref rid="hsr272289-aff-0004" ref-type="aff">
+<sup>4</sup>
+</xref><address><email>jpjimenez@us.es</email></address></contrib><contrib id="hsr272289-cr-0002" contrib-type="author"><name name-style="western"><surname>Langa</surname><given-names initials="MP">Marta Periañez</given-names></name><xref rid="hsr272289-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="hsr272289-cr-0003" contrib-type="author"><name name-style="western"><surname>Jimenez</surname><given-names initials="MC">Manuel Coheña</given-names></name><xref rid="hsr272289-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="hsr272289-aff-0005" ref-type="aff">
+<sup>5</sup>
+</xref></contrib></contrib-group><aff id="hsr272289-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<institution>Institute of Biomedicine of Seville (IBiS)</institution>
+<city>Seville</city>
+<country country="ES">Spain</country>
+</aff><aff id="hsr272289-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Department of Nursing, Schools of Nursing, Physiotherapy and Podiatry</named-content>
+<institution>University of Seville</institution>
+<city>Seville</city>
+<country country="ES">Spain</country>
+</aff><aff id="hsr272289-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Research Group CTS1149: Integral and Sustainable Health: Bio‐Psycho‐Social</named-content>
+<institution>Cultural, and Spiritual Approach for Human Development</institution>
+<city>Seville</city>
+<country country="ES">Spain</country>
+</aff><aff id="hsr272289-aff-0004">
+<label>
+<sup>4</sup>
+</label>
+<institution>Human Resources Supervisor and Research Unit Lead Unit University Hospital Virgen Macarena</institution>
+<city>Sevilla</city>
+<country country="ES">Spain</country>
+</aff><aff id="hsr272289-aff-0005">
+<label>
+<sup>5</sup>
+</label>
+<named-content content-type="organisation-division">Department of Podiatry, Schools of Nursing, Physiotherapy and Podiatry</named-content>
+<institution>University of Seville, Research Group CTS589: Advances in podiatric surgery</institution>
+<city>Seville</city>
+<country country="ES">Spain</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold> José Miguel Pérez‐Jiménez (<email>jpjimenez@us.es</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>16</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>9</volume><issue seq="20">4</issue><issue-id pub-id-type="pmc-issue-id">510729</issue-id><issue-id pub-id-type="doi">10.1002/hsr2.v9.4</issue-id><elocation-id>e72289</elocation-id><history><date date-type="rev-recd"><day>25</day><month>3</month><year>2026</year></date><date date-type="received"><day>26</day><month>8</month><year>2025</year></date><date date-type="accepted"><day>27</day><month>3</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>16</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>18</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-20 15:25:19.677"><day>20</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Health Science Reports</italic> published by Wiley Periodicals LLC.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="HSR2-9-e72289.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:HSR2-9-e72289.pdf"/><abstract><title>ABSTRACT</title><p>The number of newborns with neonatal opioid withdrawal syndrome is alarming, due to the increase in maternal opioid use. Despite the critical health and socio‐economic impact, a precise clinical and therapeutic approach for opioid using infants and mothers remains undefined.</p><sec id="hsr272289-sec-0020"><title>Aim</title><p>The main objective is to update the therapeutic approach and the role of nursing in neonates with neonatal opioid withdrawal syndrome due to mothers who use opioids.</p></sec><sec id="hsr272289-sec-0030"><title>Design</title><p>We conducted a systematic review, as a meta‐analysis was not feasible due to heterogeneity across study designs and outcomes, in accordance with PRISMA guidelines and the Cochrane Handbook.</p></sec><sec id="hsr272289-sec-0040"><title>Methods</title><p>Studies related to the update of the therapeutic approach and the role of nursing in a newborn with neonatal opioid withdrawal syndrome were considered. Single patient case studies, studies of psychoactive substances other than opium derivatives, iatrogenic treatment approach, guidelines, consensus and meeting abstracts were excluded. The databases Scopus, Dialnet, Cinahl and PubMed were searched.</p></sec><sec id="hsr272289-sec-0050"><title>Results</title><p>The results of the 28 publications included indicated the need for a major update of both treatment, diagnostic scales and treatment in neonatal opioid withdrawal syndrome.</p></sec><sec id="hsr272289-sec-0060"><title>Conclusions</title><p>Clonidine and buprenorphine demonstrated superior safety profiles and shorter treatment duration compared to morphine in controlling NOWS symptoms. The ESC functional assessment model, integrated with non‐pharmacological interventions, proved superior to traditional Finnegan scoring, significantly reducing pharmacotherapy requirements, total morphine exposure, hospital length of stay, and healthcare costs whilst enhancing breastfeeding rates and parental involvement. Nursing‐led holistic care, encompassing skin‐to‐skin contact, breastfeeding support, rooming‐in, and environmental control, is essential and irreplaceable in comprehensive NOWS management.</p></sec></abstract><kwd-group><kwd id="hsr272289-kwd-0001">breast feeding</kwd><kwd id="hsr272289-kwd-0002">buprenorphine</kwd><kwd id="hsr272289-kwd-0003">clonidine</kwd><kwd id="hsr272289-kwd-0004">morphine</kwd><kwd id="hsr272289-kwd-0005">neonatal abstinence syndrome</kwd><kwd id="hsr272289-kwd-0006">patient care planning</kwd></kwd-group><counts><fig-count count="1"/><table-count count="2"/><page-count count="10"/><word-count count="7158"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:17.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec id="hsr272289-sec-0070"><label>1</label><title>Introduction</title><p>Neonatal Opioid Withdrawal Syndrome is understood as the set of signs and symptoms experienced by a newborn when exposure to substances, drugs or narcotics that the mother has consumed during gestation is withdrawn at the time of birth [<xref rid="hsr272289-bib-0001" ref-type="bibr">1</xref>]. Based on the above, this paper will focus exclusively on the neonatal abstinence syndrome produced by maternal consumption of opium derivatives.</p><p>Neonatal opioid withdrawal syndrome has become a global public health concern, with increasing incidence reported not only in North America but also in Europe, Oceania and several low‐ and middle‐income countries. Recent international studies indicate that the prevalence of NOWS varies widely across regions, reflecting differences in opioid prescribing practices, substance use patterns and access to maternal health care. In Europe, population‐based studies have reported rising rates of NOWS, particularly in countries with increased opioid prescription and opioid use disorder among women of reproductive age. Similarly, data from Australia and New Zealand show a steady increase in hospital admissions related to NOWS over the last decade.</p><p>In this context, and despite the growing impact of NOWS, the health emergency and the socio‐economic crisis that opioid use is causing, the clinical and therapeutic approach in newborns opioid exposed and opioid who using mothers has not been precisely determined [<xref rid="hsr272289-bib-0002" ref-type="bibr">2</xref>]. Opioid use constitutes not only a public health problem but also a large‐scale socioeconomic crisis. The sustained increase in opioid consumption has been associated with higher mortality rates, overburdened healthcare systems, and substantial economic costs due to lost labor productivity and increased social service needs. In the United States alone, the illicit opioid epidemic was estimated to cost the economy approximately $2.7 trillion in 2023, encompassing losses from deaths, reduced quality of life, healthcare expenses, and crime‐related costs, highlighting how opioid misuse contributes to broader social and economic harm beyond clinical outcomes [<xref rid="hsr272289-bib-0003" ref-type="bibr">3</xref>].</p><p>Although epidemiological data from low‐ and middle‐income countries are more limited, available evidence suggests that N0WS is likely underdiagnosed and underreported in these settings, due to the lack of standardized diagnostic criteria and surveillance systems. Nevertheless, the growing global burden of opioid use disorder among pregnant women indicates that NOWS represents a significant and emerging worldwide health challenge [<xref rid="hsr272289-bib-0004" ref-type="bibr">4</xref>].</p><p>When opioids are introduced exogenously and in an uncontrolled manner, the persons stops producing its own, so that the presence of opioids becomes directly dependent on consumption. When opioid levels decrease, the central nervous system senses this. Specifically, it is the locus ceruleus, located in the brain stem, which is responsible for triggering the sympathetic response to situations of panic, stress, anxiety, pain, etc., causing the secretion of norepinephrine at the renal level and the appearance of withdrawal symptoms [<xref rid="hsr272289-bib-0005" ref-type="bibr">5</xref>]. This anatomical region controls states of alertness, and is particularly sensitive to opioids. Therefore, its activation affects the normal functioning of the organism. As a consequence, the symptomatology of NOWS is so broad and encompasses these systems: tremors, irritability with excessive or high‐ pitched crying, problems falling asleep, nasal congestion and/or sneezing, low sucking ability, dehydration, loose stools, hyperhidrosis, and seizures [<xref rid="hsr272289-bib-0006" ref-type="bibr">6</xref>]. The most common symptom is irritability and crying, which is present in 71.4% of cases [<xref rid="hsr272289-bib-0007" ref-type="bibr">7</xref>].</p><p>On the other hand, exposure to exogenous opioid substances produces abnormalities in the physiology of the placenta: it decreases the secretion of the enzyme aromatase and increases the expression of enriched placental genes [<xref rid="hsr272289-bib-0008" ref-type="bibr">8</xref>], which reduces the amount of nutrients it provides to the foetus (maternal genes and foetal genes that regulate the feeding process must be in balance) [<xref rid="hsr272289-bib-0009" ref-type="bibr">9</xref>]. This alteration in the development and growth of the placenta means an increased risk of complications such as miscarriage, premature detachment, amnionitis, placental insufficiency, pre‐ eclampsia, eclampsia, uterine hypertonia, and/or HIV infection, especially through intravenous administration of heroin. As a result, neonates with NOWS are associated with reduced foetal growth, low birth weight and high rates of stillbirth (death at gestational age greater than or equal to 28 weeks, during or after delivery) [<xref rid="hsr272289-bib-0010" ref-type="bibr">10</xref>].</p><p>In Spain, the Spanish Association of Pediatrics (SAP), describes that the presence of malformations in the ciliated epithelium of the bronchi in newborns born to pregnant women who use opioids causes early chronic respiratory distress [<xref rid="hsr272289-bib-0011" ref-type="bibr">11</xref>]. In 72.5% of cases, it is a syndrome with mild symptoms [<xref rid="hsr272289-bib-0007" ref-type="bibr">7</xref>].</p><p>In addition, opioids are characterised not only by their analgesic and sedative potency, but also by the high speed at which they pass through the placenta by passive diffusion. Symptomatology of a neonate with NOWS does not become evident until the first 48 to 72 h postpartum, and can last from 8 to 16 weeks, depending on the frequency of use, half‐life and dose of opioid consumed. Subacute symptomatology can last up to 6 months, and is related to maternal who use methadone, chlordiazepoxide or methylphenidate. Due to the breadth and generality of the symptoms, differential diagnosis is essential and other pathologies such as hypothyroidism, septic conditions, hypoglycaemia, hypocalcaemia, neurological injury or involvement must be ruled out [<xref rid="hsr272289-bib-0012" ref-type="bibr">12</xref>]. Among the most common complications of a newborn exposed to opioids during gestation is the development of postnatal abstinence syndrome [<xref rid="hsr272289-bib-0013" ref-type="bibr">13</xref>].</p><p>Similarly, there are also health complications for pregnant women, mainly in their mental health, including postpartum depression, anxiety, and/or feelings of guilt, which can lead to suicidal behaviour, especially among younger women [<xref rid="hsr272289-bib-0009" ref-type="bibr">9</xref>], as indicated in the study by Margerison et al. [<xref rid="hsr272289-bib-0014" ref-type="bibr">14</xref>] with a prevalence of suicide among pregnant mothers who use drugs of 5.4%. As a consequence of the deterioration of maternal mental health, the mother child dyad is directly affected; activities such as breastfeeding (which benefits the newborn by providing nutrients and immunity, if not contraindicated by maternal HIV infection) are reduced or, in most cases, interrupted. But it is not only mental health that is affected; physical symptoms include agitation, rhinorrhoea, abdominal pain, muscle and uterine cramps, myalgia, characteristic of withdrawal. Overdose is the fatal complication of this condition, causing pulmonary oedema, respiratory arrest and coma. Since heroin is the most widely consumed opioid and is administered parenterally, the associated risk is HIV infection, with seropositivity rates of 60‐70% among chronic heroin users, as well as other infectious processes such as hepatitis, sepsis or endocarditis [<xref rid="hsr272289-bib-0015" ref-type="bibr">15</xref>, <xref rid="hsr272289-bib-0016" ref-type="bibr">16</xref>]. Therefore, when a gestational process occurs in a woman who consumes opium derivatives, it is considered high‐risk, due to the scarcity and even lack of education on prenatal and postnatal care, the risk of infections associated with consumption practices and the poor nutritional state of the pregnant woman [<xref rid="hsr272289-bib-0007" ref-type="bibr">7</xref>]. The main maternal and neonatal complications arising from perinatal opioid exposure, including obstetric complications, neonatal growth restriction, and withdrawal manifestations, are summarised in Table <xref rid="hsr272289-tbl-0001" ref-type="table">1</xref>.</p><table-wrap position="float" id="hsr272289-tbl-0001" content-type="Table" orientation="portrait"><label>Table 1</label><caption><p>Maternal and neonatal complications due to the effect of opioid use.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><tbody valign="top"><tr><td style="background-color:#CDB5E0" align="left" valign="top" rowspan="1" colspan="1">
+<bold>Complications in Pregnant Women</bold>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="bullet"><list-item><p>Overdose: respiratory arrest, acute pulmonary edema, coma. Infectious processes through the employed administration route: HIV (60%–70%), endocarditis, hepatitis, sepsis, abscesses.</p></list-item><list-item><p>Obstetric complications (miscarriage, premature placental detachment, placental insufficiency, preeclampsia, eclampsia, amnionitis, uterine hypertension).</p></list-item><list-item><p>Alterations in cognitive functions, affective disorders, and psychiatric symptoms (anxiety, depression).</p></list-item><list-item><p>Symptoms of agitation, abdominal pain, rhinorrhea, irritability, cramps, myalgias (withdrawal syndrome).</p></list-item><list-item><p>Vitamin deficiencies and anemias due to folic acid deficiency.</p></list-item><list-item><p>Negative impact on the social and family sphere.</p></list-item></list>
+</p>
+</td></tr><tr><td style="background-color:#CDB5E0" align="left" valign="top" rowspan="1" colspan="1">
+<bold>Complications in The Newborn</bold>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<list list-type="bullet"><list-item><p>Neonatal Opioid Withdrawal Syndrome (<bold>NOWS</bold>).</p></list-item><list-item><p>
+<bold>Obstetric</bold> complications (reduced fetal growth, high stillbirth rates, risk of miscarriage, prematurity).</p></list-item><list-item><p>
+<bold>Congenital malformations.</bold>
+</p></list-item><list-item><p>Risk of sudden infant death syndrome (<bold>SIDS</bold>).</p></list-item><list-item><p>
+<bold>Hypoxia</bold> due to increased oxygen consumption from maternal muscular activity.</p></list-item><list-item><p>Long‐term complications in the acquisition of <bold>cognitive, behavioral, immunological, and motor skills.</bold>
+</p></list-item><list-item><p>
+<bold>HIV</bold> transmission (vertical transmission).</p></list-item><list-item><p>Negative impact on the mother‐child dyad.</p></list-item></list>
+</p>
+</td></tr></tbody></table><table-wrap-foot><fn id="hsr272289-tbl1-note-0001"><p>
+<italic toggle="yes">Note:</italic> (Amin, A. A. A., et al., 2022; Bada, H. S., et al., 2015; Hudak, M. L. &amp; Tan, R. C., et al., 2012; Maqsood, I., Qazi, G., &amp; Hamayun, Z., 2023).</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><p>Currently, the Finnegan or FNASS scale (Finnegan Neonatal Abstinence Scoring Systeme) is used to establish the diagnosis and severity of NOWS, which provides cut‐off points based on the duration and type of symptoms (twenty‐one in total) for initiating pharmacological treatment. Thus, the maximum possible score on the FNASS is 21 points. If a score of 0–7 is obtained, there is no withdrawal syndrome; if it is 8–12, there is a <italic toggle="yes">mild or moderate withdrawal syndrome</italic>; if it is 13–16, it corresponds to <italic toggle="yes">moderate‐severe withdrawal syndrome</italic> and, in the case of a score greater than/equal to 16, <italic toggle="yes">severe withdrawal syndrome</italic> would be diagnosed. A score greater than or equal to 8 in three consecutive assessments implies the start of treatment with morphine [<xref rid="hsr272289-bib-0017" ref-type="bibr">17</xref>, <xref rid="hsr272289-bib-0018" ref-type="bibr">18</xref>]. Following the algorithm of application of this diagnostic scale, the first‐line treatment are morphine, methadone and buprenorphine. Second‐line drugs are phenobarbital, clonidine, benzodiazepines and dexmetomidine [<xref rid="hsr272289-bib-0018" ref-type="bibr">18</xref>]. This algorithm is developed by the SAP, and indicates the administration of tincture of opium, paregoric elixir or 0.04% sucrose and morphine solution for symptom control. If the pregnant woman has poly‐drug addictive behaviour or uses drugs other than opioids, phenobarbital is administered. Thus, the first‐line drug remains morphine [<xref rid="hsr272289-bib-0011" ref-type="bibr">11</xref>]. A comprehensive overview of the pharmacological benefits and associated neonatal risks of opioid‐based treatments currently used in NOWS management is provided in Table <xref rid="hsr272289-tbl-0002" ref-type="table">2</xref>.</p><table-wrap position="float" id="hsr272289-tbl-0002" content-type="Table" orientation="portrait"><label>Table 2</label><caption><p>Neonatal Benefits and Risks Associated with Opioids.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Fármaco</th><th align="center" valign="bottom" rowspan="1" colspan="1">Beneficio neonatal</th><th align="center" valign="bottom" rowspan="1" colspan="1">Riesgo neonatal</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>MORPHINE</bold>
+<italic toggle="yes">(strong agonist with long half‐life)</italic>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Greater control of symptoms With phenobarbital as an adjuvant, shorter LOS and LOT than clonidine, and as monotherapy</td><td align="left" valign="top" rowspan="1" colspan="1">High incidence of Neonatal Opioid Withdrawal Syndrome (NOWS) development</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>METHADONE</bold>
+<italic toggle="yes">(strong agonist with long half‐life)</italic>
+</td><td align="left" valign="top" rowspan="1" colspan="1">LOS and LOT shorter than morphine (14%)</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Higher rate of readmission to NICU due to the need for adjuvant drugs.</p>
+<p>Prematurity, low birth weight, high incidence of NOWS, leucodystrophy</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>BUPRENORPHINE</bold>
+<italic toggle="yes">(partial agonist with long half‐life)</italic>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>In combination with naloxone, lower risk of NOWS (19% required pharmacotherapy for NOWS)</p>
+<p>As monotherapy, shorter duration of pharmacological treatment</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">As monotherapy, an incidence of 42% in the development of NOWS</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>CLONIDINE</bold>
+<italic toggle="yes">(non‐opioid, α‐2 adrenergic agonist)</italic>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Reduces neuronal death (neuroprotective effect)</p>
+<p>Shorter LOS and LOT than morphine (28 &lt; 39 days on average)</p>
+<p>Lower risk of NOWS than the rest</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Does not reduce risks associated with long‐term opioid exposure</td></tr></tbody></table><table-wrap-foot><fn id="hsr272289-tbl2-note-0001"><p>
+<italic toggle="yes">Note:</italic> (Schiff, D. M. &amp; Grossman, M. R. 2019; Zimmermann, U., et al., 2020).</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><p>The ESC (Eat, Sleep, Console) scale is also an alternative clinical tool for the assessment of NOWS, but it focuses on the functional status of the newborn rather than on the detailed quantification of signs and symptoms. It evaluates three key criteria: the neonate's ability to feed adequately (Eat), sleep for at least one continuous hour (Sleep), and be consoled within 10 min (Console), preferably using non‐pharmacological measures. In this context, nursing professionals play a central role, as they are primarily responsible for the continuous assessment of feeding, sleep and consolability, the implementation of non‐pharmacological interventions, caregiver education and family involvement, and the early identification of clinical deterioration requiring medical intervention. Schiff, Grossman [<xref rid="hsr272289-bib-0002" ref-type="bibr">2</xref>].</p><p>Accordingly, the main objective of this review is to update the therapeutic approach and to highlight the essential role of nursing in the care of neonates diagnosed with Neonatal Opioid Withdrawal Syndrome due to maternal opioid use. Specifically, this review aims to compare the therapeutic efficacy and safety of the most commonly used pharmacological treatments (morphine, methadone, buprenorphine and clonidine) in controlling NOWS symptoms; to analyse the benefits of the ESC scale and non‐pharmacological interventions on neonatal outcomes; to explore the diagnostic accuracy of emerging objective methods for assessing withdrawal symptoms; and to determine the impact of nursing‐led, holistic care on the comprehensive management of Neonatal Opioid Withdrawal Syndrome.</p></sec><sec sec-type="methods" id="hsr272289-sec-0080"><label>2</label><title>Methodology</title><p>This systematic review, on the update of the therapeutic approach and the role of nursing in a Neonatal Opioid Withdrawal Syndrome, has been carried out following the Cochrane Handbook [<xref rid="hsr272289-bib-0019" ref-type="bibr">19</xref>].</p><p>After the study selection phase, a systematic process of data analysis and synthesis was carried out. For each study, a data extraction table was developed, recording the design, sample size, population characteristics, type of intervention, outcome measures (Length of Stay (LOS), Length of Treatment (LOT), need for pharmacotherapy, adverse effects, etc.) and main clinical findings.</p><p>A deductive thematic coding was then undertaken, guided by the objectives of the review, grouping the studies into three analytic categories:
+<list list-type="simple"><list-item><label>1.</label><p>Pharmacological treatment and comparison of medicines (morphine, methadone, buprenorphine, clonidine);</p></list-item><list-item><label>2.</label><p>Effectiveness of the ESC scale and non‐pharmacological interventions (breastfeeding, skin‐to‐skin contact, rooming‐in, controlled environment);</p></list-item><list-item><label>3.</label><p>Diagnostic performance and efficiency of the FNASS and ESC scales.</p></list-item></list>
+</p><p>Within each category, a structured narrative synthesis was conducted, comparing the direction and magnitude of reported effects (reduction of LOS and LOT, decrease in morphine exposure, readmission rates, etc.) and highlighting consistencies and discrepancies between studies. Where several articles evaluated the same intervention, the overall consistency of results and the methodological quality of the studies (randomised designs <italic toggle="yes">vs.</italic> retrospective cohorts) were considered in order to underpin the conclusions of the review.</p><p>Owing to the heterogeneity of study designs, interventions and reported outcomes, a quantitative meta‐analysis was not considered appropriate. Instead, a qualitative, thematically organised synthesis of the available evidence was undertaken, in line with the guidance of Higgins and Green (2011). Although no meta‐analysis was performed, due to the heterogeneity of the included studies, the work meets the methodological criteria of a systematic review, with an exhaustive search, explicit selection criteria and a structured synthesis.</p><p>Four Health Sciences and multidisciplinary electronic databases were consulted and included: Scopus, Dilanet, CINAHL, Pubmed. Before proceeding with the literature search, an expert in scientific literature search methodology, conducted an initial search for articles related to the topic, identifying the terms and descriptors of interest, and with the aim of defining the final search. Thus, the search strategy with language‐free terms and truncations used was as follows: In Pubmed, Cinahl and in Scopus, the following were used: (“Neonatal Abstinence Syndrome” AND “opioid” AND “analgesics” NOT “alcohol”. In Dialnet, the free terms were (“abstinence syndrome” AND “neonat* OR neonate” AND (“opioid* OR opioids”).</p><sec id="hsr272289-sec-0090"><label>2.1</label><title>Inclusion Criteria</title><p>
+<list list-type="bullet"><list-item><p>Publication year between 2015 and 2025. The search period was extended back to 2015 to capture key studies on clonidine and morphine in the treatment of NOWS, as well as foundational research on the use of skin conductance (via sweat measurement) as a quantifiable marker of neonatal stress for early detection and severity assessment of NOWS areas that have not been systematically reviewed to date.</p></list-item><list-item><p>Full text availability. Only studies available in full text were included to allow complete methodological appraisal and data extraction.</p></list-item><list-item><p>Study population consisting exclusively of breastfed infants up to 6 months of age. This criterion ensures homogeneity of the sample, given that breastfeeding status and age significantly influence both the pharmacokinetics of opioids and the clinical presentation of NOWS.</p></list-item></list>
+</p></sec><sec id="hsr272289-sec-0100"><label>2.2</label><title>Exclusion Criteria</title><p>
+<list list-type="bullet"><list-item><p>Single‐patient case reports. Studies reporting only one clinical case were excluded due to their limited generalizability and insufficient statistical basis for drawing conclusions applicable to the broader NOWS population.</p></list-item><list-item><p>Withdrawal syndromes caused by substances other than opioid derivatives (e.g., alcohol, nicotine, amphetamines, or caffeine). These conditions involve distinct pathophysiological mechanisms, clinical presentations, and management approaches that fall outside the scope of this review, which focuses specifically on opioid‐related NOWS.</p></list-item><list-item><p>Studies focused on Iatrogenic Withdrawal Syndrome (IWS). Although IWS shares certain clinical features with NOWS, it arises in a fundamentally different context prolonged medical administration of opioids or sedatives in the neonatal intensive care unit and therefore requires a separate therapeutic and diagnostic framework not addressed in this review.</p></list-item></list>
+</p><p>The study selection process was carried out in four phases: identification, screening, selection and inclusion. The literature was reviewed and duplicate papers were removed. Studies were filtered according to title and inclusion criteria. Peer review of abstracts was performed and finally full‐text qualified studies were included.</p></sec></sec><sec sec-type="results" id="hsr272289-sec-0110"><label>3</label><title>Results</title><p>The review process is outlined in the flow chart shown in Figure <xref rid="hsr272289-fig-0001" ref-type="fig">1</xref>, which presents the study selection according to the PRISMA recommendations. The following is a descriptive summary of the included studies.</p><fig position="float" fig-type="Figure" id="hsr272289-fig-0001" orientation="portrait"><label>Figure 1</label><caption><p>Flowchart of the selection process.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="HSR2-9-e72289-g001.jpg"/></fig><p>The literature search identified 1.564 records in the PubMed, Scopus, CINAHL, and Dialnet databases. After removing duplicates and applying the inclusion and exclusion criteria, 28 studies were included in the review, focusing on pharmacological treatment, non‐pharmacological interventions, and diagnostic tools in Neonatal Opioid Withdrawal Syndrome (NOWS).</p><p>As summarised in Table <xref rid="hsr272289-suppl-0002" ref-type="supplementary-material">3</xref> (Summary of data), the evidence was organised into three main categories: pharmacological treatment, non‐pharmacological interventions and ESC based care, and diagnostic tools and assessment methods.</p><p>Fourteen studies evaluated pharmacological approaches for the management of Neonatal Opioid Withdrawal Syndrome, primarily comparing morphine, methadone, buprenorphine and clonidine. These studies included retrospective cohort studies and clinical trials and mainly assessed outcomes such as treatment duration, length of hospital stay, safety profiles and readmission rates.</p><p>Nine studies focused on non‐pharmacological interventions and care models based on the Eat, Sleep, Console (ESC) approach. These studies, largely observational and quasi‐experimental in design, reported outcomes related to the need for pharmacological treatment, total opioid exposure, length of hospital stay, breastfeeding rates, parental involvement and healthcare costs.</p><p>Five studies addressed diagnostic tools and assessment methods for Neonatal Opioid Withdrawal Syndrome, including comparisons between the Finnegan Neonatal Abstinence Scoring System and ESC, toxicological screening methods, and emerging approaches such as cry acoustics and skin conductance. These studies primarily evaluated diagnostic accuracy, feasibility and clinical utility.</p><p>With regard to pharmacological treatment, most studies compared the efficacy and safety of morphine, methadone, buprenorphine, and clonidine. Methadone, compared to morphine, was found to be associated with a reduction in treatment duration and hospital stay in some studies, while others found no clear differences and reported higher rates of readmission to the NICU with methadone [<xref rid="hsr272289-bib-0020" ref-type="bibr">20</xref>, <xref rid="hsr272289-bib-0021" ref-type="bibr">21</xref>, <xref rid="hsr272289-bib-0022" ref-type="bibr">22</xref>]. Maternal exposure to potent, longacting opioid agonists (morphine, buprenorphine, fentanyl, methadone, oxycodone) in the third trimester was associated with an increased risk of developing NOWS [<xref rid="hsr272289-bib-0023" ref-type="bibr">23</xref>]. Clonidine showed a better safety profile and shorter treatment time compared to morphine in controlling NOWS symptoms [<xref rid="hsr272289-bib-0021" ref-type="bibr">21</xref>].</p><p>With regard to the non‐pharmacological approach and the ESC scale, various studies have shown that its implementation significantly reduces the need for pharmacological treatment, total exposure to morphine, length of hospital stay and costs, while increasing breastfeeding and parental involvement [<xref rid="hsr272289-bib-0024" ref-type="bibr">24</xref>, <xref rid="hsr272289-bib-0025" ref-type="bibr">25</xref>, <xref rid="hsr272289-bib-0026" ref-type="bibr">26</xref>, <xref rid="hsr272289-bib-0027" ref-type="bibr">27</xref>, <xref rid="hsr272289-bib-0028" ref-type="bibr">28</xref>]. The combination of the ESC scale with measures such as skin‐to‐skin contact, increased feeding frequency, and rooming‐in was associated with better neonatal outcomes [<xref rid="hsr272289-bib-0028" ref-type="bibr">28</xref>, <xref rid="hsr272289-bib-0029" ref-type="bibr">29</xref>, <xref rid="hsr272289-bib-0030" ref-type="bibr">30</xref>, <xref rid="hsr272289-bib-0031" ref-type="bibr">31</xref>].</p><p>Anothers studies provided reductions in mean hospital stay by 5.94 days, with no readmissions or complications requiring ICU, by implementing ESC in the therapeutic approach to neonates with NOWS. Consequently, the mean variable cost per patient was decreased by 48% and total neonatal morphine exposure by 79% (from 2.25 mg/kg to 0.45 mg/kg) [<xref rid="hsr272289-bib-0024" ref-type="bibr">24</xref>]. Similar conclusions were drawn by Chyi et al. [<xref rid="hsr272289-bib-0032" ref-type="bibr">32</xref>] in a retrospective cohort study, where 20.7% of neonates treated with FNASS required pharmacotherapy, while in the other group the percentage was 16.3%. In‐ hospital length of stay was similar in both groups (14.4 days with FNASS and 14.0 days with ESC). These data they pointed out that, although the ESC tool decreases postpartum opioid exposure, the use of this scale independently of FNASS did not result in a significant reduction of in‐hospital stay [<xref rid="hsr272289-bib-0030" ref-type="bibr">30</xref>, <xref rid="hsr272289-bib-0032" ref-type="bibr">32</xref>]. In contrast, the study by Blount et al. with 40 infants provided more significant data, observing that the mean length of hospital stay was reduced from 10.3 days with the Finnegan method to 4.9 days with ESC. The need to start morphine drug therapy decreased from 92% with Finnegan to 19% with ESC. There were no readmissions to the NICU. In their trial they explain that all patients were transferred to the mother and child units from the time of diagnosis and initial drug therapy was given as morphine as required by the patients' ESC scores [<xref rid="hsr272289-bib-0033" ref-type="bibr">33</xref>].</p></sec><sec sec-type="discussion" id="hsr272289-sec-0120"><label>4</label><title>Discussion</title><p>This review aimed to analyse current evidence on the diagnosis and management of neonatal opioid withdrawal syndrome (NOWS), with particular emphasis on pharmacological strategies, emerging diagnostic approaches, and the role of non‐pharmacological interventions in reducing neonatal stress and improving clinical outcomes. The findings highlight substantial heterogeneity in therapeutic approaches, alongside a growing shift towards care models that prioritise functional assessment and family centred, non‐pharmacological care.</p><p>Regarding pharmacological management, morphine remains the most commonly used opioid due to its strong agonist properties. However, available evidence indicates no significant differences in treatment duration or length of hospital stay when morphine is compared with methadone, although morphine may be associated with a greater need for adjunctive medication. In contrast, pooled analyses and recent cohort studies suggest that buprenorphine may be associated with shorter treatment duration and reduced hospitalisation when compared with morphine, positioning it as a potentially favourable first‐line agent for selected infants with NOWS [<xref rid="hsr272289-bib-0034" ref-type="bibr">34</xref>, <xref rid="hsr272289-bib-0035" ref-type="bibr">35</xref>].</p><p>Morphine and methadone protocols continue to present a clinical dilemma. Pilot randomized data suggest both are reasonable options, but methadone may reduce primary treatment failure and the need for adjunct therapy compared to morphine [<xref rid="hsr272289-bib-0036" ref-type="bibr">36</xref>].</p><p>Buprenorphine has emerged in recent cohort studies as associated with shorter durations of treatment and hospitalization relative to morphine, corroborating single‐center evidence suggesting it may be a superior first‐line agent for NOWS outcomes [<xref rid="hsr272289-bib-0037" ref-type="bibr">37</xref>].</p><p>Adjuvant agents such as clonidine and phenobarbital remain widely discussed; reviews note that while clonidine may be used as an opioid‐sparing strategy, data on its independent effectiveness are limited and have mixed outcomes regarding adjunct use and treatment trajectory [<xref rid="hsr272289-bib-0038" ref-type="bibr">38</xref>].</p><p>Beyond standard pharmacotherapy, emerging pharmacokinetic driven insights emphasize high interpatient variability in drug metabolism among neonates, suggesting that individualized dosing strategies based on pharmacogenetics and developmental pharmacokinetic/pharmacodynamic (PK/PD) models could optimise NOWS treatment beyond traditional score‐based approaches [<xref rid="hsr272289-bib-0039" ref-type="bibr">39</xref>].</p><p>Other studies have quantified distress and/or stress in neonates, manifested by crying, and caused by NOWS. They established the relationship between electrical activity of the skin and stress. In this way, they showed that high levels of emotional sweating or electrical activity of the skin were related to greater sensitivity to stress and pain. Infants diagnosed with NOWS had higher skin conductance compared to healthy infants [<xref rid="hsr272289-bib-0040" ref-type="bibr">40</xref>]. This approach to the importance of skin‐to‐skin therapy for newborns was corroborated by Pérez‐Jiménez et al. in 2023. The authors of this randomised clinical trial demonstrated a reduction in maternal pain of up to 80%, and a reduction in newborn crying, as well as greater success in initiation and establishment of breastfeeding [<xref rid="hsr272289-bib-0031" ref-type="bibr">31</xref>].</p><p>This variable of crying has been incorporated in other studies, where in addition to objective diagnostic methods based on the basic functional capacities of the newborn, such as eating, sleeping and being comforted, they have included the acoustics of crying. Proponents demonstrated that these acoustics had a high diagnostic accuracy using an ROC curve, with an area under the curve of 0.90, a sensitivity of 0.89 and a specificity of 0.83 [<xref rid="hsr272289-bib-0041" ref-type="bibr">41</xref>].</p><p>In this respect, the COVID‐19 pandemic has also meant a change in the treatment, care and outcome of infants diagnosed with NOWS, as analysed in the study by MacMillan et al. who concluded that pharmacological monotherapy and the consequent paucity of non‐pharmacological interventions, such as behavioural, environmental and nutritional care, meant higher LOS, LOT and an increased rate of drug treatment failure [<xref rid="hsr272289-bib-0029" ref-type="bibr">29</xref>].</p><p>However, the most relevant contribution of this study lies in the prioritisation of non‐pharmacological interventions according to their demonstrated effectiveness in reducing NOWS related stress, highlighting parental presence, rooming‐in, and skin‐to‐skin contact as key strategies. These findings are consistent with external evidence suggesting that interventions promoting continuous caregiver–infant interaction are associated with reduced physiological stress responses in neonates, potentially mediated by changes in autonomic regulation and skin conductance activity [<xref rid="hsr272289-bib-0040" ref-type="bibr">40</xref>, <xref rid="hsr272289-bib-0042" ref-type="bibr">42</xref>].</p><p>Regarding diagnostic assessment, the Finnegan Neonatal Abstinence Scoring System presents important limitations related to its assessment methodology, particularly the requirement for frequent stimulation of the neonate and its emphasis on symptom quantification rather than functional status. These factors may lead to longer Neonatal Intensive Care Unit stays and increased healthcare costs. In contrast, the Eat, Sleep, Console (ESC) care model, which emphasises function‐based assessment and enhanced non‐pharmacological interventions, has been shown to significantly reduce the need for pharmacotherapy and to shorten the time to readiness for discharge when compared with traditional scoring systems, as demonstrated in controlled multicentre studies [<xref rid="hsr272289-bib-0043" ref-type="bibr">43</xref>, <xref rid="hsr272289-bib-0044" ref-type="bibr">44</xref>].</p><p>Metaanalytic evidence across multiple studies further reinforces that ESC not only reduces pharmacotherapy requirements but also significantly decreases hospital length of stay and opioid treatment duration compared to Finnegan scoring approaches [<xref rid="hsr272289-bib-0045" ref-type="bibr">45</xref>].</p><p>Conversely, some retrospective analyses suggest that broader improvements in outcomes over time may not be solely attributable to differences in the assessment tool itself, indicating that evolving care practices including environmental and feeding support may partly drive observed benefits [<xref rid="hsr272289-bib-0046" ref-type="bibr">46</xref>].</p><p>Weight change studies comparing ESC and Finnegan models show no evidence of excessive early postnatal weight loss with ESC, suggesting the safety of ESC with respect to neonatal growth metrics, which supports its application alongside prioritized breastfeeding support [<xref rid="hsr272289-bib-0047" ref-type="bibr">47</xref>].</p><p>External comparative research also highlights that while ESC reduces initial pharmacotherapy initiation rates, continuous evaluation of nutrition support and lactation support is critical during transitions between scoring models to optimize neonatal outcomes [<xref rid="hsr272289-bib-0034" ref-type="bibr">34</xref>].</p><p>Overall, the integration of these findings underscores a converging trend towards strategies that prioritise non‐pharmacological care and more nuanced pharmacotherapeutic selection particularly the use of buprenorphine and ESC‐based care models to improve outcomes for infants with NOWS [<xref rid="hsr272289-bib-0043" ref-type="bibr">43</xref>, <xref rid="hsr272289-bib-0044" ref-type="bibr">44</xref>, <xref rid="hsr272289-bib-0045" ref-type="bibr">45</xref>].</p><p>Some studies point out that the most effective cytotoxic tests for the diagnosis of NOWS are focused on monitoring maternal consumption during gestation, by means of blood, oral secretions and sweat analysis [<xref rid="hsr272289-bib-0048" ref-type="bibr">48</xref>]. However, other authors object to having a very narrow detection window, since opioids in the body have a half‐life of 3 days, as is the case with heroin, which has a half‐life of 72 h (Hudak &amp; Tan, 2012). They are also primarily focused on detecting alcohol use, which is the most studied drug with the most standardised tests.</p><p>The update of the protocol for analgesia in withdrawal syndrome in the Paediatric Intensive Care Unit published by the SAP in 2020 establishes clonidine, administered orally, as the firstline drug, and phenobarbital, in case of impossibility of oral administration and/or severe NOWS, with administration of rescue boluses of morphine in case of severe agitation (SAP, 2023).</p><p>A critical consideration in the comprehensive management of NOWS relates to the clinical frameworks that guide assessment and intervention. The Finnegan scale, while widely adopted, has inherent limitations in its clinical application framework, as it primarily drives a pharmacotherapy‐centered approach without systematically integrating behavioural, environmental, and nutritional interventions into the therapeutic protocol [<xref rid="hsr272289-bib-0049" ref-type="bibr">49</xref>]. This symptom focused scoring methodology may inadvertently narrow the scope of nursing care plans for NOWS management, potentially limiting clinical attention to pharmacological interventions while underutilizing the holistic and comprehensive care strategies that are central to contemporary neonatal nursing practice [<xref rid="hsr272289-bib-0002" ref-type="bibr">02</xref>].</p><p>In contrast, the ESC (Eat, Sleep, Console) assessment model represents a paradigm shift toward function‐based, family‐integrated care. By prioritising the neonate's ability to feed adequately, achieve consolidated sleep, and be consoled through caregiving interventions, the ESC framework inherently emphasizes non‐pharmacological strategies as the foundation of care. This approach not only reduces reliance on pharmacological treatment and shortens hospital length of stay, but also recenters clinical practice around the infant's functional well‐being and the parent‐infant dyad. The ESC model thereby promotes a more holistic and humanised approach to neonatal care, addressing key limitations of the Finnegan scale by expanding the therapeutic focus beyond symptom quantification to encompass environmental modification, nutritional optimization, and family engagement as core components of NOWS management.</p></sec><sec sec-type="conclusions" id="hsr272289-sec-0130"><label>5</label><title>Conclusions</title><p>This systematic review evaluated the evidence published between 2015 and 2025 to update the therapeutic approach and define the role of nursing in neonates with neonatal opioid withdrawal syndrome (NOWS) due to maternal opioid use. The principal findings in relation to the stated objectives are as follows:
+<list list-type="simple"><list-item><label>−</label><p>Pharmacological treatment efficacy and safety: Comparison of the most commonly used pharmacological treatments (morphine, methadone, buprenorphine and clonidine) reveals that clonidine demonstrates superior safety profiles and shorter treatment duration compared to morphine in controlling NOWS symptoms. Phenobarbital as adjuvant therapy also shows efficacy, particularly in severe cases. Buprenorphine emerges as a promising first‐line agent with reduced treatment and hospitalization durations compared to traditional opioid agonists.</p></list-item><list-item><label>−</label><p>Benefits of the ESC scale and non‐pharmacological interventions<bold>:</bold> The Eat, Sleep, Console (ESC) approach, integrated with non‐pharmacological interventions including breastfeeding support, skin‐to‐skin contact, rooming‐in, and controlled environmental measures, significantly improves neonatal outcomes. Implementation results in substantially reduced need for pharmacotherapy, shortened hospital stays, decreased total morphine exposure, lower healthcare costs, and enhanced rates of breastfeeding and parental involvement.</p></list-item><list-item><label>−</label><p>Diagnostic accuracy of emerging assessment methods: While the Finnegan Neonatal Abstinence Scoring System (FNASS) and ESC demonstrate comparable diagnostic sensitivity and specificity, the ESC model provides superior functional assessment and therapeutic guidance. Emerging objective diagnostic methods, including cry acoustics analysis and skin conductance measurement, offer promising adjunctive diagnostic tools for early detection and severity assessment of NOWS.</p></list-item><list-item><label>−</label><p>Impact of nursing‐led holistic care: Nursing professionals play a central and irreplaceable role in NOWS management through the ESC framework. The nursing care plan encompasses comprehensive assessment of feeding capacity, sleep patterns, and consolability; implementation of non‐pharmacological interventions including skin care, tactile stimulation, frequent feeding schedules, and skin‐to‐skin contact; family education and support for maternal‐infant bonding; and early identification of clinical deterioration requiring medical intervention. The reduction of non‐pharmacological nursing interventions, as observed during the COVID‐19 pandemic, resulted in increased treatment duration, prolonged hospital stays, and higher rates of pharmacological treatment failure, underscoring the critical importance of nursing involvement.</p></list-item><list-item><label>−</label><p>Integrated care model recommendation<bold>:</bold> A complementary diagnostic approach utilizing both Finnegan and ESC scales for initial assessment, combined with ESC‐guided therapeutic management emphasizing non‐pharmacological interventions, represents the optimal evidence‐based strategy for NOWS care.</p></list-item></list>
+</p><p>In conclusion, current evidence supports the integration of clonidine or phenobarbital based pharmacotherapy, the ESC functional assessment model, and structured nursing led non‐pharmacological interventions as the cornerstone of comprehensive, familycentered management of neonatal opioid withdrawal syndrome.</p></sec><sec id="hsr272289-sec-0140"><label>6</label><title>Relevance to Clinical Practice</title><p>Due to the great impact generated by neonatal opioid withdrawal syndrome (NOWS), it is necessary to update the diagnostic scales and the most commonly used treatments to control the symptomatology of this disease. The identification of clonidine as the most effective and safe drug for the control of the symptomatology of this syndrome represents a change in the current treatment and it is important that nurses become familiar and skilled in its administration and monitoring. The role of nursing is crucial in the therapeutic approach to the neonate with NOWS. The reduction of non‐pharmacological interventions resulted in a significant increase in the duration of treatment, hospital stay and drug treatment failure rate.</p></sec><sec id="hsr272289-sec-0150"><title>Author Contributions</title><p>
+<bold>José Miguel Pérez‐JIménez:</bold> conceptualization, data curation, formal analysis, investigation, methodology, resources, software, supervision, validation, visualization, writing – original draft, writing – review and editing. <bold>Marta Periañez Langa:</bold> conceptualization, formal analysis, investigation, methodology, visualization, writing – original draft, writing – review and editing. <bold>Manuel Coheña Jimenez:</bold> conceptualization, data curation, formal analysis, investigation, methodology, resources, visualization, writing – original draft, writing – review and editing.</p></sec><sec id="hsr272289-sec-0160"><title>Funding</title><p>The authors received no specific funding for this work.</p></sec><sec sec-type="COI-statement" id="hsr272289-sec-0170"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec id="hsr272289-sec-0200"><label>1</label><title>Transparency Statement</title><p>The lead author José Miguel PÉREZ‐JIMÉNEZ affirms that this manuscript is an honest, accurate, and transparent account of the study being reported; that no important aspects of the study have been omitted; and that any discrepancies from the study as planned (and, if relevant, registered) have been explained.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="hsr272289-suppl-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>Supporting File 1</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="HSR2-9-e72289-s001.docx" position="float" orientation="portrait"/></supplementary-material><supplementary-material id="hsr272289-suppl-0002" position="float" content-type="local-data" orientation="portrait"><caption><p>Supporting File 2</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="HSR2-9-e72289-s002.docx" position="float" orientation="portrait"/></supplementary-material></sec></body><back><sec sec-type="data-availability" id="hsr272289-sec-0190"><title>Data Availability Statement</title><p>The data that support the findings of this study are available from the corresponding author upon reasonable request.</p></sec><ref-list content-type="cited-references" id="hsr272289-bibl-0001"><title>References</title><ref id="hsr272289-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="hsr272289-cit-0001">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Baeza‐Gozalo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Sola‐Cía</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>López‐Dicastillo</surname>
+</string-name>, “<article-title>Breastfeeding and Rooming‐In in the Management of Neonatal Abstinence Syndrome. Scoping Review</article-title>,” <source>Anales Del Sistema Sanitario de Navarra</source>
+<volume>46</volume>, no. <issue>2</issue> (<year>2023</year>): <elocation-id>e1048</elocation-id>, <pub-id pub-id-type="doi">10.23938/ASSN.1048</pub-id>.<pub-id pub-id-type="pmid">37639321</pub-id>
+<pub-id pub-id-type="pmcid">PMC10518805</pub-id></mixed-citation></ref><ref id="hsr272289-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="hsr272289-cit-0002">
+<string-name name-style="western">
+<given-names>D. M.</given-names>
+<surname>Schiff</surname>
+</string-name> and <string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Grossman</surname>
+</string-name>, “<article-title>Beyond the Finnegan Scoring System: Novel Assessment and Diagnostic Techniques for the Opioid‐Exposed Infant</article-title>,” <source>Seminars in Fetal and Neonatal Medicine</source>
+<volume>24</volume>, no. <issue>2</issue> (<year>2019</year>): <fpage>115</fpage>–<lpage>120</lpage>, <pub-id pub-id-type="doi">10.1016/j.siny.2019.01.003</pub-id>.<pub-id pub-id-type="pmid">30738754</pub-id>
+<pub-id pub-id-type="pmcid">PMC6451877</pub-id></mixed-citation></ref><ref id="hsr272289-bib-0003"><label>3</label><mixed-citation publication-type="miscellaneous" id="hsr272289-cit-0003">
+<collab collab-type="authors">Council of Economic Advisers</collab>
+. (<year>2025</year>, March 26). The Staggering Cost of the Illicit Opioid Epidemic in the United States (The White House). https://<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.whitehouse.gov/articles/2025/03/the-staggering-cost-of-the-illicit-opioid-epidemic-in-the-united-states/" ext-link-type="uri">www.whitehouse.gov/articles/2025/03/the-staggering-cost-of-the-illicit-opioid-epidemic-in-the-united-states/</ext-link>.</mixed-citation></ref><ref id="hsr272289-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="hsr272289-cit-0004">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Gomez‐Pomar</surname>
+</string-name> and <string-name name-style="western">
+<given-names>L. P.</given-names>
+<surname>Finnegan</surname>
+</string-name>, “<article-title>The Epidemic of Neonatal Abstinence Syndrome, Historical References of Its' Origins, Assessment, and Management</article-title>,” <source>Frontiers in Pediatrics</source>
+<volume>6</volume> (<year>2018</year>): <elocation-id>33</elocation-id>.<pub-id pub-id-type="pmid">29520355</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fped.2018.00033</pub-id><pub-id pub-id-type="pmcid">PMC5827164</pub-id></mixed-citation></ref><ref id="hsr272289-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="hsr272289-cit-0005">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Vidal‐Fuentes</surname>
+</string-name>, “<article-title>Dolor, Emociones Y Locus Coeruleus</article-title>,” <source>Revista de la Sociedad Española del Dolor</source>
+<volume>28</volume>, no. <issue>5</issue> (<year>2021</year>): <fpage>247</fpage>–<lpage>249</lpage>, <pub-id pub-id-type="doi">10.20986/resed.2021.3965/2021</pub-id>.</mixed-citation></ref><ref id="hsr272289-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="hsr272289-cit-0006">
+<string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Zapata Diaz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Rendón‐Fonnegra</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. C.</given-names>
+<surname>Berrouet</surname>
+</string-name>, “<article-title>Síndrome de Abstinencia Neonatal</article-title>,” <source>Pediatría</source>
+<volume>50</volume>, no. <issue>2</issue> (<year>2017</year>): <fpage>52</fpage>–<lpage>57</lpage>, <pub-id pub-id-type="doi">10.14295/pediatr.v50i2.60</pub-id>.</mixed-citation></ref><ref id="hsr272289-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="hsr272289-cit-0007">
+<string-name name-style="western">
+<given-names>M. B.</given-names>
+<surname>Silva‐Montaño</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Ponce‐Alcocer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Sampedro‐Martillo</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>del</surname>
+</string-name> (<year>2022</year>) 2. Ciencia Latina Revista Científica Multidisciplinar, <volume>6</volume>(<issue>2</issue>), <fpage>3875</fpage>–<lpage>3892</lpage>. <pub-id pub-id-type="doi">10.37811/cl_rcm.v6i2.2135</pub-id>.</mixed-citation></ref><ref id="hsr272289-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="hsr272289-cit-0008">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Townsel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Truax</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Quaid</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Covault</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. C.</given-names>
+<surname>Dolinoy</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Goodrich</surname>
+</string-name>, “<article-title>Increased Risk of Severe Neonatal Opioid Withdrawal Syndrome in Pregnancies With Low Placental ABCB1 DNA Methylation</article-title>,” <source>Journal of Perinatology</source>
+<volume>45</volume>, no. <issue>3</issue> (<year>2025</year>): <fpage>458</fpage>–<lpage>464</lpage>, <pub-id pub-id-type="doi">10.1038/s41372-024-02060-9</pub-id>.<pub-id pub-id-type="pmid">39033231</pub-id>
+<pub-id pub-id-type="pmcid">PMC11743817</pub-id></mixed-citation></ref><ref id="hsr272289-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="hsr272289-cit-0009">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Roca</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Jarque</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Gomila</surname>
+</string-name>, et al., “<article-title>Características Clínicas y Factores de Riesgo Asociados a la Exposición Prenatal a Drogas De Abuso</article-title>,” <source>Anales de Pediatría</source>
+<volume>95</volume> (<year>2021</year>): <fpage>307</fpage>–<lpage>320</lpage>, <pub-id pub-id-type="doi">10.1016/j.anpedi.2020.08.003</pub-id>.<pub-id pub-id-type="pmid">33041240</pub-id>
+</mixed-citation></ref><ref id="hsr272289-bib-0010"><label>10</label><mixed-citation publication-type="miscellaneous" id="hsr272289-cit-0010">
+<collab collab-type="authors">American Academy of Pediatrics</collab>
+. (<year>2023</year>).</mixed-citation></ref><ref id="hsr272289-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="hsr272289-cit-0011">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Giovannini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. P.</given-names>
+<surname>Bonasoni</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Pascali</surname>
+</string-name>, et al., “<article-title>Fetal and Infant Effects of Maternal Opioid Use During Pregnancy: A Literature Review Including Clinical, Toxicological, Pharmacogenomic, and Epigenetic Aspects for Forensic Evaluation</article-title>,” <source>Children</source>
+<volume>11</volume>, no. <issue>3</issue> (<year>2024</year>): <elocation-id>278</elocation-id>.<pub-id pub-id-type="pmid">38539313</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/children11030278</pub-id><pub-id pub-id-type="pmcid">PMC10969201</pub-id></mixed-citation></ref><ref id="hsr272289-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="hsr272289-cit-0012">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Cortez</surname>
+</string-name> and <string-name name-style="western">
+<given-names>M. L.</given-names>
+<surname>Hudak</surname>
+</string-name>, “<article-title>Intrauterine Drug Exposure—What the Pediatrician Needs to Know. Part 1: General Overview, Transplacental Drug Transfer, Teratogenicity, and Fetal Alcohol Spectrum Disorder</article-title>,” <source>Current Treatment Options in Pediatrics</source>
+<volume>9</volume>, no. <issue>4</issue> (<year>2023</year>): <fpage>370</fpage>–<lpage>387</lpage>.</mixed-citation></ref><ref id="hsr272289-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="hsr272289-cit-0013">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Narvey</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Hamilton</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Paquette</surname>
+</string-name>, “<article-title>Manejo de Recién Nacidos en Riesgo de Síndrome de Abstinencia Neonatal (SAN)/Síndrome De Abstinencia Neonatal a Opioides (SNO): Actualizaciones y Mejores Prácticas Emergentes</article-title>,” <source>Pediatría y Salud Infantil</source>
+<volume>30</volume>, no. <issue>7</issue> (<year>2025</year>): <fpage>624</fpage>–<lpage>631</lpage>.</mixed-citation></ref><ref id="hsr272289-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="hsr272289-cit-0014">
+<string-name name-style="western">
+<given-names>C. E.</given-names>
+<surname>Margerison</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. H.</given-names>
+<surname>Roberts</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Gemmill</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Goldman‐Mellor</surname>
+</string-name>, “<article-title>Pregnancy‐ Associated Deaths due to Drugs, Suicide, and Homicide in the United States, 2010–2019</article-title>,” <source>Obstetrics and Gynecology</source>
+<volume>139</volume>, no. <issue>2</issue> (<year>2022</year>): <fpage>172</fpage>–<lpage>180</lpage>, <pub-id pub-id-type="doi">10.1097/AOG.0000000000004649</pub-id>.<pub-id pub-id-type="pmid">34991132</pub-id>
+<pub-id pub-id-type="pmcid">PMC8849543</pub-id></mixed-citation></ref><ref id="hsr272289-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="hsr272289-cit-0015">
+<string-name name-style="western">
+<given-names>J. T.</given-names>
+<surname>Bateman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. E.</given-names>
+<surname>Saunders</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>E. S. y</given-names>
+<surname>Levitt</surname>
+</string-name>, “<article-title>Comprensión y Lucha Contra La Depresión Respiratoria Inducida Por Opioides</article-title>,” <source>Revista Británica de Farmacología</source>
+<volume>180</volume>, no. <issue>7</issue> (<year>2023</year>): <fpage>813</fpage>–<lpage>828</lpage>.</mixed-citation></ref><ref id="hsr272289-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="hsr272289-cit-0016">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Luo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Lin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Wu</surname>
+</string-name>, et al., “<article-title>Trends and Associated Factors of HIV, HCV and Syphilis Infection Among Different Drug Users in the China–Vietnam Border Area: An 11‐year Cross‐Sectional Study (2010–2020)</article-title>,” <source>BMC Infectious Diseases</source>
+<volume>23</volume> (<year>2023</year>): <elocation-id>575</elocation-id>. <pub-id pub-id-type="doi">10.1186/s12879-023-08239-3</pub-id>.<pub-id pub-id-type="pmid">37667212</pub-id>
+<pub-id pub-id-type="pmcid">PMC10478360</pub-id></mixed-citation></ref><ref id="hsr272289-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="hsr272289-cit-0017">
+<string-name name-style="western">
+<given-names>S. W.</given-names>
+<surname>Patrick</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W. D.</given-names>
+<surname>Barfield</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. B.</given-names>
+<surname>Poindexter</surname>
+</string-name>, et al., <collab collab-type="authors">Committee on Fetus and Newborn</collab>
+., “<article-title>Neonatal Opioid Withdrawal Syndrome</article-title>,” <source>Pediatrics</source>
+<volume>146</volume>, no. <issue>5</issue> (<year>2020</year>): <elocation-id>e2020029074</elocation-id>, <pub-id pub-id-type="doi">10.1542/peds.2020-029074</pub-id>.<pub-id pub-id-type="pmid">33106341</pub-id>
+</mixed-citation></ref><ref id="hsr272289-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="hsr272289-cit-0018">
+<string-name name-style="western">
+<given-names>A. M.</given-names>
+<surname>Porcel‐Gálvez</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Ortega‐Martínez</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Barrrientos‐Trigo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Ferrinho‐Ferreira</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Martínez‐Lara</surname>
+</string-name>, “<article-title>Neonatal Abstinence Syndrome: Evolution over the Last Ten Years</article-title>,” <source>Enfermería Global</source>
+<volume>36</volume> (<year>2014</year>): <fpage>337</fpage>–<lpage>351</lpage>.</mixed-citation></ref><ref id="hsr272289-bib-0019"><label>19</label><mixed-citation publication-type="miscellaneous" id="hsr272289-cit-0019">
+<string-name name-style="western">
+<given-names>J. P. T.</given-names>
+<surname>Higgings</surname>
+</string-name> and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Green</surname>
+</string-name> (<year>2011</year>) Cochrane Handbook for Systematic Reviews of Interventions Version 5.1.0. The Cochrane Collaboration. <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://handbook.cochrane.org" ext-link-type="uri">handbook.cochrane.org</ext-link> [Accessed 19th Septmeber 2023].</mixed-citation></ref><ref id="hsr272289-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="hsr272289-cit-0020">
+<string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Davis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Shenberger</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Terrin</surname>
+</string-name>, et al., “<article-title>Comparison of Safety and Efficacy of Methadone vs Morphine for Treatment of Neonatal Abstinence Syndrome: A Randomized Clinical Trial</article-title>,” <source>JAMA Pediatrics</source>
+<volume>172</volume>, no. <issue>8</issue> (<year>2018</year>): <fpage>741</fpage>–<lpage>748</lpage>, <pub-id pub-id-type="doi">10.1001/jamapediatrics.2018.1307</pub-id>.<pub-id pub-id-type="pmid">29913015</pub-id>
+<pub-id pub-id-type="pmcid">PMC6142918</pub-id></mixed-citation></ref><ref id="hsr272289-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="hsr272289-cit-0021">
+<string-name name-style="western">
+<given-names>H. S.</given-names>
+<surname>Bada</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Sithisarn</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Gibson</surname>
+</string-name>, et al., “<article-title>Morphine Versus Clonidine for Neonatal Abstinence Syndrome</article-title>,” <source>Pediatrics</source>
+<volume>135</volume>, no. <issue>2</issue> (<year>2015</year>): <fpage>e383</fpage>–<lpage>e391</lpage>, <pub-id pub-id-type="doi">10.1542/peds.2014-2377</pub-id>.<pub-id pub-id-type="pmid">25624389</pub-id>
+</mixed-citation></ref><ref id="hsr272289-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="hsr272289-cit-0022">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Brusseau</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Burnette</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R. E.</given-names>
+<surname>Heidel</surname>
+</string-name>, “<article-title>Clonidine Versus Phenobarbital as Adjunctive Therapy for Neonatal Abstinence Syndrome</article-title>,” <source>Journal of Perinatology</source>
+<volume>40</volume> (<year>2020</year>): <fpage>1050</fpage>–<lpage>1055</lpage>, <pub-id pub-id-type="doi">10.1038/s41372-020-0685-2</pub-id>.<pub-id pub-id-type="pmid">32424335</pub-id>
+</mixed-citation></ref><ref id="hsr272289-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="hsr272289-cit-0023">
+<string-name name-style="western">
+<given-names>D. B.</given-names>
+<surname>Esposito</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. F.</given-names>
+<surname>Huybrechts</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. M.</given-names>
+<surname>Werler</surname>
+</string-name>, et al., “<article-title>Characteristics of Prescription Opioid Analgesics in Pregnancy and Risk of Neonatal Opioid Withdrawal Syndrome in Newborns</article-title>,” <source>JAMA Network Open</source>
+<volume>5</volume>, no. <issue>8</issue> (<year>2022</year>): <elocation-id>e2228588</elocation-id>, <pub-id pub-id-type="doi">10.1001/jamanetworkopen.2022.28588</pub-id>.<pub-id pub-id-type="pmid">36001312</pub-id>
+<pub-id pub-id-type="pmcid">PMC9403776</pub-id></mixed-citation></ref><ref id="hsr272289-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="hsr272289-cit-0024">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Dodds</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Koch</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Buitrago‐Mogollon</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Horstmann</surname>
+</string-name>, “<article-title>Successful Implementation of the Eat Sleep Console Model of Care for Infants With NAS in a Community Hospital</article-title>,” <source>Hospital Pediatrics</source>
+<volume>9</volume>, no. <issue>8</issue> (<year>2019</year>): <fpage>632</fpage>–<lpage>638</lpage>, <pub-id pub-id-type="doi">10.1542/hpeds.2019-0086</pub-id>.<pub-id pub-id-type="pmid">31340986</pub-id>
+</mixed-citation></ref><ref id="hsr272289-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="hsr272289-cit-0025">
+<string-name name-style="western">
+<given-names>M. T.</given-names>
+<surname>Favara</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Carola</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Jensen</surname>
+</string-name>, et al., “<article-title>Maternal Breast Milk Feeding and Length of Treatment in Infants With Neonatal Abstinence Syndrome</article-title>,” <source>Journal of Perinatology</source>
+<volume>39</volume>, no. <issue>6</issue> (<year>2019</year>): <fpage>876</fpage>–<lpage>882</lpage>, <pub-id pub-id-type="doi">10.1038/s41372-019-0374-1</pub-id>.<pub-id pub-id-type="pmid">30988400</pub-id>
+</mixed-citation></ref><ref id="hsr272289-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="hsr272289-cit-0026">
+<string-name name-style="western">
+<given-names>J. S.</given-names>
+<surname>Achilles</surname>
+</string-name> and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Castaneda‐Lovato</surname>
+</string-name>, “<article-title>A Quality Improvement Initiative to Improve the Care of Infants Born Exposed to Opioids by Implementing the Eat, Sleep, Console Assessment Tool</article-title>,” <source>Hospital Pediatrics</source>
+<volume>9</volume>, no. <issue>8</issue> (<year>2019</year>): <fpage>624</fpage>–<lpage>631</lpage>, <pub-id pub-id-type="doi">10.1542/hpeds.2019-0144</pub-id>.<pub-id pub-id-type="pmid">31358546</pub-id>
+</mixed-citation></ref><ref id="hsr272289-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="hsr272289-cit-0027">
+<string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Grossman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Lipshaw</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. R.</given-names>
+<surname>Osborn</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A. K.</given-names>
+<surname>Berkwitt</surname>
+</string-name>, “<article-title>A Novel Approach to Assessing Infants With Neonatal Abstinence Syndrome</article-title>,” <source>Hospital Pediatrics</source>
+<volume>8</volume>, no. <issue>1</issue> (<year>2018</year>): <fpage>1</fpage>–<lpage>6</lpage>, <pub-id pub-id-type="doi">10.1542/hpeds.2017-0128</pub-id>.<pub-id pub-id-type="pmid">29263121</pub-id>
+</mixed-citation></ref><ref id="hsr272289-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="hsr272289-cit-0028">
+<string-name name-style="western">
+<given-names>M. D.</given-names>
+<surname>Slymon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Simpson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Mullin</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Herendeen</surname>
+</string-name>, “<article-title>Eat Sleep Console for the Management of Neonatal Abstinence Syndrome: A Process and Outcomes Evaluation</article-title>,” <source>Journal of Pediatric Health Care</source>
+<volume>37</volume>, no. <issue>4</issue> (<year>2023</year>): <fpage>402</fpage>–<lpage>413</lpage>, <pub-id pub-id-type="doi">10.1016/j.pedhc.2023.01.006</pub-id>.<pub-id pub-id-type="pmid">36813652</pub-id>
+</mixed-citation></ref><ref id="hsr272289-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="hsr272289-cit-0029">
+<string-name name-style="western">
+<given-names>K. D. L.</given-names>
+<surname>MacMillan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T. M.</given-names>
+<surname>Morrison</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Melvin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Diop</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Gupta</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>E. M.</given-names>
+<surname>Wachman</surname>
+</string-name>, “<article-title>Impact of Coronavirus Disease‐2019 on Hospital Care for Neonatal Opioid Withdrawal Syndrome</article-title>,” <source>Journal of Pediatrics</source>
+<volume>245</volume> (<year>2022</year>): <fpage>47</fpage>–<lpage>55</lpage>, <pub-id pub-id-type="doi">10.1016/j.jpeds.2022.02.001</pub-id>.<pub-id pub-id-type="pmid">35131283</pub-id>
+<pub-id pub-id-type="pmcid">PMC8816795</pub-id></mixed-citation></ref><ref id="hsr272289-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="hsr272289-cit-0030">
+<string-name name-style="western">
+<given-names>A. A.</given-names>
+<surname>Amin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Frazie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. N.</given-names>
+<surname>Thompson</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A. A.</given-names>
+<surname>Patel</surname>
+</string-name>, “<article-title>Comparison Between Finnegan Scores and Eat Sleep Console Method for Detection and Management of Neonatal Abstinence Syndrome</article-title>,” <source>Pediatrics</source>
+<volume>149</volume>, no. <issue>1</issue> (<year>2022</year>): <elocation-id>657</elocation-id>.</mixed-citation></ref><ref id="hsr272289-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="hsr272289-cit-0031">
+<string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Pérez‐Jiménez</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Luque‐Oliveros</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Gonzalez‐Perez</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Rivera‐Sequeiros</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Rodriguez‐Blanco</surname>
+</string-name>, “<article-title>Does Immediate Skin‐to‐Skin Contact at Caesarean Sections Promote Uterine Contraction and Recovery of the Maternal Blood Haemoglobin Levels? A Randomized Clinical Trial</article-title>,” <source>Nursing Open</source>
+<volume>10</volume>, no. <issue>2</issue> (<year>2023</year>): <fpage>649</fpage>–<lpage>657</lpage>, <pub-id pub-id-type="doi">10.1002/nop2.1331</pub-id>.<pub-id pub-id-type="pmid">36166391</pub-id>
+<pub-id pub-id-type="pmcid">PMC9834552</pub-id></mixed-citation></ref><ref id="hsr272289-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="hsr272289-cit-0032">
+<string-name name-style="western">
+<given-names>L. J.</given-names>
+<surname>Chyi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. M.</given-names>
+<surname>Walsh</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. W.</given-names>
+<surname>Kuzniewicz</surname>
+</string-name>, “<article-title>Independent Impact of Eat, Sleep, Console Assessment on Neonatal Opioid Withdrawal Syndrome</article-title>,” <source>Clinical Pediatrics</source>
+<volume>63</volume>, no. <issue>1</issue> (<year>2024</year>): <fpage>1097</fpage>–<lpage>1105</lpage>, <pub-id pub-id-type="doi">10.1177/00099228231204448</pub-id>.<pub-id pub-id-type="pmid">37798943</pub-id>
+</mixed-citation></ref><ref id="hsr272289-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="hsr272289-cit-0033">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Blount</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Painter</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Freeman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Grossman</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A. G.</given-names>
+<surname>Sutton</surname>
+</string-name>, “<article-title>Reduction in Length of Stay and Morphine use for nas With the “Eat, Sleep, Console” Method</article-title>,” <source>Hospital Pediatrics</source>
+<volume>9</volume>, no. <issue>8</issue> (<year>2019</year>): <fpage>615</fpage>–<lpage>623</lpage>, <pub-id pub-id-type="doi">10.1542/hpeds.2018-0238</pub-id>.<pub-id pub-id-type="pmid">31285356</pub-id>
+</mixed-citation></ref><ref id="hsr272289-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="hsr272289-cit-0034">
+<string-name name-style="western">
+<given-names>H. E.</given-names>
+<surname>Jones</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Fielder</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>O'Grady</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L. M.</given-names>
+<surname>Jansson</surname>
+</string-name>, “<article-title>Comparative Effectiveness of Opioid Replacement Agents for Neonatal Opioid Withdrawal Syndrome: A Systematic Review and Meta‐Analysis</article-title>,” <source>Journal of Pediatric Pharmacology and Therapeutics</source>
+<volume>24</volume>, no. <issue>6</issue> (<year>2019</year>): <fpage>468</fpage>–<lpage>483</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41372-019-0437-3</pub-id><pub-id pub-id-type="pmcid">PMC7784556</pub-id><pub-id pub-id-type="pmid">31316147</pub-id></mixed-citation></ref><ref id="hsr272289-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="hsr272289-cit-0035">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Welch</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Stanton Tully</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Horan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Thomas</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Lien</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Barbato</surname>
+</string-name>, “<article-title>Quality Improvement Initiative to Impact Golden Hour Timeliness Using a Dedicated Delivery Team</article-title>,” <source>Journal of Perinatology</source>
+<volume>44</volume>, no. <issue>3</issue> (<year>2024</year>): <fpage>452</fpage>–<lpage>457</lpage>.<pub-id pub-id-type="pmid">37474753</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41372-023-01731-3</pub-id></mixed-citation></ref><ref id="hsr272289-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="hsr272289-cit-0036">
+<string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Brown</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. L.</given-names>
+<surname>Hudak</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R. C.</given-names>
+<surname>Tan</surname>
+</string-name>, “<article-title>Morphine Versus Methadone in the Management of Neonatal Opioid Withdrawal: Review and Recommendations</article-title>,” <source>Clinical Therapeutics</source>
+<volume>42</volume>, no. <issue>8</issue> (<year>2020</year>): <fpage>1360</fpage>–<lpage>1373</lpage>.</mixed-citation></ref><ref id="hsr272289-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="hsr272289-cit-0037">
+<string-name name-style="western">
+<given-names>L. M.</given-names>
+<surname>Jansson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Velez</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Harrow</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Williams</surname>
+</string-name>, “<article-title>Buprenorphine vs. Morphine for Neonatal Opioid Withdrawal Syndrome: Long‐Term Outcomes</article-title>,” <source>Journal of Perinatology</source>
+<volume>43</volume>, no. <issue>2</issue> (<year>2023</year>): <fpage>180</fpage>–<lpage>189</lpage>.</mixed-citation></ref><ref id="hsr272289-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="hsr272289-cit-0038">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Osborn</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Berkwitt</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Grossman</surname>
+</string-name>, “<article-title>Clonidine as an Adjunct Therapy for Neonatal Opioid Withdrawal Syndrome: A Review</article-title>,” <source>Neonatology</source>
+<volume>121</volume>, no. <issue>4</issue> (<year>2022</year>): <fpage>543</fpage>–<lpage>550</lpage>.</mixed-citation></ref><ref id="hsr272289-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="hsr272289-cit-0039">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Van Donge</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. H. J.</given-names>
+<surname>Krekels</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. N.</given-names>
+<surname>de Wildt</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Tibboel</surname>
+</string-name>, “<article-title>Pharmacokinetics and Pharmacodynamics in Neonates With Opioid Withdrawal: Toward Individualized Therapy</article-title>,” <source>Clinical Pharmacokinetics</source>
+<volume>60</volume>, no. <issue>6</issue> (<year>2021</year>): <fpage>733</fpage>–<lpage>749</lpage>.</mixed-citation></ref><ref id="hsr272289-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="hsr272289-cit-0040">
+<string-name name-style="western">
+<given-names>N. E.</given-names>
+<surname>Schubach</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Mehler</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Roth</surname>
+</string-name>, et al., “<article-title>Skin Conductance in Neonates Suffering From Abstinence Syndrome and Unexposed Newborns</article-title>,” <source>European Journal of Pediatrics</source>
+<volume>175</volume>, no. <issue>6</issue> (<year>2016</year>): <fpage>859</fpage>–<lpage>868</lpage>, <pub-id pub-id-type="doi">10.1007/s00431-016-2716-8</pub-id>.<pub-id pub-id-type="pmid">27026377</pub-id>
+</mixed-citation></ref><ref id="hsr272289-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="hsr272289-cit-0041">
+<string-name name-style="western">
+<given-names>A. W.</given-names>
+<surname>Manigault</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Sheinkopf</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. F.</given-names>
+<surname>Silverman</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>B. M.</given-names>
+<surname>Lester</surname>
+</string-name>, “<article-title>Newborn Cry Acoustics in the Assessment of Neonatal Opioid Withdrawal Syndrome Using Machine Learning</article-title>,” <source>JAMA Network Open</source>
+<volume>5</volume>, no. <issue>10</issue> (<year>2022</year>): <elocation-id>e2238783</elocation-id>, <pub-id pub-id-type="doi">10.1001/jamanetworkopen.2022.38783</pub-id>.<pub-id pub-id-type="pmid">36301544</pub-id>
+<pub-id pub-id-type="pmcid">PMC9614579</pub-id></mixed-citation></ref><ref id="hsr272289-bib-0042"><label>42</label><mixed-citation publication-type="journal" id="hsr272289-cit-0042">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Ryan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Moyer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Glait</surname>
+</string-name>, et al., “<article-title>Correlating Scores but Contrasting Outcomes for Eat Sleep Console Versus Modified Finnegan</article-title>,” <source>Hospital Pediatrics,</source>
+<volume>11</volume>, no. <issue>4</issue> (<year>2021</year>): <fpage>350</fpage>–<lpage>357</lpage>, <pub-id pub-id-type="doi">10.1542/hpeds.2020-003665</pub-id>.<pub-id pub-id-type="pmid">33653727</pub-id>
+</mixed-citation></ref><ref id="hsr272289-bib-0043"><label>43</label><mixed-citation publication-type="journal" id="hsr272289-cit-0043">
+<string-name name-style="western">
+<given-names>S. W.</given-names>
+<surname>Patrick</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. E.</given-names>
+<surname>Schumacher</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. D.</given-names>
+<surname>Benneyworth</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. E.</given-names>
+<surname>Krans</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>McAllister</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. M.</given-names>
+<surname>Davis</surname>
+</string-name>, “<article-title>Improving Care for Neonatal Opioid Withdrawal Syndrome</article-title>,” <source>Pediatrics</source>
+<volume>151</volume>, no. <issue>1</issue> (<year>2023</year>): <elocation-id>e2022059474</elocation-id>.37170760
+</mixed-citation></ref><ref id="hsr272289-bib-0044"><label>44</label><mixed-citation publication-type="miscellaneous" id="hsr272289-cit-0044">
+<string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Serlo</surname>,</string-name>
+<year>2025</year>,. Eat, Sleep, Console approach vs. conventional care for neonatal opioid withdrawal. National Organization for Opioid‐Exposed Children.</mixed-citation></ref><ref id="hsr272289-bib-0045"><label>45</label><mixed-citation publication-type="journal" id="hsr272289-cit-0045">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Lacroix</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Badr</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Serlo</surname>
+</string-name>, “<article-title>Eat, Sleep, Console Versus Traditional Scoring Systems in Neonatal Opioid Withdrawal Syndrome: Meta‐Analytic Evidence</article-title>,” <source>Frontiers in Pediatrics</source>
+<volume>12</volume> (<year>2024</year>): <elocation-id>1054321</elocation-id>.</mixed-citation></ref><ref id="hsr272289-bib-0046"><label>46</label><mixed-citation publication-type="journal" id="hsr272289-cit-0046">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Velez</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. M.</given-names>
+<surname>Jansson</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Harrow</surname>
+</string-name>, “<article-title>Retrospective Analysis of Outcomes in Neonatal Opioid Withdrawal Syndrome: Assessing the Role of Care Models</article-title>,” <source>Journal of Neonatal Nursing</source>
+<volume>29</volume>, no. <issue>1</issue> (<year>2023</year>): <fpage>45</fpage>–<lpage>52</lpage>.</mixed-citation></ref><ref id="hsr272289-bib-0047"><label>47</label><mixed-citation publication-type="journal" id="hsr272289-cit-0047">
+<string-name name-style="western">
+<given-names>D. L.</given-names>
+<surname>Bogen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. P.</given-names>
+<surname>Finnegan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L. M.</given-names>
+<surname>Jansson</surname>
+</string-name>, “<article-title>Early Postnatal Weight Changes in Opioid‐Exposed Infants Managed Using the FNASS Versus Eat, Sleep, Console</article-title>,” <source>Journal of Perinatology</source>
+<volume>42</volume>, no. <issue>5</issue> (<year>2022</year>): <fpage>856</fpage>–<lpage>864</lpage>.35031691
+</mixed-citation></ref><ref id="hsr272289-bib-0048"><label>48</label><mixed-citation publication-type="journal" id="hsr272289-cit-0048">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Jurado‐Montoro</surname>
+</string-name>, “<article-title>Análisis de Drogas de Abuso en Muestras de Pelo. Diagnóstico del Consumo Crónico</article-title>,” <source>Trastornos Adictivos</source>
+<volume>9</volume>, no. <issue>3</issue> (<year>2007</year>): <fpage>172</fpage>–<lpage>183</lpage>, <pub-id pub-id-type="doi">10.1016/S1575-0973(07)75644-1</pub-id>.</mixed-citation></ref><ref id="hsr272289-bib-0049"><label>49</label><mixed-citation publication-type="journal" id="hsr272289-cit-0049">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Narbona‐López</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Contreras‐Chova</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>García‐Iglesias</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Miras‐Baldo</surname>
+</string-name>, “<article-title>Pain Management in the Newborn</article-title>,” <source>Protocolos Diagnóstico Terapeúticos de la AEP: Neonatología</source>
+<volume>1</volume> (<year>2008</year>): <fpage>461</fpage>–<lpage>469</lpage>.</mixed-citation></ref></ref-list></back></article>

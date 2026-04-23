@@ -1,0 +1,557 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="hsr272097" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Health Sci Rep</journal-id><journal-id journal-id-type="iso-abbrev">Health Sci Rep</journal-id><journal-id journal-id-type="pmc-domain-id">3569</journal-id><journal-id journal-id-type="pmc-domain">hscirep</journal-id><journal-id journal-id-type="publisher-id">HSR2</journal-id><journal-title-group><journal-title>Health Science Reports</journal-title></journal-title-group><issn pub-type="epub">2398-8835</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13086624</article-id><article-id pub-id-type="pmcid-ver">PMC13086624.1</article-id><article-id pub-id-type="pmcaid">13086624</article-id><article-id pub-id-type="pmcaiid">13086624</article-id><article-id pub-id-type="pmid">42005634</article-id><article-id pub-id-type="doi">10.1002/hsr2.72097</article-id><article-id pub-id-type="publisher-id">HSR272097</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Systematic Review</subject></subj-group><subj-group subj-group-type="heading"><subject>Systematic Review</subject></subj-group></article-categories><title-group><article-title>Knowledge, Attitude, and Practice Toward Diabetic Retinopathy Among People With Diabetes: A Systematic Review and Meta‐Analysis</article-title></title-group><contrib-group><contrib id="hsr272097-cr-0001" contrib-type="author"><name name-style="western"><surname>Marouzi</surname><given-names initials="P">Parviz</given-names></name><xref rid="hsr272097-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="hsr272097-cr-0002" contrib-type="author"><name name-style="western"><surname>Mousavi Baigi</surname><given-names initials="SF">Seyyedeh Fatemeh</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-2214-0077</contrib-id><xref rid="hsr272097-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><xref rid="hsr272097-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="hsr272097-cr-0003" contrib-type="author" corresp="yes"><name name-style="western"><surname>Fereydouni</surname><given-names initials="F">Firouzeh</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0005-9523-8971</contrib-id><xref rid="hsr272097-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>FereydouniF4011@mums.ac.ir</email></address></contrib><contrib id="hsr272097-cr-0004" contrib-type="author"><name name-style="western"><surname>Hemmatian Rabbani</surname><given-names initials="Z">Zahra</given-names></name><xref rid="hsr272097-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="hsr272097-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="hsr272097-cr-0005" contrib-type="author"><name name-style="western"><surname>Haghighi</surname><given-names initials="B">Batoul</given-names></name><xref rid="hsr272097-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="hsr272097-cr-0006" contrib-type="author"><name name-style="western"><surname>Shariati Moghaddam</surname><given-names initials="R">Reyhaneh</given-names></name><xref rid="hsr272097-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib></contrib-group><aff id="hsr272097-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">School of Paramedical Sciences</named-content>
+<institution>Mashhad University of Medical Science</institution>
+<city>Mashhad</city>
+<country country="IR">Iran</country>
+</aff><aff id="hsr272097-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Department of Health Information Technology, School of Paramedical and Rehabilitation Sciences</named-content>
+<institution>Mashhad University of Medical Sciences</institution>
+<city>Mashhad</city>
+<country country="IR">Iran</country>
+</aff><aff id="hsr272097-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Student Research Committee</named-content>
+<institution>Mashhad University of Medical Sciences</institution>
+<city>Mashhad</city>
+<country country="IR">Iran</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold> Firouzeh Fereydouni (<email>FereydouniF4011@mums.ac.ir</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>16</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>9</volume><issue seq="20">4</issue><issue-id pub-id-type="pmc-issue-id">510729</issue-id><issue-id pub-id-type="doi">10.1002/hsr2.v9.4</issue-id><elocation-id>e72097</elocation-id><history><date date-type="rev-recd"><day>31</day><month>1</month><year>2026</year></date><date date-type="received"><day>16</day><month>10</month><year>2025</year></date><date date-type="accepted"><day>07</day><month>3</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>16</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>18</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-20 15:25:19.677"><day>20</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Health Science Reports</italic> published by Wiley Periodicals LLC.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="HSR2-9-e72097.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:HSR2-9-e72097.pdf"/><abstract><title>ABSTRACT</title><sec id="hsr272097-sec-0010"><title>Purpose</title><p>This systematic review and meta‐analysis aimed to evaluate the levels of Knowledge, Attitude, and Practice (KAP) regarding Diabetic Retinopathy (DR) among people with diabetes and to explore demographic and contextual factors influencing these components.</p></sec><sec id="hsr272097-sec-0020"><title>Methods</title><p>Following the PRISMA guidelines, we conducted a comprehensive search of PubMed, ScienceDirect, Cochrane Library, and Google Scholar, with no time restriction (updated to 2025). We included 29 questionnaire‐based cross‐sectional studies comprising 14,830 participants. Study quality was assessed using the AXIS tool. Data were analyzed using Comprehensive Meta‐Analysis (CMA) and OpenMeta [Analyst] software with a random‐effects model.</p></sec><sec id="hsr272097-sec-0030"><title>Results</title><p>The pooled prevalence of good knowledge, positive attitude, and good practice toward DR was 43.1%, 49.6%, and 40.0%, respectively. Subgroup analysis revealed higher KAP levels in high‐income countries compared to low‐ and middle‐income countries. Meta‐regression showed a statistically significant but minimal effect of positive attitude on good practice (<italic toggle="yes">p</italic> &lt; 0.001), while knowledge was not significantly associated with attitude (<italic toggle="yes">p</italic> = 0.737) or practice (<italic toggle="yes">p</italic> = 0.190).</p></sec><sec id="hsr272097-sec-0040"><title>Conclusion</title><p>KAP levels regarding DR remain suboptimal globally. Tailored, context‐specific interventions are essential to improve awareness and preventive behaviors, especially in resource‐limited settings.</p></sec></abstract><kwd-group><kwd id="hsr272097-kwd-0001">attitude</kwd><kwd id="hsr272097-kwd-0002">diabetic retinopathy</kwd><kwd id="hsr272097-kwd-0003">knowledge</kwd><kwd id="hsr272097-kwd-0004">meta‐analysis</kwd><kwd id="hsr272097-kwd-0005">practice</kwd><kwd id="hsr272097-kwd-0006">systematic review</kwd></kwd-group><counts><fig-count count="9"/><table-count count="3"/><page-count count="12"/><word-count count="5407"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:17.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec id="hsr272097-sec-0050"><label>1</label><title>Introduction</title><p>Diabetes mellitus (DM) has emerged as one of the most pressing global health challenges, contributing substantially to morbidity, disability, and economic burden worldwide [<xref rid="hsr272097-bib-0001" ref-type="bibr">1</xref>]. According to the World Health Organization (WHO), approximately 422 million people were living with DM in 2014—a figure projected to rise to 592 million by 2035 and 700 million by 2045 [<xref rid="hsr272097-bib-0002" ref-type="bibr">2</xref>, <xref rid="hsr272097-bib-0003" ref-type="bibr">3</xref>, <xref rid="hsr272097-bib-0004" ref-type="bibr">4</xref>]. The Middle East and North Africa (MENA) region reported the highest global prevalence in 2019 at 12.2%, with estimates suggesting a 96% increase by 2045 [<xref rid="hsr272097-bib-0004" ref-type="bibr">4</xref>]. Diabetes‐related complications not only reduce patients' quality of life but also impose significant costs on healthcare systems and societies at large [<xref rid="hsr272097-bib-0005" ref-type="bibr">5</xref>, <xref rid="hsr272097-bib-0006" ref-type="bibr">6</xref>].</p><p>One of the most serious complications of DM is diabetic retinopathy (DR), a microvascular condition that affects up to 35% of individuals with diabetes and represents a major cause of preventable blindness [<xref rid="hsr272097-bib-0001" ref-type="bibr">1</xref>, <xref rid="hsr272097-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr272097-bib-0008" ref-type="bibr">8</xref>]. In 2020, an estimated 103 million adults were affected by DR worldwide, with this number expected to increase to 160 million by 2045 [<xref rid="hsr272097-bib-0007" ref-type="bibr">7</xref>]. The disease progresses silently and often remains asymptomatic until irreversible visual damage occurs [<xref rid="hsr272097-bib-0001" ref-type="bibr">1</xref>, <xref rid="hsr272097-bib-0009" ref-type="bibr">9</xref>]. DR is estimated to account for 4.8% of global blindness, affecting over 4 million individuals globally [<xref rid="hsr272097-bib-0006" ref-type="bibr">6</xref>, <xref rid="hsr272097-bib-0010" ref-type="bibr">10</xref>].</p><p>Preventing vision loss due to DR requires more than clinical screening; it demands active patient participation and health‐seeking behavior. In this context, the Knowledge, Attitude, and Practice (KAP) model provides a behavioral framework for understanding how awareness and beliefs shape health‐related actions [<xref rid="hsr272097-bib-0011" ref-type="bibr">11</xref>]. According to this model, increased knowledge can foster positive attitudes, which in turn may promote appropriate health practices. However, KAP levels related to DR vary widely across populations and are influenced by sociodemographic factors such as age, gender, education, income, and occupation [<xref rid="hsr272097-bib-0001" ref-type="bibr">1</xref>, <xref rid="hsr272097-bib-0005" ref-type="bibr">5</xref>, <xref rid="hsr272097-bib-0006" ref-type="bibr">6</xref>, <xref rid="hsr272097-bib-0009" ref-type="bibr">9</xref>, <xref rid="hsr272097-bib-0012" ref-type="bibr">12</xref>, <xref rid="hsr272097-bib-0013" ref-type="bibr">13</xref>, <xref rid="hsr272097-bib-0014" ref-type="bibr">14</xref>, <xref rid="hsr272097-bib-0015" ref-type="bibr">15</xref>, <xref rid="hsr272097-bib-0016" ref-type="bibr">16</xref>, <xref rid="hsr272097-bib-0017" ref-type="bibr">17</xref>, <xref rid="hsr272097-bib-0018" ref-type="bibr">18</xref>, <xref rid="hsr272097-bib-0019" ref-type="bibr">19</xref>, <xref rid="hsr272097-bib-0020" ref-type="bibr">20</xref>, <xref rid="hsr272097-bib-0021" ref-type="bibr">21</xref>, <xref rid="hsr272097-bib-0022" ref-type="bibr">22</xref>, <xref rid="hsr272097-bib-0023" ref-type="bibr">23</xref>, <xref rid="hsr272097-bib-0024" ref-type="bibr">24</xref>, <xref rid="hsr272097-bib-0025" ref-type="bibr">25</xref>, <xref rid="hsr272097-bib-0026" ref-type="bibr">26</xref>, <xref rid="hsr272097-bib-0027" ref-type="bibr">27</xref>, <xref rid="hsr272097-bib-0028" ref-type="bibr">28</xref>, <xref rid="hsr272097-bib-0029" ref-type="bibr">29</xref>].</p><p>Importantly, research increasingly highlights a disconnect between knowledge and practice, where awareness of DR does not consistently translate into preventive behaviors [<xref rid="hsr272097-bib-0005" ref-type="bibr">5</xref>, <xref rid="hsr272097-bib-0006" ref-type="bibr">6</xref>, <xref rid="hsr272097-bib-0015" ref-type="bibr">15</xref>, <xref rid="hsr272097-bib-0023" ref-type="bibr">23</xref>]. This knowledge–practice gap may stem from systemic barriers, cultural beliefs, limited health literacy, or unequal access to healthcare services—particularly in low‐resource settings.</p><p>Given the growing burden of DR and the wide variability in KAP levels across populations, a comprehensive synthesis of existing evidence is essential. Therefore, this systematic review and meta‐analysis aims to:
+<list list-type="simple"><list-item><label>1.</label><p>Estimate the pooled prevalence of knowledge, attitude, and practice regarding DR among diabetic individuals.</p></list-item><list-item><label>2.</label><p>Explore how demographic and contextual factors influence these outcomes.</p></list-item><list-item><label>3.</label><p>Identify gaps and disparities to inform targeted interventions that improve early detection, disease management, and ultimately reduce the socioeconomic burden associated with DR.</p></list-item></list>
+</p></sec><sec sec-type="materials-and-methods" id="hsr272097-sec-0060"><label>2</label><title>Materials and Methods</title><sec id="hsr272097-sec-0070"><label>2.1</label><title>Study Design</title><p>This systematic review and meta‐analysis were conducted in accordance with the Preferred Reporting Items for Systematic Reviews and Meta‐Analyses (PRISMA 2020) guidelines. The study was designed based on the PICO framework, wherein the population included diabetic patients, the intervention or exposure involved good knowledge and positive attitude toward DR, the comparator comprised individuals with poor or no knowledge and attitude, and the outcome focused on the adoption of preventive practices regarding DR.</p></sec><sec id="hsr272097-sec-0080"><label>2.2</label><title>Search Strategy</title><p>A comprehensive and unrestricted search strategy was employed across four major databases: PubMed, ScienceDirect, Cochrane Library, and Google Scholar. The search combined both Medical Subject Headings (MeSH) and free‐text terms such as “diabetic retinopathy,” “DR,” “diabetes mellitus,” “DM,” “Knowledge, Attitude, Practice,” “KAP study,” and “KAP toward diabetic retinopathy,” using Boolean operators “AND” and “OR.” The search was last updated in 2025. To ensure completeness, reference lists of all included studies were manually screened by two independent reviewers.</p></sec><sec id="hsr272097-sec-0090"><label>2.3</label><title>Inclusion and Exclusion Criteria</title><p>Studies were eligible for inclusion if they were original, questionnaire‐based, cross‐sectional investigations that assessed at least one component of the KAP framework related to DR among diabetic patients, and if they provided extractable quantitative data. Only English‐language articles were included. Studies were excluded if they were reviews, editorials, conference abstracts, or lacked sufficient data for meta‐analysis. Titles and abstracts were independently screened by two reviewers, followed by full‐text review. Disagreements were resolved through discussion with a third reviewer.</p></sec><sec id="hsr272097-sec-0100"><label>2.4</label><title>Quality Assessment</title><p>The quality of the included studies was assessed using the Critical Appraisal Skills Programme (CASP) checklist for qualitative studies. Only studies scoring more than 11 out of 20 were included in the meta‐analysis, ensuring the inclusion of methodologically robust studies and minimizing the risk of bias in pooled estimates.</p></sec><sec id="hsr272097-sec-0110"><label>2.5</label><title>Data Extraction</title><p>Data extraction was conducted independently by two authors using a standardized form. Extracted data included: first author, publication year, country of origin, income classification (based on World Bank criteria), study design, sample size, mean age of participants, and the reported proportions of patients with good knowledge, positive attitude, and good practice regarding DR. Where possible, information on the questionnaire type and healthcare setting was also collected.</p></sec><sec id="hsr272097-sec-0120"><label>2.6</label><title>Statistical Analysis</title><p>Statistical analyses were conducted using Comprehensive Meta‐Analysis (CMA) software version 3.7z and OpenMeta[Analyst]. A random‐effects model (DerSimonian and Laird method) was applied to account for heterogeneity among studies. Pooled prevalence estimates with 95% confidence intervals (CIs) were calculated separately for each KAP domain. Heterogeneity was assessed using Cochran's Q test, <italic toggle="yes">I</italic>² statistic, and Tau² value.</p></sec><sec id="hsr272097-sec-0130"><label>2.7</label><title>Subgroup, Meta‐Regression, and Bias Analysis</title><p>To further explore variability across studies, subgroup analyses were performed based on the income level of the country (high‐income vs. low‐ and middle‐income countries). Additionally, meta‐regression was used to examine the potential moderating effect of mean participant age on KAP outcomes. Publication bias was assessed through funnel plot inspection and Begg and Mazumdar's rank correlation test. Sensitivity analyses were performed by sequentially excluding individual studies to test the robustness of the findings.</p></sec></sec><sec sec-type="results" id="hsr272097-sec-0140"><label>3</label><title>Results</title><sec id="hsr272097-sec-0150"><label>3.1</label><title>Article Selection Process</title><p>A total of 1290 articles were initially retrieved from various databases, including PubMed, ScienceDirect, Cochrane Library, and Google Scholar. Following a screening of titles and abstracts, 65 studies were selected for further assessment. After excluding duplicates (6 studies), dissertations (5 studies), non‐English papers (1 study), and those with unavailable full‐texts (19 studies), 29 eligible studies were included in the final analysis. These studies involved a combined sample of 14,830 participants, as detailed in Table <xref rid="hsr272097-tbl-0001" ref-type="table">1</xref>. The article selection process is illustrated in Figure <xref rid="hsr272097-fig-0001" ref-type="fig">1</xref>. All included studies were retrospective, descriptive, cross‐sectional, and questionnaire‐based.</p><table-wrap position="float" id="hsr272097-tbl-0001" content-type="Table" orientation="portrait"><label>Table 1</label><caption><p>Basic study available information.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Study_ID</th><th align="center" valign="bottom" rowspan="1" colspan="1">Year</th><th align="center" valign="bottom" rowspan="1" colspan="1">N_events</th><th align="center" valign="bottom" rowspan="1" colspan="1">N_total</th><th align="center" valign="bottom" rowspan="1" colspan="1">Country</th><th align="center" valign="bottom" rowspan="1" colspan="1">Mean age</th><th align="center" valign="bottom" rowspan="1" colspan="1">Type of study</th><th align="center" valign="bottom" rowspan="1" colspan="1">Study design</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Rani et al. [<xref rid="hsr272097-bib-0026" ref-type="bibr">26</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2008</td><td align="center" valign="top" rowspan="1" colspan="1">735</td><td align="center" valign="top" rowspan="1" colspan="1">1938</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">29</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Al Zarea et al. [<xref rid="hsr272097-bib-0014" ref-type="bibr">14</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2016</td><td align="center" valign="top" rowspan="1" colspan="1">332</td><td align="center" valign="top" rowspan="1" colspan="1">439</td><td align="center" valign="top" rowspan="1" colspan="1">HIC</td><td align="center" valign="top" rowspan="1" colspan="1">49.3</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Al‐Mulla et al. [<xref rid="hsr272097-bib-0009" ref-type="bibr">9</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2017</td><td align="center" valign="top" rowspan="1" colspan="1">255</td><td align="center" valign="top" rowspan="1" colspan="1">479</td><td align="center" valign="top" rowspan="1" colspan="1">HIC</td><td align="center" valign="top" rowspan="1" colspan="1">45.34</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Srinivasan et al. [<xref rid="hsr272097-bib-0028" ref-type="bibr">28</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2017</td><td align="center" valign="top" rowspan="1" colspan="1">76</td><td align="center" valign="top" rowspan="1" colspan="1">288</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">56.64</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Alhabdan et al. [<xref rid="hsr272097-bib-0006" ref-type="bibr">6</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2018</td><td align="center" valign="top" rowspan="1" colspan="1">1773</td><td align="center" valign="top" rowspan="1" colspan="1">2145</td><td align="center" valign="top" rowspan="1" colspan="1">HIC</td><td align="center" valign="top" rowspan="1" colspan="1">54.14</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Phadnis et al. [<xref rid="hsr272097-bib-0024" ref-type="bibr">24</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2018</td><td align="center" valign="top" rowspan="1" colspan="1">355</td><td align="center" valign="top" rowspan="1" colspan="1">455</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">55.4</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">AlHargan et al. [<xref rid="hsr272097-bib-0016" ref-type="bibr">16</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2019</td><td align="center" valign="top" rowspan="1" colspan="1">215</td><td align="center" valign="top" rowspan="1" colspan="1">280</td><td align="center" valign="top" rowspan="1" colspan="1">HIC</td><td align="center" valign="top" rowspan="1" colspan="1">58.9</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Fatima et al. [<xref rid="hsr272097-bib-0020" ref-type="bibr">20</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2019</td><td align="center" valign="top" rowspan="1" colspan="1">27</td><td align="center" valign="top" rowspan="1" colspan="1">70</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Gohari et al. [<xref rid="hsr272097-bib-0021" ref-type="bibr">21</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2019</td><td align="center" valign="top" rowspan="1" colspan="1">66</td><td align="center" valign="top" rowspan="1" colspan="1">732</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Ali Raza [<xref rid="hsr272097-bib-0029" ref-type="bibr">29</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2019</td><td align="center" valign="top" rowspan="1" colspan="1">86</td><td align="center" valign="top" rowspan="1" colspan="1">351</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">52</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Ahmed et al. [<xref rid="hsr272097-bib-0005" ref-type="bibr">5</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2020</td><td align="center" valign="top" rowspan="1" colspan="1">242</td><td align="center" valign="top" rowspan="1" colspan="1">623</td><td align="center" valign="top" rowspan="1" colspan="1">HIC</td><td align="center" valign="top" rowspan="1" colspan="1">46.62</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Al‐Asbali et al. [<xref rid="hsr272097-bib-0015" ref-type="bibr">15</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2020</td><td align="center" valign="top" rowspan="1" colspan="1">188</td><td align="center" valign="top" rowspan="1" colspan="1">200</td><td align="center" valign="top" rowspan="1" colspan="1">HIC</td><td align="center" valign="top" rowspan="1" colspan="1">52.8</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Al‐Yahya et al. [<xref rid="hsr272097-bib-0001" ref-type="bibr">1</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2020</td><td align="center" valign="top" rowspan="1" colspan="1">166</td><td align="center" valign="top" rowspan="1" colspan="1">313</td><td align="center" valign="top" rowspan="1" colspan="1">HIC</td><td align="center" valign="top" rowspan="1" colspan="1">52.8</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Sharma et al. [<xref rid="hsr272097-bib-0027" ref-type="bibr">27</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2020</td><td align="center" valign="top" rowspan="1" colspan="1">215</td><td align="center" valign="top" rowspan="1" colspan="1">300</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">50.3</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Assem A.S. [<xref rid="hsr272097-bib-0030" ref-type="bibr">30</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2020</td><td align="center" valign="top" rowspan="1" colspan="1">110</td><td align="center" valign="top" rowspan="1" colspan="1">230</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">49</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Abel et al. [<xref rid="hsr272097-bib-0012" ref-type="bibr">12</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2021</td><td align="center" valign="top" rowspan="1" colspan="1">70</td><td align="center" valign="top" rowspan="1" colspan="1">150</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">55.07</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Aly et al. [<xref rid="hsr272097-bib-0017" ref-type="bibr">17</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2021</td><td align="center" valign="top" rowspan="1" colspan="1">389</td><td align="center" valign="top" rowspan="1" colspan="1">794</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Farooq et al. [<xref rid="hsr272097-bib-0019" ref-type="bibr">19</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2021</td><td align="center" valign="top" rowspan="1" colspan="1">30</td><td align="center" valign="top" rowspan="1" colspan="1">72</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">47.5</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Javaeed et al. [<xref rid="hsr272097-bib-0022" ref-type="bibr">22</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2021</td><td align="center" valign="top" rowspan="1" colspan="1">7</td><td align="center" valign="top" rowspan="1" colspan="1">130</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Zhai et al. [<xref rid="hsr272097-bib-0025" ref-type="bibr">25</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2022</td><td align="center" valign="top" rowspan="1" colspan="1">364</td><td align="center" valign="top" rowspan="1" colspan="1">1662</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">61.87</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Aly A.A. [<xref rid="hsr272097-bib-0018" ref-type="bibr">18</xref>].</td><td align="center" valign="top" rowspan="1" colspan="1">2022</td><td align="center" valign="top" rowspan="1" colspan="1">7</td><td align="center" valign="top" rowspan="1" colspan="1">120</td><td align="center" valign="top" rowspan="1" colspan="1">HIC</td><td align="center" valign="top" rowspan="1" colspan="1">38.201</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Keesara [<xref rid="hsr272097-bib-0031" ref-type="bibr">31</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2022</td><td align="center" valign="top" rowspan="1" colspan="1">56</td><td align="center" valign="top" rowspan="1" colspan="1">196</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">59.89</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Ahmed et al. [<xref rid="hsr272097-bib-0013" ref-type="bibr">13</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2023</td><td align="center" valign="top" rowspan="1" colspan="1">5</td><td align="center" valign="top" rowspan="1" colspan="1">136</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">48.91</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Nemivant et al. [<xref rid="hsr272097-bib-0023" ref-type="bibr">23</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2023</td><td align="center" valign="top" rowspan="1" colspan="1">69</td><td align="center" valign="top" rowspan="1" colspan="1">200</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">64</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Eldin Saad N.S. [<xref rid="hsr272097-bib-0032" ref-type="bibr">32</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2023</td><td align="center" valign="top" rowspan="1" colspan="1">14</td><td align="center" valign="top" rowspan="1" colspan="1">140</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">49.21</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Alghahtani T.F. [<xref rid="hsr272097-bib-0007" ref-type="bibr">7</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2023</td><td align="center" valign="top" rowspan="1" colspan="1">736</td><td align="center" valign="top" rowspan="1" colspan="1">1391</td><td align="center" valign="top" rowspan="1" colspan="1">HIC</td><td align="center" valign="top" rowspan="1" colspan="1">39.4</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">R. Bsharat [<xref rid="hsr272097-bib-0033" ref-type="bibr">33</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2024</td><td align="center" valign="top" rowspan="1" colspan="1">30</td><td align="center" valign="top" rowspan="1" colspan="1">50</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">54</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Achar A. [<xref rid="hsr272097-bib-0034" ref-type="bibr">34</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2024</td><td align="center" valign="top" rowspan="1" colspan="1">42</td><td align="center" valign="top" rowspan="1" colspan="1">82</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Vasudevan S. [<xref rid="hsr272097-bib-0035" ref-type="bibr">35</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2024</td><td align="center" valign="top" rowspan="1" colspan="1">416</td><td align="center" valign="top" rowspan="1" colspan="1">500</td><td align="center" valign="top" rowspan="1" colspan="1">HIC</td><td align="center" valign="top" rowspan="1" colspan="1">39.7</td><td align="left" valign="top" rowspan="1" colspan="1">Original, questionnaire‐based</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative</td></tr></tbody></table><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><fig position="float" fig-type="Figure" id="hsr272097-fig-0001" orientation="portrait"><label>Figure 1</label><caption><p>PRISMA flowchart describing the selection of articles.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="HSR2-9-e72097-g004.jpg"/></fig></sec><sec id="hsr272097-sec-0160"><label>3.2</label><title>Demographic Characteristics of Participants</title><p>The meta‐analysis included 14,830 participants, with a nearly equal gender distribution: 49.24% male and 50.76% female. The mean age of participants was 50.42 ± 8.08 years, with the youngest participant being 18 years old and the oldest being 92 years old. Participants represented a wide range of educational and socioeconomic backgrounds, reflecting a diverse study population. Detailed demographic and clinical characteristics of the study population are presented in Table <xref rid="hsr272097-tbl-0002" ref-type="table">2</xref>.</p><table-wrap position="float" id="hsr272097-tbl-0002" content-type="Table" orientation="portrait"><label>Table 2</label><caption><p>Demographic characteristics of the study population.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="left" colspan="2" valign="bottom" rowspan="1">Variable</th><th align="center" valign="bottom" rowspan="1" colspan="1">Frequency (%)</th></tr></thead><tbody valign="top"><tr><td valign="middle" rowspan="3" align="left" colspan="1">Age (years)</td><td align="center" valign="top" rowspan="1" colspan="1">&lt; 30 years</td><td align="center" valign="top" rowspan="1" colspan="1">23.61</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">30–60 years</td><td align="center" valign="top" rowspan="1" colspan="1">57.91</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">&gt; 60 years</td><td align="center" valign="top" rowspan="1" colspan="1">18.48</td></tr><tr><td valign="middle" rowspan="2" align="left" colspan="1">Gender</td><td align="center" valign="top" rowspan="1" colspan="1">Male</td><td align="center" valign="top" rowspan="1" colspan="1">49.24</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">Female</td><td align="center" valign="top" rowspan="1" colspan="1">50.76</td></tr><tr><td valign="middle" rowspan="3" align="left" colspan="1">Literacy level</td><td align="center" valign="top" rowspan="1" colspan="1">Illiterate or primary education</td><td align="center" valign="top" rowspan="1" colspan="1">42.80</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">Secondary education or high school</td><td align="center" valign="top" rowspan="1" colspan="1">29.27</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">Post‐graduation</td><td align="center" valign="top" rowspan="1" colspan="1">27.84</td></tr><tr><td valign="middle" rowspan="2" align="left" colspan="1">Economic level</td><td align="center" valign="top" rowspan="1" colspan="1">LMIC</td><td align="center" valign="top" rowspan="1" colspan="1">43.59</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">HIC</td><td align="center" valign="top" rowspan="1" colspan="1">56.41</td></tr><tr><td valign="middle" rowspan="3" align="left" colspan="1">Diabetes duration</td><td align="center" valign="top" rowspan="1" colspan="1">&lt; 5 years</td><td align="center" valign="top" rowspan="1" colspan="1">28.46</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">5–10 years</td><td align="center" valign="top" rowspan="1" colspan="1">31.48</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">&gt; 10 years</td><td align="center" valign="top" rowspan="1" colspan="1">40.06</td></tr><tr><td valign="middle" rowspan="3" align="left" colspan="1">Type of diabetes</td><td align="center" valign="top" rowspan="1" colspan="1">Type I</td><td align="center" valign="top" rowspan="1" colspan="1">10.32</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">Type II</td><td align="center" valign="top" rowspan="1" colspan="1">73.86</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">Don't know</td><td align="center" valign="top" rowspan="1" colspan="1">15.82</td></tr></tbody></table><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap></sec><sec id="hsr272097-sec-0170"><label>3.3</label><title>Meta‐Analysis of Knowledge Regarding DR</title><p>A total of 25 studies comprising 13,734 diabetic individuals were included to estimate the pooled prevalence of good knowledge about DR. Due to the high variability among studies, a random‐effects model was applied. The pooled prevalence was 41.5% (95% CI: 31.0%–52.0%, <italic toggle="yes">p</italic>&lt; 0.001), as shown in Figure <xref rid="hsr272097-fig-0002" ref-type="fig">2</xref>.</p><fig position="float" fig-type="Figure" id="hsr272097-fig-0002" orientation="portrait"><label>Figure 2</label><caption><p>Forest plot illustrating the pooled prevalence of good knowledge about DR among diabetic patients (25 studies). High heterogeneity was observed across studies (<italic toggle="yes">I</italic>² = 99.48%). The heterogeneity assessment showed significant variation across studies (<italic toggle="yes">I</italic>² = 99.48%, Cochran's Q = 4653.10, df = 24, <italic toggle="yes">p</italic> &lt; 0.001), with a Tau² of 0.071, indicating a high level of between‐study variance. These results suggest that knowledge levels differ markedly between populations and settings, underscoring the need for tailored educational interventions.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="HSR2-9-e72097-g005.jpg"/></fig><sec id="hsr272097-sec-0180"><label>3.3.1</label><title>Subgroup Analysis Based on Country Income Level</title><p>Subgroup analysis based on World Bank income classification revealed disparities. The pooled prevalence of good knowledge was 56.3% (95% CI: 37.5%–75.0%) in high‐income countries (HICs) and 34.4% (95% CI: 24.1%–44.8%) in low‐ and middle‐income countries (LMICs), both with significant heterogeneity (<italic toggle="yes">I</italic>² &gt; 99%). These findings emphasize income‐level inequities in DR awareness and the urgent need for equity‐focused health education.</p></sec><sec id="hsr272097-sec-0190"><label>3.3.2</label><title>Cumulative and Sensitivity Analyses</title><p>Cumulative meta‐analysis indicated that the pooled prevalence remained relatively stable over time at 41.5%, suggesting limited progress in public knowledge despite ongoing global efforts.</p><p>Sensitivity analysis confirmed the robustness of findings. When individual studies were sequentially excluded, pooled estimates fluctuated only slightly (range: 40.0%–43.1%), and all results remained statistically significant.</p></sec><sec id="hsr272097-sec-0200"><label>3.3.3</label><title>Meta‐Regression: Impact of Mean Age on Knowledge</title><p>Meta‐regression analysis revealed that mean age did not significantly influence knowledge levels (coefficient = 0.005; 95% CI: −0.009 to 0.018; <italic toggle="yes">p</italic> = 0.491), suggesting that factors other than age (e.g., education level, access to information) may have a stronger influence.</p></sec><sec id="hsr272097-sec-0210"><label>3.3.4</label><title>Publication Bias Assessment</title><p>The funnel plot exhibited a symmetrical distribution (Figure <xref rid="hsr272097-fig-0003" ref-type="fig">3</xref>), and Begg and Mazumdar's test showed no evidence of publication bias (Kendall's tau = −0.145, <italic toggle="yes">p</italic> = 0.287).</p><fig position="float" fig-type="Figure" id="hsr272097-fig-0003" orientation="portrait"><label>Figure 3</label><caption><p>Funnel plot for knowledge‐related studies, showing symmetry and indicating no significant publication bias.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="HSR2-9-e72097-g008.jpg"/></fig></sec></sec><sec id="hsr272097-sec-0220"><label>3.4</label><title>Meta‐Analysis of Positive Attitude Toward DR</title><p>Twenty‐two studies involving 12,453 participants reported data on positive attitude toward DR. The pooled prevalence was 49.6% (95% CI: 36.2%–62.9%, <italic toggle="yes">p</italic> &lt; 0.001), as presented in Figure <xref rid="hsr272097-fig-0004" ref-type="fig">4</xref>.</p><fig position="float" fig-type="Figure" id="hsr272097-fig-0004" orientation="portrait"><label>Figure 4</label><caption><p>Forest plot displaying pooled prevalence of positive attitude toward DR. Note the significant variability across studies.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="HSR2-9-e72097-g002.jpg"/></fig><p>Substantial heterogeneity was observed (<italic toggle="yes">I</italic>² = 99.7%, <italic toggle="yes">τ</italic>² = 0.105, <italic toggle="yes">p</italic> &lt; 0.001), prompting further exploration of moderating variables such as geography and health system structure.</p><p>Sensitivity analysis supported the robustness of findings (Figure <xref rid="hsr272097-fig-0005" ref-type="fig">5</xref>), and no evidence of publication bias was identified via funnel plot inspection (Figure <xref rid="hsr272097-fig-0006" ref-type="fig">6</xref>).</p><fig position="float" fig-type="Figure" id="hsr272097-fig-0005" orientation="portrait"><label>Figure 5</label><caption><p>Sensitivity analysis for attitude toward DR. Removal of individual studies did not significantly alter the pooled estimates.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="HSR2-9-e72097-g003.jpg"/></fig><fig position="float" fig-type="Figure" id="hsr272097-fig-0006" orientation="portrait"><label>Figure 6</label><caption><p>Funnel plot showing symmetrical distribution, indicating absence of publication bias in attitude‐related studies.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-11" orientation="portrait" xlink:href="HSR2-9-e72097-g001.jpg"/></fig><sec id="hsr272097-sec-0230"><label>3.4.1</label><title>Subgroup Analysis by Income Level</title><p>The pooled prevalence of positive attitude was slightly higher in LMICs (52.2%, 95% CI: 32.2%–72.3%) compared to HICs (46.2%, 95% CI: 28.5%–63.8%). Despite this, both subgroups exhibited extreme heterogeneity, reflecting the influence of contextual and cultural factors beyond economic classification.</p></sec></sec><sec id="hsr272097-sec-0240"><label>3.5</label><title>Meta‐Analysis of Good Practice Toward DR</title><p>Twenty‐one studies involving 11,727 diabetic patients were analyzed. The pooled prevalence of good practice was 40.0% (95% CI: 30.2%–49.9%, <italic toggle="yes">p</italic>&lt; 0.001), as shown in Figure <xref rid="hsr272097-fig-0007" ref-type="fig">7</xref>. Heterogeneity remained high (<italic toggle="yes">I</italic>² = 99.28%).</p><fig position="float" fig-type="Figure" id="hsr272097-fig-0007" orientation="portrait"><label>Figure 7</label><caption><p>Forest plot showing pooled prevalence of good practice toward DR. Considerable heterogeneity reflects contextual variability in health behavior and system performance.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-13" orientation="portrait" xlink:href="HSR2-9-e72097-g007.jpg"/></fig><p>Sensitivity analysis confirmed the consistency of findings (Figure <xref rid="hsr272097-fig-0008" ref-type="fig">8</xref>), and no evidence of publication bias was found (Figure <xref rid="hsr272097-fig-0009" ref-type="fig">9</xref>).</p><fig position="float" fig-type="Figure" id="hsr272097-fig-0008" orientation="portrait"><label>Figure 8</label><caption><p>Sensitivity analysis of practice‐related estimates. Results remained stable when studies were sequentially excluded.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-15" orientation="portrait" xlink:href="HSR2-9-e72097-g009.jpg"/></fig><fig position="float" fig-type="Figure" id="hsr272097-fig-0009" orientation="portrait"><label>Figure 9</label><caption><p>Funnel plot indicating no significant publication bias for practice‐related studies.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-17" orientation="portrait" xlink:href="HSR2-9-e72097-g006.jpg"/></fig><sec id="hsr272097-sec-0250"><label>3.5.1</label><title>Subgroup Analysis by Income Level</title><p>The prevalence of good practice was 38.5% (95% CI: 27.2%–49.8%) in LMICs and 42.6% (95% CI: 24.6%–60.7%) in HICs, showing slightly better outcomes in wealthier countries. Nonetheless, both groups remained well below optimal adherence thresholds, indicating widespread barriers to practice.</p></sec></sec><sec id="hsr272097-sec-0260"><label>3.6</label><title>Meta‐Regression: KAP Interrelationships</title><p>Meta‐regression analysis showed that good knowledge had no significant effect on good practice (coefficient = 0.000, <italic toggle="yes">p</italic> = 0.190). Similarly, knowledge did not significantly influence attitude (<italic toggle="yes">p</italic> = 0.737). However, a positive attitude had a minimal but statistically significant effect on good practice (coefficient = 0.000, <italic toggle="yes">p</italic> &lt; 0.001).</p><p>These findings reveal a clear knowledge–practice gap, which cannot be addressed solely by increasing awareness. Behavioral economics suggests that factors like present bias, cognitive load, inertia, and limited self‐efficacy may prevent individuals from translating knowledge into action. Structural barriers—such as healthcare costs, insurance coverage, transportation access, and waiting times—also inhibit proactive behavior. A summary of the pooled prevalence estimates for good knowledge, attitude, and practice toward DR is presented in Table <xref rid="hsr272097-tbl-0003" ref-type="table">3</xref>.</p><table-wrap position="float" id="hsr272097-tbl-0003" content-type="Table" orientation="portrait"><label>Table 3</label><caption><p>Pooled prevalence estimates for good KAP regarding DR.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><thead><tr style="border-bottom:solid 1px #000000"><th align="left" rowspan="1" colspan="1">Parameters</th><th align="center" rowspan="1" colspan="1">Frequency (%)</th><th align="center" rowspan="1" colspan="1">95% CI</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Good knowledge</td><td align="center" rowspan="1" colspan="1">43.1</td><td align="center" rowspan="1" colspan="1">31.3–54.9</td></tr><tr><td align="left" rowspan="1" colspan="1">Positive attitude</td><td align="center" rowspan="1" colspan="1">49.6</td><td align="center" rowspan="1" colspan="1">36.2–62.9</td></tr><tr><td align="left" rowspan="1" colspan="1">Good practice</td><td align="center" rowspan="1" colspan="1">40</td><td align="center" rowspan="1" colspan="1">30.9–49.9</td></tr></tbody></table><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><p>Furthermore, cultural beliefs and health literacy may moderate the KAP relationship. For instance, in some communities, DR may not be perceived as an urgent threat due to its asymptomatic nature, or fatalistic attitudes may reduce the perceived value of screening. Thus, effective interventions must integrate culturally sensitive messaging, simplify information delivery, and address both behavioral and systemic obstacles.</p></sec></sec><sec sec-type="discussion" id="hsr272097-sec-0270"><label>4</label><title>Discussion</title><p>DR, a leading microvascular complication of DM, continues to be a major cause of visual impairment and blindness, particularly among the working‐age population [<xref rid="hsr272097-bib-0001" ref-type="bibr">1</xref>, <xref rid="hsr272097-bib-0019" ref-type="bibr">19</xref>, <xref rid="hsr272097-bib-0025" ref-type="bibr">25</xref>]. Early diagnosis and effective management of DR are vital in preventing irreversible vision loss and reducing associated personal and healthcare system burdens. Given that DR is largely preventable and treatable in its early stages, increasing awareness, fostering patient engagement, and improving preventive behaviors are essential. This systematic review and meta‐analysis synthesized findings from 29 studies to evaluate the levels of KAP toward DR and to examine how demographic and contextual factors shape these outcomes.</p><sec id="hsr272097-sec-0280"><label>4.1</label><title>Suboptimal Knowledge: A Barrier to Early Action</title><p>The pooled prevalence of good knowledge about DR was 43.1% (95% CI: 31.3–54.9), suggesting that fewer than half of individuals with diabetes are adequately informed about this complication. This level of awareness is insufficient, especially considering the critical role of knowledge in driving screening adherence and early intervention [<xref rid="hsr272097-bib-0001" ref-type="bibr">1</xref>, <xref rid="hsr272097-bib-0005" ref-type="bibr">5</xref>, <xref rid="hsr272097-bib-0006" ref-type="bibr">6</xref>, <xref rid="hsr272097-bib-0015" ref-type="bibr">15</xref>, <xref rid="hsr272097-bib-0016" ref-type="bibr">16</xref>, <xref rid="hsr272097-bib-0018" ref-type="bibr">18</xref>, <xref rid="hsr272097-bib-0021" ref-type="bibr">21</xref>]. Despite extensive public health campaigns and growing scientific literature, cumulative meta‐analysis revealed no significant improvement in knowledge levels over time. Furthermore, meta‐regression analysis showed no meaningful association between age and knowledge, indicating that broader structural determinants—such as educational attainment, healthcare access, and public health infrastructure—may play more decisive roles.</p><p>Income‐based subgroup analysis highlighted significant disparities, with higher knowledge prevalence in high‐income countries (56.3%) compared to LMICs (34.4%). These findings emphasize the unequal distribution of information resources and call for contextualized educational interventions to bridge global health literacy gaps.</p></sec><sec id="hsr272097-sec-0290"><label>4.2</label><title>Attitudes and the Role of Cultural and Social Contexts</title><p>Our analysis showed that nearly half of the participants (49.6%; 95% CI: 36.2–62.9) held positive attitudes toward DR prevention. However, the lack of clear differences between HICs and LMICs suggests that factors beyond income—such as cultural beliefs, trust in the health system, and community engagement—may be more influential [<xref rid="hsr272097-bib-0001" ref-type="bibr">1</xref>, <xref rid="hsr272097-bib-0006" ref-type="bibr">6</xref>, <xref rid="hsr272097-bib-0012" ref-type="bibr">12</xref>].</p><p>The absence of improvement in attitude levels over time, along with the weak correlation between knowledge and attitude (<italic toggle="yes">p</italic> = 0.737), underscores a disconnect between awareness and mindset transformation. Traditional awareness campaigns may not adequately address cultural norms, language barriers, or belief systems. This highlights the importance of culturally sensitive and community‐based strategies to shift attitudes and enhance motivation for preventive behaviors.</p></sec><sec id="hsr272097-sec-0300"><label>4.3</label><title>Persistent Gaps in Preventive Practices</title><p>Perhaps the most critical insight from this review is the consistently low prevalence of good practices related to DR, which stood at 40.0% (95% CI: 30.2–49.9). These behaviors—such as undergoing regular retinal screening, attending ophthalmic consultations, and adhering to treatment—are vital for preventing visual disability. Alarmingly, practice levels were low even in high‐income countries (42.6%) and slightly lower in LMICs (38.5%), suggesting that awareness alone is insufficient to promote health‐protective actions.</p><p>Meta‐regression revealed no significant influence of age or knowledge on practice (<italic toggle="yes">p</italic> = 0.190), indicating that behavioral and systemic barriers are at play. These may include logistical challenges (e.g., transportation, cost, appointment availability), low health literacy, limited family or provider support, and behavioral economics phenomena such as present bias, inertia, and cognitive overload.</p></sec><sec id="hsr272097-sec-0310"><label>4.4</label><title>Decoupling of KAP Components: Behavioral and Structural Explanations</title><p>A core strength of this study is its examination of KAP interrelationships. Our findings showed that while positive attitude had a statistically significant (albeit minimal) effect on practice (<italic toggle="yes">p</italic> &lt; 0.001), knowledge did not significantly influence either attitude or practice. This contradicts the classic linear KAP model and aligns with contemporary behavioral science, which recognizes that knowledge is necessary but not sufficient for behavior change [<xref rid="hsr272097-bib-0001" ref-type="bibr">1</xref>, <xref rid="hsr272097-bib-0005" ref-type="bibr">5</xref>, <xref rid="hsr272097-bib-0006" ref-type="bibr">6</xref>, <xref rid="hsr272097-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr272097-bib-0009" ref-type="bibr">9</xref>, <xref rid="hsr272097-bib-0012" ref-type="bibr">12</xref>, <xref rid="hsr272097-bib-0013" ref-type="bibr">13</xref>, <xref rid="hsr272097-bib-0014" ref-type="bibr">14</xref>, <xref rid="hsr272097-bib-0015" ref-type="bibr">15</xref>, <xref rid="hsr272097-bib-0016" ref-type="bibr">16</xref>, <xref rid="hsr272097-bib-0017" ref-type="bibr">17</xref>, <xref rid="hsr272097-bib-0018" ref-type="bibr">18</xref>, <xref rid="hsr272097-bib-0019" ref-type="bibr">19</xref>, <xref rid="hsr272097-bib-0020" ref-type="bibr">20</xref>, <xref rid="hsr272097-bib-0021" ref-type="bibr">21</xref>, <xref rid="hsr272097-bib-0022" ref-type="bibr">22</xref>, <xref rid="hsr272097-bib-0023" ref-type="bibr">23</xref>, <xref rid="hsr272097-bib-0024" ref-type="bibr">24</xref>, <xref rid="hsr272097-bib-0025" ref-type="bibr">25</xref>, <xref rid="hsr272097-bib-0026" ref-type="bibr">26</xref>, <xref rid="hsr272097-bib-0027" ref-type="bibr">27</xref>, <xref rid="hsr272097-bib-0028" ref-type="bibr">28</xref>, <xref rid="hsr272097-bib-0029" ref-type="bibr">29</xref>].</p><p>To bridge the knowledge–practice and attitude–practice gaps, we must consider mediating factors such as provider communication quality, social support, and systemic facilitators like insurance coverage, clinic proximity, and service integration. Future research should apply behavioral frameworks (e.g., COM‐B model, Health Belief Model) and test interventions that reduce structural barriers or leverage nudges to promote action. Additionally, health literacy must be assessed as a moderator in KAP dynamics, especially in underserved or rural populations.</p></sec><sec id="hsr272097-sec-0320"><label>4.5</label><title>Implications for Public Health Policy and Practice</title><p>These findings have significant implications for DR prevention and chronic disease management. Given the low and uneven KAP levels, particularly in LMICs, a multi‐tiered strategy is essential:
+<list list-type="bullet"><list-item><p>Integrate DR education into routine diabetes management, especially at the primary care level.</p></list-item><list-item><p>Establish and scale up community‐based screening programs with strong referral and follow‐up mechanisms.</p></list-item><list-item><p>Implement mass communication campaigns using local languages, culturally adapted content, and social media platforms.</p></list-item><list-item><p>Train general practitioners and primary care staff to assess and enhance patient KAP during consultations.</p></list-item><list-item><p>Evaluate and improve healthcare providers' own knowledge and attitudes toward DR.</p></list-item></list>
+</p><p>Furthermore, the use of digital innovations holds promise. Artificial intelligence (AI) can tailor educational content, send screening reminders, and support clinical decision‐making. Virtual reality (VR) tools may improve patient engagement through immersive education. Blended learning platforms and mobile health (mHealth) solutions can overcome literacy and accessibility barriers, particularly in remote regions [<xref rid="hsr272097-bib-0036" ref-type="bibr">36</xref>, <xref rid="hsr272097-bib-0037" ref-type="bibr">37</xref>, <xref rid="hsr272097-bib-0038" ref-type="bibr">38</xref>, <xref rid="hsr272097-bib-0039" ref-type="bibr">39</xref>, <xref rid="hsr272097-bib-0040" ref-type="bibr">40</xref>, <xref rid="hsr272097-bib-0041" ref-type="bibr">41</xref>].</p><p>Despite the robustness of this meta‐analysis, a key limitation lies in the lack of individual‐level data. Future individual participant data (IPD) meta‐analyses are needed to explore effect modifiers such as gender, comorbidities, or socioeconomic status and design more precise interventions.</p></sec></sec><sec sec-type="conclusions" id="hsr272097-sec-0330"><label>5</label><title>Conclusion</title><p>This systematic review and meta‐analysis highlight persistent and widespread gaps in KAP related to DR among individuals with diabetes—particularly in LMICs. While patients in HICs demonstrate relatively better knowledge and practice, attitude levels remain comparably low across economic contexts. Notably, the weak associations between knowledge, attitude, and actual preventive behavior emphasize that awareness alone is insufficient to drive effective DR management.</p><p>The lack of progress in KAP indicators over time underscores the urgent need for targeted, context‐specific interventions that address both behavioral and structural barriers. Strategies such as integrating DR education into routine diabetes care, expanding accessible and community‐driven screening programs, and strengthening the role of primary care providers are critical to improving early detection and preventing vision loss. Future research should move beyond aggregate data to explore individual‐level behavioral determinants, such as cultural beliefs, health literacy, and socioeconomic constraints. Advanced approaches—including behavioral science frameworks, digital health tools, and equity‐oriented public health strategies—will be essential to close the KAP gaps and promote sustainable improvements in DR prevention and management.</p></sec><sec id="hsr272097-sec-0340"><title>Author Contributions</title><p>Conception and design of study: Firouzeh Fereydounia and Zahra Hemmatian Rabbani. Data collection: Firouzeh Fereydounia, Zahra Hemmatian Rabbani, Batoul Haghighi, Reyhaneh Shariati Moghaddam. Analysis and interpretation of results and revising manuscript: Seyyedeh Fatemeh Mousavi Baigib and Parviz Marouzia. Drafting the manuscript: Firouzeh Fereydounia and Seyyedeh Fatemeh Mousavi Baigib. All authors reviewed the results and approved the final version of the manuscript.</p></sec><sec id="hsr272097-sec-0360"><title>Funding</title><p>The authors have nothing to report.</p></sec><sec id="hsr272097-sec-0370"><title>Ethics Statement</title><p>This work was approved by the ethics committee of Mashhad University of Medical Sciences (authorization number: IR.MUMS.FHMPM.REC.1402.242).</p></sec><sec sec-type="COI-statement" id="hsr272097-sec-0380"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec id="hsr272097-sec-0410"><title>Transparency Statement</title><p>The corresponding author, Firouzeh Fereydouni, affirms that this manuscript is an honest, accurate, and transparent account of the study being reported; that no important aspects of the study have been omitted; and that any discrepancies from the study as planned (and, if relevant, registered) have been explained.</p></sec></body><back><ack id="hsr272097-sec-0350"><title>Acknowledgments</title><p>We extend our sincere gratitude to the “Student Research Committee” and the “Research and Technology Chancellor” of Mashhad University of Medical Sciences for their financial support of this study. Additionally, the authors gratefully acknowledge the language editing support provided by ChatGPT (OpenAI), which contributed to enhancing the clarity and readability of the manuscript. Final responsibility for the content rests solely with the authors.</p></ack><sec sec-type="data-availability" id="hsr272097-sec-0400"><title>Data Availability Statement</title><p>Data can be obtained from the writers when asked.</p></sec><ref-list content-type="cited-references" id="hsr272097-bibl-0001"><title>References</title><ref id="hsr272097-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="hsr272097-cit-0001">
+<string-name name-style="western">
+<given-names>A. A.</given-names>
+<surname>Al‐Yahya</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Almizel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Barri</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Al Adel</surname>
+</string-name>, “<article-title>Knowledge, Attitude, and Practices (KAP) of Diabetics Towards Diabetes and Diabetic Retinopathy in Riyadh, Saudi Arabia: Cross‐Sectional Study</article-title>,” <source>Clinical Ophthalmology</source>
+<volume>14</volume> (<year>2020</year>): <fpage>3187</fpage>–<lpage>3194</lpage>.<pub-id pub-id-type="pmid">33116369</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2147/OPTH.S269524</pub-id><pub-id pub-id-type="pmcid">PMC7553261</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0002"><label>2</label><mixed-citation publication-type="miscellaneous" id="hsr272097-cit-0002">
+<collab collab-type="authors">World Health Organization, “</collab>
+Global Report on Diabetes,” published 2020, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.who.int/publications/i/item/9789241565257" ext-link-type="uri">https://www.who.int/publications/i/item/9789241565257</ext-link>.</mixed-citation></ref><ref id="hsr272097-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="hsr272097-cit-0003">
+<string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Guariguata</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. R.</given-names>
+<surname>Whiting</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Hambleton</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Beagley</surname>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Linnenkamp</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>Shaw</surname>
+</string-name>, “<article-title>Global Estimates of Diabetes Prevalence for 2013 and Projections for 2035</article-title>,” <source>Diabetes Research and Clinical Practice</source>
+<volume>103</volume>, no. <issue>2</issue> (<year>2014</year>): <fpage>137</fpage>–<lpage>149</lpage>.<pub-id pub-id-type="pmid">24630390</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.diabres.2013.11.002</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="hsr272097-cit-0004">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Saeedi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Petersohn</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Salpea</surname>
+</string-name>, et al., “<article-title>Global and Regional Diabetes Prevalence Estimates for 2019 and Projections for 2030 and 2045: Results From the International Diabetes Federation Diabetes Atlas, 9th Edition</article-title>,” <source>Diabetes Research and Clinical Practice</source>
+<volume>157</volume> (<year>2019</year>): <elocation-id>107843</elocation-id>.<pub-id pub-id-type="pmid">31518657</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.diabres.2019.107843</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="hsr272097-cit-0005">
+<string-name name-style="western">
+<given-names>I. A. B.</given-names>
+<surname>Ahmed</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Alosaimi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. A.</given-names>
+<surname>Sahli</surname>
+</string-name>, et al., “<article-title>Knowledge, Attitude, and Practice of Type 2 Diabetes Mellitus Saudi Patients Regarding Diabetic Retinopathy: A Multi‐Center Cross Sectional Survey</article-title>,” <source>International Journal of Pharmaceutical Research and Allied Sciences</source>
+<volume>9</volume>, no. <issue>1</issue> (<year>2020</year>): <fpage>110</fpage>–<lpage>114</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="hsr272097-cit-0006">
+<string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Alhabdan</surname>
+</string-name>, “<article-title>Diabetes and Diabetic Retinopathy: The Knowledge, Attitude and Practice Among Type 2 Diabetic Patients of Al Ahsa District of Saudi Arabia: A Cross‐Sectional Survey</article-title>,” <source>International Journal of Current Medical and Pharmaceutical Research</source>
+<volume>4</volume>, no. <issue>2</issue> (<year>2018</year>): <fpage>3015</fpage>–<lpage>3021</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="hsr272097-cit-0007">
+<string-name name-style="western">
+<given-names>T. F.</given-names>
+<surname>Alqahtani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. R.</given-names>
+<surname>Al‐Rashid</surname>
+</string-name>, <string-name name-style="western">
+<given-names>O. M.</given-names>
+<surname>Mulla</surname>
+</string-name>, et al., “<article-title>Knowledge, Attitude, and Practice Regarding Diabetic Retinopathy Screening and Eye Management Among Diabetics in Saudi Arabia</article-title>,” <source>Cureus</source>
+<volume>15</volume>, no. <issue>9</issue> (September <year>2023</year>): <elocation-id>e48445</elocation-id>.<pub-id pub-id-type="pmid">37905261</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.7759/cureus.46190</pub-id><pub-id pub-id-type="pmcid">PMC10613343</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="hsr272097-cit-0008">
+<string-name name-style="western">
+<given-names>J. W. Y.</given-names>
+<surname>Yau</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. L.</given-names>
+<surname>Rogers</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Kawasaki</surname>
+</string-name>, et al., “<article-title>Global Prevalence and Major Risk Factors of Diabetic Retinopathy</article-title>,” <source>Diabetes Care</source>
+<volume>35</volume>, no. <issue>3</issue> (<year>2012</year>): <fpage>556</fpage>–<lpage>564</lpage>.<pub-id pub-id-type="pmid">22301125</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2337/dc11-1909</pub-id><pub-id pub-id-type="pmcid">PMC3322721</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="hsr272097-cit-0009">
+<string-name name-style="western">
+<given-names>A. H.</given-names>
+<surname>Al‐Mulla</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. K.</given-names>
+<surname>Al‐Thafar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. A. A. S.</given-names>
+<surname>Hussain</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. I.</given-names>
+<surname>Ali</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. K.</given-names>
+<surname>Al‐Dossary</surname>
+</string-name>, “<article-title>Knowledge, Attitude and Practice Toward Diabetic Retinopathy and Retinal Examination Among Diabetic Population in Al‐Hasa Region, Saudi Arabia: A Cross‐Sectional Study</article-title>,” <source>International Journal of Scientific Study</source>
+<volume>5</volume>, no. <issue>4</issue> (<year>2017</year>): <fpage>165</fpage>–<lpage>169</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="hsr272097-cit-0010">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Resnikoff</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Pascolini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Etya'ale</surname>
+</string-name>, et al., “<article-title>Global Data on Visual Impairment in the Year 2002</article-title>,” <source>Bulletin of the World Health Organization</source>
+<volume>82</volume>, no. <issue>11</issue> (<year>2004</year>): <fpage>844</fpage>–<lpage>851</lpage>.<pub-id pub-id-type="pmid">15640920</pub-id>
+<pub-id pub-id-type="pmcid">PMC2623053</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0011"><label>11</label><mixed-citation publication-type="book" id="hsr272097-cit-0011">
+<string-name name-style="western">
+<surname>Gumucio</surname>, <given-names>S</given-names>
+</string-name>., <string-name name-style="western">
+<given-names>N</given-names>. <surname>Luhmann</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G</given-names>. <surname>Fauvel</surname>
+</string-name>, et al. <article-title>The KAP Survey Model: Knowledge, Attitude, and Practices</article-title>. <publisher-name>IGC Communigraphie</publisher-name>.</mixed-citation></ref><ref id="hsr272097-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="hsr272097-cit-0012">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Abel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Issifou</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Zabdi</surname>
+</string-name>, “<article-title>Knowledge, Attitudes and Practices of Diabetic Patients Face to Diabetic Retinopathy in Parakou in 2019</article-title>,” <source>Ophthalmology Research</source>
+<volume>4</volume>, no. <issue>1</issue> (<year>2021</year>): <fpage>1</fpage>–<lpage>6</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="hsr272097-cit-0013">
+<string-name name-style="western">
+<given-names>N. G. A.</given-names>
+<surname>Ahmed</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. F.</given-names>
+<surname>Hamza</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. N.</given-names>
+<surname>Hassan</surname>
+</string-name>, “<article-title>Knowledge, Practice and Attitude of Diabetic Patients Regarding Prevention of Diabetic Retinopathy</article-title>,” <source>Journal of Survey in Fisheries Sciences</source>
+<volume>10</volume>, no. <issue>3S</issue> (<year>2023</year>): <fpage>3896</fpage>–<lpage>3908</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="hsr272097-cit-0014">
+<string-name name-style="western">
+<given-names>B. K.</given-names>
+<surname>Al Zarea</surname>
+</string-name>, “<article-title>Knowledge, Attitude and Practice of Diabetic Retinopathy Amongst the Diabetic Patients of Aljouf and Hail Province of Saudi Arabia</article-title>,” <source>Journal of Clinical and Diagnostic Research</source>
+<volume>10</volume>, no. <issue>5</issue> (<year>2016</year>): <fpage>5</fpage>–<lpage>8</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.7860/JCDR/2016/19568.7862</pub-id><pub-id pub-id-type="pmcid">PMC4948430</pub-id><pub-id pub-id-type="pmid">27437254</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="hsr272097-cit-0015">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Al‐Asbali</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Aldawari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I. A.</given-names>
+<surname>Alzahim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Alalawi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Khandekar</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>N. M.</given-names>
+<surname>Lotfy</surname>
+</string-name>, “<article-title>Knowledge, Attitude and Practice Regarding Diabetic Retinopathy Screening and Its Management Among Diabetic Patients at a Private Hospital of Riyadh, Saudi Arabia</article-title>,” <source>Saudi Journal of Ophthalmology</source>
+<volume>34</volume>, no. <issue>2</issue> (<year>2020</year>): <fpage>85</fpage>–<lpage>93</lpage>.<pub-id pub-id-type="pmid">33575528</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.4103/1319-4534.305040</pub-id><pub-id pub-id-type="pmcid">PMC7866716</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="hsr272097-cit-0016">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>AlHargan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>AlBaker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>AlFadhel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>AlGhamdi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>AlMuammar</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>AlDawood</surname>
+</string-name>, “<article-title>Awareness, Knowledge, and Practices Related to Diabetic Retinopathy Among Diabetic Patients in Primary Healthcare Centers at Riyadh, Saudi Arabia</article-title>,” <source>Journal of Family Medicine and Primary Care</source>
+<volume>8</volume>, no. <issue>2</issue> (<year>2019</year>): <fpage>373</fpage>–<lpage>377</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.4103/jfmpc.jfmpc_422_18</pub-id><pub-id pub-id-type="pmcid">PMC6436279</pub-id><pub-id pub-id-type="pmid">30984641</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="hsr272097-cit-0017">
+<string-name name-style="western">
+<given-names>A. A. G.</given-names>
+<surname>Aly</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Elmanzalawy</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. E.</given-names>
+<surname>ElGammal</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Shahat Hafez</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Elsayed</surname>
+</string-name>, “<article-title>Type 2 Diabetes Patient's Awareness and KAP Regarding Diabetic Retinopathy: Cross‐Sectional Multinational Study From the Middle East</article-title>,” <source>International Journal of Health Sciences</source>
+<volume>6</volume>, no. <issue>8</issue> (<year>2021</year>): <fpage>2935</fpage>–<lpage>2956</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="hsr272097-cit-0018">
+<string-name name-style="western">
+<given-names>A. A.</given-names>
+<surname>Aly</surname>
+</string-name> and <string-name name-style="western">
+<given-names>A. M.</given-names>
+<surname>Omairan</surname>
+</string-name>, “<article-title>Efficacy of Instructional Platform Regarding Prevention of Retinopathy on Type II Diabetic Patient's Knowledge, Attitude, and Practice</article-title>,” <source>History of Medicine</source>
+<volume>8</volume>, no. <issue>2</issue> (<year>2022</year>): <fpage>1</fpage>–<lpage>11</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="hsr272097-cit-0019">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Farooq</surname>
+</string-name> and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Hussain Bapar</surname>
+</string-name>, “<article-title>Knowledge, Attitude and Practices of Diabetic Retinopathy in Diagnosed Diabetic Patients: A Descriptive Study</article-title>,” <source>Saudi Journal of Medical and Pharmaceutical Sciences</source>
+<volume>7</volume>, no. <issue>1</issue> (<year>2021</year>): <fpage>15</fpage>–<lpage>19</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="hsr272097-cit-0020">
+<string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Fatima</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N. R.</given-names>
+<surname>Chaudhary</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Ruhullah</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Talib</surname>
+</string-name>, “<article-title>KAP Study on Factors Motivating Diabetic People for Screening of Retinopathy</article-title>,” <source>Ophthalmology Pakistan</source>
+<volume>9</volume>, no. <issue>3</issue> (<year>2019</year>): <fpage>12</fpage>–<lpage>17</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="hsr272097-cit-0021">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Gohari</surname>
+</string-name>, “<article-title>A Study on the Knowledge, Attitudes and Practice of Diabetic Retinopathy Among Patients With Diabetes in Yazd Province</article-title>,” <source>Journal of Tolooebehdasht</source>
+<volume>18</volume>, no. <issue>1</issue> (<year>2019</year>): <fpage>94</fpage>–<lpage>106</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="hsr272097-cit-0022">
+<string-name name-style="western">
+<given-names>A. H.</given-names>
+<surname>Javaeed</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Ghauri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Khan Mustafa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. J.</given-names>
+<surname>Wajid</surname>
+</string-name>, and <string-name name-style="western">
+<surname>Zarghoona</surname>
+</string-name>, “<article-title>The Knowledge, Attitude, and Practices of Diabetic Retinopathy Among Diabetic Patients of Azad Jammu &amp; Kashmir</article-title>,” <source>Rawal Medical Journal</source>
+<volume>46</volume>, no. <issue>1</issue> (<year>2021</year>): <fpage>26</fpage>–<lpage>29</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="hsr272097-cit-0023">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Nemivant</surname>
+</string-name>, “<article-title>To Determine Knowledge, Attitude, and Practice Regarding Diabetic Retinopathy Among Diabetic Patients in a Rural Hospital: A Cross‐Sectional Study</article-title>,” <source>International Journal of Life Sciences Biotechnology and Pharma Research</source>
+<volume>12</volume>, no. <issue>1</issue> (<year>2023</year>): <fpage>325</fpage>–<lpage>331</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="hsr272097-cit-0024">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Phadnis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>U. P.</given-names>
+<surname>Usgaonkar</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Pai</surname>
+</string-name>, “<article-title>Sharvani. Knowledge, Attitude and Practices of Diabetic Retinopathy Among Diabetics in Goa Medical College and Hospital</article-title>,” <source>Journal of Evolution of Medical and Dental Sciences</source>
+<volume>60</volume>, no. <issue>227</issue> (<year>2018</year>): <fpage>4133</fpage>–<lpage>4136</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="hsr272097-cit-0025">
+<string-name name-style="western">
+<given-names>J. Y.</given-names>
+<surname>Qi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Zhai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Wang</surname>
+</string-name>, et al., “<article-title>Assessment of Knowledge, Attitude, and Practice Regarding Diabetic Retinopathy in an Urban Population in Northeast China</article-title>,” <source>Frontiers in Public Health</source>
+<volume>10</volume> (<year>2022</year>): <fpage>1</fpage>–<lpage>7</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fpubh.2022.808988</pub-id><pub-id pub-id-type="pmcid">PMC8962192</pub-id><pub-id pub-id-type="pmid">35359761</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="hsr272097-cit-0026">
+<string-name name-style="western">
+<given-names>P. K. R.</given-names>
+<surname>Rani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Subramani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Perumal</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Kumaramanickavel</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Sharma</surname>
+</string-name>, “<article-title>Knowledge of Diabetes and Diabetic Retinopathy Among Rural Populations in India, and the Influence of Knowledge of Diabetic Retinopathy on Attitude and Practice</article-title>,” <source>Rural and Remote Health</source>
+<volume>8</volume>, no. <issue>3</issue> (<year>2008</year>): <fpage>1</fpage>–<lpage>9</lpage>.<pub-id pub-id-type="pmid">18656993</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="hsr272097-cit-0027">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Sharma</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Raina</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Bharti</surname>
+</string-name>, “<article-title>Knowledge, Attitude and Practice of Diabetic Retinopathy Amongst Diabetic Patients in a Tertiary Care Hospital of Jammu</article-title>,” <source>International Journal of Research in Medical Sciences</source>
+<volume>8</volume>, no. <issue>3</issue> (<year>2020</year>): <fpage>836</fpage>.</mixed-citation></ref><ref id="hsr272097-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="hsr272097-cit-0028">
+<string-name name-style="western">
+<given-names>N. K.</given-names>
+<surname>Srinivasan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>John</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Rebekah</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. S.</given-names>
+<surname>Kujur</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Paul</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. S.</given-names>
+<surname>John</surname>
+</string-name>, “<article-title>Diabetes and Diabetic Retinopathy: Knowledge, Attitude, Practice (KAP) Among Diabetic Patients in a Tertiary Eye Care Centre</article-title>,” <source>Journal of Clinical and Diagnostic Research</source>
+<volume>11</volume>, no. <issue>7</issue> (<year>2017</year>): <elocation-id>NC01‐NC07</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.7860/JCDR/2017/27027.10174</pub-id><pub-id pub-id-type="pmcid">PMC5583928</pub-id><pub-id pub-id-type="pmid">28892947</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="hsr272097-cit-0029">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Raza</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Khan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Sami</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Ejaz</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Ahmed</surname>
+</string-name>, “<article-title>Diabetic Retinopathy—Knowledge, Attitude and Practices (KAP) in Diabetic Patients Admitted in Tertiary Care Centers of Peshawar–Khyber Pakhtunkhwa</article-title>,” <source>Professional Medical Journal</source>
+<volume>26</volume>, no. <issue>08</issue> (<year>2019</year>): <fpage>1370</fpage>–<lpage>1376</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="hsr272097-cit-0030">
+<string-name name-style="western">
+<given-names>A. S.</given-names>
+<surname>Assem</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. M.</given-names>
+<surname>Tegegne</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. S.</given-names>
+<surname>Alemu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. T.</given-names>
+<surname>Woredekal</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T. K.</given-names>
+<surname>Tefera</surname>
+</string-name>, “<article-title>Knowledge About Diabetic Retinopathy, Eye Check‐Up Practice and Associated Factors Among Adult Patients With Diabetes Mellitus Attending at Debark Hospital, Northwest Ethiopia</article-title>,” <source>BMC Ophthalmology</source>
+<volume>20</volume>, no. <issue>1</issue> (December <year>2020</year>): <fpage>453</fpage>.<pub-id pub-id-type="pmid">33208125</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12886-020-01730-4</pub-id><pub-id pub-id-type="pmcid">PMC7672967</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="hsr272097-cit-0031">
+<string-name name-style="western">
+<given-names>R. R.</given-names>
+<surname>Keesara</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Ather</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. M. L.</given-names>
+<surname>Reddy</surname>
+</string-name>, “<article-title>A Knowledge, Attitude, and Practice Study of Diabetic Retinopathy in an Urban Population</article-title>,” <source>Journal of Ophthalmology Clinics and Research</source>
+<volume>2</volume>, no. <issue>1</issue> (January <year>2022</year>): <fpage>24</fpage>–<lpage>34</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="hsr272097-cit-0032">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Salah Eldin Saad</surname>
+</string-name>, “<article-title>Effect of Prevention Instructions Regarding Diabetic Retinopathy on Patients' Knowledge, Practices and Attitude</article-title>,” <source>International Egyptian Journal of Nursing Sciences and Research</source>
+<volume>3</volume>, no. <issue>2</issue> (January <year>2023</year>): <fpage>382</fpage>–<lpage>397</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="hsr272097-cit-0033">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Bsharat</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Hasan Abu Rayash</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Naser Zain Aldeen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Hani A'meera</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Shadeed</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Arrar</surname>
+</string-name>, “<article-title>Knowledge, Attitude, and Practices Towards Diabetes and Diabetic Retinopathy Among Diabetic Patients at Medical Palestinian Complex, Ramallah</article-title>,” <source>Modern Journal of Health and Applied Sciences</source>
+<volume>1</volume>, no. <issue>1</issue> (September <year>2024</year>): <fpage>10</fpage>–<lpage>21</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="hsr272097-cit-0034">
+<string-name name-style="western">
+<given-names>A. M. V.</given-names>
+<surname>Achar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V. M.</given-names>
+<surname>Samalad</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Bv</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P. S.</given-names>
+<surname>Crasta</surname>
+</string-name>, “<article-title>Evaluation of Knowledge, Attitude and Awareness in Diabetes Patients Towards Diabetic Retinopathy in a Medical College Hospital in South India</article-title>,” <source>European Journal of Cardiovascular Medicine</source>
+<volume>14</volume> (<year>2024</year>): <fpage>986</fpage>–<lpage>992</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="hsr272097-cit-0035">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Vasudevan</surname>
+</string-name>, “<article-title>Knowledge, Attitude, and Practice of Diabetic Retinopathy Among Diabetic Patients in Central Province of Saudi Arabia: A Hospital‐Based Prospective and Cross‐Sectional Study</article-title>,” <source>African Journal of Biomedical Research</source>
+<volume>27</volume>, no. <issue>4S</issue> (November <year>2024</year>): <fpage>2335</fpage>–<lpage>2343</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="hsr272097-cit-0036">
+<string-name name-style="western">
+<given-names>S. F.</given-names>
+<surname>Mousavi Baigi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Sarbaz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Ghaddaripouri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Ghaddaripouri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. S.</given-names>
+<surname>Mousavi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Kimiafar</surname>
+</string-name>, “<article-title>Attitudes, Knowledge, and Skills Towards Artificial Intelligence Among Healthcare Students: A Systematic Review</article-title>,” <source>Health Science Reports</source>
+<volume>6</volume>, no. <issue>3</issue> (March <year>2023</year>): <elocation-id>e1138</elocation-id>.<pub-id pub-id-type="pmid">36923372</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/hsr2.1138</pub-id><pub-id pub-id-type="pmcid">PMC10009305</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="hsr272097-cit-0037">
+<string-name name-style="western">
+<given-names>S. F.</given-names>
+<surname>Mousavi Baigi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Norouzi Aval</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Sarbaz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Tabatabaei</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Kimiafar</surname>
+</string-name>, “<article-title>Content and Structural Needs Assessment for an Artificial Intelligence Education Mobile App in Healthcare: A Mixed Methods Study</article-title>,” <source>BMC Medical Education</source>
+<volume>25</volume>, no. <issue>1</issue> (December <year>2025</year>): <fpage>1717</fpage>.<pub-id pub-id-type="pmid">41462230</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12909-025-08328-8</pub-id><pub-id pub-id-type="pmcid">PMC12750786</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="hsr272097-cit-0038">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Ghaddaripouri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. F.</given-names>
+<surname>Mousavi Baigi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Abbaszadeh</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Mazaheri Habibi</surname>
+</string-name>, “<article-title>Attitude, Awareness, and Knowledge of Telemedicine Among Medical Students: A Systematic Review of Cross‐Sectional Studies</article-title>,” <source>Health Science Reports</source>
+<volume>6</volume>, no. <issue>3</issue> (March <year>2023</year>): <elocation-id>e1156</elocation-id>.<pub-id pub-id-type="pmid">36992712</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/hsr2.1156</pub-id><pub-id pub-id-type="pmcid">PMC10042283</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="hsr272097-cit-0039">
+<string-name name-style="western">
+<given-names>S. F.</given-names>
+<surname>Mousavi Baigi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Sarbaz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Darroudi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Kimiafar</surname>
+</string-name>, “<article-title>Medical and Paramedical Students' Perspectives on Artificial Intelligence in a Low‐ and Middle‐Income Country: A Cross‐Sectional Study</article-title>,” <source>Health Science Reports</source>
+<volume>8</volume>, no. <issue>8</issue> (August <year>2025</year>): <elocation-id>e71046</elocation-id>.<pub-id pub-id-type="pmid">40761605</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/hsr2.71046</pub-id><pub-id pub-id-type="pmcid">PMC12320132</pub-id></mixed-citation></ref><ref id="hsr272097-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="hsr272097-cit-0040">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Singh</surname>
+</string-name>, “<article-title>Critical Appraisal Skills Programme</article-title>,” <source>Journal of Pharmacology and Pharmacotherapeutics</source>
+<volume>4</volume>, no. <issue>1</issue> (<year>2013</year>): <fpage>76</fpage>–<lpage>77</lpage>.</mixed-citation></ref><ref id="hsr272097-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="hsr272097-cit-0041">
+<string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Alhabdan</surname>
+</string-name>, “<article-title>Diabetes and Diabetic Retinopathy: The Knowledge, Attitude, and Practice Among the Type 2 Diabetic Patients of Al Ahsa District of Saudi Arabia: A Cross‐Sectional Survey</article-title>,” <source>International Journal of Current Medical and Pharmaceutical Research</source>
+<volume>4</volume>, no. <issue>2</issue> (<year>2018</year>): <fpage>3016</fpage>–<lpage>3021</lpage>.</mixed-citation></ref></ref-list></back></article>

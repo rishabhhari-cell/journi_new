@@ -1,0 +1,985 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="edm270203" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Endocrinol Diabetes Metab</journal-id><journal-id journal-id-type="iso-abbrev">Endocrinol Diabetes Metab</journal-id><journal-id journal-id-type="pmc-domain-id">3614</journal-id><journal-id journal-id-type="pmc-domain">edm</journal-id><journal-id journal-id-type="publisher-id">EDM2</journal-id><journal-title-group><journal-title>Endocrinology, Diabetes &amp; Metabolism</journal-title></journal-title-group><issn pub-type="epub">2398-9238</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13090579</article-id><article-id pub-id-type="pmcid-ver">PMC13090579.1</article-id><article-id pub-id-type="pmcaid">13090579</article-id><article-id pub-id-type="pmcaiid">13090579</article-id><article-id pub-id-type="pmid">41999103</article-id><article-id pub-id-type="doi">10.1002/edm2.70203</article-id><article-id pub-id-type="publisher-id">EDM270203</article-id><article-id pub-id-type="other">1157702</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Review Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Review Article</subject></subj-group></article-categories><title-group><article-title>The Effect of Empagliflozin on Renal Outcomes in Patients With Established Cardiovascular Disease: Systematic Review and Meta‐Analysis of Randomised Placebo‐Controlled Trials</article-title></title-group><contrib-group><contrib id="edm270203-cr-0001" contrib-type="author"><name name-style="western"><surname>Bahardoust</surname><given-names initials="M">Mansour</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-0744-2931</contrib-id><xref rid="edm270203-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="edm270203-cr-0002" contrib-type="author"><name name-style="western"><surname>Rad</surname><given-names initials="FN">Fatemeh Naseri</given-names></name><xref rid="edm270203-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="edm270203-cr-0003" contrib-type="author"><name name-style="western"><surname>Mousavi</surname><given-names initials="S">Sepideh</given-names></name><xref rid="edm270203-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="edm270203-cr-0004" contrib-type="author"><name name-style="western"><surname>Shamohammadi</surname><given-names initials="M">Mohammadsadra</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0005-5425-3112</contrib-id><xref rid="edm270203-aff-0004" ref-type="aff">
+<sup>4</sup>
+</xref></contrib><contrib id="edm270203-cr-0005" contrib-type="author"><name name-style="western"><surname>Haghmoradi</surname><given-names initials="M">Meisam</given-names></name><xref rid="edm270203-aff-0005" ref-type="aff">
+<sup>5</sup>
+</xref></contrib><contrib id="edm270203-cr-0006" contrib-type="author" corresp="yes"><name name-style="western"><surname>Ghaffari</surname><given-names initials="A">Azin</given-names></name><xref rid="edm270203-aff-0006" ref-type="aff">
+<sup>6</sup>
+</xref><address><email>heevarashidi2023@gmail.com</email><email>a.ghafari@rhi.ac.ir</email></address></contrib></contrib-group><aff id="edm270203-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Department of Epidemiology, School of Public Health &amp; Safety</named-content>
+<institution>Shahid Beheshti University of Medical Sciences</institution>
+<city>Tehran</city>
+<country country="IR">Iran</country>
+</aff><aff id="edm270203-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">School of Medicine</named-content>
+<institution>Iran University of Medical Sciences</institution>
+<city>Tehran</city>
+<country country="IR">Iran</country>
+</aff><aff id="edm270203-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Pharmacy Faculty</named-content>
+<institution>Tabriz University of Medical Sciences</institution>
+<city>Tabriz</city>
+<country country="IR">Iran</country>
+</aff><aff id="edm270203-aff-0004">
+<label>
+<sup>4</sup>
+</label>
+<named-content content-type="organisation-division">Gastrointestinal and Liver Diseases Research Center</named-content>
+<institution>Iran University of Medical Sciences</institution>
+<city>Tehran</city>
+<country country="IR">Iran</country>
+</aff><aff id="edm270203-aff-0005">
+<label>
+<sup>5</sup>
+</label>
+<institution>Urmia University of Medical Sciences</institution>
+<city>Urmia</city>
+<country country="IR">Iran</country>
+</aff><aff id="edm270203-aff-0006">
+<label>
+<sup>6</sup>
+</label>
+<named-content content-type="organisation-division">Rajaie Cardiovascular Medical and Research Center</named-content>
+<institution>Iran University of Medical Sciences</institution>
+<city>Tehran</city>
+<country country="IR">Iran</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold>
+<break/>
+Azin Ghaffari (<email>heevarashidi2023@gmail.com</email>; <email>a.ghafari@rhi.ac.ir</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>17</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>5</month><year>2026</year></pub-date><volume>9</volume><issue-id pub-id-type="pmc-issue-id">511031</issue-id><elocation-id>e70203</elocation-id><history><date date-type="rev-recd"><day>03</day><month>2</month><year>2026</year></date><date date-type="received"><day>05</day><month>11</month><year>2025</year></date><date date-type="accepted"><day>06</day><month>3</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>17</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>19</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-19 10:25:16.087"><day>19</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Endocrinology, Diabetes &amp; Metabolism</italic> published by John Wiley &amp; Sons Ltd.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="EDM2-9-e70203.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:EDM2-9-e70203.pdf"/><abstract><title>ABSTRACT</title><sec id="edm270203-sec-0001"><title>Background</title><p>Empagliflozin, a sodium‐glucose cotransporter‐2 inhibitor (SGLT2i), may be associated with improved renal outcomes. However, the magnitude and potential heterogeneity of effect among patients with cardiovascular disease (CVD) remain unclear. This systematic review aimed to evaluate the efficacy and safety of empagliflozin on renal outcomes in patients with established CVD.</p></sec><sec id="edm270203-sec-0002"><title>Methods</title><p>Based on the PRISMA guideline, we searched PubMed, Embase, Scopus Google Scholar, Cochrane Library and Web of Science databases, as well as study references, to find randomised controlled clinical trials (RCTs) that evaluated the effect of empagliflozin (regardless of dose) compared with placebo on renal outcomes in patients with CVD, with no time limit, up to 20 August 2025. Outcomes included kidney disease progression, composite renal outcome, nephropathy, doubling of serum creatinine and safety.</p></sec><sec id="edm270203-sec-0003"><title>Results</title><p>Thirteen RCTs involving 36,169 patients were included. A pooled analysis of 12 studies showed that empagliflozin was significantly associated with a reduced risk of progression of kidney disease (HR: 0.66, 95% CI: 0.58, 0.74, <italic toggle="no">I</italic>
+<sup>2</sup>: 11.1%). Empagliflozin was also associated with a reduced risk of the composite renal outcome (HR: 0.7% 95% CI: 0.55, 0.86, <italic toggle="no">I</italic>
+<sup>2</sup>: 0%), diabetic nephropathy (HR: 0.59% 95% CI: 0.42, 0.75, <italic toggle="no">I</italic>
+<sup>2</sup>:0%) and doubling of serum creatinine in CVD patients (HR: 0.60% 95% CI: 0.41, 0.78, <italic toggle="no">I</italic>
+<sup>2</sup>:0%).</p></sec><sec id="edm270203-sec-0004"><title>Conclusion</title><p>Empagliflozin may significantly reduce the risk of CKD outcomes in patients with CVD compared with placebo. Empagliflozin also had a favourable safety profile. Empagliflozin can be prescribed as an effective and safe antidiabetic drug in patients with CVD to improve renal outcomes and prevent CKD progression.</p></sec></abstract><abstract abstract-type="graphical"><p>Empagliflozin may be significantly reducing the risk of CKD outcome in patients with CVD compared with placebo. Empagliflozin also had a favourable safety profile.<boxed-text position="anchor" content-type="graphic" id="edm270203-blkfxd-0001" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="EDM2-9-e70203-g001.jpg"/></boxed-text>
+</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="edm270203-kwd-0001">cardiovascular disease</kwd><kwd id="edm270203-kwd-0002">chronic kidney disease</kwd><kwd id="edm270203-kwd-0003">empagliflozin</kwd><kwd id="edm270203-kwd-0004">renal outcomes</kwd></kwd-group><counts><fig-count count="9"/><table-count count="1"/><page-count count="13"/><word-count count="7300"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>May 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:18.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body id="edm270203-body-0001"><sec id="edm270203-sec-0005"><label>1</label><title>Introduction</title><p>Chronic kidney disease (CKD) and cardiovascular diseases (CVD), including heart failure (HF), are among the most common global health challenges, with their incidence and prevalence increasing in parallel with the increasing incidence of type 2 diabetes mellitus (T2DM), a significant and common cause of both [<xref rid="edm270203-bib-0001" ref-type="bibr">1</xref>, <xref rid="edm270203-bib-0002" ref-type="bibr">2</xref>, <xref rid="edm270203-bib-0003" ref-type="bibr">3</xref>]. CKD affects approximately 10% of the world's population [<xref rid="edm270203-bib-0004" ref-type="bibr">4</xref>]. Beyond progression to end‐stage renal disease (ESRD) requiring dialysis or transplantation, CKD is strongly associated with increased cardiovascular morbidity and mortality [<xref rid="edm270203-bib-0005" ref-type="bibr">5</xref>]. Approximately 40 out of 100 patients with type 2 diabetes (T2DM) have CKD, based on estimated glomerular filtration rate (eGFR) or albuminuria criteria [<xref rid="edm270203-bib-0006" ref-type="bibr">6</xref>, <xref rid="edm270203-bib-0007" ref-type="bibr">7</xref>, <xref rid="edm270203-bib-0008" ref-type="bibr">8</xref>]. Of these, more than 20% are estimated to have clinically overt CKD (eGFR &lt; 60 mL/min/1.73 m<sup>2</sup>) [<xref rid="edm270203-bib-0009" ref-type="bibr">9</xref>, <xref rid="edm270203-bib-0010" ref-type="bibr">10</xref>]. Studies have shown that a decrease in eGFR to &lt; 60 mL/min/1.73 m<sup>2</sup> is an independent risk factor for CVD, including diabetes [<xref rid="edm270203-bib-0011" ref-type="bibr">11</xref>, <xref rid="edm270203-bib-0012" ref-type="bibr">12</xref>, <xref rid="edm270203-bib-0013" ref-type="bibr">13</xref>]. Therefore, the progression of kidney disease and the risk of renal outcomes in heart disease patients may differ from those in the general population [<xref rid="edm270203-bib-0014" ref-type="bibr">14</xref>, <xref rid="edm270203-bib-0015" ref-type="bibr">15</xref>].</p><p>For decades, inhibition of the renin–angiotensin–aldosterone system (RAAS) has remained the cornerstone therapy to retard CKD progression and decrease CV risk [<xref rid="edm270203-bib-0016" ref-type="bibr">16</xref>, <xref rid="edm270203-bib-0017" ref-type="bibr">17</xref>]. However, a substantial residual risk of end‐stage kidney disease progression remains despite RAAS inhibition, highlighting the limitations of existing therapies in fully mitigating the cardio‐renal complications of CKD [<xref rid="edm270203-bib-0018" ref-type="bibr">18</xref>, <xref rid="edm270203-bib-0019" ref-type="bibr">19</xref>]. Differences in the reported residual cardio‐renal risk with RAAS inhibition across studies underscore the need for new treatments to reduce further kidney and cardiovascular complications [<xref rid="edm270203-bib-0020" ref-type="bibr">20</xref>, <xref rid="edm270203-bib-0021" ref-type="bibr">21</xref>, <xref rid="edm270203-bib-0022" ref-type="bibr">22</xref>].</p><p>To address the residual risks that persist despite RAAS inhibition, sodium–glucose cotransporter‐2 (SGLT2) inhibitors have emerged as a novel therapeutic strategy with transformative cardio‐renal benefits [<xref rid="edm270203-bib-0023" ref-type="bibr">23</xref>]. Although developed as glucose‐lowering agents, SGLT2 inhibitors such as empagliflozin slow chronic eGFR decline, reduce albuminuria and lower rates of kidney failure, cardiovascular death and heart‐failure hospitalisation, benefits that extend to CKD populations [<xref rid="edm270203-bib-0024" ref-type="bibr">24</xref>, <xref rid="edm270203-bib-0025" ref-type="bibr">25</xref>, <xref rid="edm270203-bib-0026" ref-type="bibr">26</xref>, <xref rid="edm270203-bib-0027" ref-type="bibr">27</xref>]. The EMPA‐KIDNEY trial demonstrated that empagliflozin reduced kidney disease progression, renal outcome or cardiovascular death in CVD, with benefits consistent regardless of diabetes status [<xref rid="edm270203-bib-0028" ref-type="bibr">28</xref>, <xref rid="edm270203-bib-0029" ref-type="bibr">29</xref>, <xref rid="edm270203-bib-0030" ref-type="bibr">30</xref>, <xref rid="edm270203-bib-0031" ref-type="bibr">31</xref>]. Given the broad and profound cardio‐renal benefits observed, the U.S. Food and Drug Administration has approved SGLT2 inhibitors for the treatment of CKD to improve both renal and cardiovascular outcomes [<xref rid="edm270203-bib-0032" ref-type="bibr">32</xref>].</p><p>Empagliflozin is the most commonly prescribed SGL2 for the management of diabetic patients, with its documented cardiovascular benefit distinguishing it from other antidiabetic agents [<xref rid="edm270203-bib-0024" ref-type="bibr">24</xref>, <xref rid="edm270203-bib-0033" ref-type="bibr">33</xref>, <xref rid="edm270203-bib-0034" ref-type="bibr">34</xref>]. Empagliflozin directly affects renal tubular function and can have beneficial effects on blood pressure, body weight and heart and kidney failure, so in theory, they may be associated with improved renal outcomes in CVD patients [<xref rid="edm270203-bib-0035" ref-type="bibr">35</xref>]. Although its macrovascular effects have been proven, its microvascular effects remain controversial. On the other hand, its effects on the microvascular system have been investigated in several RCTs, with conflicting results [<xref rid="edm270203-bib-0017" ref-type="bibr">17</xref>, <xref rid="edm270203-bib-0036" ref-type="bibr">36</xref>, <xref rid="edm270203-bib-0037" ref-type="bibr">37</xref>, <xref rid="edm270203-bib-0038" ref-type="bibr">38</xref>, <xref rid="edm270203-bib-0039" ref-type="bibr">39</xref>, <xref rid="edm270203-bib-0040" ref-type="bibr">40</xref>, <xref rid="edm270203-bib-0041" ref-type="bibr">41</xref>]. The magnitude of the effect of empagliflozin on renal outcomes among patients with CVD has been reported to be heterogeneous in different studies, possibly due to the small sample size of the studies examined [<xref rid="edm270203-bib-0017" ref-type="bibr">17</xref>, <xref rid="edm270203-bib-0036" ref-type="bibr">36</xref>, <xref rid="edm270203-bib-0037" ref-type="bibr">37</xref>, <xref rid="edm270203-bib-0038" ref-type="bibr">38</xref>, <xref rid="edm270203-bib-0039" ref-type="bibr">39</xref>, <xref rid="edm270203-bib-0040" ref-type="bibr">40</xref>, <xref rid="edm270203-bib-0041" ref-type="bibr">41</xref>].</p><p>Although individual trials have demonstrated the efficacy of empagliflozin in slowing the progression of CKD and improving renal outcomes among people with CVD, a systematic integration of these findings will quantify the benefits and any potential risks in different populations with CKD. Therefore, we designed a systematic review and meta‐analysis to provide a comprehensive assessment of the impact of empagliflozin on renal outcomes among participants with CVD.</p></sec><sec sec-type="methods" id="edm270203-sec-0006"><label>2</label><title>Methods</title><sec id="edm270203-sec-1007"><label>2.1</label><title>Protocol Registration and Search for Potential Studies</title><p>We conducted a systematic review and meta‐analysis in accordance with standardised reporting and methodological guidance (PRISMA (Preferred Reporting Items for Systematic Reviews and Meta‐Analyses) guidelines) [<xref rid="edm270203-bib-0042" ref-type="bibr">42</xref>]. A protocol for the review protocol was developed before study initiation and registered with the International Prospective Register of Systematic Reviews.</p></sec><sec id="edm270203-sec-0007"><label>2.2</label><title>Literature Search</title><p>A literature search was conducted to identify randomised controlled trials (RCTs) that investigated the efficacy and safety of empagliflozin on renal outcomes in adults with CVD, using mesh terms. A search strategy was applied across multiple databases, including MEDLINE/PubMed, EMBASE, Scopus, Web of Science and the Cochrane Library, with no time limit until 22 August 2025. We also searched <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://clinicaltrials.gov" ext-link-type="uri">ClinicalTrials.gov</ext-link> and the World Health Organization (WHO) International Clinical Trials Registry Platform for ongoing or unpublished trials. In addition to database searches, we manually screened reference lists of relevant studies. Two independent investigators searched.</p><p>After the overall search strategy was defined based on the PICO (Patient, Intervention, Comparison and Outcome) framework, the databases were searched using terms such as ‘empagliflozin’, ‘SGLT2 inhibitors’, ‘kidney disease’, ‘renal outcome’, ‘chronic kidney disease’, ‘chronic kidney failure’, ‘Kidney Failure’,’Chronic Renal Disease’, ‘Cardiovascular Diseases’, ‘Major Adverse Cardiac Events’, ‘Cardiac Event’, ‘Cardiac Failure’, ‘Heart Failure’, ‘Heart Decompensation’, ‘Atrial fibrillation’ and ‘Myocardial Failure’.</p><p>PICO was defined as follows:</p><p>Population: People with CVD Coronary heart disease (atherosclerosis), atrial fibrillation, stroke, congenital heart disease, arrhythmias, peripheral artery disease and heart failure (HF) in RCTs, Intervention/Comparison: Receiving empagliflozin (regardless of dose) versus placebo, Outcomes: kidney disease progression, composite renal outcome, nephropathy, doubling of serum creatinine and safety.</p><p>In all included studies, the composite renal outcome was defined as time to first instance of chronic dialysis, kidney transplantation, sustained decline in eGFR ≥ 40%, or sustained eGFR less than 15 mL/min/1.73 m<sup>2</sup> if baseline eGFR was above 30 mL/min/1.73 m<sup>2</sup>, or less than 10 mL/min/1.73 m<sup>2</sup> for patients whose baseline eGFR was 30 mL/min/1.73 m<sup>2</sup> or less [<xref rid="edm270203-bib-0039" ref-type="bibr">39</xref>]. The safety and adverse event profiles were evaluated according to a standard definition that has been validated in prior studies [<xref rid="edm270203-bib-0043" ref-type="bibr">43</xref>]. Documented adverse events included hypoglycemia, instances where plasma glucose levels dropped to ≤ 70 mg/dL and/or situations requiring assistance. Events related to urinary tract infections, genital tract infections, acute kidney injury, volume depletion, bone fractures and hyperkalemia were identified through a search of reported adverse events in the studies. CKD progression in the two groups was determined by the estimated glomerular filtration rate (eGFR) in the studies. CKD was defined as an eGFR &lt; 60 mL/min/1.73 m<sup>2</sup> or evidence of kidney damage for at least three months. Kidney disease progression was defined as a sustained decline in eGFR of at least 40% from randomization, development of end‐stage renal disease, sustained eGFR &lt; 10 mL/min/1.73 m<sup>2</sup>, or death from renal failure [<xref rid="edm270203-bib-0029" ref-type="bibr">29</xref>]. Diabetic nephropathy was defined by the standard definition as persistent albuminuria (&gt; 300 mg/day or &gt; 200 μg/min) confirmed on at least 2 occasions 3–6 months apart, or progressive decline in glomerular filtration rate (GFR) or high arterial blood pressure [<xref rid="edm270203-bib-0044" ref-type="bibr">44</xref>].</p></sec><sec id="edm270203-sec-0008"><label>2.3</label><title>Eligibility Criteria</title><p>Our inclusion criteria included RCTs that evaluated the effect of empagliflozin (regardless of dose) versus placebo in adult patients (≥ 18 years) with CVD (regardless of type), regardless of diabetes status, availability of an effect size for the association of empagliflozin on renal outcomes (as defined), RCTs with at least 100 patients in each treatment subgroup, RCTs with at least 1 year of follow‐up and published studies in English. RCTs that focused on end‐stage renal disease, including dialysis or transplant recipients, were excluded. Studies were also excluded if CVD patients could not be separated from other populations, unless CVD‐specific subgroup data were available. Also, review studies, studies that evaluated the effect of empagliflozin versus other SGLT2 inhibitors or other antidiabetic drugs, letters to the editor, animal/in vitro studies, case reports and observational studies were excluded from this systematic review and meta‐analysis.</p></sec><sec id="edm270203-sec-0009"><label>2.4</label><title>Screening</title><p>The screening process followed a two‐stage approach. First, two reviewers independently screened titles and abstracts for eligibility based on predefined criteria. In the initial search, 586 articles were found from all databases. Using EndNote version 21 software, duplicate articles were identified and removed between sources. Irrelevant records were also removed, and potentially eligible citations were continued for full‐text review. Second, two reviewers independently assessed full‐text articles against the inclusion criteria. Discrepancies were resolved through discussion, with a third senior reviewer involved when necessary. Finally, the full text of 51 articles was reviewed. Thirteen RCTs were included in this meta‐analysis (Figure <xref rid="edm270203-fig-0001" ref-type="fig">1</xref>).</p><fig position="float" fig-type="FIGURE" id="edm270203-fig-0001" orientation="portrait"><label>FIGURE 1</label><caption><p>Flowchart page of studies based on PRISMA 2020.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="EDM2-9-e70203-g006.jpg"/></fig></sec><sec id="edm270203-sec-0010"><label>2.5</label><title>Data Extraction</title><p>After reviewing the literature, an Excel file containing the required variables was created. The extracted variables included study authors, study year, study site, study design, mean age of patients with CVD, gender distribution (male/female), smoking, diabetes, total number of study subjects, number of patients with CVD by drug group (empagliflozin and placebo), body mass index, mean initial eGFR, effect size for renal outcomes (kidney disease progression, composite renal outcome, nephropathy, doubling of serum creatinine and safety) at 95% confidence interval, CVD type, empagliflozin dose, mean duration of use and mean follow‐up period. We contacted the study authors for missing data. Data extraction was performed using two separate Excel files by two independent investigators. A third investigator resolved any discrepancies between the two investigators for a variable.</p></sec><sec id="edm270203-sec-0011"><label>2.6</label><title>Quality Assessment</title><p>Risk of bias for each included RCT was assessed using the Cochrane Risk of Bias 2 (RoB 2) tool [<xref rid="edm270203-bib-0045" ref-type="bibr">45</xref>], which covers five domains: randomization process, deviations from intended interventions, missing outcome data, measurement of outcomes and selection of reported results. Each study was rated for risk of bias as low, some concerns or high, based on the RoB 2 guidance. Discrepancies were resolved through discussion, and we provided a summary of bias assessments across all studies using a traffic‐light plot. We also assessed certainty of evidence using the GRADE approach [<xref rid="edm270203-bib-0046" ref-type="bibr">46</xref>].</p></sec><sec id="edm270203-sec-0012"><label>2.7</label><title>Statistical Analyses</title><p>We used Stata version 17 to analyse data with random‐effects models. We reported the pooled effect size of empagliflozin versus placebo on renal outcomes in patients with CVD as a hazard ratio (HR and 95% CI). Heterogeneity between studies was assessed with the Cochran Q and <italic toggle="yes">I</italic>
+<sup>2</sup> tests, and we interpreted <italic toggle="yes">I</italic>
+<sup>2</sup> values as follows: 0%–40% may indicate no significant heterogeneity; 40%–75% may indicate moderate heterogeneity; and &gt; 75% indicates substantial heterogeneity. Meta‐regression was not required given the lack of heterogeneity for most outcomes or the partial heterogeneity for safety (25.5%). Also, the number of included studies for some outcomes was less than ten. Egger's test was used to assess publication bias, and the results were visually displayed in a funnel plot. Given the absence of publication bias for any of the outcomes, there was no need to use the Trim and Fill analysis to address this issue. Descriptive results were reported using tables and figures. Sensitivity analyses were performed to consider the impact of individual studies on the overall estimate of empagliflozin on outcomes.</p></sec></sec><sec sec-type="results" id="edm270203-sec-0013"><label>3</label><title>Results</title><p>We ultimately included thirteen RCTs [<xref rid="edm270203-bib-0017" ref-type="bibr">17</xref>, <xref rid="edm270203-bib-0025" ref-type="bibr">25</xref>, <xref rid="edm270203-bib-0028" ref-type="bibr">28</xref>, <xref rid="edm270203-bib-0036" ref-type="bibr">36</xref>, <xref rid="edm270203-bib-0037" ref-type="bibr">37</xref>, <xref rid="edm270203-bib-0038" ref-type="bibr">38</xref>, <xref rid="edm270203-bib-0039" ref-type="bibr">39</xref>, <xref rid="edm270203-bib-0040" ref-type="bibr">40</xref>, <xref rid="edm270203-bib-0041" ref-type="bibr">41</xref>, <xref rid="edm270203-bib-0047" ref-type="bibr">47</xref>, <xref rid="edm270203-bib-0048" ref-type="bibr">48</xref>, <xref rid="edm270203-bib-0049" ref-type="bibr">49</xref>, <xref rid="edm270203-bib-0050" ref-type="bibr">50</xref>] including 36,169 CVD patients (20,737 in the empagliflozin group and 15,432 in the placebo group). The mean age of the patients was 67.2 ± 6.6 years. Almost one‐third (32.4%) of the patients were female (32.5% and 32.4% in the Empagliflozin and placebo groups, respectively). The mean BMI was 28.7 ± 3.3 kg/m<sup>2</sup> years. The mean baseline eGFR in the Empagliflozin and placebo groups was 55.3 ± 3.4 and 56.1 ± 2.8 mL/min/1.73m<sup>2</sup>, respectively. HF was the most common CVD. In terms of risk of bias according to the RoB 2 checklist, the majority of studies were at low risk (Figure <xref rid="edm270203-fig-0002" ref-type="fig">2</xref>). In terms of certainty of evidence, all studies were of high or moderate certainty. The median follow‐up period was 80 weeks. The baseline and demographic characteristics of the studies included in this meta‐analysis are reported in Table <xref rid="edm270203-tbl-0001" ref-type="table">1</xref>.</p><fig position="float" fig-type="FIGURE" id="edm270203-fig-0002" orientation="portrait"><label>FIGURE 2</label><caption><p>Results of risk of bias assessment by ROB2 tool.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="EDM2-9-e70203-g008.jpg"/></fig><table-wrap position="float" id="edm270203-tbl-0001" content-type="TABLE" orientation="portrait"><label>TABLE 1</label><caption><p>Baseline characteristics, certainty of evidence and risk of bias of studies included in this meta‐analysis.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Authors (Year)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Total population</th><th align="center" valign="bottom" rowspan="1" colspan="1">
+<italic toggle="yes">N</italic> of Empagliflozin/placebo</th><th align="center" valign="bottom" rowspan="1" colspan="1">Dose</th><th align="center" valign="bottom" rowspan="1" colspan="1">Duration (week)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Mean EGFR at baseline (Empagliflozin/placebo)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Age</th><th align="center" valign="bottom" rowspan="1" colspan="1">Female sex (Empagliflozin/placebo)</th><th align="center" valign="bottom" rowspan="1" colspan="1">BMI</th><th align="center" valign="bottom" rowspan="1" colspan="1">DM (Empagliflozin/placebo)</th><th align="center" valign="bottom" rowspan="1" colspan="1">CVD type</th><th align="center" valign="bottom" rowspan="1" colspan="1">Certainty of evidence</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Wanner [<xref rid="edm270203-bib-0025" ref-type="bibr">25</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1819</td><td align="center" valign="top" rowspan="1" colspan="1">1212/607</td><td align="center" valign="top" rowspan="1" colspan="1">10 or 25 mg</td><td align="center" valign="top" rowspan="1" colspan="1">52</td><td align="center" valign="top" rowspan="1" colspan="1">30.9/48.4</td><td align="center" valign="top" rowspan="1" colspan="1">67.1</td><td align="center" valign="top" rowspan="1" colspan="1">396/189</td><td align="center" valign="top" rowspan="1" colspan="1">27.2</td><td align="center" valign="top" rowspan="1" colspan="1">1212/607</td><td align="center" valign="top" rowspan="1" colspan="1">CVD</td><td align="center" valign="top" rowspan="1" colspan="1">High</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Cherney [<xref rid="edm270203-bib-0047" ref-type="bibr">47</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2782</td><td align="center" valign="top" rowspan="1" colspan="1">1847/935</td><td align="center" valign="top" rowspan="1" colspan="1">10 mg</td><td align="center" valign="top" rowspan="1" colspan="1">164</td><td align="center" valign="top" rowspan="1" colspan="1">47.9/48.2</td><td align="center" valign="top" rowspan="1" colspan="1">63.4</td><td align="center" valign="top" rowspan="1" colspan="1">475/232</td><td align="center" valign="top" rowspan="1" colspan="1">27.6</td><td align="center" valign="top" rowspan="1" colspan="1">1847/935</td><td align="center" valign="top" rowspan="1" colspan="1">CVD</td><td align="center" valign="top" rowspan="1" colspan="1">Moderate</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Wanner [<xref rid="edm270203-bib-0028" ref-type="bibr">28</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">2250</td><td align="center" valign="top" rowspan="1" colspan="1">1498/752</td><td align="center" valign="top" rowspan="1" colspan="1">10 or 25 mg</td><td align="center" valign="top" rowspan="1" colspan="1">96</td><td align="center" valign="top" rowspan="1" colspan="1">54.5/54.3</td><td align="center" valign="top" rowspan="1" colspan="1">66.1</td><td align="center" valign="top" rowspan="1" colspan="1">465/223</td><td align="center" valign="top" rowspan="1" colspan="1">30.8</td><td align="center" valign="top" rowspan="1" colspan="1">1498/752</td><td align="center" valign="top" rowspan="1" colspan="1">CVD</td><td align="center" valign="top" rowspan="1" colspan="1">High</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Kadowaki [<xref rid="edm270203-bib-0048" ref-type="bibr">48</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1517</td><td align="center" valign="top" rowspan="1" colspan="1">1006/911</td><td align="center" valign="top" rowspan="1" colspan="1">10 or 25 mg</td><td align="center" valign="top" rowspan="1" colspan="1">164</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="center" valign="top" rowspan="1" colspan="1">64.7</td><td align="center" valign="top" rowspan="1" colspan="1">301/151</td><td align="center" valign="top" rowspan="1" colspan="1">26.6</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="center" valign="top" rowspan="1" colspan="1">CVD</td><td align="center" valign="top" rowspan="1" colspan="1">Moderate</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Butler [<xref rid="edm270203-bib-0036" ref-type="bibr">36</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">706</td><td align="center" valign="top" rowspan="1" colspan="1">462/244</td><td align="center" valign="top" rowspan="1" colspan="1">10 or 25 mg</td><td align="center" valign="top" rowspan="1" colspan="1">36</td><td align="center" valign="top" rowspan="1" colspan="1">69.1/68</td><td align="center" valign="top" rowspan="1" colspan="1">64.1</td><td align="center" valign="top" rowspan="1" colspan="1">142/69</td><td align="center" valign="top" rowspan="1" colspan="1">31.1</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="center" valign="top" rowspan="1" colspan="1">Heart Failure</td><td align="center" valign="top" rowspan="1" colspan="1">High</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Böhm [<xref rid="edm270203-bib-0049" ref-type="bibr">49</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">7020</td><td align="center" valign="top" rowspan="1" colspan="1">4687/2333</td><td align="center" valign="top" rowspan="1" colspan="1">10 or25 mg</td><td align="center" valign="top" rowspan="1" colspan="1">164</td><td align="center" valign="top" rowspan="1" colspan="1">67.1/66.4</td><td align="center" valign="top" rowspan="1" colspan="1">62.8</td><td align="center" valign="top" rowspan="1" colspan="1">1919/1211</td><td align="center" valign="top" rowspan="1" colspan="1">30.6</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="center" valign="top" rowspan="1" colspan="1">Atrial fibrillation</td><td align="center" valign="top" rowspan="1" colspan="1">High</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Packer [<xref rid="edm270203-bib-0050" ref-type="bibr">50</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">3730</td><td align="center" valign="top" rowspan="1" colspan="1">1863/1867</td><td align="center" valign="top" rowspan="1" colspan="1">10 mg</td><td align="center" valign="top" rowspan="1" colspan="1">52</td><td align="center" valign="top" rowspan="1" colspan="1">61.8/62.2</td><td align="center" valign="top" rowspan="1" colspan="1">69.9</td><td align="center" valign="top" rowspan="1" colspan="1">437/456</td><td align="center" valign="top" rowspan="1" colspan="1">28.5</td><td align="center" valign="top" rowspan="1" colspan="1">927/929</td><td align="center" valign="top" rowspan="1" colspan="1">Heart Failure</td><td align="center" valign="top" rowspan="1" colspan="1">High</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Böhm [<xref rid="edm270203-bib-0038" ref-type="bibr">38</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">3726</td><td align="center" valign="top" rowspan="1" colspan="1">1863/1859</td><td align="center" valign="top" rowspan="1" colspan="1">10 mg</td><td align="center" valign="top" rowspan="1" colspan="1">12</td><td align="center" valign="top" rowspan="1" colspan="1">61.5/60.5</td><td align="center" valign="top" rowspan="1" colspan="1">65.1</td><td align="center" valign="top" rowspan="1" colspan="1">409/411</td><td align="center" valign="top" rowspan="1" colspan="1">27.8</td><td align="center" valign="top" rowspan="1" colspan="1">947/932</td><td align="center" valign="top" rowspan="1" colspan="1">Heart Failure</td><td align="center" valign="top" rowspan="1" colspan="1">Moderate</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Anker [<xref rid="edm270203-bib-0037" ref-type="bibr">37</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">3730</td><td align="center" valign="top" rowspan="1" colspan="1">1863/1863</td><td align="center" valign="top" rowspan="1" colspan="1">10 mg</td><td align="center" valign="top" rowspan="1" colspan="1">52</td><td align="center" valign="top" rowspan="1" colspan="1">61.3/62.7</td><td align="center" valign="top" rowspan="1" colspan="1">66.9</td><td align="center" valign="top" rowspan="1" colspan="1">437/458</td><td align="center" valign="top" rowspan="1" colspan="1">28.02</td><td align="center" valign="top" rowspan="1" colspan="1">921/929</td><td align="center" valign="top" rowspan="1" colspan="1">Heart Failure</td><td align="center" valign="top" rowspan="1" colspan="1">High</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Zannad [<xref rid="edm270203-bib-0039" ref-type="bibr">39</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1978</td><td align="center" valign="top" rowspan="1" colspan="1">981/997</td><td align="center" valign="top" rowspan="1" colspan="1">10 mg</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="center" valign="top" rowspan="1" colspan="1">46.5/47.4</td><td align="center" valign="top" rowspan="1" colspan="1">70.2</td><td align="center" valign="top" rowspan="1" colspan="1">232/273</td><td align="center" valign="top" rowspan="1" colspan="1">28.01</td><td align="center" valign="top" rowspan="1" colspan="1">820/981</td><td align="center" valign="top" rowspan="1" colspan="1">Heart Failure</td><td align="center" valign="top" rowspan="1" colspan="1">High</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Voors [<xref rid="edm270203-bib-0040" ref-type="bibr">40</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">580</td><td align="center" valign="top" rowspan="1" colspan="1">265/265</td><td align="center" valign="top" rowspan="1" colspan="1">10 mg</td><td align="center" valign="top" rowspan="1" colspan="1">12</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="center" valign="top" rowspan="1" colspan="1">69.4</td><td align="center" valign="top" rowspan="1" colspan="1">85/84</td><td align="center" valign="top" rowspan="1" colspan="1">29.3</td><td align="center" valign="top" rowspan="1" colspan="1">115/112</td><td align="center" valign="top" rowspan="1" colspan="1">Heart Failure</td><td align="center" valign="top" rowspan="1" colspan="1">High</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Sharma [<xref rid="edm270203-bib-0017" ref-type="bibr">17</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">3198</td><td align="center" valign="top" rowspan="1" colspan="1">1615/1583</td><td align="center" valign="top" rowspan="1" colspan="1">10 or 25 mg</td><td align="center" valign="top" rowspan="1" colspan="1">52</td><td align="center" valign="top" rowspan="1" colspan="1">45.1/46.4</td><td align="center" valign="top" rowspan="1" colspan="1">74.2</td><td align="center" valign="top" rowspan="1" colspan="1">775/620</td><td align="center" valign="top" rowspan="1" colspan="1">28.5</td><td align="center" valign="top" rowspan="1" colspan="1">851/822</td><td align="center" valign="top" rowspan="1" colspan="1">Heart Failure</td><td align="center" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Filippatos [<xref rid="edm270203-bib-0041" ref-type="bibr">41</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">3133</td><td align="center" valign="top" rowspan="1" colspan="1">1575/1558</td><td align="center" valign="top" rowspan="1" colspan="1">10 mg</td><td align="center" valign="top" rowspan="1" colspan="1">102</td><td align="center" valign="top" rowspan="1" colspan="1">63.1/62.1</td><td align="center" valign="top" rowspan="1" colspan="1">69.1</td><td align="center" valign="top" rowspan="1" colspan="1">655/611</td><td align="center" valign="top" rowspan="1" colspan="1">29.7</td><td align="center" valign="top" rowspan="1" colspan="1">758/744</td><td align="center" valign="top" rowspan="1" colspan="1">Atrial fibrillation</td><td align="center" valign="top" rowspan="1" colspan="1"/></tr></tbody></table></table-wrap><sec id="edm270203-sec-0014"><label>3.1</label><title>Renal Outcomes</title><sec id="edm270203-sec-0015"><label>3.1.1</label><title>Progression of Kidney Disease</title><p>A pooled analysis of 12 studies showed that empagliflozin was significantly associated with a reduced risk of kidney disease progression (HR: 0.66, 95% CI: 0.58, 0.74, I2: 11.1%) (Figure <xref rid="edm270203-fig-0003" ref-type="fig">3</xref>). Empagliflozin reduced the risk of kidney disease progression in patients with CVD and HF by 34% and 33%, respectively (Figure <xref rid="edm270203-supitem-0001" ref-type="supplementary-material">S1</xref>).</p><fig position="float" fig-type="FIGURE" id="edm270203-fig-0003" orientation="portrait"><label>FIGURE 3</label><caption><p>Forest plot of effect of Empagliflozin on Kidney Disease Progression in CVD patients.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="EDM2-9-e70203-g007.jpg"/></fig></sec><sec id="edm270203-sec-0016"><label>3.1.2</label><title>Composite Kidney Outcome</title><p>The association of empagliflozin with composite kidney outcome was examined in six studies [<xref rid="edm270203-bib-0025" ref-type="bibr">25</xref>, <xref rid="edm270203-bib-0036" ref-type="bibr">36</xref>, <xref rid="edm270203-bib-0037" ref-type="bibr">37</xref>, <xref rid="edm270203-bib-0039" ref-type="bibr">39</xref>, <xref rid="edm270203-bib-0041" ref-type="bibr">41</xref>, <xref rid="edm270203-bib-0050" ref-type="bibr">50</xref>]. The pooled estimate of results showed that empagliflozin reduced the risk of composite kidney outcome by 30% (Figure <xref rid="edm270203-fig-0004" ref-type="fig">4</xref>).</p><fig position="float" fig-type="FIGURE" id="edm270203-fig-0004" orientation="portrait"><label>FIGURE 4</label><caption><p>Forest plot of effect of Empagliflozin on Composite kidney outcome in CVD patients.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="EDM2-9-e70203-g004.jpg"/></fig></sec><sec id="edm270203-sec-0017"><label>3.1.3</label><title>Diabetic Nephropathy</title><p>The pooled analysis of the five studies [<xref rid="edm270203-bib-0017" ref-type="bibr">17</xref>, <xref rid="edm270203-bib-0036" ref-type="bibr">36</xref>, <xref rid="edm270203-bib-0048" ref-type="bibr">48</xref>, <xref rid="edm270203-bib-0049" ref-type="bibr">49</xref>, <xref rid="edm270203-bib-0050" ref-type="bibr">50</xref>] showed that empagliflozin was significantly associated with a reduced risk of diabetic nephropathy in patients with CVD (HR: 0.59, 95% CI: 0.42, 0.75, I2: 0%) (Figure <xref rid="edm270203-fig-0005" ref-type="fig">5</xref>).</p><fig position="float" fig-type="FIGURE" id="edm270203-fig-0005" orientation="portrait"><label>FIGURE 5</label><caption><p>Forest plot of effect of Empagliflozin on Diabetic Nephropathy in CVD patients.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-11" orientation="portrait" xlink:href="EDM2-9-e70203-g003.jpg"/></fig></sec><sec id="edm270203-sec-0018"><label>3.1.4</label><title>Doubling of the Serum Creatinine Level</title><p>Four RCTs examined the effect of empagliflozin on doubling of the serum creatinine level. The pooled results showed that empagliflozin was significantly associated with a reduced risk of doubling of the serum creatinine in CVD patients, reducing the risk of doubling of the serum creatinine by 40% compared with placebo (HR: 0.60, 95% CI: 0.41, 0.78, I2: 0%) (Figure <xref rid="edm270203-fig-0006" ref-type="fig">6</xref>).</p><fig position="float" fig-type="FIGURE" id="edm270203-fig-0006" orientation="portrait"><label>FIGURE 6</label><caption><p>Forest plot of effect of Empagliflozin on Doubling of the serum creatinine level in CVD patients.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-13" orientation="portrait" xlink:href="EDM2-9-e70203-g005.jpg"/></fig><p>The effect of empagliflozin on replacement therapy was investigated in two studies [<xref rid="edm270203-bib-0025" ref-type="bibr">25</xref>, <xref rid="edm270203-bib-0048" ref-type="bibr">48</xref>]. Wanner et al. [<xref rid="edm270203-bib-0025" ref-type="bibr">25</xref>] showed that empagliflozin reduced the risk of switching therapy by 45%. This rate was estimated to be 48% in the study by Kadowaki et al. [<xref rid="edm270203-bib-0048" ref-type="bibr">48</xref>].</p></sec></sec><sec id="edm270203-sec-0019"><label>3.2</label><title>Safety</title><p>The safety of empagliflozin in patients with CVD was investigated in nine studies [<xref rid="edm270203-bib-0025" ref-type="bibr">25</xref>, <xref rid="edm270203-bib-0028" ref-type="bibr">28</xref>, <xref rid="edm270203-bib-0036" ref-type="bibr">36</xref>, <xref rid="edm270203-bib-0037" ref-type="bibr">37</xref>, <xref rid="edm270203-bib-0039" ref-type="bibr">39</xref>, <xref rid="edm270203-bib-0040" ref-type="bibr">40</xref>, <xref rid="edm270203-bib-0041" ref-type="bibr">41</xref>, <xref rid="edm270203-bib-0048" ref-type="bibr">48</xref>, <xref rid="edm270203-bib-0049" ref-type="bibr">49</xref>]. The pooled estimates of the results showed that empagliflozin was not significantly associated with an increased risk of any complications, especially serious complications, in patients with CVD (HR: 0.89, 95% CI: 0.71, 1.0778, I2: 25.5%) (Figure <xref rid="edm270203-fig-0007" ref-type="fig">7</xref>).</p><fig position="float" fig-type="FIGURE" id="edm270203-fig-0007" orientation="portrait"><label>FIGURE 7</label><caption><p>Forest plot of effect of Empagliflozin on Safety in CVD patients.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-15" orientation="portrait" xlink:href="EDM2-9-e70203-g009.jpg"/></fig><p>The results of subgroup analysis showed that empagliflozin was not associated with an increased risk of complications in any of the subtypes of CVD and was safe (Figure <xref rid="edm270203-supitem-0001" ref-type="supplementary-material">S2</xref>).</p></sec><sec id="edm270203-sec-0020"><label>3.3</label><title>Sensitivity Analysis</title><p>A sensitivity analysis was performed to estimate the effect size of each study on the overall estimate of the association of Empagliflozin with kidney disease progression, composite kidney outcome and safety (Figures <xref rid="edm270203-supitem-0001" ref-type="supplementary-material">S3–S5</xref>).</p><p>Further analyses limited to studies that adjusted for mean eGFR, consistent with the overall estimate, also showed that empagliflozin was associated with a reduced risk of disease progression (HR: 0.55, 95% CI: 0.45, 0.66), Composite kidney outcome (HR: 0.45, 95% CI: 0.34, 0.55), Doubling of the serum creatinine level (HR: 0.52, 95% CI: 0.4, 0.63) and Diabetic Nephropathy (HR: 0.52, 95% CI: 0.40, 0.65).</p></sec><sec id="edm270203-sec-0021"><label>3.4</label><title>Publication Bias</title><p>We assessed the effect of publication bias by outcome using Egger's test. The results of the Egger's test showed no significant effect of publication bias on the overall estimate of the association of empagliflozin with progression of kidney disease (Egger's test: 0.24, 95% CI: −0.59, 1.08, <italic toggle="yes">p</italic>: 0.91), composite kidney outcome (Egger's test: −1.2, 95% CI: −3.2, 1.9, <italic toggle="yes">p</italic>: 0.8), Diabetic nephropathy (Egger's test: −0.51, 95% CI: 0.1.52, 0.58, <italic toggle="yes">p</italic>: 0.65) and safety in CVD patients (Egger's test: −0.23, 95% CI: −4.9, 3.5, <italic toggle="yes">p</italic>: 0.88). The distribution of studies by outcome is also reported in a funnel plot (Figure <xref rid="edm270203-fig-0008" ref-type="fig">8</xref>).</p><fig position="float" fig-type="FIGURE" id="edm270203-fig-0008" orientation="portrait"><label>FIGURE 8</label><caption><p>Bias publication assessment in the funnel plot for progression of kidney disease (A) composite kidney outcome (B) Diabetic nephropathy (C) and Safety (D).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-17" orientation="portrait" xlink:href="EDM2-9-e70203-g002.jpg"/></fig></sec></sec><sec sec-type="discussion" id="edm270203-sec-0022"><label>4</label><title>Discussion</title><p>The effect of empagliflozin on cardiac outcomes in CVD patients remains controversial. Given the importance of the topic, we pooled the results of 13 RCTs to evaluate the efficacy and safety of empagliflozin on renal outcomes in 36,169 patients with CVD with a median age of 67 years, most of whom were men (more than two‐thirds). Heart failure was the most common type of CVD.</p><p>The pooled estimate of the results showed that empagliflozin reduced the risk of kidney disease progression by 34% compared with placebo in patients with CVD, regardless of the dose (10 or 20 mg), and these results were similar across subgroups of CVD types. Empagliflozin also reduced the risk of the composite renal outcome, diabetic nephropathy and doubling of serum creatinine by 30%, 41% and 40%, respectively, in CVD patients. The effect of empagliflozin on replacement therapy was evaluated in only two studies, both of which suggested a protective effect of empagliflozin on the risk of therapy substitution (&gt; 50%) in CVD patients. The majority of patients studied in the initial studies also had CKD or established renal impairment and empagliflozin was also significantly associated with improvement in renal indices and prevention of disease progression in CKD patients.</p><p>Pooled estimates from nine studies showed that empagliflozin was effective in CVD patients with and without established baseline CKD and did not cause any serious adverse events, including edema, renal failure, volume depletion and hyperkalemia and edema.</p><p>The risk of bias of the majority of studies included in this meta‐analysis was low based on the ROB2 tool, and the certainty of the evidence was high in the majority of studies. The heterogeneity between studies was low for all outcomes and almost zero for a number of outcomes. Given the low heterogeneity between studies, meta‐regression was not required. The small amount of heterogeneity remaining between studies for several outcomes can be explained by differences in patient demographic characteristics, comorbidities, mean follow‐up and lifestyle (nutrition and physical activity) between studies. No publication bias was observed for any of the outcomes and publication bias had no significant effect on the study results.</p><p>Although several reviews have examined the effect of SGLT2 on renal and cardiovascular outcomes in different populations [<xref rid="edm270203-bib-0033" ref-type="bibr">33</xref>, <xref rid="edm270203-bib-0051" ref-type="bibr">51</xref>, <xref rid="edm270203-bib-0052" ref-type="bibr">52</xref>, <xref rid="edm270203-bib-0053" ref-type="bibr">53</xref>, <xref rid="edm270203-bib-0054" ref-type="bibr">54</xref>, <xref rid="edm270203-bib-0055" ref-type="bibr">55</xref>, <xref rid="edm270203-bib-0056" ref-type="bibr">56</xref>, <xref rid="edm270203-bib-0057" ref-type="bibr">57</xref>, <xref rid="edm270203-bib-0058" ref-type="bibr">58</xref>, <xref rid="edm270203-bib-0059" ref-type="bibr">59</xref>], to our knowledge, no review has yet assessed the effect of empagliflozin on renal outcomes in CVD patients. Bae et al. [<xref rid="edm270203-bib-0060" ref-type="bibr">60</xref>] in a systematic review and meta‐analysis evaluating the effects of SGLT 2 inhibitors on renal outcomes in patients with type 2 diabetes in 48 studies including 58,165 patients, showed that SGLT2 inhibitors were significantly associated with a reduced risk of albuminuria or its progression and a reduced risk of end‐stage renal disease compared to placebo or other diabetic drugs, which confirmed the results of our study. In another systematic review and meta‐analysis, HM Salah et al. examined the effect of SGLT2 inhibitors compared with placebo on cardiac and renal outcomes in eight trials including 59,747 patients. They showed that SGLT2i reduced the risk of the composite kidney outcome and progressive kidney disease by 38% compared with placebo in the overall population, which confirmed the results of our study. They studied the general population, while we studied only CVD patients. In another systematic review and meta‐analysis by Spiazzi et al. [<xref rid="edm270203-bib-0058" ref-type="bibr">58</xref>] in 2025, evaluating the effect of SGLT2i on renal outcomes across a range of kidney diseases in 10 RCTs, including 78,184 participants, SGLT2i significantly reduced the risk of renal outcomes across a range of KDIGO classes and UACR levels compared to placebo, which was in line with the results of our study. Lo et al. [<xref rid="edm270203-bib-0055" ref-type="bibr">55</xref>] in a systematic review and meta‐analysis evaluating the effect of SGLT2 inhibitors compared to placebo on cardiac and renal outcomes in diabetic patients, showed that SGLT2i was significantly associated with a reduced risk of renal outcomes and renal adverse events in diabetic patients compared to placebo, and these effects were evident even in a population with eGFR &lt; 60 mL/min/1.73 m<sup>2</sup>.</p><p>In a systematic review and meta‐analysis, Alizadehasl et al. [<xref rid="edm270203-bib-0054" ref-type="bibr">54</xref>] evaluated the efficacy and safety of empagliflozin on outcomes in patients with myocardial infarction (MI) undergoing primary PCI. In a systematic review including seven RCTs, they showed that empagliflozin reduced the risk of hospitalisation for heart failure by nearly 50% compared with placebo. They also showed that empagliflozin was associated with good safety in patients with myocardial infarction.</p><p>The mechanisms of empagliflozin renal effects are likely to be multifactorial, although direct effects on the renal vasculature may play a major role [<xref rid="edm270203-bib-0061" ref-type="bibr">61</xref>, <xref rid="edm270203-bib-0062" ref-type="bibr">62</xref>, <xref rid="edm270203-bib-0063" ref-type="bibr">63</xref>]. Empagliflozin, by reducing proximal tubular sodium reabsorption, increases distal sodium delivery to the macula densa and activates tubuloglomerular feedback, thereby modulating afferent vasculature, reducing hyperfiltration and improving the progression of renal disease in patients with CVD [<xref rid="edm270203-bib-0064" ref-type="bibr">64</xref>]. Empagliflozin may also lead to a reduction in albuminuria and consequently an improvement in associated renal outcomes through various mechanisms, including a reduction in glomerular hyperfiltration, amelioration of tubulointerstitial fibrosis, a decrease in systemic blood pressure, changes in plasma volume expansion and a decrease in uric acid levels [<xref rid="edm270203-bib-0061" ref-type="bibr">61</xref>, <xref rid="edm270203-bib-0065" ref-type="bibr">65</xref>, <xref rid="edm270203-bib-0066" ref-type="bibr">66</xref>, <xref rid="edm270203-bib-0067" ref-type="bibr">67</xref>, <xref rid="edm270203-bib-0068" ref-type="bibr">68</xref>, <xref rid="edm270203-bib-0069" ref-type="bibr">69</xref>, <xref rid="edm270203-bib-0070" ref-type="bibr">70</xref>, <xref rid="edm270203-bib-0071" ref-type="bibr">71</xref>]. In addition to its intrarenal effects, empagliflozin may affect eGFR by reducing blood pressure and body weight, thereby improving renal outcomes [<xref rid="edm270203-bib-0072" ref-type="bibr">72</xref>, <xref rid="edm270203-bib-0073" ref-type="bibr">73</xref>]. In addition, empagliflozin can also prevent the progression of kidney disease by reducing hyperglycemia and haemoglobin A1C levels through reducing arterial stiffness and reducing vascular resistance [<xref rid="edm270203-bib-0024" ref-type="bibr">24</xref>, <xref rid="edm270203-bib-0062" ref-type="bibr">62</xref>, <xref rid="edm270203-bib-0063" ref-type="bibr">63</xref>].</p><sec id="edm270203-sec-0023"><label>4.1</label><title>Limitation</title><p>Our study had limitations and strengths that should be noted. Due to the lack of reporting and availability of several key variables, including duration of heart disease, smoking, comorbidities including diabetes and non‐diabetes and obesity, in the primary studies included in this meta‐analysis, we were unable to estimate the effect size of empagliflozin on renal outcomes stratified for these variables. Most of the studies included in this meta‐analysis were conducted in developed countries that had conducted randomised clinical trials with short follow‐up and caution should be exercised in generalising the results to other populations. Although the heterogeneity statistics were low, differences in study design, outcome definitions and follow‐up duration may still affect the pooled estimates. Most of the included RCTs had relatively short follow‐up periods, which limits the assessment of long‐term renal protection and safety. Several studies used a common database for different purposes, although we tried to account for data overlap, so the design of randomised clinical trials in other populations could help to estimate the results more accurately. The main objective of this study was to evaluate the efficacy and safety of empagliflozin on renal outcomes in CVD patients in a systematic review and meta‐analysis with low heterogeneity.</p></sec></sec><sec sec-type="conclusions" id="edm270203-sec-0024"><label>5</label><title>Conclusion</title><p>This meta‐analysis showed that empagliflozin may significantly reduce the risk of CKD progression, composite kidney outcome, diabetic nephropathy and doubling of the serum creatinine in patients with CVD compared with placebo. Empagliflozin also had a good safety profile. Empagliflozin can be prescribed as an effective and safe antidiabetic drug in patients with CVD to improve renal outcomes and prevent CKD progression. The studies included in this meta‐analysis were RCTs conducted in specific populations and specific conditions. Conducting studies in the post‐marketing phase and at the community level could help to estimate the results more accurately.</p></sec><sec id="edm270203-sec-0025"><title>Author Contributions</title><p>All authors contributed to the study conception and design. M.B., A.G.: Conceptualization, methodology, software, writing – original draft, data curation, visualization were performed; A.G., M.M., M.S. and B.G.: Investigation, Writing – original draft, writing – reviewing and editing were performed; A.G.: Conceptualization, supervision, project administration were performed. All authors read and approved the final manuscript.</p></sec><sec id="edm270203-sec-0026"><title>Funding</title><p>The authors have nothing to report.</p></sec><sec id="edm270203-sec-0027"><title>Ethics Statement</title><p>Protocol registered in PROSPERO.</p></sec><sec sec-type="COI-statement" id="edm270203-sec-0029"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="edm270203-supitem-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Figure S1:</bold> Forest plot of effect of Empagliflozin on Kidney Disease Progression based on CVD type.</p><p>
+<bold>Figure S2:</bold> Forest plot of effect of Empagliflozin on Safety base on CVD type.</p><p>
+<bold>Figure S3:</bold> Results of sensitivity analysis for single effect of studies on the association of empagliflozin on kidney disease progression.</p><p>
+<bold>Figure S4:</bold> Results of sensitivity analysis for single effect of studies on the association of empagliflozin on composite kidney outcome.</p><p>
+<bold>Figure S5:</bold> Results of sensitivity analysis for single effect of studies on the association of empagliflozin on safety.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="EDM2-9-e70203-s001.docx" position="float" orientation="portrait"/></supplementary-material></sec></body><back><ack id="edm270203-sec-0028"><title>Acknowledgements</title><p>The authors have nothing to report.</p></ack><sec sec-type="data-availability" id="edm270203-sec-0031"><title>Data Availability Statement</title><p>The data that support the findings of this study are available on request from the corresponding author. The data are not publicly available due to privacy or ethical restrictions.</p></sec><ref-list content-type="cited-references" id="edm270203-bibl-0001"><title>References</title><ref id="edm270203-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="edm270203-cit-0001">
+<string-name name-style="western">
+<given-names>G. S.</given-names>
+<surname>Filippatos</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. I.</given-names>
+<surname>Ahmed</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Gladden</surname>
+</string-name>, et al., “<article-title>Hyperuricaemia, Chronic Kidney Disease, and Outcomes in Heart Failure: Potential Mechanistic Insights From Epidemiological Data</article-title>,” <source>European Heart Journal</source>
+<volume>32</volume>, no. <issue>6</issue> (<year>2011</year>): <fpage>712</fpage>–<lpage>720</lpage>.<pub-id pub-id-type="pmid">21199831</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/eurheartj/ehq473</pub-id><pub-id pub-id-type="pmcid">PMC3056205</pub-id></mixed-citation></ref><ref id="edm270203-bib-0002"><label>2</label><mixed-citation publication-type="book" id="edm270203-cit-0002">
+<string-name name-style="western">
+<given-names>J.‐C.</given-names>
+<surname>Lv</surname>
+</string-name> and <string-name name-style="western">
+<given-names>L.‐X.</given-names>
+<surname>Zhang</surname>
+</string-name>, “<part-title>Prevalence and Disease Burden of Chronic Kidney Disease</part-title>,” in <source>Renal Fibrosis: Mechanisms and Therapies</source> (<publisher-name>Springer</publisher-name>, <year>2019</year>), <fpage>3</fpage>–<lpage>15</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/978-981-13-8871-2_1</pub-id><pub-id pub-id-type="pmid">31399958</pub-id></mixed-citation></ref><ref id="edm270203-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="edm270203-cit-0003">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Matsushita</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. H.</given-names>
+<surname>Ballew</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. Y.‐M.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Kalyesubula</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Schaeffner</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Agarwal</surname>
+</string-name>, “<article-title>Epidemiology and Risk of Cardiovascular Disease in Populations With Chronic Kidney Disease</article-title>,” <source>Nature Reviews. Nephrology</source>
+<volume>18</volume>, no. <issue>11</issue> (<year>2022</year>): <fpage>696</fpage>–<lpage>707</lpage>.<pub-id pub-id-type="pmid">36104509</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41581-022-00616-6</pub-id></mixed-citation></ref><ref id="edm270203-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="edm270203-cit-0004">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Disease</surname>
+</string-name> and <string-name name-style="western">
+<given-names>I. G. O. K. L. N.</given-names>
+<surname>Work</surname>
+</string-name>, “<article-title>KDIGO 2024 Clinical Practice Guideline for the Management of LUPUS NEPHRITIS</article-title>,” <source>Kidney International</source>
+<volume>105</volume>, no. <issue>1S</issue> (<year>2024</year>): <fpage>S1</fpage>–<lpage>S69</lpage>.<pub-id pub-id-type="pmid">38182286</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.kint.2023.09.002</pub-id></mixed-citation></ref><ref id="edm270203-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="edm270203-cit-0005">
+<string-name name-style="western">
+<given-names>S. Y.</given-names>
+<surname>Albert</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. J.</given-names>
+<surname>Pak</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Zhou</surname>
+</string-name>, et al., “<article-title>All‐Cause and Cardiovascular‐Related Mortality in CKD Patients With and Without Heart Failure: A Population‐Based Cohort Study in Kaiser Permanente Southern California</article-title>,” <source>Kidney Medicine</source>
+<volume>5</volume>, no. <issue>5</issue> (<year>2023</year>): <elocation-id>100624</elocation-id>.<pub-id pub-id-type="pmid">37143487</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.xkme.2023.100624</pub-id><pub-id pub-id-type="pmcid">PMC10151415</pub-id></mixed-citation></ref><ref id="edm270203-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="edm270203-cit-0006">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Wu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Bell</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Stanford</surname>
+</string-name>, et al., “<article-title>Understanding CKD Among Patients With T2DM: Prevalence, Temporal Trends, and Treatment Patterns—NHANES 2007–2012</article-title>,” <source>BMJ Open Diabetes Research &amp; Care</source>
+<volume>4</volume>, no. <issue>1</issue> (<year>2016</year>): <elocation-id>e000154</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/bmjdrc-2015-000154</pub-id><pub-id pub-id-type="pmcid">PMC4838667</pub-id><pub-id pub-id-type="pmid">27110365</pub-id></mixed-citation></ref><ref id="edm270203-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="edm270203-cit-0007">
+<string-name name-style="western">
+<given-names>R. A.</given-names>
+<surname>Bailey</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Zhu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. F.</given-names>
+<surname>Rupnow</surname>
+</string-name>, “<article-title>Chronic Kidney Disease in US Adults With Type 2 Diabetes: An Updated National Estimate of Prevalence Based on Kidney Disease: Improving Global Outcomes (KDIGO) Staging</article-title>,” <source>BMC Research Notes</source>
+<volume>7</volume>, no. <issue>1</issue> (<year>2014</year>): <elocation-id>415</elocation-id>.<pub-id pub-id-type="pmid">24990184</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/1756-0500-7-415</pub-id><pub-id pub-id-type="pmcid">PMC4091951</pub-id></mixed-citation></ref><ref id="edm270203-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="edm270203-cit-0008">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Stempniewicz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. A.</given-names>
+<surname>Vassalotti</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. K.</given-names>
+<surname>Cuddeback</surname>
+</string-name>, et al., “<article-title>Chronic Kidney Disease Testing Among Primary Care Patients With Type 2 Diabetes Across 24 US Health Care Organizations</article-title>,” <source>Diabetes Care</source>
+<volume>44</volume>, no. <issue>9</issue> (<year>2021</year>): <fpage>2000</fpage>–<lpage>2009</lpage>.<pub-id pub-id-type="pmid">34233925</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2337/dc20-2715</pub-id><pub-id pub-id-type="pmcid">PMC8740923</pub-id></mixed-citation></ref><ref id="edm270203-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="edm270203-cit-0009">
+<string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Filler</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Ahmad</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Bhayana</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. E.</given-names>
+<surname>de Díaz González Ferris</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A. P.</given-names>
+<surname>Sharma</surname>
+</string-name>, “<article-title>Limitations of U25 CKiD and CKD‐EPI eGFR Formulae in Patients 2–20 Years of Age With Measured GFR&gt;60 mL/Min/1.73 m2—A Cross‐Sectional Study</article-title>,” <source>Pediatric Nephrology</source>
+<volume>39</volume>, no. <issue>4</issue> (<year>2024</year>): <fpage>1169</fpage>–<lpage>1176</lpage>.<pub-id pub-id-type="pmid">37840039</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00467-023-06185-5</pub-id></mixed-citation></ref><ref id="edm270203-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="edm270203-cit-0010">
+<string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Eknoyan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Lameire</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Eckardt</surname>
+</string-name>, et al., “<article-title>KDIGO 2012 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease</article-title>,” <source>Kidney International</source>
+<volume>3</volume>, no. <issue>1</issue> (<year>2013</year>): <fpage>5</fpage>–<lpage>14</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/ki.2013.243</pub-id><pub-id pub-id-type="pmid">23989362</pub-id></mixed-citation></ref><ref id="edm270203-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="edm270203-cit-0011">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Matsushita</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>der Van Velde</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Astor</surname>
+</string-name>, et al., “<article-title>Chronic Kidney Disease Prognosis Consortium: Association of Estimated Glomerular Filtration Rate and Albuminuria With All‐Cause and Cardiovascular Mortality in General Population Cohorts: A Collaborative Meta‐Analysis</article-title>,” <source>Lancet</source>
+<volume>375</volume>, no. <issue>9731</issue> (<year>2010</year>): <fpage>2073</fpage>–<lpage>2081</lpage>.<pub-id pub-id-type="pmid">20483451</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/S0140-6736(10)60674-5</pub-id><pub-id pub-id-type="pmcid">PMC3993088</pub-id></mixed-citation></ref><ref id="edm270203-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="edm270203-cit-0012">
+<string-name name-style="western">
+<given-names>S.‐f.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.‐y.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.‐j.</given-names>
+<surname>Dai</surname>
+</string-name>, et al., “<article-title>A 3‐Year Follow‐Up Analysis of Renal Function in Elderly Patients With Type 2 Diabetes Mellitus and an Estimated Glomerular Filtration Rate &lt;90 mL/Min/1.73m<sup>2</sup>: A Retrospective Cohort Study</article-title>,” <source>Medicine</source>
+<volume>103</volume>, no. <issue>28</issue> (<year>2024</year>): <elocation-id>e38865</elocation-id>.<pub-id pub-id-type="pmid">38996107</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/MD.0000000000038865</pub-id><pub-id pub-id-type="pmcid">PMC11245256</pub-id></mixed-citation></ref><ref id="edm270203-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="edm270203-cit-0013">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Ramezankhani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Azizi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Hadaegh</surname>
+</string-name>, “<article-title>Association Between Estimated Glomerular Filtration Rate Slope and Cardiovascular Disease Among Individuals With and Without Diabetes: A Prospective Cohort Study</article-title>,” <source>Cardiovascular Diabetology</source>
+<volume>22</volume>, no. <issue>1</issue> (<year>2023</year>): <fpage>270</fpage>.<pub-id pub-id-type="pmid">37794456</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12933-023-02008-x</pub-id><pub-id pub-id-type="pmcid">PMC10552420</pub-id></mixed-citation></ref><ref id="edm270203-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="edm270203-cit-0014">
+<string-name name-style="western">
+<given-names>R. B.</given-names>
+<surname>Patel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. C.</given-names>
+<surname>Fonarow</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Greene</surname>
+</string-name>, et al., “<article-title>Kidney Function and Outcomes in Patients Hospitalized With Heart Failure</article-title>,” <source>Journal of the American College of Cardiology</source>
+<volume>78</volume>, no. <issue>4</issue> (<year>2021</year>): <fpage>330</fpage>–<lpage>343</lpage>.<pub-id pub-id-type="pmid">33989713</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jacc.2021.05.002</pub-id><pub-id pub-id-type="pmcid">PMC8994871</pub-id></mixed-citation></ref><ref id="edm270203-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="edm270203-cit-0015">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Geng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Gao</surname>
+</string-name>, et al., “<article-title>Relationship Between Control of Cardiovascular Risk Factors and Chronic Kidney Disease Progression, Cardiovascular Disease Events, and Mortality in Chinese Adults</article-title>,” <source>Journal of the American College of Cardiology</source>
+<volume>84</volume>, no. <issue>14</issue> (<year>2024</year>): <fpage>1313</fpage>–<lpage>1324</lpage>.<pub-id pub-id-type="pmid">39322325</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jacc.2024.06.041</pub-id></mixed-citation></ref><ref id="edm270203-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="edm270203-cit-0016">
+<string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Xie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Perkovic</surname>
+</string-name>, et al., “<article-title>Renin‐Angiotensin System Inhibitors and Kidney and Cardiovascular Outcomes in Patients With CKD: A Bayesian Network Meta‐Analysis of Randomized Clinical Trials</article-title>,” <source>American Journal of Kidney Diseases</source>
+<volume>67</volume>, no. <issue>5</issue> (<year>2016</year>): <fpage>728</fpage>–<lpage>741</lpage>.<pub-id pub-id-type="pmid">26597926</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1053/j.ajkd.2015.10.011</pub-id></mixed-citation></ref><ref id="edm270203-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="edm270203-cit-0017">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Sharma</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Ferreira</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Zannad</surname>
+</string-name>, et al., “<article-title>Cardiac and Kidney Benefits of Empagliflozin in Heart Failure Across the Spectrum of Kidney Function: Insights From the EMPEROR‐Preserved Trial</article-title>,” <source>European Journal of Heart Failure</source>
+<volume>25</volume>, no. <issue>8</issue> (<year>2023</year>): <fpage>1337</fpage>–<lpage>1348</lpage>.<pub-id pub-id-type="pmid">37062851</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/ejhf.2857</pub-id></mixed-citation></ref><ref id="edm270203-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="edm270203-cit-0018">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Nardone</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Yau</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Kugathasan</surname>
+</string-name>, et al., “<article-title>Upcoming Drug Targets for Kidney Protective Effects in Chronic Kidney Disease</article-title>,” <source>Nephrology, Dialysis, Transplantation</source>
+<volume>40</volume>, no. <issue>Supplement_1</issue> (<year>2025</year>): <fpage>i47</fpage>–<lpage>i58</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/ndt/gfae216</pub-id><pub-id pub-id-type="pmcid">PMC11852282</pub-id><pub-id pub-id-type="pmid">39907540</pub-id></mixed-citation></ref><ref id="edm270203-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="edm270203-cit-0019">
+<string-name name-style="western">
+<given-names>B. M.</given-names>
+<surname>Brenner</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. E.</given-names>
+<surname>Cooper</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>De Zeeuw</surname>
+</string-name>, et al., “<article-title>Effects of Losartan on Renal and Cardiovascular Outcomes in Patients With Type 2 Diabetes and Nephropathy</article-title>,” <source>New England Journal of Medicine</source>
+<volume>345</volume>, no. <issue>12</issue> (<year>2001</year>): <fpage>861</fpage>–<lpage>869</lpage>.<pub-id pub-id-type="pmid">11565518</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1056/NEJMoa011161</pub-id></mixed-citation></ref><ref id="edm270203-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="edm270203-cit-0020">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Chaudhuri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Ghanim</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Arora</surname>
+</string-name>, “<article-title>Improving the Residual Risk of Renal and Cardiovascular Outcomes in Diabetic Kidney Disease: A Review of Pathophysiology, Mechanisms, and Evidence From Recent Trials</article-title>,” <source>Diabetes, Obesity &amp; Metabolism</source>
+<volume>24</volume>, no. <issue>3</issue> (<year>2022</year>): <fpage>365</fpage>–<lpage>376</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/dom.14601</pub-id><pub-id pub-id-type="pmcid">PMC9300158</pub-id><pub-id pub-id-type="pmid">34779091</pub-id></mixed-citation></ref><ref id="edm270203-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="edm270203-cit-0021">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Haller</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Ito</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. L.</given-names>
+<surname>Izzo</surname>, <suffix>Jr.</suffix>
+</string-name>, et al., “<article-title>Olmesartan for the Delay or Prevention of Microalbuminuria in Type 2 Diabetes</article-title>,” <source>New England Journal of Medicine</source>
+<volume>364</volume>, no. <issue>10</issue> (<year>2011</year>): <fpage>907</fpage>–<lpage>917</lpage>.<pub-id pub-id-type="pmid">21388309</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1056/NEJMoa1007994</pub-id></mixed-citation></ref><ref id="edm270203-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="edm270203-cit-0022">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Tarun</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. N.</given-names>
+<surname>Ghanta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Ong</surname>
+</string-name>, et al., “<article-title>Updates on New Therapies for Patients With CKD</article-title>,” <source>Kidney International Reports</source>
+<volume>9</volume>, no. <issue>1</issue> (<year>2024</year>): <fpage>16</fpage>–<lpage>28</lpage>.<pub-id pub-id-type="pmid">38312786</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ekir.2023.10.006</pub-id><pub-id pub-id-type="pmcid">PMC10831355</pub-id></mixed-citation></ref><ref id="edm270203-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="edm270203-cit-0023">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Fernández‐Fernandez</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Sarafidis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Soler</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Ortiz</surname>
+</string-name>, “<article-title>EMPA‐KIDNEY: Expanding the Range of Kidney Protection by SGLT2 Inhibitors</article-title>,” <source>Clinical Kidney Journal</source>
+<volume>16</volume>, no. <issue>8</issue> (<year>2023</year>): <fpage>1187</fpage>–<lpage>1198</lpage>.<pub-id pub-id-type="pmid">37529652</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/ckj/sfad082</pub-id><pub-id pub-id-type="pmcid">PMC10387399</pub-id></mixed-citation></ref><ref id="edm270203-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="edm270203-cit-0024">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Zinman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Wanner</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Lachin</surname>
+</string-name>, et al., “<article-title>Empagliflozin, Cardiovascular Outcomes, and Mortality in Type 2 Diabetes</article-title>,” <source>New England Journal of Medicine</source>
+<volume>373</volume>, no. <issue>22</issue> (<year>2015</year>): <fpage>2117</fpage>–<lpage>2128</lpage>.<pub-id pub-id-type="pmid">26378978</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1056/NEJMoa1504720</pub-id></mixed-citation></ref><ref id="edm270203-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="edm270203-cit-0025">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Wanner</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. E.</given-names>
+<surname>Inzucchi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Lachin</surname>
+</string-name>, et al., “<article-title>Empagliflozin and Progression of Kidney Disease in Type 2 Diabetes</article-title>,” <source>New England Journal of Medicine</source>
+<volume>375</volume>, no. <issue>4</issue> (<year>2016</year>): <fpage>323</fpage>–<lpage>334</lpage>.<pub-id pub-id-type="pmid">27299675</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1056/NEJMoa1515920</pub-id></mixed-citation></ref><ref id="edm270203-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="edm270203-cit-0026">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Levin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Perkovic</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. C.</given-names>
+<surname>Wheeler</surname>
+</string-name>, et al., “<article-title>Empagliflozin and Cardiovascular and Kidney Outcomes Across KDIGO Risk Categories: Post Hoc Analysis of a Randomized, Double‐Blind, Placebo‐Controlled, Multinational Trial</article-title>,” <source>Clinical Journal of the American Society of Nephrology</source>
+<volume>15</volume>, no. <issue>10</issue> (<year>2020</year>): <fpage>1433</fpage>–<lpage>1444</lpage>.<pub-id pub-id-type="pmid">32994159</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2215/CJN.14901219</pub-id><pub-id pub-id-type="pmcid">PMC7536760</pub-id></mixed-citation></ref><ref id="edm270203-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="edm270203-cit-0027">
+<string-name name-style="western">
+<given-names>H. J.</given-names>
+<surname>Heerspink</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. V.</given-names>
+<surname>Stefánsson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Correa‐Rotter</surname>
+</string-name>, et al., “<article-title>Dapagliflozin in Patients With Chronic Kidney Disease</article-title>,” <source>New England Journal of Medicine</source>
+<volume>383</volume>, no. <issue>15</issue> (<year>2020</year>): <fpage>1436</fpage>–<lpage>1446</lpage>.<pub-id pub-id-type="pmid">32970396</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1056/NEJMoa2024816</pub-id></mixed-citation></ref><ref id="edm270203-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="edm270203-cit-0028">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Wanner</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Lachin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. E.</given-names>
+<surname>Inzucchi</surname>
+</string-name>, et al., “<article-title>Empagliflozin and Clinical Outcomes in Patients With Type 2 Diabetes Mellitus, Established Cardiovascular Disease, and Chronic Kidney Disease</article-title>,” <source>Circulation</source>
+<volume>137</volume>, no. <issue>2</issue> (<year>2018</year>): <fpage>119</fpage>–<lpage>129</lpage>.<pub-id pub-id-type="pmid">28904068</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/CIRCULATIONAHA.117.028268</pub-id></mixed-citation></ref><ref id="edm270203-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="edm270203-cit-0029">
+<collab collab-type="authors">The EMPA‐KIDNEY Collaborative Group</collab>
+, <string-name name-style="western">
+<given-names>W. G.</given-names>
+<surname>Herrington</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Staplin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Wanner</surname>
+</string-name>, et al., “<article-title>Empagliflozin in Patients With Chronic Kidney Disease</article-title>,” <source>New England Journal of Medicine</source>
+<volume>388</volume>, no. <issue>2</issue> (<year>2023</year>): <fpage>117</fpage>–<lpage>127</lpage>.<pub-id pub-id-type="pmid">36331190</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1056/NEJMoa2204233</pub-id><pub-id pub-id-type="pmcid">PMC7614055</pub-id></mixed-citation></ref><ref id="edm270203-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="edm270203-cit-0030">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Nangaku</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W. G.</given-names>
+<surname>Herrington</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Goto</surname>
+</string-name>, et al., “<article-title>Effects of Empagliflozin in Patients With Chronic Kidney Disease From Japan: Exploratory Analyses From EMPA‐KIDNEY</article-title>,” <source>Clinical and Experimental Nephrology</source>
+<volume>28</volume>, no. <issue>6</issue> (<year>2024</year>): <fpage>588</fpage>–<lpage>595</lpage>.<pub-id pub-id-type="pmid">38643286</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10157-024-02489-4</pub-id><pub-id pub-id-type="pmcid">PMC11116192</pub-id></mixed-citation></ref><ref id="edm270203-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="edm270203-cit-0031">
+<string-name name-style="western">
+<given-names>P. K.</given-names>
+<surname>Judge</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Staplin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. J.</given-names>
+<surname>Mayne</surname>
+</string-name>, et al., “<article-title>Impact of Primary Kidney Disease on the Effects of Empagliflozin in Patients With Chronic Kidney Disease: Secondary Analyses of the EMPA‐KIDNEY Trial</article-title>,” <source>Lancet Diabetes &amp; Endocrinology</source>
+<volume>12</volume>, no. <issue>1</issue> (<year>2024</year>): <fpage>51</fpage>–<lpage>60</lpage>.<pub-id pub-id-type="pmid">38061372</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/S2213-8587(23)00322-4</pub-id><pub-id pub-id-type="pmcid">PMC7618536</pub-id></mixed-citation></ref><ref id="edm270203-bib-0032"><label>32</label><mixed-citation publication-type="miscellaneous" id="edm270203-cit-0032">
+<collab collab-type="authors">PACE‐CME</collab>
+, <article-title>“FDA Approves SGLT2 Inhibitor for CKD,”</article-title> (<year>2023</year>), accessed August 21, 2025, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pace-cme.org/news/fda-approves-sglt2-inhibitor-for-ckd/2456532/" ext-link-type="uri">https://pace‐cme.org/news/fda‐approves‐sglt2‐inhibitor‐for‐ckd/2456532/</ext-link>.</mixed-citation></ref><ref id="edm270203-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="edm270203-cit-0033">
+<string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Yan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Yu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Yin</surname>
+</string-name>, “<article-title>Long‐Term Surrogate Cardiovascular Outcomes of SGLT2 Inhibitor Empagliflozin in Chronic Heart Failure: A Systematic Review and Meta‐Analysis</article-title>,” <source>BMC Cardiovascular Disorders</source>
+<volume>24</volume>, no. <issue>1</issue> (<year>2024</year>): <fpage>663</fpage>.<pub-id pub-id-type="pmid">39578752</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12872-024-04316-w</pub-id><pub-id pub-id-type="pmcid">PMC11583546</pub-id></mixed-citation></ref><ref id="edm270203-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="edm270203-cit-0034">
+<string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Zhang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Hu</surname>
+</string-name>, “<article-title>Knowledge Domain and Emerging Trends in Empagliflozin for Heart Failure: A Bibliometric and Visualized Analysis</article-title>,” <source>Frontiers in Cardiovascular Medicine</source>
+<volume>9</volume> (<year>2022</year>): <elocation-id>1039348</elocation-id>.<pub-id pub-id-type="pmid">36407420</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fcvm.2022.1039348</pub-id><pub-id pub-id-type="pmcid">PMC9668858</pub-id></mixed-citation></ref><ref id="edm270203-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="edm270203-cit-0035">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Ferrannini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Veltkamp</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. A.</given-names>
+<surname>Smulders</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kadokura</surname>
+</string-name>, “<article-title>Renal Glucose Handling: Impact of Chronic Kidney Disease and Sodium‐Glucose Cotransporter 2 Inhibition in Patients With Type 2 Diabetes</article-title>,” <source>Diabetes Care</source>
+<volume>36</volume>, no. <issue>5</issue> (<year>2013</year>): <fpage>1260</fpage>–<lpage>1265</lpage>.<pub-id pub-id-type="pmid">23359360</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2337/dc12-1503</pub-id><pub-id pub-id-type="pmcid">PMC3631866</pub-id></mixed-citation></ref><ref id="edm270203-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="edm270203-cit-0036">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Butler</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Zannad</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Fitchett</surname>
+</string-name>, et al., “<article-title>Empagliflozin Improves Kidney Outcomes in Patients With or Without Heart Failure: Insights From the EMPA‐REG OUTCOME Trial</article-title>,” <source>Circulation: Heart Failure</source>
+<volume>12</volume>, no. <issue>6</issue> (<year>2019</year>): <elocation-id>e005875</elocation-id>.<pub-id pub-id-type="pmid">31163986</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/CIRCHEARTFAILURE.118.005875</pub-id></mixed-citation></ref><ref id="edm270203-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="edm270203-cit-0037">
+<string-name name-style="western">
+<given-names>S. D.</given-names>
+<surname>Anker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Butler</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Filippatos</surname>
+</string-name>, et al., “<article-title>Effect of Empagliflozin on Cardiovascular and Renal Outcomes in Patients With Heart Failure by Baseline Diabetes Status: Results From the EMPEROR‐Reduced Trial</article-title>,” <source>Circulation</source>
+<volume>143</volume>, no. <issue>4</issue> (<year>2021</year>): <fpage>337</fpage>–<lpage>349</lpage>.<pub-id pub-id-type="pmid">33175585</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/CIRCULATIONAHA.120.051824</pub-id><pub-id pub-id-type="pmcid">PMC7834911</pub-id></mixed-citation></ref><ref id="edm270203-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="edm270203-cit-0038">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Böhm</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. D.</given-names>
+<surname>Anker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Butler</surname>
+</string-name>, et al., “<article-title>Empagliflozin Improves Cardiovascular and Renal Outcomes in Heart Failure Irrespective of Systolic Blood Pressure</article-title>,” <source>Journal of the American College of Cardiology</source>
+<volume>78</volume>, no. <issue>13</issue> (<year>2021</year>): <fpage>1337</fpage>–<lpage>1348</lpage>.<pub-id pub-id-type="pmid">34556320</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jacc.2021.07.049</pub-id></mixed-citation></ref><ref id="edm270203-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="edm270203-cit-0039">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Zannad</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Ferreira</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Pocock</surname>
+</string-name>, et al., “<article-title>Cardiac and Kidney Benefits of Empagliflozin in Heart Failure Across the Spectrum of Kidney Function: Insights From EMPEROR‐Reduced</article-title>,” <source>Circulation</source>
+<volume>143</volume>, no. <issue>4</issue> (<year>2021</year>): <fpage>310</fpage>–<lpage>321</lpage>.<pub-id pub-id-type="pmid">33095032</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/CIRCULATIONAHA.120.051685</pub-id><pub-id pub-id-type="pmcid">PMC7834910</pub-id></mixed-citation></ref><ref id="edm270203-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="edm270203-cit-0040">
+<string-name name-style="western">
+<given-names>A. A.</given-names>
+<surname>Voors</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Damman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. R.</given-names>
+<surname>Teerlink</surname>
+</string-name>, et al., “<article-title>Renal Effects of Empagliflozin in Patients Hospitalized for Acute Heart Failure: From the EMPULSE Trial</article-title>,” <source>European Journal of Heart Failure</source>
+<volume>24</volume>, no. <issue>10</issue> (<year>2022</year>): <fpage>1844</fpage>–<lpage>1852</lpage>.<pub-id pub-id-type="pmid">36066557</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/ejhf.2681</pub-id><pub-id pub-id-type="pmcid">PMC9828037</pub-id></mixed-citation></ref><ref id="edm270203-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="edm270203-cit-0041">
+<string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Filippatos</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Farmakis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Butler</surname>
+</string-name>, et al., “<article-title>Empagliflozin in Heart Failure With Preserved Ejection Fraction With and Without Atrial Fibrillation</article-title>,” <source>European Journal of Heart Failure</source>
+<volume>25</volume>, no. <issue>7</issue> (<year>2023</year>): <fpage>970</fpage>–<lpage>977</lpage>.<pub-id pub-id-type="pmid">37062866</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/ejhf.2861</pub-id></mixed-citation></ref><ref id="edm270203-bib-0042"><label>42</label><mixed-citation publication-type="journal" id="edm270203-cit-0042">
+<string-name name-style="western">
+<given-names>R. E.</given-names>
+<surname>O'Dea</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Lagisz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. D.</given-names>
+<surname>Jennions</surname>
+</string-name>, et al., “<article-title>Preferred Reporting Items for Systematic Reviews and Meta‐Analyses in Ecology and Evolutionary Biology: A PRISMA Extension</article-title>,” <source>Biological Reviews</source>
+<volume>96</volume>, no. <issue>5</issue> (<year>2021</year>): <fpage>1695</fpage>–<lpage>1722</lpage>.<pub-id pub-id-type="pmid">33960637</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/brv.12721</pub-id><pub-id pub-id-type="pmcid">PMC8518748</pub-id></mixed-citation></ref><ref id="edm270203-bib-0043"><label>43</label><mixed-citation publication-type="journal" id="edm270203-cit-0043">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Zinman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. E.</given-names>
+<surname>Inzucchi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Lachin</surname>
+</string-name>, et al., “<article-title>Rationale, Design, and Baseline Characteristics of a Randomized, Placebo‐Controlled Cardiovascular Outcome Trial of Empagliflozin (EMPA‐REG OUTCOME)</article-title>,” <source>Cardiovascular Diabetology</source>
+<volume>13</volume>, no. <issue>1</issue> (<year>2014</year>): <fpage>102</fpage>.<pub-id pub-id-type="pmid">24943000</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/1475-2840-13-102</pub-id><pub-id pub-id-type="pmcid">PMC4072621</pub-id></mixed-citation></ref><ref id="edm270203-bib-0044"><label>44</label><mixed-citation publication-type="journal" id="edm270203-cit-0044">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Thomas</surname>
+</string-name> and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Karalliedde</surname>
+</string-name>, “<article-title>Diabetic Nephropathy</article-title>,” <source>Medicine</source>
+<volume>43</volume>, no. <issue>1</issue> (<year>2015</year>): <fpage>20</fpage>–<lpage>25</lpage>.</mixed-citation></ref><ref id="edm270203-bib-0045"><label>45</label><mixed-citation publication-type="journal" id="edm270203-cit-0045">
+<string-name name-style="western">
+<given-names>J. A.</given-names>
+<surname>Sterne</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Savović</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Page</surname>
+</string-name>, et al., “<article-title>RoB 2: A Revised Tool for Assessing Risk of Bias in Randomised Trials</article-title>,” <source>BMJ</source>
+<volume>366</volume> (<year>2019</year>): <elocation-id>l4898</elocation-id>.<pub-id pub-id-type="pmid">31462531</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/bmj.l4898</pub-id></mixed-citation></ref><ref id="edm270203-bib-0046"><label>46</label><mixed-citation publication-type="journal" id="edm270203-cit-0046">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Prasad</surname>
+</string-name>, “<article-title>Introduction to the GRADE Tool for Rating Certainty in Evidence and Recommendations</article-title>,” <source>Clinical Epidemiology and Global Health</source>
+<volume>25</volume> (<year>2024</year>): <elocation-id>101484</elocation-id>.</mixed-citation></ref><ref id="edm270203-bib-0047"><label>47</label><mixed-citation publication-type="journal" id="edm270203-cit-0047">
+<string-name name-style="western">
+<given-names>D. Z.</given-names>
+<surname>Cherney</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Zinman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. E.</given-names>
+<surname>Inzucchi</surname>
+</string-name>, et al., “<article-title>Effects of Empagliflozin on the Urinary Albumin‐To‐Creatinine Ratio in Patients With Type 2 Diabetes and Established Cardiovascular Disease: An Exploratory Analysis From the EMPA‐REG OUTCOME Randomised, Placebo‐Controlled Trial</article-title>,” <source>Lancet Diabetes &amp; Endocrinology</source>
+<volume>5</volume>, no. <issue>8</issue> (<year>2017</year>): <fpage>610</fpage>–<lpage>621</lpage>.<pub-id pub-id-type="pmid">28666775</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/S2213-8587(17)30182-1</pub-id></mixed-citation></ref><ref id="edm270203-bib-0048"><label>48</label><mixed-citation publication-type="journal" id="edm270203-cit-0048">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kadowaki</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Nangaku</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Hantel</surname>
+</string-name>, et al., “<article-title>Empagliflozin and Kidney Outcomes in Asian Patients With Type 2 Diabetes and Established Cardiovascular Disease: Results From the EMPA‐REG OUTCOME Trial</article-title>,” <source>Journal of Diabetes Investigation</source>
+<volume>10</volume>, no. <issue>3</issue> (<year>2019</year>): <fpage>760</fpage>–<lpage>770</lpage>.<pub-id pub-id-type="pmid">30412655</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/jdi.12971</pub-id><pub-id pub-id-type="pmcid">PMC6497612</pub-id></mixed-citation></ref><ref id="edm270203-bib-0049"><label>49</label><mixed-citation publication-type="journal" id="edm270203-cit-0049">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Böhm</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Slawik</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Brueckmann</surname>
+</string-name>, et al., “<article-title>Efficacy of Empagliflozin on Heart Failure and Renal Outcomes in Patients With Atrial Fibrillation: Data From the EMPA‐REG OUTCOME Trial</article-title>,” <source>European Journal of Heart Failure</source>
+<volume>22</volume>, no. <issue>1</issue> (<year>2020</year>): <fpage>126</fpage>–<lpage>135</lpage>.<pub-id pub-id-type="pmid">31820559</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/ejhf.1663</pub-id></mixed-citation></ref><ref id="edm270203-bib-0050"><label>50</label><mixed-citation publication-type="journal" id="edm270203-cit-0050">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Packer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. D.</given-names>
+<surname>Anker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Butler</surname>
+</string-name>, et al., “<article-title>Cardiovascular and Renal Outcomes With Empagliflozin in Heart Failure</article-title>,” <source>New England Journal of Medicine</source>
+<volume>383</volume>, no. <issue>15</issue> (<year>2020</year>): <fpage>1413</fpage>–<lpage>1424</lpage>.<pub-id pub-id-type="pmid">32865377</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1056/NEJMoa2022190</pub-id></mixed-citation></ref><ref id="edm270203-bib-0051"><label>51</label><mixed-citation publication-type="journal" id="edm270203-cit-0051">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Foroutan</surname>
+</string-name> and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Yarmohammadi</surname>
+</string-name>, “<article-title>The Effect of Empagliflozin on Cardiovascular Outcomes in Patients With Chronic Kidney Disease; a Systematic Review and Meta‐Analysis</article-title>,” <source>Journal of Renal Injury Prevention</source>
+<volume>14</volume>, no. <issue>2</issue> (<year>2025</year>): <elocation-id>e32253</elocation-id>.</mixed-citation></ref><ref id="edm270203-bib-0052"><label>52</label><mixed-citation publication-type="journal" id="edm270203-cit-0052">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Ansar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Azzam</surname>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Zafar</surname>
+</string-name>, et al., “<article-title>Empagliflozin and Cardiovascular Outcomes: A Systematic Review of Randomized Controlled Trials in Populations With Diabetes and Heart Failure</article-title>,” <source>Cureus</source>
+<volume>17</volume>, no. <issue>8</issue> (<year>2025</year>): <elocation-id>e90150</elocation-id>.<pub-id pub-id-type="pmid">40955256</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.7759/cureus.90150</pub-id><pub-id pub-id-type="pmcid">PMC12433617</pub-id></mixed-citation></ref><ref id="edm270203-bib-0053"><label>53</label><mixed-citation publication-type="journal" id="edm270203-cit-0053">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Abdelaziz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Hafez</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Abdelaziz</surname>
+</string-name>, et al., “<article-title>Empagliflozin and Cardiovascular Outcomes Across Urine Albumin to Creatinine Ratio Categories: A Systematic Review and Meta‐Analysis</article-title>,” <source>Mayo Clinic Proceedings: Elsevier</source>
+<volume>99</volume> (<year>2024</year>): <fpage>1188</fpage>–<lpage>1191</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.mayocp.2024.05.007</pub-id><pub-id pub-id-type="pmid">38960500</pub-id></mixed-citation></ref><ref id="edm270203-bib-0054"><label>54</label><mixed-citation publication-type="journal" id="edm270203-cit-0054">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Alizadehasl</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Hakimian</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Abdolkarimi</surname>
+</string-name>, et al., “<article-title>The Efficacy and Safety of Empagliflozin on Outcomes of Patients With Myocardial Infarction Undergoing Primary PCI: A Systematic Review and Meta‐Analysis</article-title>,” <source>Naunyn‐Schmiedeberg's Archives of Pharmacology</source>
+<volume>398</volume>, no. <issue>5</issue> (<year>2025</year>): <fpage>4969</fpage>–<lpage>4977</lpage>.<pub-id pub-id-type="pmid">39729204</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00210-024-03739-8</pub-id></mixed-citation></ref><ref id="edm270203-bib-0055"><label>55</label><mixed-citation publication-type="journal" id="edm270203-cit-0055">
+<string-name name-style="western">
+<given-names>K. B.</given-names>
+<surname>Lo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Gul</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Ram</surname>
+</string-name>, et al., “<article-title>The Effects of SGLT2 Inhibitors on Cardiovascular and Renal Outcomes in Diabetic Patients: A Systematic Review and Meta‐Analysis</article-title>,” <source>Cardiorenal Medicine</source>
+<volume>10</volume>, no. <issue>1</issue> (<year>2020</year>): <fpage>1</fpage>–<lpage>10</lpage>.<pub-id pub-id-type="pmid">31743918</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1159/000503919</pub-id></mixed-citation></ref><ref id="edm270203-bib-0056"><label>56</label><mixed-citation publication-type="journal" id="edm270203-cit-0056">
+<string-name name-style="western">
+<given-names>A. K.</given-names>
+<surname>Forbes</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. J.</given-names>
+<surname>Suckling</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Hinton</surname>
+</string-name>, et al., “<article-title>Sodium‐Glucose Cotransporter‐2 Inhibitors and Kidney Outcomes in Real‐World Type 2 Diabetes Populations: A Systematic Review and Meta‐Analysis of Observational Studies</article-title>,” <source>Diabetes, Obesity &amp; Metabolism</source>
+<volume>25</volume>, no. <issue>8</issue> (<year>2023</year>): <fpage>2310</fpage>–<lpage>2330</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/dom.15111</pub-id><pub-id pub-id-type="pmid">37202870</pub-id></mixed-citation></ref><ref id="edm270203-bib-0057"><label>57</label><mixed-citation publication-type="journal" id="edm270203-cit-0057">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Cao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Rao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Jia</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Yan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Li</surname>
+</string-name>, “<article-title>Effects of Sodium‐Glucose Co‐Transporter‐2 Inhibitors on Kidney, Cardiovascular, and Safety Outcomes in Patients With Advanced Chronic Kidney Disease: A Systematic Review and Meta‐Analysis of Randomized Controlled Trials</article-title>,” <source>Acta Diabetologica</source>
+<volume>60</volume>, no. <issue>3</issue> (<year>2023</year>): <fpage>325</fpage>–<lpage>335</lpage>.<pub-id pub-id-type="pmid">36316605</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00592-022-01989-7</pub-id></mixed-citation></ref><ref id="edm270203-bib-0058"><label>58</label><mixed-citation publication-type="journal" id="edm270203-cit-0058">
+<string-name name-style="western">
+<given-names>B. F.</given-names>
+<surname>Spiazzi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. F.</given-names>
+<surname>Piccoli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. F.</given-names>
+<surname>Wayerbacher</surname>
+</string-name>, et al., “<article-title>SGLT2 Inhibitors and Kidney Outcomes Across the Spectrum of Kidney Disease: A Systematic Review and Meta‐Analysis</article-title>,” <source>Clinical Journal of the American Society of Nephrology</source>
+<volume>218</volume> (<year>2024</year>): <elocation-id>111933</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.2215/CJN.0000000000000568</pub-id><pub-id pub-id-type="pmid">39298625</pub-id></mixed-citation></ref><ref id="edm270203-bib-0059"><label>59</label><mixed-citation publication-type="journal" id="edm270203-cit-0059">
+<string-name name-style="western">
+<given-names>T. A.</given-names>
+<surname>Zelniker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. D.</given-names>
+<surname>Wiviott</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Raz</surname>
+</string-name>, et al., “<article-title>SGLT2 Inhibitors for Primary and Secondary Prevention of Cardiovascular and Renal Outcomes in Type 2 Diabetes: A Systematic Review and Meta‐Analysis of Cardiovascular Outcome Trials</article-title>,” <source>Lancet</source>
+<volume>393</volume>, no. <issue>10166</issue> (<year>2019</year>): <fpage>31</fpage>–<lpage>39</lpage>.<pub-id pub-id-type="pmid">30424892</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/S0140-6736(18)32590-X</pub-id></mixed-citation></ref><ref id="edm270203-bib-0060"><label>60</label><mixed-citation publication-type="journal" id="edm270203-cit-0060">
+<string-name name-style="western">
+<given-names>J. H.</given-names>
+<surname>Bae</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.‐G.</given-names>
+<surname>Park</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. G.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Hahn</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>N. H.</given-names>
+<surname>Kim</surname>
+</string-name>, “<article-title>Effects of Sodium‐Glucose Cotransporter 2 Inhibitors on Renal Outcomes in Patients With Type 2 Diabetes: A Systematic Review and Meta‐Analysis of Randomized Controlled Trials</article-title>,” <source>Scientific Reports</source>
+<volume>9</volume>, no. <issue>1</issue> (<year>2019</year>): <fpage>13009</fpage>.<pub-id pub-id-type="pmid">31506585</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41598-019-49525-y</pub-id><pub-id pub-id-type="pmcid">PMC6736944</pub-id></mixed-citation></ref><ref id="edm270203-bib-0061"><label>61</label><mixed-citation publication-type="journal" id="edm270203-cit-0061">
+<string-name name-style="western">
+<given-names>D. Z.</given-names>
+<surname>Cherney</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Perkins</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Soleymanlou</surname>
+</string-name>, et al., “<article-title>Renal Hemodynamic Effect of Sodium‐Glucose Cotransporter 2 Inhibition in Patients With Type 1 Diabetes Mellitus</article-title>,” <source>Circulation</source>
+<volume>129</volume>, no. <issue>5</issue> (<year>2014</year>): <fpage>587</fpage>–<lpage>597</lpage>.<pub-id pub-id-type="pmid">24334175</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/CIRCULATIONAHA.113.005081</pub-id></mixed-citation></ref><ref id="edm270203-bib-0062"><label>62</label><mixed-citation publication-type="journal" id="edm270203-cit-0062">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Chilton</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Tikkanen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Cannon</surname>
+</string-name>, et al., “<article-title>Effects of Empagliflozin on Blood Pressure and Markers of Arterial Stiffness and Vascular Resistance in Patients With Type 2 Diabetes</article-title>,” <source>Diabetes, Obesity &amp; Metabolism</source>
+<volume>17</volume>, no. <issue>12</issue> (<year>2015</year>): <fpage>1180</fpage>–<lpage>1193</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/dom.12572</pub-id><pub-id pub-id-type="pmcid">PMC5057299</pub-id><pub-id pub-id-type="pmid">26343814</pub-id></mixed-citation></ref><ref id="edm270203-bib-0063"><label>63</label><mixed-citation publication-type="journal" id="edm270203-cit-0063">
+<string-name name-style="western">
+<given-names>D. Z.</given-names>
+<surname>Cherney</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Perkins</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Soleymanlou</surname>
+</string-name>, et al., “<article-title>The Effect of Empagliflozin on Arterial Stiffness and Heart Rate Variability in Subjects With Uncomplicated Type 1 Diabetes Mellitus</article-title>,” <source>Cardiovascular Diabetology</source>
+<volume>13</volume>, no. <issue>1</issue> (<year>2014</year>): <fpage>28</fpage>.<pub-id pub-id-type="pmid">24475922</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/1475-2840-13-28</pub-id><pub-id pub-id-type="pmcid">PMC3915232</pub-id></mixed-citation></ref><ref id="edm270203-bib-0064"><label>64</label><mixed-citation publication-type="journal" id="edm270203-cit-0064">
+<string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Vallon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Gerasimova</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. A.</given-names>
+<surname>Rose</surname>
+</string-name>, et al., “<article-title>SGLT2 Inhibitor Empagliflozin Reduces Renal Growth and Albuminuria in Proportion to Hyperglycemia and Prevents Glomerular Hyperfiltration in Diabetic Akita Mice</article-title>,” <source>American Journal of Physiology. Renal Physiology</source>
+<volume>306</volume>, no. <issue>2</issue> (<year>2014</year>): <fpage>F194</fpage>–<lpage>F204</lpage>.<pub-id pub-id-type="pmid">24226524</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1152/ajprenal.00520.2013</pub-id><pub-id pub-id-type="pmcid">PMC3920018</pub-id></mixed-citation></ref><ref id="edm270203-bib-0065"><label>65</label><mixed-citation publication-type="journal" id="edm270203-cit-0065">
+<string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Panchapakesan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Pegg</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Gross</surname>
+</string-name>, et al., “<article-title>Effects of SGLT2 Inhibition in Human Kidney Proximal Tubular Cells—Renoprotection in Diabetic Nephropathy?</article-title>,” <source>PLoS One</source>
+<volume>8</volume>, no. <issue>2</issue> (<year>2013</year>): <elocation-id>e54442</elocation-id>.<pub-id pub-id-type="pmid">23390498</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0054442</pub-id><pub-id pub-id-type="pmcid">PMC3563635</pub-id></mixed-citation></ref><ref id="edm270203-bib-0066"><label>66</label><mixed-citation publication-type="journal" id="edm270203-cit-0066">
+<string-name name-style="western">
+<given-names>W. L.</given-names>
+<surname>Baker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. R.</given-names>
+<surname>Smyth</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. M.</given-names>
+<surname>Riche</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. M.</given-names>
+<surname>Bourret</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. W.</given-names>
+<surname>Chamberlin</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>W. B.</given-names>
+<surname>White</surname>
+</string-name>, “<article-title>Effects of Sodium‐Glucose Co‐Transporter 2 Inhibitors on Blood Pressure: A Systematic Review and Meta‐Analysis</article-title>,” <source>Journal of the American Society of Hypertension</source>
+<volume>8</volume>, no. <issue>4</issue> (<year>2014</year>): <fpage>262</fpage>–<lpage>275.e9</lpage>.<pub-id pub-id-type="pmid">24602971</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jash.2014.01.007</pub-id></mixed-citation></ref><ref id="edm270203-bib-0067"><label>67</label><mixed-citation publication-type="journal" id="edm270203-cit-0067">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Lambers Heerspink</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>De Zeeuw</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Wie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Leslie</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>List</surname>
+</string-name>, “<article-title>Dapagliflozin a Glucose‐Regulating Drug With Diuretic Properties in Subjects With Type 2 Diabetes</article-title>,” <source>Diabetes, Obesity &amp; Metabolism</source>
+<volume>15</volume>, no. <issue>9</issue> (<year>2013</year>): <fpage>853</fpage>–<lpage>862</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/dom.12127</pub-id><pub-id pub-id-type="pmcid">PMC3906841</pub-id><pub-id pub-id-type="pmid">23668478</pub-id></mixed-citation></ref><ref id="edm270203-bib-0068"><label>68</label><mixed-citation publication-type="journal" id="edm270203-cit-0068">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Lytvyn</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Škrtić</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. K.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. M.</given-names>
+<surname>Yip</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Perkins</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D. Z.</given-names>
+<surname>Cherney</surname>
+</string-name>, “<article-title>Glycosuria‐Mediated Urinary Uric Acid Excretion in Patients With Uncomplicated Type 1 Diabetes Mellitus</article-title>,” <source>American Journal of Physiology. Renal Physiology</source>
+<volume>308</volume>, no. <issue>2</issue> (<year>2015</year>): <fpage>F77</fpage>–<lpage>F83</lpage>.<pub-id pub-id-type="pmid">25377916</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1152/ajprenal.00555.2014</pub-id></mixed-citation></ref><ref id="edm270203-bib-0069"><label>69</label><mixed-citation publication-type="journal" id="edm270203-cit-0069">
+<string-name name-style="western">
+<given-names>C. J.</given-names>
+<surname>Bailey</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Day</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Bellary</surname>
+</string-name>, “<article-title>Renal Protection With SGLT2 Inhibitors: Effects in Acute and Chronic Kidney Disease</article-title>,” <source>Current Diabetes Reports</source>
+<volume>22</volume>, no. <issue>1</issue> (<year>2022</year>): <fpage>39</fpage>–<lpage>52</lpage>.<pub-id pub-id-type="pmid">35113333</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s11892-021-01442-z</pub-id><pub-id pub-id-type="pmcid">PMC8888485</pub-id></mixed-citation></ref><ref id="edm270203-bib-0070"><label>70</label><mixed-citation publication-type="journal" id="edm270203-cit-0070">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Sen</surname>
+</string-name> and <string-name name-style="western">
+<given-names>H. J.</given-names>
+<surname>Heerspink</surname>
+</string-name>, “<article-title>A Kidney Perspective on the Mechanism of Action of Sodium Glucose Co‐Transporter 2 Inhibitors</article-title>,” <source>Cell Metabolism</source>
+<volume>33</volume>, no. <issue>4</issue> (<year>2021</year>): <fpage>732</fpage>–<lpage>739</lpage>.<pub-id pub-id-type="pmid">33691091</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cmet.2021.02.016</pub-id></mixed-citation></ref><ref id="edm270203-bib-0071"><label>71</label><mixed-citation publication-type="journal" id="edm270203-cit-0071">
+<string-name name-style="western">
+<given-names>J. I.</given-names>
+<surname>Fonseca‐Correa</surname>
+</string-name> and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Correa‐Rotter</surname>
+</string-name>, “<article-title>Sodium‐Glucose Cotransporter 2 Inhibitors Mechanisms of Action: A Review</article-title>,” <source>Frontiers in Medicine</source>
+<volume>8</volume> (<year>2021</year>): <elocation-id>777861</elocation-id>.<pub-id pub-id-type="pmid">34988095</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fmed.2021.777861</pub-id><pub-id pub-id-type="pmcid">PMC8720766</pub-id></mixed-citation></ref><ref id="edm270203-bib-0072"><label>72</label><mixed-citation publication-type="journal" id="edm270203-cit-0072">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Petrykiv</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. D.</given-names>
+<surname>Sjöström</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. J.</given-names>
+<surname>Greasley</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Persson</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H. J.</given-names>
+<surname>Heerspink</surname>
+</string-name>, “<article-title>Differential Effects of Dapagliflozin on Cardiovascular Risk Factors at Varying Degrees of Renal Function</article-title>,” <source>Clinical Journal of the American Society of Nephrology</source>
+<volume>12</volume>, no. <issue>5</issue> (<year>2017</year>): <fpage>751</fpage>–<lpage>759</lpage>.<pub-id pub-id-type="pmid">28302903</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2215/CJN.10180916</pub-id><pub-id pub-id-type="pmcid">PMC5477216</pub-id></mixed-citation></ref><ref id="edm270203-bib-0073"><label>73</label><mixed-citation publication-type="journal" id="edm270203-cit-0073">
+<string-name name-style="western">
+<given-names>D. Z.</given-names>
+<surname>Cherney</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. E.</given-names>
+<surname>Cooper</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Tikkanen</surname>
+</string-name>, et al., “<article-title>Pooled Analysis of Phase III Trials Indicate Contrasting Influences of Renal Function on Blood Pressure, Body Weight, and HbA1c Reductions With Empagliflozin</article-title>,” <source>Kidney International</source>
+<volume>93</volume>, no. <issue>1</issue> (<year>2018</year>): <fpage>231</fpage>–<lpage>244</lpage>.<pub-id pub-id-type="pmid">28860019</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.kint.2017.06.017</pub-id></mixed-citation></ref></ref-list></back></article>

@@ -1,0 +1,641 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="jeo270604" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">J Exp Orthop</journal-id><journal-id journal-id-type="iso-abbrev">J Exp Orthop</journal-id><journal-id journal-id-type="pmc-domain-id">2776</journal-id><journal-id journal-id-type="pmc-domain">jexporth</journal-id><journal-id journal-id-type="publisher-id">JEO2</journal-id><journal-title-group><journal-title>Journal of Experimental Orthopaedics</journal-title></journal-title-group><issn pub-type="epub">2197-1153</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13086636</article-id><article-id pub-id-type="pmcid-ver">PMC13086636.1</article-id><article-id pub-id-type="pmcaid">13086636</article-id><article-id pub-id-type="pmcaiid">13086636</article-id><article-id pub-id-type="pmid">42006231</article-id><article-id pub-id-type="doi">10.1002/jeo2.70604</article-id><article-id pub-id-type="publisher-id">JEO270604</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Review Paper</subject></subj-group><subj-group subj-group-type="heading"><subject>Review Paper</subject></subj-group></article-categories><title-group><article-title>Spine alignment influences shoulder range of motion and scapular orientation: A systematic review from the FP‐UCBM Shoulder Study Group</article-title></title-group><contrib-group><contrib id="jeo270604-cr-0001" contrib-type="author"><name name-style="western"><surname>Gregori</surname><given-names initials="P">Pietro</given-names></name><xref rid="jeo270604-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jeo270604-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jeo270604-cr-0002" contrib-type="author"><name name-style="western"><surname>La Bruna</surname><given-names initials="M">Mauro</given-names></name><xref rid="jeo270604-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jeo270604-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jeo270604-cr-0003" contrib-type="author"><name name-style="western"><surname>Papalia</surname><given-names initials="GF">Giuseppe Francesco</given-names></name><xref rid="jeo270604-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jeo270604-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jeo270604-cr-0004" contrib-type="author"><name name-style="western"><surname>Giurazza</surname><given-names initials="G">Giancarlo</given-names></name><xref rid="jeo270604-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jeo270604-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jeo270604-cr-0005" contrib-type="author"><name name-style="western"><surname>Caria</surname><given-names initials="C">Clemente</given-names></name><xref rid="jeo270604-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jeo270604-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jeo270604-cr-0006" contrib-type="author"><name name-style="western"><surname>Paciotti</surname><given-names initials="M">Michele</given-names></name><xref rid="jeo270604-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jeo270604-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jeo270604-cr-0007" contrib-type="author" corresp="yes"><name name-style="western"><surname>Russo</surname><given-names initials="F">Fabrizio</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-8566-8952</contrib-id><xref rid="jeo270604-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jeo270604-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><address><email>Fabrizio.russo@policlinicocampus.it</email></address></contrib><contrib id="jeo270604-cr-0008" contrib-type="author"><name name-style="western"><surname>Franceschetti</surname><given-names initials="E">Edoardo</given-names></name><xref rid="jeo270604-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jeo270604-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jeo270604-cr-0009" contrib-type="author"><name name-style="western"><surname>Longo</surname><given-names initials="UG">Umile Giuseppe</given-names></name><xref rid="jeo270604-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jeo270604-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jeo270604-cr-0010" contrib-type="author"><name name-style="western"><surname>Papalia</surname><given-names initials="R">Rocco</given-names></name><xref rid="jeo270604-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="jeo270604-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib></contrib-group><aff id="jeo270604-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<institution>Fondazione Policlinico Universitario Campus Bio‐Medico</institution>
+<city>Roma</city>
+<country country="IT">Italy</country>
+</aff><aff id="jeo270604-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Research Unit of Orthopaedic and Trauma Surgery, Department of Medicine and Surgery</named-content>
+<institution>Università Campus Bio‐Medico di Roma</institution>
+<city>Roma</city>
+<country country="IT">Italy</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence</bold> Fabrizio Russo, Fondazione Policlinico Universitario Campus Bio‐Medico, Via Alvaro del Portillo, 200, 00128 Roma, Italy.<break/>
+Email: <email>Fabrizio.russo@policlinicocampus.it</email>
+<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>16</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>13</volume><issue seq="28">2</issue><issue-id pub-id-type="pmc-issue-id">511022</issue-id><issue-id pub-id-type="doi">10.1002/jeo2.v13.2</issue-id><elocation-id>e70604</elocation-id><history><date date-type="rev-recd"><day>13</day><month>11</month><year>2025</year></date><date date-type="received"><day>27</day><month>3</month><year>2025</year></date><date date-type="accepted"><day>13</day><month>11</month><year>2025</year></date></history><pub-history><event event-type="pmc-release"><date><day>16</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>18</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-20 15:25:19.677"><day>20</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Journal of Experimental Orthopaedics</italic> published by John Wiley &amp; Sons Ltd on behalf of European Society of Sports Traumatology, Knee Surgery and Arthroscopy.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="JEO2-13-e70604.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:JEO2-13-e70604.pdf"/><abstract><title>Abstract</title><sec id="jeo270604-sec-0010"><title>Purpose</title><p>The relationship between spine orientation and the shoulder active range of motion (ROM) has been an ever‐growing topic in the last few years. This systematic review aimed to assess the epidemiological association between spine morphology and shoulder function.</p></sec><sec id="jeo270604-sec-0020"><title>Methods</title><p>The PRISMA (Preferred Reporting Items for Systematic Reviews and Meta‐Analyses) guidelines were followed. A literature search was performed on PubMed, Scopus, and Cochrane library. Randomised controlled trials (RCTs) and cross‐sectional studies, analysing the correlation between shoulder ROM and Cobb angle, kyphosis index, scapular tilt, forward scapular posture, functional scores in adults were selected. Finally, data of interest were extracted and analysed.</p></sec><sec id="jeo270604-sec-0030"><title>Results</title><p>A total of five studies were included in this study. The study included a total number of 624 participants and 887 shoulders. The mean age 40 years old, ranging from 17.1 to 67. The most significant correlations (<italic toggle="yes">p</italic> &lt; 0.0003) were that greater thoracic kyphosis was associated with increased scapular internal rotation (<italic toggle="yes">R </italic>= Left −0.081 Right = −0.065) (<italic toggle="yes">p</italic> &lt; 0.0003), and that greater scapular anterior tilt was associated with increased scapular internal rotation (<italic toggle="yes">R</italic> = 0.29, <italic toggle="yes">p</italic> &lt; 0.001). Higher thoracic kyphosis was correlated with reduced shoulder abduction (<italic toggle="yes">R</italic> = −0.163, <italic toggle="yes">p</italic> &lt; 0.005) and flexion (<italic toggle="yes">R</italic> = −0.118, <italic toggle="yes">p</italic> &lt; 0.05), whereas greater lumbar ROM was associated with increased abduction and flexion (<italic toggle="yes">R</italic> = 0.119, <italic toggle="yes">p</italic> &lt; 0.05 and <italic toggle="yes">R</italic> = 0.166, <italic toggle="yes">p</italic> &lt; 0.005). In addition, higher thoracic kyphosis was correlated with reduced shoulder adduction (<italic toggle="yes">R</italic> = −0.72, <italic toggle="yes">p</italic> &lt; 0.05).</p></sec><sec id="jeo270604-sec-0040"><title>Conclusions</title><p>Sagittal spine morphology shows frequent and significant correlations with shoulder active ROM. In particular, greater thoracic kyphosis is associated with increased scapular internal rotation and reduced shoulder abduction, adduction and flexion, while higher lumbar mobility correlates with improved shoulder elevation. These findings confirm the biomechanical interdependence between spinal alignment and shoulder kinematics.</p></sec><sec id="jeo270604-sec-0050"><title>Level of Evidence</title><p>Level III.</p></sec></abstract><kwd-group><kwd id="jeo270604-kwd-0001">kyphosis</kwd><kwd id="jeo270604-kwd-0002">scapulothoracic joint</kwd><kwd id="jeo270604-kwd-0003">shoulder biomechanics</kwd><kwd id="jeo270604-kwd-0004">shoulder ROM</kwd><kwd id="jeo270604-kwd-0005">spine morphology</kwd></kwd-group><counts><fig-count count="1"/><table-count count="4"/><page-count count="9"/><word-count count="4599"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:17.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body><def-list list-content="abbreviations"><title>Abbreviations</title><def-item><term>ADLS</term><def><p>activities of daily living</p></def></def-item><def-item><term>BMI</term><def><p>body mass index</p></def></def-item><def-item><term>CE</term><def><p>ceiling effects</p></def></def-item><def-item><term>FLEX‐SF</term><def><p>flexilevel scale of shoulder function</p></def></def-item><def-item><term>KI</term><def><p>Kyphosis Index</p></def></def-item><def-item><term>LOE</term><def><p>level of evidence</p></def></def-item><def-item><term>PRISMA</term><def><p>Preferred Reporting Items for Systematic Reviews and Meta‐analyses</p></def></def-item><def-item><term>PROMs</term><def><p>Patient‐Reported Outcomes Measures</p></def></def-item><def-item><term>QUADAS‐2</term><def><p>Quality Assessment of Diagnostic Accuracy Studies‐2</p></def></def-item><def-item><term>RCTs</term><def><p>randomised controlled trials</p></def></def-item><def-item><term>ROM</term><def><p>ange of motion</p></def></def-item><def-item><term>RTSA</term><def><p>reverse shoulder arthroplasty</p></def></def-item><def-item><term>VAS</term><def><p>Visual Analogue Scale</p></def></def-item></def-list><sec id="jeo270604-sec-0060"><title>INTRODUCTION</title><p>It is generally agreed that age‐related changes in the spine and shoulder cause kyphosis, spinal sagittal imbalance, and limited shoulder range of motion (ROM) [<xref rid="jeo270604-bib-0017" ref-type="bibr">17</xref>]. Activities of daily living (ADLs) are significantly influenced by spinal disorders and restricted shoulder ROM. Preserving functional independence in elderly individuals is therefore essential, not only to maintain quality of life but also to reduce reliance on nursing care and to limit healthcare costs in an aging society.</p><p>Biomechanical studies show that a relationship between spine and shoulder ROM exists, with manipulation of the spine and ribs improving the symptoms of shoulder pain and impingement syndrome without rehabilitation [<xref rid="jeo270604-bib-0002" ref-type="bibr">2</xref>, <xref rid="jeo270604-bib-0026" ref-type="bibr">26</xref>]. The role of the thoracic spine as a key component for the function of the upper limb has also been demonstrated as well as the shoulder playing a fundamental role in the motility of the thoracic and cervical spine [<xref rid="jeo270604-bib-0006" ref-type="bibr">6</xref>]. Approximately 9°–15° of thoracic extension ROM seems to be required for a full bilateral shoulder flexion in both younger and older populations, however, these parameters may vary significantly due to the inherent variability across individuals and conditions [<xref rid="jeo270604-bib-0021" ref-type="bibr">21</xref>]. Moreover, a significantly increase on active shoulder abduction ROM in an erect posture in relationship to a slouched posture has been shown recently [<xref rid="jeo270604-bib-0014" ref-type="bibr">14</xref>]. Although several studies have suggested a link between thoracic kyphosis and shoulder disorders, Yamamoto et al. reported that altered posture independently predicts both symptomatic and asymptomatic rotator cuff tears, highlighting the role of spinal alignment in prevention strategies and in tailoring rehabilitation for shoulder pathology [<xref rid="jeo270604-bib-0028" ref-type="bibr">28</xref>].</p><p>When focusing on the scapula, increased scapular protraction has shown potential compression distress under the acromion and subacromial tissues, including the subacromial bursa and rotator cuff [<xref rid="jeo270604-bib-0015" ref-type="bibr">15</xref>]. There appears to be a link between increased scapular internal rotation or anterior inclination of the scapula and progressive thoracic kyphosis with lowering of the scapula relative to the thorax.</p><p>By relating these data into preoperative reverse shoulder arthroplasty (RTSA) planning, it seems clear that an examination of the patient′s posture could provide an estimate for choosing the optimal positioning for the humeral and glenoid component [<xref rid="jeo270604-bib-0023" ref-type="bibr">23</xref>]. The objective of this study was to evaluate the association between spinal posture, particularly thoracic kyphosis, scapular orientation and shoulder ROM, with an analysis of the literature, with the aim of understanding their implications for function and surgical planning in reverse shoulder arthroplasty. The hypothesis was that spinal posture could affect shoulder mobility and the positioning of the scapula.</p></sec><sec sec-type="materials-and-methods" id="jeo270604-sec-0070"><title>MATERIALS AND METHODS</title><p>A literature search according to Preferred Reporting Items for Systematic Review and Meta‐Analyses (PRISMA) 2020 guidelines was performed by two reviewers working independently.</p><sec id="jeo270604-sec-0080"><title>Eligibility criteria</title><p>We included observational prospective or retrospective studies in English, which investigated a correlation between the coronal or sagittal axis of the spine, joint mobility and the ROM of the shoulder. We excluded studies that included the paediatric population, patients undergoing corrective spinal surgery or corrective rehabilitation. Moreover, we excluded studies that did not report a correlation index between spine and shoulder outcomes. The comparison analysis was based on the evaluation of clinical scores, shoulder ROM, anterior and posterior tilt of the scapula, kyphosis angle and grade of scoliosis, in order to estimate changes in shoulder ROM, strength or functional performance.</p></sec><sec id="jeo270604-sec-0090"><title>Informational source and search</title><p>The systematic search was performed by the FP‐UCBM Shoulder Study Group on May 29, 2024. The complete PubMed search strategy was as follows: (“shoulder”[MeSH Terms] OR “shoulder”[All Fields] OR “shoulders”[All Fields] OR “glenohumeral joint”[All Fields]) AND (“kyphosis”[MeSH Terms] OR “thoracic kyphosis”[All Fields] OR “spinal curvature”[All Fields] OR “postural alignment”[All Fields]) AND (“posture”[MeSH Terms] OR “spinal posture”[All Fields] OR “sagittal balance”[All Fields]). No restrictions were applied regarding publication date, study design, or language. The search strategy was adapted for Scopus and the Cochrane Library using equivalent keywords and database‐specific syntax.</p></sec><sec id="jeo270604-sec-0100"><title>Study selection</title><p>The first search was based on title and abstract of the articles selected with the reported string; subsequently, eligible articles were read in full text. Finally, a manual search of the reference list of the included articles to find additional manuscripts was performed and citation mapping was not performed.</p></sec><sec id="jeo270604-sec-0110"><title>Data collection process</title><p>The following demographic characteristics have been extracted: authors, year of publication, type of study, level of evidence (LOE), number of participants, number of shoulders, age, gender, body mass index (BMI). Moreover, for the analysis of the results of the included studies, the correlations between scapular or shoulder ROM, such as abduction, flexion, external and internal rotation, and spinal parameters, such as thoracic kyphosis, thoracolumbar flexion, thoracolumbar extension, scoliosis, thoracic and lumbar ROM were assessed. For these correlations, the Pearson correlation coefficient and <italic toggle="yes">p</italic>‐value were reported.</p><p>Two reviewers independently extracted data from the eligible studies using a default data extraction shaped in accordance with the protocol. For each study, the criteria regarding the epidemiological characteristics of the participants (age, sex, number of shoulders evaluated) and the evaluation of the results (correlation between shoulder ROM and Cobb angle, scapular tilt, forward scapular posture and functional scores) were extracted. The objective was the analysis of the correlation coefficient and related statistical significance between shoulder ROM and alterations in the Cobb angle of the spine.</p></sec><sec id="jeo270604-sec-0120"><title>Risk of bias assessment</title><p>The Quality Assessment of Diagnostic Accuracy Studies‐2 (QUADAS‐2) tool was used to assess the risk of bias of the included studies, examining four domains: patient selection, index test, reference standard and flow and timing.</p></sec></sec><sec sec-type="results" id="jeo270604-sec-0130"><title>RESULTS</title><sec id="jeo270604-sec-0140"><title>Results of the search</title><p>All steps of the literature search, screening, eligibility assessment, and inclusion were conducted in line with PRISMA recommendations, and the complete process is illustrated in (Figure <xref rid="jeo270604-fig-0001" ref-type="fig">1</xref>).</p><fig position="float" fig-type="Figure" id="jeo270604-fig-0001" orientation="portrait"><label>Figure 1</label><caption><p>PRISMA 2020 flowchart.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="JEO2-13-e70604-g004.jpg"/></fig></sec><sec id="jeo270604-sec-0150"><title>Included studies</title><p>A total of five studies (three cross‐sectional and two prospective cohort studies) were included. These investigations analysed alterations in shoulder ROM and their statistical correlations in patients with sagittal or coronal spinal malalignment [<xref rid="jeo270604-bib-0012" ref-type="bibr">12</xref>, <xref rid="jeo270604-bib-0013" ref-type="bibr">13</xref>, <xref rid="jeo270604-bib-0016" ref-type="bibr">16</xref>, <xref rid="jeo270604-bib-0018" ref-type="bibr">18</xref>, <xref rid="jeo270604-bib-0023" ref-type="bibr">23</xref>].</p><p>The quality assessment showed that all the included studies presented a low risk of bias in patient selection, index test, and flow and timing domains, whereas the reference standard exhibited an unclear risk of bias. bias as assessed by the QUADAS‐2 tool (Table <xref rid="jeo270604-tbl-0001" ref-type="table">1</xref>).</p><table-wrap position="float" id="jeo270604-tbl-0001" content-type="Table" orientation="portrait"><label>Table 1</label><caption><p>QUADAS‐2.</p></caption><table frame="hsides" rules="groups"><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><thead valign="bottom"><tr valign="bottom"><th rowspan="2" align="left" valign="bottom" colspan="1">Study</th><th colspan="4" style="border-bottom:solid 1px #000000" align="left" valign="bottom" rowspan="1">Risk of Bias</th><th align="left" colspan="3" style="border-bottom:solid 1px #000000" valign="bottom" rowspan="1">Applicability concerns</th></tr><tr style="border-bottom:solid 1px #000000" valign="bottom"><th align="left" valign="bottom" rowspan="1" colspan="1">D1</th><th align="left" valign="bottom" rowspan="1" colspan="1">D2</th><th align="left" valign="bottom" rowspan="1" colspan="1">D3</th><th align="left" valign="bottom" rowspan="1" colspan="1">D4</th><th align="left" valign="bottom" rowspan="1" colspan="1">D1</th><th align="left" valign="bottom" rowspan="1" colspan="1">D2</th><th align="left" valign="bottom" rowspan="1" colspan="1">D3</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Heather et al. (2021)</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g001.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g001.jpg"/>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Moroder et al. (2020)</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g001.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g001.jpg"/>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Imagama et al. (2014)</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g001.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g001.jpg"/>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lee JH et al. (2014)</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g001.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g001.jpg"/>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lin JJ et al. (2010)</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g001.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g001.jpg"/>
+</td></tr></tbody></table><table-wrap-foot><fn id="jeo270604-tbl1-note-0001"><p>
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g003.jpg"/> Low risk</p></fn><fn id="jeo270604-tbl1-note-0002"><p>
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g001.jpg"/> Unclear risk</p></fn><fn id="jeo270604-tbl1-note-0003"><p>
+<inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="image" xlink:href="JEO2-13-e70604-g002.jpg"/> High risk</p></fn><fn id="jeo270604-tbl1-note-0004"><p>D1 Patient Selection</p></fn><fn id="jeo270604-tbl1-note-0005"><p>D2 Index Test</p></fn><fn id="jeo270604-tbl1-note-0006"><p>D3 Reference Standard</p></fn><fn id="jeo270604-tbl1-note-0007"><p>D4 Flow and Timing</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap></sec><sec id="jeo270604-sec-0160"><title>Demographic data</title><p>The study included 624 participants, accounting for a total of 887 shoulders, with a mean age of 40 years (range, 17.1–67). Gender distribution in our total population was 60% female (369 patients) and 40% male (255 patients), ranged from 26% to 64% of women premidonancy for single study, while one study included only females (Table <xref rid="jeo270604-tbl-0002" ref-type="table">2</xref>).</p><table-wrap position="float" id="jeo270604-tbl-0002" content-type="Table" orientation="portrait"><label>Table 2</label><caption><p>Study details.</p></caption><table frame="hsides" rules="groups"><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><thead valign="bottom"><tr valign="bottom"><th rowspan="2" align="left" valign="bottom" colspan="1">Author (year)</th><th rowspan="2" align="left" valign="bottom" colspan="1">Type of study</th><th rowspan="2" align="left" valign="bottom" colspan="1">LOE</th><th rowspan="2" align="left" valign="bottom" colspan="1">No of patients</th><th rowspan="2" align="left" valign="bottom" colspan="1">No of shoulder</th><th rowspan="2" align="left" valign="bottom" colspan="1">Mean age (range)</th><th align="left" valign="bottom" rowspan="1" colspan="1">Sex</th><th rowspan="2" align="left" valign="bottom" colspan="1">Country</th></tr><tr style="border-bottom:solid 1px #000000" valign="bottom"><th align="left" valign="bottom" rowspan="1" colspan="1">F (%) M (%)</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Johnston and Drake (2021) [<xref rid="jeo270604-bib-0013" ref-type="bibr">13</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional study</td><td align="left" valign="top" rowspan="1" colspan="1">II</td><td align="left" valign="top" rowspan="1" colspan="1">163</td><td align="left" valign="top" rowspan="1" colspan="1">326</td><td align="left" valign="top" rowspan="1" colspan="1">21 (18–35)</td><td align="left" valign="top" rowspan="1" colspan="1">104 (64%) 59 (36%)</td><td align="left" valign="top" rowspan="1" colspan="1">Canada</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Moroder et al. (2024) [<xref rid="jeo270604-bib-0024" ref-type="bibr">24</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">PCS</td><td align="left" valign="top" rowspan="1" colspan="1">II</td><td align="left" valign="top" rowspan="1" colspan="1">100</td><td align="left" valign="top" rowspan="1" colspan="1">200</td><td align="left" valign="top" rowspan="1" colspan="1">61.1</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>26 (26%)</p>
+<p>74 (74%)</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Germany</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Imagama et al. (2014) [<xref rid="jeo270604-bib-0012" ref-type="bibr">12</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">PCS</td><td align="left" valign="top" rowspan="1" colspan="1">II</td><td align="left" valign="top" rowspan="1" colspan="1">317</td><td align="left" valign="top" rowspan="1" colspan="1">317</td><td align="left" valign="top" rowspan="1" colspan="1">67 (50–90)</td><td align="left" valign="top" rowspan="1" colspan="1">203 (64%) 114 (36%)</td><td align="left" valign="top" rowspan="1" colspan="1">Japan</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lee et al. (2015) [<xref rid="jeo270604-bib-0016" ref-type="bibr">16</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional study</td><td align="left" valign="top" rowspan="1" colspan="1">II</td><td align="left" valign="top" rowspan="1" colspan="1">18</td><td align="left" valign="top" rowspan="1" colspan="1">18</td><td align="left" valign="top" rowspan="1" colspan="1">33.8 ± 11.2</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>10 (55%)</p>
+<p>8 (45%)</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">South Korea</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lin et al. (2010) [<xref rid="jeo270604-bib-0018" ref-type="bibr">18</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional study</td><td align="left" valign="top" rowspan="1" colspan="1">II</td><td align="left" valign="top" rowspan="1" colspan="1">26</td><td align="left" valign="top" rowspan="1" colspan="1">26</td><td align="left" valign="top" rowspan="1" colspan="1">17.1</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>26 (100%)</p>
+<p>0 (0%)</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Taiwan</td></tr></tbody></table><table-wrap-foot><fn id="jeo270604-tbl2-note-0001"><p>
+<italic toggle="yes">Note</italic>: BMI was reported in two studies, the mean values were 21.19 and 24.2 kg/m<sup>2</sup>.</p></fn><fn id="jeo270604-tbl2-note-0002"><p>Abbreviations: LOE, level of evidence; PCS, prospective cohort studies.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap></sec><sec id="jeo270604-sec-0170"><title>Correlation of clinical outcomes</title><p>Main clinical outcomes were reported in Table <xref rid="jeo270604-tbl-0003" ref-type="table">3</xref>, while the extracted correlations are summarised in Table <xref rid="jeo270604-tbl-0004" ref-type="table">4</xref>.</p><table-wrap position="float" id="jeo270604-tbl-0003" content-type="Table" orientation="portrait"><label>Table 3</label><caption><p>Functional results at final follow‐up.</p></caption><table frame="hsides" rules="groups"><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000" valign="bottom"><th align="left" valign="bottom" rowspan="1" colspan="1">Study</th><th align="left" valign="bottom" rowspan="1" colspan="1">Thoracic kyphosis (Cobb Angle)</th><th align="left" valign="bottom" rowspan="1" colspan="1">Shoulder flexion</th><th align="left" valign="bottom" rowspan="1" colspan="1">Shoulder abduction</th><th align="left" valign="bottom" rowspan="1" colspan="1">Shoulder internal rotation</th><th align="left" valign="bottom" rowspan="1" colspan="1">Scapular anterior tilt</th><th align="left" valign="bottom" rowspan="1" colspan="1">Scapular upward rotation</th><th align="left" valign="bottom" rowspan="1" colspan="1">Scapular protraction</th><th align="left" valign="bottom" rowspan="1" colspan="1">Functional scores</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Johnston and Drake [<xref rid="jeo270604-bib-0013" ref-type="bibr">13</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">9.2 ± n.r (KI)</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>r 169° ± n.r.</p>
+<p>l 169° ± n.r.</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>r 176° ± n.r</p>
+<p>l 175° ± n.r.</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>r 53° ± n.r.</p>
+<p>l 55° ± n.r.</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>r 71° ± n.r.</p>
+<p>l 69° ± n.r.</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Moroder et al. [<xref rid="jeo270604-bib-0024" ref-type="bibr">24</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">44° ± 11.2°</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">41.4° ± 5.2°</td><td align="left" valign="top" rowspan="1" colspan="1">19.4° ± 8.6°</td><td align="left" valign="top" rowspan="1" colspan="1">13.3° ± 5.1°</td><td align="left" valign="top" rowspan="1" colspan="1">88.4° ± 4.7°</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Imagama et al. [<xref rid="jeo270604-bib-0012" ref-type="bibr">12</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">43.1°± n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">177° ± n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">175.3° ± n.r.</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">3.7 ± n.r. (VAS pain)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lee JH et al. [<xref rid="jeo270604-bib-0016" ref-type="bibr">16</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">33.77° ± 8.37°</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">54.08° ± 13.13°</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lin et al. [<xref rid="jeo270604-bib-0018" ref-type="bibr">18</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">34.0° ± 7.3°</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">10.4° ± 4.6°</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>14.3° ± 6.2°</p>
+<p>6.2° ± 6.4°</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">n.r.</td><td align="left" valign="top" rowspan="1" colspan="1">35.5 ± 4.6 (FLEX‐SF)</td></tr></tbody></table><table-wrap-foot><fn id="jeo270604-tbl3-note-0001"><p>
+<italic toggle="yes">Note</italic>: Values are reported as mean ± standard deviation (SD) unless otherwise specified.</p></fn><fn id="jeo270604-tbl3-note-0002"><p>Abbreviations: FLEX‐SF, flexilevel scale of shoulder function; KI, Kyphosis Index; l, left shoulder; n.r., not reported; r, right shoulder; VAS, Visual Analogue Scale.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><table-wrap position="float" id="jeo270604-tbl-0004" content-type="Table" orientation="portrait"><label>Table 4</label><caption><p>Main outcomes rates.</p></caption><table frame="hsides" rules="groups"><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><col align="left" style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000" valign="bottom"><th align="left" valign="bottom" rowspan="1" colspan="1">Author</th><th align="left" valign="bottom" rowspan="1" colspan="1">Sample</th><th align="left" valign="bottom" rowspan="1" colspan="1">Method used and parameters evaluated</th><th align="left" valign="bottom" rowspan="1" colspan="1">Correlation</th><th align="left" valign="bottom" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> value</th><th align="left" valign="bottom" rowspan="1" colspan="1">
+<italic toggle="yes">R</italic>
+</th></tr></thead><tbody valign="top"><tr><td rowspan="12" valign="middle" align="left" colspan="1">Johnston and Drake [<xref rid="jeo270604-bib-0013" ref-type="bibr">13</xref>]</td><td rowspan="12" valign="middle" align="left" colspan="1">163 asymptomatic, right hand dominant, young adults</td><td rowspan="12" valign="middle" align="left" colspan="1">Manual goniometric ROM; thoracic/lumbar motion with inclinometer in asymptomatic young adults.</td><td align="left" valign="top" rowspan="1" colspan="1">Thoracic kyphosis and shoulder abduction</td><td rowspan="12" valign="middle" align="left" colspan="1">&lt;0.0003</td><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>L</bold> 0.086 <bold>R</bold> 0.151</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Thoracolumbar flexion and shoulder abduction</td><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>L</bold> 0.211 <bold>R</bold> 0.238</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Thoracolumbar extension and shoulder abduction</td><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>L</bold> 0.066 <bold>R</bold> 0.084</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Thoracic kyphosis and shoulder flexion</td><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>L</bold> −0.118 <bold>R‐</bold>0.159</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Thoracolumbar flexion and shoulder flexion</td><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>L</bold> 0.159 <bold>R</bold> 0.221</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Thoracolumbar extension and shoulder flexion</td><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>L</bold> 0.077 <bold>R</bold> 0.077</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Thoracic kyphosis and scapular external rotation</td><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>L</bold> −0.028 <bold>R</bold> −0.014</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Thoracolumbar flexion and scapular external rotation</td><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>L</bold> 0.002 <bold>R</bold> −0.165</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Thoracolumbar extension and scapular external rotation</td><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>L</bold> 0.232 <bold>R</bold> 0.180</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Thoracic kyphosis and scapular internal rotation</td><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>L</bold> −0,081 <bold>R</bold> −0,065</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Thoracolumbar flexion and scapular internal rotation</td><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>L</bold> 0.079 <bold>R</bold> −0.039</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Thoracolumbar extension and scapular internal rotation</td><td align="left" valign="top" rowspan="1" colspan="1">
+<bold>L</bold> 0.163 <bold>R</bold> −0.023</td></tr><tr><td rowspan="3" valign="middle" align="left" colspan="1">Moroder et al. [<xref rid="jeo270604-bib-0024" ref-type="bibr">24</xref>]</td><td rowspan="3" valign="middle" align="left" colspan="1">200 shoulders in 100 patients</td><td rowspan="3" valign="middle" align="left" colspan="1">CT with 3D reconstruction; thoracic kyphosis and scapular orientation in adults.</td><td align="left" valign="top" rowspan="1" colspan="1">Thoracic kyphosis and scapular internal rotation</td><td align="left" valign="top" rowspan="1" colspan="1">&lt;0.001</td><td align="left" valign="top" rowspan="1" colspan="1">0.27</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Anterior tilt and scapular internal rotation</td><td align="left" valign="top" rowspan="1" colspan="1">&lt;0.001</td><td align="left" valign="top" rowspan="1" colspan="1">0.29</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Scapular translation and scapular internal rotation</td><td align="left" valign="top" rowspan="1" colspan="1">&lt;0.001</td><td align="left" valign="top" rowspan="1" colspan="1">0.57</td></tr><tr><td rowspan="6" valign="middle" align="left" colspan="1">Imagama et al. [<xref rid="jeo270604-bib-0012" ref-type="bibr">12</xref>]</td><td rowspan="6" valign="middle" align="left" colspan="1">317 subjects (114 males and 203 females)</td><td rowspan="6" valign="middle" align="left" colspan="1">Motion analysis system with digital reconstruction for evaluation of thoracic/lumbar ROM and shoulder kinematics in elderly cohort.</td><td align="left" valign="top" rowspan="1" colspan="1">Thoracic kyphosis and shoulder abduction</td><td align="left" valign="top" rowspan="1" colspan="1">&lt;0.005</td><td align="left" valign="top" rowspan="1" colspan="1">−0.163</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Thoracic ROM and shoulder abduction</td><td align="left" valign="top" rowspan="1" colspan="1">&gt;0.05</td><td align="left" valign="top" rowspan="1" colspan="1">0.035</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lumbar ROM and shoulder abduction</td><td align="left" valign="top" rowspan="1" colspan="1">&lt;0.05</td><td align="left" valign="top" rowspan="1" colspan="1">0.119</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Thoracic kyphosis and shoulder flexion</td><td align="left" valign="top" rowspan="1" colspan="1">&lt;0.05</td><td align="left" valign="top" rowspan="1" colspan="1">−0.118</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Thoracic ROM and shoulder flexion</td><td align="left" valign="top" rowspan="1" colspan="1">&gt;0.05</td><td align="left" valign="top" rowspan="1" colspan="1">−0.057</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lumbar ROM and shoulder flexion</td><td align="left" valign="top" rowspan="1" colspan="1">&lt;0.005</td><td align="left" valign="top" rowspan="1" colspan="1">0.166</td></tr><tr><td rowspan="2" valign="middle" align="left" colspan="1">Lee et al. [<xref rid="jeo270604-bib-0016" ref-type="bibr">16</xref>]</td><td rowspan="2" valign="middle" align="left" colspan="1">18 subjects</td><td rowspan="2" valign="middle" align="left" colspan="1">Digital image analysis; thoracic kyphosis and scapular posture in young adults.</td><td align="left" valign="top" rowspan="1" colspan="1">Thoracic kyphosis and shoulder adduction</td><td align="left" valign="top" rowspan="1" colspan="1">&lt;0.05</td><td align="left" valign="top" rowspan="1" colspan="1">−0.72</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Thoracic kyphosis and forward scapular posture</td><td align="left" valign="top" rowspan="1" colspan="1">0.077</td><td align="left" valign="top" rowspan="1" colspan="1">−0.43</td></tr><tr><td rowspan="4" valign="middle" align="left" colspan="1">Lin et al. [<xref rid="jeo270604-bib-0018" ref-type="bibr">18</xref>]</td><td rowspan="4" valign="middle" align="left" colspan="1">13 females with idiopathic scoliosis and 13 females without scoliosis</td><td rowspan="4" valign="middle" align="left" colspan="1">Motion analysis; scapular kinematics in adolescent females with/without scoliosis.</td><td align="left" valign="top" rowspan="1" colspan="1">Idiopathic scoliosis and shoulder flexion</td><td align="left" valign="top" rowspan="1" colspan="1">0.01</td><td rowspan="4" align="left" valign="top" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Idiopathic scoliosis and anterior tilt of the scapula</td><td align="left" valign="top" rowspan="1" colspan="1">0.006</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Scoliosis (convex side) and scapular anterior tilt</td><td align="left" valign="top" rowspan="1" colspan="1">&lt;0.05</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Scoliosis (concave side) and scapular upward rotation</td><td align="left" valign="top" rowspan="1" colspan="1">&lt;0.05</td></tr></tbody></table><table-wrap-foot><fn id="jeo270604-tbl4-note-0001"><p>Abbreviations: CT, computed tomography; L, left shoulder; R, right shoulder; ROM, range of motion.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap></sec><sec id="jeo270604-sec-0180"><title>Thoracic kyphosis</title><p>In the study by Imagama et al. and Johnston and Drake [<xref rid="jeo270604-bib-0012" ref-type="bibr">12</xref>, <xref rid="jeo270604-bib-0013" ref-type="bibr">13</xref>] subjects with greater thoracic kyphosis showed reduced shoulder flexion.Imagama et al. further demonstrated that both increasing thoracic kyphosis angle and spinal inclination were important risk factors for decreased shoulder flexion, while greater thoracic kyphosis combined with weak back muscle strength was a significant risk factor for decreased shoulder abduction (<italic toggle="yes">p</italic> &lt; 0.05). Overall, shoulder flexion was influenced by thoracic kyphosis, thoracic ROM, and lumbar ROM, whereas shoulder abduction decreased with increasing thoracic kyphosis. In contrast, greater thoracic and lumbar ROM were associated with increased shoulder flexion and abduction (Table <xref rid="jeo270604-tbl-0004" ref-type="table">4</xref>).</p><p>Lee et al. [<xref rid="jeo270604-bib-0016" ref-type="bibr">16</xref>] reported that a greater degree of forward scapular posture was associated with a larger thoracic spine angle. This alignment was also linked to slightly reduced glenohumeral horizontal adduction and moderately reduced glenohumeral internal rotation. In the study by Moroder et al. [<xref rid="jeo270604-bib-0023" ref-type="bibr">23</xref>] scapular internal rotation was found to increase in association with thoracic kyphosis, scapular protraction, anterior tilt, and greater scapular translation (data were reported in Table <xref rid="jeo270604-tbl-0003" ref-type="table">3</xref>).</p></sec><sec id="jeo270604-sec-0190"><title>Thoracolumbar flexion and extension</title><p>The most significant findings in the study by Johnston and Drake [<xref rid="jeo270604-bib-0013" ref-type="bibr">13</xref>] were that shoulder abduction and flexion increased with greater thoracolumbar flexion (R Left = 0.211; Right = 0.238; and R Left = 0.159; Right = 0.221, respectively), both highly significant (<italic toggle="yes">p</italic> &lt; 0.0003). In addition, scapular external rotation increased with greater thoracolumbar extension (R Left = 0.232; Right = 0.180).</p><p>Other associations were weaker and less consistent. Shoulder abduction and flexion changed only minimally with thoracolumbar extension. Scapular internal rotation showed only slight changes with thoracolumbar flexion (R Left = 0.079; Right = –0.039) and extension (R Left = 0.163; Right = –0.023). Finally, scapular external rotation was not meaningfully affected by thoracic kyphosis or thoracolumbar flexion.</p></sec><sec id="jeo270604-sec-0200"><title>Idiopathic scoliosis</title><p>In the study by Lin et al. [<xref rid="jeo270604-bib-0018" ref-type="bibr">18</xref>], which investigated the relationship between idiopathic scoliosis and shoulder ROM, significant alterations in shoulder kinematics were reported. On the convex side, patients showed greater anterior tilt of the scapula in resting position (<italic toggle="yes">p</italic> = 0.006), whereas no significant differences were found in scapular upward rotation, posterior tipping, or scapulohumeral rhythm. On the concave side, patients demonstrated greater scapular upward rotation in resting position (<italic toggle="yes">p</italic> = 0.01).</p></sec></sec><sec sec-type="discussion" id="jeo270604-sec-0210"><title>DISCUSSION</title><p>As previously hypothesised, this systematic showed an impact of spine morphology on scapular and shoulder articular mobility and anatomical orientation. The most significant correlations were observed between greater thoracic kyphosis and increased scapular internal rotation, as well as between greater scapular anterior tilt and greater scapular translation. Higher thoracic kyphosis was correlated with reduced shoulder abduction and flexion, whereas greater lumbar ROM was associated with increased abduction and flexion. In addition, higher thoracic kyphosis was correlated with reduced shoulder adduction. To our knowledge, this investigation represents the first systematic review on the topic.</p><p>Recently, literature has been consistently raising concerns regarding the influence of spine deformation and its influence on shoulder mobility as well as the joint function after total shoulder arthroplasty [<xref rid="jeo270604-bib-0007" ref-type="bibr">7</xref>, <xref rid="jeo270604-bib-0023" ref-type="bibr">23</xref>, <xref rid="jeo270604-bib-0024" ref-type="bibr">24</xref>].</p><p>Barret et al. showed how Thoracolumbar flexion (coef = 0.670) and lumbar lordosis (coef = 0.414) regions of the spine might be potentially overlooked when completing shoulder ROM assessment in asymptomatic individuals as more emphasis is placed on thoracic contributions to shoulder function [<xref rid="jeo270604-bib-0003" ref-type="bibr">3</xref>]. Evaluating patients in a slouching position has shown a reduction in global shoulder ROM for some authors [<xref rid="jeo270604-bib-0004" ref-type="bibr">4</xref>, <xref rid="jeo270604-bib-0017" ref-type="bibr">17</xref>], while only in abduction for others [<xref rid="jeo270604-bib-0014" ref-type="bibr">14</xref>]. The relationship of this angle with shoulder ROM and clinical outcomes can be attributed to several factors. First, the scapula protracts and downwardly rotates when bending forward, leading to compression under the acromion of subacromial tissues. Second, since extension of the thoracic spine should be required to elevate the shoulder, complete elevation of the shoulder with an increased kyphosis cannot be achieved.</p><p>Moreover, forward scapular posture influences altered scapulothoracic muscle imbalance and scapular kinematics, which could lead to shoulder impingement syndrome and rotator cuff disease [<xref rid="jeo270604-bib-0019" ref-type="bibr">19</xref>, <xref rid="jeo270604-bib-0022" ref-type="bibr">22</xref>].</p><p>Muscle strength and length are also factors related to scapular kinematics and shoulder ROM, with particular focus on the strength of the serratus anterior and the length of the pectoralis major influencing anterior tilting and scapular protraction [<xref rid="jeo270604-bib-0005" ref-type="bibr">5</xref>]. The results of the analysed data in present study support this theory [<xref rid="jeo270604-bib-0016" ref-type="bibr">16</xref>]. Also, the serratus anterior and the lower trapezius influence the scapular movements, stabilising the inferior angle and the medial border of the scapula, directly protecting form anterior tilt [<xref rid="jeo270604-bib-0008" ref-type="bibr">8</xref>, <xref rid="jeo270604-bib-0020" ref-type="bibr">20</xref>].</p><p>Even if spine and scapular imbalance have been shown increased in the middle‐aged and elderly people [<xref rid="jeo270604-bib-0011" ref-type="bibr">11</xref>, <xref rid="jeo270604-bib-0012" ref-type="bibr">12</xref>], recent findings show that an increase in scapular internal rotation is attributed to posture rather than age, highlighting how muscle strength is essential to maintain the spine sagittal alignment and the physiological scapular orientation [<xref rid="jeo270604-bib-0023" ref-type="bibr">23</xref>].</p><p>The relation between spine and shoulder function has been investigated in the shoulder arthroplasty surgical setting, where different postures influenced the 2‐year clinical outcome of patients in terms reducing flexion, abduction and exacerbating pain after surgery [<xref rid="jeo270604-bib-0024" ref-type="bibr">24</xref>].</p><p>These findings led the orthopaedic surgeons to consider the correct orientation of the prosthesis in relation to the scapula, spine and humerus morphology to achieve the best clinical scores and the highest patient′s satisfaction [<xref rid="jeo270604-bib-0001" ref-type="bibr">1</xref>, <xref rid="jeo270604-bib-0023" ref-type="bibr">23</xref>, <xref rid="jeo270604-bib-0024" ref-type="bibr">24</xref>, <xref rid="jeo270604-bib-0029" ref-type="bibr">29</xref>].</p><p>Anatomic total shoulder arthroplasty and reverse shoulder arthroplasty are effective treatment options for degenerative diseases of the glenohumeral joint, however, appropriate positioning of the components is among the most relevant factors to succeed in this type of surgical treatment [<xref rid="jeo270604-bib-0009" ref-type="bibr">9</xref>, <xref rid="jeo270604-bib-0010" ref-type="bibr">10</xref>].</p><p>The relationship explored in this study between spinal morphology and shoulder function resembles the well‐documented pathogenesis of hip‐spine syndrome, characterised by lumbar degenerative stenosis and hip Osteoarthritis [<xref rid="jeo270604-bib-0025" ref-type="bibr">25</xref>]. As alterations in the alignment and function of the lumbar spine can impact hip mechanics and vice versa, the findings of this review suggest a similar relationship between the dorsal spine and shoulder. In both cases, biomechanical correlations imply that altered function or alignment of one segment can have a detrimental effect on the ROM and overall function of the associated joint. This similarity demonstrates the need for a holistic approach to musculoskeletal assessments: similarly to the hip‐spine syndrome, effective treatments require diagnosis and management of the primary aetiology and associated secondary effects [<xref rid="jeo270604-bib-0027" ref-type="bibr">27</xref>, <xref rid="jeo270604-bib-0030" ref-type="bibr">30</xref>]. This systematic review has some limitations. First, in the current literature, there is a low number of high‐level studies. Also, the use of heterogeneous ROM measurement and functional scores, different sample sizes, and a wide age range might bias or obscure the observed correlations. Patient‐reported outcomes measures (PROMs) were not considered or analysed in relation the ceiling effects (CE). CE may arise when the maximum achievable score on a given PROM is attained by at least 15% of the study population. The presence of a CE typically suggests that the scoring thresholds are insufficiently challenging, potentially limiting the measure′s ability to differentiate higher levels of patient function.</p><p>Moreover, the high heterogeneity of the included studies, the functional scores used and the evaluated outcomes did not allow for a meta‐analysis. Finally, other limitations are related to the small sample size and the different short‐term follow‐ups. A specific analysis on how forward scapular posture interact with thoracic kyphosis to influence shoulder kinematics should be conducted to gain more personalised insights into the treatment of shoulder pathological conditions.</p></sec><sec sec-type="conclusions" id="jeo270604-sec-0220"><title>CONCLUSION</title><p>This study agrees with the hypothesis and underlies a frequent significant correlation between spine morphology, shoulder function and scapular orientation, especially between shoulder abduction, adduction and flexion with thoracic kyphosis. These results should be considered in the clinical practice to treat and to better align patients and physicians on expectations after a surgical or a non‐surgical shoulder treatment. Further research and higher quality studies should be carried out to individuate the better define these frequent correlations and their applications in the daily clinical practice.</p></sec><sec id="jeo270604-sec-0230"><title>AUTHOR CONTRIBUTIONS</title><p>
+<italic toggle="yes">Conceptualisation</italic>: Pietro Gregori and Fabrizio Russo. <italic toggle="yes">Methodology</italic>: Mauro La Bruna and Giuseppe Francesco Papalia. <italic toggle="yes">Software</italic>: Michele Paciotti. <italic toggle="yes">Validation</italic>: Giancarlo Giurazza, Mauro La Bruna and Clemente Caria. <italic toggle="yes">Formal analysis</italic>: Clemente Caria. <italic toggle="yes">Investigation</italic>: Mauro La Bruna. <italic toggle="yes">Resources</italic>: Rocco Papalia. <italic toggle="yes">Data curation</italic>: Michele Paciotti. <italic toggle="yes">Writing original draft preparation</italic>: Pietro Gregori and Giuseppe Francesco Papalia. <italic toggle="yes">Writing review and editing:</italic> Rocco Papalia. <italic toggle="yes">Visualisation</italic>: Umile Giuseppe Longo. <italic toggle="yes">Supervision</italic>: Rocco Papalia. <italic toggle="yes">Project administration</italic>: Edoardo Franceschetti. <italic toggle="yes">Funding acquisition</italic>: Edoardo Franceschetti. All authors have read and agreed to the published version of the manuscript.</p></sec><sec sec-type="COI-statement" id="jeo270604-sec-0240"><title>CONFLICT OF INTEREST STATEMENT</title><p>The authors declare no conflicts of interest.</p></sec><sec id="jeo270604-sec-0270"><title>ETHICS STATEMENT</title><p>None declared.</p></sec></body><back><sec sec-type="data-availability" id="jeo270604-sec-0260"><title>DATA AVAILABILITY STATEMENT</title><p>All data generated or analysed during this study are included in this published article [and its supplementary information files].</p></sec><ref-list content-type="cited-references" id="jeo270604-bibl-0001"><title>REFERENCES</title><ref id="jeo270604-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="jeo270604-cit-0001">
+<string-name name-style="western">
+<surname>Andriollo</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pietramala</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Polizzi</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Niccoli</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zattoni</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Morea</surname>
+<given-names>V</given-names>
+</string-name>. <article-title>Computer‐assisted navigation in reverse shoulder arthroplasty: surgical experience and clinical outcomes</article-title>. <source>J Clin Med</source>. <year>2024</year>;<volume>13</volume>(<issue>9</issue>):<fpage>2512</fpage>.<pub-id pub-id-type="pmid">38731041</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/jcm13092512</pub-id><pub-id pub-id-type="pmcid">PMC11084768</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="jeo270604-cit-0002">
+<string-name name-style="western">
+<surname>Bang</surname>
+<given-names>MD</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Deyle</surname>
+<given-names>GD</given-names>
+</string-name>. <article-title>Comparison of supervised exercise with and without manual physical therapy for patients with shoulder impingement syndrome</article-title>. <source>J Orthop Sports Phys Ther</source>. <year>2000</year>;<volume>30</volume>(<issue>3</issue>):<fpage>126</fpage>–<lpage>137</lpage>.<pub-id pub-id-type="pmid">10721508</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2519/jospt.2000.30.3.126</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="jeo270604-cit-0003">
+<string-name name-style="western">
+<surname>Barrett</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>McCreesh</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lewis</surname>
+<given-names>J</given-names>
+</string-name>. <article-title>Reliability and validity of non‐radiographic methods of thoracic kyphosis measurement: a systematic review</article-title>. <source>Man Ther</source>. <year>2014</year>;<volume>19</volume>(<issue>1</issue>):<fpage>10</fpage>–<lpage>17</lpage>.<pub-id pub-id-type="pmid">24246907</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.math.2013.09.003</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="jeo270604-cit-0004">
+<string-name name-style="western">
+<surname>Bullock</surname>
+<given-names>MP</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Foster</surname>
+<given-names>NE</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wright</surname>
+<given-names>CC</given-names>
+</string-name>. <article-title>Shoulder impingement: the effect of sitting posture on shoulder pain and range of motion</article-title>. <source>Man Ther</source>. <year>2005</year>;<volume>10</volume>(<issue>1</issue>):<fpage>28</fpage>–<lpage>37</lpage>.<pub-id pub-id-type="pmid">15681266</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.math.2004.07.002</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="jeo270604-cit-0005">
+<string-name name-style="western">
+<surname>Burkhart</surname>
+<given-names>SS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Morgan</surname>
+<given-names>CD</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ben Kibler</surname>
+<given-names>W</given-names>
+</string-name>. <article-title>The disabled throwing shoulder: spectrum of pathology part III: the SICK scapula, scapular dyskinesis, the kinetic chain, and rehabilitation</article-title>. <source>Arthroscopy</source>. <year>2003</year>;<volume>19</volume>(<issue>6</issue>):<fpage>641</fpage>–<lpage>661</lpage>.<pub-id pub-id-type="pmid">12861203</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s0749-8063(03)00389-x</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="jeo270604-cit-0006">
+<string-name name-style="western">
+<surname>Crosbie</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kilbreath</surname>
+<given-names>SL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hollmann</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>York</surname>
+<given-names>S</given-names>
+</string-name>. <article-title>Scapulohumeral rhythm and associated spinal motion</article-title>. <source>Clin Biomech</source>. <year>2008</year>;<volume>23</volume>(<issue>2</issue>):<fpage>184</fpage>–<lpage>192</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.clinbiomech.2007.09.012</pub-id><pub-id pub-id-type="pmid">17981379</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="jeo270604-cit-0007">
+<string-name name-style="western">
+<surname>Daher</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Fares</surname>
+<given-names>MY</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Boufadel</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zalaquett</surname>
+<given-names>Z</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Koa</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sakr</surname>
+<given-names>I</given-names>
+</string-name>, et al. <article-title>Untwining the intertwined: a comprehensive review on differentiating pathologies of the shoulder and spine</article-title>. <source>JSES Rev Rep Tech</source>. <year>2024</year>;<volume>4</volume>(<issue>3</issue>):<fpage>385</fpage>–<lpage>392</lpage>.<pub-id pub-id-type="pmid">39157237</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.xrrt.2024.02.007</pub-id><pub-id pub-id-type="pmcid">PMC11329023</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="jeo270604-cit-0008">
+<string-name name-style="western">
+<surname>Ebaugh</surname>
+<given-names>DD</given-names>
+</string-name>, <string-name name-style="western">
+<surname>McClure</surname>
+<given-names>PW</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Karduna</surname>
+<given-names>AR</given-names>
+</string-name>. <article-title>Three‐dimensional scapulothoracic motion during active and passive arm elevation</article-title>. <source>Clin Biomech</source>. <year>2005</year>;<volume>20</volume>(<issue>7</issue>):<fpage>700</fpage>–<lpage>709</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.clinbiomech.2005.03.008</pub-id><pub-id pub-id-type="pmid">15935534</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="jeo270604-cit-0009">
+<string-name name-style="western">
+<surname>Franceschetti</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Giovannetti De Sanctis</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gregori</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Paciotti</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Palumbo</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Franceschi</surname>
+<given-names>F</given-names>
+</string-name>. <article-title>Angled BIO‐RSA leads to better inclination and clinical outcomes compared to Standard BIO‐RSA and eccentric reaming: a comparative study</article-title>. <source>Shoulder Elbow</source>. <year>2023</year>;<volume>15</volume>(<issue>3_suppl</issue>):<fpage>35</fpage>–<lpage>42</lpage>.<pub-id pub-id-type="pmid">37974648</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/17585732211067156</pub-id><pub-id pub-id-type="pmcid">PMC10649506</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="jeo270604-cit-0010">
+<string-name name-style="western">
+<surname>Franceschetti</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Perricone</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>De Rosa</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tanzilli</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gregori</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Giurazza</surname>
+<given-names>G</given-names>
+</string-name>, et al. <article-title>Eccentricity and greater size of the glenosphere increase impingement‐free range of motion in glenoid lateralized reverse shoulder arthroplasty: a computational study</article-title>. <source>J Clin Orthop Trauma</source>. <year>2024</year>;<volume>56</volume>:<elocation-id>102527</elocation-id>.<pub-id pub-id-type="pmid">39309728</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jcot.2024.102527</pub-id><pub-id pub-id-type="pmcid">PMC11413683</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="jeo270604-cit-0011">
+<string-name name-style="western">
+<surname>Imagama</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hasegawa</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Matsuyama</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sakai</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ito</surname>
+<given-names>Z</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hamajima</surname>
+<given-names>N</given-names>
+</string-name>, et al. <article-title>Influence of sagittal balance and physical ability associated with exercise on quality of life in middle‐aged and elderly people</article-title>. <source>Arch Osteoporosis</source>. <year>2011</year>;<volume>6</volume>(<issue>1–2</issue>):<fpage>13</fpage>–<lpage>20</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s11657-011-0052-1</pub-id><pub-id pub-id-type="pmcid">PMC3235276</pub-id><pub-id pub-id-type="pmid">22207875</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="jeo270604-cit-0012">
+<string-name name-style="western">
+<surname>Imagama</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hasegawa</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wakao</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hirano</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Muramoto</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ishiguro</surname>
+<given-names>N</given-names>
+</string-name>. <article-title>Impact of spinal alignment and back muscle strength on shoulder range of motion in middle‐aged and elderly people in a prospective cohort study</article-title>. <source>Eur Spine J</source>. <year>2014</year>;<volume>23</volume>(<issue>7</issue>):<fpage>1414</fpage>–<lpage>1419</lpage>.<pub-id pub-id-type="pmid">24578093</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00586-014-3251-9</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="jeo270604-cit-0013">
+<string-name name-style="western">
+<surname>Johnston</surname>
+<given-names>HA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Drake</surname>
+<given-names>JDM</given-names>
+</string-name>. <article-title>Multivariate shoulder and spine relationship using planar range of motion assessment</article-title>. <source>Musculoskeletal Sci Pract</source>. <year>2021</year>;<volume>54</volume>:<elocation-id>102398</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.msksp.2021.102398</pub-id><pub-id pub-id-type="pmid">34045171</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="jeo270604-cit-0014">
+<string-name name-style="western">
+<surname>Kebaetse</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>McClure</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pratt</surname>
+<given-names>NA</given-names>
+</string-name>. <article-title>Thoracic position effect on shoulder range of motion, strength, and three‐dimensional scapular kinematics</article-title>. <source>Arch Phys Med Rehabil</source>. <year>1999</year>;<volume>80</volume>(<issue>8</issue>):<fpage>945</fpage>–<lpage>950</lpage>.<pub-id pub-id-type="pmid">10453773</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s0003-9993(99)90088-6</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="jeo270604-cit-0015">
+<string-name name-style="western">
+<surname>Lawrence</surname>
+<given-names>RL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Richardson</surname>
+<given-names>LB</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bilodeau</surname>
+<given-names>HL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bonath</surname>
+<given-names>DJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dahn</surname>
+<given-names>DJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Em</surname>
+<given-names>M‐A</given-names>
+</string-name>, et al. <article-title>Effects of scapular angular deviations on potential for rotator cuff tendon mechanical compression</article-title>. <source>Orthop J Sports Med</source>. <year>2024</year>;<volume>12</volume>(<issue>3</issue>):<elocation-id>23259671231219023</elocation-id>.<pub-id pub-id-type="pmid">38435717</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/23259671231219023</pub-id><pub-id pub-id-type="pmcid">PMC10906059</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="jeo270604-cit-0016">
+<string-name name-style="western">
+<surname>Lee</surname>
+<given-names>J‐H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cynn</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Yi</surname>
+<given-names>C‐H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kwon</surname>
+<given-names>O</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Yoon</surname>
+<given-names>T‐L</given-names>
+</string-name>. <article-title>Predictor variables for forward scapular posture including posterior shoulder tightness</article-title>. <source>J Bodywork Mov Ther</source>. <year>2015</year>;<volume>19</volume>(<issue>2</issue>):<fpage>253</fpage>–<lpage>260</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jbmt.2014.04.010</pub-id><pub-id pub-id-type="pmid">25892380</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="jeo270604-cit-0017">
+<string-name name-style="western">
+<surname>Lewis</surname>
+<given-names>JS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wright</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Green</surname>
+<given-names>A</given-names>
+</string-name>. <article-title>Subacromial impingement syndrome: the effect of changing posture on shoulder range of movement</article-title>. <source>J Orthop Sports Phys Ther</source>. <year>2005</year>;<volume>35</volume>(<issue>2</issue>):<fpage>72</fpage>–<lpage>87</lpage>.<pub-id pub-id-type="pmid">15773565</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2519/jospt.2005.35.2.72</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="jeo270604-cit-0018">
+<string-name name-style="western">
+<surname>Lin</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Chen</surname>
+<given-names>W‐H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Chen</surname>
+<given-names>P‐Q</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tsauo</surname>
+<given-names>J‐Y</given-names>
+</string-name>. <article-title>Alteration in shoulder kinematics and associated muscle activity in people with idiopathic scoliosis</article-title>. <source>Spine</source>. <year>2010</year>;<volume>35</volume>(<issue>11</issue>):<fpage>1151</fpage>–<lpage>1157</lpage>.<pub-id pub-id-type="pmid">20421854</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/BRS.0b013e3181cd5923</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="jeo270604-cit-0019">
+<string-name name-style="western">
+<surname>Ludewig</surname>
+<given-names>PM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cook</surname>
+<given-names>TM</given-names>
+</string-name>. <article-title>The effect of head position on scapular orientation and muscle activity during shoulder elevation</article-title>. <source>J Occup Rehabil</source>. <year>1996</year>;<volume>6</volume>(<issue>3</issue>):<fpage>147</fpage>–<lpage>158</lpage>.<pub-id pub-id-type="pmid">24234976</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/BF02110752</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="jeo270604-cit-0020">
+<string-name name-style="western">
+<surname>Ludewig</surname>
+<given-names>PM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hoff</surname>
+<given-names>MS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Osowski</surname>
+<given-names>EE</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Meschke</surname>
+<given-names>SA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rundquist</surname>
+<given-names>PJ</given-names>
+</string-name>. <article-title>Relative balance of serratus anterior and upper trapezius muscle activity during push‐up exercises</article-title>. <source>Am J Sports Med</source>. <year>2004</year>;<volume>32</volume>(<issue>2</issue>):<fpage>484</fpage>–<lpage>493</lpage>.<pub-id pub-id-type="pmid">14977678</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/0363546503258911</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="jeo270604-cit-0021">
+<string-name name-style="western">
+<surname>Malmström</surname>
+<given-names>E‐M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Olsson</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Baldetorp</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Fransson</surname>
+<given-names>P‐A</given-names>
+</string-name>. <article-title>A slouched body posture decreases arm mobility and changes muscle recruitment in the neck and shoulder region</article-title>. <source>Eur J Appl Physiol</source>. <year>2015</year>;<volume>115</volume>(<issue>12</issue>):<fpage>2491</fpage>–<lpage>2503</lpage>.<pub-id pub-id-type="pmid">26429723</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00421-015-3257-y</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="jeo270604-cit-0022">
+<string-name name-style="western">
+<surname>McClure</surname>
+<given-names>PW</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bialker</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Neff</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Williams</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Karduna</surname>
+<given-names>A</given-names>
+</string-name>. <article-title>Shoulder function and 3‐dimensional kinematics in people with shoulder impingement syndrome before and after a 6‐week exercise program</article-title>. <source>Phys Ther</source>. <year>2004</year>;<volume>84</volume>(<issue>9</issue>):<fpage>832</fpage>–<lpage>848</lpage>.<pub-id pub-id-type="pmid">15330696</pub-id>
+</mixed-citation></ref><ref id="jeo270604-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="jeo270604-cit-0023">
+<string-name name-style="western">
+<surname>Moroder</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Akgün</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Plachel</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Baur</surname>
+<given-names>ADJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Siegert</surname>
+<given-names>P</given-names>
+</string-name>. <article-title>The influence of posture and scapulothoracic orientation on the choice of humeral component retrotorsion in reverse total shoulder arthroplasty</article-title>. <source>J Shoulder Elbow Surg</source>. <year>2020</year>;<volume>29</volume>(<issue>10</issue>):<fpage>1992</fpage>–<lpage>2001</lpage>.<pub-id pub-id-type="pmid">32327269</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jse.2020.01.089</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="jeo270604-cit-0024">
+<string-name name-style="western">
+<surname>Moroder</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Siegert</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Coifman</surname>
+<given-names>I</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rüttershoff</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Spagna</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Scaini</surname>
+<given-names>A</given-names>
+</string-name>, et al. <article-title>Scapulothoracic orientation has a significant influence on the clinical outcome after reverse total shoulder arthroplasty</article-title>. <source>J Shoulder Elbow Surg</source>. <year>2024</year>;<volume>33</volume>(<issue>10</issue>):<fpage>2159</fpage>–<lpage>2170</lpage>.<pub-id pub-id-type="pmid">38537767</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jse.2024.02.018</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="jeo270604-cit-0025">
+<string-name name-style="western">
+<surname>Offierski</surname>
+<given-names>CM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Macnab</surname>
+<given-names>I</given-names>
+</string-name>. <article-title>Hip‐spine syndrome</article-title>. <source>Spine</source>. <year>1983</year>;<volume>8</volume>(<issue>3</issue>):<fpage>316</fpage>–<lpage>321</lpage>.<pub-id pub-id-type="pmid">6623198</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/00007632-198304000-00014</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="jeo270604-cit-0026">
+<string-name name-style="western">
+<surname>Winters</surname>
+<given-names>JC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sobel</surname>
+<given-names>JS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Groenier</surname>
+<given-names>KH</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Arendzen</surname>
+<given-names>HJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Meyboom‐de Jong</surname>
+<given-names>B</given-names>
+</string-name>. <article-title>Comparison of physiotherapy, manipulation, and corticosteroid injection for treating shoulder complaints in general practice: randomised, single blind study</article-title>. <source>BMJ</source>. <year>1997</year>;<volume>314</volume>(<issue>7090</issue>):<fpage>1320</fpage>–<lpage>1324</lpage>.<pub-id pub-id-type="pmid">9158469</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/bmj.314.7090.1320</pub-id><pub-id pub-id-type="pmcid">PMC2126546</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="jeo270604-cit-0027">
+<string-name name-style="western">
+<surname>Wu</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kim</surname>
+<given-names>BI</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Schwartz</surname>
+<given-names>AM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wellman</surname>
+<given-names>SS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cochrane</surname>
+<given-names>NH</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bolognesi</surname>
+<given-names>MP</given-names>
+</string-name>, et al. <article-title>Does order of operation matter in patients who have concomitant hip and spine pathology?</article-title>
+<source>J Arthroplasty</source>. <year>2023</year>;<volume>38</volume>(<issue>7</issue>):<fpage>S106</fpage>–<lpage>S113.e1</lpage>.<pub-id pub-id-type="pmid">37105328</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.arth.2023.04.038</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="jeo270604-cit-0028">
+<string-name name-style="western">
+<surname>Yamamoto</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Takagishi</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kobayashi</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Shitara</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ichinose</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Takasawa</surname>
+<given-names>E</given-names>
+</string-name>, et al. <article-title>The impact of faulty posture on rotator cuff tears with and without symptoms</article-title>. <source>J Shoulder Elbow Surg</source>. <year>2015</year>;<volume>24</volume>(<issue>3</issue>):<fpage>446</fpage>–<lpage>452</lpage>.<pub-id pub-id-type="pmid">25441565</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jse.2014.07.012</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="jeo270604-cit-0029">
+<string-name name-style="western">
+<surname>Yiannakopoulos</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Vlastos</surname>
+<given-names>I</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Koutserimpas</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gianzina</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dellis</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kalinterakis</surname>
+<given-names>G</given-names>
+</string-name>. <article-title>Comparison of glenoid dimensions between 3D computed tomography and 3D printing</article-title>. <source>Cureus</source>. <year>2024</year>;<volume>16</volume>(<issue>1</issue>):<elocation-id>e53133</elocation-id>.<pub-id pub-id-type="pmid">38420064</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.7759/cureus.53133</pub-id><pub-id pub-id-type="pmcid">PMC10899810</pub-id></mixed-citation></ref><ref id="jeo270604-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="jeo270604-cit-0030">
+<string-name name-style="western">
+<surname>Zampogna</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Papalia</surname>
+<given-names>GF</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Parisi</surname>
+<given-names>FR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Luciano</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gregori</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Vorini</surname>
+<given-names>F</given-names>
+</string-name>, et al. (<year>2023</year>) <article-title>Early return to activity of daily living after total hip arthroplasty: a systematic review and meta‐analysis</article-title>. <source>HIP Int</source>
+<volume>33</volume>(<issue>6</issue>):<fpage>968</fpage>–<lpage>976</lpage>.<pub-id pub-id-type="pmid">36571209</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/11207000221146116</pub-id></mixed-citation></ref></ref-list></back></article>

@@ -1,0 +1,1083 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="hsr272331" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Health Sci Rep</journal-id><journal-id journal-id-type="iso-abbrev">Health Sci Rep</journal-id><journal-id journal-id-type="pmc-domain-id">3569</journal-id><journal-id journal-id-type="pmc-domain">hscirep</journal-id><journal-id journal-id-type="publisher-id">HSR2</journal-id><journal-title-group><journal-title>Health Science Reports</journal-title></journal-title-group><issn pub-type="epub">2398-8835</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13086629</article-id><article-id pub-id-type="pmcid-ver">PMC13086629.1</article-id><article-id pub-id-type="pmcaid">13086629</article-id><article-id pub-id-type="pmcaiid">13086629</article-id><article-id pub-id-type="pmid">42005664</article-id><article-id pub-id-type="doi">10.1002/hsr2.72331</article-id><article-id pub-id-type="publisher-id">HSR272331</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Systematic Review</subject></subj-group><subj-group subj-group-type="heading"><subject>Systematic Review</subject></subj-group></article-categories><title-group><article-title>Global Prevalence and Risk Factors of Suicidal Ideation in Multiple Sclerosis: A Systematic Review and Meta‐Analysis</article-title></title-group><contrib-group><contrib id="hsr272331-cr-0001" contrib-type="author"><name name-style="western"><surname>Bazmi</surname><given-names initials="E">Elham</given-names></name><xref rid="hsr272331-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="hsr272331-cr-0002" contrib-type="author"><name name-style="western"><surname>Behnoush</surname><given-names initials="AH">Amir Hossein</given-names></name><xref rid="hsr272331-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="hsr272331-cr-0003" contrib-type="author"><name name-style="western"><surname>Mohammadi Lapevandani</surname><given-names initials="M">Mahsa</given-names></name><xref rid="hsr272331-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="hsr272331-cr-0004" contrib-type="author"><name name-style="western"><surname>Talebian</surname><given-names initials="MT">Moahmmad Taghi</given-names></name><xref rid="hsr272331-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="hsr272331-cr-0005" contrib-type="author"><name name-style="western"><surname>Jahani</surname><given-names initials="S">Shima</given-names></name><xref rid="hsr272331-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="hsr272331-cr-0006" contrib-type="author" corresp="yes"><name name-style="western"><surname>Sahraian</surname><given-names initials="MA">Mohammad Ali</given-names></name><xref rid="hsr272331-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>Sahraian1350@yahoo.com</email></address></contrib></contrib-group><aff id="hsr272331-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Neurology Department, Multiple Sclerosis Research Center, Neuroscience Institute, Sina Hospital</named-content>
+<institution>Tehran University of Medical Sciences</institution>
+<city>Tehran</city>
+<country country="IR">Iran</country>
+</aff><aff id="hsr272331-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">School of Medicine</named-content>
+<institution>Tehran University of Medical Sciences</institution>
+<city>Tehran</city>
+<country country="IR">Iran</country>
+</aff><aff id="hsr272331-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Department of Emergency Medicine, Sina Hospital</named-content>
+<institution>Tehran University of Medical Sciences</institution>
+<city>Tehran</city>
+<country country="IR">Iran</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold> Mohammad Ali Sahraian (<email>Sahraian1350@yahoo.com</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>16</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>9</volume><issue seq="20">4</issue><issue-id pub-id-type="pmc-issue-id">510729</issue-id><issue-id pub-id-type="doi">10.1002/hsr2.v9.4</issue-id><elocation-id>e72331</elocation-id><history><date date-type="rev-recd"><day>05</day><month>4</month><year>2026</year></date><date date-type="received"><day>12</day><month>11</month><year>2025</year></date><date date-type="accepted"><day>08</day><month>4</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>16</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>18</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-20 15:25:19.677"><day>20</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Health Science Reports</italic> published by Wiley Periodicals LLC.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbyncndlicense">https://creativecommons.org/licenses/by-nc-nd/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc-nd/4.0/">http://creativecommons.org/licenses/by-nc-nd/4.0/</ext-link> License, which permits use and distribution in any medium, provided the original work is properly cited, the use is non‐commercial and no modifications or adaptations are made.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="HSR2-9-e72331.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:HSR2-9-e72331.pdf"/><abstract><title>ABSTRACT</title><sec id="hsr272331-sec-0010"><title>Background and Aims</title><p>Suicidal ideation (SI), attempts, and death have been frequently described and investigated in chronic neurological disorders such as Multiple Sclerosis (MS). This systematic review and meta‐analysis estimated the global prevalence of SI in patients with MS and demonstrated associated risk factors. This may help the physician to reduce the rate of suicidal attempts and improve public health.</p></sec><sec id="hsr272331-sec-0020"><title>Methods</title><p>A comprehensive systematic search was performed on PubMed, Scopus, Embase, and Web of Science to find studies that reported the prevalence of SI or its related factors in MS patients. Studies were screened by the title/abstract and then by their full text. Data extraction was performed for relevant studies. A point prevalence with a 95% confidence interval was estimated. Random‐effect meta‐analysis was conducted to assess the pooled prevalence of SI.</p></sec><sec id="hsr272331-sec-0030"><title>Results</title><p>From the 1246 total studies that were found, we included 18 final eligible studies for systematic review and 16 studies for meta‐analysis. The prevalence of SI in multiple sclerosis patients was estimated at 20% (95% CI [15–25]), based on random‐effect meta‐analysis. Among the included studies, higher rates of depression and anxiety, lower family and social support, longer duration of illness, and higher levels of disability were related risk factors for SI in patients with MS.</p></sec><sec id="hsr272331-sec-0040"><title>Conclusion</title><p>Given the higher prevalence of SI in people with MS than in the general population, it should be considered during routine clinical visits and psychological evaluations. Proper counseling, psychological support, and psychiatric interventions may reduce the lifetime risks and help patients overcome their suicidal thoughts.</p></sec></abstract><kwd-group><kwd id="hsr272331-kwd-0001">multiple sclerosis</kwd><kwd id="hsr272331-kwd-0002">prevalence</kwd><kwd id="hsr272331-kwd-0003">risk factors</kwd><kwd id="hsr272331-kwd-0004">suicidal ideation</kwd><kwd id="hsr272331-kwd-0005">systematic review</kwd></kwd-group><counts><fig-count count="5"/><table-count count="2"/><page-count count="14"/><word-count count="7439"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC-ND</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:17.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec id="hsr272331-sec-0050"><label>1</label><title>Introduction</title><p>Chronic illnesses are strongly associated with depression and various mental health problems. As a result, patients with chronic diseases often experience negative emotions due to both the psychological and physical burden of their condition, which can exacerbate depressive symptoms [<xref rid="hsr272331-bib-0001" ref-type="bibr">1</xref>]. Adapting to the lifestyle and employment changes imposed by a chronic illness can be deeply challenging and may foster feelings of isolation and loss of identity [<xref rid="hsr272331-bib-0002" ref-type="bibr">2</xref>, <xref rid="hsr272331-bib-0003" ref-type="bibr">3</xref>]. As social interactions decline, the sense of disconnection can intensify, further contributing to depression. At the same time, persistent physical symptoms such as pain, fatigue, and discomfort may heighten anxiety and depressive symptoms, potentially reducing adherence to treatment and negatively affecting overall health outcomes. In severe cases, this psychological burden may progress to suicidal ideation (SI) and even attempts, particularly among younger individuals [<xref rid="hsr272331-bib-0002" ref-type="bibr">2</xref>, <xref rid="hsr272331-bib-0004" ref-type="bibr">4</xref>].</p><p>Mental disorders are observed in 20%–25% of individuals with diabetes, whereas in patients with cancer, the prevalence exceeds 30% [<xref rid="hsr272331-bib-0005" ref-type="bibr">5</xref>, <xref rid="hsr272331-bib-0006" ref-type="bibr">6</xref>]. Among neurological diseases, depression affects 14.8% of individuals with Alzheimer's disease and up to 22% of those with Parkinson's disease [<xref rid="hsr272331-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr272331-bib-0008" ref-type="bibr">8</xref>, <xref rid="hsr272331-bib-0009" ref-type="bibr">9</xref>]. As the leading cause of neurological disability in young adults, multiple sclerosis (MS) carries a substantial psychological burden. Up to 50% of patients experience depressive symptoms, underscoring the profound emotional impact of living with this chronic and often unpredictable disease [<xref rid="hsr272331-bib-0010" ref-type="bibr">10</xref>, <xref rid="hsr272331-bib-0011" ref-type="bibr">11</xref>]. In a study by Sadovnick et al., suicide was identified as the third most common cause of death among patients with MS [<xref rid="hsr272331-bib-0012" ref-type="bibr">12</xref>]. These statistics underscore the considerable mental health challenges these patients face and emphasize the importance of closely monitoring depression and SI within this group.</p><p>Functional impairment in MS is a major risk factor for depression, influenced by disease progression and treatment side effects [<xref rid="hsr272331-bib-0013" ref-type="bibr">13</xref>]. It has also been suggested that MS might act as an independent risk factor for the progression of certain vascular diseases, which can have a clear association with depression and suicidal ideation [<xref rid="hsr272331-bib-0014" ref-type="bibr">14</xref>]. While disability levels are typically assessed by clinicians using the Expanded Disability Status Scale (EDSS), self‐reported disability has also been linked to suicidal behavior [<xref rid="hsr272331-bib-0015" ref-type="bibr">15</xref>]. The suicide rate in people with MS is reported to be twice that of the general population, with more than 25% experiencing SI [<xref rid="hsr272331-bib-0016" ref-type="bibr">16</xref>, <xref rid="hsr272331-bib-0017" ref-type="bibr">17</xref>]. Given that SI is a key precursor to suicide, monitoring this aspect of mental health is crucial in MS care.</p><p>Several studies have examined the risk factors for suicidal behavior in MS, identifying associations with disease‐related factors such as depression, progressive disease subtype, and disability level [<xref rid="hsr272331-bib-0018" ref-type="bibr">18</xref>]. Beyond clinical factors, a patient's social and economic environment can also make a meaningful difference. Individuals living in developing countries often face financial strain and limited access to adequate healthcare, which may worsen disease progression and disability. These added burdens can increase psychological distress and, in turn, contribute to a higher risk of suicidal behavior [<xref rid="hsr272331-bib-0019" ref-type="bibr">19</xref>].</p><p>Several studies conducted across different regions of the world have reported inconsistent and sometimes contradictory findings regarding the prevalence of suicidal ideation (SI) in patients with MS. A prior meta‐analysis estimated the prevalence of SI among patients with MS to be 13% [<xref rid="hsr272331-bib-0020" ref-type="bibr">20</xref>]; however, updated, more comprehensive data from diverse geographic regions are needed, along with a more thorough evaluation of risk factors for SI in this population. Given the expanding body of evidence on potential determinants of SI in MS, the present systematic review and meta‐analysis was conducted to provide an updated global estimate of SI prevalence and to identify the associated risk factors among patients with MS.</p></sec><sec sec-type="methods" id="hsr272331-sec-0060"><label>2</label><title>Methods</title><sec id="hsr272331-sec-0070"><label>2.1</label><title>Inclusion Criteria and Search Strategy</title><p>The research question of the present study was structured according to the Population–Condition–Outcome (PCO) framework, as recommended for observational studies. The population (P) consisted of patients diagnosed with multiple sclerosis (MS); the condition/exposure (C) included demographic and clinical risk factors; and the outcome (O) was the presence of suicidal ideation (SI). The present study was conducted in accordance with the Preferred Reporting Items for Systematic Reviews and Meta‐Analyses (PRISMA) guidelines [<xref rid="hsr272331-bib-0021" ref-type="bibr">21</xref>]. We searched the PubMed, Scopus, Web of Science, and Embase databases for studies published from inception through December 2024. The search terms and MeSH terms, including multiple sclerosis and suicide, were searched. Supporting Table <xref rid="hsr272331-suppl-0001" ref-type="supplementary-material">1</xref> presents a complete list of keywords used in the search. Inclusion criteria were studies that investigated the prevalence and risk factors of SI in patients with MS; non‐English studies, case reports, case series, reviews, editorials, and conference abstracts were excluded. Also, the studies that mentioned suicidal attempt or suicidal behavior without SI were excluded. After excluding duplicate studies, two authors, MML and EB, independently screened the titles and abstracts of the remaining studies against the inclusion criteria. In cases of disagreement, the full text of the studies was reviewed, and any discrepancies were resolved through discussion with MAS. The study team included clinicians and researchers with expertise in neurology, epidemiology, and biostatistics. All members of the team have prior experience conducting systematic reviews and meta‐analyses.</p></sec><sec id="hsr272331-sec-0080"><label>2.2</label><title>Data Extraction</title><p>EB and MML independently extracted data with high agreement (kappa &gt; 0.8); in cases of disagreement, a third author (AHB) resolved the issue using the original full text. The following data were extracted from the included studies: the first author's name, year of publication, and country of origin, study design, population definition, mean age, sex, prevalence, and main findings and risk factors of SI in patients with MS. In addition, the SI assessment method, including the Beck Depression Inventory‐II (BDI‐II) [<xref rid="hsr272331-bib-0022" ref-type="bibr">22</xref>], the Beck Scale for Suicide Ideation (BSI) [<xref rid="hsr272331-bib-0023" ref-type="bibr">23</xref>], or the PHQ‐9 (Patient Health Questionnaire‐9) [<xref rid="hsr272331-bib-0024" ref-type="bibr">24</xref>], was extracted.</p></sec><sec id="hsr272331-sec-0090"><label>2.3</label><title>Quality Assessment</title><p>The quality of the included studies was assessed using the Newcastle–Ottawa Scale (NOS), which is designed for observational studies [<xref rid="hsr272331-bib-0025" ref-type="bibr">25</xref>]. A NOS score of at least 7 was considered high quality, 5–6 as moderate quality, and less than 5 as low quality. EB and MML independently assessed the quality, and any disagreement was resolved through discussion with a third author (MAS).</p></sec><sec id="hsr272331-sec-0100"><label>2.4</label><title>Statistical Analysis</title><p>The statistical analyses were performed in R version 4.2.2 (R Core Team [2021], Vienna, Austria). To estimate the overall pooled prevalence, a random effects model was used. DerSimonian and Laird's method, which assumes heterogeneity across studies, was used in the random effects model. The heterogeneity (<italic toggle="yes">I</italic>
+<sup>2</sup>) was classified as mild (25%–49%), moderate (50%–74%), and high (&gt; 75%) [<xref rid="hsr272331-bib-0026" ref-type="bibr">26</xref>]. Having an <italic toggle="yes">I</italic>
+<sup>2</sup> value greater than 50% and a <italic toggle="yes">p</italic> &lt; 0.05 was defined as a threshold for statistical significance. The random‐effects model was used to integrate the potential heterogeneity among the enrolled studies [<xref rid="hsr272331-bib-0027" ref-type="bibr">27</xref>]. Subgroup analyses by study year and country income level (World Bank classification) were conducted to assess the effects of each. We performed a leave‐one‐out sensitivity analysis to assess the effect of each study. In addition, a random‐effects meta‐analysis was performed after outlier removal. Finally, publication bias was assessed using Egger's test, and funnel plots were visually inspected using the trim‐and‐fill method. All statistical analyses were performed adhering to relevant recommendations for analysis, reporting, and interpretation of clinical research [<xref rid="hsr272331-bib-0028" ref-type="bibr">28</xref>] and “Statistical Analyses and Methods in the Published Literature” (SAMPL) guidelines for reporting statistical analyses [<xref rid="hsr272331-bib-0029" ref-type="bibr">29</xref>].</p></sec></sec><sec sec-type="results" id="hsr272331-sec-0110"><label>3</label><title>Results</title><sec id="hsr272331-sec-0120"><label>3.1</label><title>Literature Search and Included Studies</title><sec id="hsr272331-sec-0130"><label>3.1.1</label><title>Characteristics of Included Studies</title><p>A total of 2352 records were identified through database searches, which were then reduced to 1246 after duplicates were removed. Of these, 1003 were excluded during title/abstract screening, and 243 were evaluated for eligibility based on their full texts (Figure <xref rid="hsr272331-fig-0001" ref-type="fig">1</xref>). After the exclusion of 225 further studies at this stage, 18 studies were included that investigated the prevalence of SI in patients with MS and the association factors between SI and MS. From the total of 18 included studies in the systematic review [<xref rid="hsr272331-bib-0015" ref-type="bibr">15</xref>, <xref rid="hsr272331-bib-0030" ref-type="bibr">30</xref>, <xref rid="hsr272331-bib-0031" ref-type="bibr">31</xref>, <xref rid="hsr272331-bib-0032" ref-type="bibr">32</xref>, <xref rid="hsr272331-bib-0033" ref-type="bibr">33</xref>, <xref rid="hsr272331-bib-0034" ref-type="bibr">34</xref>, <xref rid="hsr272331-bib-0035" ref-type="bibr">35</xref>, <xref rid="hsr272331-bib-0036" ref-type="bibr">36</xref>, <xref rid="hsr272331-bib-0037" ref-type="bibr">37</xref>, <xref rid="hsr272331-bib-0038" ref-type="bibr">38</xref>, <xref rid="hsr272331-bib-0039" ref-type="bibr">39</xref>, <xref rid="hsr272331-bib-0040" ref-type="bibr">40</xref>, <xref rid="hsr272331-bib-0041" ref-type="bibr">41</xref>, <xref rid="hsr272331-bib-0042" ref-type="bibr">42</xref>, <xref rid="hsr272331-bib-0043" ref-type="bibr">43</xref>, <xref rid="hsr272331-bib-0044" ref-type="bibr">44</xref>, <xref rid="hsr272331-bib-0045" ref-type="bibr">45</xref>, <xref rid="hsr272331-bib-0046" ref-type="bibr">46</xref>], 16 were selected for meta‐analysis [<xref rid="hsr272331-bib-0015" ref-type="bibr">15</xref>, <xref rid="hsr272331-bib-0030" ref-type="bibr">30</xref>, <xref rid="hsr272331-bib-0031" ref-type="bibr">31</xref>, <xref rid="hsr272331-bib-0032" ref-type="bibr">32</xref>, <xref rid="hsr272331-bib-0033" ref-type="bibr">33</xref>, <xref rid="hsr272331-bib-0036" ref-type="bibr">36</xref>, <xref rid="hsr272331-bib-0037" ref-type="bibr">37</xref>, <xref rid="hsr272331-bib-0038" ref-type="bibr">38</xref>, <xref rid="hsr272331-bib-0039" ref-type="bibr">39</xref>, <xref rid="hsr272331-bib-0040" ref-type="bibr">40</xref>, <xref rid="hsr272331-bib-0041" ref-type="bibr">41</xref>, <xref rid="hsr272331-bib-0042" ref-type="bibr">42</xref>, <xref rid="hsr272331-bib-0043" ref-type="bibr">43</xref>, <xref rid="hsr272331-bib-0044" ref-type="bibr">44</xref>, <xref rid="hsr272331-bib-0045" ref-type="bibr">45</xref>, <xref rid="hsr272331-bib-0046" ref-type="bibr">46</xref>], details of which are shown in Table <xref rid="hsr272331-tbl-0001" ref-type="table">1</xref>. The qualities of the included studies are shown in Supporting Table <xref rid="hsr272331-suppl-0001" ref-type="supplementary-material">2</xref>. As shown in the table, all included studies were of high quality according to the NOS system. Based on World Bank criteria, 14 of the included studies were conducted in high‐income countries, while the remaining four were in upper‐middle‐income countries (three in Iran and one in Brazil). Methodologically, 15 were cross‐sectional studies, two were cohort studies, and one was a qualitative study. Finally, the methods for measuring prevalence rates are discussed in Table <xref rid="hsr272331-tbl-0002" ref-type="table">2</xref>. PHQ‐9, BSI, and BDI‐II were among the most frequently used questionnaires for SI measurement.</p><fig position="float" fig-type="FIGURE" id="hsr272331-fig-0001" orientation="portrait"><label>FIGURE 1</label><caption><p>Flowchart of the screening process and study identification and selection for a systematic review on MS and suicide ideation generated by the PRISMA flow diagram (2025).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="HSR2-9-e72331-g001.jpg"/></fig><table-wrap position="float" id="hsr272331-tbl-0001" content-type="TABLE" orientation="portrait"><label>TABLE 1</label><caption><p>Summary of 18 included studies in a systematic review and meta‐analysis on MS and suicidal ideation.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Author</th><th align="center" valign="bottom" rowspan="1" colspan="1">Year</th><th align="center" valign="bottom" rowspan="1" colspan="1">Country</th><th align="center" valign="bottom" rowspan="1" colspan="1">Study design</th><th align="center" valign="bottom" rowspan="1" colspan="1">Population (<italic toggle="yes">n</italic>)</th><th align="center" valign="bottom" rowspan="1" colspan="1">
+<p>Sex</p>
+<p>
+<italic toggle="yes">N</italic> (%)</p>
+</th><th align="center" valign="bottom" rowspan="1" colspan="1">
+<p>Age (years)</p>
+<p>mean ± SD</p>
+</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<styled-content style="color:#212121">Altura et al.</styled-content>
+</td><td align="center" valign="top" rowspan="1" colspan="1">2016</td><td align="left" valign="top" rowspan="1" colspan="1">Canada</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">151</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>35 (23) men</p>
+<p>116 (77) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">49.9 (24.9–82.3)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Ariapooran et al.</td><td align="center" valign="top" rowspan="1" colspan="1">2016</td><td align="left" valign="top" rowspan="1" colspan="1">Iran</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">79</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<styled-content style="color:#131413">35 (44) men</styled-content>
+</p>
+<p>
+<styled-content style="color:#131413">44 (56) women</styled-content>
+</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">37.38 ± 9.44</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<styled-content style="color:#212121">Asgarian et al.</styled-content>
+</td><td align="center" valign="top" rowspan="1" colspan="1">2020</td><td align="left" valign="top" rowspan="1" colspan="1">Iran</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">276</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>71 (26) men</p>
+<p>205 (74) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">35.80 ± 8.60</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Berkman et al.</td><td align="center" valign="top" rowspan="1" colspan="1">1999</td><td align="left" valign="top" rowspan="1" colspan="1">United States</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">505</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>100 (20) men</p>
+<p>405 (80) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">50.4 ± 12.0</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Dickstein et al.</td><td align="center" valign="top" rowspan="1" colspan="1">2015</td><td align="left" valign="top" rowspan="1" colspan="1">United States</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">3823</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>948 (25) men</p>
+<p>2775 (75) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">51 ± 12</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Feinstein et al.</td><td align="center" valign="top" rowspan="1" colspan="1">2002</td><td align="left" valign="top" rowspan="1" colspan="1">Canada</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">140</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>36 (26) men</p>
+<p>104 (76) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">43.9 ± 10.7</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Gaskill et al.</td><td align="center" valign="top" rowspan="1" colspan="1">2011</td><td align="left" valign="top" rowspan="1" colspan="1">United States</td><td align="left" valign="top" rowspan="1" colspan="1">Qualitative study</td><td align="center" valign="top" rowspan="1" colspan="1">16</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>5 (31) men</p>
+<p>11 (69) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">38.94 @ diagnosis 54.06 @ participation</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Gillespie et al.</td><td align="center" valign="top" rowspan="1" colspan="1">2024</td><td align="left" valign="top" rowspan="1" colspan="1">United Kingdom</td><td align="left" valign="top" rowspan="1" colspan="1">Prospective observational cohort</td><td align="center" valign="top" rowspan="1" colspan="1">440</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>109 (25) men</p>
+<p>331 (75) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">37.5 ± 14.3</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<styled-content style="color:#212121">Knowles et al.</styled-content>
+</td><td align="center" valign="top" rowspan="1" colspan="1">2020</td><td align="left" valign="top" rowspan="1" colspan="1">United States</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">573</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>103 (18) men</p>
+<p>470 (82) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">54.4 ± 10.8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lewis et al.</td><td align="center" valign="top" rowspan="1" colspan="1">2017</td><td align="left" valign="top" rowspan="1" colspan="1">United Kingdom</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">75</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>31 (41) men</p>
+<p>44 (59) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">55 ± 10.08</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<styled-content style="color:#212121">Long et al.</styled-content>
+</td><td align="center" valign="top" rowspan="1" colspan="1">1991</td><td align="left" valign="top" rowspan="1" colspan="1">United States</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">147</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>34 (23) men</p>
+<p>113 (77) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">43</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Mikula et al.</td><td align="center" valign="top" rowspan="1" colspan="1">2020</td><td align="left" valign="top" rowspan="1" colspan="1">Slovakia</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">156</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>39 (25) men</p>
+<p>117 (75) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">39.95 ± 9.97</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<styled-content style="color:#131413">Romaniuc et al.</styled-content>
+</td><td align="center" valign="top" rowspan="1" colspan="1">2020</td><td align="left" valign="top" rowspan="1" colspan="1">
+<styled-content style="color:#131413">Romania</styled-content>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">349</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>
+<styled-content style="color:#131413">112 (32) men</styled-content>
+</p>
+<p>
+<styled-content style="color:#131413">237 (68) women</styled-content>
+</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<styled-content style="color:#131413">42</styled-content>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Sariaslani et al.</td><td align="center" valign="top" rowspan="1" colspan="1">2021</td><td align="left" valign="top" rowspan="1" colspan="1">Iran</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">203</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>46 (23) men</p>
+<p>157 (77) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">36.2 ± 10.2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Strupp et al.</td><td align="center" valign="top" rowspan="1" colspan="1">2016</td><td align="left" valign="top" rowspan="1" colspan="1">Germany</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">552</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>185 (33) men</p>
+<p>367 (66) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">51 ± 10.8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Tauil et al.</td><td align="center" valign="top" rowspan="1" colspan="1">2018</td><td align="left" valign="top" rowspan="1" colspan="1">Brazil</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">132</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>29 (22) men</p>
+<p>103 (78) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">35 (range: 18–65)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<styled-content style="color:#212121">Turner et al.</styled-content>
+</td><td align="center" valign="top" rowspan="1" colspan="1">2006</td><td align="left" valign="top" rowspan="1" colspan="1">United States</td><td align="left" valign="top" rowspan="1" colspan="1">Cohort</td><td align="center" valign="top" rowspan="1" colspan="1">445</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>384 (87) men</p>
+<p>61 (13) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">55.1 ± 11.8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Viner et al.</td><td align="center" valign="top" rowspan="1" colspan="1">2014</td><td align="left" valign="top" rowspan="1" colspan="1">Canada</td><td align="left" valign="top" rowspan="1" colspan="1">Cross‐sectional</td><td align="center" valign="top" rowspan="1" colspan="1">188</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>46 (24) men</p>
+<p>142 (76) women</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">53 ± 11.60</td></tr></tbody></table><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><table-wrap position="float" id="hsr272331-tbl-0002" content-type="TABLE" orientation="portrait"><label>TABLE 2</label><caption><p>Summary of findings in 18 included studies in a systematic review and meta‐analysis on MS and suicidal ideation in the world.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Study</th><th align="center" valign="bottom" rowspan="1" colspan="1">Title</th><th align="center" valign="bottom" rowspan="1" colspan="1">Data gathering tool</th><th align="center" valign="bottom" rowspan="1" colspan="1">Follow‐up duration</th><th align="center" valign="bottom" rowspan="1" colspan="1">Assessment time</th><th align="center" valign="bottom" rowspan="1" colspan="1">Prevalence of SI</th><th align="center" valign="bottom" rowspan="1" colspan="1">Risk factors related to SI</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Altura et al. (2016)</p>
+<p>Canada</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Suicidal ideation in persons with neurological conditions: prevalence,</p>
+<p>associations, and validation of the PHQ‐9 for suicidal ideation.</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">PHQ‐9, HADS, The SF‐12 (a shorter version of the widely validated SF‐36), DSS, and SCID</td><td align="left" valign="top" rowspan="1" colspan="1">From August 2012 to September 2013</td><td align="left" valign="top" rowspan="1" colspan="1">Clinical setting</td><td align="center" valign="top" rowspan="1" colspan="1">8.1%</td><td align="left" valign="top" rowspan="1" colspan="1">Depression and anxiety</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Ariapooran et al. (2016)</p>
+<p>Iran</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Relationship between social support, time perspective, and suicide</p>
+<p>ideations in patients with multiple sclerosis.</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">BSI, MSPSS, Zimbardo's Time, Perspective Inventory</td><td align="left" valign="top" rowspan="1" colspan="1">4 months</td><td align="left" valign="top" rowspan="1" colspan="1">Treatment at clinic</td><td align="center" valign="top" rowspan="1" colspan="1">30.3%</td><td align="left" valign="top" rowspan="1" colspan="1">Negative correlation between social support (SS), past positive (PP), and future orientation and a positive correlation between past negative (PN) orientation and SI; SS from significant other and PP negatively predicted SI.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Asgarian et al. (2020)</p>
+<p>Iran</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Predictors of suicidal ideation among Iranian patients with multiple sclerosis.</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>PHQ, HADS,</p>
+<p>CIASS, MSPSS,</p>
+<p>Personal information questionnaire.</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">Treatment at clinic</td><td align="center" valign="top" rowspan="1" colspan="1">36.2%</td><td align="left" valign="top" rowspan="1" colspan="1">Anxiety and depression scores or anticipated stigma from their friends and families. Patients with higher education experienced suicidal ideation more frequently than others.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Berkman et al. (1999)</p>
+<p>United States</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Attitudes toward physician‐assisted suicide among persons with multiple sclerosis.</td><td align="left" valign="top" rowspan="1" colspan="1">Self‐made questionnaire</td><td align="left" valign="top" rowspan="1" colspan="1">1997</td><td align="left" valign="top" rowspan="1" colspan="1">Diagnosis</td><td align="center" valign="top" rowspan="1" colspan="1">30.5%</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Financial burden to caregivers or family members, experiencing extreme emotional distress, religiosity, social support, depressive symptomatology,</p>
+<p>MS symptoms, years since diagnosis, and gender.</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Dickstein et al. (2015)</p>
+<p>United States</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Thoughts of death and self‐harm in patients with epilepsy or multiple sclerosis in a tertiary‐care center.</td><td align="left" valign="top" rowspan="1" colspan="1">PHQ‐9 and EQ‐5D QOL</td><td align="left" valign="top" rowspan="1" colspan="1">October 1, 2007, and August 13, 2012</td><td align="left" valign="top" rowspan="1" colspan="1">Diagnosis</td><td align="center" valign="top" rowspan="1" colspan="1">14.7%</td><td align="left" valign="top" rowspan="1" colspan="1">Depression, male sex, medical co‐morbidity, and poor QOL; depression and being unmarried.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Feinstein et al. (2002)</p>
+<p>Canada</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">An examination of suicidal intent in patients with multiple sclerosis.</td><td align="left" valign="top" rowspan="1" colspan="1">SCID‐IV and BSI</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">Clinic setting</td><td align="center" valign="top" rowspan="1" colspan="1">28.5%</td><td align="left" valign="top" rowspan="1" colspan="1">The severity of depression, alcohol abuse, and living alone.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Gaskill et al. (2011)</p>
+<p>United States</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Suicidal thinking in multiple sclerosis.</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>DSM‐IV, SCID‐I</p>
+<p>BDI‐II</p>
+<p>BHS,</p>
+<p>PHQ‐9,</p>
+<p>and ISS</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">2011</td><td align="left" valign="top" rowspan="1" colspan="1">Clinical setting</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">Perceived loss of control, increased family tension, loneliness, hopelessness and frustration, physical and psychological impact of MS, loss of perceived masculinity or femininity, regaining control and failure to achieve desired or expected role functioning.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Gillespie et al. (2024)</p>
+<p>United Kingdom</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Suicidal ideation in the year following diagnosis of relapsing‐remitting multiple sclerosis: a longitudinal perspective.</td><td align="left" valign="top" rowspan="1" colspan="1">PHQ‐9</td><td align="left" valign="top" rowspan="1" colspan="1">12 months</td><td align="left" valign="top" rowspan="1" colspan="1">Clinical setting</td><td align="center" valign="top" rowspan="1" colspan="1">12.8%</td><td align="left" valign="top" rowspan="1" colspan="1">Anxiety, depression, fatigued, report toileting difficulties, and spasms.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Knowles et al. (2020)</p>
+<p>United States</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Depressive symptoms and suicidal ideation in progressive multiple sclerosis compared with relapsing‐remitting multiple sclerosis: results from a cross‐sectional survey.</td><td align="left" valign="top" rowspan="1" colspan="1">PHQ‐9</td><td align="left" valign="top" rowspan="1" colspan="1">From July 2009 to April 2010</td><td align="left" valign="top" rowspan="1" colspan="1">Diagnosis</td><td align="center" valign="top" rowspan="1" colspan="1">10%</td><td align="left" valign="top" rowspan="1" colspan="1">Shorter disease duration, greater disability, and greater speech and swallowing problems.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Lewis et al. (2017)</p>
+<p>United Kingdom</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Disability, depression, and suicide ideation in people with multiple sclerosis.</td><td align="left" valign="top" rowspan="1" colspan="1">BSI</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">Clinical setting</td><td align="center" valign="top" rowspan="1" colspan="1">14.6%</td><td align="left" valign="top" rowspan="1" colspan="1">Depression</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Long et al. (1991)</p>
+<p>United States</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Suicidal tendency and multiple sclerosis.</td><td align="left" valign="top" rowspan="1" colspan="1">A questionnaire by a Likert‐type scale</td><td align="left" valign="top" rowspan="1" colspan="1">1986</td><td align="left" valign="top" rowspan="1" colspan="1">Clinical setting</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">Family support, hopelessness, and self‐perceived religiosity.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Mikula et al. (2020)</p>
+<p>Slovakia</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Fatigue and suicidal ideation in people with multiple sclerosis: the role of social support.</td><td align="left" valign="top" rowspan="1" colspan="1">GHQ‐28</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">Clinical setting</td><td align="center" valign="top" rowspan="1" colspan="1">14.10%</td><td align="left" valign="top" rowspan="1" colspan="1">Positively associated with lower sleep quality and four types of fatigue: general, mental, reduced activity, and reduced motivation (<italic toggle="yes">p</italic> &lt; 0.05). Negatively associated with social. SI yielded associations with both sleep quality and fatigue, with the exception of physical fatigue.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Romaniuc et al. (2020)</p>
+<p>Romania</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>The main determinants for suicidal ideation in a Romanian</p>
+<p>cohort of multiple sclerosis patients.</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Survey information,</p>
+<p>neurological examination, and BDI‐II</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">6‐month</td><td align="left" valign="top" rowspan="1" colspan="1">Treatment at clinic</td><td align="center" valign="top" rowspan="1" colspan="1">10%</td><td align="left" valign="top" rowspan="1" colspan="1">Depression, level of disability, number of recurrences, duration of illness, and level of education.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Sariaslani et al. (2021)</p>
+<p>Iran</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Correlation of suicidal thoughts and suicide attempts in patients with multiple sclerosis.</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>A checklist of demographics and patient records, Ifudu co‐morbidity index,</p>
+<p>100‐m walk test, and Beck's depression and suicidal thoughts scales</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">August–October 2015</td><td align="left" valign="top" rowspan="1" colspan="1">Diagnosis</td><td align="center" valign="top" rowspan="1" colspan="1">30%</td><td align="left" valign="top" rowspan="1" colspan="1">Illiteracy and depression</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Strupp et al. (2016)</p>
+<p>Germany</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Risk factors for suicidal ideation in patients feeling severely affected by multiple sclerosis.</td><td align="left" valign="top" rowspan="1" colspan="1">HAQUAMS, CARE scale, and FACIT‐Sp</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">Clinical setting</td><td align="center" valign="top" rowspan="1" colspan="1">22.1%</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Positive correlation: the extent to which MS affects leisure time (<italic toggle="yes">p</italic> &lt; 0.001), depression (<italic toggle="yes">p</italic> &lt; 0.001), and feeling socially excluded (<italic toggle="yes">p</italic> &lt; 0.002).</p>
+<p>Negative correlation: having a purpose in life (<italic toggle="yes">p</italic> &lt; 0.001), being productive (<italic toggle="yes">p</italic> &lt; 0.001), and having comfort in faith and spiritual beliefs (<italic toggle="yes">p</italic> &lt; 0.024).</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tauil et al. (2018)</p>
+<p>Brazil</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Suicidal ideation, anxiety, and depression in patients with multiple sclerosis.</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>BDI‐II, BSI,</p>
+<p>HADS‐A, and HADS‐D</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">October 2015 and October 2016</td><td align="left" valign="top" rowspan="1" colspan="1">Clinical setting</td><td align="center" valign="top" rowspan="1" colspan="1">2.1%</td><td align="left" valign="top" rowspan="1" colspan="1">Anxiety and depression</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Turner et al. (2006)</p>
+<p>United States</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Suicidal ideation in multiple sclerosis.</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>PHQ‐9: Social by using the Modified Social Support Survey,</p>
+<p>Perceived disability by using Performance Scales, from NARCOMS Registry Survey</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">From 1995 to 2000</td><td align="left" valign="top" rowspan="1" colspan="1">Veterans who had received services for MS through the Veterans' Health Administration (VHA)</td><td align="center" valign="top" rowspan="1" colspan="1">29.4%</td><td align="left" valign="top" rowspan="1" colspan="1">Depression severity</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Viner et al. (2014)</p>
+<p>Canada</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Prevalence and risk factors for suicidal ideation in a multiple sclerosis population.</td><td align="left" valign="top" rowspan="1" colspan="1">PHQ‐9</td><td align="left" valign="top" rowspan="1" colspan="1">June 2011 and December 2011</td><td align="left" valign="top" rowspan="1" colspan="1">Clinical setting</td><td align="center" valign="top" rowspan="1" colspan="1">21%</td><td align="left" valign="top" rowspan="1" colspan="1">Age &gt; 65 &amp; lower quartile self‐efficacy.</td></tr></tbody></table><table-wrap-foot><fn id="hsr272331-tbl2-note-0001"><p>BDI‐II, Beck Depression Inventory‐II; BSI, Beck Scale for Suicide Ideation; MSPSS, Multidimensional Scale of Perceived Social Support; PHQ, Patient Health Questionnaire; HADS, Hospital Anxiety and Depression Scale; CIASS, Chronic Illness Anticipated Stigma Scale; EQ‐5D, European Quality of Life; QOL, quality‐of‐life; DSM‐IV, Diagnostic and Statistical Manual of Mental Disorders IV; BHS, The Beck Hopelessness Scale; ISS, The Incapacity Status Scale; NARCOMS, North American Research Consortium on MS; DSS, Disease Severity Scale; SCID, Semi structured diagnostic interview; HAQUAMS, Hamburg Quality of Life Questionnaire in Multiple Sclerosis; CARE, Consultation and Relational Empathy; FACIT‐Sp, Functional Assessment of Chronic Illness Therapy—Spiritual Well‐Being (FACIT‐Sp); GHQ‐28, general health questionnaire‐28; HADS‐A, HADS – anxiety subscale; HADS‐D, HADS – depression subscale.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap></sec><sec id="hsr272331-sec-0140"><label>3.1.2</label><title>Characteristics of Participants</title><p>Among the included studies, participant numbers ranged from 16 to 3823. Among the total of 8250 patients with MS, 1464 (17.7%) had suicide ideation. The mean age of participants was 44.96 ± 11.4 years, and 28.46% of them were men.</p></sec></sec><sec id="hsr272331-sec-0150"><label>3.2</label><title>The Prevalence of SI in Patients With MS</title><sec id="hsr272331-sec-0160"><label>3.2.1</label><title>Meta‐Analysis of MS Prevalence</title><p>The total number of patients with MS included in the meta‐analysis (16 studies) was 8078, of whom 1449 had SI. The random‐effects meta‐analysis of the prevalence of SI in patients with MS yielded a pooled prevalence of 20% (95% CI [15–25]), as shown in Figure <xref rid="hsr272331-fig-0002" ref-type="fig">2</xref> as a forest plot. This was associated with high Heterogeneity (<italic toggle="yes">I</italic>
+<sup>2</sup> = 94%) for this outcome.</p><fig position="float" fig-type="FIGURE" id="hsr272331-fig-0002" orientation="portrait"><label>FIGURE 2</label><caption><p>Forest plot for meta‐analysis of the prevalence of suicidal ideation in MS.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="HSR2-9-e72331-g004.jpg"/></fig></sec><sec id="hsr272331-sec-0170"><label>3.2.2</label><title>Removal of Outliers</title><p>As shown in Supporting Figure <xref rid="hsr272331-suppl-0001" ref-type="supplementary-material">1</xref>, six outliers were identified in this meta‐analysis. Meta‐analysis after the removal of these outliers revealed that the overall prevalence of SI was changed to 21% (95% CI [16–26]). The heterogeneity was also high in this analysis (<italic toggle="yes">I</italic>
+<sup>2</sup> = 89%).</p></sec><sec id="hsr272331-sec-0180"><label>3.2.3</label><title>Subgroup Analysis</title><sec id="hsr272331-sec-0190"><label>3.2.3.1</label><title>Study Year</title><p>Upon subgroup analysis by study year, a statistically significant difference was observed between subgroups (<italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="hsr272331-fig-0003" ref-type="fig">3</xref>). The single study conducted between 1990 and 1999 reported an SI prevalence of 30.5% (95% CI [26.6–34.6]). The pooled prevalence of SI among patients with MS in studies published from 2000 to 2009 was 29.2% (95% CI [24.8–34.1]). In contrast, among the seven studies conducted between 2010 and 2019, the pooled prevalence decreased to 18.7% (95% CI [12.6–26.9]). Finally, studies conducted from 2020 to 2025 showed a pooled prevalence of 17.2% (95% CI [9.1–30.3]).</p><fig position="float" fig-type="FIGURE" id="hsr272331-fig-0003" orientation="portrait"><label>FIGURE 3</label><caption><p>Forest plot of subgroup analysis based on study year for meta‐analysis of the prevalence of suicidal ideation in MS.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="HSR2-9-e72331-g005.jpg"/></fig></sec><sec id="hsr272331-sec-0200"><label>3.2.3.2</label><title>Country Income Levels</title><p>Subgroup analysis according to country income level demonstrated notable differences in prevalence estimates (<italic toggle="yes">p</italic> &lt; 0.001). The pooled prevalence of SI in high‐income countries was 17.1% (95% CI: [12.8–22.7]) (Figure <xref rid="hsr272331-fig-0004" ref-type="fig">4</xref>). In contrast, studies conducted in upper‐middle‐income countries reported a substantially higher pooled prevalence of 31.8% (95% CI [28.4–35.3]) (Figure <xref rid="hsr272331-fig-0004" ref-type="fig">4</xref>).</p><fig position="float" fig-type="FIGURE" id="hsr272331-fig-0004" orientation="portrait"><label>FIGURE 4</label><caption><p>Forest plot of subgroup analysis based on country income level for meta‐analysis of the prevalence of suicidal ideation in MS.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="HSR2-9-e72331-g002.jpg"/></fig></sec></sec><sec id="hsr272331-sec-0210"><label>3.2.4</label><title>Sensitivity Analysis</title><p>Sensitivity analysis using the leave‐one‐out method was performed; the results are shown in Supporting Figure <xref rid="hsr272331-suppl-0001" ref-type="supplementary-material">2</xref>. It was shown that omitting each study resulted in a prevalence of SI in patients with MS ranging from 19% to 21%.</p></sec><sec id="hsr272331-sec-0220"><label>3.2.5</label><title>Publication Bias Assessment</title><p>Publication bias assessment was performed by Egger's method, and visual inspection of the funnel plot by the trim‐and‐fill method. Egger's test was not significant for publication bias (<italic toggle="yes">p</italic>‐value = 0.44). Funnel plot assessment, however, revealed asymmetry, and the addition of one study indicated that the prevalence would decrease to 19% (95% CI [14–24]). The funnel plot is shown in Figure <xref rid="hsr272331-fig-0005" ref-type="fig">5</xref>.</p><fig position="float" fig-type="FIGURE" id="hsr272331-fig-0005" orientation="portrait"><label>FIGURE 5</label><caption><p>Funnel plot for meta‐analysis of suicidal ideation prevalence in patients with MS.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="HSR2-9-e72331-g003.jpg"/></fig></sec></sec><sec id="hsr272331-sec-0230"><label>3.3</label><title>Risk Factors for SI in Patients With MS</title><p>As shown in Table <xref rid="hsr272331-tbl-0002" ref-type="table">2</xref>, several risk factors have been attributed to SI in the MS population. Anxiety and depression were the top related risk factors in several of the studies [<xref rid="hsr272331-bib-0015" ref-type="bibr">15</xref>, <xref rid="hsr272331-bib-0030" ref-type="bibr">30</xref>, <xref rid="hsr272331-bib-0032" ref-type="bibr">32</xref>, <xref rid="hsr272331-bib-0033" ref-type="bibr">33</xref>, <xref rid="hsr272331-bib-0036" ref-type="bibr">36</xref>, <xref rid="hsr272331-bib-0038" ref-type="bibr">38</xref>, <xref rid="hsr272331-bib-0040" ref-type="bibr">40</xref>, <xref rid="hsr272331-bib-0044" ref-type="bibr">44</xref>, <xref rid="hsr272331-bib-0045" ref-type="bibr">45</xref>, <xref rid="hsr272331-bib-0046" ref-type="bibr">46</xref>]. Similarly, levels of disability and education level were reported as risk factors of SI in the MS population [<xref rid="hsr272331-bib-0030" ref-type="bibr">30</xref>, <xref rid="hsr272331-bib-0032" ref-type="bibr">32</xref>, <xref rid="hsr272331-bib-0037" ref-type="bibr">37</xref>, <xref rid="hsr272331-bib-0040" ref-type="bibr">40</xref>]. Regarding education level, while Asgarian et al. [<xref rid="hsr272331-bib-0032" ref-type="bibr">32</xref>] reported that higher education was associated with a higher rate of SI, the studies by Romaniuc et al. [<xref rid="hsr272331-bib-0030" ref-type="bibr">30</xref>] and Sariaslani et al. [<xref rid="hsr272331-bib-0040" ref-type="bibr">40</xref>] showed a protective effect of higher education. Disease duration [<xref rid="hsr272331-bib-0030" ref-type="bibr">30</xref>, <xref rid="hsr272331-bib-0037" ref-type="bibr">37</xref>, <xref rid="hsr272331-bib-0041" ref-type="bibr">41</xref>] and lack of social support [<xref rid="hsr272331-bib-0031" ref-type="bibr">31</xref>, <xref rid="hsr272331-bib-0041" ref-type="bibr">41</xref>, <xref rid="hsr272331-bib-0043" ref-type="bibr">43</xref>] were reported as other significant risk factors for SI in the setting of MS.</p></sec></sec><sec sec-type="discussion" id="hsr272331-sec-0240"><label>4</label><title>Discussion</title><p>In this systematic review and meta‐analysis, we estimated the global prevalence of suicidal ideation (SI) among patients with multiple sclerosis (MS) and examined its associated risk factors. Based on 18 studies conducted between 1990 and 2024, which varied in population size, design, and geographical location, we found a pooled lifetime prevalence of SI of 20% (95% CI: 15–25). The most consistently reported risk factors for SI were depression and anxiety.</p><p>A considerable degree of heterogeneity was observed across studies. Sensitivity analyses confirmed the robustness of the findings, and therefore, a random‐effects model was applied throughout the analyses. The observed heterogeneity may be explained by variations in sampling methods, sample sizes, study designs, assessment tools for SI, and differences in sociodemographic and clinical characteristics of participants across countries.</p><p>Previous literature has reported that the prevalence of suicidal ideation (SI) and suicidal intent among patients with multiple sclerosis (MS) is approximately 18% and 28%, respectively [<xref rid="hsr272331-bib-0015" ref-type="bibr">15</xref>, <xref rid="hsr272331-bib-0035" ref-type="bibr">35</xref>]. These findings are generally consistent with our results and highlight the considerable burden of suicidality in this population. A meta‐analysis conducted in 2020 reported a global prevalence of SI of 13% (95% CI: 0.09–0.17), which is lower than the pooled estimate observed in our study [<xref rid="hsr272331-bib-0020" ref-type="bibr">20</xref>]. This discrepancy may be related to differences in inclusion criteria, study periods, or a potential increase in SI rates over time. Some studies suggest that global crises, such as the COVID‐19 pandemic, evolving geopolitical tensions, and broader instability, may influence levels of anxiety, loneliness, social isolation, depression, and suicidal ideation in the general population [<xref rid="hsr272331-bib-0047" ref-type="bibr">47</xref>, <xref rid="hsr272331-bib-0048" ref-type="bibr">48</xref>, <xref rid="hsr272331-bib-0049" ref-type="bibr">49</xref>]. Additionally, over time, individuals may feel less stigma around discussing their mental health, leading to greater openness in reporting these experiences. Indeed, in the MS setting, some reports suggest that the rate of SI among patients with MS has increased over the past decade [<xref rid="hsr272331-bib-0020" ref-type="bibr">20</xref>]. Furthermore, studies conducted in both developed and developing countries consistently demonstrate that patients with MS experience higher rates of SI compared to the general population [<xref rid="hsr272331-bib-0004" ref-type="bibr">4</xref>, <xref rid="hsr272331-bib-0017" ref-type="bibr">17</xref>, <xref rid="hsr272331-bib-0043" ref-type="bibr">43</xref>].</p><p>Subgroup analyses by study year and income level revealed significant trends in SI in MS settings. Our analysis indicated a decrease in SI prevalence from the 1990–1999 decade to the 2020–2025 years. In addition, high‐income countries had lower SI prevalence than others (17% vs. 31%). These differences may be attributed to regional variations in the prevalence of depression, anxiety, and other psychiatric disorders, as well as differences in cultural and social environments. Additionally, methodological factors such as the use of different assessment tools, variations in sample size, and study design may contribute to the heterogeneity observed in SI prevalence across studies. It is important to note that all studies representing developing countries in our analysis were conducted in Iran; therefore, the lack of data from other regions limits the generalizability of conclusions regarding global disparities.</p><p>Bie et al. reported a 52% increase in the global incidence of anxiety disorders between 1990 and 2021, with a particularly marked rise among women and in regions with a middle sociodemographic index [<xref rid="hsr272331-bib-0050" ref-type="bibr">50</xref>]. In low‐income settings, several contextual stressors may further heighten susceptibility to anxiety and depression, including poverty, substandard housing, financial insecurity, and political instability. These stressors, in addition to the physical and psychological burden of MS, may increase the risk of SI in affected individuals [<xref rid="hsr272331-bib-0051" ref-type="bibr">51</xref>, <xref rid="hsr272331-bib-0052" ref-type="bibr">52</xref>]. Moreover, underreporting of anxiety disorders and SI in developing countries, due to limited mental health infrastructure, insufficient diagnostic services, and social stigma, may further complicate accurate estimation and cross‐regional comparisons.</p><p>Although several psychiatric conditions have been linked to MS [<xref rid="hsr272331-bib-0053" ref-type="bibr">53</xref>, <xref rid="hsr272331-bib-0054" ref-type="bibr">54</xref>, <xref rid="hsr272331-bib-0055" ref-type="bibr">55</xref>, <xref rid="hsr272331-bib-0056" ref-type="bibr">56</xref>], mental health disturbances, particularly depression and anxiety, are the most consistently reported risk factors for suicidal ideation (SI) in this population. Substantial evidence indicates that depression is more prevalent among patients with MS than in the general population, with reported rates ranging from 24% to 54% in people with MS compared with 14.4% to 20.6% in the general U.S. population. Moreover, depressive symptoms tend to be more severe in individuals with MS [<xref rid="hsr272331-bib-0057" ref-type="bibr">57</xref>, <xref rid="hsr272331-bib-0058" ref-type="bibr">58</xref>, <xref rid="hsr272331-bib-0059" ref-type="bibr">59</xref>]. A meta‐analysis examining depression in MS reported a pooled mean prevalence of 20.6% for clinical depression and 35.0% for moderate‐to‐severe depressive symptoms [<xref rid="hsr272331-bib-0060" ref-type="bibr">60</xref>].</p><p>Consistent with these findings, 13 of the 18 studies included in our meta‐analysis identified depression and anxiety as major risk factors for SI in patients with MS [<xref rid="hsr272331-bib-0015" ref-type="bibr">15</xref>, <xref rid="hsr272331-bib-0030" ref-type="bibr">30</xref>, <xref rid="hsr272331-bib-0032" ref-type="bibr">32</xref>, <xref rid="hsr272331-bib-0033" ref-type="bibr">33</xref>, <xref rid="hsr272331-bib-0036" ref-type="bibr">36</xref>, <xref rid="hsr272331-bib-0038" ref-type="bibr">38</xref>, <xref rid="hsr272331-bib-0040" ref-type="bibr">40</xref>, <xref rid="hsr272331-bib-0041" ref-type="bibr">41</xref>, <xref rid="hsr272331-bib-0042" ref-type="bibr">42</xref>, <xref rid="hsr272331-bib-0043" ref-type="bibr">43</xref>, <xref rid="hsr272331-bib-0044" ref-type="bibr">44</xref>, <xref rid="hsr272331-bib-0045" ref-type="bibr">45</xref>, <xref rid="hsr272331-bib-0046" ref-type="bibr">46</xref>]. Psychological disturbances can substantially impair quality of life, reduce independence in daily activities, and negatively affect employment status, thereby increasing vulnerability to suicidal thoughts and premature mortality. Therefore, early diagnosis, appropriate management, and effective treatment of psychiatric comorbidities are essential components of suicide prevention strategies in this population.</p><p>Social support (SS) also emerged as an important protective factor. Several studies reported that patients experiencing SI tended to have lower levels of perceived social support from family and friends [<xref rid="hsr272331-bib-0031" ref-type="bibr">31</xref>, <xref rid="hsr272331-bib-0034" ref-type="bibr">34</xref>, <xref rid="hsr272331-bib-0041" ref-type="bibr">41</xref>, <xref rid="hsr272331-bib-0042" ref-type="bibr">42</xref>, <xref rid="hsr272331-bib-0043" ref-type="bibr">43</xref>]. Strong social support networks may provide opportunities for emotional expression and problem‐sharing, while buffering the psychological impact of stress, loneliness, hopelessness, and negative cognitions associated with SI.</p><p>Educational level was another factor associated with SI in several included studies. Patients with higher educational attainment were less likely to report SI, a finding consistent with previous literature [<xref rid="hsr272331-bib-0030" ref-type="bibr">30</xref>, <xref rid="hsr272331-bib-0040" ref-type="bibr">40</xref>, <xref rid="hsr272331-bib-0061" ref-type="bibr">61</xref>, <xref rid="hsr272331-bib-0062" ref-type="bibr">62</xref>]. This association may reflect greater health literacy, better understanding of treatment options, and improved coping strategies. Additionally, higher education is often linked to better employment opportunities, greater financial stability, and broader social networks, all of which may mitigate the psychological burden of living with MS. Individuals with higher educational levels may also demonstrate greater confidence and hope following diagnosis.</p><p>Regarding clinical characteristics, Romania et al. [<xref rid="hsr272331-bib-0030" ref-type="bibr">30</xref>] reported a positive correlation between disease duration and SI, consistent with findings by Bronnum‐Hansen et al. [<xref rid="hsr272331-bib-0063" ref-type="bibr">63</xref>]. In contrast, Knowles et al. found that a longer disease duration correlates with reduced depressive symptom severity in both progressive MS and relapsing‐remitting MS (RRMS), possibly indicating psychological adaptation over time [<xref rid="hsr272331-bib-0037" ref-type="bibr">37</xref>]. These conflicting findings suggest that the relationship between disease duration and SI may be complex and influenced by disease course, coping mechanisms, and individual resilience.</p><p>Age‐related associations with SI remain inconsistent. Viner et al. hypothesized that SI is more common in patients aged ≥ 65 years (HR = 4.3, 95% CI 1.7–11.3), whereas Turner et al. reported a higher prevalence of SI among younger patients [<xref rid="hsr272331-bib-0036" ref-type="bibr">36</xref>, <xref rid="hsr272331-bib-0039" ref-type="bibr">39</xref>]. Additionally, Sariaslani and Viner et al. found no significant age differences between patients with and without SI or suicide [<xref rid="hsr272331-bib-0039" ref-type="bibr">39</xref>, <xref rid="hsr272331-bib-0040" ref-type="bibr">40</xref>].</p><p>Several studies also demonstrated a positive association between SI and disability‐related factors, including limited activity, perceived and actual disability, and physical impairment in patients with MS [<xref rid="hsr272331-bib-0008" ref-type="bibr">8</xref>, <xref rid="hsr272331-bib-0030" ref-type="bibr">30</xref>, <xref rid="hsr272331-bib-0037" ref-type="bibr">37</xref>, <xref rid="hsr272331-bib-0044" ref-type="bibr">44</xref>, <xref rid="hsr272331-bib-0064" ref-type="bibr">64</xref>]. However, Feinstein's study did not observe a significant association [<xref rid="hsr272331-bib-0046" ref-type="bibr">46</xref>]. Moreover, progressive MS phenotypes have been linked to higher levels of SI compared with relapsing‐remitting MS, possibly due to greater accumulated disability and functional decline [<xref rid="hsr272331-bib-0036" ref-type="bibr">36</xref>, <xref rid="hsr272331-bib-0065" ref-type="bibr">65</xref>]. Finally, additional risk factors identified across studies included male sex, unmarried status, and the presence of comorbid conditions. These findings are largely consistent with previous research [<xref rid="hsr272331-bib-0065" ref-type="bibr">65</xref>, <xref rid="hsr272331-bib-0066" ref-type="bibr">66</xref>], further underscoring the multifactorial nature of SI risk in patients with MS.</p><p>To the best of our knowledge, this is the first systematic review and meta‐analysis to evaluate the global prevalence of suicidal ideation (SI) among patients with MS with a specific focus on associated risk factors. Nevertheless, several limitations should be acknowledged. First, substantial variability existed across studies in terms of sample size and the instruments used to assess SI. Differences in measurement tools and study design may have influenced prevalence estimates and the identification of associated risk factors, contributing to heterogeneity. Second, in some developing countries, stigma surrounding mental health and suicidal thoughts may lead to underreporting, potentially resulting in underestimation of the true prevalence of SI. Third, there was a notable lack of data from many regions, particularly low‐ and middle‐income countries. This limited geographical representation may affect the generalizability of our findings and restrict firm conclusions regarding global patterns. Finally, the diagnostic criteria for multiple sclerosis were not consistently reported across the included studies. Although most studies relied on an established clinical diagnosis of MS, the absence of standardized reporting of diagnostic criteria may introduce variability in patient selection and comparability across studies. Despite these limitations, our findings provide important insights into the burden and determinants of SI among patients with MS and highlight the need for further high‐quality, multicenter research in diverse settings.</p></sec><sec sec-type="conclusions" id="hsr272331-sec-0250"><label>5</label><title>Conclusion</title><p>In this systematic review and meta‐analysis, we estimated the pooled prevalence of suicidal ideation (SI) among patients with MS to be 20%, with reported rates ranging from 8% in Canada to 36% in Iran. These findings highlight substantial regional variation in SI prevalence and underscore the need for further investigation, particularly in regions reporting higher rates within this vulnerable population. Our results also indicate that depression, anxiety, level of family and social support, educational attainment, disease duration, and degree of disability are important factors associated with the occurrence of SI in patients with MS. These findings emphasize the critical role of mental health assessment and psychosocial support in the comprehensive management of MS. Future research should focus on evaluating SI prevalence across diverse ethnicities and geographic regions, particularly in underrepresented and low‐ and middle‐income countries. Additionally, further studies are needed to explore other potential contributing factors and to better understand the complex interplay between clinical, psychological, and sociodemographic determinants of SI in this population.</p></sec><sec id="hsr272331-sec-0260"><title>Author Contributions</title><p>
+<bold>Elham Bazmi:</bold> conceptualization, writing – original draft, visualization, formal analysis. <bold>Amir Hossein Behnoush:</bold> writing – review and editing, writing – original draft. <bold>Mahsa Mohammadi Lapevandani:</bold> writing – review and editing, writing – original draft. <bold>Moahmmad Taghi Talebian:</bold> writing – original draft, writing – review and editing. <bold>Shima Jahani:</bold> writing – original draft, writing – review and editing. <bold>Mohammad Ali Sahraian:</bold> writing – original draft, writing – review and editing, data curation, conceptualization, supervision.</p></sec><sec id="hsr272331-sec-0280"><title>Funding</title><p>The authors have nothing to report.</p></sec><sec id="hsr272331-sec-0290"><title>Ethics Statement</title><p>The study was approved by the Ethics Committee of Tehran University of Medical Sciences, Tehran, Iran (IR.TUMS.SINAHOSPITAL.REC.1404.009) and was conducted in accordance with the Declaration of Helsinki.</p></sec><sec sec-type="COI-statement" id="hsr272331-sec-0300"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec id="hsr272331-sec-0320"><title>Transparency Statement</title><p>The lead author Mohammad Ali Sahraian affirms that this manuscript is an honest, accurate, and transparent account of the study being reported; that no important aspects of the study have been omitted; and that any discrepancies from the study as planned (and, if relevant, registered) have been explained.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="hsr272331-suppl-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>Supporting File</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="HSR2-9-e72331-s001.docx" position="float" orientation="portrait"/></supplementary-material></sec></body><back><ack id="hsr272331-sec-0270"><title>Acknowledgments</title><p>The authors would like to thank the Research Development Center of Sina Hospital for their technical assistance and help in data gathering.</p></ack><sec sec-type="data-availability" id="hsr272331-sec-0390"><title>Data Availability Statement</title><p>The data that support the findings of this study are available from the corresponding author upon reasonable request.</p></sec><ref-list content-type="cited-references" id="hsr272331-bibl-0001"><title>References</title><ref id="hsr272331-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="hsr272331-cit-0001">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Ma</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Xiang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Yan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Liao</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Wang</surname>
+</string-name>, “<article-title>Relationship Between Chronic Diseases and Depression: The Mediating Effect of Pain</article-title>,” <source>BMC Psychiatry</source>
+<volume>21</volume>, no. <issue>1</issue> (<year>2021</year>): <fpage>436</fpage>.<pub-id pub-id-type="pmid">34488696</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12888-021-03428-3</pub-id><pub-id pub-id-type="pmcid">PMC8419946</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="hsr272331-cit-0002">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Asbring</surname>
+</string-name>, “<article-title>Chronic Illness ‐‐ A Disruption in Life: Identity‐Transformation Among Women With Chronic Fatigue Syndrome and Fibromyalgia</article-title>,” <source>Journal of Advanced Nursing</source>
+<volume>34</volume>, no. <issue>3</issue> (<year>2001</year>): <fpage>312</fpage>–<lpage>319</lpage>.<pub-id pub-id-type="pmid">11328436</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1046/j.1365-2648.2001.01767.x</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="hsr272331-cit-0003">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Iovino</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Vellone</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Cedrone</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Riegel</surname>
+</string-name>, “<article-title>A Middle‐Range Theory of Social Isolation in Chronic Illness</article-title>,” <source>International Journal of Environmental Research and Public Health</source>
+<volume>20</volume>, no. <issue>6</issue> (<year>2023</year>): <fpage>4940</fpage>.<pub-id pub-id-type="pmid">36981849</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/ijerph20064940</pub-id><pub-id pub-id-type="pmcid">PMC10049704</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="hsr272331-cit-0004">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Bazmi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. H.</given-names>
+<surname>Behnoush</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Eskandarieh</surname>
+</string-name>, et al., “<article-title>Suicidal Ideation in Patients With Multiple Sclerosis and Its Association With Clinical and Demographic Characteristics</article-title>,” <source>Brain and Behavior</source>
+<volume>15</volume>, no. <issue>4</issue> (<year>2025</year>): <elocation-id>e70458</elocation-id>.<pub-id pub-id-type="pmid">40170531</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/brb3.70458</pub-id><pub-id pub-id-type="pmcid">PMC11962208</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="hsr272331-cit-0005">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Grover</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Bhansali</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Kate</surname>
+</string-name>, et al., “<article-title>Presence of Common Mental Disorders in Patients With Diabetes Mellitus Using a Two‐Stage Evaluation Method</article-title>,” <source>Indian Journal of Medical Research</source>
+<volume>141</volume>, no. <issue>3</issue> (<year>2015</year>): <fpage>364</fpage>–<lpage>367</lpage>.<pub-id pub-id-type="pmid">25963500</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.4103/0971-5916.156580</pub-id><pub-id pub-id-type="pmcid">PMC4442338</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="hsr272331-cit-0006">
+<string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Massie</surname>
+</string-name>, “<article-title>Prevalence of Depression in Patients With Cancer</article-title>,” <source>Journal of the National Cancer Institute Monographs</source>
+<volume>2004</volume>, no. <issue>32</issue> (<year>2004</year>): <fpage>57</fpage>–<lpage>71</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/jncimonographs/lgh014</pub-id><pub-id pub-id-type="pmid">15263042</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="hsr272331-cit-0007">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Padovani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Antonini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Barone</surname>
+</string-name>, et al., “<article-title>Exploring Depression in Alzheimer's Disease: An Italian Delphi Consensus on Phenomenology, Diagnosis, and Management</article-title>,” <source>Neurological ScienceS</source>
+<volume>44</volume>, no. <issue>12</issue> (<year>2023</year>): <fpage>4323</fpage>–<lpage>4332</lpage>.<pub-id pub-id-type="pmid">37402937</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10072-023-06891-w</pub-id><pub-id pub-id-type="pmcid">PMC10641046</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="hsr272331-cit-0008">
+<string-name name-style="western">
+<given-names>Y. Y.</given-names>
+<surname>Huang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. H.</given-names>
+<surname>Gan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Cheng</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. T.</given-names>
+<surname>Yu</surname>
+</string-name>, “<article-title>Depression in Alzheimer's Disease: Epidemiology, Mechanisms, and Treatment</article-title>,” <source>Biological Psychiatry</source>
+<volume>95</volume>, no. <issue>11</issue> (<year>2024</year>): <fpage>992</fpage>–<lpage>1005</lpage>.<pub-id pub-id-type="pmid">37866486</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.biopsych.2023.10.008</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="hsr272331-cit-0009">
+<string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Al‐Qahtani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. S. M.</given-names>
+<surname>Alqahtani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. M.</given-names>
+<surname>Alzuhairi</surname>
+</string-name>, et al., “<article-title>The Prevalence of Depression Among Parkinson's Disease Patients in Saudi Arabia: A Cross‐Sectional Study</article-title>,” <source>Neuropsychiatric Disease and Treatment</source>
+<volume>21</volume> (<year>2025</year>): <fpage>241</fpage>–<lpage>256</lpage>.<pub-id pub-id-type="pmid">39926117</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2147/NDT.S493629</pub-id><pub-id pub-id-type="pmcid">PMC11806747</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="hsr272331-cit-0010">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Solaro</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Gamberini</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F. G.</given-names>
+<surname>Masuccio</surname>
+</string-name>, “<article-title>Depression in Multiple Sclerosis: Epidemiology, Aetiology, Diagnosis and Treatment</article-title>,” <source>CNS Drugs</source>
+<volume>32</volume>, no. <issue>2</issue> (<year>2018</year>): <fpage>117</fpage>–<lpage>133</lpage>.<pub-id pub-id-type="pmid">29417493</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s40263-018-0489-5</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="hsr272331-cit-0011">
+<string-name name-style="western">
+<given-names>R. J.</given-names>
+<surname>Siegert</surname>
+</string-name>, “<article-title>Depression in Multiple Sclerosis: A Review</article-title>,” <source>Journal of Neurology, Neurosurgery &amp; Psychiatry</source>
+<volume>76</volume>, no. <issue>4</issue> (<year>2005</year>): <fpage>469</fpage>–<lpage>475</lpage>.<pub-id pub-id-type="pmid">15774430</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/jnnp.2004.054635</pub-id><pub-id pub-id-type="pmcid">PMC1739575</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="hsr272331-cit-0012">
+<string-name name-style="western">
+<given-names>A. D.</given-names>
+<surname>Sadovnick</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Eisen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. C.</given-names>
+<surname>Ebers</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D. W.</given-names>
+<surname>Paty</surname>
+</string-name>, “<article-title>Cause of Death in Patients Attending Multiple Sclerosis Clinics</article-title>,” <source>Neurology</source>
+<volume>41</volume>, no. <issue>8</issue> (<year>1991</year>): <elocation-id>1193</elocation-id>.<pub-id pub-id-type="pmid">1866003</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1212/wnl.41.8.1193</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="hsr272331-cit-0013">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Feinstein</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Magalhaes</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. F.</given-names>
+<surname>Richard</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Audet</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Moore</surname>
+</string-name>, “<article-title>The Link Between Multiple Sclerosis and Depression</article-title>,” <source>Nature Reviews Neurology</source>
+<volume>10</volume>, no. <issue>9</issue> (<year>2014</year>): <fpage>507</fpage>–<lpage>517</lpage>.<pub-id pub-id-type="pmid">25112509</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nrneurol.2014.139</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="hsr272331-cit-0014">
+<string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Ketata</surname>
+</string-name> and <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Ellouz</surname>
+</string-name>, “<article-title>Multiple Sclerosis and Vascular Nexus: A Systematic Review and Meta‐Analysis of Incidence and Mortality</article-title>,” <source>Revue Neurologique</source>
+<volume>181</volume>, no. <issue>3</issue> (<year>2025</year>): <fpage>184</fpage>–<lpage>199</lpage>.<pub-id pub-id-type="pmid">39627054</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.neurol.2024.10.007</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="hsr272331-cit-0015">
+<string-name name-style="western">
+<given-names>V. M.</given-names>
+<surname>Lewis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Williams</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>KoKo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Woolmore</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Jones</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Powell</surname>
+</string-name>, “<article-title>Disability, Depression and Suicide Ideation in People With Multiple Sclerosis</article-title>,” <source>Journal of Affective Disorders</source>
+<volume>208</volume> (<year>2017</year>): <fpage>662</fpage>–<lpage>669</lpage>.<pub-id pub-id-type="pmid">27866709</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jad.2016.08.038</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="hsr272331-cit-0016">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Feinstein</surname>
+</string-name> and <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Pavisian</surname>
+</string-name>, “<article-title>Multiple Sclerosis and Suicide</article-title>,” <source>Multiple Sclerosis Journal</source>
+<volume>23</volume>, no. <issue>7</issue> (<year>2017</year>): <fpage>923</fpage>–<lpage>927</lpage>.<pub-id pub-id-type="pmid">28327056</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/1352458517702553</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="hsr272331-cit-0017">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Kalb</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Feinstein</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Rohrig</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Sankary</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Willis</surname>
+</string-name>, “<article-title>Depression and Suicidality in Multiple Sclerosis: Red Flags, Management Strategies, and Ethical Considerations</article-title>,” <source>Current Neurology and Neuroscience Reports</source>
+<volume>19</volume>, no. <issue>10</issue> (<year>2019</year>): <fpage>77</fpage>.<pub-id pub-id-type="pmid">31463644</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s11910-019-0992-1</pub-id><pub-id pub-id-type="pmcid">PMC6713681</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="hsr272331-cit-0018">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Pompili</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Forte</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Palermo</surname>
+</string-name>, et al., “<article-title>Suicide Risk in Multiple Sclerosis: A Systematic Review of Current Literature</article-title>,” <source>Journal of Psychosomatic Research</source>
+<volume>73</volume>, no. <issue>6</issue> (<year>2012</year>): <fpage>411</fpage>–<lpage>417</lpage>.<pub-id pub-id-type="pmid">23148807</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jpsychores.2012.09.011</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="hsr272331-cit-0019">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Renaud</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. L.</given-names>
+<surname>MacNeil</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Vijayakumar</surname>
+</string-name>, et al., “<article-title>Suicidal Ideation and Behavior in Youth in Low‐ and Middle‐Income Countries: A Brief Review of Risk Factors and Implications for Prevention</article-title>,” <source>Frontiers in Psychiatry</source>
+<volume>13</volume> (<year>2022</year>): <elocation-id>1044354</elocation-id>.<pub-id pub-id-type="pmid">36561636</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fpsyt.2022.1044354</pub-id><pub-id pub-id-type="pmcid">PMC9763724</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="hsr272331-cit-0020">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Kouchaki</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Namdari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Khajeali</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Etesam</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F. S.</given-names>
+<surname>Asgarian</surname>
+</string-name>, “<article-title>Prevalence of Suicidal Ideation in Multiple Sclerosis Patients: Meta‐Analysis of International Studies</article-title>,” <source>Social Work in Public Health</source>
+<volume>35</volume>, no. <issue>8</issue> (<year>2020</year>): <fpage>655</fpage>–<lpage>663</lpage>.<pub-id pub-id-type="pmid">32865151</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/19371918.2020.1810839</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="hsr272331-cit-0021">
+<string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Page</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>McKenzie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. M.</given-names>
+<surname>Bossuyt</surname>
+</string-name>, et al., “<article-title>The PRISMA 2020 Statement: An Updated Guideline for Reporting Systematic Reviews</article-title>,” <source>BMJ (Clinical Research Ed)</source>
+<volume>372</volume> (<year>2021</year>): <fpage>n71</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/bmj.n71</pub-id><pub-id pub-id-type="pmcid">PMC8005924</pub-id><pub-id pub-id-type="pmid">33782057</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0022"><label>22</label><mixed-citation publication-type="miscellaneous" id="hsr272331-cit-0022">
+<string-name name-style="western">
+<given-names>A. T.</given-names>
+<surname>Beck</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. A.</given-names>
+<surname>Steer</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G. K.</given-names>
+<surname>Brown</surname>
+</string-name>
+<article-title>Beck Depression Inventory</article-title>. <year>1996</year>.</mixed-citation></ref><ref id="hsr272331-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="hsr272331-cit-0023">
+<string-name name-style="western">
+<given-names>A. T.</given-names>
+<surname>Beck</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Kovacs</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Weissman</surname>
+</string-name>, “<article-title>Assessment of Suicidal Intention: The Scale for Suicide Ideation</article-title>,” <source>Journal of Consulting and Clinical Psychology</source>
+<volume>47</volume>, no. <issue>2</issue> (<year>1979</year>): <fpage>343</fpage>–<lpage>352</lpage>.<pub-id pub-id-type="pmid">469082</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1037//0022-006x.47.2.343</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="hsr272331-cit-0024">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Kroenke</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. L.</given-names>
+<surname>Spitzer</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. B. W.</given-names>
+<surname>Williams</surname>
+</string-name>, “<article-title>The PHQ‐9: Validity of a Brief Depression Severity Measure</article-title>,” <source>Journal of General Internal Medicine</source>
+<volume>16</volume>, no. <issue>9</issue> (<year>2001</year>): <fpage>606</fpage>–<lpage>613</lpage>.<pub-id pub-id-type="pmid">11556941</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1046/j.1525-1497.2001.016009606.x</pub-id><pub-id pub-id-type="pmcid">PMC1495268</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0025"><label>25</label><mixed-citation publication-type="miscellaneous" id="hsr272331-cit-0025">
+<string-name name-style="western">
+<given-names>G. A.</given-names>
+<surname>Wells</surname>
+</string-name>, et al. <article-title>The Newcastle–Ottawa Scale (NOS) for Assessing the Quality of Nonrandomised Studies in Meta‐Analyses</article-title>. <year>2000</year>.</mixed-citation></ref><ref id="hsr272331-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="hsr272331-cit-0026">
+<string-name name-style="western">
+<given-names>J. P. T.</given-names>
+<surname>Higgins</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. G.</given-names>
+<surname>Thompson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. J.</given-names>
+<surname>Deeks</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D. G.</given-names>
+<surname>Altman</surname>
+</string-name>, “<article-title>Measuring Inconsistency in Meta‐Analyses</article-title>,” <source>BMJ</source>
+<volume>327</volume>, no. <issue>7414</issue> (<year>2003</year>): <fpage>557</fpage>–<lpage>560</lpage>.<pub-id pub-id-type="pmid">12958120</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/bmj.327.7414.557</pub-id><pub-id pub-id-type="pmcid">PMC192859</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="hsr272331-cit-0027">
+<string-name name-style="western">
+<given-names>J. P. T.</given-names>
+<surname>Higgins</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. G.</given-names>
+<surname>Altman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. C.</given-names>
+<surname>Gotzsche</surname>
+</string-name>, et al., “<article-title>The Cochrane Collaboration's Tool for Assessing Risk of Bias in Randomised Trials</article-title>,” <source>BMJ</source>
+<volume>343</volume> (<year>2011</year>): <fpage>d5928</fpage>.<pub-id pub-id-type="pmid">22008217</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/bmj.d5928</pub-id><pub-id pub-id-type="pmcid">PMC3196245</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="hsr272331-cit-0028">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Assel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Sjoberg</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Elders</surname>
+</string-name>, et al., “<article-title>Guidelines for Reporting of Statistics for Clinical Research in Urology</article-title>,” <source>BJU International</source>
+<volume>123</volume>, no. <issue>3</issue> (<year>2019</year>): <fpage>401</fpage>–<lpage>410</lpage>.<pub-id pub-id-type="pmid">30537407</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/bju.14640</pub-id><pub-id pub-id-type="pmcid">PMC6397060</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="hsr272331-cit-0029">
+<string-name name-style="western">
+<given-names>T. A.</given-names>
+<surname>Lang</surname>
+</string-name> and <string-name name-style="western">
+<given-names>D. G.</given-names>
+<surname>Altman</surname>
+</string-name>, “<article-title>Basic Statistical Reporting for Articles Published in Biomedical Journals: The “Statistical Analyses and Methods in the Published Literature” or the SAMPL Guidelines</article-title>,” <source>International Journal of Nursing Studies</source>
+<volume>52</volume>, no. <issue>1</issue> (<year>2015</year>): <fpage>5</fpage>–<lpage>9</lpage>.<pub-id pub-id-type="pmid">25441757</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ijnurstu.2014.09.006</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="hsr272331-cit-0030">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Romaniuc</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Bălaşa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Ştirbu</surname>
+</string-name>, et al., “<article-title>The Main Determinants for Suicidal Ideation in a Romanian Cohort of Multiple Sclerosis Patients</article-title>,” <source>Behavioural Neurology</source>
+<volume>2020</volume> (<year>2020</year>): <elocation-id>2594702</elocation-id>.<pub-id pub-id-type="pmid">32399081</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1155/2020/2594702</pub-id><pub-id pub-id-type="pmcid">PMC7201511</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="hsr272331-cit-0031">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Ariapooran</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Rajabi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Goodarzi</surname>
+</string-name>, “<article-title>Relationship Between Social Support, Time Perspective and Suicide Ideations in Patients With Multiple Sclerosis</article-title>,” <source>Asian Social Science</source>
+<volume>12</volume>, no. <issue>8</issue> (<year>2016</year>): <fpage>192</fpage>–<lpage>200</lpage>.</mixed-citation></ref><ref id="hsr272331-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="hsr272331-cit-0032">
+<string-name name-style="western">
+<given-names>F. S.</given-names>
+<surname>Asgarian</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Keyhani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. N.</given-names>
+<surname>Moghadasi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. A.</given-names>
+<surname>Sahraian</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Etesam</surname>
+</string-name>, “<article-title>Predictors of Suicidal Ideation Among Iranian Patients With Multiple Sclerosis</article-title>,” <source>Current Journal of Neurology</source>
+<volume>19</volume>, no. <issue>4</issue> (<year>2020</year>): <fpage>154</fpage>–<lpage>161</lpage>.<pub-id pub-id-type="pmid">38011425</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.18502/cjn.v19i4.5541</pub-id><pub-id pub-id-type="pmcid">PMC8236430</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="hsr272331-cit-0033">
+<string-name name-style="western">
+<given-names>L. P.</given-names>
+<surname>Dickstein</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. C.</given-names>
+<surname>Viguera</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. S.</given-names>
+<surname>Nowacki</surname>
+</string-name>, et al., “<article-title>Thoughts of Death and Self‐Harm in Patients With Epilepsy or Multiple Sclerosis in a Tertiary Care Center</article-title>,” <source>Psychosomatics</source>
+<volume>56</volume>, no. <issue>1</issue> (<year>2015</year>): <fpage>44</fpage>–<lpage>51</lpage>.<pub-id pub-id-type="pmid">25619673</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.psym.2014.05.008</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="hsr272331-cit-0034">
+<string-name name-style="western">
+<given-names>D. D.</given-names>
+<surname>Long</surname>
+</string-name> and <string-name name-style="western">
+<given-names>B. J.</given-names>
+<surname>Miller</surname>
+</string-name>, “<article-title>Suicidal Tendency and Multiple Sclerosis</article-title>,” <source>Health &amp; Social Work</source>
+<volume>16</volume>, no. <issue>2</issue> (<year>1991</year>): <fpage>104</fpage>–<lpage>109</lpage>.<pub-id pub-id-type="pmid">2071062</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/hsw/16.2.104</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="hsr272331-cit-0035">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Gaskill</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. W.</given-names>
+<surname>Foley</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Kolzet</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. A.</given-names>
+<surname>Picone</surname>
+</string-name>, “<article-title>Suicidal Thinking in Multiple Sclerosis</article-title>,” <source>Disability and Rehabilitation</source>
+<volume>33</volume>, no. <issue>17–18</issue> (<year>2011</year>): <fpage>1528</fpage>–<lpage>1536</lpage>.<pub-id pub-id-type="pmid">21091136</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3109/09638288.2010.533813</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="hsr272331-cit-0036">
+<string-name name-style="western">
+<given-names>A. P.</given-names>
+<surname>Turner</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. M.</given-names>
+<surname>Williams</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Bowen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. R.</given-names>
+<surname>Kivlahan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. K.</given-names>
+<surname>Haselkorn</surname>
+</string-name>, “<article-title>Suicidal Ideation in Multiple Sclerosis</article-title>,” <source>Archives of Physical Medicine and Rehabilitation</source>
+<volume>87</volume>, no. <issue>8</issue> (<year>2006</year>): <fpage>1073</fpage>–<lpage>1078</lpage>.<pub-id pub-id-type="pmid">16876552</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.apmr.2006.04.021</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="hsr272331-cit-0037">
+<string-name name-style="western">
+<given-names>L. M.</given-names>
+<surname>Knowles</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. C.</given-names>
+<surname>Esselman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. P.</given-names>
+<surname>Turner</surname>
+</string-name>, et al., “<article-title>Depressive Symptoms and Suicidal Ideation in Progressive Multiple Sclerosis Compared With Relapsing‐Remitting Multiple Sclerosis: Results From a Cross‐Sectional Survey</article-title>,” <source>Archives of Physical Medicine and Rehabilitation</source>
+<volume>102</volume>, no. <issue>4</issue> (<year>2021</year>): <fpage>694</fpage>–<lpage>701</lpage>.<pub-id pub-id-type="pmid">33080210</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.apmr.2020.09.385</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="hsr272331-cit-0038">
+<string-name name-style="western">
+<given-names>K. C.</given-names>
+<surname>Altura</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. B.</given-names>
+<surname>Patten</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. M.</given-names>
+<surname>Fiest</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Atta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. G.</given-names>
+<surname>Bulloch</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Jetté</surname>
+</string-name>, “<article-title>Suicidal Ideation in Persons With Neurological Conditions: Prevalence, Associations and Validation of the PHQ‐9 for Suicidal Ideation</article-title>,” <source>General Hospital Psychiatry</source>
+<volume>42</volume> (<year>2016</year>): <fpage>22</fpage>–<lpage>26</lpage>.<pub-id pub-id-type="pmid">27638967</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.genhosppsych.2016.06.006</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="hsr272331-cit-0039">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Viner</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. B.</given-names>
+<surname>Patten</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Berzins</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. G. M.</given-names>
+<surname>Bulloch</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K. M.</given-names>
+<surname>Fiest</surname>
+</string-name>, “<article-title>Prevalence and Risk Factors for Suicidal Ideation in a Multiple Sclerosis Population</article-title>,” <source>Journal of Psychosomatic Research</source>
+<volume>76</volume>, no. <issue>4</issue> (<year>2014</year>): <fpage>312</fpage>–<lpage>316</lpage>.<pub-id pub-id-type="pmid">24630182</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jpsychores.2013.12.010</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="hsr272331-cit-0040">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Sariaslani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Ghanbari</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Komasi</surname>
+</string-name>, “<article-title>Correlation of Suicidal Thoughts and Suicide Attempts in Patients With Multiple Sclerosis</article-title>,” <source>Journal of Kermanshah University of Medical Science</source>
+<volume>25</volume>, no. <issue>3</issue> (<year>2021</year>): <elocation-id>e118040</elocation-id>.</mixed-citation></ref><ref id="hsr272331-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="hsr272331-cit-0041">
+<string-name name-style="western">
+<given-names>C. S.</given-names>
+<surname>Berkman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. F.</given-names>
+<surname>Cavallo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W. C.</given-names>
+<surname>Chesnut</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>N. J.</given-names>
+<surname>Holland</surname>
+</string-name>, “<article-title>Attitudes Toward Physician‐Assisted Suicide Among Persons With Multiple Sclerosis</article-title>,” <source>Journal of Palliative Medicine</source>
+<volume>2</volume>, no. <issue>1</issue> (<year>1999</year>): <fpage>51</fpage>–<lpage>63</lpage>.<pub-id pub-id-type="pmid">15859797</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1089/jpm.1999.2.51</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0042"><label>42</label><mixed-citation publication-type="journal" id="hsr272331-cit-0042">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Strupp</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Ehmann</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Galushko</surname>
+</string-name>, et al., “<article-title>Risk Factors for Suicidal Ideation in Patients Feeling Severely Affected by Multiple Sclerosis</article-title>,” <source>Journal of Palliative Medicine</source>
+<volume>19</volume>, no. <issue>5</issue> (<year>2016</year>): <fpage>523</fpage>–<lpage>528</lpage>.<pub-id pub-id-type="pmid">27046539</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1089/jpm.2015.0418</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0043"><label>43</label><mixed-citation publication-type="journal" id="hsr272331-cit-0043">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Mikula</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Timkova</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Linkova</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Vitkova</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Szilasiova</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Nagyova</surname>
+</string-name>, “<article-title>Fatigue and Suicidal Ideation in People With Multiple Sclerosis: The Role of Social Support</article-title>,” <source>Frontiers in Psychology</source>
+<volume>11</volume> (<year>2020</year>): <fpage>504</fpage>.<pub-id pub-id-type="pmid">32256439</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fpsyg.2020.00504</pub-id><pub-id pub-id-type="pmcid">PMC7093596</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0044"><label>44</label><mixed-citation publication-type="journal" id="hsr272331-cit-0044">
+<string-name name-style="western">
+<given-names>D. C.</given-names>
+<surname>Gillespie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Sacripante</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Chandran</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Foley</surname>
+</string-name>, “<article-title>Suicidal Ideation in the Year Following Diagnosis of Relapsing‐Remitting Multiple Sclerosis: A Longitudinal Perspective</article-title>,” <source>Multiple Sclerosis and Related Disorders</source>
+<volume>91</volume> (<year>2024</year>): <elocation-id>105904</elocation-id>.<pub-id pub-id-type="pmid">39396480</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.msard.2024.105904</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0045"><label>45</label><mixed-citation publication-type="journal" id="hsr272331-cit-0045">
+<string-name name-style="western">
+<given-names>C. B.</given-names>
+<surname>Tauil</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T. C.</given-names>
+<surname>Grippe</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. M.</given-names>
+<surname>Dias</surname>
+</string-name>, et al., “<article-title>Suicidal Ideation, Anxiety, and Depression in Patients With Multiple Sclerosis</article-title>,” <source>Arquivos de Neuro‐psiquiatria</source>
+<volume>76</volume>, no. <issue>5</issue> (<year>2018</year>): <fpage>296</fpage>–<lpage>301</lpage>.<pub-id pub-id-type="pmid">29898075</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1590/0004-282X20180036</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0046"><label>46</label><mixed-citation publication-type="journal" id="hsr272331-cit-0046">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Feinstein</surname>
+</string-name>, “<article-title>An Examination of Suicidal Intent in Patients With Multiple Sclerosis</article-title>,” <source>Neurology</source>
+<volume>59</volume>, no. <issue>5</issue> (<year>2002</year>): <fpage>674</fpage>–<lpage>678</lpage>.<pub-id pub-id-type="pmid">12221156</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1212/wnl.59.5.674</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0047"><label>47</label><mixed-citation publication-type="journal" id="hsr272331-cit-0047">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Farooq</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Tunmore</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Wajid Ali</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Ayub</surname>
+</string-name>, “<article-title>Suicide, Self‐Harm and Suicidal Ideation During COVID‐19: A Systematic Review</article-title>,” <source>Psychiatry Research</source>
+<volume>306</volume> (<year>2021</year>): <elocation-id>114228</elocation-id>.<pub-id pub-id-type="pmid">34670162</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.psychres.2021.114228</pub-id><pub-id pub-id-type="pmcid">PMC8495045</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0048"><label>48</label><mixed-citation publication-type="journal" id="hsr272331-cit-0048">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Sari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. T.</given-names>
+<surname>Er</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Demir</surname>
+</string-name>, “<article-title>Suicide as Globalisation's Black Swan: Global Evidence</article-title>,” <source>Public Health</source>
+<volume>217</volume> (<year>2023</year>): <fpage>74</fpage>–<lpage>80</lpage>.<pub-id pub-id-type="pmid">36863115</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.puhe.2023.01.026</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0049"><label>49</label><mixed-citation publication-type="journal" id="hsr272331-cit-0049">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Stack</surname>
+</string-name>, “<article-title>Contributing Factors to Suicide: Political, Social, Cultural and Economic</article-title>,” <source>Preventive Medicine</source>
+<volume>152</volume>, no. <issue>Pt 1</issue> (<year>2021</year>): <elocation-id>106498</elocation-id>.<pub-id pub-id-type="pmid">34538366</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ypmed.2021.106498</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0050"><label>50</label><mixed-citation publication-type="journal" id="hsr272331-cit-0050">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Bie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Yan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Xing</surname>
+</string-name>, et al., “<article-title>Rising Global Burden of Anxiety Disorders Among Adolescents and Young Adults: Trends, Risk Factors, and the Impact of Socioeconomic Disparities and COVID‐19 From 1990 to 2021</article-title>,” <source>Frontiers in Psychiatry</source>
+<volume>15</volume> (<year>2024</year>): <elocation-id>1489427</elocation-id>.<pub-id pub-id-type="pmid">39691785</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fpsyt.2024.1489427</pub-id><pub-id pub-id-type="pmcid">PMC11651023</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0051"><label>51</label><mixed-citation publication-type="journal" id="hsr272331-cit-0051">
+<string-name name-style="western">
+<given-names>T. L.</given-names>
+<surname>Anderson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Valiauga</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Tallo</surname>
+</string-name>, et al., “<article-title>Contributing Factors to the Rise in Adolescent Anxiety and Associated Mental Health Disorders: A Narrative Review of Current Literature</article-title>,” <source>Journal of Child and Adolescent Psychiatric Nursing</source>
+<volume>38</volume>, no. <issue>1</issue> (<year>2025</year>): <elocation-id>e70009</elocation-id>.<pub-id pub-id-type="pmid">39739929</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/jcap.70009</pub-id><pub-id pub-id-type="pmcid">PMC11683866</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0052"><label>52</label><mixed-citation publication-type="journal" id="hsr272331-cit-0052">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Ridley</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Rao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Schilbach</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Patel</surname>
+</string-name>, “<article-title>Poverty, Depression, and Anxiety: Causal Evidence and Mechanisms</article-title>,” <source>Science</source>
+<volume>370</volume>, no. <issue>6522</issue> (<year>2020</year>): <elocation-id>eaay0214</elocation-id>.<pub-id pub-id-type="pmid">33303583</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.aay0214</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0053"><label>53</label><mixed-citation publication-type="journal" id="hsr272331-cit-0053">
+<string-name name-style="western">
+<given-names>M. L.</given-names>
+<surname>Pucak</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. A. L.</given-names>
+<surname>Carroll</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. A.</given-names>
+<surname>Kerr</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A. L.</given-names>
+<surname>Kaplin</surname>
+</string-name>, “<article-title>Neuropsychiatric Manifestations of Depression in Multiple Sclerosis: Neuroinflammatory, Neuroendocrine, and Neurotrophic Mechanisms in the Pathogenesis of Immune‐Mediated Depression</article-title>,” <source>Dialogues in Clinical Neuroscience</source>
+<volume>9</volume>, no. <issue>2</issue> (<year>2007</year>): <fpage>125</fpage>–<lpage>139</lpage>.<pub-id pub-id-type="pmid">17726912</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.31887/DCNS.2007.9.2/mpucak</pub-id><pub-id pub-id-type="pmcid">PMC3181849</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0054"><label>54</label><mixed-citation publication-type="journal" id="hsr272331-cit-0054">
+<string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Ketata</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Ellouz</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Ketata</surname>
+</string-name>, “<article-title>Psychoses Onset in Multiple Sclerosis: A Systematic Review and Meta‐Analysis</article-title>,” <source>Revue Neurologique</source>
+<volume>181</volume>, no. <issue>6</issue> (<year>2025</year>): <fpage>483</fpage>–<lpage>502</lpage>.<pub-id pub-id-type="pmid">40240221</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.neurol.2025.03.012</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0055"><label>55</label><mixed-citation publication-type="journal" id="hsr272331-cit-0055">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Hanna</surname>
+</string-name> and <string-name name-style="western">
+<given-names>L. B.</given-names>
+<surname>Strober</surname>
+</string-name>, “<article-title>Anxiety and Depression in Multiple Sclerosis (MS): Antecedents, Consequences, and Differential Impact on Well‐Being and Quality of Life</article-title>,” <source>Multiple Sclerosis and Related Disorders</source>
+<volume>44</volume> (<year>2020</year>): <elocation-id>102261</elocation-id>.<pub-id pub-id-type="pmid">32585615</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.msard.2020.102261</pub-id><pub-id pub-id-type="pmcid">PMC7719086</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0056"><label>56</label><mixed-citation publication-type="journal" id="hsr272331-cit-0056">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Ellouz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Ketata</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Abbes</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Gargouri</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Bader</surname>
+</string-name>, “<article-title>Psychoses in Pediatric‐Onset Multiple Sclerosis: A Case Report and Systematic Review</article-title>,” <source>Journal of Child and Adolescent Psychiatric Nursing</source>
+<volume>37</volume>, no. <issue>4</issue> (<year>2024</year>): <elocation-id>e70005</elocation-id>.<pub-id pub-id-type="pmid">39588648</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/jcap.70005</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0057"><label>57</label><mixed-citation publication-type="journal" id="hsr272331-cit-0057">
+<string-name name-style="western">
+<given-names>R. C.</given-names>
+<surname>Kessler</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Petukhova</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N. A.</given-names>
+<surname>Sampson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. M.</given-names>
+<surname>Zaslavsky</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H. U.</given-names>
+<surname>Wittchen</surname>
+</string-name>, “<article-title>Twelve‐Month and Lifetime Prevalence and Lifetime Morbid Risk of Anxiety and Mood Disorders in the United States</article-title>,” <source>International Journal of Methods in Psychiatric Research</source>
+<volume>21</volume>, no. <issue>3</issue> (<year>2012</year>): <fpage>169</fpage>–<lpage>184</lpage>.<pub-id pub-id-type="pmid">22865617</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/mpr.1359</pub-id><pub-id pub-id-type="pmcid">PMC4005415</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0058"><label>58</label><mixed-citation publication-type="journal" id="hsr272331-cit-0058">
+<string-name name-style="western">
+<given-names>R. A.</given-names>
+<surname>Marrie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Reingold</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Cohen</surname>
+</string-name>, et al., “<article-title>The Incidence and Prevalence of Psychiatric Disorders in Multiple Sclerosis: A Systematic Review</article-title>,” <source>Multiple Sclerosis Journal</source>
+<volume>21</volume>, no. <issue>3</issue> (<year>2015</year>): <fpage>305</fpage>–<lpage>317</lpage>.<pub-id pub-id-type="pmid">25583845</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/1352458514564487</pub-id><pub-id pub-id-type="pmcid">PMC4429164</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0059"><label>59</label><mixed-citation publication-type="journal" id="hsr272331-cit-0059">
+<string-name name-style="western">
+<given-names>K. H.</given-names>
+<surname>Jones</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. V.</given-names>
+<surname>Ford</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. A.</given-names>
+<surname>Jones</surname>
+</string-name>, et al., “<article-title>A Large‐Scale Study of Anxiety and Depression in People With Multiple Sclerosis: A Survey Via the Web Portal of the UK MS Register</article-title>,” <source>PLoS One</source>
+<volume>7</volume>, no. <issue>7</issue> (<year>2012</year>): <elocation-id>e41910</elocation-id>.<pub-id pub-id-type="pmid">22860028</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0041910</pub-id><pub-id pub-id-type="pmcid">PMC3408498</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0060"><label>60</label><mixed-citation publication-type="journal" id="hsr272331-cit-0060">
+<string-name name-style="western">
+<given-names>R. E.</given-names>
+<surname>Boeschoten</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. M. J.</given-names>
+<surname>Braamse</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. T. F.</given-names>
+<surname>Beekman</surname>
+</string-name>, et al., “<article-title>Prevalence of Depression and Anxiety in Multiple Sclerosis: A Systematic Review and Meta‐Analysis</article-title>,” <source>Journal of the Neurological Sciences</source>
+<volume>372</volume> (<year>2017</year>): <fpage>331</fpage>–<lpage>341</lpage>.<pub-id pub-id-type="pmid">28017241</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jns.2016.11.067</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0061"><label>61</label><mixed-citation publication-type="journal" id="hsr272331-cit-0061">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Brenner</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Burkill</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Jokinen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Hillert</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Bahmanyar</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Montgomery</surname>
+</string-name>, “<article-title>Multiple Sclerosis and Risk of Attempted and Completed Suicide ‐ A Cohort Study</article-title>,” <source>European Journal of Neurology</source>
+<volume>23</volume>, no. <issue>8</issue> (<year>2016</year>): <fpage>1329</fpage>–<lpage>1336</lpage>.<pub-id pub-id-type="pmid">27120108</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/ene.13029</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0062"><label>62</label><mixed-citation publication-type="journal" id="hsr272331-cit-0062">
+<string-name name-style="western">
+<given-names>A. C.</given-names>
+<surname>de Cerqueira PSA</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Godoy‐Barreiros</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A. C.</given-names>
+<surname>de Oliveira e Silva aAEN</surname>
+</string-name>, “<article-title>Risk Factors for Suicide in Multiple Sclerosis: A Case‐Control Study</article-title>,” <source>Jornal Brasileiro de Psiquiatria</source>
+<volume>64</volume>, no. <issue>4</issue> (<year>2015</year>): <fpage>303</fpage>–<lpage>306</lpage>.</mixed-citation></ref><ref id="hsr272331-bib-0063"><label>63</label><mixed-citation publication-type="journal" id="hsr272331-cit-0063">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Bronnum‐Hansen</surname>
+</string-name>, “<article-title>Suicide Among Danes With Multiple Sclerosis</article-title>,” <source>Journal of Neurology, Neurosurgery &amp; Psychiatry</source>
+<volume>76</volume>, no. <issue>10</issue> (<year>2005</year>): <fpage>1457</fpage>–<lpage>1459</lpage>.<pub-id pub-id-type="pmid">16170097</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/jnnp.2004.056747</pub-id><pub-id pub-id-type="pmcid">PMC1739366</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0064"><label>64</label><mixed-citation publication-type="journal" id="hsr272331-cit-0064">
+<string-name name-style="western">
+<given-names>E. N.</given-names>
+<surname>Stenager</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Koch‐Henriksen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Stenager</surname>
+</string-name>, “<article-title>Risk Factors for Suicide in Multiple Sclerosis</article-title>,” <source>Psychotherapy and Psychosomatics</source>
+<volume>65</volume>, no. <issue>2</issue> (<year>1996</year>): <fpage>86</fpage>–<lpage>90</lpage>.<pub-id pub-id-type="pmid">8711087</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1159/000289052</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0065"><label>65</label><mixed-citation publication-type="journal" id="hsr272331-cit-0065">
+<string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Chwastiak</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. M.</given-names>
+<surname>Ehde</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. E.</given-names>
+<surname>Gibbons</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Sullivan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Bowen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G. H.</given-names>
+<surname>Kraft</surname>
+</string-name>, “<article-title>Depressive Symptoms and Severity of Illness in Multiple Sclerosis: Epidemiologic Study of a Large Community Sample</article-title>,” <source>American Journal of Psychiatry</source>
+<volume>159</volume>, no. <issue>11</issue> (<year>2002</year>): <fpage>1862</fpage>–<lpage>1868</lpage>.<pub-id pub-id-type="pmid">12411220</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1176/appi.ajp.159.11.1862</pub-id></mixed-citation></ref><ref id="hsr272331-bib-0066"><label>66</label><mixed-citation publication-type="journal" id="hsr272331-cit-0066">
+<string-name name-style="western">
+<given-names>S. G.</given-names>
+<surname>Lynch</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. C.</given-names>
+<surname>Kroencke</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D. R.</given-names>
+<surname>Denney</surname>
+</string-name>, “<article-title>The Relationship Between Disability and Depression in Multiple Sclerosis: The Role of Uncertainty, Coping, and Hope</article-title>,” <source>Multiple Sclerosis Journal</source>
+<volume>7</volume>, no. <issue>6</issue> (<year>2001</year>): <fpage>411</fpage>–<lpage>416</lpage>.<pub-id pub-id-type="pmid">11795464</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/135245850100700611</pub-id></mixed-citation></ref></ref-list></back></article>

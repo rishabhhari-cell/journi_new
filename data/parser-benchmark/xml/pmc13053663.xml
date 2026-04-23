@@ -1,0 +1,1892 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="hsr272301" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Health Sci Rep</journal-id><journal-id journal-id-type="iso-abbrev">Health Sci Rep</journal-id><journal-id journal-id-type="pmc-domain-id">3569</journal-id><journal-id journal-id-type="pmc-domain">hscirep</journal-id><journal-id journal-id-type="publisher-id">HSR2</journal-id><journal-title-group><journal-title>Health Science Reports</journal-title></journal-title-group><issn pub-type="epub">2398-8835</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13053663</article-id><article-id pub-id-type="pmcid-ver">PMC13053663.1</article-id><article-id pub-id-type="pmcaid">13053663</article-id><article-id pub-id-type="pmcaiid">13053663</article-id><article-id pub-id-type="pmid">41953903</article-id><article-id pub-id-type="doi">10.1002/hsr2.72301</article-id><article-id pub-id-type="publisher-id">HSR272301</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Systematic Review</subject></subj-group><subj-group subj-group-type="heading"><subject>Systematic Review</subject></subj-group></article-categories><title-group><article-title>Janus Kinase Inhibitors for Treatment of Palmoplantar Pustulosis, Generalized Pustular Psoriasis, and Palmoplantar Pustular Psoriasis: A Systematic Review of the Literature</article-title></title-group><contrib-group><contrib id="hsr272301-cr-0001" contrib-type="author"><name name-style="western"><surname>Ansari</surname><given-names initials="MS">Mahshid Sadat</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-8586-2432</contrib-id><xref rid="hsr272301-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="hsr272301-cr-0002" contrib-type="author"><name name-style="western"><surname>Heidari</surname><given-names initials="S">Sama</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0005-2683-3750</contrib-id><xref rid="hsr272301-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="hsr272301-cr-0003" contrib-type="author"><name name-style="western"><surname>Pourgholi</surname><given-names initials="E">Elnaz</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0006-4069-7289</contrib-id><xref rid="hsr272301-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="hsr272301-cr-0004" contrib-type="author"><name name-style="western"><surname>Bahramian</surname><given-names initials="S">Saeed</given-names></name><xref rid="hsr272301-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="hsr272301-cr-0005" contrib-type="author"><name name-style="western"><surname>Tootoonchi</surname><given-names initials="N">Nasim</given-names></name><xref rid="hsr272301-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="hsr272301-cr-0006" contrib-type="author" corresp="yes"><name name-style="western"><surname>Vahabi</surname><given-names initials="SM">Seyed Mohammad</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-4736-6803</contrib-id><xref rid="hsr272301-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>mohammadvahabi73@gmail.com</email></address></contrib></contrib-group><aff id="hsr272301-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Department of Dermatology, Razi Hospital</named-content>
+<institution>Tehran University of Medical Sciences</institution>
+<city>Tehran</city>
+<country country="IR">Iran</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold> Seyed Mohammad Vahabi (<email>mohammadvahabi73@gmail.com</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>06</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>9</volume><issue seq="20">4</issue><issue-id pub-id-type="pmc-issue-id">510729</issue-id><issue-id pub-id-type="doi">10.1002/hsr2.v9.4</issue-id><elocation-id>e72301</elocation-id><history><date date-type="rev-recd"><day>17</day><month>12</month><year>2025</year></date><date date-type="received"><day>28</day><month>7</month><year>2025</year></date><date date-type="accepted"><day>28</day><month>3</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>06</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>08</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-09 09:25:14.547"><day>09</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Health Science Reports</italic> published by Wiley Periodicals LLC.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="HSR2-9-e72301.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:HSR2-9-e72301.pdf"/><abstract><title>ABSTRACT</title><sec id="hsr272301-sec-0010"><title>Introduction</title><p>Palmoplantar pustulosis (PPP) is a chronic, recurrent, inflammatory disease and assumed to be a subtype of psoriasis. Pustular psoriasis (PP) is a chronic inflammatory disease that is further subclassified into various entities with different presentations including generalized pustular psoriasis (GPP) and palmoplantar pustular psoriasis (PPPP). Given the central role of the JAK–STAT pathway in cytokine signaling, this systematic review evaluated the effectiveness and safety of Janus kinase inhibitors (JAK‐I) in these PP subtypes.</p></sec><sec id="hsr272301-sec-0020"><title>Methods</title><p>Following PRISMA 2020 guidelines, a systematic search was conducted across PubMed/Medline, Scopus, Web of Science, and Embase up to November 13, 2025. Eligible studies included assessing JAK‐I in PPP, GPP, or PPPP. Exclusion criteria were reviews, articles without full‐text, SAPHO syndrome, and animal/in vitro studies. Risk of bias was assessed using the NHLBI quality assessment tool for clinical studies and Murad et al.'s checklist for case reports/series.</p></sec><sec id="hsr272301-sec-0030"><title>Results</title><p>Thirty‐seven studies were included (29 case reports, 4 case series, and 4 clinical studies), encompassing 157 patients (60.5% female; mean age 46.8 years). Treatments involved tofacitinib, upadacitinib, baricitinib, abrocitinib, and topical ruxolitinib. In PPP, pooled meta‐analysis demonstrated a PPPASI‐50 response rate of 85.5% (95% CI, 71.3–93.3), with upadacitinib achieving 90.9% (95% CI, 81.7–95.7). Case reports and series showed 88.1% clearance or near‐clearance within a mean of 2.5 months. GPP patients (<italic toggle="yes">n</italic> = 5) achieved rapid clearance or marked improvement within 2–12 weeks. Adverse events (18.7%) were generally mild, most commonly acneiform eruptions, headache, and transient liver enzyme elevations, with no severe events reported.</p></sec><sec id="hsr272301-sec-0040"><title>Conclusion</title><p>JAK‐I demonstrate high response rates and rapid improvement with manageable safety profiles. However, the current evidence is limited by small sample sizes, short follow‐up durations, and reliance on case‐based data. They represent a promising therapeutic option and warrant further evaluation in larger controlled studies to establish long‐term efficacy and safety.</p></sec></abstract><kwd-group><kwd id="hsr272301-kwd-0001">JAK inhibitors</kwd><kwd id="hsr272301-kwd-0002">JAK–STAT pathway</kwd><kwd id="hsr272301-kwd-0003">palmoplantar pustulosis</kwd><kwd id="hsr272301-kwd-0004">pustular psoriasis</kwd></kwd-group><counts><fig-count count="3"/><table-count count="5"/><page-count count="19"/><word-count count="9013"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:07.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec id="hsr272301-sec-0050"><label>1</label><title>Introduction</title><p>Palmoplantar pustulosis (PPP) is a chronic, recurrent, inflammatory disease characterized by sterile pustules on the palms and soles. Although lesions are primarily located on the hands and feet, they can extend to other areas, including fingers and toes [<xref rid="hsr272301-bib-0001" ref-type="bibr">1</xref>, <xref rid="hsr272301-bib-0002" ref-type="bibr">2</xref>, <xref rid="hsr272301-bib-0003" ref-type="bibr">3</xref>]. The prevalence of PPP is higher in Japan compared to Western countries, with estimates ranging from 0.005% to 12% of the population [<xref rid="hsr272301-bib-0004" ref-type="bibr">4</xref>, <xref rid="hsr272301-bib-0005" ref-type="bibr">5</xref>].</p><p>This immune‐mediated disease is assumed to be a subtype of psoriasis. Despite its localization, PPP can exhibit features similar to those of psoriasis, such as hyperkeratosis, erythema, nail involvement, psoriatic arthritis, and scaling. Moreover, lesions may develop in other body regions, and affect areas such as the upper and lower limbs [<xref rid="hsr272301-bib-0004" ref-type="bibr">4</xref>, <xref rid="hsr272301-bib-0006" ref-type="bibr">6</xref>, <xref rid="hsr272301-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr272301-bib-0008" ref-type="bibr">8</xref>]. Treatment resistance is common, and is regarded as debilitating due to its negative effects on patients' functionality and overall quality of life [<xref rid="hsr272301-bib-0009" ref-type="bibr">9</xref>, <xref rid="hsr272301-bib-0010" ref-type="bibr">10</xref>]. Both environmental and genetic factors are known triggers, with both innate and adaptive immune systems involved in its pathogenesis [<xref rid="hsr272301-bib-0004" ref-type="bibr">4</xref>].</p><p>While the exact pathogenesis remains unknown, the primary site of inflammation is believed to be the acrosyringium beneath the stratum corneum. Sweat glands, typically immune‐competent structures, serve as a robust barrier protecting the skin. Furthermore, proinflammatory cytokines including interleukin‐1α (IL‐1α), interleukin‐1β (IL‐1β), and TNF‐α are usually produced in these glands. However, abnormalities and malfunctions in sweat glands' function may lead to PPP. It is posited that inflammation is initiated by IL‐1α, subsequently involving T‐cells and Langerhans cells in the skin inflammation development [<xref rid="hsr272301-bib-0004" ref-type="bibr">4</xref>, <xref rid="hsr272301-bib-0005" ref-type="bibr">5</xref>, <xref rid="hsr272301-bib-0011" ref-type="bibr">11</xref>].</p><p>Pustular psoriasis (PP) is a chronic inflammatory disease that is further subclassified into various entities with different presentations including generalized pustular psoriasis (GPP) and palmoplantar pustular psoriasis (PPPP). GPP is characterized by widespread sterile pustules and can be associated with systemic involvement, potentially resulting in severe complications such as fever, sepsis, renal and heart failure, and respiratory distress syndrome [<xref rid="hsr272301-bib-0012" ref-type="bibr">12</xref>]. PPPP is characterized by sterile pustules of palms and soles, accompanied by psoriatic features such as mild scaly erythema. However, distinguishing between PPP and PPPP can be challenging due to their clinical and morphological similarities. The presentation of sterile pustules on erythematous palmoplantar skin without induration and scaling is characteristic of PPP, whereas patients with psoriasis in other areas of the body exhibit typical features such as well‐demarcated, scaly plaques with pustules on the palms and soles, which is attributed to PPPP [<xref rid="hsr272301-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr272301-bib-0013" ref-type="bibr">13</xref>].</p><p>Although both PPP and PP share similarities regarding the role of proinflammatory cytokines in their pathogenesis, certain cytokines, such as those associated with the IL‐36 axis, are more prominently involved in PP [<xref rid="hsr272301-bib-0010" ref-type="bibr">10</xref>, <xref rid="hsr272301-bib-0014" ref-type="bibr">14</xref>, <xref rid="hsr272301-bib-0015" ref-type="bibr">15</xref>].</p><p>The Janus kinase and signal transducer and activator of transcription (JAK–STAT) pathway plays a critical role in cytokine signaling, and has various immune functions including T‐cells polarization, hematopoiesis, and inflammation monitoring, adipogenesis, and growth. Both cytokine receptors (types 1 and 2), as well as interferons and growth factors, are implicated in this pathway. Each heterodimeric cytokine receptor pairs with different JAKs, while homodimeric receptors specifically associate with JAK2. There are four types of JAKs consisting of JAK1, JAK2, JAK3, and TYK2 [<xref rid="hsr272301-bib-0016" ref-type="bibr">16</xref>, <xref rid="hsr272301-bib-0017" ref-type="bibr">17</xref>, <xref rid="hsr272301-bib-0018" ref-type="bibr">18</xref>, <xref rid="hsr272301-bib-0019" ref-type="bibr">19</xref>, <xref rid="hsr272301-bib-0020" ref-type="bibr">20</xref>].</p><p>A wide range of treatment modalities is utilized for treating PPP, including phototherapy (ultraviolet) and lasers, topical therapies (corticosteroids and vitamin D derivatives), retinoids (e.g., acitretin), and biological medications such as anti‐TNF, anti‐interleukin 17, anti‐interleukin‐23, and apremilast. Nevertheless, the treatment of PP remains challenging [<xref rid="hsr272301-bib-0005" ref-type="bibr">5</xref>].</p><p>Considering the similar treatment challenges and shared pathogenesis among pustular subtypes of psoriasis, this review aims to primarily focus on the effectiveness of Janus kinase inhibitors (JAK‐I) in treating PP, while also reviewing published studies on GPP and PPPP.</p></sec><sec sec-type="materials-and-methods" id="hsr272301-sec-0060"><label>2</label><title>Materials and Methods</title><sec id="hsr272301-sec-0070"><label>2.1</label><title>Search Strategy</title><p>A systematic search was conducted using related keywords/MeSH terms through PubMed/Medline, Scopus, Web of Science, and Embase until November 13, 2025 (see Supporting Information S1: File <xref rid="hsr272301-suppl-0001" ref-type="supplementary-material">1</xref>). It follows the 2020 guidelines of the Preferred Reporting Items for Systematic Reviews and Meta‐analyses (PRISMA) [<xref rid="hsr272301-bib-0021" ref-type="bibr">21</xref>].</p></sec><sec id="hsr272301-sec-0080"><label>2.2</label><title>Eligibility Criteria and Study Selection</title><p>This systematic review included studies that investigated the effect of a JAK‐I in patients with PPP, GPP, and PPPP. Diagnostic classification of PPP and PPPP was based on the diagnosis reported by the original authors. Given the known clinical overlap between these entities and the lack of uniform diagnostic criteria across studies, histopathologic or genetic confirmation was not required. Reviews, articles without available text, studies on patients with SAPHO (synovitis, acne, pustulosis, hyperostosis, and osteitis) syndrome and animal/in vitro studies were excluded. An exception was made for one retrospective study that included SAPHO patients but reported pooled clinical outcomes for PPP, allowing inclusion of relevant data [<xref rid="hsr272301-bib-0022" ref-type="bibr">22</xref>].</p></sec><sec id="hsr272301-sec-0090"><label>2.3</label><title>Data Extraction</title><p>Two independent reviewers screened the articles to exclude irrelevant ones. In case of disagreement, a third reviewer made the final decision. Data extracted included study characteristics, patient age, sex, comorbidities, disease duration, previous treatments, dosage and duration of received JAK‐I(s), other concurrent medications, outcomes, and possible adverse effects.</p></sec><sec id="hsr272301-sec-0100"><label>2.4</label><title>Risk of Bias Assessment</title><p>The methodological quality of the included studies was evaluated by two reviewers through consensus, using the National Heart, Lung, and Blood Institute (NHLBI) quality assessment instruments along with the checklist proposed by Murad et al. [<xref rid="hsr272301-bib-0023" ref-type="bibr">23</xref>] for appraising case reports and case series (see Supporting Information S2: File <xref rid="hsr272301-suppl-0002" ref-type="supplementary-material">2</xref>).</p></sec><sec id="hsr272301-sec-0110"><label>2.5</label><title>Definition of Outcome</title><p>Treatment response definition was different in each study. It was considered clearance of lesions and/or change in clinical scores such as Palmoplantar Psoriasis Area and Severity Index (PPASI), Physician's Global Assessment (PGA), and Dermatology Life Quality Index (DLQI). A positive outcome reflects clearance or reduction of pustules, erythema, and scaling, and improved quality of life.</p></sec></sec><sec sec-type="results" id="hsr272301-sec-0120"><label>3</label><title>Results</title><p>A total of 37 articles were included, comprising 29 case reports, 4 case series, and 4 clinical studies, including 3 retrospective and 1 prospective observational study (Figure <xref rid="hsr272301-fig-0001" ref-type="fig">1</xref>). Of the 157 included patients, 95 (60.5%) were female. Across all 156 patients with available age data, the pooled mean age was 46.8 years, with an estimated pooled standard deviation of 13.8 years, calculated using weighted variance methods and validated imputation techniques for missing variance data. Except for two studies that reported the development of PPP‐like eruption with JAK inhibitors use, other studies showed that JAK‐I are useful in the treatment of PPPP, GPP, and PPP (Table <xref rid="hsr272301-tbl-0001" ref-type="table">1</xref>). Also, one article was excluded because of the inseparable data of JAK‐I and other drugs [<xref rid="hsr272301-bib-0024" ref-type="bibr">24</xref>].</p><fig position="float" fig-type="Figure" id="hsr272301-fig-0001" orientation="portrait"><label>Figure 1</label><caption><p>Preferred Reporting Items for Systematic Reviews and Meta‐Analyses (PRISMA). Flow chart of the number of studies identified and selected into the systematic review and meta‐analysis.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="HSR2-9-e72301-g003.jpg"/></fig><table-wrap position="float" id="hsr272301-tbl-0001" content-type="Table" orientation="portrait"><label>Table 1</label><caption><p>Summary of the result by each disease and each JAK inhibitor.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Disease</th><th align="center" valign="bottom" rowspan="1" colspan="1">Number of patients</th><th align="center" valign="bottom" rowspan="1" colspan="1">JAK inhibitor treatment</th><th align="center" valign="bottom" rowspan="1" colspan="1">Outcome</th><th align="center" valign="bottom" rowspan="1" colspan="1">Adverse effects</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Palmoplantar pustular psoriasis</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">Tofacitinib</td><td align="left" valign="top" rowspan="1" colspan="1">Clearance (100%)</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td valign="middle" rowspan="3" align="left" colspan="1">Generalized pustular psoriasis</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">Tofacitinib</td><td align="left" valign="top" rowspan="1" colspan="1">Clearance (100%)</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">Upadacitinib</td><td align="left" valign="top" rowspan="1" colspan="1">Clearance (100%)</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">Abrocitinib</td><td align="left" valign="top" rowspan="1" colspan="1">Clearance (100%)</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td valign="middle" rowspan="5" align="left" colspan="1">Palmoplantar pustulosis</td><td align="center" valign="top" rowspan="1" colspan="1">95</td><td align="center" valign="top" rowspan="1" colspan="1">Upadacitinib</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>79 patients: PPPASI‐50: 90.9%</p>
+<p>16 patients: clearance and almost cleared 12 (62.5%)</p>
+<p>Improvement 5 (31.3%)</p>
+<p>Remained in remission 1 (6.3%)</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>26 (27.4%)</p>
+<p>11 acne</p>
+<p>5 headache</p>
+<p>4 elevated liver enzymes</p>
+<p>2 dyslipidemia</p>
+<p>2 upper respiratory infection</p>
+<p>1 HSV reactivation</p>
+<p>1 bronchitis and cystitis</p>
+<p>1 hypertension</p>
+</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">51</td><td align="center" valign="top" rowspan="1" colspan="1">Tofacitinib</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>29 patients: PPPASI‐50: 72.4%</p>
+<p>22 patients: clearance and almost cleared 12 (66.67%)</p>
+<p>Improvement 6 (33.33%)</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>3 (5.9%)</p>
+<p>1 dental abscess</p>
+<p>2 gastric discomforts</p>
+</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">Baricitinib</td><td align="left" valign="top" rowspan="1" colspan="1">Clearance (100%)</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">Abrocitinib</td><td align="left" valign="top" rowspan="1" colspan="1">Improvement (100%)</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">Ruxolitinib</td><td align="left" valign="top" rowspan="1" colspan="1">Clearance (100%)</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr></tbody></table><table-wrap-foot><fn id="hsr272301-tbl1-note-0001"><p>Abbreviation: PPPASI, Palmoplantar Psoriasis Area and Severity Index.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><sec id="hsr272301-sec-0130"><label>3.1</label><title>Generalized Pustular Psoriasis (GPP)</title><p>Five case reports [<xref rid="hsr272301-bib-0025" ref-type="bibr">25</xref>, <xref rid="hsr272301-bib-0026" ref-type="bibr">26</xref>, <xref rid="hsr272301-bib-0027" ref-type="bibr">27</xref>, <xref rid="hsr272301-bib-0028" ref-type="bibr">28</xref>, <xref rid="hsr272301-bib-0029" ref-type="bibr">29</xref>] of GPP were identified (three males and two females; mean age, 31.6 ± 14.21 years; range, 13–48 years) (Table <xref rid="hsr272301-tbl-0002" ref-type="table">2</xref>). Treatment included tofacitinib (<italic toggle="yes">n</italic> = 2), upadacitinib (<italic toggle="yes">n</italic> = 2), and abrocitinib (<italic toggle="yes">n</italic> = 1). Four patients received JAK inhibitor monotherapy; one used glycyrrhizin, cefuroxime, and topical corticosteroids concurrently. Regarding clinical outcomes, two patients achieved complete clearance within 2 weeks, one patient reached a 60% improvement at 1 month, one patient improved from a Generalized Pustular Psoriasis Physician Global Assessment (GPPGA) score of 4 to 1 within 5 days, and another achieved near‐complete resolution by 3 months. Follow‐up (available in three cases) ranged from 3 to 4 months, with no recurrences or adverse effects reported.</p><table-wrap position="float" id="hsr272301-tbl-0002" content-type="Table" orientation="portrait"><label>Table 2</label><caption><p>JAK inhibitors for the treatment of generalized pustular psoriasis.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><thead valign="bottom"><tr valign="bottom"><th rowspan="2" style="border-bottom:solid 1px #000000" align="left" valign="bottom" colspan="1">Study</th><th align="center" valign="bottom" rowspan="1" colspan="1">
+<p>Number of patients</p>
+</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">
+<p>Comorbidities and personal history</p>
+</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Previous treatment</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">JAK inhibitor treatment</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Concomitant treatment</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Outcome</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Follow‐up</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Adverse effects</th></tr><tr style="border-bottom:solid 1px #000000"><th align="center" valign="bottom" rowspan="1" colspan="1">Age‐sex</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Shreya et al. [<xref rid="hsr272301-bib-0025" ref-type="bibr">25</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>48‐Male</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">CSs, ACT, CYC, MTX, ETC</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Clearance</p>
+<p>2 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">3 months</td><td align="center" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Wang et al. [<xref rid="hsr272301-bib-0026" ref-type="bibr">26</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>21‐Male</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">PsA, nail involvement</td><td align="left" valign="top" rowspan="1" colspan="1">ACT, MTX</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>3 months</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">3 months</td><td align="center" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Xiaoyuan et al. [<xref rid="hsr272301-bib-0027" ref-type="bibr">27</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>13‐Female</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">PRP, psoriasis</td><td align="left" valign="top" rowspan="1" colspan="1">ACT, MTX, secukinumab</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>60% resolution</p>
+<p>1 month</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Wang et al. [<xref rid="hsr272301-bib-0028" ref-type="bibr">28</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>28‐Male</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">ACT, MTX, topical CS, an unspecified traditional Chinese medicine (TCM)</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Glycyrrhizin, cefuroxime, and hydrocortisone butyrate cream</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>GPPGA 4 to 1 in 5 days</p>
+<p>After 2 weeks, tofacitinib was tapered to 5 mg once daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">4 months without recurrence</td><td align="center" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Yang et al. [<xref rid="hsr272301-bib-0029" ref-type="bibr">29</xref>]</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>48‐Female</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">ACT, Prednisolone, topical CS, and tacrolimus cream</td><td align="left" valign="top" rowspan="1" colspan="1">Abrocitinib 100 mg twice daily</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Clearance</p>
+<p>2 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="center" valign="top" rowspan="1" colspan="1">None</td></tr></tbody></table><table-wrap-foot><fn id="hsr272301-tbl2-note-0001"><p>Abbreviations: ACT, acitretin; CYC, cyclosporine; CSs, corticosteroids; ETC, etanercept; GPPGA, Generalized Pustular Psoriasis Physician Global Assessment; MTX, methotrexate; PRP, pityriasis rubra pilaris; PsA, psoriatic arthritis.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap></sec><sec id="hsr272301-sec-0140"><label>3.2</label><title>Palmoplantar Pustular Psoriasis and Palmoplantar Pustulosis</title><p>A total of 150 patients were included in this group (Tables <xref rid="hsr272301-tbl-0003" ref-type="table">3</xref> and <xref rid="hsr272301-tbl-0004" ref-type="table">4</xref>); 2 with PPPP, and others had PPP.</p><table-wrap position="float" id="hsr272301-tbl-0003" content-type="Table" orientation="portrait"><label>Table 3</label><caption><p>JAK inhibitors for the treatment of palmoplantar pustular psoriasis and palmoplantar pustulosis.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><thead valign="bottom"><tr valign="bottom"><th rowspan="2" style="border-bottom:solid 1px #000000" align="left" valign="bottom" colspan="1">Study</th><th align="center" valign="bottom" rowspan="1" colspan="1">
+<p>Number of patients</p>
+</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">
+<p>Comorbidities and personal history</p>
+</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Previous treatment</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">JAK inhibitor treatment</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Concomitant treatment</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Outcome</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Follow‐up</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="left" valign="bottom" colspan="1">Adverse effects</th></tr><tr style="border-bottom:solid 1px #000000"><th align="center" valign="bottom" rowspan="1" colspan="1">Age‐sex</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Juliane and Markus [<xref rid="hsr272301-bib-0030" ref-type="bibr">30</xref>]</p>
+<p>PPPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>61‐Female</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">PsA</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>10 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Prednisolone</p>
+<p>Tapered over 3 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Clearance</p>
+<p>4 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">16 months</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Muzumdar et al. [<xref rid="hsr272301-bib-0031" ref-type="bibr">31</xref>]</p>
+<p>PPPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>45‐Female</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">None</td><td align="left" valign="top" rowspan="1" colspan="1">Topical CSs, certolizumab, ETC, ADA, IXE, SEK, USM, GUSE, MTX</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>11 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Significant improvement</p>
+<p>1 month</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Clearance</p>
+<p>3 months</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Koga et al. [<xref rid="hsr272301-bib-0032" ref-type="bibr">32</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">64‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">RA</td><td align="left" valign="top" rowspan="1" colspan="1">MTX, ADA</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>10 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">Improvement</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Haynes et al. [<xref rid="hsr272301-bib-0033" ref-type="bibr">33</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">45‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">Smoking, obesity, PsA, plaque psoriasis</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Topical therapies (CSs, vitamin D analogs), light treatments (excimer laser, Grenz ray, PUVA)</p>
+<p>Systemic medications (MTX, ACT, CYC, ADA, USM, GUSE, SEK, APR)</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Topical CSs</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>2 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">3 months</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Mössner et al. [<xref rid="hsr272301-bib-0034" ref-type="bibr">34</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Two</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">70‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">PV, HTN, SH, DM, hyperthyroidism, recurrent UTI</td><td align="left" valign="top" rowspan="1" colspan="1">ACT, FAE, MTX, APR, USM, brodalumab, GUSE, ADA, Anakinra, IXE</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">MTX 2.5 mg/week orally, Mometasone 0.1% ointment once daily as needed</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>12 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">12 weeks</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">67‐Male</td><td align="left" valign="top" rowspan="1" colspan="1">PsA, PV, UC, HTN, DM, SH, spondylosis, HTG, dementia syndrome</td><td align="left" valign="top" rowspan="1" colspan="1">ACT, FAE, MTX, CYC, MMF, leflunomide, ETC, INX, ADA, APR, SEK</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Prednisolone orally 10 mg daily, then reduced and discontinue, Betamethasone 0.1% ointment once daily as needed</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>12 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">12 weeks</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Wang and Rosenbach [<xref rid="hsr272301-bib-0035" ref-type="bibr">35</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">40‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">UC, ADA‐induced PPP</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Efalizumab, CYC, MMF, PUVA, CSs, Alefacept, Isotretinoin, USM, Topical dapsone, Anakinra,</p>
+<p>MTX, ACT, APR, Tocilizumab, GUSE</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Clearance</p>
+<p>Some days</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">1 year</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Imafuku and Maeyama [<xref rid="hsr272301-bib-0036" ref-type="bibr">36</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">64‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">Smoking, RA, golimumab‐induced PPP</td><td align="left" valign="top" rowspan="1" colspan="1">Etretinate, topical Vit D analog/CSs, with 308 nm ultraviolet therapy, APR</td><td align="left" valign="top" rowspan="1" colspan="1">Baricitinib</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Clearance</p>
+<p>4 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Gaiani et al. [<xref rid="hsr272301-bib-0037" ref-type="bibr">37</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Three</p>
+<p>Female</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">55‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">PsA, smoking</td><td align="left" valign="top" rowspan="1" colspan="1">Systemic CSs, ACT, CYC, MTX, APR, USM, IXE, Brodalumab</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Clearance</p>
+<p>12 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">8 months</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">44‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">Osteopenia, PV</td><td align="left" valign="top" rowspan="1" colspan="1">Systemic CSs, ACT, MTX, SEK</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">ACT</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>4 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">7 months</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">50‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">Hashimoto's thyroiditis, vitiligo, uterine fibroids, depression–anxiety, fibromyalgia, plantar fasciitis</td><td align="left" valign="top" rowspan="1" colspan="1">Systemic CS, CYC, SEK, MTX</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Significant improvement</p>
+<p>4 months</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">5 months</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Gleeson et al. [<xref rid="hsr272301-bib-0038" ref-type="bibr">38</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Two</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">49‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">UC</td><td align="left" valign="top" rowspan="1" colspan="1">Multiple standard systemic and targeted biologic therapies</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>10 mg twice daily then 10 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Clearance</p>
+<p>1 week</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">14 weeks</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">60‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">PsA</td><td align="left" valign="top" rowspan="1" colspan="1">Multiple standard systemic and targeted biologic therapies</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>10 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>2 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">16 weeks</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Mohr et al. [<xref rid="hsr272301-bib-0039" ref-type="bibr">39</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">68‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">Plaque psoriasis, hypothyroidism, HChol, depression, smoking</td><td align="left" valign="top" rowspan="1" colspan="1">PUVA, FAE, MTX, ACT, alitretinoin, GUSE, APR</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>15 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Murray et al. [<xref rid="hsr272301-bib-0040" ref-type="bibr">40</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">52‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">RA, smoking, ADA‐induced PPP</td><td align="left" valign="top" rowspan="1" colspan="1">Topical CSs</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Improvement</p>
+<p>4 days</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Clearance</p>
+<p>3 months</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">A dental abscess</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Rahbar Kooybaran et al. [<xref rid="hsr272301-bib-0041" ref-type="bibr">41</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Five</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">73‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">Obesity, PV, DM, HTN, SH, HChol, hyperlipidemia, hyperthyroidism, a depressive episode</td><td align="left" valign="top" rowspan="1" colspan="1">FAE, MTX, APR, ACT, USM, brodalumab, GUSE, ADA, Anakinra, IXE, Tofacitinib<xref rid="hsr272301-tbl3-note-0002" ref-type="table-fn">a</xref>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Mometasone 0.1% ointment in daily alternation with salicylvaseline 5%.</td><td align="left" valign="top" rowspan="1" colspan="1">Remained in remission</td><td align="left" valign="top" rowspan="1" colspan="1">20 months</td><td align="left" valign="top" rowspan="1" colspan="1">Headache</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">59‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">PsA, HTN, AA</td><td align="left" valign="top" rowspan="1" colspan="1">ADA, MTX, IXE, ACT, GUSE</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>6 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">7 months</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">60‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">Smoking, CSU, chronic bronchitis, dyslipidemia</td><td align="left" valign="top" rowspan="1" colspan="1">MTX, dimethyl fumarate, ACT, CYC, APR</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>9 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">9 weeks</td><td align="left" valign="top" rowspan="1" colspan="1">Bronchitis and cystitis</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">56‐Male</td><td align="left" valign="top" rowspan="1" colspan="1">Smoking, PsA, obesity, COPD, fibromyalgia, IBS</td><td align="left" valign="top" rowspan="1" colspan="1">MTX, GUSE</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Topical vitamin D3 derivative</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>6 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">6 weeks</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">59‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">PsA, fibromyalgia, HTN, severe depression, effluvium</td><td align="left" valign="top" rowspan="1" colspan="1">MTX, SEK, ACT</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Mometasone 0.1% ointment in daily</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Moderate improvement</p>
+<p>3 months</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">3 months</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Wang et al. [<xref rid="hsr272301-bib-0042" ref-type="bibr">42</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Three</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">25‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">None</td><td align="left" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">Tripterygium wilfordii Hook F</italic>, CYC, ACT, topical CSs</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Topical CSs, Retinol 50 mg twice daily for 4 weeks then changed to TGs 20 mg three times a day</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>16 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">20 weeks</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">55‐Male</td><td align="left" valign="top" rowspan="1" colspan="1">Alopecia, nail involvement</td><td align="left" valign="top" rowspan="1" colspan="1">None</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Nitrate and azole cream</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Significant improvement</p>
+<p>4 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Clearance</p>
+<p>10 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">71‐Male</td><td align="left" valign="top" rowspan="1" colspan="1">CAD, HTN, nail involvement</td><td align="left" valign="top" rowspan="1" colspan="1">TGs, ACT, dapsone</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">Clearance 16 weeks</td><td align="left" valign="top" rowspan="1" colspan="1">20 weeks</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Xu et al. [<xref rid="hsr272301-bib-0043" ref-type="bibr">43</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Six</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">45‐Male</td><td align="left" valign="top" rowspan="1" colspan="1">Smoking, obesity, hyperlipidemia, urticaria</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Topical therapy (CSs, retinoids, emollients)</p>
+<p>Systemic therapy (systemic retinoid, CYC)</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>4 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Clearance</p>
+<p>12 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">58‐Male</td><td align="left" valign="top" rowspan="1" colspan="1">Smoking, obesity, DM, AD</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Topical therapy (CSs, Emollients)</p>
+<p>Systemic therapy (systemic retinoid)</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>4 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>12 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">42‐Male</td><td align="left" valign="top" rowspan="1" colspan="1">Obesity</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Topical therapy (CSs, vitamin D derivatives, emollients)</p>
+<p>Systemic therapy (systemic retinoid, MTX)</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>4 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Clearance</p>
+<p>12 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">53‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">Obesity, DM, rhinitis, urticaria</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Topical therapy (CSs, vitamin D derivatives, retinoids, keratolytic agents, emollients, phototherapy)</p>
+<p>Systemic therapy (systemic retinoid, MMF)</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>4 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>12 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">46‐Male</td><td align="left" valign="top" rowspan="1" colspan="1">Smoking, obesity</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Topical therapy (CSs, retinoids, emollients)</p>
+<p>Systemic therapy (systemic retinoid, CYC)</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Significant improvement</p>
+<p>4 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>12 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">55‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">Hyperlipidemia</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Topical therapy (CSs, vitamin D derivatives, emollients)</p>
+<p>Systemic therapy (systemic retinoid, MTX)</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Significant improvement</p>
+<p>4 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Clearance</p>
+<p>12 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Zhang et al. [<xref rid="hsr272301-bib-0044" ref-type="bibr">44</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>35‐Female</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">SEK‐induced AA, nail involvement</td><td align="left" valign="top" rowspan="1" colspan="1">calcipotriol ointment, ACT, ADA, SEK</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Significant improvement</p>
+<p>3 months</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Cleared</p>
+<p>8 months</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Zhang et al. [<xref rid="hsr272301-bib-0045" ref-type="bibr">45</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Two</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">47‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">PsA, thyroid nodule, anxiety, nail involvement</td><td align="left" valign="top" rowspan="1" colspan="1">IXE</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Partial improvement</p>
+<p>4 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Cleared</p>
+<p>20 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1">54‐Female</td><td align="left" valign="top" rowspan="1" colspan="1">PsA, smoking, hyperthyroidism, anxiety</td><td align="left" valign="top" rowspan="1" colspan="1">Topical CSs, SEK</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Partial improvement</p>
+<p>4 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Cleared</p>
+<p>18 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Gao et al. [<xref rid="hsr272301-bib-0046" ref-type="bibr">46</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>47‐Male</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Rhinitis, smoking, nail involvement</td><td align="left" valign="top" rowspan="1" colspan="1">ACT, desloratadine, eculizumab</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Abrocitinib</p>
+<p>100 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Improvement</p>
+<p>3 months</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">6 months</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Hu et al. [<xref rid="hsr272301-bib-0047" ref-type="bibr">47</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>55‐Male</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">None</td><td align="left" valign="top" rowspan="1" colspan="1">SEK</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Significant improvement</p>
+<p>3 days</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Almost cleared</p>
+<p>12 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Sore throat</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Li et al. [<xref rid="hsr272301-bib-0048" ref-type="bibr">48</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">20‐Male</td><td align="left" valign="top" rowspan="1" colspan="1">AD</td><td align="left" valign="top" rowspan="1" colspan="1">Topical CSs, antihistamines, traditional Chinese medicine</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Baricitinib</p>
+<p>4 mg Daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Clearance</p>
+<p>4 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">6 months<xref rid="hsr272301-tbl3-note-0003" ref-type="table-fn">b</xref>
+</td><td align="left" valign="top" rowspan="1" colspan="1">None</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Fan and Yin [<xref rid="hsr272301-bib-0049" ref-type="bibr">49</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>40‐Male</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Allergic conjunctivitis, allergic rhinitis, asthma</td><td align="left" valign="top" rowspan="1" colspan="1">Topical CSs, secukinumab</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Clearance</p>
+<p>3 months</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">6 months</td><td align="left" valign="top" rowspan="1" colspan="1">No</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Cramer et al. [<xref rid="hsr272301-bib-0050" ref-type="bibr">50</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>66‐ Female</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Smoker 20‐pack‐year, psoriatic arthritis</td><td align="left" valign="top" rowspan="1" colspan="1">Topical CSs, phototherapy, PUVA</td><td align="left" valign="top" rowspan="1" colspan="1">Ruxolitinib cream 15 mg/g twice daily</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>PPPASI 6.2 to 0.8</p>
+<p>10 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">No</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Dong et al. [<xref rid="hsr272301-bib-0051" ref-type="bibr">51</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>31‐Female</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">Topical CSs, phototherapy</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Tofacitinib</p>
+<p>5 mg twice daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Mostly cleared</p>
+<p>3 months</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>NA</p>
+<p>stable without recurrence</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Gu et al. [<xref rid="hsr272301-bib-0052" ref-type="bibr">52</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>15‐Male</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>PPPASI 18.4 to 2.6</p>
+<p>(near clearance)</p>
+<p>12 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">No</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Gu et al. [<xref rid="hsr272301-bib-0053" ref-type="bibr">53</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>8‐Female</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">Calcipotriol</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>PPPASI 28.8 to 2.4, NAPSI 39 to 27 (96% reduction)</p>
+<p>8 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Treatment ended after 8 weeks, and by 12 weeks, skin and nail conditions improved further</td><td align="left" valign="top" rowspan="1" colspan="1">No</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Yang et al. [<xref rid="hsr272301-bib-0054" ref-type="bibr">54</xref>]</p>
+<p>PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>66‐Female</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">Topical CSs, calcipotriol, MTX, <italic toggle="yes">Tripterygium wilfordii</italic> tablets, paeoniflorin, compound glycyrrhizin, loratadine, omalizumab</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Cleared</p>
+<p>3 months</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">A year with 15 mg every 5 days as a maintenance dose without recurrence</td><td align="left" valign="top" rowspan="1" colspan="1">Mild acne</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Hu et al. [<xref rid="hsr272301-bib-0055" ref-type="bibr">55</xref>]</p>
+<p>TNF‐α‐induced PPP</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>One</p>
+<p>27‐male</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">UC, HS, spondyloarthropathy</td><td align="left" valign="top" rowspan="1" colspan="1">Topical CS, ACT, infliximab, ustekinumab</td><td align="left" valign="top" rowspan="1" colspan="1">Upadacitinib 30 mg/day</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Resolution of all symptoms</p>
+<p>4 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">NA</td></tr></tbody></table><table-wrap-foot><fn id="hsr272301-tbl3-note-0001"><p>Abbreviations: AA, alopecia areata; ACT, acitretin; ADA, adalimumab; AD, atopic dermatitis; APR, apremilast; CAD, coronary heart disease; COPD, chronic obstructive pulmonary disease; CSs, corticosteroids; CSU, chronic spontaneous urticaria; CYC, cyclosporine; DM, diabetes mellitus type 2; ETC, etanercept; FAE, fumaric acid esters; GUSE, guselkumab; HChol, hypercholesteremia; HS, hidradenitis suppurativa; HTG, hypertriglyceridemia; HTN, hypertension; IBS, irritable bowel syndrome; INX, infliximab; IXE, ixekizumab; MMF, mycophenolatmofetil; MTX, methotrexate; PsA, psoriatic arthritis; PUVA, psoralen plus ultraviolet‐A radiation; PV, psoriasis vulgaris; RA, rheumatoid arthritis; SEK, secukinumab; SH, steatosis hepatis; TGs, tripterygium glycosides; UC, ulcerative colitis; USM, ustekinumab; UTI, urinary tract infections; PPPASI, Palmoplantar Psoriasis Area and Severity Index.</p></fn><fn id="hsr272301-tbl3-note-0002"><label>a</label><p>Had a very good response to tofacitinib in combination with MTX.</p></fn><fn id="hsr272301-tbl3-note-0003"><label>b</label><p>He experienced a relapse by stopping baricitinib after 6 months which was managed again with baricitinib and resulted in clearance.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><table-wrap position="float" id="hsr272301-tbl-0004" content-type="Table" orientation="portrait"><label>Table 4</label><caption><p>Characteristics, treatment regimens, clinical outcomes, and adverse events of included clinical studies evaluating JAK inhibitors in palmoplantar pustulosis.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><thead valign="bottom"><tr valign="bottom"><th rowspan="2" style="border-bottom:solid 1px #000000" align="left" valign="bottom" colspan="1">Study</th><th align="center" valign="bottom" rowspan="1" colspan="1">
+<p>Number of patients</p>
+</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">
+<p>Comorbidities and personal history</p>
+</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Previous treatment</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">JAK inhibitor Treatment</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Concomitant treatment</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Outcome</th><th rowspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">
+<p>Follow‐up</p>
+<p>adverse effects (AEs)</p>
+</th></tr><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="center" valign="bottom" rowspan="1" colspan="1">Age‐sex</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Zheng et al. [<xref rid="hsr272301-bib-0056" ref-type="bibr">56</xref>]</p>
+<p>Retrospective study</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>20 patients</p>
+<p>14 females</p>
+<p>6 males</p>
+<p>mean age of 49.50 ± 10.96 years</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Hyperlipidemia (4), Diabetes mellitus (3), Hypothyroidism: 2</p>
+<p>Ulcerative colitis (1)</p>
+<p>Psoriasis: 5</p>
+<p>AD: 3</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">ACT, adalimumab, ixekizumab, secukinumab, and traditional Chinese medicine</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib 15 mg/day: 16</p>
+<p>Upadacitinib 30 mg/day: 3</p>
+<p>Upadacitinib 45 mg/day: 1</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Topical CSs: 5 patients</p>
+<p>Ebastine: 3 patients</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>PPPASI: 17.69 ± 11.29 to 1.27 ± 1.41</p>
+<p>PPPASI 50: 100%</p>
+<p>PPPASI 75: 100%</p>
+<p>PPPASI 90: 50%</p>
+<p>PPPASI 100: 20%</p>
+<p>12 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>NA</p>
+<p>AE: transient increase in blood pressure (1)</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Shuang et al. [<xref rid="hsr272301-bib-0057" ref-type="bibr">57</xref>]</p>
+<p>Retrospective study</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>29 patients</p>
+<p>20 Female</p>
+<p>9 Male</p>
+<p>Median age (range): 48.2 [24–70]</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Smoker: 5</p>
+<p>Psoriasis: 5</p>
+<p>Joint involvement: 4</p>
+<p>Nail involvement: 7</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">Tofacitinib</td><td align="left" valign="top" rowspan="1" colspan="1">Topical CSs</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>PPPASI score significantly decreased from 18.62 to 6.17</p>
+<p>PPPASI‐50: 72.41% PPP PGA ≤ 1: 62.1%</p>
+<p>12 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Mean F/U: 12.2 months: relapse: 8</p>
+<p>Clear: 10</p>
+<p>AEs: gastric discomfort (2)</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Huang et al. [<xref rid="hsr272301-bib-0058" ref-type="bibr">58</xref>]</p>
+<p>Prospective observational study</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>31 patients</p>
+<p>15 female</p>
+<p>16 males</p>
+<p>Mean age: 52</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Smoker (26, 83.9%), hypertension (4, 12.9%), diabetes mellitus (5, 16.1%)</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>PPPASI 50: 28 (90.3%)</p>
+<p>PPPASI 75: 24 (77.4%)</p>
+<p>PPPASI 90: 20 (64.5%)</p>
+<p>DLQI 0/1: 27 (87.1%)</p>
+<p>complete pustule clearance: 27 (87.1%)</p>
+<p>4 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>NA</p>
+<p>AEs:</p>
+<p>acne (6), headache (4), dyslipemia (2), abnormal liver enzyme (2), HSV (1), URI (1)</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Du et al. [<xref rid="hsr272301-bib-0022" ref-type="bibr">22</xref>]</p>
+<p>Retrospective study</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>28 patients</p>
+<p>10 males</p>
+<p>18 females</p>
+<p>age: 36.3 ± 10.5 years</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>SAPHO syndrome in eight patients</p>
+<p>smoking in two patients</p>
+</td><td align="center" valign="top" rowspan="1" colspan="1">ACT (15, 53.6%), TwHF (6, 21.4%), CYC (5, 17.9%), MTX (6, 21.4%), ADA (6, 21.4%), secukinumab (5, 17.9%)</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Upadacitinib</p>
+<p>15 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">No</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>PPPASI score: 13.86 ± 2.76 to 5.56 ± 1.08</p>
+<p>PPPASI 50:25</p>
+<p>PPPASI 75:20</p>
+<p>PPPASI 90: 18</p>
+<p>12 weeks</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>12‐week (28 achieved disease control with no reported cases of flares)</p>
+<p>AEs: acneiform rash (4),</p>
+<p>transient transaminitis (2)</p>
+</td></tr></tbody></table><table-wrap-foot><fn id="hsr272301-tbl4-note-0001"><p>Abbreviations: ACT, acitretin; ADA, adalimumab; AD, atopic dermatitis; CSs, corticosteroids; CYC, cyclosporine; DLQI, Dermatology Life Quality Index; HSV, Herpes zoster virus; MTX, methotrexate; PPPASI, Palmoplantar Pustulosis Psoriasis Area and Severity Index; SAPHO, synovitis, acne, pustulosis, hyperostosis, osteitis; TwHF, <italic toggle="yes">Tripterygium</italic> wilfordii Hook F; URI, upper respiratory tract infection.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap><sec id="hsr272301-sec-0150"><label>3.2.1</label><title>Clinical Studies</title><p>Across four clinical studies [<xref rid="hsr272301-bib-0022" ref-type="bibr">22</xref>, <xref rid="hsr272301-bib-0056" ref-type="bibr">56</xref>, <xref rid="hsr272301-bib-0057" ref-type="bibr">57</xref>, <xref rid="hsr272301-bib-0058" ref-type="bibr">58</xref>] comprising 108 patients with PPP, 67 were female (62.0%) (Table <xref rid="hsr272301-tbl-0004" ref-type="table">4</xref>). Upadacitinib was evaluated in three studies involving 79 patients (73.1%), administered at 15 mg/day in 75 patients, 30 mg/day in 3, and 45 mg/day in 1. One study assessed tofacitinib in 29 patients (26.9%). The pooled mean age (<italic toggle="yes">n</italic> = 108) was 46.3 years.</p><p>A random‐effects meta‐analysis demonstrated that JAK inhibitors achieved a pooled PPPASI‐50 response rate of 85.5% (95% CI, 71.3–93.3; <italic toggle="yes">I</italic>
+<sup>2</sup> = 51%) across all four studies. When limited to upadacitinib (3 studies; 79 patients), the pooled PPPASI‐50 response rate was 90.9% (95% CI, 81.7–95.7; <italic toggle="yes">I</italic>
+<sup>2</sup> = 0%). Higher response thresholds showed pooled PPPASI‐75 and PPPASI‐90 rates of 78.5% (95% CI, 60.6–89.7; <italic toggle="yes">I</italic>
+<sup>2</sup> = 43.6%) and 60.7% (95% CI, 49.4–70.9; <italic toggle="yes">I</italic>
+<sup>2</sup> = 0%), respectively. In contrast, the only study evaluating tofacitinib reported a PPPASI‐50 response of 72.4% (21/29; 95% CI, 56.1%–88.7%), with insufficient data to pool PPPASI‐75 or PPPASI‐90 outcomes.</p></sec><sec id="hsr272301-sec-0160"><label>3.2.2</label><title>Case Reports and Case Series</title><p>Forty‐two patients were included in this group across case reports (Table <xref rid="hsr272301-tbl-0003" ref-type="table">3</xref>). Thirty‐five patients had at least one comorbidity or personal history, of which the most common ones were smoking (13), PsA (10), obesity (8), hypertension (6), and thyroid disorders (6). Also, five patients had nail involvement. Prior to intervention, 35 patients (83.3%) had received at least one systemic therapy and 10 (28.6%) received concomitant therapy with JAK inhibitors. Of these patients, 22 received tofacitinib (10–20 mg daily), 16 received upadacitinib (15 mg daily), 2 received baricitinib (4 mg daily), 1 received abrocitinib (100 mg daily), and 1 received topical ruxolitinib. Thirty‐seven (88.1%) achieved complete or almost complete clearance of lesions with a mean (±SD) treatment time of 2.5 ± 1.55 months, while the remainder showed improvement. Also, one remained in remission. The follow‐up time was available for 35 patients, with a mean (±SD) of 4.5 ± 3.96 months without any recurrences.</p></sec><sec id="hsr272301-sec-0170"><label>3.2.3</label><title>Adverse Events</title><p>Across the included studies, a total of 29 adverse events were reported (29/155: 18.7%). Most events occurred in patients treated with upadacitinib (26 events; 27.4%), whereas tofacitinib accounted for 3 events (5.9%), including 1 dental abscess and 2 cases of gastric discomfort. The most frequent adverse events were acne or acneiform eruptions (11 cases), followed by headache (5 cases) and transient elevations in liver enzymes (4 cases). Less common events included dyslipidemia (2 cases) and isolated occurrences of herpes zoster, upper respiratory tract infection, bronchitis with cystitis, sore throat, and a temporary increase in blood pressure. Importantly, no severe or life‐threatening adverse events were reported, and all events resolved with conservative management or dose modification (Table <xref rid="hsr272301-tbl-0001" ref-type="table">1</xref>).</p></sec></sec><sec id="hsr272301-sec-0180"><label>3.3</label><title>Palmoplantar Pustulosis‐Like Eruption</title><p>Two patients [<xref rid="hsr272301-bib-0059" ref-type="bibr">59</xref>, <xref rid="hsr272301-bib-0060" ref-type="bibr">60</xref>] showed PPP‐like lesions after using JAK inhibitors (Table <xref rid="hsr272301-tbl-0005" ref-type="table">5</xref>). Both had an underlying rheumatologic disease, but without a history of psoriasis or any other dermatologic disease. They were managed by lowering the same JAK inhibitor dosage and adding topical corticosteroids.</p><table-wrap position="float" id="hsr272301-tbl-0005" content-type="Table" orientation="portrait"><label>Table 5</label><caption><p>Palmoplantar pustulosis‐like eruption after treatment with JAK inhibitor.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><thead valign="bottom"><tr valign="bottom"><th align="left" valign="bottom" rowspan="1" colspan="1">
+<p>Study</p>
+</th><th rowspan="3" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Previous and JAK inhibitor treatment</th><th rowspan="3" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Effect</th><th rowspan="3" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Follow‐up</th><th rowspan="3" style="border-bottom:solid 1px #000000" align="center" valign="bottom" colspan="1">Final plan</th></tr><tr valign="bottom"><th align="left" valign="bottom" rowspan="1" colspan="1">Age‐sex</th></tr><tr style="border-bottom:solid 1px #000000" valign="bottom"><th align="left" valign="bottom" rowspan="1" colspan="1">Disease</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Shibata et al. [<xref rid="hsr272301-bib-0059" ref-type="bibr">59</xref>]</p>
+<p>25‐Female</p>
+<p>JIA</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Infliximab, Etanercept, Adalimumab</p>
+<p>Tofacitinib</p>
+<p>20 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">Sterile PPP developed after 10 days of initiation of tofacitinib and biopsy showed neutrophilic pustule under epidermis and leukocyte infiltration.</td><td align="left" valign="top" rowspan="1" colspan="1">After discontinuing tofacitinib, the patient's pustular eruption improved, but JIA worsened. Tofacitinib was then restarted, at which point the palmoplantar pustular lesions reappeared. While a topical betamethasone ointment provided some temporary relief, the pustular lesions gradually worsened over the next 3 months of continued tofacitinib treatment.</td><td align="left" valign="top" rowspan="1" colspan="1">Lowering the tofacitinib dosage to 5 mg every 2 days was adequate for joint symptoms also made the palmoplantar pustulosis‐like eruption more tolerable.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Koumaki et al. [<xref rid="hsr272301-bib-0060" ref-type="bibr">60</xref>]</p>
+<p>56‐Male</p>
+<p>Seropositive erosive RA</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">
+<p>Multiple DMARDs including methotrexate and leflunomide</p>
+<p>Baricitinib</p>
+<p>4 mg daily</p>
+</td><td align="left" valign="top" rowspan="1" colspan="1">After 5 years on baricitinib he developed thickened scaly skin with fissuring and pustules on both palms and soles. The histology revealed PPPP.</td><td align="left" valign="top" rowspan="1" colspan="1">After discontinuing baricitinib for 2 months and using topical emollients and clobetasol, the patient's PPPP improved significantly. However, when baricitinib 4 mg daily was restarted due to worsening rheumatoid arthritis, the PPPP reappeared within 14 days, indicating baricitinib was the likely cause of the cutaneous adverse reaction.</td><td align="left" valign="top" rowspan="1" colspan="1">Baricitinib dosage was lowered to 2 mg once daily, which was more tolerable for his skin condition.</td></tr></tbody></table><table-wrap-foot><fn id="hsr272301-tbl5-note-0001"><p>Abbreviations: DMARDs, disease‐modifying antirheumatic drugs; JIA, juvenile idiopathic arthritis; RA, rheumatoid arthritis.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap></sec><sec id="hsr272301-sec-0190"><label>3.4</label><title>Quality Assessment</title><p>Using the NHLBI tool, all four included studies demonstrated an overall low risk of bias. Domains D2 and D4 were consistently rated as low risk across all studies, indicating clear eligibility criteria and well‐described interventions. Minor variability was observed in D1 and D3, where several items were rated as not applicable or raised some concerns, primarily due to incomplete reporting (Figure <xref rid="hsr272301-fig-0002" ref-type="fig">2</xref>).</p><fig position="float" fig-type="Figure" id="hsr272301-fig-0002" orientation="portrait"><label>Figure 2</label><caption><p>Risk of bias assessment across four clinical studies using the NHLBI quality assessment tool.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="HSR2-9-e72301-g002.jpg"/></fig><p>In the evaluation of case reports using the Murad and colleagues quality assessment tool, a total of 31 case reports were analyzed across four methodological domains (D1–D4) along with an overall risk‐of‐bias assessment. Of the 31 studies, 26 (83.9%) were judged to have low overall risk of bias, 1 study (3.2%) was rated as moderate risk, and 3 studies (9.7%) were rated as high risk (Figure <xref rid="hsr272301-fig-0003" ref-type="fig">3</xref>).</p><fig position="float" fig-type="Figure" id="hsr272301-fig-0003" orientation="portrait"><label>Figure 3</label><caption><p>Domain‐level risk‐of‐bias assessment of the included case reports using the Murad et al. tool.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="HSR2-9-e72301-g001.jpg"/></fig></sec></sec><sec sec-type="discussion" id="hsr272301-sec-0200"><label>4</label><title>Discussion</title><p>In the present study, we evaluate the efficacy and safety of various JAK inhibitors for treating pustular lesions, including PPP and PP. The studies we included primarily consisted of case reports and case series documenting GPP, PPPP, and PPP, with four clinical studies specifically reporting on PPP. All patients with GPP and PPPP showed a complete response to all JAK inhibitors used, including tofacitinib, upadacitinib, and abrocitinib. Regarding PPP, 90.9% of patients achieved PPPASI‐50 with upadacitinib, and 72.4% achieved PPPASI‐50 with tofacitinib in clinical studies. In case reports, 88.1% of patients demonstrated a complete or near‐complete response to treatment with tofacitinib, upadacitinib, baricitinib, abrocitinib, and topical ruxolitinib. We also reported two cases of PPP‐like eruptions, associated with the use of two different JAK inhibitors.</p><p>Apart from paradoxical reactions with JAK inhibitors, various biologics have been associated with palmoplantar pustulosis and psoriasis‐like eruptions, including anti‐TNF‐α, anti‐IL‐17, anti‐IL12/23, and anti‐IL‐6 [<xref rid="hsr272301-bib-0061" ref-type="bibr">61</xref>, <xref rid="hsr272301-bib-0062" ref-type="bibr">62</xref>, <xref rid="hsr272301-bib-0063" ref-type="bibr">63</xref>, <xref rid="hsr272301-bib-0064" ref-type="bibr">64</xref>]. Although the exact pathomechanisms of these reactions remain unclear, it is postulated that an imbalance between TNF‐α inhibition and IFNα overproduction leads to an abnormal T‐cell response. Additionally, the JAK–STAT pathway may also contribute, as some interleukins are implicated when JAK inhibitors induce paradoxical eruptions [<xref rid="hsr272301-bib-0059" ref-type="bibr">59</xref>, <xref rid="hsr272301-bib-0060" ref-type="bibr">60</xref>, <xref rid="hsr272301-bib-0064" ref-type="bibr">64</xref>].</p><p>An increased expression of IL‐17 compared to IL‐12 and IL‐23 was noted in both PPP and PPPP. IL‐17, a proinflammatory cytokine, is considered a key immunopathogenic factor in PPP and PPPP, produced by both innate (neutrophils and mast cells) and adaptive (Th17) immune system [<xref rid="hsr272301-bib-0065" ref-type="bibr">65</xref>, <xref rid="hsr272301-bib-0066" ref-type="bibr">66</xref>]. Other key inflammatory factors are IL‐8, IL‐1α, IL‐1β, IL‐22, and TNF‐α [<xref rid="hsr272301-bib-0002" ref-type="bibr">2</xref>, <xref rid="hsr272301-bib-0008" ref-type="bibr">8</xref>].</p><p>Previous studies have demonstrated that IL‐19 is significantly upregulated in both the blood and skin of patients with PPP, suggesting its role as a key cytokine in the disease's pathogenesis. Unlike other major cytokines, IL‐19 is primarily secreted by monocytes, activated macrophages, and dendritic cells. Moreover, IL‐19 has potential as a predictive biomarker for treatment response, as its levels have been shown to significantly decrease following successful PPP therapy [<xref rid="hsr272301-bib-0067" ref-type="bibr">67</xref>].</p><p>Both PP and PPP are challenging diseases to treat. Various therapeutic methods have been employed, including topical treatments (e.g., steroids), phototherapy (narrowband‐ultraviolet B, psoralen and ultraviolet A), cyclosporine, methotrexate, apremilast, and biological therapies like anti‐TNF‐α and anti‐IL‐12/23 [<xref rid="hsr272301-bib-0009" ref-type="bibr">9</xref>, <xref rid="hsr272301-bib-0068" ref-type="bibr">68</xref>, <xref rid="hsr272301-bib-0069" ref-type="bibr">69</xref>]. However, biologics have shown more promising effectiveness and better tolerability [<xref rid="hsr272301-bib-0070" ref-type="bibr">70</xref>, <xref rid="hsr272301-bib-0071" ref-type="bibr">71</xref>].</p><p>Previous studies have identified anti‐TNF‐α and anti‐IL17 as the most effective biologics in treating PPP and PP, particularly at higher doses. However, increasing dosages may elevate the risk of adverse events, and the loss of responsiveness can occur during the course of therapy [<xref rid="hsr272301-bib-0070" ref-type="bibr">70</xref>, <xref rid="hsr272301-bib-0072" ref-type="bibr">72</xref>].</p><p>PP variants (GPP and PPPP) as well as PPP, may share common genetic markers such as IL‐36 receptor antagonist (IL‐36RN), CARD14, AP1S3, and ATG16L1. However, no association has been identified between PPP and the primary susceptible gene of psoriasis, PSORS1, although pustular forms of psoriasis are linked to this gene [<xref rid="hsr272301-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr272301-bib-0010" ref-type="bibr">10</xref>, <xref rid="hsr272301-bib-0073" ref-type="bibr">73</xref>]. Mutation in IL‐36RN and dysfunction in IL‐36 axis lead to the overproduction of IL‐36 in these diseases, significantly contributing to their onset [<xref rid="hsr272301-bib-0074" ref-type="bibr">74</xref>, <xref rid="hsr272301-bib-0075" ref-type="bibr">75</xref>]. Despite the differences in genetic foundation, both conditions can respond to shared treatments [<xref rid="hsr272301-bib-0070" ref-type="bibr">70</xref>].</p><p>Since understanding of the JAK–STAT pathway, the perspective on treating a range of autoimmune and autoinflammatory dermatological diseases has significantly evolved [<xref rid="hsr272301-bib-0076" ref-type="bibr">76</xref>, <xref rid="hsr272301-bib-0077" ref-type="bibr">77</xref>, <xref rid="hsr272301-bib-0078" ref-type="bibr">78</xref>, <xref rid="hsr272301-bib-0079" ref-type="bibr">79</xref>]. Induction of IL‐23 through JAK–STAT signaling pathway plays a crucial role in the development of immune‐mediated diseases, by influencing the activation and proliferation of memory T‐cells responsible for IL‐17 upregulation. Studies have shown that tofacitinib which is a JAK1/3 inhibitor [<xref rid="hsr272301-bib-0032" ref-type="bibr">32</xref>], inhibits the IL‐23/IL‐17 axis by blocking IL‐23 induced JAK–STAT signaling [<xref rid="hsr272301-bib-0080" ref-type="bibr">80</xref>, <xref rid="hsr272301-bib-0081" ref-type="bibr">81</xref>]. Other JAK inhibitors exert their pharmacological effects through various pathways. Baricitinib is a JAK1/2 inhibitor that regulates both innate and adaptive immunity by modulating Th2 responses and inhibiting type‐1 IFN, IL‐12, IL‐23, and IL‐2 [<xref rid="hsr272301-bib-0082" ref-type="bibr">82</xref>]. Upadacitinib is a selective JAK1 inhibitor that affects the activation of inflammatory T cells and reduce the inflammatory cytokines, including IL‐6, IL‐17, IL‐2, IL‐36, and IFNγ [<xref rid="hsr272301-bib-0022" ref-type="bibr">22</xref>]. Abrocitinib is also a selective JAK1 inhibitor that reduces the proliferation of Th2 cells by inhibiting the signaling of IL‐4 and IL‐13 [<xref rid="hsr272301-bib-0083" ref-type="bibr">83</xref>]. Since PPP, GPP, and PPPP share a common genetic and immunologic background, the mechanisms of action of each JAK inhibitor—whether through regulation or inhibition—can influence all of these diseases. This is particularly relevant as common inflammatory factors such as Th1, Th17, IL‐8, IL‐36, and interferons play key roles in the pathogenesis of the aforementioned conditions [<xref rid="hsr272301-bib-0014" ref-type="bibr">14</xref>].</p><p>Additionally, an inhibitory approach targeting the JAK–STAT signaling pathway was reported by Hammitzsch, in which RNA‐mediated silencing of all the JAK family members (JAK1, JAK2, JAK3, and TYK2) was performed in CD4<sup>+</sup> T‐cells. The study found that targeted JAK1, JAK3, and TYK2 inhibited the secretion of all IL‐17 classes (IL‐17A, IL‐17F, and IL‐22), whereas silencing of JAK2 did not significantly impact cytokine inhibition. Inhibition of STAT phosphorylation was achieved by silencing TYK2 (STAT5 inhibition), JAK2 (STAT3), and JAK1 and JAK2 (STAT1 and 3) [<xref rid="hsr272301-bib-0080" ref-type="bibr">80</xref>, <xref rid="hsr272301-bib-0084" ref-type="bibr">84</xref>]. Additionally, JAK inhibitor like tofacitinib have been shown to decrease the production of other involved inflammatory cytokines such as IL‐6, IL‐8, and Interferon (IFN)γ [<xref rid="hsr272301-bib-0085" ref-type="bibr">85</xref>, <xref rid="hsr272301-bib-0086" ref-type="bibr">86</xref>].</p><p>Among the common risk factors contributing to the onset of PPP, smoking and obesity are particularly influential. Smoking can increase the risk of PPP up to 32.7‐folds, with both the duration and amount of smoking being associated with disease severity. Although the exact pathoethiology remains unclear, it is believed that nicotine accumulation in sweat glands impairs neutrophil function and leads to overproduction of cytokines, such as IL‐8. Changes in the subunits of nicotinic acetylcholine receptors in keratinocytes and increased expression of interleukins like IL‐17 and IL‐36 represent additional pathological mechanisms through which smoking induces PPP [<xref rid="hsr272301-bib-0005" ref-type="bibr">5</xref>, <xref rid="hsr272301-bib-0087" ref-type="bibr">87</xref>]. Obesity is considered a low‐grade inflammatory state, and as the adipose tissue accumulate, the expression of inflammatory cytokines such as TNF‐α, IL‐17, IL‐8, and IL‐6 increases [<xref rid="hsr272301-bib-0088" ref-type="bibr">88</xref>]. In addition to diseases worsening, both risk factors can also pose challenges in the treatment course with JAK inhibitors. Other comorbidities frequently observed with PPP include hypertension, diabetes, dyslipidemia, psychological disorders, respiratory and thyroid diseases [<xref rid="hsr272301-bib-0007" ref-type="bibr">7</xref>].</p><p>Using nonselective, pan‐JAK inhibitors has been associated with unfavorable side effects, including infections [<xref rid="hsr272301-bib-0086" ref-type="bibr">86</xref>]. However, in our study, four out of five reported side effects were related to upadacitinib (27.4%), a selective, second‐generation JAK1 inhibitor. In more than 5% of patients treated with upadacitinib, following adverse events were commonly reported: infections (upper respiratory tract infection), nausea, diarrhea, headache, acne, and atopic dermatitis [<xref rid="hsr272301-bib-0089" ref-type="bibr">89</xref>]. All JAK inhibitors can lead to decreased neutrophil and lymphocyte counts, a dose‐dependent incidence of herpes infection and impaired lipid profile [<xref rid="hsr272301-bib-0086" ref-type="bibr">86</xref>, <xref rid="hsr272301-bib-0090" ref-type="bibr">90</xref>, <xref rid="hsr272301-bib-0091" ref-type="bibr">91</xref>, <xref rid="hsr272301-bib-0092" ref-type="bibr">92</xref>]. More serious adverse events, such as major adverse cardiovascular events, stroke, and malignancy, are less common but still possible. Therefore, considerations, such as immunizations and complete laboratory analysis, should be made prior to treatment with JAK inhibitors, especially in elderly patients [<xref rid="hsr272301-bib-0093" ref-type="bibr">93</xref>, <xref rid="hsr272301-bib-0094" ref-type="bibr">94</xref>, <xref rid="hsr272301-bib-0095" ref-type="bibr">95</xref>].</p><p>The most prominent limitation of this study is its small sample size, which restricts meaningful comparisons of efficacy among different JAK inhibitors. Additionally, case reports constitute a substantial portion of the included literature, reducing the overall quality of the evidence. Future research on PP should prioritize controlled trials evaluating various JAK inhibitors. Also, the diagnostic classification of PPP and PPPP was based on the diagnosis reported by the original authors.</p></sec><sec sec-type="conclusions" id="hsr272301-sec-0210"><label>5</label><title>Conclusion</title><p>PP and PPP are challenging inflammatory skin diseases with a variety of treatment options, including nonbiologics and biologics. However, no definitive treatment has been established for a complete cure. In recent years, new biological therapies have shown promising results in trials, but outcomes can vary due to different factors. In some cases, biological therapies may need to be administered at higher doses, which could increase risk of adverse events. Additionally, prolonged use of biological treatments may lead to a loss of responsiveness over time, as observed in some studies. A review of articles regarding the use of JAK inhibitors in these conditions indicates a higher response rate over a shorter treatment period compared to biologics. Moreover, side effects were generally limited and manageable in most cases. However, since the studies were primarily composed of case reports and case series, future trials with JAK inhibitors are necessary to achieve more reliable comparisons.</p></sec><sec id="hsr272301-sec-0220"><title>Author Contributions</title><p>The specific contributions of each author to this study are as follows: Conceptualization: Mahshid Sadat Ansari and Seyed Mohammad Vahabi. Data curation: Seyed Mohammad Vahabi and Saeed Bahramian. Methodology: Saeed Bahramian, Seyed Mohammad Vahabi, and Elnaz Pourgholi. Investigation: Mahshid Sadat Ansari and Nasim Tootoonchi. Supervision: Mahshid Sadat Ansari and Nasim Tootoonchi. Validation: Sama Heidari and Saeed Bahramian. Project administration: Mahshid Sadat Ansari and Seyed Mohammad Vahabi. Writing – original draft preparation: Seyed Mohammad Vahabi, Sama Heidari, Mahshid Sadat Ansari, Saeed Bahramian, and Nasim Tootoonchi. Writing – review and editing: Seyed Mohammad Vahabi, Mahshid Sadat Ansari, Sama Heidari, and Elnaz Pourgholi.</p></sec><sec id="hsr272301-sec-0230"><title>Funding</title><p>The authors have nothing to report.</p></sec><sec id="hsr272301-sec-0240"><title>Disclosure</title><p>The lead author Seyed Mohammad Vahabi affirms that this manuscript is an honest, accurate, and transparent account of the study being reported; that no important aspects of the study have been omitted; and that any discrepancies from the study as planned (and, if relevant, registered) have been explained.</p></sec><sec id="hsr272301-sec-0250"><title>Ethics Statement</title><p>The authors have nothing to report.</p></sec><sec sec-type="COI-statement" id="hsr272301-sec-0260"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="hsr272301-suppl-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>Supplementary File 1.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="HSR2-9-e72301-s002.docx" position="float" orientation="portrait"/></supplementary-material><supplementary-material id="hsr272301-suppl-0002" position="float" content-type="local-data" orientation="portrait"><caption><p>Supplementary File 2.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="HSR2-9-e72301-s001.docx" position="float" orientation="portrait"/></supplementary-material></sec></body><back><sec sec-type="data-availability" id="hsr272301-sec-0280"><title>Data Availability Statement</title><p>Data sharing is not applicable to this article, as no new data were created or analyzed in this study.</p></sec><ref-list content-type="cited-references" id="hsr272301-bibl-0001"><title>References</title><ref id="hsr272301-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="hsr272301-cit-0001">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Misiak‐Galazka</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Wolska</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Rudnicka</surname>
+</string-name>, “<article-title>What Do We Know About Palmoplantar Pustulosis?</article-title>,” <source>Journal of the European Academy of Dermatology and Venereology</source>
+<volume>31</volume>, no. <issue>1</issue> (<year>2017</year>): <fpage>38</fpage>–<lpage>44</lpage>.<pub-id pub-id-type="pmid">27521275</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/jdv.13846</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="hsr272301-cit-0002">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Murakami</surname>
+</string-name> and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Terui</surname>
+</string-name>, “<article-title>Palmoplantar Pustulosis: Current Understanding of Disease Definition and Pathomechanism</article-title>,” <source>Journal of Dermatological Science</source>
+<volume>98</volume>, no. <issue>1</issue> (<year>2020</year>): <fpage>13</fpage>–<lpage>19</lpage>.<pub-id pub-id-type="pmid">32201085</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jdermsci.2020.03.003</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="hsr272301-cit-0003">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Sood</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Abduelmula</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Maliyar</surname>
+</string-name>, et al., “<article-title>Use of Janus Kinase Inhibitor Treatment for Palmoplantar Pustulosis: An Evidence‐Based Review</article-title>,” <source>Journal of Cutaneous Medicine and Surgery</source>
+<volume>28</volume>, no. <issue>1</issue> (<year>2024</year>): <fpage>86</fpage>–<lpage>87</lpage>.<pub-id pub-id-type="pmid">37937880</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/12034754231211342</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="hsr272301-cit-0004">
+<string-name name-style="western">
+<given-names>A. M. G.</given-names>
+<surname>Brunasso</surname>
+</string-name> and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Massone</surname>
+</string-name>, “<article-title>Recent Advances in Palmoplantar Pustulosis</article-title>,” <source>Faculty Reviews</source>
+<volume>10</volume> (<year>2021</year>): <fpage>62</fpage>.<pub-id pub-id-type="pmid">34409425</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.12703/r/10-62</pub-id><pub-id pub-id-type="pmcid">PMC8361749</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="hsr272301-cit-0005">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Heidemeyer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>May Lee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Cazzaniga</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Yawalkar</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Naldi</surname>
+</string-name>, “<article-title>Palmoplantar Pustulosis: A Systematic Review of Risk Factors and Therapies</article-title>,” <source>Psoriasis: Targets and Therapy</source>
+<volume>13</volume> (<year>2023</year>): <fpage>33</fpage>–<lpage>58</lpage>.<pub-id pub-id-type="pmid">37772169</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2147/PTT.S400402</pub-id><pub-id pub-id-type="pmcid">PMC10522454</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="hsr272301-cit-0006">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Yamamoto</surname>
+</string-name>, “<article-title>Extra‐Palmoplantar Lesions Associated With Palmoplantar Pustulosis</article-title>,” <source>Journal of the European Academy of Dermatology and Venereology</source>
+<volume>23</volume>, no. <issue>11</issue> (<year>2009</year>): <fpage>1227</fpage>–<lpage>1232</lpage>.<pub-id pub-id-type="pmid">19453807</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/j.1468-3083.2009.03296.x</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="hsr272301-cit-0007">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Yamamoto</surname>
+</string-name>, “<article-title>Similarity and Difference Between Palmoplantar Pustulosis and Pustular Psoriasis</article-title>,” <source>Journal of Dermatology</source>
+<volume>48</volume>, no. <issue>6</issue> (<year>2021</year>): <fpage>750</fpage>–<lpage>760</lpage>.<pub-id pub-id-type="pmid">33650702</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/1346-8138.15826</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="hsr272301-cit-0008">
+<string-name name-style="western">
+<given-names>J.‐M.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.‐M.</given-names>
+<surname>Wang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H.‐Z.</given-names>
+<surname>Jin</surname>
+</string-name>, “<article-title>An Update on Therapeutic Options for Palmoplantar Pustulosis: A Narrative Review and Expert Recommendations</article-title>,” <source>Expert Review of Clinical Immunology</source>
+<volume>19</volume>, no. <issue>5</issue> (<year>2023</year>): <fpage>499</fpage>–<lpage>516</lpage>.<pub-id pub-id-type="pmid">36970858</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/1744666X.2023.2185775</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="hsr272301-cit-0009">
+<string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Raposo</surname>
+</string-name> and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Torres</surname>
+</string-name>, “<article-title>Palmoplantar Psoriasis and Palmoplantar Pustulosis: Current Treatment and Future Prospects</article-title>,” <source>American Journal of Clinical Dermatology</source>
+<volume>17</volume> (<year>2016</year>): <fpage>349</fpage>–<lpage>358</lpage>.<pub-id pub-id-type="pmid">27113059</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s40257-016-0191-7</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="hsr272301-cit-0010">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Freitas</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. A.</given-names>
+<surname>Rodrigues</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Torres</surname>
+</string-name>, “<article-title>Diagnosis, Screening and Treatment of Patients With Palmoplantar Pustulosis (PPP): A Review of Current Practices and Recommendations</article-title>,” <source>Clinical, Cosmetic and Investigational Dermatology</source>
+<volume>13</volume> (<year>2020</year>): <fpage>561</fpage>–<lpage>578</lpage>.<pub-id pub-id-type="pmid">32884319</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2147/CCID.S240607</pub-id><pub-id pub-id-type="pmcid">PMC7439281</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="hsr272301-cit-0011">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Hagforsen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Hedstrand</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Nyberg</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Michaëlsson</surname>
+</string-name>, “<article-title>Novel Findings of Langerhans Cells and Interleukin‐17 Expression in Relation to the Acrosyringium and Pustule in Palmoplantar Pustulosis</article-title>,” <source>British Journal of Dermatology</source>
+<volume>163</volume>, no. <issue>3</issue> (<year>2010</year>): <fpage>572</fpage>–<lpage>579</lpage>.<pub-id pub-id-type="pmid">20426778</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/j.1365-2133.2010.09819.x</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="hsr272301-cit-0012">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Frysz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Patel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. O. Y.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. E. M.</given-names>
+<surname>Griffiths</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. B.</given-names>
+<surname>Warren</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D. M.</given-names>
+<surname>Ashcroft</surname>
+</string-name>, “<article-title>Prevalence, Incidence, Mortality and Healthcare Resource Use for Generalized Pustular Psoriasis, Palmoplantar Pustulosis and Plaque Psoriasis in England: A Population‐Based Cohort Study</article-title>,” <source>British Journal of Dermatology</source>
+<volume>191</volume> (<year>2024</year>): <elocation-id>ljae217</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/bjd/ljae217</pub-id><pub-id pub-id-type="pmid">38775029</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="hsr272301-cit-0013">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Bissonnette</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Suárez‐Fariñas</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Li</surname>
+</string-name>, et al., “<article-title>Based on Molecular Profiling of Gene Expression, Palmoplantar Pustulosis and Palmoplantar Pustular Psoriasis Are Highly Related Diseases That Appear to Be Distinct From Psoriasis Vulgaris</article-title>,” <source>PLoS One</source>
+<volume>11</volume>, no. <issue>5</issue> (<year>2016</year>): <elocation-id>e0155215</elocation-id>.<pub-id pub-id-type="pmid">27152848</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0155215</pub-id><pub-id pub-id-type="pmcid">PMC4859542</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="hsr272301-cit-0014">
+<string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Gooderham</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. S.</given-names>
+<surname>Van Voorhees</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. G.</given-names>
+<surname>Lebwohl</surname>
+</string-name>, “<article-title>An Update on Generalized Pustular Psoriasis</article-title>,” <source>Expert Review of Clinical Immunology</source>
+<volume>15</volume>, no. <issue>9</issue> (<year>2019</year>): <fpage>907</fpage>–<lpage>919</lpage>.<pub-id pub-id-type="pmid">31486687</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/1744666X.2019.1648209</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="hsr272301-cit-0015">
+<string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Genovese</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Moltrasio</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Cassano</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. A.</given-names>
+<surname>Maronese</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. A.</given-names>
+<surname>Vena</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A. V.</given-names>
+<surname>Marzano</surname>
+</string-name>, “<article-title>Pustular Psoriasis: From Pathophysiology to Treatment</article-title>,” <source>Biomedicines</source>
+<volume>9</volume>, no. <issue>12</issue> (<year>2021</year>): <fpage>1746</fpage>.<pub-id pub-id-type="pmid">34944562</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/biomedicines9121746</pub-id><pub-id pub-id-type="pmcid">PMC8698272</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="hsr272301-cit-0016">
+<string-name name-style="western">
+<given-names>C. M.</given-names>
+<surname>Lin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. A.</given-names>
+<surname>Cooles</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Isaacs</surname>
+</string-name>, “<article-title>Basic Mechanisms of JAK Inhibition</article-title>,” <source>Mediterranean Journal of Rheumatology</source>
+<volume>31</volume>, no. <issue>Приложение 1</issue> (<year>2020</year>): <fpage>100</fpage>–<lpage>104</lpage>.<pub-id pub-id-type="pmid">32676567</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.31138/mjr.31.1.100</pub-id><pub-id pub-id-type="pmcid">PMC7361186</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="hsr272301-cit-0017">
+<string-name name-style="western">
+<given-names>F. R.</given-names>
+<surname>Spinelli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Meylan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. J.</given-names>
+<surname>O'Shea</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Gadina</surname>
+</string-name>, “<article-title>JAK Inhibitors: Ten Years After</article-title>,” <source>European Journal of Immunology</source>
+<volume>51</volume>, no. <issue>7</issue> (<year>2021</year>): <fpage>1615</fpage>–<lpage>1627</lpage>.<pub-id pub-id-type="pmid">33930196</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/eji.202048922</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="hsr272301-cit-0018">
+<string-name name-style="western">
+<given-names>D. P.</given-names>
+<surname>McLornan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>Pope</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Gotlib</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C. N.</given-names>
+<surname>Harrison</surname>
+</string-name>, “<article-title>Current and Future Status of JAK Inhibitors</article-title>,” <source>Lancet</source>
+<volume>398</volume>, no. <issue>10302</issue> (<year>2021</year>): <fpage>803</fpage>–<lpage>816</lpage>.<pub-id pub-id-type="pmid">34454676</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/S0140-6736(21)00438-4</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="hsr272301-cit-0019">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Garcia‐Melendo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Cubiró</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Puig</surname>
+</string-name>, “<article-title>Janus Kinase Inhibitors in Dermatology: Part 1—General Considerations and Applications in Vitiligo and Alopecia Areata</article-title>,” <source>Actas Dermo‐Sifiliográficas</source>
+<volume>112</volume>, no. <issue>6</issue> (<year>2021</year>): <fpage>503</fpage>–<lpage>515</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.adengl.2021.05.008</pub-id><pub-id pub-id-type="pmid">34030992</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="hsr272301-cit-0020">
+<string-name name-style="western">
+<given-names>P. C.</given-names>
+<surname>Taylor</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Choy</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Baraliakos</surname>
+</string-name>, et al., “<article-title>Differential Properties of Janus Kinase Inhibitors in the Treatment of Immune‐Mediated Inflammatory Diseases</article-title>,” <source>Rheumatology</source>
+<volume>63</volume>, no. <issue>2</issue> (<year>2024</year>): <fpage>298</fpage>–<lpage>308</lpage>.<pub-id pub-id-type="pmid">37624925</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/rheumatology/kead448</pub-id><pub-id pub-id-type="pmcid">PMC10836981</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="hsr272301-cit-0021">
+<string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Page</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>McKenzie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. M.</given-names>
+<surname>Bossuyt</surname>
+</string-name>, et al., “<article-title>The PRISMA 2020 Statement: An Updated Guideline for Reporting Systematic Reviews</article-title>,” <source>BMJ</source>
+<volume>372</volume> (<year>2021</year>).<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/bmj.n71</pub-id><pub-id pub-id-type="pmcid">PMC8005924</pub-id><pub-id pub-id-type="pmid">33782057</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="hsr272301-cit-0022">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Du</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Lv</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Cao</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Min</surname>
+</string-name>, “<article-title>Successful Treatment of Refractory Palmoplantar Pustulosis by Upadacitinib: Report of 28 Patients</article-title>,” <source>Frontiers in Medicine</source>
+<volume>11</volume> (<year>2024</year>): <elocation-id>1476793</elocation-id>.<pub-id pub-id-type="pmid">39568752</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fmed.2024.1476793</pub-id><pub-id pub-id-type="pmcid">PMC11576273</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="hsr272301-cit-0023">
+<string-name name-style="western">
+<given-names>M. H.</given-names>
+<surname>Murad</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Sultan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Haffar</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Bazerbachi</surname>
+</string-name>, “<article-title>Methodological Quality and Synthesis of Case Series and Case Reports</article-title>,” <source>BMJ Evidence‐Based Medicine</source> (<year>2018</year>).<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/bmjebm-2017-110853</pub-id><pub-id pub-id-type="pmcid">PMC6234235</pub-id><pub-id pub-id-type="pmid">29420178</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="hsr272301-cit-0024">
+<string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Kailani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Aldahash</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Abu‐Hilal</surname>
+</string-name>, “<article-title>Successful Treatment of Refractory Palmoplantar Pustulosis Using JAK‐1 Inhibitors and TYK‐2 Inhibitors: A Real‐World Retrospective Study</article-title>,” <source>Advances in Dermatology and Allergology</source>
+<volume>42</volume>, no. <issue>1</issue> (<year>2025</year>): <fpage>320</fpage>–<lpage>321</lpage>.<pub-id pub-id-type="pmid">40672725</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.5114/ada.2025.152062</pub-id><pub-id pub-id-type="pmcid">PMC12262027</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="hsr272301-cit-0025">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Shreya</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. P.</given-names>
+<surname>Asati</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. N.</given-names>
+<surname>Rout</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A. M.</given-names>
+<surname>Lakshman</surname>
+</string-name>, “<article-title>Novel Use of Tofacitinib in the Recalcitrant Adult Generalized Pustular Psoriasis</article-title>,” <source>Indian Journal of Drugs in Dermatology</source>
+<volume>8</volume>, no. <issue>2</issue> (<year>2022</year>): <fpage>98</fpage>–<lpage>100</lpage>.</mixed-citation></ref><ref id="hsr272301-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="hsr272301-cit-0026">
+<string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Yan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Zang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Yang</surname>
+</string-name>, “<article-title>A Case of Refractory Generalized Pustular Psoriasis Treated With Upadacitinib</article-title>,” <source>Clinical and Experimental Dermatology</source>
+<volume>49</volume>, no. <issue>2</issue> (<year>2024</year>): <fpage>170</fpage>–<lpage>172</lpage>.<pub-id pub-id-type="pmid">37804531</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/ced/llad341</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="hsr272301-cit-0027">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Xiaoyuan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Lin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Xinyu</surname>
+</string-name>, et al., “<article-title>Successful Treatment of Generalized Pustular Psoriasis Coexisting With Pityriasis Rubra Pilaris With Upadacitinib</article-title>,” <source>Indian Journal of Pediatrics</source>
+<volume>91</volume>, no. <issue>12</issue> (<year>2024</year>): <fpage>1296</fpage>.<pub-id pub-id-type="pmid">39085729</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s12098-024-05214-x</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="hsr272301-cit-0028">
+<string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>He</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Tang</surname>
+</string-name>, “<article-title>Case Report: Efficacy of Tofacitinib in the Treatment of Generalized Pustular Psoriasis</article-title>,” <source>Frontiers in Medicine</source>
+<volume>12</volume> (<year>2025</year>): <elocation-id>1518583</elocation-id>.<pub-id pub-id-type="pmid">40034382</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fmed.2025.1518583</pub-id><pub-id pub-id-type="pmcid">PMC11872701</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="hsr272301-cit-0029">
+<string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Lu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Li</surname>
+</string-name>, “<article-title>Abrocitinib Treatment for Localized Type of Generalized Pustular Psoriasis: A Case Report</article-title>,” <source>Clinical, Cosmetic and Investigational Dermatology</source>
+<volume>18</volume> (<year>2025</year>): <fpage>663</fpage>–<lpage>668</lpage>.<pub-id pub-id-type="pmid">40129611</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2147/CCID.S517299</pub-id><pub-id pub-id-type="pmcid">PMC11932029</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0030"><label>30</label><mixed-citation publication-type="book" id="hsr272301-cit-0030">
+<person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Juliane</surname>
+</string-name>
+</person-group> and <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Markus</surname>
+</string-name>
+</person-group>, eds., “<part-title>Immediate Response of Therapy‐Refractory Palmoplantar Pustular Psoriasis and Psoriasis Arthritis to Tofacitinib</part-title>,” in <source>Swiss Medical Weekly</source> (<publisher-name>EMH Swiss Medical Publishers Ltd</publisher-name>, <year>2016</year>).</mixed-citation></ref><ref id="hsr272301-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="hsr272301-cit-0031">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Muzumdar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Leonardi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Strober</surname>
+</string-name>, “<article-title>Tofacitinib for the Treatment of Refractory Palmoplantar Psoriasis: A Case Series</article-title>,” <source>Journal of Psoriasis and Psoriatic Arthritis</source>
+<volume>6</volume>, no. <issue>2</issue> (<year>2021</year>): <fpage>93</fpage>–<lpage>98</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/24755303231195857</pub-id><pub-id pub-id-type="pmcid">PMC11361534</pub-id><pub-id pub-id-type="pmid">39295821</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="hsr272301-cit-0032">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Koga</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Sato</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Umeda</surname>
+</string-name>, et al., “<article-title>Successful Treatment of Palmoplantar Pustulosis With Rheumatoid Arthritis, With Tofacitinib: Impact of This JAK Inhibitor on T‐Cell Differentiation</article-title>,” <source>Clinical Immunology</source>
+<volume>173</volume> (<year>2016</year>): <fpage>147</fpage>–<lpage>148</lpage>.<pub-id pub-id-type="pmid">27720846</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.clim.2016.10.003</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="hsr272301-cit-0033">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Haynes</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Topham</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Hagstrom</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Greiling</surname>
+</string-name>, “<article-title>Tofacitinib for the Treatment of Recalcitrant Palmoplantar Pustulosis: A Case Report</article-title>,” <source>Australasian Journal of Dermatology</source>
+<volume>61</volume>, no. <issue>1</issue> (<year>2020</year>).<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/ajd.13117</pub-id><pub-id pub-id-type="pmid">31318041</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="hsr272301-cit-0034">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Mössner</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Hoff</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Mohr</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Wilsmann‐Theis</surname>
+</string-name>, “<article-title>Successful Therapy of Palmoplantar Pustulosis With Tofacitinib—Report on Three Cases</article-title>,” <source>Dermatologic Therapy</source>
+<volume>33</volume>, no. <issue>4</issue> (<year>2020</year>): <elocation-id>e13753</elocation-id>.<pub-id pub-id-type="pmid">32495413</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/dth.13753</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="hsr272301-cit-0035">
+<string-name name-style="western">
+<given-names>Y. A.</given-names>
+<surname>Wang</surname>
+</string-name> and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Rosenbach</surname>
+</string-name>, “<article-title>Successful Treatment of Refractory Tumor Necrosis Factor Inhibitor‐Induced Palmoplantar Pustulosis With Tofacitinib: Report of Case</article-title>,” <source>JAAD Case Reports</source>
+<volume>6</volume>, no. <issue>2</issue> (<year>2020</year>): <fpage>115</fpage>–<lpage>118</lpage>.<pub-id pub-id-type="pmid">32016154</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jdcr.2019.12.006</pub-id><pub-id pub-id-type="pmcid">PMC6992880</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="hsr272301-cit-0036">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Imafuku</surname>
+</string-name> and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Maeyama</surname>
+</string-name>, “<article-title>Remission of Anti‐Tumor Necrosis Factor‐α Antibody‐Induced Palmoplantar Pustulosis With the Janus Kinase Inhibitor Baricitinib in a Patient With Rheumatoid Arthritis</article-title>,” <source>Journal of Dermatology</source>
+<volume>48</volume>, no. <issue>5</issue> (<year>2021</year>): <fpage>e240</fpage>–<lpage>e241</lpage>.<pub-id pub-id-type="pmid">33745215</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/1346-8138.15860</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="hsr272301-cit-0037">
+<string-name name-style="western">
+<given-names>F. M.</given-names>
+<surname>Gaiani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Malagoli</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C. G.</given-names>
+<surname>Carrera</surname>
+</string-name>, “<article-title>Palmoplantar Pustulosis Successfully Treated With Upadacitinib: Report of Three Cases</article-title>,” <source>Australasian Journal of Dermatology</source>
+<volume>64</volume>, no. <issue>4</issue> (<year>2023</year>): <fpage>568</fpage>–<lpage>570</lpage>.<pub-id pub-id-type="pmid">37607109</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/ajd.14142</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="hsr272301-cit-0038">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Gleeson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. N. W. N.</given-names>
+<surname>Barker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Capon</surname>
+</string-name>, et al., “<article-title>Are Janus Kinase Inhibitors an Effective Treatment for Palmoplantar Pustulosis? A Critically Appraised Topic</article-title>,” <source>British Journal of Dermatology</source>
+<volume>188</volume>, no. <issue>4</issue> (<year>2023</year>): <fpage>471</fpage>–<lpage>473</lpage>.<pub-id pub-id-type="pmid">36715624</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/bjd/ljac130</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="hsr272301-cit-0039">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Mohr</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Rahbar Kooybaran</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. P.</given-names>
+<surname>Schön</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Mössner</surname>
+</string-name>, “<article-title>Response of Palmoplantar Pustulosis to Upadacitinib</article-title>,” <source>JDDG: Journal der Deutschen Dermatologischen Gesellschaft</source>
+<volume>21</volume>, no. <issue>3</issue> (<year>2023</year>): <fpage>280</fpage>–<lpage>282</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/ddg.14969</pub-id><pub-id pub-id-type="pmid">36730648</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="hsr272301-cit-0040">
+<string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Murray</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Barry</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Roche</surname>
+</string-name>, “<article-title>BI22 Successful Treatment of Antitumour Necrosis Factor‐α‐induced Paradoxical Palmoplantar Pustulosis With Tofacitinib</article-title>,” <source>British Journal of Dermatology</source>
+<volume>188</volume>, no. <issue>Suppl_4</issue> (<year>2023</year>): <elocation-id>ljad113.90</elocation-id>.</mixed-citation></ref><ref id="hsr272301-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="hsr272301-cit-0041">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Rahbar Kooybaran</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Tsianakas</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Assaf</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Mohr</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Wilsmann‐Theis</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Mössner</surname>
+</string-name>, “<article-title>Response of Palmoplantar Pustulosis to Upadacitinib: A Case Series of Five Patients</article-title>,” <source>JDDG: Journal der Deutschen Dermatologischen Gesellschaft</source>
+<volume>21</volume>, no. <issue>11</issue> (<year>2023</year>): <fpage>1387</fpage>–<lpage>1392</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/ddg.15176</pub-id><pub-id pub-id-type="pmid">37605445</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0042"><label>42</label><mixed-citation publication-type="journal" id="hsr272301-cit-0042">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Lu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Liu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Tian</surname>
+</string-name>, “<article-title>Three Cases With Palmoplantar Pustulosis Successfully Treated by Tofacitinib</article-title>,” <source>China Journal of Leprosy and Skin Diseases</source>
+<volume>39</volume>, no. <issue>6</issue> (<year>2023</year>): <fpage>397</fpage>–<lpage>402</lpage>.</mixed-citation></ref><ref id="hsr272301-bib-0043"><label>43</label><mixed-citation publication-type="journal" id="hsr272301-cit-0043">
+<string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Yang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Wei</surname>
+</string-name>, “<article-title>Refractory Palmoplantar Pustulosis Successfully Treated With JAK Inhibitor Tofacitinib: A Case Series</article-title>,” <source>Infection and Drug Resistance</source>
+<volume>16</volume> (<year>2023</year>): <fpage>5165</fpage>–<lpage>5172</lpage>.<pub-id pub-id-type="pmid">37581169</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2147/IDR.S421299</pub-id><pub-id pub-id-type="pmcid">PMC10423576</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0044"><label>44</label><mixed-citation publication-type="journal" id="hsr272301-cit-0044">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Qian</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Ma</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Hou</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Li</surname>
+</string-name>, “<article-title>Secukinumab‐Induced Alopecia Areata Successfully Treated With Tofacitinib in a Patient With Palmoplantar Pustulosis</article-title>,” <source>Clinical, Cosmetic and Investigational Dermatology</source>
+<volume>16</volume> (<year>2023</year>): <fpage>2879</fpage>–<lpage>2883</lpage>.<pub-id pub-id-type="pmid">37869531</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2147/CCID.S430156</pub-id><pub-id pub-id-type="pmcid">PMC10588803</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0045"><label>45</label><mixed-citation publication-type="journal" id="hsr272301-cit-0045">
+<string-name name-style="western">
+<given-names>Z.‐Y.‐O.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.‐Y.</given-names>
+<surname>Mi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.‐Y.</given-names>
+<surname>Wang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Li</surname>
+</string-name>, “<article-title>Palmoplantar Pustulosis With Psoriatic Arthritis Ineffective to Interleukin‐17 Inhibitors: Two Patients Successfully Treated With Upadacitinib</article-title>,” <source>Journal of Dermatological Treatment</source>
+<volume>34</volume>, no. <issue>1</issue> (<year>2023</year>): <elocation-id>2280508</elocation-id>.<pub-id pub-id-type="pmid">37968926</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/09546634.2023.2280508</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0046"><label>46</label><mixed-citation publication-type="journal" id="hsr272301-cit-0046">
+<string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Gao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Xie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Yan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Zhao</surname>
+</string-name>, “<article-title>Palmoplantar Pustulosis Successfully Treated With Abrocitinib: A Case Report</article-title>,” <source>China Journal of Leprosy and Skin Diseases</source>
+<volume>40</volume>, no. <issue>7</issue> (<year>2024</year>): <fpage>508</fpage>–<lpage>510</lpage>.</mixed-citation></ref><ref id="hsr272301-bib-0047"><label>47</label><mixed-citation publication-type="journal" id="hsr272301-cit-0047">
+<string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Hu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Wu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Lian</surname>
+</string-name>, “<article-title>Treatment of Severely Itchy Scalp Psoriasis and Palmoplantar Pustulosis With Unsatisfied Response to Secukinumab, Adalimumab or Ustekinumab Using Upadacitinib: A Report of Two Cases</article-title>,” <source>Journal of Dermatology</source>
+<volume>51</volume>, no. <issue>5</issue> (<year>2024</year>): <fpage>e151</fpage>–<lpage>e153</lpage>.<pub-id pub-id-type="pmid">38031884</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/1346-8138.17046</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0048"><label>48</label><mixed-citation publication-type="journal" id="hsr272301-cit-0048">
+<string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Chen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Liu</surname>
+</string-name>, “<article-title>A Case of Palmoplantar Pustulosis With Atopic Dermatitis: Baricitinib Is a Safe and Effective Treatment</article-title>,” <source>Indian Journal of Dermatology, Venereology and Leprology</source>
+<volume>90</volume>, no. <issue>5</issue> (<year>2024</year>): <fpage>668</fpage>–<lpage>670</lpage>.<pub-id pub-id-type="pmid">38841959</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.25259/IJDVL_884_2023</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0049"><label>49</label><mixed-citation publication-type="journal" id="hsr272301-cit-0049">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Fan</surname>
+</string-name> and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Yin</surname>
+</string-name>, “<article-title>Janus Kinase Inhibitor Tofacitinib Successfully Treated Palmoplantar Pustulosis After Switching From Secukinumab: A Case Report and Review of the Literature</article-title>,” <source>International Immunopharmacology</source>
+<volume>139</volume> (<year>2024</year>): <elocation-id>112762</elocation-id>.<pub-id pub-id-type="pmid">39074417</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.intimp.2024.112762</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0050"><label>50</label><mixed-citation publication-type="journal" id="hsr272301-cit-0050">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Cramer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Wellmann</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. P.</given-names>
+<surname>Schön</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Mössner</surname>
+</string-name>, “<article-title>Successful Treatment of Palmoplantar Pustulosis With Topical Ruxolitinib</article-title>,” <source>JDDG: Journal der Deutschen Dermatologischen Gesellschaft</source>
+<volume>23</volume> (<year>2025</year>): <fpage>1591</fpage>–<lpage>1593</lpage>.<pub-id pub-id-type="pmid">40847898</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/ddg.15854</pub-id><pub-id pub-id-type="pmcid">PMC12697319</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0051"><label>51</label><mixed-citation publication-type="journal" id="hsr272301-cit-0051">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Dong</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Meng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Wei</surname>
+</string-name>, et al., “<article-title>Palmoplantar Pustulosis During Pregnancy Was Successfully Treated With Tofacitinib: A Case Report</article-title>,” <source>Skin Appendage Disorders</source>
+<volume>11</volume> (<year>2025</year>): <fpage>335</fpage>–<lpage>338</lpage>.<pub-id pub-id-type="pmid">40771445</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1159/000544921</pub-id><pub-id pub-id-type="pmcid">PMC12324728</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0052"><label>52</label><mixed-citation publication-type="journal" id="hsr272301-cit-0052">
+<string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Gu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Song</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Lin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Li</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Ying</surname>
+</string-name>, “<article-title>Improvement in Hand Joint Flexibility Following Upadacitinib Treatment of Palmoplantar Pustulosis in Adolescents</article-title>,” <source>International Journal of Rheumatic Diseases</source>
+<volume>28</volume>, no. <issue>3</issue> (<year>2025</year>): <elocation-id>e70132</elocation-id>.<pub-id pub-id-type="pmid">40033569</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/1756-185X.70132</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0053"><label>53</label><mixed-citation publication-type="journal" id="hsr272301-cit-0053">
+<string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Gu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Lin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Fu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Li</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Ying</surname>
+</string-name>, “<article-title>Short‐Term Relief With Upadacitinib: A Case Report of Palmoplantar Pustulosis in a Pediatric Patient</article-title>,” <source>Clinical, Cosmetic and Investigational Dermatology</source>
+<volume>18</volume> (<year>2025</year>): <fpage>797</fpage>–<lpage>800</lpage>.<pub-id pub-id-type="pmid">40196724</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2147/CCID.S494567</pub-id><pub-id pub-id-type="pmcid">PMC11974563</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0054"><label>54</label><mixed-citation publication-type="journal" id="hsr272301-cit-0054">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Yu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Yao</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Wang</surname>
+</string-name>, “<article-title>Case Report: Successful Management of Refractory Palmoplantar Pustulosis With Upadacitinib</article-title>,” <source>Frontiers in Immunology</source>
+<volume>16</volume> (<year>2025</year>): <elocation-id>1476584</elocation-id>.<pub-id pub-id-type="pmid">40129975</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fimmu.2025.1476584</pub-id><pub-id pub-id-type="pmcid">PMC11931074</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0055"><label>55</label><mixed-citation publication-type="journal" id="hsr272301-cit-0055">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Hu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Lai</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Lee</surname>
+</string-name>, “<article-title>Successful Treatment of Tumour Necrosis Factor Inhibitor‐Induced Palmoplantar Pustulosis With Upadacitinib</article-title>,” <source>Australasian Journal of Dermatology</source>
+<volume>66</volume> (<year>2025</year>): <fpage>19</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1684/ejd.2025.5001</pub-id><pub-id pub-id-type="pmid">41608940</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0056"><label>56</label><mixed-citation publication-type="journal" id="hsr272301-cit-0056">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Zheng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Yang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Luo</surname>
+</string-name>, “<article-title>Clinical Efficacy and Safety of Upadacitinib in the Treatment of Palmoplantar Pustulosis: A Single‐Center Retrospective Study</article-title>,” <source>Indian Journal of Dermatology, Venereology and Leprology</source>
+<volume>91</volume>, no. <issue>4</issue> (<year>2025</year>): <fpage>540</fpage>–<lpage>543</lpage>.<pub-id pub-id-type="pmid">39635802</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.25259/IJDVL_751_2024</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0057"><label>57</label><mixed-citation publication-type="journal" id="hsr272301-cit-0057">
+<string-name name-style="western">
+<given-names>L</given-names>
+<surname>Shuang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Xiaotong</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Na</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Hong</surname>
+</string-name>, “<article-title>Efficacy and Safety of Tofacitinib in Palmoplantar Pustulosis: A Retrospective Study</article-title>,” <source>Acta Dermato‐Venereologica</source>
+<volume>105</volume> (<year>2025</year>): <elocation-id>adv44083</elocation-id>.<pub-id pub-id-type="pmid">41220345</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2340/actadv.v105.44083</pub-id><pub-id pub-id-type="pmcid">PMC12619129</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0058"><label>58</label><mixed-citation publication-type="journal" id="hsr272301-cit-0058">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Huang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Jiang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Yang</surname>
+</string-name>, et al., “<article-title>Upadacitinib Versus Acitretin for the Resolution of Pustules in Palmoplantar Pustulosis During Acute Phase: A Single‐Center, Open‐Label Prospective Cohort Study</article-title>,” <source>American Journal of Clinical Dermatology</source>
+<volume>26</volume>, no. <issue>5</issue> (<year>2025</year>): <fpage>843</fpage>–<lpage>850</lpage>.<pub-id pub-id-type="pmid">40702395</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s40257-025-00971-7</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0059"><label>59</label><mixed-citation publication-type="journal" id="hsr272301-cit-0059">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Shibata</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Muto</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Hirano</surname>
+</string-name>, et al., “<article-title>Palmoplantar Pustulosis–Like Eruption Following Tofacitinib Therapy for Juvenile Idiopathic Arthritis</article-title>,” <source>JAAD Case Reports</source>
+<volume>5</volume>, no. <issue>6</issue> (<year>2019</year>): <fpage>518</fpage>–<lpage>521</lpage>.<pub-id pub-id-type="pmid">31205994</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jdcr.2019.03.024</pub-id><pub-id pub-id-type="pmcid">PMC6558271</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0060"><label>60</label><mixed-citation publication-type="journal" id="hsr272301-cit-0060">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Koumaki</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Koumaki</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Bertsias</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Lagoudaki</surname>
+</string-name>, “<article-title>Palmoplantar Pustulosis‐Like Eruption Induced by Baricitinib for Treatment of Rheumatoid Arthritis</article-title>,” <source>European Journal of Case Reports in Internal Medicine</source>
+<volume>7</volume>, no. <issue>1</issue> (<year>2019</year>): <elocation-id>001383</elocation-id>.<pub-id pub-id-type="pmid">32015973</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.12890/2019_001383</pub-id><pub-id pub-id-type="pmcid">PMC6993915</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0061"><label>61</label><mixed-citation publication-type="journal" id="hsr272301-cit-0061">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Sato</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Sawada</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Nakamura</surname>
+</string-name>, “<article-title>Sarilumab‐Induced Cutaneous Adverse Event</article-title>,” <source>Journal of Cutaneous Immunology and Allergy</source>
+<volume>5</volume>, no. <issue>2</issue> (<year>2022</year>): <fpage>67</fpage>–<lpage>68</lpage>.</mixed-citation></ref><ref id="hsr272301-bib-0062"><label>62</label><mixed-citation publication-type="journal" id="hsr272301-cit-0062">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Saito</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Hayashi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Gonmori</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Hamasaki</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Igawa</surname>
+</string-name>, “<article-title>Interrupting Tocilizumab Therapy‐Induced Psoriasis‐Like Eruption in a Patient With Rheumatoid Arthritis and Crohn's Disease</article-title>,” <source>International Journal of Dermatology</source>
+<volume>59</volume>, no. <issue>5</issue> (<year>2020</year>).<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/ijd.14809</pub-id><pub-id pub-id-type="pmid">32034760</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0063"><label>63</label><mixed-citation publication-type="journal" id="hsr272301-cit-0063">
+<string-name name-style="western">
+<given-names>S. E.</given-names>
+<surname>Mazloom</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Yan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. Z.</given-names>
+<surname>Hu</surname>
+</string-name>, et al., “<article-title>TNF‐α Inhibitor–Induced Psoriasis: A Decade of Experience at the Cleveland Clinic</article-title>,” <source>Journal of the American Academy of Dermatology</source>
+<volume>83</volume>, no. <issue>6</issue> (<year>2020</year>): <fpage>1590</fpage>–<lpage>1598</lpage>.<pub-id pub-id-type="pmid">30576759</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jaad.2018.12.018</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0064"><label>64</label><mixed-citation publication-type="journal" id="hsr272301-cit-0064">
+<string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Lu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Lytvyn</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Mufti</surname>
+</string-name>, et al., “<article-title>Biologic Therapies Associated With Development of Palmoplantar Pustulosis and Palmoplantar Pustular Psoriasis: A Systematic Review</article-title>,” <source>International Journal of Dermatology</source>
+<volume>62</volume>, no. <issue>1</issue> (<year>2023</year>): <fpage>12</fpage>–<lpage>21</lpage>.<pub-id pub-id-type="pmid">35128653</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/ijd.16064</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0065"><label>65</label><mixed-citation publication-type="journal" id="hsr272301-cit-0065">
+<string-name name-style="western">
+<given-names>S.‐C.</given-names>
+<surname>Au</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. M.</given-names>
+<surname>Goldminz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Kim</surname>
+</string-name>, et al., “<article-title>Investigator‐Initiated, Open‐Label Trial of Ustekinumab for the Treatment of Moderate‐to‐Severe Palmoplantar Psoriasis</article-title>,” <source>Journal of Dermatological Treatment</source>
+<volume>24</volume>, no. <issue>3</issue> (<year>2013</year>): <fpage>179</fpage>–<lpage>187</lpage>.<pub-id pub-id-type="pmid">22390688</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3109/09546634.2012.672710</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0066"><label>66</label><mixed-citation publication-type="journal" id="hsr272301-cit-0066">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Bissonnette</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Nigen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. G.</given-names>
+<surname>Langley</surname>
+</string-name>, et al., “<article-title>Increased Expression of IL‐17A and Limited Involvement of IL‐23 in Patients With Palmo‐Plantar (PP) Pustular Psoriasis or PP Pustulosis; Results From a Randomised Controlled Trial</article-title>,” <source>Journal of the European Academy of Dermatology and Venereology</source>
+<volume>28</volume>, no. <issue>10</issue> (<year>2014</year>): <fpage>1298</fpage>–<lpage>1305</lpage>.<pub-id pub-id-type="pmid">24112799</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/jdv.12272</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0067"><label>67</label><mixed-citation publication-type="journal" id="hsr272301-cit-0067">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Wolk</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Wilsmann‐Theis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Witte</surname>
+</string-name>, et al., “<article-title>Interleukin‐19 Levels Are Increased in Palmoplantar Pustulosis and Reduced Following Apremilast Treatment</article-title>,” <source>International Journal of Molecular Sciences</source>
+<volume>24</volume>, no. <issue>2</issue> (<year>2023</year>): <fpage>1276</fpage>.<pub-id pub-id-type="pmid">36674793</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/ijms24021276</pub-id><pub-id pub-id-type="pmcid">PMC9862858</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0068"><label>68</label><mixed-citation publication-type="journal" id="hsr272301-cit-0068">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Misiak‐Galazka</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Zozula</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Rudnicka</surname>
+</string-name>, “<article-title>Palmoplantar Pustulosis: Recent Advances in Etiopathogenesis and Emerging Treatments</article-title>,” <source>American Journal of Clinical Dermatology</source>
+<volume>21</volume> (<year>2020</year>): <fpage>355</fpage>–<lpage>370</lpage>.<pub-id pub-id-type="pmid">32008176</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s40257-020-00503-5</pub-id><pub-id pub-id-type="pmcid">PMC7275027</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0069"><label>69</label><mixed-citation publication-type="journal" id="hsr272301-cit-0069">
+<string-name name-style="western">
+<given-names>W.‐M.</given-names>
+<surname>Wang</surname>
+</string-name> and <string-name name-style="western">
+<given-names>H.‐Z.</given-names>
+<surname>Jin</surname>
+</string-name>, “<article-title>Biologics in the Treatment of Pustular Psoriasis</article-title>,” <source>Expert Opinion on Drug Safety</source>
+<volume>19</volume>, no. <issue>8</issue> (<year>2020</year>): <fpage>969</fpage>–<lpage>980</lpage>.<pub-id pub-id-type="pmid">32615817</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/14740338.2020.1785427</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0070"><label>70</label><mixed-citation publication-type="journal" id="hsr272301-cit-0070">
+<string-name name-style="western">
+<given-names>I. M.</given-names>
+<surname>Sanchez</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Sorenson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Levin</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Liao</surname>
+</string-name>, “<article-title>The Efficacy of Biologic Therapy for the Management of Palmoplantar Psoriasis and Palmoplantar Pustulosis: A Systematic Review</article-title>,” <source>Dermatology and Therapy</source>
+<volume>7</volume> (<year>2017</year>): <fpage>425</fpage>–<lpage>446</lpage>.<pub-id pub-id-type="pmid">29143230</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s13555-017-0207-0</pub-id><pub-id pub-id-type="pmcid">PMC5698206</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0071"><label>71</label><mixed-citation publication-type="journal" id="hsr272301-cit-0071">
+<string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Caldarola</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. M.</given-names>
+<surname>Falco</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Calabrese</surname>
+</string-name>, et al., “<article-title>Drug Survival of Biologics and Non‐Biologics in Patients Affected by Palmoplantar Psoriasis: A ‘Real‐World’, Mono‐Center Experience</article-title>,” <source>International Journal of Dermatology</source>
+<volume>63</volume>, no. <issue>1</issue> (<year>2024</year>): <fpage>51</fpage>–<lpage>58</lpage>.<pub-id pub-id-type="pmid">37985936</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/ijd.16917</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0072"><label>72</label><mixed-citation publication-type="journal" id="hsr272301-cit-0072">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Xia</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Diao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Chen</surname>
+</string-name>, et al., “<article-title>Efficacy of Anti‐Interleukin‐17A Biological Agents for Palmoplantar Psoriasis and Palmoplantar Pustulosis: A Network Meta‐Analysis</article-title>,” <source>International Immunopharmacology</source>
+<volume>130</volume> (<year>2024</year>): <elocation-id>111716</elocation-id>.<pub-id pub-id-type="pmid">38417367</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.intimp.2024.111716</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0073"><label>73</label><mixed-citation publication-type="journal" id="hsr272301-cit-0073">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Douroudis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Kingo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Traks</surname>
+</string-name>, et al., “<article-title>ATG16L1 Gene Polymorphisms Are Associated With Palmoplantar Pustulosis</article-title>,” <source>Human Immunology</source>
+<volume>72</volume>, no. <issue>7</issue> (<year>2011</year>): <fpage>613</fpage>–<lpage>615</lpage>.<pub-id pub-id-type="pmid">21513755</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.humimm.2011.03.009</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0074"><label>74</label><mixed-citation publication-type="journal" id="hsr272301-cit-0074">
+<string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Mrowietz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. D.</given-names>
+<surname>Burden</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Pinter</surname>
+</string-name>, et al., “<article-title>Spesolimab, an Anti‐Interleukin‐36 Receptor Antibody, in Patients With Palmoplantar Pustulosis: Results of a Phase IIa, Multicenter, Double‐Blind, Randomized, Placebo‐Controlled Pilot Study</article-title>,” <source>Dermatology and Therapy</source>
+<volume>11</volume> (<year>2021</year>): <fpage>571</fpage>–<lpage>585</lpage>.<pub-id pub-id-type="pmid">33661508</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s13555-021-00504-0</pub-id><pub-id pub-id-type="pmcid">PMC8019016</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0075"><label>75</label><mixed-citation publication-type="journal" id="hsr272301-cit-0075">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Vilaça</surname>
+</string-name>, <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>Yilmaz</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Torres</surname>
+</string-name>, “<article-title>New and Emerging Treatments for Generalized Pustular Psoriasis: Focus on IL‐36 Receptor Inhibitors</article-title>,” <source>Pharmaceutics</source>
+<volume>16</volume>, no. <issue>7</issue> (<year>2024</year>): <fpage>908</fpage>.<pub-id pub-id-type="pmid">39065604</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/pharmaceutics16070908</pub-id><pub-id pub-id-type="pmcid">PMC11279831</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0076"><label>76</label><mixed-citation publication-type="journal" id="hsr272301-cit-0076">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Al Abadie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Sharara</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. A.</given-names>
+<surname>Ball</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Morrissey</surname>
+</string-name>, “<article-title>A Literature Review of the Janus Kinase Inhibitors Used in the Treatment of Auto‐Immune Dermatological Conditions</article-title>,” <source>Archives of Pharmacy Practice</source> (<year>2022</year>): <fpage>37</fpage>–<lpage>42</lpage>.</mixed-citation></ref><ref id="hsr272301-bib-0077"><label>77</label><mixed-citation publication-type="journal" id="hsr272301-cit-0077">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Fazeli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Bahramian</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Farahmand</surname>
+</string-name>, et al., “<article-title>JAK Inhibitors for Treatment of SAPHO Syndrome: A Systematic Review of 72 Cases</article-title>,” <source>ACR Open Rheumatology</source>
+<volume>7</volume>, no. <issue>10</issue> (<year>2025</year>): <elocation-id>e70101</elocation-id>.<pub-id pub-id-type="pmid">41077060</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/acr2.70101</pub-id><pub-id pub-id-type="pmcid">PMC12515502</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0078"><label>78</label><mixed-citation publication-type="journal" id="hsr272301-cit-0078">
+<string-name name-style="western">
+<given-names>M. S.</given-names>
+<surname>Ansari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Vahabi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Memari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Hosseini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Bahramian</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Etesami</surname>
+</string-name>, “<article-title>Use of the Oral Janus Kinase Inhibitor Tofacitinib in the Treatment of Morphea: A Retrospective Study</article-title>,” <source>Journal of the American Academy of Dermatology</source>
+<volume>93</volume>, no. <issue>3</issue> (<year>2025</year>): <fpage>769</fpage>–<lpage>771</lpage>.<pub-id pub-id-type="pmid">40374119</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jaad.2025.05.1377</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0079"><label>79</label><mixed-citation publication-type="journal" id="hsr272301-cit-0079">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Bahramian</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Fazeli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Rafati</surname>
+</string-name>, et al., “<article-title>JAK Inhibitors for Treatment of VEXAS Syndrome: A Systematic Review of 186 Cases</article-title>,” <source>Dermatology Research and Practice</source>
+<volume>2025</volume>, no. <issue>1</issue> (<year>2025</year>): <elocation-id>9127126</elocation-id>.<pub-id pub-id-type="pmid">40977752</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1155/drp/9127126</pub-id><pub-id pub-id-type="pmcid">PMC12449113</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0080"><label>80</label><mixed-citation publication-type="journal" id="hsr272301-cit-0080">
+<string-name name-style="western">
+<given-names>R. J.</given-names>
+<surname>Shah</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Banerjee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Raychaudhuri</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. P.</given-names>
+<surname>Raychaudhuri</surname>
+</string-name>, “<article-title>JAK‐STAT Inhibitors in Immune Mediated Diseases: An Overview</article-title>,” <source>Indian Journal of Dermatology, Venereology and Leprology</source>
+<volume>89</volume>, no. <issue>5</issue> (<year>2023</year>): <fpage>691</fpage>–<lpage>699</lpage>.<pub-id pub-id-type="pmid">37609730</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.25259/IJDVL_1152_2022</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0081"><label>81</label><mixed-citation publication-type="journal" id="hsr272301-cit-0081">
+<string-name name-style="western">
+<given-names>S. K.</given-names>
+<surname>Raychaudhuri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Abria</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. P.</given-names>
+<surname>Raychaudhuri</surname>
+</string-name>, “<article-title>Regulatory Role of the JAK STAT Kinase Signalling System on the IL‐23/IL‐17 Cytokine Axis in Psoriatic Arthritis</article-title>,” <source>Annals of the Rheumatic Diseases</source>
+<volume>76</volume>, no. <issue>10</issue> (<year>2017</year>): <fpage>e36</fpage>–<lpage>e37</lpage>.<pub-id pub-id-type="pmid">28179265</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/annrheumdis-2016-211046</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0082"><label>82</label><mixed-citation publication-type="journal" id="hsr272301-cit-0082">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Kubo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Nakayamada</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Tanaka</surname>
+</string-name>, “<article-title>Baricitinib for the Treatment of Rheumatoid Arthritis and Systemic Lupus Erythematosus: A 2019 Update</article-title>,” <source>Expert Review of Clinical Immunology</source>
+<volume>15</volume>, no. <issue>7</issue> (<year>2019</year>): <fpage>693</fpage>–<lpage>700</lpage>.<pub-id pub-id-type="pmid">30987474</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/1744666X.2019.1608821</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0083"><label>83</label><mixed-citation publication-type="journal" id="hsr272301-cit-0083">
+<string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Lin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Piao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Yu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Hou</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Wang</surname>
+</string-name>, “<article-title>Successful Treatment of SAPHO Syndrome With Oral Abrocitinib: A Case Report</article-title>,” <source>Journal of Dermatological Treatment</source>
+<volume>35</volume>, no. <issue>1</issue> (<year>2024</year>): <elocation-id>2437259</elocation-id>.<pub-id pub-id-type="pmid">39653373</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/09546634.2024.2437259</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0084"><label>84</label><mixed-citation publication-type="journal" id="hsr272301-cit-0084">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Hammitzsch</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>de Wit</surname>
+</string-name>, et al., “<article-title>Inhibiting Ex‐Vivo Th17 Responses in Ankylosing Spondylitis by Targeting Janus Kinases</article-title>,” <source>Scientific Reports</source>
+<volume>8</volume>, no. <issue>1</issue> (<year>2018</year>): <elocation-id>15645</elocation-id>.<pub-id pub-id-type="pmid">30353145</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41598-018-34026-1</pub-id><pub-id pub-id-type="pmcid">PMC6199284</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0085"><label>85</label><mixed-citation publication-type="journal" id="hsr272301-cit-0085">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Maeshima</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Yamaoka</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Kubo</surname>
+</string-name>, et al., “<article-title>The JAK Inhibitor Tofacitinib Regulates Synovitis Through Inhibition of Interferon‐γ and Interleukin‐17 Production by Human CD4+ T Cells</article-title>,” <source>Arthritis and Rheumatism</source>
+<volume>64</volume>, no. <issue>6</issue> (<year>2012</year>): <fpage>1790</fpage>–<lpage>1798</lpage>.<pub-id pub-id-type="pmid">22147632</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/art.34329</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0086"><label>86</label><mixed-citation publication-type="journal" id="hsr272301-cit-0086">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Chen</surname>
+</string-name> and <string-name name-style="western">
+<given-names>S.‐M.</given-names>
+<surname>Dai</surname>
+</string-name>, “<article-title>A Novel Treatment for Psoriatic Arthritis: Janus Kinase Inhibitors</article-title>,” <source>Chinese Medical Journal</source>
+<volume>133</volume>, no. <issue>08</issue> (<year>2020</year>): <fpage>959</fpage>–<lpage>967</lpage>.<pub-id pub-id-type="pmid">32209886</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/CM9.0000000000000711</pub-id><pub-id pub-id-type="pmcid">PMC7176449</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0087"><label>87</label><mixed-citation publication-type="journal" id="hsr272301-cit-0087">
+<string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Reddy</surname>
+</string-name> and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Bhutani</surname>
+</string-name>, “<article-title>Palmoplantar Pustulosis in Electronic Cigarette Users: A Potential for Concern</article-title>,” <source>Dermatology</source>
+<volume>235</volume>, no. <issue>6</issue> (<year>2019</year>): <fpage>525</fpage>–<lpage>526</lpage>.<pub-id pub-id-type="pmid">31597149</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1159/000503385</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0088"><label>88</label><mixed-citation publication-type="journal" id="hsr272301-cit-0088">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Serizawa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Okazaki</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Otsuka</surname>
+</string-name>, et al., “<article-title>Dietary Habits in Japanese Patients With Palmoplantar Pustulosis</article-title>,” <source>Journal of Dermatology</source>
+<volume>48</volume>, no. <issue>3</issue> (<year>2021</year>): <fpage>366</fpage>–<lpage>375</lpage>.<pub-id pub-id-type="pmid">33404125</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/1346-8138.15719</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0089"><label>89</label><mixed-citation publication-type="journal" id="hsr272301-cit-0089">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Zhang</surname>
+</string-name> and <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Jiang</surname>
+</string-name>, “<article-title>Application of JAK Inhibitors in Paradoxical Reaction Through Immune‐Related Dermatoses</article-title>,” <source>Frontiers in Immunology</source>
+<volume>15</volume> (<year>2024</year>): <elocation-id>1341632</elocation-id>.<pub-id pub-id-type="pmid">38444845</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fimmu.2024.1341632</pub-id><pub-id pub-id-type="pmcid">PMC10912518</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0090"><label>90</label><mixed-citation publication-type="journal" id="hsr272301-cit-0090">
+<string-name name-style="western">
+<given-names>E. H.</given-names>
+<surname>Choy</surname>
+</string-name>, “<article-title>Clinical Significance of Janus Kinase Inhibitor Selectivity</article-title>,” <source>Rheumatology</source>
+<volume>58</volume>, no. <issue>6</issue> (<year>2019</year>): <fpage>953</fpage>–<lpage>962</lpage>.<pub-id pub-id-type="pmid">30508136</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/rheumatology/key339</pub-id><pub-id pub-id-type="pmcid">PMC6532440</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0091"><label>91</label><mixed-citation publication-type="journal" id="hsr272301-cit-0091">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Isufi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Javanmardi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. B.</given-names>
+<surname>Jensen</surname>
+</string-name>, et al., “<article-title>Risk of Dyslipidemia Associated With Oral Janus Kinase Inhibitors: A Systematic Review and Meta‐Analysis of Randomized Placebo‐Controlled Trials</article-title>,” <source>International Journal of Dermatology</source>
+<volume>65</volume>, no. <issue>4</issue> (<year>2026</year>): <fpage>737</fpage>–<lpage>745</lpage>.<pub-id pub-id-type="pmid">41160040</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/ijd.70122</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0092"><label>92</label><mixed-citation publication-type="journal" id="hsr272301-cit-0092">
+<string-name name-style="western">
+<given-names>A. T. M.</given-names>
+<surname>Rønnstad</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Isufi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. G.</given-names>
+<surname>Bunick</surname>
+</string-name>, et al., “<article-title>Real‐World Evidence of Effectiveness and Safety of Abrocitinib, Baricitinib and Upadacitinib in Atopic Dermatitis: A Systematic Review and Meta‐Analysis</article-title>,” <source>American Journal of Clinical Dermatology</source> (<year>2025</year>): <fpage>1</fpage>–<lpage>18</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s40257-025-00997-x</pub-id><pub-id pub-id-type="pmid">41296263</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0093"><label>93</label><mixed-citation publication-type="journal" id="hsr272301-cit-0093">
+<string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Vahabi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Bahramian</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Esmaeili</surname>
+</string-name>, et al., “<article-title>JAK Inhibitors in Cutaneous T‐Cell Lymphoma: Friend or Foe? A Systematic Review of the Published Literature</article-title>,” <source>Cancers</source>
+<volume>16</volume>, no. <issue>5</issue> (<year>2024</year>): <fpage>861</fpage>.<pub-id pub-id-type="pmid">38473222</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/cancers16050861</pub-id><pub-id pub-id-type="pmcid">PMC10930951</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0094"><label>94</label><mixed-citation publication-type="journal" id="hsr272301-cit-0094">
+<string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Damsky</surname>
+</string-name> and <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>King</surname>
+</string-name>, “<article-title>JAK Inhibitors in Dermatology: The Promise of a New Drug Class</article-title>,” <source>Journal of the American Academy of Dermatology</source>
+<volume>76</volume>, no. <issue>4</issue> (<year>2017</year>): <fpage>736</fpage>–<lpage>744</lpage>.<pub-id pub-id-type="pmid">28139263</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jaad.2016.12.005</pub-id><pub-id pub-id-type="pmcid">PMC6035868</pub-id></mixed-citation></ref><ref id="hsr272301-bib-0095"><label>95</label><mixed-citation publication-type="journal" id="hsr272301-cit-0095">
+<string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Etesami</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. S.</given-names>
+<surname>Ansari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Pourgholi</surname>
+</string-name>, et al., “<article-title>Drug‐ and Vaccine‐Induced Cutaneous T‐Cell Lymphoma: A Systematic Review of the Literature</article-title>,” <source>Journal of Skin Cancer</source>
+<volume>2025</volume>, no. <issue>1</issue> (<year>2025</year>): <elocation-id>3103865</elocation-id>.<pub-id pub-id-type="pmid">40226161</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1155/jskc/3103865</pub-id><pub-id pub-id-type="pmcid">PMC11986929</pub-id></mixed-citation></ref></ref-list></back></article>

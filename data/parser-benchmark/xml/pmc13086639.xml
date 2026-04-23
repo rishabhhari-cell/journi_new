@@ -1,0 +1,699 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="jgh370408" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">JGH Open</journal-id><journal-id journal-id-type="iso-abbrev">JGH Open</journal-id><journal-id journal-id-type="pmc-domain-id">3550</journal-id><journal-id journal-id-type="pmc-domain">jghopen</journal-id><journal-id journal-id-type="publisher-id">JGH3</journal-id><journal-title-group><journal-title>JGH Open: An Open Access Journal of Gastroenterology and Hepatology</journal-title></journal-title-group><issn pub-type="epub">2397-9070</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13086639</article-id><article-id pub-id-type="pmcid-ver">PMC13086639.1</article-id><article-id pub-id-type="pmcaid">13086639</article-id><article-id pub-id-type="pmcaiid">13086639</article-id><article-id pub-id-type="pmid">42004198</article-id><article-id pub-id-type="doi">10.1002/jgh3.70408</article-id><article-id pub-id-type="publisher-id">JGH370408</article-id><article-id pub-id-type="other">8182135</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Systematic Review</subject></subj-group><subj-group subj-group-type="heading"><subject>Systematic Review</subject></subj-group></article-categories><title-group><article-title>Magnetic Resonance Enterography Predicts Long‐Term Outcomes in Crohn's Disease: A Systematic Review and Meta‐Analysis</article-title></title-group><contrib-group><contrib id="jgh370408-cr-0001" contrib-type="author"><name name-style="western"><surname>Wu</surname><given-names initials="S">Shanshan</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0001-4215-6690</contrib-id><xref rid="jgh370408-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="jgh370408-cr-0002" contrib-type="author"><name name-style="western"><surname>Yang</surname><given-names initials="J">Jiayi</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-5282-1092</contrib-id><xref rid="jgh370408-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="jgh370408-cr-0003" contrib-type="author"><name name-style="western"><surname>Jizhi</surname><given-names initials="S">Seniu</given-names></name><xref rid="jgh370408-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="jgh370408-cr-0004" contrib-type="author"><name name-style="western"><surname>Liu</surname><given-names initials="A">Aniu</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0004-8997-6356</contrib-id><xref rid="jgh370408-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="jgh370408-cr-0005" contrib-type="author"><name name-style="western"><surname>Chen</surname><given-names initials="X">Xingyu</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0001-4251-7804</contrib-id><xref rid="jgh370408-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="jgh370408-cr-0006" contrib-type="author"><name name-style="western"><surname>Chen</surname><given-names initials="Z">Zhonglu</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0008-3629-2486</contrib-id><xref rid="jgh370408-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="jgh370408-cr-0007" contrib-type="author" corresp="yes"><name name-style="western"><surname>Zheng</surname><given-names initials="S">Shumei</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-4463-9784</contrib-id><xref rid="jgh370408-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>zhengsm@163.com</email></address></contrib></contrib-group><aff id="jgh370408-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Department of Gastroenterology and Hepatology</named-content>
+<institution>The General Hospital of Western Theater Command</institution>
+<city>Chengdu</city>
+<country country="CN">China</country>
+</aff><aff id="jgh370408-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Department of Radiology</named-content>
+<institution>The Affiliated Wuxi People's Hospital of Nanjing Medical University</institution>
+<city>Jiangsu</city>
+<country country="CN">China</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold>
+<break/>
+Shumei Zheng (<email>zhengsm@163.com</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>16</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>10</volume><issue-id pub-id-type="pmc-issue-id">510805</issue-id><elocation-id>e70408</elocation-id><history><date date-type="rev-recd"><day>13</day><month>1</month><year>2026</year></date><date date-type="received"><day>14</day><month>11</month><year>2025</year></date><date date-type="accepted"><day>07</day><month>4</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>16</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>18</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-20 15:25:19.677"><day>20</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">JGH Open</italic> published by Journal of Gastroenterology and Hepatology Foundation and John Wiley &amp; Sons Australia, Ltd.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="JGH3-10-e70408.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:JGH3-10-e70408.pdf"/><abstract><title>ABSTRACT</title><sec id="jgh370408-sec-0001"><title>Background and Aims</title><p>Crohn's disease (CD) is characterized by chronic transmural inflammation, which often leads to bowel damage. While mucosal healing (MH) is an established treatment target, transmural healing (TH) has emerged as a more comprehensive goal. Magnetic resonance enterography (MRE) provides excellent soft‐tissue resolution for assessing TH. This meta‐analysis evaluates the prognostic value of MRE in predicting surgery, hospitalization, and treatment escalation in adults with CD.</p></sec><sec id="jgh370408-sec-0002"><title>Methods</title><p>A total of 16 studies involving adult CD patients with ≥ 12 months of follow‐up (with a mean duration of 4.42 ± 3.90 years) were included if they incorporated pre‐ and posttreatment MRE, reported baseline MRE phenotypes (e.g., penetrating/stenosing lesions), and documented posttreatment TH. Hazard ratios (HRs) were used to compare associations between baseline MRE features, TH achievement, and long‐term outcomes.</p></sec><sec id="jgh370408-sec-0003"><title>Results</title><p>Baseline MRE‐defined penetrating lesions were associated with increased risks of surgery (HR = 1.62, 95% CI: 1.37–1.91, <italic toggle="no">p</italic> &lt; 0.00001) and hospitalization (HR = 1.34, 95% CI: 1.18–1.53, <italic toggle="no">p</italic> &lt; 0.0001). Similarly, stricturing lesions were associated with an elevated risk of surgery (HR = 1.65, 95% CI: 1.39–1.96, <italic toggle="no">p</italic> &lt; 0.00001). Achieving TH was linked to lower risks of surgery (HR = 0.55, 95% CI: 0.44–0.68, <italic toggle="no">p</italic> &lt; 0.00001), hospitalization (HR = 0.54, 95% CI: 0.45–0.64, <italic toggle="no">p</italic> &lt; 0.00001), and treatment escalation (HR = 0.51, 95% CI: 0.46–0.57, <italic toggle="no">p</italic> &lt; 0.00001). Notably, TH achieved significantly greater risk reduction than MH alone, as evidenced by two direct comparative studies of these two treatment targets (HR = 0.28 and 0.26, respectively).</p></sec><sec id="jgh370408-sec-0004"><title>Conclusion</title><p>MRE‐identified penetrating/stenosing lesions at baseline predict higher risks of surgery and hospitalization. Conversely, TH achievement was associated with a marked reduction in adverse outcomes. Incorporating MRE into CD management facilitates early identification of high‐risk patients for timely treatment intensification, thereby supporting personalized therapeutic strategies.</p></sec></abstract><kwd-group kwd-group-type="author-generated"><kwd id="jgh370408-kwd-0001">adult patients</kwd><kwd id="jgh370408-kwd-0002">clinical outcomes</kwd><kwd id="jgh370408-kwd-0003">Crohn's disease</kwd><kwd id="jgh370408-kwd-0004">inflammatory bowel disease</kwd><kwd id="jgh370408-kwd-0005">magnetic resonance Enterography</kwd><kwd id="jgh370408-kwd-0006">meta‐analysis</kwd><kwd id="jgh370408-kwd-0007">systematic review</kwd></kwd-group><counts><fig-count count="4"/><table-count count="4"/><page-count count="13"/><word-count count="6700"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:17.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body id="jgh370408-body-0001"><sec id="jgh370408-sec-0005"><label>1</label><title>Introduction</title><p>Inflammatory bowel disease (IBD) primarily includes CD and ulcerative colitis (UC). Its exact etiology and pathogenesis remain incompletely understood. The prevailing view is that IBD results from a persistent, excessive, abnormal inflammatory response in the gut triggered by interactions among environmental, genetic, infectious, and immune factors [<xref rid="jgh370408-bib-0001" ref-type="bibr">1</xref>]. In developed western countries, the incidence of IBD has stabilized, with the prevalence exceeding 0.3% in some regions. In newly industrialized countries, the incidence of IBD is increasing but has not yet peaked [<xref rid="jgh370408-bib-0002" ref-type="bibr">2</xref>]. These trends indicate that IBD is evolving into a global health concern. CD, characterized by transmural inflammation and discontinuous (skip) lesions, presents greater clinical complexity. It can affect the entire digestive tract from the mouth to the anus, follows a chronic progressive course, and often leads to structural damage, such as intestinal strictures and penetrating lesions (fistulas/abscesses) [<xref rid="jgh370408-bib-0003" ref-type="bibr">3</xref>]. These complications lead to recurrent symptoms, an increased need for hospitalization, an increased risk of treatment escalation, and even disabling damage, severely impairing long‐term quality of life [<xref rid="jgh370408-bib-0004" ref-type="bibr">4</xref>, <xref rid="jgh370408-bib-0005" ref-type="bibr">5</xref>].</p><p>The clinical symptoms of CD do not always correlate with the actual degree of intestinal inflammation [<xref rid="jgh370408-bib-0006" ref-type="bibr">6</xref>]. Therefore, targeting clinical remission alone is insufficient to effectively prevent disease progression and complications. With increasing understanding, treatment goals have evolved from clinical remission to MH. Achieving MH in CD patients is associated with significantly reduced risks of surgery and hospitalization [<xref rid="jgh370408-bib-0007" ref-type="bibr">7</xref>]. Currently, endoscopy is the primary method for assessing MH but has inherent limitations [<xref rid="jgh370408-bib-0008" ref-type="bibr">8</xref>]. First, conventional endoscopy cannot evaluate the entire small intestine, especially when intestinal stenosis occurs, as the endoscope cannot pass through the stenotic segment. Second, endoscopy mainly observes mucosal surface lesions and cannot be used to evaluate transmural inflammation or extraintestinal complications. Finally, endoscopy is an invasive examination that may cause complications such as intestinal bleeding and perforation, limiting its repeated use for disease monitoring. As a noninvasive examination method, cross‐sectional imaging technology can be used to evaluate the entire intestinal tract and extraintestinal lesions. It is a supplement and alternative to endoscopy for disease evaluation and monitoring in patients with CD [<xref rid="jgh370408-bib-0009" ref-type="bibr">9</xref>].</p><p>CD is inherently a transmural disease. Therefore, achieving MH does not always indicate complete resolution of deep inflammation [<xref rid="jgh370408-bib-0010" ref-type="bibr">10</xref>, <xref rid="jgh370408-bib-0011" ref-type="bibr">11</xref>]; persistent deep wall inflammation may still drive disease progression and increase the risk of adverse outcomes [<xref rid="jgh370408-bib-0012" ref-type="bibr">12</xref>]. Consequently, the International Organization for the Study of Inflammatory Bowel Disease (IOIBD) has proposed TH as a potential deeper treatment target in long‐term CD management strategies. TH assessment relies primarily on cross‐sectional imaging techniques, such as computed tomography enterography (CTE), intestinal ultrasound (IUS), and MRE. CTE offers rapid imaging and is suitable for acute abdominal presentations, but its main limitation is cumulative radiation exposure, which is particularly concerning in specific populations, such as pregnant women and children [<xref rid="jgh370408-bib-0013" ref-type="bibr">13</xref>]. IUS is advantageous because of its convenience, lack of ionizing radiation, low cost, and high patient acceptance [<xref rid="jgh370408-bib-0014" ref-type="bibr">14</xref>]. However, image quality can be affected by bowel gas and abdominal adiposity; its ability to assess deeply located lesions and complex extramural complications is limited, and its reliability is highly operator dependent [<xref rid="jgh370408-bib-0015" ref-type="bibr">15</xref>]. MRE provides a comprehensive assessment of bowel wall inflammation depth, activity, and complications in patients with CD. Owing to its noninvasive nature, lack of radiation, excellent soft tissue resolution, and multiparametric capabilities, MRE has become a vital tool for CD diagnosis, disease activity assessment, and treatment monitoring [<xref rid="jgh370408-bib-0013" ref-type="bibr">13</xref>].</p><p>Although the concept of TH based on cross‐sectional imaging as a treatment endpoint is preliminarily accepted, existing studies on TH and long‐term CD outcomes have several limitations, such as small sample sizes, varying follow‐up durations, heterogeneous definitions of TH, and a lack of systematic integration of evidence. This meta‐analysis is the first to systematically evaluate the predictive value of MRE for surgical intervention, hospitalization, and treatment escalation in adult CD patients. These findings provide an evidence base for personalized CD treatment decisions.</p></sec><sec sec-type="methods" id="jgh370408-sec-0006"><label>2</label><title>Methods</title><p>This meta‐analysis was registered on PROSPERO (CRD42024585848) and adhered to the Preferred Reporting Items for Systematic Reviews and Meta‐Analyses (PRISMA) statement. A review of previously published studies required neither ethical approval nor informed consent.</p><sec id="jgh370408-sec-0007"><label>2.1</label><title>Literature Search</title><p>A comprehensive systematic literature search was performed in PubMed/MEDLINE, Web of Science, Embase, and the Cochrane Library (up to June 1, 2025). Medical subject headings (MeSH) and free‐text terms related to “Magnetic Resonance Enterography,” “Inflammatory Bowel Disease,” and “Crohn's Disease” were used. The search strategies were iteratively adjusted and optimized according to the specific requirements of each database. Additionally, reference lists of eligible studies and review articles were manually checked to identify other potentially relevant publications.</p></sec><sec id="jgh370408-sec-0008"><label>2.2</label><title>Inclusion Criteria</title><p>Studies meeting the following criteria were included: (1) the study population included adult CD patients (age ≥ 18 years) who underwent MRE both before and after treatment; (2) the studies included survival analysis and reported HRs for outcomes such as hospitalization, surgery, and treatment escalation; (3) the mean follow‐up time was ≥ 12 months; and (4) the studies were published in full text in peer‐reviewed journals.</p><p>Studies were excluded if they met the following criteria: (1) they were animal experiments, conference abstracts, case reports, commentaries, reviews, letters, or obviously irrelevant studies; (2) they focused on pediatric CD patients; (3) they researched duplicated data; and (4) their full text versions were unavailable or necessary data could not be extracted.</p></sec><sec id="jgh370408-sec-0009"><label>2.3</label><title>Study Selection</title><p>Two researchers (Shanshan Wu and Jiayi Yang) independently screened the literature. After the search, EndNote 2020 software was used for systematic organization and deduplication of retrieved citations to ensure data integrity and consistency. The initial screening was based on titles and abstracts. The full texts of the initially selected articles were subsequently independently reviewed to finalize the studies that met the inclusion criteria.</p></sec><sec id="jgh370408-sec-0010"><label>2.4</label><title>Definition of Adverse Outcomes in <styled-content style="fixed-case" toggle="no">CD</styled-content> Patients</title><p>The long‐term adverse outcomes considered in this review were surgery, hospitalization, and treatment escalation during the follow‐up period after treatment, defined as follows: (1) surgery: any CD‐related intestinal surgery during follow‐up, such as abscess drainage, endoscopic dilation, or ileal resection; (2) hospitalization: hospital admission due to disease exacerbation or CD‐related complications during follow‐up; and (3) treatment escalation: measures required due to inadequate disease control with the current regimen, including increasing the dose of existing medication, initiating biologic therapy for the first time, or switching from one biologic agent to another.</p></sec><sec id="jgh370408-sec-0011"><label>2.5</label><title>Data Extraction and Quality Assessment</title><p>During the data extraction phase, researchers independently extracted the core indicators of the study design (including study characteristics, study population, protocol design, follow‐up period, HR value, etc.), and after independent review, a standardized data table was constructed for subsequent statistical analysis. Any disagreements were resolved through discussion until a consensus was reached.</p><p>The quality of the included studies was assessed via the Newcastle–Ottawa Scale (NOS). On the basis of the NOS score (range 0–9), studies with scores ≥ 6 were considered high quality, those with scores of 4–5 were considered moderate quality, and those with scores of 0–3 were considered low quality.</p></sec><sec id="jgh370408-sec-0012"><label>2.6</label><title>Statistical Analysis</title><p>The data from each study were transcribed into tables. Frequencies are presented as numbers and percentages, and continuous variables are presented as the means ± standard deviations (M ± SD). To pool continuous variables (e.g., mean age and mean follow‐up time), medians and interquartile ranges/ranges extracted from relevant studies were converted to M ± SD values via formulas provided in Chapter 6.5.2.5 of the Cochrane Handbook. The converted data were then pooled as recommended by the Cochrane Handbook [<xref rid="jgh370408-bib-0016" ref-type="bibr">16</xref>].</p><p>No CD patients in the included studies experienced primary outcome events at baseline. The primary endpoints were surgery, hospitalization, and treatment escalation (as defined above). The impact of MRE findings on long‐term adverse outcomes was assessed via HR. If reported, the HR and 95% confidence interval (CI) were extracted directly from each study. If both univariate and multivariate analysis results were reported, HRs from multivariate models were preferentially extracted. Finally, HRs were log‐transformed, and the standard error (SE) of the Log HR was calculated for further statistical analysis.</p><p>Heterogeneity among studies was quantified via the <italic toggle="yes">I</italic>
+<sup>2</sup> statistic and graded according to the Cochrane Handbook recommendations: <italic toggle="yes">I</italic>
+<sup>2</sup> ≤ 40%, low heterogeneity; 41%–60%, moderate heterogeneity; and 61%–100%, substantial heterogeneity. For subgroups with moderate or substantial heterogeneity, sensitivity analysis was performed by sequentially excluding individual studies and repeating the meta‐analysis to assess the robustness of the results. All the statistical calculations were performed via Review Manager (Rev Man, version 5.3) software. A <italic toggle="yes">p</italic> &lt; 0.05 was considered to indicate statistical significance.</p></sec></sec><sec sec-type="results" id="jgh370408-sec-0013"><label>3</label><title>Results</title><sec id="jgh370408-sec-0014"><label>3.1</label><title>Characteristics and Quality Assessment of the Included Studies</title><p>Systematic searches of PubMed (<italic toggle="yes">n</italic> = 966), Embase (<italic toggle="yes">n</italic> = 1973), Web of Science (<italic toggle="yes">n</italic> = 933), and the Cochrane Library (<italic toggle="yes">n</italic> = 94) identified 3966 records. Ultimately, 16 cohort studies [<xref rid="jgh370408-bib-0010" ref-type="bibr">10</xref>, <xref rid="jgh370408-bib-0017" ref-type="bibr">17</xref>, <xref rid="jgh370408-bib-0018" ref-type="bibr">18</xref>, <xref rid="jgh370408-bib-0019" ref-type="bibr">19</xref>, <xref rid="jgh370408-bib-0020" ref-type="bibr">20</xref>, <xref rid="jgh370408-bib-0021" ref-type="bibr">21</xref>, <xref rid="jgh370408-bib-0022" ref-type="bibr">22</xref>, <xref rid="jgh370408-bib-0023" ref-type="bibr">23</xref>, <xref rid="jgh370408-bib-0024" ref-type="bibr">24</xref>, <xref rid="jgh370408-bib-0025" ref-type="bibr">25</xref>, <xref rid="jgh370408-bib-0026" ref-type="bibr">26</xref>, <xref rid="jgh370408-bib-0027" ref-type="bibr">27</xref>, <xref rid="jgh370408-bib-0028" ref-type="bibr">28</xref>, <xref rid="jgh370408-bib-0029" ref-type="bibr">29</xref>, <xref rid="jgh370408-bib-0030" ref-type="bibr">30</xref>, <xref rid="jgh370408-bib-0031" ref-type="bibr">31</xref>] (Figure <xref rid="jgh370408-fig-0001" ref-type="fig">1</xref>) were included, consisting of three prospective studies [<xref rid="jgh370408-bib-0017" ref-type="bibr">17</xref>, <xref rid="jgh370408-bib-0018" ref-type="bibr">18</xref>, <xref rid="jgh370408-bib-0019" ref-type="bibr">19</xref>] and 3 multicenter studies [<xref rid="jgh370408-bib-0017" ref-type="bibr">17</xref>, <xref rid="jgh370408-bib-0020" ref-type="bibr">20</xref>, <xref rid="jgh370408-bib-0021" ref-type="bibr">21</xref>]. These 16 studies included 3249 CD patients with a mean age of 32.91 ± 15.29 years and a mean follow‐up time of 4.42 ± 3.90 years; 56.54% were male. This study focused on prognostic indicators, including surgery, hospitalization, and treatment escalation rates. Eight studies reported only surgery or treatment escalation as the primary outcome, whereas eight studies assessed multiple prognostic indicators for a more comprehensive evaluation. The basic characteristics of the included studies are shown in Table <xref rid="jgh370408-tbl-0001" ref-type="table">1</xref>. The NOS score for all the studies was ≥ 7, indicating good quality, as shown in Table <xref rid="jgh370408-tbl-0002" ref-type="table">2</xref>. The extracted HR values are shown in Table <xref rid="jgh370408-tbl-0003" ref-type="table">3</xref>.</p><fig position="float" fig-type="FIGURE" id="jgh370408-fig-0001" orientation="portrait"><label>FIGURE 1</label><caption><p>Flowchart of the literature screening process.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="JGH3-10-e70408-g003.jpg"/></fig><table-wrap position="float" id="jgh370408-tbl-0001" content-type="TABLE" orientation="portrait"><label>TABLE 1</label><caption><p>Study characteristics of the included cohort studies.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">First author (publication year)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Study design</th><th align="center" valign="bottom" rowspan="1" colspan="1">Single‐center or multicenter study</th><th align="center" valign="bottom" rowspan="1" colspan="1">NOS score</th><th align="center" valign="bottom" rowspan="1" colspan="1">Country</th><th align="center" valign="bottom" rowspan="1" colspan="1">Sample size (male)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Age (year)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Study duration (year)</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Sagami S et al. 2019 [<xref rid="jgh370408-bib-0010" ref-type="bibr">10</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">R</td><td align="center" valign="top" rowspan="1" colspan="1">S</td><td align="center" valign="top" rowspan="1" colspan="1">7</td><td align="center" valign="top" rowspan="1" colspan="1">Japan</td><td align="center" valign="top" rowspan="1" colspan="1">50 (34)</td><td align="center" valign="top" rowspan="1" colspan="1">34.41 ± 3.57</td><td align="center" valign="top" rowspan="1" colspan="1">1.26 ± 0.41</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Fiorino G et al. 2017 [<xref rid="jgh370408-bib-0017" ref-type="bibr">17</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">P</td><td align="center" valign="top" rowspan="1" colspan="1">M</td><td align="center" valign="top" rowspan="1" colspan="1">8</td><td align="center" valign="top" rowspan="1" colspan="1">Italy</td><td align="center" valign="top" rowspan="1" colspan="1">142 (67)</td><td align="center" valign="top" rowspan="1" colspan="1">30.63 ± 13.17</td><td align="center" valign="top" rowspan="1" colspan="1">6.28 ± 5.77</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Takenaka K et al. 2023 [<xref rid="jgh370408-bib-0018" ref-type="bibr">18</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">P</td><td align="center" valign="top" rowspan="1" colspan="1">S</td><td align="center" valign="top" rowspan="1" colspan="1">8</td><td align="center" valign="top" rowspan="1" colspan="1">Japan</td><td align="center" valign="top" rowspan="1" colspan="1">134 (99)</td><td align="center" valign="top" rowspan="1" colspan="1">34.11 ± 13.49</td><td align="center" valign="top" rowspan="1" colspan="1">8.05 ± 6.74</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Takenaka K et al. 2017 [<xref rid="jgh370408-bib-0019" ref-type="bibr">19</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">P</td><td align="center" valign="top" rowspan="1" colspan="1">S</td><td align="center" valign="top" rowspan="1" colspan="1">9</td><td align="center" valign="top" rowspan="1" colspan="1">Japan</td><td align="center" valign="top" rowspan="1" colspan="1">200 (137)</td><td align="center" valign="top" rowspan="1" colspan="1">33.83 ± 10.84</td><td align="center" valign="top" rowspan="1" colspan="1">1.85 ± 0.81</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Fernandes SR et al. 2023 [<xref rid="jgh370408-bib-0020" ref-type="bibr">20</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">R</td><td align="center" valign="top" rowspan="1" colspan="1">M</td><td align="center" valign="top" rowspan="1" colspan="1">7</td><td align="center" valign="top" rowspan="1" colspan="1">Portugal</td><td align="center" valign="top" rowspan="1" colspan="1">404 (191)</td><td align="center" valign="top" rowspan="1" colspan="1">34.35 ± 15.62</td><td align="center" valign="top" rowspan="1" colspan="1">5.0</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Revés J et al. 2025 [<xref rid="jgh370408-bib-0021" ref-type="bibr">21</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">R</td><td align="center" valign="top" rowspan="1" colspan="1">M</td><td align="center" valign="top" rowspan="1" colspan="1">9</td><td align="center" valign="top" rowspan="1" colspan="1">Portugal</td><td align="center" valign="top" rowspan="1" colspan="1">154 (75)</td><td align="center" valign="top" rowspan="1" colspan="1">26.17 ± 3.02</td><td align="center" valign="top" rowspan="1" colspan="1">1.00 ± 0.50</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Deepak P et al. 2018 [<xref rid="jgh370408-bib-0022" ref-type="bibr">22</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">R</td><td align="center" valign="top" rowspan="1" colspan="1">S</td><td align="center" valign="top" rowspan="1" colspan="1">9</td><td align="center" valign="top" rowspan="1" colspan="1">USA</td><td align="center" valign="top" rowspan="1" colspan="1">150 (75)</td><td align="center" valign="top" rowspan="1" colspan="1">25.11 ± 10.48</td><td align="center" valign="top" rowspan="1" colspan="1">4.39 ± 4.04</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lee JH et al. 2018 [<xref rid="jgh370408-bib-0023" ref-type="bibr">23</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">R</td><td align="center" valign="top" rowspan="1" colspan="1">S</td><td align="center" valign="top" rowspan="1" colspan="1">8</td><td align="center" valign="top" rowspan="1" colspan="1">South Korea</td><td align="center" valign="top" rowspan="1" colspan="1">173 (127)</td><td align="center" valign="top" rowspan="1" colspan="1">22.05 ± 6.73</td><td align="center" valign="top" rowspan="1" colspan="1">1.37 ± 0.66</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lu Y et al. 2024 [<xref rid="jgh370408-bib-0024" ref-type="bibr">24</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">R</td><td align="center" valign="top" rowspan="1" colspan="1">S</td><td align="center" valign="top" rowspan="1" colspan="1">9</td><td align="center" valign="top" rowspan="1" colspan="1">China</td><td align="center" valign="top" rowspan="1" colspan="1">175 (115)</td><td align="center" valign="top" rowspan="1" colspan="1">30.00 ± 2.60</td><td align="center" valign="top" rowspan="1" colspan="1">1.46 ± 0.22</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Stidham RW et al. 2016 [<xref rid="jgh370408-bib-0025" ref-type="bibr">25</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">R</td><td align="center" valign="top" rowspan="1" colspan="1">S</td><td align="center" valign="top" rowspan="1" colspan="1">9</td><td align="center" valign="top" rowspan="1" colspan="1">USA</td><td align="center" valign="top" rowspan="1" colspan="1">221 (92)</td><td align="center" valign="top" rowspan="1" colspan="1">40.96 ± 15.68</td><td align="center" valign="top" rowspan="1" colspan="1">3.30 ± 1.43</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Perl D et al. 2019 [<xref rid="jgh370408-bib-0026" ref-type="bibr">26</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">R</td><td align="center" valign="top" rowspan="1" colspan="1">S</td><td align="center" valign="top" rowspan="1" colspan="1">9</td><td align="center" valign="top" rowspan="1" colspan="1">USA</td><td align="center" valign="top" rowspan="1" colspan="1">157 (65)</td><td align="center" valign="top" rowspan="1" colspan="1">31.03 ± 14.88</td><td align="center" valign="top" rowspan="1" colspan="1">2.0</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Grass F et al. 2019 [<xref rid="jgh370408-bib-0027" ref-type="bibr">27</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">R</td><td align="center" valign="top" rowspan="1" colspan="1">S</td><td align="center" valign="top" rowspan="1" colspan="1">8</td><td align="center" valign="top" rowspan="1" colspan="1">USA</td><td align="center" valign="top" rowspan="1" colspan="1">559 (295)</td><td align="center" valign="top" rowspan="1" colspan="1">40.40 ± 20.29</td><td align="center" valign="top" rowspan="1" colspan="1">9.07 ± 2.62</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Deepak P et al. 2016 [<xref rid="jgh370408-bib-0028" ref-type="bibr">28</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">R</td><td align="center" valign="top" rowspan="1" colspan="1">S</td><td align="center" valign="top" rowspan="1" colspan="1">8</td><td align="center" valign="top" rowspan="1" colspan="1">USA</td><td align="center" valign="top" rowspan="1" colspan="1">150 (75)</td><td align="center" valign="top" rowspan="1" colspan="1">25.11 ± 10.48</td><td align="center" valign="top" rowspan="1" colspan="1">9.26 ± 3.41</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lafeuille P et al. 2021 [<xref rid="jgh370408-bib-0029" ref-type="bibr">29</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">R</td><td align="center" valign="top" rowspan="1" colspan="1">S</td><td align="center" valign="top" rowspan="1" colspan="1">7</td><td align="center" valign="top" rowspan="1" colspan="1">France</td><td align="center" valign="top" rowspan="1" colspan="1">154 (113)</td><td align="center" valign="top" rowspan="1" colspan="1">28.2 ± 14.4</td><td align="center" valign="top" rowspan="1" colspan="1">2.45 ± 0.62</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Oh K et al. 2022 [<xref rid="jgh370408-bib-0030" ref-type="bibr">30</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">R</td><td align="center" valign="top" rowspan="1" colspan="1">S</td><td align="center" valign="top" rowspan="1" colspan="1">8</td><td align="center" valign="top" rowspan="1" colspan="1">South Korea</td><td align="center" valign="top" rowspan="1" colspan="1">392 (261)</td><td align="center" valign="top" rowspan="1" colspan="1">NA</td><td align="center" valign="top" rowspan="1" colspan="1">1.50 ± 0.37</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Gallego JC et al. 2019 [<xref rid="jgh370408-bib-0031" ref-type="bibr">31</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">R</td><td align="center" valign="top" rowspan="1" colspan="1">S</td><td align="center" valign="top" rowspan="1" colspan="1">8</td><td align="center" valign="top" rowspan="1" colspan="1">Spain</td><td align="center" valign="top" rowspan="1" colspan="1">34 (16)</td><td align="center" valign="top" rowspan="1" colspan="1">36.78 ± 11.24</td><td align="center" valign="top" rowspan="1" colspan="1">5.17 ± 1.55</td></tr></tbody></table><table-wrap-foot id="jgh370408-ntgp-0002"><fn id="jgh370408-note-0002"><p>Abbreviations: M, multicenter study; P, prospective cohort; R, retrospective cohort; S, Single‐center.</p></fn></table-wrap-foot></table-wrap><table-wrap position="float" id="jgh370408-tbl-0002" content-type="TABLE" orientation="portrait"><label>TABLE 2</label><caption><p>Newcastle–Ottawa Scale scores.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Study</th><th align="center" colspan="4" valign="bottom" rowspan="1">Selection</th><th align="center" colspan="2" valign="bottom" rowspan="1">Comparability</th><th align="center" colspan="3" valign="bottom" rowspan="1">Exposure/outcome</th><th align="center" valign="bottom" rowspan="1" colspan="1">Total</th></tr><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">First author (publication year)</th><th align="center" valign="bottom" rowspan="1" colspan="1">The cohort was truly or somewhat representative of a typical adult Crohn's disease cohort</th><th align="center" valign="bottom" rowspan="1" colspan="1">Selection of the control subjects was from the same community as the adult Crohn's disease cohort</th><th align="center" valign="bottom" rowspan="1" colspan="1">Ascertainment of adult Crohn's disease was made via secure record OR structured interview</th><th align="center" valign="bottom" rowspan="1" colspan="1">Demonstration that outcome of interest was not present at start of study</th><th align="center" valign="bottom" rowspan="1" colspan="1">Cohorts are comparable based on design or control for major confounders</th><th align="center" valign="bottom" rowspan="1" colspan="1">Cohorts are comparable based on design or control for minor confounders</th><th align="center" valign="bottom" rowspan="1" colspan="1">Assessment of outcome was independent OR linked to medical records</th><th align="center" valign="bottom" rowspan="1" colspan="1">Follow‐up time was clearly defined</th><th align="center" valign="bottom" rowspan="1" colspan="1">Follow‐up was adequate (all subjects accounted for or ≤ 20% attrition)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Total</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Sagami S et al. 2019 [<xref rid="jgh370408-bib-0010" ref-type="bibr">10</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">0</td><td align="center" valign="top" rowspan="1" colspan="1">0</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">7</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Fiorino G et al. 2017 [<xref rid="jgh370408-bib-0017" ref-type="bibr">17</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">0</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Takenaka K et al. 2023 [<xref rid="jgh370408-bib-0018" ref-type="bibr">18</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">0</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Takenaka K et al. 2017 [<xref rid="jgh370408-bib-0019" ref-type="bibr">19</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">9</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Fernandes SR et al. 2023 [<xref rid="jgh370408-bib-0020" ref-type="bibr">20</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">0</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">0</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">7</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Revés J et al. 2025 [<xref rid="jgh370408-bib-0021" ref-type="bibr">21</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">9</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Deepak P et al. 2018 [<xref rid="jgh370408-bib-0022" ref-type="bibr">22</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">9</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lee JH et al. 2018 [<xref rid="jgh370408-bib-0023" ref-type="bibr">23</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">0</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lu Y et al. 2024 [<xref rid="jgh370408-bib-0024" ref-type="bibr">24</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">9</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Stidham RW et al. 2016 [<xref rid="jgh370408-bib-0025" ref-type="bibr">25</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">9</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Perl D et al. 2019 [<xref rid="jgh370408-bib-0026" ref-type="bibr">26</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">9</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Grass F et al. 2019 [<xref rid="jgh370408-bib-0027" ref-type="bibr">27</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">0</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Deepak P et al. 2016 [<xref rid="jgh370408-bib-0028" ref-type="bibr">28</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">0</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lafeuille P et al. 2021 [<xref rid="jgh370408-bib-0029" ref-type="bibr">29</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">0</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Oh K et al. 2022 [<xref rid="jgh370408-bib-0030" ref-type="bibr">30</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">0</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Gallego JC et al. 2019 [<xref rid="jgh370408-bib-0031" ref-type="bibr">31</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">0</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">8</td></tr></tbody></table></table-wrap><table-wrap position="float" id="jgh370408-tbl-0003" content-type="TABLE" orientation="portrait"><label>TABLE 3</label><caption><p>Summary of correlations between MRE‐related parameters and adverse outcomes in adults with Crohn's disease.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Study</th><th align="center" valign="bottom" rowspan="1" colspan="1">MRE parameter</th><th align="center" valign="bottom" rowspan="1" colspan="1">Measure of effect</th><th align="center" valign="bottom" rowspan="1" colspan="1">Effect size</th><th align="center" valign="bottom" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic>
+</th></tr></thead><tbody valign="top"><tr><td align="left" colspan="5" valign="top" rowspan="1">
+<italic toggle="yes">Any CD‐related surgery</italic>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Fiorino G et al. 2017 [<xref rid="jgh370408-bib-0017" ref-type="bibr">17</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Intestinal stenosis, fistula or abscess on baseline scanning</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">3.21 (1.87–5.53)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> ≤ 0.001</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Deepak P et al. 2018 [<xref rid="jgh370408-bib-0022" ref-type="bibr">22</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Intestinal stenosis, fistula or abscess on baseline scanning</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">2.20 (1.20–4.10)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.010</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lee JH et al. 2018 [<xref rid="jgh370408-bib-0023" ref-type="bibr">23</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Intestinal stenosis, fistula or abscess on baseline scanning</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">5.45 (1.10–27.18)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.015</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lu Y et al. 2024 [<xref rid="jgh370408-bib-0024" ref-type="bibr">24</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Intestinal stenosis, fistula or abscess on baseline scanning</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">9.17 (1.82–46.1)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.007</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Takenaka K et al. 2017 [<xref rid="jgh370408-bib-0019" ref-type="bibr">19</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Small bowel dilation &gt; 20 mm</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">10.99 (3.13–38.56)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> &lt; 0.001</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Stidham RW et al. 2016 [<xref rid="jgh370408-bib-0025" ref-type="bibr">25</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Small bowel dilation &gt; 35 mm</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">2.92 (1.73–4.94)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> ≤ 0.001</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Perl D et al. 2019 [<xref rid="jgh370408-bib-0026" ref-type="bibr">26</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Small bowel dilation &gt; 30 mm</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">2.19 (1.02–4.68)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.044</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Grass F et al. 2019 [<xref rid="jgh370408-bib-0027" ref-type="bibr">27</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Small bowel dilation &gt; 30 mm</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">3.06 (2.06–4.55)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> &lt; 0.0001</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Takenaka K et al. 2023 [<xref rid="jgh370408-bib-0018" ref-type="bibr">18</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0005" ref-type="table-fn">
+<sup>c</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.02 (0.001–0.92)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.040</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Fernandes SR et al. 2023 [<xref rid="jgh370408-bib-0020" ref-type="bibr">20</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0004" ref-type="table-fn">
+<sup>b</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.16 (0.04–0.67)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.012</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Revés J et al. 2025 [<xref rid="jgh370408-bib-0021" ref-type="bibr">21</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0003" ref-type="table-fn">
+<sup>a</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.21 (0.05–0.88)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.030</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Deepak P et al. 2016 [<xref rid="jgh370408-bib-0028" ref-type="bibr">28</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0003" ref-type="table-fn">
+<sup>a</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.34 (0.18–0.63)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> &lt; 0.001</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lafeuille P et al. 2021 [<xref rid="jgh370408-bib-0029" ref-type="bibr">29</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0003" ref-type="table-fn">
+<sup>a</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.08 (0.01–0.58)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.013</td></tr><tr><td align="left" colspan="5" valign="top" rowspan="1">
+<italic toggle="yes">Hospitalization</italic>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Fiorino G et al. 2017 [<xref rid="jgh370408-bib-0017" ref-type="bibr">17</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Intestinal stenosis, fistula or abscess on baseline scanning</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">1.88 (1.25–2.83)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.002</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lee JH et al. 2018 [<xref rid="jgh370408-bib-0023" ref-type="bibr">23</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Intestinal stenosis, fistula or abscess on baseline scanning</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">2.75 (1.20–6.34)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.017</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Deepak P et al. 2016 [<xref rid="jgh370408-bib-0028" ref-type="bibr">28</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Intestinal stenosis, fistula or abscess on baseline scanning</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">1.87 (1.09–3.23)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.020</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Takenaka K et al. 2023 [<xref rid="jgh370408-bib-0018" ref-type="bibr">18</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0005" ref-type="table-fn">
+<sup>c</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.11 (0.04–0.32)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> &lt; 0.010</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Fernandes SR et al. 2023 [<xref rid="jgh370408-bib-0020" ref-type="bibr">20</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0004" ref-type="table-fn">
+<sup>b</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.30 (0.15–0.62)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.001</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lu Y et al. 2024 [<xref rid="jgh370408-bib-0024" ref-type="bibr">24</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0003" ref-type="table-fn">
+<sup>a</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.21 (0.06–0.69)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.010</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Deepak P et al. 2016 [<xref rid="jgh370408-bib-0028" ref-type="bibr">28</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0003" ref-type="table-fn">
+<sup>a</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.28 (0.15–0.50)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> &lt; 0.001</td></tr><tr><td align="left" colspan="5" valign="top" rowspan="1">
+<italic toggle="yes">Treatment escalation</italic>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Sagami S et al. 2019 [<xref rid="jgh370408-bib-0010" ref-type="bibr">10</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0006" ref-type="table-fn">
+<sup>d</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.24 (0.06–0.92)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.012</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Fernandes SR et al. 2023 [<xref rid="jgh370408-bib-0020" ref-type="bibr">20</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0004" ref-type="table-fn">
+<sup>b</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.20 (0.13–0.33)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> &lt; 0.001</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Revés J et al. 2025 [<xref rid="jgh370408-bib-0021" ref-type="bibr">21</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0003" ref-type="table-fn">
+<sup>a</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.35 (0.14–0.88)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.020</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lee JH et al. 2018 [<xref rid="jgh370408-bib-0023" ref-type="bibr">23</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0003" ref-type="table-fn">
+<sup>a</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.16 (0.04–0.70)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.029</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lu Y et al. 2024 [<xref rid="jgh370408-bib-0024" ref-type="bibr">24</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0003" ref-type="table-fn">
+<sup>a</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.14 (0.05–0.38)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> &lt; 0.001</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Deepak P et al. 2016 [<xref rid="jgh370408-bib-0028" ref-type="bibr">28</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0003" ref-type="table-fn">
+<sup>a</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.37 (0.21–0.64)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> &lt; 0.001</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lafeuille P et al. 2021 [<xref rid="jgh370408-bib-0029" ref-type="bibr">29</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0003" ref-type="table-fn">
+<sup>a</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.15 (0.07–0.32)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> &lt; 0.001</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Oh K et al. 2022 [<xref rid="jgh370408-bib-0030" ref-type="bibr">30</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0003" ref-type="table-fn">
+<sup>a</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.11 (0.06–0.23)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> &lt; 0.001</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Gallego JC et al. 2019 [<xref rid="jgh370408-bib-0031" ref-type="bibr">31</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">TH<xref rid="jgh370408-note-0005" ref-type="table-fn">
+<sup>c</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">Multivariable HR</td><td align="center" valign="top" rowspan="1" colspan="1">0.26 (0.07–0.95)</td><td align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">p</italic> = 0.027</td></tr></tbody></table><table-wrap-foot id="jgh370408-ntgp-0003"><fn id="jgh370408-note-0003"><label>
+<sup>a</sup>
+</label><p>TH was defined as bowel wall thickness (BWT) ⩽ 3 mm with no inflammatory signs (i.e., ulcer, intramural edema, diffusion‐weighted hyperintensity, and contrast enhancement) and no complications (i.e., abscess, strictures, or fistula).</p></fn><fn id="jgh370408-note-0004"><label>
+<sup>b</sup>
+</label><p>TH was defined as bowel wall thickness (BWT) ⩽ 3 mm and no diffusion‐weighted hyperintensity.</p></fn><fn id="jgh370408-note-0005"><label>
+<sup>c</sup>
+</label><p>TH was defined as the MRE score of the most affected segment &lt; 2.</p></fn><fn id="jgh370408-note-0006"><label>
+<sup>d</sup>
+</label><p>TH was defined as a MaRIA score of &lt; 50.</p></fn></table-wrap-foot></table-wrap></sec><sec id="jgh370408-sec-0015"><label>3.2</label><title>Risk of Surgery</title><sec id="jgh370408-sec-0016"><label>3.2.1</label><title>Association Between Baseline Penetrating Lesions and Surgical Risk</title><p>Among the 16 studies included, 4 analyzed the impact of baseline MRE‐defined penetrating lesions (B3) on surgical risk during the follow‐up period in patients with CD [<xref rid="jgh370408-bib-0017" ref-type="bibr">17</xref>, <xref rid="jgh370408-bib-0022" ref-type="bibr">22</xref>, <xref rid="jgh370408-bib-0023" ref-type="bibr">23</xref>, <xref rid="jgh370408-bib-0024" ref-type="bibr">24</xref>]. Heterogeneity testing indicated low heterogeneity among the studies (<italic toggle="yes">χ</italic>
+<sup>2</sup> = 3.41, df = 3, <italic toggle="yes">p</italic> = 0.33; <italic toggle="yes">I</italic>
+<sup>2</sup> = 12%), so a fixed‐effects model was used to pool the HRs. Statistical analysis revealed that the presence of baseline MRE‐defined penetrating lesions was associated with an increased risk of surgery during follow‐up in CD patients (HR = 1.62, 95% CI: 1.37–1.91, <italic toggle="yes">p</italic> &lt; 0.00001) (Figure <xref rid="jgh370408-fig-0002" ref-type="fig">2A</xref>).</p><fig position="float" fig-type="FIGURE" id="jgh370408-fig-0002" orientation="portrait"><label>FIGURE 2</label><caption><p>Forest plots for the association of baseline MRE phenotypes and posttreatment TH with surgery in CD. (A) Penetrating lesions. (B) Stricturing lesions. (C) TH.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="JGH3-10-e70408-g002.jpg"/></fig></sec><sec id="jgh370408-sec-0017"><label>3.2.2</label><title>Association Between Baseline Stricture Lesions and Surgical Risk</title><p>Among the 16 included studies, 4 studies analyzed the impact of baseline MRE‐defined stricturing lesions (B2) and the risk of surgery during follow‐up [<xref rid="jgh370408-bib-0019" ref-type="bibr">19</xref>, <xref rid="jgh370408-bib-0025" ref-type="bibr">25</xref>, <xref rid="jgh370408-bib-0026" ref-type="bibr">26</xref>, <xref rid="jgh370408-bib-0027" ref-type="bibr">27</xref>]. Heterogeneity testing indicated low heterogeneity (<italic toggle="yes">χ</italic>
+<sup>2</sup> = 4.75, df = 3, <italic toggle="yes">p</italic> = 0.19, <italic toggle="yes">I</italic>
+<sup>2</sup> = 37%), which was considered acceptable. Given that this subgroup had relatively greater heterogeneity (<italic toggle="yes">I</italic>
+<sup>2</sup> = 37%) than other subgroups did, a more conservative random effects model was used for pooling. Baseline MRE‐defined stricturing lesions in CD patients were observed to be linked with higher rates of surgery over the follow‐up period. (HR = 1.65, 95% CI: 1.39–1.96, <italic toggle="yes">p</italic> &lt; 0.00001) (Figure <xref rid="jgh370408-fig-0002" ref-type="fig">2B</xref>). Sensitivity analysis suggested that heterogeneity might stem from variations in the morphological criteria for small bowel stenosis with prestenotic dilation among the studies; the four studies used different thresholds for luminal dilation: &gt; 20 mm (<italic toggle="yes">n</italic> = 1), &gt; 30 mm (<italic toggle="yes">n</italic> = 2), and &gt; 35 mm (<italic toggle="yes">n</italic> = 1) (Table <xref rid="jgh370408-tbl-0003" ref-type="table">3</xref>). This inconsistency in diagnostic thresholds may introduce potential bias in the effect size.</p></sec><sec id="jgh370408-sec-0018"><label>3.2.3</label><title>Association Between Achievement of <styled-content style="fixed-case" toggle="no">TH</styled-content> Posttreatment and Surgical Risk</title><p>Among the 16 studies included, 5 analyzed the impact of achieving TH after treatment on surgical risk during the follow‐up period in patients with CD [<xref rid="jgh370408-bib-0018" ref-type="bibr">18</xref>, <xref rid="jgh370408-bib-0020" ref-type="bibr">20</xref>, <xref rid="jgh370408-bib-0021" ref-type="bibr">21</xref>, <xref rid="jgh370408-bib-0028" ref-type="bibr">28</xref>, <xref rid="jgh370408-bib-0029" ref-type="bibr">29</xref>]. Heterogeneity testing indicated low heterogeneity among the studies (<italic toggle="yes">χ</italic>
+<sup>2</sup> = 4.67, df = 4, <italic toggle="yes">p</italic> = 0.32; <italic toggle="yes">I</italic>
+<sup>2</sup> = 14%), so a fixed‐effects model was used. The results revealed that CD patients who achieved TH after treatment were associated with a lower risk of intestinal surgery during follow‐up (HR = 0.55, 95% CI: 0.44–0.68, <italic toggle="yes">p</italic> &lt; 0.00001) (Figure <xref rid="jgh370408-fig-0002" ref-type="fig">2C</xref>).</p></sec></sec><sec id="jgh370408-sec-0019"><label>3.3</label><title>Risk of Hospitalization</title><sec id="jgh370408-sec-0020"><label>3.3.1</label><title>Association Between Baseline Penetrating Lesions and the Risk of Hospitalization</title><p>Among the 16 studies included, 3 analyzed the impact of baseline MRE‐defined penetrating lesions (B3) on the risk of hospitalization in patients with CD during the follow‐up period [<xref rid="jgh370408-bib-0017" ref-type="bibr">17</xref>, <xref rid="jgh370408-bib-0023" ref-type="bibr">23</xref>, <xref rid="jgh370408-bib-0028" ref-type="bibr">28</xref>]. Heterogeneity testing indicated low heterogeneity among the studies (<italic toggle="yes">χ</italic>
+<sup>2</sup> = 0.75, df = 2, <italic toggle="yes">p</italic> = 0.69; <italic toggle="yes">I</italic>
+<sup>2</sup> = 0%), so a fixed‐effects model was used to pool the HRs. The results showed that baseline MRE‐defined penetrating lesions were associated with a higher risk of hospitalization during the follow‐up period in CD patients. (HR = 1.34, 95% CI: 1.18–1.53, <italic toggle="yes">p</italic> &lt; 0.0001) (Figure <xref rid="jgh370408-fig-0003" ref-type="fig">3A</xref>).</p><fig position="float" fig-type="FIGURE" id="jgh370408-fig-0003" orientation="portrait"><label>FIGURE 3</label><caption><p>Forest plots for the association of baseline MRE phenotypes and posttreatment TH with hospitalization in CD. (A) Penetrating lesions. (B) TH.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="JGH3-10-e70408-g004.jpg"/></fig></sec><sec id="jgh370408-sec-0021"><label>3.3.2</label><title>Association Between Achievement of <styled-content style="fixed-case" toggle="no">TH</styled-content> Posttreatment and Hospitalization Risk</title><p>Among the 16 studies included, 4 analyzed the impact of achieving TH after treatment on hospitalization risk during the follow‐up period in patients with CD [<xref rid="jgh370408-bib-0018" ref-type="bibr">18</xref>, <xref rid="jgh370408-bib-0020" ref-type="bibr">20</xref>, <xref rid="jgh370408-bib-0024" ref-type="bibr">24</xref>, <xref rid="jgh370408-bib-0028" ref-type="bibr">28</xref>]. Heterogeneity testing indicated low heterogeneity among the studies (<italic toggle="yes">χ</italic>
+<sup>2</sup> = 2.89, df = 3, <italic toggle="yes">p</italic> = 0.41; <italic toggle="yes">I</italic>
+<sup>2</sup> = 0%), so a fixed‐effects model was used. Statistical analysis revealed that compared with NH patients, CD patients who achieved TH after treatment were associated with lower rates of hospitalization during follow‐up (HR = 0.54, 95% CI: 0.45–0.64, <italic toggle="yes">p</italic> &lt; 0.00001) (Figure <xref rid="jgh370408-fig-0003" ref-type="fig">3B</xref>).</p></sec></sec><sec id="jgh370408-sec-0022"><label>3.4</label><title>Risk of Treatment Escalation</title><sec id="jgh370408-sec-0023"><label>3.4.1</label><title>Association Between Achievement of <styled-content style="fixed-case" toggle="no">TH</styled-content> Posttreatment and Treatment Escalation Risk</title><p>Among the 16 studies included, 9 cohort studies analyzed the impact of achieving TH after treatment on the risk of treatment escalation in CD patients during the follow‐up period [<xref rid="jgh370408-bib-0010" ref-type="bibr">10</xref>, <xref rid="jgh370408-bib-0020" ref-type="bibr">20</xref>, <xref rid="jgh370408-bib-0021" ref-type="bibr">21</xref>, <xref rid="jgh370408-bib-0023" ref-type="bibr">23</xref>, <xref rid="jgh370408-bib-0024" ref-type="bibr">24</xref>, <xref rid="jgh370408-bib-0028" ref-type="bibr">28</xref>, <xref rid="jgh370408-bib-0029" ref-type="bibr">29</xref>, <xref rid="jgh370408-bib-0030" ref-type="bibr">30</xref>, <xref rid="jgh370408-bib-0031" ref-type="bibr">31</xref>]. Heterogeneity testing indicated low heterogeneity among the studies (<italic toggle="yes">χ</italic>
+<sup>2</sup> = 9.70, df = 8, <italic toggle="yes">p</italic> = 0.29; <italic toggle="yes">I</italic>
+<sup>2</sup> = 18%), so a fixed‐effects model was used. The results revealed that CD patients achieving TH after treatment were observed to have lower rates of treatment escalation during follow‐up (HR = 0.51, 95% CI: 0.46–0.57, <italic toggle="yes">p</italic> &lt; 0.00001) (Figure <xref rid="jgh370408-fig-0004" ref-type="fig">4</xref>).</p><fig position="float" fig-type="FIGURE" id="jgh370408-fig-0004" orientation="portrait"><label>FIGURE 4</label><caption><p>Forest plot for the association of posttreatment TH with treatment escalation in CD.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="JGH3-10-e70408-g001.jpg"/></fig></sec></sec></sec><sec sec-type="discussion" id="jgh370408-sec-0024"><label>4</label><title>Discussion</title><p>This meta‐analysis is the first to systematically quantify the predictive value of MRE for long‐term outcomes in adult CD patients based on a large sample size. We found that baseline MRE‐defined penetrating lesions were significantly associated with a higher risk of surgical intervention during follow‐up in this patient population. Penetrating lesions are among the most severe complications of CD, often leading to fistulas and abscesses, which cause persistent inflammation, infection, or malnutrition; severely impact quality of life; and often necessitate urgent treatment escalation and surgical intervention [<xref rid="jgh370408-bib-0032" ref-type="bibr">32</xref>]. Although biologics can induce fistula closure in some patients, approximately half ultimately require surgery. Delayed intervention may increase the risks of postoperative recurrence and reoperation [<xref rid="jgh370408-bib-0033" ref-type="bibr">33</xref>]. Therefore, early detection of penetrating lesions is crucial for guiding clinical decisions. Cross‐sectional imaging, such as MRE, allows comprehensive assessment of full‐thickness inflammation and extramural complications, providing a “therapeutic window” for initiating intensive treatment promptly and considering surgical intervention if medical therapy fails, with the goal of delaying or halting disease progression. Furthermore, this meta‐analysis revealed that baseline MRE‐defined stricturing lesions were associated with a markedly higher risk of subsequent surgery. A previous study of 557 IBD patients revealed that approximately 33% of CD patients had small bowel strictures (two‐thirds were inflammatory) [<xref rid="jgh370408-bib-0034" ref-type="bibr">34</xref>]. Without timely monitoring and intervention, inflammatory strictures may progress to irreversible fibrotic strictures. Owing to the lack of safe and effective antifibrotic drugs, these patients often experience repeated hospitalizations and surgeries [<xref rid="jgh370408-bib-0035" ref-type="bibr">35</xref>]. These findings suggest that early risk stratification and prognosis prediction on the basis of MRE phenotypes may guide clinicians in initiating early intensive therapy and improving disease outcomes.</p><p>Currently, the long‐term treatment target for CD remains MH. Achieving MH significantly improves long‐term prognosis [<xref rid="jgh370408-bib-0036" ref-type="bibr">36</xref>]. However, CD is a transmural inflammatory disease. Studies indicate that the disease may progress even after MH is achieved [<xref rid="jgh370408-bib-0037" ref-type="bibr">37</xref>]. Therefore, the STRIDE‐II consensus proposed TH as a potential deeper treatment target [<xref rid="jgh370408-bib-0038" ref-type="bibr">38</xref>]. This meta‐analysis, through data integration, demonstrated that achieving TH after treatment was associated with lower risks of surgery, hospitalization, and treatment escalation compared with NH. Currently, studies directly comparing MH and TH are limited. Four studies included in this meta‐analysis directly compared the prognostic value of TH with that of MH, consistently demonstrating stronger predictive power for TH. For example, Takenaka et al. [<xref rid="jgh370408-bib-0018" ref-type="bibr">18</xref>] reported that compared with those who achieved only MH, CD patients who achieved TH had significantly lower risks of hospitalization (HR = 0.11 vs. 0.39) and surgery (HR = 0.02 vs. 0.19) during follow‐up. Lafeuille et al. [<xref rid="jgh370408-bib-0029" ref-type="bibr">29</xref>] also reported that patients who achieved TH had far lower risks of surgery, hospitalization, and treatment escalation than those who achieved only MH did (HR = 0.28, 95% CI: 0.00–0.74, <italic toggle="yes">p</italic> = 0.01). Fernandes et al. [<xref rid="jgh370408-bib-0020" ref-type="bibr">20</xref>] reported that the risk of surgery was significantly lower in the TH group than in the NH group (HR = 0.160, 95% CI: 0.038–0.673; <italic toggle="yes">p</italic> = 0.012), whereas no significant difference was found between the MH and NH groups. Additionally, Oh et al. [<xref rid="jgh370408-bib-0030" ref-type="bibr">30</xref>] reported that compared with achieving TH, achieving only MH was associated with greater risks of surgery, treatment escalation, and hospitalization (HR = 3.903, 95% CI: 1.635–9.315, <italic toggle="yes">p</italic> = 0.002). In summary, TH represents a treatment goal beyond MH. Achieving TH was associated with lower rates of complications and adverse outcomes.</p><p>Although targeting TH holds clinical value, its application in clinical practice faces challenges. On the one hand, reported rates of TH achievement remain relatively low, ranging between 14% and 42.4% [<xref rid="jgh370408-bib-0039" ref-type="bibr">39</xref>], reflecting the complexity of CD treatment. Potential reasons include the following: current medications may not fully resolve transmural inflammation in all patients; the varying timing of posttreatment MRE assessment may lead to underestimation of TH rates; and the limited availability, complexity, and increased cost of advanced cross‐sectional imaging, such as MRE, restrict its routine use and the widespread implementation of TH as a target. On the other hand, there is currently no unified standard for MRE assessment of TH. Different scoring systems (Maria, SMaria, Clermont, and C rating systems) vary in imaging features, weightings, and threshold settings, limiting comparability across studies [<xref rid="jgh370408-bib-0008" ref-type="bibr">8</xref>, <xref rid="jgh370408-bib-0040" ref-type="bibr">40</xref>].</p><p>The definition of TH also lacks uniformity across different cross‐sectional imaging modalities (Table <xref rid="jgh370408-tbl-0004" ref-type="table">4</xref>). TH assessed by CTE/MRE may focus on normalization of bowel wall thickness and enhancement, whereas IUS‐assessed TH may emphasize normalization of wall thickness, stratification, and blood flow signals [<xref rid="jgh370408-bib-0041" ref-type="bibr">41</xref>]. Substantial heterogeneity in TH definitions across studies introduces ambiguity to clinical decision‐making. Simplified TH criteria (e.g., bowel wall thickness [BWT] ≤ 3 mm alone) yield higher TH rates but risk underestimating persistent transmural inflammation, which may lead to premature treatment de‐escalation and elevated relapse risk. In contrast, extended criteria (e.g., BWT ≤ 3 mm plus absence of hypervascularization signs) reduce observed TH rates while improving therapeutic precision and mitigating progression of bowel damage. Although the prognostic value of TH has been well established, its implications need to be interpreted with caution in clinical practice.</p><table-wrap position="float" id="jgh370408-tbl-0004" content-type="TABLE" orientation="portrait"><label>TABLE 4</label><caption><p>Comparison of definitions for transmural healing as assessed by MRE.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="left" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Study (Author, Year)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Design of the study</th><th align="center" valign="bottom" rowspan="1" colspan="1">Imaging modality</th><th align="center" valign="bottom" rowspan="1" colspan="1">TH definition</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Sagami S et al. 2019 (<italic toggle="yes">n</italic> = 50) [<xref rid="jgh370408-bib-0010" ref-type="bibr">10</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Retrospective cohort; single‐center</td><td align="center" valign="top" rowspan="1" colspan="1">MRE</td><td align="left" valign="top" rowspan="1" colspan="1">MaRIA score &lt; 50</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Takenaka K et al. 2023 (<italic toggle="yes">n</italic> = 134) [<xref rid="jgh370408-bib-0018" ref-type="bibr">18</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Prospective cohort; single‐center</td><td align="center" valign="top" rowspan="1" colspan="1">MRE</td><td align="left" valign="top" rowspan="1" colspan="1">MaRIA score of the most affected segment &lt; 2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Gallego JC et al. 2019 (<italic toggle="yes">n</italic> = 34) [<xref rid="jgh370408-bib-0031" ref-type="bibr">31</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Retrospective cohort; single‐center</td><td align="center" valign="top" rowspan="1" colspan="1">MRE</td><td align="left" valign="top" rowspan="1" colspan="1">MaRIA score of the most affected segment &lt; 2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Fernandes SR et al. 2023 (<italic toggle="yes">n</italic> = 404) [<xref rid="jgh370408-bib-0020" ref-type="bibr">20</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Retrospective cohort; multicenter</td><td align="center" valign="top" rowspan="1" colspan="1">MRE</td><td align="left" valign="top" rowspan="1" colspan="1">
+<list list-type="order" id="jgh370408-list-0001"><list-item id="jgh370408-li-0001"><p>BWT ≤ 3 mm</p></list-item><list-item id="jgh370408-li-0002"><p>Absence of diffusion‐weighted hyperintensity</p></list-item></list>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Revés J et al. 2025 (<italic toggle="yes">n</italic> = 154) [<xref rid="jgh370408-bib-0021" ref-type="bibr">21</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Retrospective cohort; multicenter</td><td align="center" valign="top" rowspan="1" colspan="1">MRE</td><td align="left" valign="top" rowspan="1" colspan="1">
+<list list-type="order" id="jgh370408-list-0002"><list-item id="jgh370408-li-0003"><p>BWT ≤ 3 mm</p></list-item><list-item id="jgh370408-li-0004"><p>No inflammatory signs (ulcer, edema, enhancement)</p></list-item><list-item id="jgh370408-li-0005"><p>No complications (abscess, stricture, fistula)</p></list-item></list>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lee JH et al. 2018 (<italic toggle="yes">n</italic> = 173) [<xref rid="jgh370408-bib-0023" ref-type="bibr">23</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Retrospective cohort; single‐center</td><td align="center" valign="top" rowspan="1" colspan="1">MRE</td><td align="left" valign="top" rowspan="1" colspan="1">
+<list list-type="order" id="jgh370408-list-0003"><list-item id="jgh370408-li-0006"><p>BWT ≤ 3 mm</p></list-item><list-item id="jgh370408-li-0007"><p>No inflammatory signs (ulcer, edema, enhancement)</p></list-item><list-item id="jgh370408-li-0008"><p>No complications (abscess, stricture, fistula)</p></list-item></list>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lu Y et al. 2024 (<italic toggle="yes">n</italic> = 175) [<xref rid="jgh370408-bib-0024" ref-type="bibr">24</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Retrospective cohort; single‐center</td><td align="center" valign="top" rowspan="1" colspan="1">MRE</td><td align="left" valign="top" rowspan="1" colspan="1">
+<list list-type="order" id="jgh370408-list-0004"><list-item id="jgh370408-li-0009"><p>BWT ≤ 3 mm</p></list-item><list-item id="jgh370408-li-0010"><p>No inflammatory signs (ulcer, edema, enhancement)</p></list-item><list-item id="jgh370408-li-0011"><p>No complications (abscess, stricture, fistula)</p></list-item></list>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Deepak P et al. 2016 (<italic toggle="yes">n</italic> = 150) [<xref rid="jgh370408-bib-0028" ref-type="bibr">28</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Retrospective cohort; single‐center</td><td align="center" valign="top" rowspan="1" colspan="1">MRE</td><td align="left" valign="top" rowspan="1" colspan="1">
+<list list-type="order" id="jgh370408-list-0005"><list-item id="jgh370408-li-0012"><p>BWT ≤ 3 mm</p></list-item><list-item id="jgh370408-li-0013"><p>No inflammatory signs (ulcer, edema, enhancement)</p></list-item><list-item id="jgh370408-li-0014"><p>No complications (abscess, stricture, fistula)</p></list-item></list>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Lafeuille P et al. 2021 (<italic toggle="yes">n</italic> = 154) [<xref rid="jgh370408-bib-0029" ref-type="bibr">29</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Retrospective cohort; single‐center</td><td align="center" valign="top" rowspan="1" colspan="1">MRE</td><td align="left" valign="top" rowspan="1" colspan="1">
+<list list-type="order" id="jgh370408-list-0006"><list-item id="jgh370408-li-0015"><p>BWT ≤ 3 mm</p></list-item><list-item id="jgh370408-li-0016"><p>No inflammatory signs (ulcer, edema, enhancement)</p></list-item><list-item id="jgh370408-li-0017"><p>No complications (abscess, stricture, fistula)</p></list-item></list>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Oh K et al. 2022 (<italic toggle="yes">n</italic> = 392) [<xref rid="jgh370408-bib-0030" ref-type="bibr">30</xref>]</td><td align="center" valign="top" rowspan="1" colspan="1">Retrospective cohort; single‐center</td><td align="center" valign="top" rowspan="1" colspan="1">MRE</td><td align="left" valign="top" rowspan="1" colspan="1">
+<list list-type="order" id="jgh370408-list-0007"><list-item id="jgh370408-li-0018"><p>BWT ≤ 3 mm</p></list-item><list-item id="jgh370408-li-0019"><p>No inflammatory signs (ulcer, edema, enhancement)</p></list-item><list-item id="jgh370408-li-0020"><p>No complications (abscess, stricture, fistula)</p></list-item></list>
+</td></tr></tbody></table><table-wrap-foot id="jgh370408-ntgp-0004"><fn id="jgh370408-note-0007"><p>
+<italic toggle="yes">Note:</italic> BWT, bowel wall thickness; MaRIA, magnetic resonance index of activity; MRE, magnetic resonance enterography; TH, transmural healing.</p></fn></table-wrap-foot></table-wrap><p>Several limitations of this study should be considered when interpreting the results. First, 13 of the 16 included studies were retrospective, potentially introducing selection and information bias that could affect the robustness of the results. Second, the included CD patients were adults; the applicability of these findings to special populations, such as children and pregnant women, requires further validation.</p><p>In conclusion, CD is a chronic progressive disorder characterized by cumulative bowel damage and disability. The ultimate therapeutic goal is sustained deep remission. Baseline MRE‐defined penetrating or stricturing lesions were associated with higher risks of hospitalization and surgery. Conversely, achieving TH was associated with lower risks of surgery, hospitalization, and treatment escalation, suggesting that TH may represent a potentially deeper therapeutic target than MH. Cross‐sectional imaging may facilitate early disease phenotyping, risk stratification, and longitudinal dynamic monitoring, thereby supporting timely treatment adjustment to reduce complication risks and improve long‐term prognosis. Future efforts should focus on the standardization of imaging criteria for TH and the optimization of assessment time points to further enhance their clinical applicability.</p></sec><sec id="jgh370408-sec-0027"><title>Funding</title><p>The authors have nothing to report.</p></sec><sec sec-type="COI-statement" id="jgh370408-sec-0028"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec></body><back><sec sec-type="data-availability" id="jgh370408-sec-0026"><title>Data Availability Statement</title><p>The data that support the findings of this study are openly available in Figshare at <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://doi.org/10.6084/m9.figshare.31959732" ext-link-type="uri" specific-use="dataset is-supplemented-by">https://doi.org/10.6084/m9.figshare.31959732</ext-link>.</p></sec><ref-list content-type="cited-references" id="jgh370408-bibl-0001"><title>References</title><ref id="jgh370408-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="jgh370408-cit-0001">
+<string-name name-style="western">
+<given-names>D. C.</given-names>
+<surname>Baumgart</surname>
+</string-name> and <string-name name-style="western">
+<given-names>S. R.</given-names>
+<surname>Carding</surname>
+</string-name>, “<article-title>Inflammatory Bowel Disease: Cause and Immunobiology</article-title>,” <source>Lancet (London, England)</source>
+<volume>369</volume> (<year>2007</year>): <fpage>1627</fpage>–<lpage>1640</lpage>.<pub-id pub-id-type="pmid">17499605</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/S0140-6736(07)60750-8</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="jgh370408-cit-0002">
+<string-name name-style="western">
+<given-names>S. C.</given-names>
+<surname>Ng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. Y.</given-names>
+<surname>Shi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Hamidi</surname>
+</string-name>, et al., “<article-title>Worldwide Incidence and Prevalence of Inflammatory Bowel Disease in the 21st Century: A Systematic Review of Population‐Based Studies</article-title>,” <source>Lancet (London, England)</source>
+<volume>390</volume> (<year>2017</year>): <fpage>2769</fpage>–<lpage>2778</lpage>.<pub-id pub-id-type="pmid">29050646</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/S0140-6736(17)32448-0</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="jgh370408-cit-0003">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Rieder</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. K.</given-names>
+<surname>Mukherjee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W. J.</given-names>
+<surname>Massey</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Wang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Fiocchi</surname>
+</string-name>, “<article-title>Fibrosis in IBD: From Pathogenesis to Therapeutic Targets</article-title>,” <source>Gut</source>
+<volume>73</volume> (<year>2024</year>): <fpage>854</fpage>–<lpage>866</lpage>.<pub-id pub-id-type="pmid">38233198</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/gutjnl-2023-329963</pub-id><pub-id pub-id-type="pmcid">PMC10997492</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="jgh370408-cit-0004">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Ueno</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Nakayama</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Hagiwara</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Kurimoto</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Hibi</surname>
+</string-name>, “<article-title>Impact of Inflammatory Bowel Disease on Japanese Patients' Quality of Life: Results of a Patient Questionnaire Survey</article-title>,” <source>Journal of Gastroenterology</source>
+<volume>52</volume> (<year>2017</year>): <fpage>555</fpage>–<lpage>567</lpage>.<pub-id pub-id-type="pmid">27470433</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00535-016-1241-x</pub-id><pub-id pub-id-type="pmcid">PMC5397430</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="jgh370408-cit-0005">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Khan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Sebastian</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. P.</given-names>
+<surname>Parmar</surname>
+</string-name>, et al., “<article-title>Factors Influencing the Quality of Life in Inflammatory Bowel Disease: A Comprehensive Review</article-title>,” <source>Disease‐a‐Month</source>
+<volume>70</volume> (<year>2024</year>): <fpage>101672</fpage>.<pub-id pub-id-type="pmid">38143196</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.disamonth.2023.101672</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="jgh370408-cit-0006">
+<string-name name-style="western">
+<given-names>C. S.</given-names>
+<surname>Tse</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Singh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. A.</given-names>
+<surname>Valasek</surname>
+</string-name>, et al., “<article-title>Prevalence and Correlations of Gastrointestinal Symptoms With Endoscopic and Histologic Mucosal Healing in Crohn's Disease</article-title>,” <source>American Journal of Gastroenterology</source>
+<volume>118</volume> (<year>2023</year>): <fpage>748</fpage>–<lpage>751</lpage>.<pub-id pub-id-type="pmid">36623171</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.14309/ajg.0000000000002122</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="jgh370408-cit-0007">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Cockburn</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Kamal</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Chan</surname>
+</string-name>, et al., “<article-title>Crohn's Disease: An Update</article-title>,” <source>Clinical Medicine (London, England)</source>
+<volume>23</volume> (<year>2023</year>): <fpage>549</fpage>–<lpage>557</lpage>.<pub-id pub-id-type="pmid">38065612</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.7861/clinmed.2023-0493</pub-id><pub-id pub-id-type="pmcid">PMC11298500</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="jgh370408-cit-0008">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Rimola</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Torres</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Kumar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Taylor</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kucharzik</surname>
+</string-name>, “<article-title>Recent Advances in Clinical Practice: Advances in Cross‐Sectional Imaging in Inflammatory Bowel Disease</article-title>,” <source>Gut</source>
+<volume>71</volume> (<year>2022</year>): <fpage>2587</fpage>–<lpage>2597</lpage>.<pub-id pub-id-type="pmid">35927032</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/gutjnl-2021-326562</pub-id><pub-id pub-id-type="pmcid">PMC9664122</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="jgh370408-cit-0009">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Hameed</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Kumar</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. A.</given-names>
+<surname>Taylor</surname>
+</string-name>, “<article-title>How I Do It: Cross‐Sectional Imaging in Small‐Bowel Crohn Disease and Ulcerative Colitis</article-title>,” <source>Radiology</source>
+<volume>314</volume> (<year>2025</year>): <fpage>e241452</fpage>.<pub-id pub-id-type="pmid">39932413</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1148/radiol.241452</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="jgh370408-cit-0010">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Sagami</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kobayashi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Kikkawa</surname>
+</string-name>, et al., “<article-title>Combination of Colonoscopy and Magnetic Resonance Enterography Is More Useful for Clinical Decision Making Than Colonoscopy Alone in Patients With Complicated Crohn's Disease</article-title>,” <source>PLoS One</source>
+<volume>14</volume> (<year>2019</year>): <fpage>e0212404</fpage>.<pub-id pub-id-type="pmid">30785943</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0212404</pub-id><pub-id pub-id-type="pmcid">PMC6382266</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="jgh370408-cit-0011">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Rimola</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Alfaro</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Fernández‐Clotet</surname>
+</string-name>, et al., “<article-title>Persistent Damage on Magnetic Resonance Enterography in Patients With Crohn's Disease in Endoscopic Remission</article-title>,” <source>Alimentary Pharmacology &amp; Therapeutics</source>
+<volume>48</volume> (<year>2018</year>): <fpage>1232</fpage>–<lpage>1241</lpage>.<pub-id pub-id-type="pmid">30345577</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/apt.15013</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="jgh370408-cit-0012">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Gajendran</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Loganathan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. P.</given-names>
+<surname>Catinella</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. G.</given-names>
+<surname>Hashash</surname>
+</string-name>, “<article-title>A Comprehensive Review and Update on Crohn's Disease</article-title>,” <source>Disease‐a‐Month</source>
+<volume>64</volume> (<year>2018</year>): <fpage>20</fpage>–<lpage>57</lpage>.<pub-id pub-id-type="pmid">28826742</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.disamonth.2017.07.001</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="jgh370408-cit-0013">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Maino</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Mariani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. G.</given-names>
+<surname>Drago</surname>
+</string-name>, et al., “<article-title>Computed Tomography and Magnetic Resonance Enterography: From Protocols to Diagnosis</article-title>,” <source>Diagnostics</source>
+<volume>14</volume> (<year>2024</year>): <fpage>2584</fpage>.<pub-id pub-id-type="pmid">39594251</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/diagnostics14222584</pub-id><pub-id pub-id-type="pmcid">PMC11592478</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="jgh370408-cit-0014">
+<string-name name-style="western">
+<given-names>R. P.</given-names>
+<surname>Luber</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Petri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Meade</surname>
+</string-name>, et al., “<article-title>Positioning Intestinal Ultrasound in a UK Tertiary Centre: Significant Estimated Clinical Role and Cost Savings</article-title>,” <source>Frontline Gastroenterology</source>
+<volume>14</volume> (<year>2023</year>): <fpage>52</fpage>–<lpage>58</lpage>.<pub-id pub-id-type="pmid">36561789</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/flgastro-2022-102156</pub-id><pub-id pub-id-type="pmcid">PMC9763649</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="jgh370408-cit-0015">
+<string-name name-style="western">
+<given-names>T. M.</given-names>
+<surname>Goodsall</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. K.</given-names>
+<surname>An</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Andrews</surname>
+</string-name>, et al., “<article-title>Reliability of Intestinal Ultrasound for Evaluating Crohn's Disease Activity Using Point‐Of‐Care and Central Reading</article-title>,” <source>Clinical Gastroenterology and Hepatology: The Official Clinical Practice Journal of the American Gastroenterological Association</source>
+<volume>23</volume> (<year>2025</year>): <fpage>1600</fpage>–<lpage>11.e9</lpage>.<pub-id pub-id-type="pmid">39209200</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cgh.2024.08.007</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0016"><label>16</label><mixed-citation publication-type="book" id="jgh370408-cit-0016">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>JPT</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Chandler</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Cumpston</surname>
+</string-name>, et al., <source>Cochrane Handbook for Systematic Reviews of Interventions Version 6.5 (Updated August 2024)</source> (<publisher-name>Cochrane</publisher-name>, <year>2024</year>), <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.cochrane.org/handbook" ext-link-type="uri">http://www.cochrane.org/handbook</ext-link>.</mixed-citation></ref><ref id="jgh370408-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="jgh370408-cit-0017">
+<string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Fiorino</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Morin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Bonovas</surname>
+</string-name>, et al., “<article-title>Prevalence of Bowel Damage Assessed by Cross‐Sectional Imaging in Early Crohn's Disease and Its Impact on Disease Outcome</article-title>,” <source>Journal of Crohn's &amp; Colitis</source>
+<volume>11</volume> (<year>2017</year>): <fpage>274</fpage>–<lpage>280</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/ecco-jcc/jjw185</pub-id><pub-id pub-id-type="pmid">27799269</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="jgh370408-cit-0018">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Takenaka</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Kawamoto</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Kitazume</surname>
+</string-name>, et al., “<article-title>Transmural Remission Characterized by High Biologic Concentrations Demonstrates Better Prognosis in Crohn's Disease</article-title>,” <source>Journal of Crohn's &amp; Colitis</source>
+<volume>17</volume> (<year>2023</year>): <fpage>855</fpage>–<lpage>862</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/ecco-jcc/jjac185</pub-id><pub-id pub-id-type="pmid">36527678</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="jgh370408-cit-0019">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Takenaka</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Ohtsuka</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Kitazume</surname>
+</string-name>, et al., “<article-title>Magnetic Resonance Evaluation for Small Bowel Strictures in Crohn's Disease: Comparison With Balloon Enteroscopy</article-title>,” <source>Journal of Gastroenterology</source>
+<volume>52</volume> (<year>2017</year>): <fpage>879</fpage>–<lpage>888</lpage>.<pub-id pub-id-type="pmid">27848026</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00535-016-1284-z</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="jgh370408-cit-0020">
+<string-name name-style="western">
+<given-names>S. R.</given-names>
+<surname>Fernandes</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Serrazina</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I. A.</given-names>
+<surname>Botto</surname>
+</string-name>, et al., “<article-title>Transmural Remission Improves Clinical Outcomes up to 5 Years in Crohn's Disease</article-title>,” <source>United European Gastroenterology Journal</source>
+<volume>11</volume> (<year>2023</year>): <fpage>51</fpage>–<lpage>59</lpage>.<pub-id pub-id-type="pmid">36575615</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/ueg2.12356</pub-id><pub-id pub-id-type="pmcid">PMC9892415</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="jgh370408-cit-0021">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Revés</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Fernandez‐Clotet</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Ordás</surname>
+</string-name>, et al., “<article-title>Early Biological Therapy Within 12 Months of Diagnosis Leads to Higher Transmural Healing Rates in Crohn's Disease</article-title>,” <source>Clinical Gastroenterology and Hepatology: The Official Clinical Practice Journal of the American Gastroenterological Association</source>
+<volume>23</volume> (<year>2025</year>): <fpage>1194</fpage>–<lpage>203.e2</lpage>.<pub-id pub-id-type="pmid">39209193</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cgh.2024.07.034</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="jgh370408-cit-0022">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Deepak</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. G.</given-names>
+<surname>Fletcher</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. L.</given-names>
+<surname>Fidler</surname>
+</string-name>, et al., “<article-title>Predictors of Durability of Radiological Response in Patients With Small Bowel Crohn's Disease</article-title>,” <source>Inflammatory Bowel Diseases</source>
+<volume>24</volume> (<year>2018</year>): <fpage>1815</fpage>–<lpage>1825</lpage>.<pub-id pub-id-type="pmid">29668921</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/ibd/izy074</pub-id><pub-id pub-id-type="pmcid">PMC6391864</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="jgh370408-cit-0023">
+<string-name name-style="western">
+<given-names>J. H.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. E.</given-names>
+<surname>Park</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Seo</surname>
+</string-name>, et al., “<article-title>Magnetic Resonance Enterography Predicts the Prognosis of Crohn's Disease</article-title>,” <source>Intestinal Research</source>
+<volume>16</volume> (<year>2018</year>): <fpage>445</fpage>–<lpage>457</lpage>.<pub-id pub-id-type="pmid">30090044</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.5217/ir.2018.16.3.445</pub-id><pub-id pub-id-type="pmcid">PMC6077316</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="jgh370408-cit-0024">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Lu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Xiong</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Zhang</surname>
+</string-name>, et al., “<article-title>Long‐Term Outcomes and Associated Factors of Crohn's Disease Patients Achieving Transmural Healing Based on Magnetic Resonance Enterography: A Chinese Retrospective Cohort Study</article-title>,” <source>Therapeutic Advances in Chronic Disease</source>
+<volume>15</volume> (<year>2024</year>): <elocation-id>20406223241259654</elocation-id>.<pub-id pub-id-type="pmid">39070018</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/20406223241259654</pub-id><pub-id pub-id-type="pmcid">PMC11273590</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="jgh370408-cit-0025">
+<string-name name-style="western">
+<given-names>R. W.</given-names>
+<surname>Stidham</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. S.</given-names>
+<surname>Guentner</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. L.</given-names>
+<surname>Ruma</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Govani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. K.</given-names>
+<surname>Waljee</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P. D.</given-names>
+<surname>Higgins</surname>
+</string-name>, “<article-title>Intestinal Dilation and Platelet:Albumin Ratio Are Predictors of Surgery in Stricturing Small Bowel Crohn's Disease</article-title>,” <source>Clinical Gastroenterology and Hepatology</source>
+<volume>14</volume> (<year>2016</year>): <fpage>1112</fpage>–<lpage>9.e2</lpage>.<pub-id pub-id-type="pmid">27155551</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cgh.2016.04.033</pub-id><pub-id pub-id-type="pmcid">PMC4955711</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="jgh370408-cit-0026">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Perl</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. K.</given-names>
+<surname>Waljee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Bishu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. D. R.</given-names>
+<surname>Higgins</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. P.</given-names>
+<surname>Wasnik</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R. W.</given-names>
+<surname>Stidham</surname>
+</string-name>, “<article-title>Imaging Features Associated With Failure of Nonoperative Management of Intraabdominal Abscesses in Crohn Disease</article-title>,” <source>Inflammatory Bowel Diseases</source>
+<volume>25</volume> (<year>2019</year>): <fpage>1939</fpage>–<lpage>1944</lpage>.<pub-id pub-id-type="pmid">31294779</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/ibd/izz069</pub-id><pub-id pub-id-type="pmcid">PMC6855277</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="jgh370408-cit-0027">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Grass</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. G.</given-names>
+<surname>Fletcher</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Alsughayer</surname>
+</string-name>, et al., “<article-title>Development of an Objective Model to Define Near‐Term Risk of Ileocecal Resection in Patients With Terminal Ileal Crohn Disease</article-title>,” <source>Inflammatory Bowel Diseases</source>
+<volume>25</volume> (<year>2019</year>): <fpage>1845</fpage>–<lpage>1853</lpage>.<pub-id pub-id-type="pmid">31050733</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/ibd/izz079</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="jgh370408-cit-0028">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Deepak</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. G.</given-names>
+<surname>Fletcher</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. L.</given-names>
+<surname>Fidler</surname>
+</string-name>, et al., “<article-title>Radiological Response Is Associated With Better Long‐Term Outcomes and Is a Potential Treatment Target in Patients With Small Bowel Crohn's Disease</article-title>,” <source>American Journal of Gastroenterology</source>
+<volume>111</volume> (<year>2016</year>): <fpage>997</fpage>–<lpage>1006</lpage>.<pub-id pub-id-type="pmid">27166131</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/ajg.2016.177</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="jgh370408-cit-0029">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Lafeuille</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Hordonneau</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Vignette</surname>
+</string-name>, et al., “<article-title>Transmural Healing and MRI Healing Are Associated With Lower Risk of Bowel Damage Progression Than Endoscopic Mucosal Healing in Crohn's Disease</article-title>,” <source>Alimentary Pharmacology &amp; Therapeutics</source>
+<volume>53</volume> (<year>2021</year>): <fpage>577</fpage>–<lpage>586</lpage>.<pub-id pub-id-type="pmid">33368525</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/apt.16232</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="jgh370408-cit-0030">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Oh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. H.</given-names>
+<surname>Oh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Noh</surname>
+</string-name>, et al., “<article-title>Combined Endoscopic and Radiologic Healing Is Associated With a Better Prognosis Than Endoscopic Healing Only in Patients With Crohn's Disease Receiving Anti‐TNF Therapy</article-title>,” <source>Clinical and Translational Gastroenterology</source>
+<volume>13</volume> (<year>2022</year>): <fpage>e00442</fpage>.<pub-id pub-id-type="pmid">35060936</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.14309/ctg.0000000000000442</pub-id><pub-id pub-id-type="pmcid">PMC8806383</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="jgh370408-cit-0031">
+<string-name name-style="western">
+<given-names>J. C.</given-names>
+<surname>Gallego</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>de Juan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Echarri</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Lopez‐de‐Ullibarri</surname>
+</string-name>, “<article-title>Small‐Bowel Crohn Disease Treated With Anti‐Tumor Necrosis Factor‐α Therapy: MR Enterography Score Changes After 1 Year Predict Long‐Term Outcomes</article-title>,” <source>American Journal of Roentgenology</source>
+<volume>213</volume> (<year>2019</year>): <fpage>1240</fpage>–<lpage>1246</lpage>.<pub-id pub-id-type="pmid">31414894</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2214/AJR.19.21186</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="jgh370408-cit-0032">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Tjandra</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Garg</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Behrenbruch</surname>
+</string-name>, et al., “<article-title>Review Article: Investigation and Management of Internal Fistulae in Crohn's Disease</article-title>,” <source>Alimentary Pharmacology &amp; Therapeutics</source>
+<volume>53</volume> (<year>2021</year>): <fpage>1064</fpage>–<lpage>1079</lpage>.<pub-id pub-id-type="pmid">33721351</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/apt.16326</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="jgh370408-cit-0033">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Panés</surname>
+</string-name> and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Rimola</surname>
+</string-name>, “<article-title>Perianal Fistulizing Crohn's Disease: Pathogenesis, Diagnosis and Therapy</article-title>,” <source>Nature Reviews</source>
+<volume>14</volume> (<year>2017</year>): <fpage>652</fpage>–<lpage>664</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nrgastro.2017.104</pub-id><pub-id pub-id-type="pmid">28790453</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="jgh370408-cit-0034">
+<string-name name-style="western">
+<given-names>S. K.</given-names>
+<surname>Vuyyuru</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Solitano</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Aruljothy</surname>
+</string-name>, et al., “<article-title>Prevalence of Stricturing, Penetrating Complications and Extraintestinal Manifestations in Inflammatory Bowel Disease Detected on Cross‐Sectional Imaging in a Tertiary Care Setting</article-title>,” <source>United European Gastroenterology Journal</source>
+<volume>12</volume> (<year>2024</year>): <fpage>870</fpage>–<lpage>878</lpage>.<pub-id pub-id-type="pmid">39074035</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/ueg2.12635</pub-id><pub-id pub-id-type="pmcid">PMC11497656</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="jgh370408-cit-0035">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Dane</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. R.</given-names>
+<surname>Dillman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Fidler</surname>
+</string-name>, et al., “<article-title>SAR Consensus Recommendations for Defining Small Bowel Crohn Disease Strictures at CT and MR Enterography</article-title>,” <source>Radiology</source>
+<volume>316</volume> (<year>2025</year>): <fpage>e243123</fpage>.<pub-id pub-id-type="pmid">40662968</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1148/radiol.243123</pub-id><pub-id pub-id-type="pmcid">PMC12314767</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="jgh370408-cit-0036">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Yzet</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Diouf</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. P.</given-names>
+<surname>Le Mouel</surname>
+</string-name>, et al., “<article-title>Complete Endoscopic Healing Associated With Better Outcomes Than Partial Endoscopic Healing in Patients With Crohn's Disease</article-title>,” <source>Clinical Gastroenterology and Hepatology</source>
+<volume>18</volume> (<year>2020</year>): <fpage>2256</fpage>–<lpage>2261</lpage>.<pub-id pub-id-type="pmid">31743755</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cgh.2019.11.025</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="jgh370408-cit-0037">
+<string-name name-style="western">
+<given-names>A. K.</given-names>
+<surname>Nehra</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. P.</given-names>
+<surname>Sheedy</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. L.</given-names>
+<surname>Wells</surname>
+</string-name>, et al., “<article-title>Imaging Findings of Ileal Inflammation at Computed Tomography and Magnetic Resonance Enterography: What Do They Mean When Ileoscopy and Biopsy Are Negative?</article-title>,” <source>Journal of Crohn's &amp; Colitis</source>
+<volume>14</volume> (<year>2020</year>): <fpage>455</fpage>–<lpage>464</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/ecco-jcc/jjz122</pub-id><pub-id pub-id-type="pmid">31960900</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="jgh370408-cit-0038">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Turner</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Ricciuto</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Lewis</surname>
+</string-name>, et al., “<article-title>STRIDE‐II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD): Determining Therapeutic Goals for Treat‐To‐Target Strategies in IBD</article-title>,” <source>Gastroenterology</source>
+<volume>160</volume> (<year>2021</year>): <fpage>1570</fpage>–<lpage>1583</lpage>.<pub-id pub-id-type="pmid">33359090</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1053/j.gastro.2020.12.031</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="jgh370408-cit-0039">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Geyl</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Guillo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Laurent</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>D'Amico</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Danese</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Peyrin‐Biroulet</surname>
+</string-name>, “<article-title>Transmural Healing as a Therapeutic Goal in Crohn's Disease: A Systematic Review</article-title>,” <source>Lancet Gastroenterology &amp; Hepatology</source>
+<volume>6</volume> (<year>2021</year>): <fpage>659</fpage>–<lpage>667</lpage>.<pub-id pub-id-type="pmid">34090579</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/S2468-1253(21)00096-0</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="jgh370408-cit-0040">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Buisson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Junda</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Vignette</surname>
+</string-name>, et al., “<article-title>Development and Validation of a Score to Assess Transmural Healing and Response in Patients With Crohn's Disease</article-title>,” <source>Clinical Gastroenterology and Hepatology: The Official Clinical Practice Journal of the American Gastroenterological Association</source>
+<volume>22</volume> (<year>2024</year>): <fpage>2271</fpage>–<lpage>9.e11</lpage>.<pub-id pub-id-type="pmid">38908734</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cgh.2024.06.007</pub-id></mixed-citation></ref><ref id="jgh370408-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="jgh370408-cit-0041">
+<string-name name-style="western">
+<given-names>T. M.</given-names>
+<surname>Goodsall</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Jairath</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. G.</given-names>
+<surname>Feagan</surname>
+</string-name>, et al., “<article-title>Standardisation of Intestinal Ultrasound Scoring in Clinical Trials for Luminal Crohn's Disease</article-title>,” <source>Alimentary Pharmacology &amp; Therapeutics</source>
+<volume>53</volume> (<year>2021</year>): <fpage>873</fpage>–<lpage>886</lpage>.<pub-id pub-id-type="pmid">33641221</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/apt.16288</pub-id></mixed-citation></ref></ref-list></back></article>

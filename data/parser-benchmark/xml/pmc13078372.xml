@@ -1,0 +1,803 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="oto270231" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">OTO Open</journal-id><journal-id journal-id-type="iso-abbrev">OTO Open</journal-id><journal-id journal-id-type="pmc-domain-id">3581</journal-id><journal-id journal-id-type="pmc-domain">opn</journal-id><journal-id journal-id-type="publisher-id">OTO2</journal-id><journal-title-group><journal-title>OTO Open</journal-title></journal-title-group><issn pub-type="epub">2473-974X</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13078372</article-id><article-id pub-id-type="pmcid-ver">PMC13078372.1</article-id><article-id pub-id-type="pmcaid">13078372</article-id><article-id pub-id-type="pmcaiid">13078372</article-id><article-id pub-id-type="pmid">41988331</article-id><article-id pub-id-type="doi">10.1002/oto2.70231</article-id><article-id pub-id-type="publisher-id">OTO270231</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Systematic Review With or Without Meta‐analysis</subject></subj-group><subj-group subj-group-type="heading"><subject>Systematic Review With or Without Meta‐analysis</subject></subj-group></article-categories><title-group><article-title>Does Electrical Stimulation Therapy Influence Synkinesis in Facial Paralysis? A Systematic Review</article-title><alt-title alt-title-type="left-running-head">
+<italic toggle="yes">Eberly et al.</italic>
+</alt-title></title-group><contrib-group><contrib id="oto270231-cr-0001" contrib-type="author"><name name-style="western"><surname>Eberly</surname><given-names initials="HW">Hänel W.</given-names></name><degrees>MD</degrees><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-2043-7413</contrib-id><xref rid="oto270231-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="oto270231-cr-0002" contrib-type="author"><name name-style="western"><surname>Aziz</surname><given-names initials="M">Marly</given-names></name><degrees>BS</degrees><xref rid="oto270231-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="oto270231-cr-0003" contrib-type="author"><name name-style="western"><surname>Lorenz</surname><given-names initials="FJ">F. Jeffrey</given-names></name><degrees>MD</degrees><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-5902-7054</contrib-id><xref rid="oto270231-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="oto270231-cr-0004" contrib-type="author"><name name-style="western"><surname>Schopper</surname><given-names initials="HK">Heather K.</given-names></name><degrees>MD</degrees><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-4549-5145</contrib-id><xref rid="oto270231-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="oto270231-cr-0005" contrib-type="author" corresp="yes"><name name-style="western"><surname>Lighthall</surname><given-names initials="JG">Jessyka G.</given-names></name><degrees>MD, FACS</degrees><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-8500-5059</contrib-id><xref rid="oto270231-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref><address><email>jlighthall@pennstatehealth.psu.edu</email></address></contrib></contrib-group><aff id="oto270231-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Division of Otolaryngology–Head and Neck Surgery</named-content>
+<institution>Yale University School of Medicine</institution>
+<city>New Haven</city>
+<named-content content-type="country-part">Connecticut</named-content>
+<country country="US">USA</country>
+</aff><aff id="oto270231-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<institution>Penn State College of Medicine</institution>
+<city>Hershey</city>
+<named-content content-type="country-part">Pennsylvania</named-content>
+<country country="US">USA</country>
+</aff><aff id="oto270231-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Department of Otolaryngology–Head and Neck Surgery</named-content>
+<institution>Penn State Milton S. Hershey Medical Center and Penn State College of Medicine</institution>
+<city>Hershey</city>
+<named-content content-type="country-part">Pennsylvania</named-content>
+<country country="US">USA</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Corresponding Author:</bold> Jessyka G. Lighthall, MD, FACS, Penn State College of Medicine, 500 University Drive H‐091, Hershey, PA 17033, USA. Email: <email>jlighthall@pennstatehealth.psu.edu</email>
+<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>14</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><season>Apr-Jun</season><year>2026</year></pub-date><volume>10</volume><issue seq="20">2</issue><issue-id pub-id-type="pmc-issue-id">511033</issue-id><issue-id pub-id-type="doi">10.1002/oto2.v10.2</issue-id><elocation-id>e70231</elocation-id><history><date date-type="rev-recd"><day>02</day><month>2</month><year>2026</year></date><date date-type="received"><day>09</day><month>12</month><year>2025</year></date><date date-type="accepted"><day>09</day><month>3</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>14</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>15</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-16 09:25:13.197"><day>16</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). OTO Open published by Wiley Periodicals LLC on behalf of American Academy of Otolaryngology–Head and Neck Surgery Foundation.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="OTO2-10-e70231.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:OTO2-10-e70231.pdf"/><abstract><title>Abstract</title><sec id="oto270231-sec-0010"><title>Objective</title><p>Facial paralysis (FP) has aesthetic, social, and functional consequences. While electrical stimulation (ES) shows promise for peripheral nerve injury, its role in FP remains controversial due to concerns about increasing synkinesis.</p></sec><sec id="oto270231-sec-0020"><title>Data Sources</title><p>A literature review was conducted using Medline/PubMed, Cochrane, and Web of Science databases.</p></sec><sec id="oto270231-sec-0030"><title>Review Methods</title><p>Included studies evaluated the incidence or severity of synkinesis after ES in FP patients. Extracted data included demographics, ES parameters, FP etiology, synkinesis outcomes, and treatment duration.</p></sec><sec id="oto270231-sec-0040"><title>Results</title><p>Of 601 identified articles, 6 met inclusion criteria, comprising 243 patients (92 female, reported in 5 studies). Bell's palsy was the most common FP etiology (76.5%), followed by iatrogenic facial nerve injury (20.2%). Time to treatment ranged from 1 week to 7 years post‐onset. Treatment durations varied from 2 weeks to 29 months, with inter‐impulse gaps of 30 to 3000 milliseconds, phase durations of 10 to 700 milliseconds, and amplitudes of 0.5 to 27 mA. All ES was transcutaneous. Three of 5 studies reported no differences in synkinesis scores between ES and control groups. Two studies found no differences in synkinesis incidence. Only one study showed reduced synkinesis in the ES group.</p></sec><sec id="oto270231-sec-0050"><title>Conclusions</title><p>This study represents an up‐to‐date review of synkinesis in FP patients receiving ES. Evidence suggests a benefit in overall facial function for patients without significant additional risk of synkinesis. Inconsistencies in synkinesis outcomes and measurement underscore the need for further research in this area.</p></sec></abstract><kwd-group><kwd id="oto270231-kwd-0001">electrical stimulation</kwd><kwd id="oto270231-kwd-0002">facial paralysis</kwd><kwd id="oto270231-kwd-0003">synkinesis</kwd></kwd-group><counts><fig-count count="2"/><table-count count="2"/><page-count count="9"/><word-count count="4873"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April-June 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:14.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body><p>The facial nerve is responsible for a multitude of functions, including facial movement, expression of emotion, and actions such as eating, speaking, smiling, and speaking. Damage to the facial nerve can lead to conditions such as facial paralysis (FP) or palsy, which can have devastating effects on function, mental health and quality of life.<xref rid="oto270231-bib-0001" ref-type="bibr">
+<sup>1</sup>
+</xref>, <xref rid="oto270231-bib-0002" ref-type="bibr">
+<sup>2</sup>
+</xref>, <xref rid="oto270231-bib-0003" ref-type="bibr">
+<sup>3</sup>
+</xref> Management of facial nerve deficits is complex and treatment strategies range from surgical treatment to facial physical therapy.<xref rid="oto270231-bib-0004" ref-type="bibr">
+<sup>4</sup>
+</xref>, <xref rid="oto270231-bib-0005" ref-type="bibr">
+<sup>5</sup>
+</xref> While patients may recover some or all of their facial muscle strength with treatment, many patients may see limited improvement and even development of distressing sequelae. One such phenomenon that can occur following FP is postparalysis synkinesis, which is theorized to be caused by aberrant regeneration of nerve fibers leading to unintentional movement in one area of the face produced by intentional movement in another.<xref rid="oto270231-bib-0006" ref-type="bibr">
+<sup>6</sup>
+</xref>, <xref rid="oto270231-bib-0007" ref-type="bibr">
+<sup>7</sup>
+</xref> As patients recover, abnormal facial movements (synkinesis) and tightness (hypertonicity) start to occur around 3 to 4 months after the facial nerve insult. This may worsen up to 1 year or longer then tends to stabilize. Some studies have found the rate of developing synkinesis can be as high as 55.5% in patients with longstanding FP.<xref rid="oto270231-bib-0006" ref-type="bibr">
+<sup>6</sup>
+</xref>
+</p><p>Neuromuscular electrical stimulation (NMES) is a technique that provides stimulation to muscles and nerves, and has been used to improve the maintenance of muscle mass and strength and selective muscle retraining in skeletal muscle.<xref rid="oto270231-bib-0008" ref-type="bibr">
+<sup>8</sup>
+</xref> Although facial muscles contain spindle cells, the pattern of mechanoreceptors that provide proprioceptive feedback to the central nervous system is not well understood. This makes it difficult for patients to understand and grasp the extent of their facial movement.<xref rid="oto270231-bib-0009" ref-type="bibr">
+<sup>9</sup>
+</xref> Several studies have described the utility of electrical stimulation therapy in treating FP and related conditions.<xref rid="oto270231-bib-0004" ref-type="bibr">
+<sup>4</sup>
+</xref>, <xref rid="oto270231-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref>, <xref rid="oto270231-bib-0011" ref-type="bibr">
+<sup>11</sup>
+</xref>, <xref rid="oto270231-bib-0012" ref-type="bibr">
+<sup>12</sup>
+</xref>, <xref rid="oto270231-bib-0013" ref-type="bibr">
+<sup>13</sup>
+</xref> However, the role of NMES in the delayed development of synkinesis, if any, is unclear. This study aims to review the literature regarding the use of NMES in patients with FP and study its potential effect on the incidence and severity of synkinesis.</p><sec sec-type="materials-and-methods" id="oto270231-sec-0070"><title>Materials and Methods</title><sec id="oto270231-sec-0080"><title>Search Criteria</title><p>This study was conducted according to the Preferred Reporting Items for Systematic Reviews and Meta‐Analyses (PRISMA) guidelines.<xref rid="oto270231-bib-0014" ref-type="bibr">
+<sup>14</sup>
+</xref> Detailed search strategies were developed for the following 4 databases: Pubmed/MEDLINE, Web of Science, Scopus, and the Cochrane Library. Databases were searched from inception through June 3, 2025. The search strategy used a combination of MeSH terms and keywords for the following concepts: “Electric Stimulation Therapy” and “Synkinesis.” This search strategy was modified for all databases, replacing MeSH terms with appropriate keywords and headings where appropriate. The initial search included broader terms including electroacupuncture, chronaxie, and FP. This was to ensure that the researchers did not miss any articles encompassing the broad scope of NMES. However, it is important to note that this review did not encompass the field of electroacupuncture, but rather focused on the specific area of transcutaneous electrical stimulation. All results were entered into Rayyan (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://rayyan.qcri.org" ext-link-type="uri">http://rayyan.qcri.org</ext-link>), a web and mobile application for systematic reviews and meta‐analyses.</p></sec><sec id="oto270231-sec-0090"><title>Selection Criteria</title><p>Studies that assessed the effect of NMES on synkinesis were included. Several articles were found that stated synkinesis was a primary outcome but included no data or discussion on synkinesis. These articles were excluded. Articles that were considered for inclusion were those in which patients underwent transcutaneous NMES therapy for FP due to any etiology (eg, Bell's palsy, traumatic injury, etc.). Articles were excluded for the following reasons: non‐English language, nonhuman studies, review articles, duplicates, inaccessible articles, and incomplete or missing statistical data. Abstracts were independently assessed by 2 reviewers (HE and MA) to identify all articles that met inclusion criteria and conflicts were resolved by a third reviewer (JL). The PRISMA diagram for inclusion and exclusion of studies can be found in <xref rid="oto270231-fig-0001" ref-type="fig">Figure 1</xref>.</p><fig position="float" fig-type="Figure" id="oto270231-fig-0001" orientation="portrait"><label>Figure 1</label><caption><p>Preferred reporting items for systematic reviews and meta‐analysis (PRISMA). Flow diagram.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="OTO2-10-e70231-g002.jpg"/></fig><p>Included articles were critically appraised to assess the level of evidence using the Oxford Center for Evidence‐Based Medicine criteria.<xref rid="oto270231-bib-0015" ref-type="bibr">
+<sup>15</sup>
+</xref> The risk of bias was assessed according to the Cochrane Handbook for Systematic Reviews of Interventions version 6.4.<xref rid="oto270231-bib-0016" ref-type="bibr">
+<sup>16</sup>
+</xref> The Risk of Bias in Non‐Randomized Studies–of Interventions (ROBINS‐I)<xref rid="oto270231-bib-0017" ref-type="bibr">
+<sup>17</sup>
+</xref> tool was used to evaluate nonrandomized studies, and the Risk of Bias 2 (ROB‐2)<xref rid="oto270231-bib-0018" ref-type="bibr">
+<sup>18</sup>
+</xref> tool was used to evaluate randomized trials. Risk of bias was assessed by 2 reviewers (HE and JL). A summary of the risk of bias assessment is found in <xref rid="oto270231-fig-0002" ref-type="fig">Figure 2</xref>.</p><fig position="float" fig-type="Figure" id="oto270231-fig-0002" orientation="portrait"><label>Figure 2</label><caption><p>(A) Risk of Bias assessment for randomized trials using the Risk of Bias 2 (ROB2) tool. (B) Risk of Bias assessment for nonrandomized trials using the Risk of Bias in Non‐randomized Studies ‐ of Interventions (ROBINS‐I) tool.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="OTO2-10-e70231-g001.jpg"/></fig></sec><sec id="oto270231-sec-0100"><title>Data Extraction</title><p>Data extracted from studies included demographics (patient age, gender); etiology of FP; time to treatment from onset of FP; treatment duration; type of NMES including inter‐impulse gap, amplitude, and phase duration; and outcomes including Sunnybrook, Facial Grading Scale, and eFACE synkinesis scores.</p></sec></sec><sec sec-type="results" id="oto270231-sec-0110"><title>Results</title><sec id="oto270231-sec-0120"><title>Search Results and Risk of Bias Assessment</title><p>Database searches yielded 601 articles after duplicates were removed. Forty‐four articles were included after title and abstract screening, of which 6 were included in our final analysis. All studies were published between 2000 and 2024. Studies included 2 prospective cohort studies, 1 retrospective cohort study, and 3 randomized controlled trials. Of note, 1 study (Puls et al) was divided into 2 separate studies. Both were included in our analysis. <xref rid="oto270231-fig-0001" ref-type="fig">Figure 1</xref> provides a summary of the search process. The risk of bias graphs are summarized in <xref rid="oto270231-fig-0002" ref-type="fig">Figure 2</xref>. Most studies were considered to have a moderate risk of bias, with 1 study having an overall high risk of bias. This was largely in part due to patient selection practices, with several articles mentioning self‐referral of patients for NMES and 1 study reporting a single‐blind study design where the participants were aware of their intervention assignment. Furthermore, the nature of grading FP is inherently subjective as most patients are graded by clinicians.</p></sec><sec id="oto270231-sec-0130"><title>Patient and Treatment Characteristics</title><p>There was a total of 243 patients, of which 92 were female (n = 5/6 papers). The most common etiology of FP was Bell's palsy (76.5%), followed by iatrogenic facial nerve injury (20.2%). Time to NMES treatment from onset of FP ranged from within 1 week to 7 years after onset. Two articles (n = 98 patients) investigated acute FP while 4 articles (n = 95 patients) studied chronic FP. Two articles studied incomplete FP, which has a high rate of recovery without intervention,<xref rid="oto270231-bib-0019" ref-type="bibr">
+<sup>19</sup>
+</xref>, <xref rid="oto270231-bib-0020" ref-type="bibr">
+<sup>20</sup>
+</xref> although no other studies specified whether the patients experienced incomplete or complete FP. Treatment duration ranged from 2 weeks to 6 months, with a range of 30 to 3000 milliseconds inter‐impulse gap, 10 to 700 milliseconds phase duration, and intensity of 0.5 to 27 mA. Five out of 6 articles used monophasic NMES pulses, with one using biphasic pulses.<xref rid="oto270231-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref> In many instances, intensity was titrated according to patient tolerance and varied between patients. Timeline of NMES treatment ranged from 5 to 7 days per week for 4 weeks to 6 months, with some articles listing treatment until the patient was deemed clinically improved.<xref rid="oto270231-bib-0019" ref-type="bibr">
+<sup>19</sup>
+</xref> Descriptive features of included studies are outlined in <xref rid="oto270231-tbl-0001" ref-type="table">Table 1</xref>.</p><table-wrap position="float" id="oto270231-tbl-0001" content-type="Table" orientation="portrait"><label>Table 1</label><caption><p>Descriptive Features of Included Studies</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Author (Year)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Study design</th><th align="center" valign="bottom" rowspan="1" colspan="1">Facial grading scale used</th><th align="center" valign="bottom" rowspan="1" colspan="1">Total patients (Total females)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Mean age control</th><th align="center" valign="bottom" rowspan="1" colspan="1">Mean/median age experimental</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Di Pietro (2023)</td><td align="center" valign="top" rowspan="1" colspan="1">Single‐blind controlled trial</td><td align="center" valign="top" rowspan="1" colspan="1">Sunnybrook, eFACE</td><td align="center" valign="top" rowspan="1" colspan="1">38 (not stated)</td><td align="center" valign="top" rowspan="1" colspan="1">Not stated</td><td align="center" valign="top" rowspan="1" colspan="1">36.8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Kim (2015)</td><td align="center" valign="top" rowspan="1" colspan="1">Prospective randomized study</td><td align="center" valign="top" rowspan="1" colspan="1">Sunnybrook, House‐Brackmann</td><td align="center" valign="top" rowspan="1" colspan="1">60 (not stated)</td><td align="center" valign="top" rowspan="1" colspan="1">46.5 ± 16.3</td><td align="center" valign="top" rowspan="1" colspan="1">49.17 ± 18.2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Manikandan (2007)</td><td align="center" valign="top" rowspan="1" colspan="1">Randomized controlled trial</td><td align="center" valign="top" rowspan="1" colspan="1">Sunnybrook</td><td align="center" valign="top" rowspan="1" colspan="1">56 (32)</td><td align="center" valign="top" rowspan="1" colspan="1">34.61 (13.3)</td><td align="center" valign="top" rowspan="1" colspan="1">35.7 (10.4)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Marotta (2020)</td><td align="center" valign="top" rowspan="1" colspan="1">Randomized controlled trial</td><td align="center" valign="top" rowspan="1" colspan="1">Sunnybrook</td><td align="center" valign="top" rowspan="1" colspan="1">20 (6)</td><td align="center" valign="top" rowspan="1" colspan="1">Not stated</td><td align="center" valign="top" rowspan="1" colspan="1">42.2  ±  7.6</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Puls (2020)—Study 1</td><td align="center" valign="top" rowspan="1" colspan="1">Retrospective study</td><td align="center" valign="top" rowspan="1" colspan="1">eFACE</td><td align="center" valign="top" rowspan="1" colspan="1">45 (25)</td><td align="center" valign="top" rowspan="1" colspan="1">46 (IQR 33‐61.25)</td><td align="center" valign="top" rowspan="1" colspan="1">57 (IQR 45‐66)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Puls (2020)—Study 2</td><td align="center" valign="top" rowspan="1" colspan="1">Retrospective study</td><td align="center" valign="top" rowspan="1" colspan="1">eFACE</td><td align="center" valign="top" rowspan="1" colspan="1">13 (10)</td><td align="center" valign="top" rowspan="1" colspan="1">57 (IQR 42.5‐68.5)</td><td align="center" valign="top" rowspan="1" colspan="1">48 (IQR 36‐66)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Targan (2000)</td><td align="center" valign="top" rowspan="1" colspan="1">Prospective study</td><td align="center" valign="top" rowspan="1" colspan="1">House‐Brackmann, Synkinesis score</td><td align="center" valign="top" rowspan="1" colspan="1">17 (8)</td><td align="center" valign="top" rowspan="1" colspan="1">Bell's: 50.4 ± 12.3</td><td align="center" valign="top" rowspan="1" colspan="1">Neuroma: 45.6 ± 10.7</td></tr></tbody></table><table-wrap-foot><fn id="oto270231-tbl1-note-0001"><p>Abbreviation: IQR, interquartile range.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap></sec><sec id="oto270231-sec-0140"><title>Clinical Findings</title><p>All ES was delivered transcutaneously. Two out of 5 studies reported steroid and antiviral use prior to NMES therapy. Both studies used a regimen of prednisolone for 10 days and acyclovir for 5 days.<xref rid="oto270231-bib-0013" ref-type="bibr">
+<sup>13</sup>
+</xref>, <xref rid="oto270231-bib-0020" ref-type="bibr">
+<sup>20</sup>
+</xref> Sunnybrook Facial Grading Scale and eFACE synkinesis scores were used to assess symptom improvement (n = 4 papers; 64 control and 67 NMES), with 2 papers evaluating patients using the House‐Brackmann scale. Three out of 5 studies reported no differences in scores of FP grading systems between NMES and control groups.<xref rid="oto270231-bib-0004" ref-type="bibr">
+<sup>4</sup>
+</xref>, <xref rid="oto270231-bib-0013" ref-type="bibr">
+<sup>13</sup>
+</xref>, <xref rid="oto270231-bib-0019" ref-type="bibr">
+<sup>19</sup>
+</xref> Two studies showed that there were no differences in the number of patients with synkinesis compared to controls prior to NMES therapy.<xref rid="oto270231-bib-0012" ref-type="bibr">
+<sup>12</sup>
+</xref>, <xref rid="oto270231-bib-0020" ref-type="bibr">
+<sup>20</sup>
+</xref> One study (Puls et al) demonstrated lower synkinesis scores in the NMES group for both SB scale and eFACE scales (midface and mental region).<xref rid="oto270231-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref> Clinical findings are outlined in <xref rid="oto270231-tbl-0002" ref-type="table">Table 2</xref>.</p><table-wrap position="float" id="oto270231-tbl-0002" content-type="Table" orientation="portrait"><label>Table 2</label><caption><p>NMES Protocol and Patient Characteristics</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><thead valign="bottom"><tr valign="bottom" style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Author (Year)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Incomplete/complete facial paralysis</th><th align="center" valign="bottom" rowspan="1" colspan="1">Timeline from onset to treatment</th><th align="center" valign="bottom" rowspan="1" colspan="1">Etiology of paralysis</th><th align="center" valign="bottom" rowspan="1" colspan="1">NMES parameters</th><th align="center" valign="bottom" rowspan="1" colspan="1">NMES protocol</th><th align="center" valign="bottom" rowspan="1" colspan="1">Adjunctive therapy</th><th align="center" valign="bottom" rowspan="1" colspan="1">Results</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Di Pietro (2023)</td><td align="center" valign="top" rowspan="1" colspan="1">Incomplete</td><td align="center" valign="top" rowspan="1" colspan="1">Acute (up to 1 month after onset)</td><td align="center" valign="top" rowspan="1" colspan="1">Bell's Palsy</td><td align="center" valign="top" rowspan="1" colspan="1">Monophasic, pulse width 30‐200 milliseconds, frequency 5‐33.3 Hz</td><td align="center" valign="top" rowspan="1" colspan="1">5 days per week for 2‐6 weeks</td><td align="center" valign="top" rowspan="1" colspan="1">Neuromuscular reeducation, massage therapy</td><td align="center" valign="top" rowspan="1" colspan="1">No difference in synkinesis eFACE scores between groups</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Kim (2015)</td><td align="center" valign="top" rowspan="1" colspan="1">Incomplete</td><td align="center" valign="top" rowspan="1" colspan="1">Acute (within 1 week of onset)</td><td align="center" valign="top" rowspan="1" colspan="1">Bell's Palsy</td><td align="center" valign="top" rowspan="1" colspan="1">Monophasic, pulse width 50 milliseconds, frequency 20 Hz, intensity 1.4 mA average</td><td align="center" valign="top" rowspan="1" colspan="1">Not stated</td><td align="center" valign="top" rowspan="1" colspan="1">Prednisolone 10 days + acyclovir 5 days</td><td align="center" valign="top" rowspan="1" colspan="1">One patient with synkinesis in experimental group compared to three in control group</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Manikandan (2007)</td><td align="center" valign="top" rowspan="1" colspan="1">Not stated</td><td align="center" valign="top" rowspan="1" colspan="1">Not stated</td><td align="center" valign="top" rowspan="1" colspan="1">Bell's Palsy</td><td align="center" valign="top" rowspan="1" colspan="1">Not stated</td><td align="center" valign="top" rowspan="1" colspan="1">6 days per week for 6 weeks</td><td align="center" valign="top" rowspan="1" colspan="1">Neuromuscular reeducation, massage therapy</td><td align="center" valign="top" rowspan="1" colspan="1">No improvement in Facial Grading Scale synkinesis scores. No difference in Sunnybrook synkinesis scores between groups</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Marotta (2020)</td><td align="center" valign="top" rowspan="1" colspan="1">Not stated</td><td align="center" valign="top" rowspan="1" colspan="1">Chronic (for at least 5 months after onset)</td><td align="center" valign="top" rowspan="1" colspan="1">Bell's Palsy</td><td align="center" valign="top" rowspan="1" colspan="1">Monophasic and biphasic, pulse duration 700 milliseconds, frequency 80 Hz, intensity starting at 0.5 mA and increased until muscle contraction seen</td><td align="center" valign="top" rowspan="1" colspan="1">5 days per week for 4 weeks</td><td align="center" valign="top" rowspan="1" colspan="1">Prednisolone 10 days + acyclovir 5 days initially, short‐wave diathermy</td><td align="center" valign="top" rowspan="1" colspan="1">No differences in Sunnybrook synkinesis scores between groups</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Puls (2020) – Study 1</td><td align="center" valign="top" rowspan="1" colspan="1">Not stated</td><td align="center" valign="top" rowspan="1" colspan="1">Chronic (13 months‐7 years after onset)</td><td align="center" valign="top" rowspan="1" colspan="1">Iatrogenic, other causes</td><td align="center" valign="top" rowspan="1" colspan="1">Biphasic, pulse width 1000‐3000 milliseconds, pulse duration 100‐300 milliseconds, intensity 5‐27 mA</td><td align="center" valign="top" rowspan="1" colspan="1">5 days per week</td><td align="center" valign="top" rowspan="1" colspan="1">Hypoglossal‐facial‐jump‐anastomosis</td><td align="center" valign="top" rowspan="1" colspan="1">N/a</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Puls (2020) – Study 2</td><td align="center" valign="top" rowspan="1" colspan="1">Not stated</td><td align="center" valign="top" rowspan="1" colspan="1">Chronic (1 year after reinnervation)</td><td align="center" valign="top" rowspan="1" colspan="1">Iatrogenic</td><td align="center" valign="top" rowspan="1" colspan="1">Biphasic, pulse duration 100‐280 milliseconds, intensity 5‐27 mA</td><td align="center" valign="top" rowspan="1" colspan="1">5 days per week</td><td align="center" valign="top" rowspan="1" colspan="1">N/a</td><td align="center" valign="top" rowspan="1" colspan="1">Lower synkinesis scores in NMES group for SB scale. Lower rate of synkinesis in NMES group in midface and mental region for eFACE scale</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Targan (2000)</td><td align="center" valign="top" rowspan="1" colspan="1">Not stated</td><td align="center" valign="top" rowspan="1" colspan="1">Chronic (at least 12 months since onset)</td><td align="center" valign="top" rowspan="1" colspan="1">Bell's Palsy, Iatrogenic</td><td align="center" valign="top" rowspan="1" colspan="1">Monophasic, pulse width 700 milliseconds, pulse duration 86 micros, intensity submotor</td><td align="center" valign="top" rowspan="1" colspan="1">Daily for 6 months</td><td align="center" valign="top" rowspan="1" colspan="1">N/a</td><td align="center" valign="top" rowspan="1" colspan="1">No change in number of patients with synkinesis before and after NMES</td></tr></tbody></table><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap></sec></sec><sec sec-type="discussion" id="oto270231-sec-0150"><title>Discussion</title><p>The incidence of synkinesis following FP varies but may as high as 55.5% in patients with longstanding FP.<xref rid="oto270231-bib-0006" ref-type="bibr">
+<sup>6</sup>
+</xref>, <xref rid="oto270231-bib-0021" ref-type="bibr">
+<sup>21</sup>
+</xref> The mechanism of synkinesis is thought to involve nonspecific aberrant regeneration of the nerve fibers due to ineffective myelination and neural network reorganization, leading to miscommunication between the musculature and nerves of the face.<xref rid="oto270231-bib-0021" ref-type="bibr">
+<sup>21</sup>
+</xref>, <xref rid="oto270231-bib-0022" ref-type="bibr">
+<sup>22</sup>
+</xref> Postparalysis synkinesis starts to develop around 3 to 4 months after the initial nerve injury, with some cases developing following facial reanimation procedures, and does not resolve.<xref rid="oto270231-bib-0006" ref-type="bibr">
+<sup>6</sup>
+</xref>, <xref rid="oto270231-bib-0023" ref-type="bibr">
+<sup>23</sup>
+</xref> The current treatment of FP is multifactorial and aims to minimize sequelae and maximize normal function of the face, making early and consistent treatment important to prevent sequelae such as synkinesis.<xref rid="oto270231-bib-0024" ref-type="bibr">
+<sup>24</sup>
+</xref>
+</p><p>NMES is considered a safe technique within the realm of electrical stimulation techniques, and has been used in clinical and scientific populations since the 19th century.<xref rid="oto270231-bib-0025" ref-type="bibr">
+<sup>25</sup>
+</xref>, <xref rid="oto270231-bib-0026" ref-type="bibr">
+<sup>26</sup>
+</xref>, <xref rid="oto270231-bib-0027" ref-type="bibr">
+<sup>27</sup>
+</xref> Common side effects include pain, discomfort, skin irritation, and in severe cases burns to the skin.<xref rid="oto270231-bib-0025" ref-type="bibr">
+<sup>25</sup>
+</xref> While past articles have recommended stopping NMES once synkinesis or contracture has appeared,<xref rid="oto270231-bib-0028" ref-type="bibr">
+<sup>28</sup>
+</xref>, <xref rid="oto270231-bib-0029" ref-type="bibr">
+<sup>29</sup>
+</xref> no studies have directly linked the development of synkinesis to NMES therapy. One study that surveyed 193 physical therapists in Oregon reported that common reasons for avoiding NMES included risks outweighing potential benefits, lack of training and equipment, and research showing it to be ineffective.<xref rid="oto270231-bib-0030" ref-type="bibr">
+<sup>30</sup>
+</xref> Other general concerns cited against NMES included concern for development of abnormal movement patterns based on animal studies and personal experience as reported by several other authors.<xref rid="oto270231-bib-0031" ref-type="bibr">
+<sup>31</sup>
+</xref>, <xref rid="oto270231-bib-0032" ref-type="bibr">
+<sup>32</sup>
+</xref>
+</p><p>In the present review of 6 studies (243 patients) in the literature using NMES as a treatment for FP, only 1 study demonstrated lower synkinesis scores in the NMES group compared to controls with most studies reporting no differences between groups.<xref rid="oto270231-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref> However, given that the efficacy of treatments for FP relies on its mechanism, acuity, and severity, it is important to evaluate the time course and presentation of each patient. For example, chronic FP due to Bell's palsy will present with a vastly different prognosis compared to iatrogenic facial nerve injury, benign tumors, neuroborreliosis, Ramsay Hunt Syndrome or even acute Bell's palsy.<xref rid="oto270231-bib-0007" ref-type="bibr">
+<sup>7</sup>
+</xref>, <xref rid="oto270231-bib-0033" ref-type="bibr">
+<sup>33</sup>
+</xref> Additionally, incomplete (partial) facial weakness has a high rate of recovery to normal function without intervention and without development of adverse sequelae such as synkinesis. Standard of care for acute incomplete Bell's palsy is usually corticosteroids with optional antivirals<xref rid="oto270231-bib-0033" ref-type="bibr">
+<sup>33</sup>
+</xref> and patients are unlikely to develop synkinesis as there is no degeneration of the nerve.<xref rid="oto270231-bib-0007" ref-type="bibr">
+<sup>7</sup>
+</xref> The utility of adding NMES in these patients is unclear, and these studies did not report statistically significant differences in eFACE synkinesis scores or number of patients experiencing synkinesis.<xref rid="oto270231-bib-0019" ref-type="bibr">
+<sup>19</sup>
+</xref>, <xref rid="oto270231-bib-0020" ref-type="bibr">
+<sup>20</sup>
+</xref>
+</p><p>To assess the effect of NMES on synkinesis, it may be beneficial to study patients with acute, complete FP such as Bell's palsy, as this group is at higher risk for the development of postparalysis synkinesis.<xref rid="oto270231-bib-0034" ref-type="bibr">
+<sup>34</sup>
+</xref> Another group that may derive the most benefit would be chronic unrecovered FP without synkinesis, refractory to other treatments. Most of the studies included in our review evaluated chronic FP but it is unclear if there was persistent weakness, or lack of movement due to chronic hypertonicity of antagonistic facial muscles, with 2 articles studying acute incomplete Bell's palsy.</p><p>The mechanism underlying electrostimulation‐mediated reinnervation is poorly understood. Possible theories include the role of activity‐dependent genetic expression in strengthening newly formed synapses, or the concentration of neurotrophic factors secreted through the stimulation of muscles in Schwann cells leading to preferential motor reinnervation.<xref rid="oto270231-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref>, <xref rid="oto270231-bib-0035" ref-type="bibr">
+<sup>35</sup>
+</xref>, <xref rid="oto270231-bib-0036" ref-type="bibr">
+<sup>36</sup>
+</xref> The possibility of axonal resprouting diminishes around 18‐24 months after onset of the injury, and absence of neural stimulation can induce atrophy and disability of musculature.<xref rid="oto270231-bib-0037" ref-type="bibr">
+<sup>37</sup>
+</xref>, <xref rid="oto270231-bib-0038" ref-type="bibr">
+<sup>38</sup>
+</xref> Most included articles studied patients with chronic FP<xref rid="oto270231-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref>, <xref rid="oto270231-bib-0012" ref-type="bibr">
+<sup>12</sup>
+</xref>, <xref rid="oto270231-bib-0013" ref-type="bibr">
+<sup>13</sup>
+</xref> with 2 studies studying patients with acute FP within 1 week to 1 month of onset.<xref rid="oto270231-bib-0006" ref-type="bibr">
+<sup>6</sup>
+</xref>, <xref rid="oto270231-bib-0023" ref-type="bibr">
+<sup>23</sup>
+</xref> However, the only study showing a decrease in synkinesis score between groups studied chronic unresolved FP (13 months‐7 years after onset).<xref rid="oto270231-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref> The included articles utilized low‐intensity (0.5‐27 mA) stimulation, which has been shown to induce more central nervous system input compared to higher intensities while maintaining patient comfort.<xref rid="oto270231-bib-0039" ref-type="bibr">
+<sup>39</sup>
+</xref> Given the smaller size and potential sensitivity of facial muscles, this may be why the authors decided on lower intensity stimulation compared to high intensity stimulation.<xref rid="oto270231-bib-0039" ref-type="bibr">
+<sup>39</sup>
+</xref>
+</p><p>The use of NMES for FP is controversial, with some studies advocating for its use and others citing concerns of reinforcement of abnormal neural regeneration.<xref rid="oto270231-bib-0029" ref-type="bibr">
+<sup>29</sup>
+</xref>, <xref rid="oto270231-bib-0030" ref-type="bibr">
+<sup>30</sup>
+</xref>, <xref rid="oto270231-bib-0040" ref-type="bibr">
+<sup>40</sup>
+</xref> A systematic review by Burelo‐Peregrino et al examining 244 patients found that patients with Bell's palsy treated with NMES demonstrated a positive response to treatment, although data on synkinesis is unavailable and the timeframe of treatment varies widely from 2 weeks to 24 months.<xref rid="oto270231-bib-0041" ref-type="bibr">
+<sup>41</sup>
+</xref> Several other trials comparing NMES to controls demonstrate weak benefits, although again with varying timeframes ranging from weeks to years.<xref rid="oto270231-bib-0004" ref-type="bibr">
+<sup>4</sup>
+</xref>, <xref rid="oto270231-bib-0020" ref-type="bibr">
+<sup>20</sup>
+</xref>, <xref rid="oto270231-bib-0030" ref-type="bibr">
+<sup>30</sup>
+</xref>, <xref rid="oto270231-bib-0042" ref-type="bibr">
+<sup>42</sup>
+</xref> One trial did report a trend towards increased synkinesis in the NMES group over 3 months, however this was not statistically significant.<xref rid="oto270231-bib-0004" ref-type="bibr">
+<sup>4</sup>
+</xref> One study examining frontal branch stimulation in baseline synkinetic patients demonstrated increases in eyebrow elevation to the same level as the healthy eyebrow.<xref rid="oto270231-bib-0043" ref-type="bibr">
+<sup>43</sup>
+</xref> The study did not report any adverse outcomes regarding new‐onset or worsening of synkinesis.</p><p>Three out of 6 papers in the present review demonstrated no significant differences between control or NMES groups regarding synkinesis scores. The timeline of FP for each of these articles differed, with 1 examining chronic Bell's palsy, another acute incomplete Bell's palsy, and another that did not report timeline of FP. However, these papers were unique in their consideration of the synkinesis score as a variable. Synkinesis scores were measured using various scales including the Sunnybrook synkinesis score, which grades synkinesis on a scale from 0 to 3 on 5 movement domains measured by a trained clinician.<xref rid="oto270231-bib-0044" ref-type="bibr">
+<sup>44</sup>
+</xref>, <xref rid="oto270231-bib-0045" ref-type="bibr">
+<sup>45</sup>
+</xref> Other studies have used the eFACE score, which averages synkinesis subscores across various areas of the face based on clinician‐graded observations.<xref rid="oto270231-bib-0046" ref-type="bibr">
+<sup>46</sup>
+</xref> The available literature suggests that in some cases, NMES may not affect synkinesis in certain patients, although it is important to note that the timeframe of treatment and severity or completeness of FP treated varies widely in the literature.</p><p>Other considerations regarding the use of NMES in FP is the availability, cost, and familiarity of therapists with the technique. In a study of 193 physical therapists and physical therapist assistants in the state of Oregon, therapists who do not use NMES cited lack of training, inconvenience, and a belief that NMES is ineffective as reasons it is not utilized in their practice.<xref rid="oto270231-bib-0030" ref-type="bibr">
+<sup>30</sup>
+</xref> One often cited consideration is the worry that NMES may contribute to or worsen synkinesis.<xref rid="oto270231-bib-0019" ref-type="bibr">
+<sup>19</sup>
+</xref>, <xref rid="oto270231-bib-0030" ref-type="bibr">
+<sup>30</sup>
+</xref> Furthermore, of the articles screened, many described different approaches and protocols for NMES. No standard protocol currently exists, making the decision to treat with NMES largely dependent on clinician preference or untrained therapists treating FP similar to other peripheral nerve injuries. Future understanding of the impact of NMES on synkinesis would benefit from large, multicenter randomized controlled trials using a standardized set of parameters and longitudinal follow up for at least a year given the natural history of synkinesis.</p><sec id="oto270231-sec-0160"><title>Limitations</title><p>There is an overall lack of high‐quality randomized controlled trials in the literature investigating the efficacy of NMES specifically on synkinesis in the literature. Many of the screened articles evaluated NMES but had no mention of synkinesis or related outcomes. Several case reports and foreign‐language articles were also screened out, which limits the available evidence to draw generalizable conclusions in our study. Many of the included studies also had moderate risks of bias, largely from patient selection methods which may limit our results. Data on patient comorbidities such as diabetes, tobacco use, medication use, and other coexisting medical problems was not available for analysis.</p><p>The measurement of FP and sequelae such as synkinesis are inherently subjective, as they are generally clinician graded. Although several more recent studies included the use of movement‐tracking software to provide a more objective grading, clinician‐graded scales are still the mainstay of FP measurement.<xref rid="oto270231-bib-0013" ref-type="bibr">
+<sup>13</sup>
+</xref> The scale used across groups varies by clinician preference, making it difficult to pool results from many studies. Furthermore, the etiology and mechanism of FP differs among patients which may affect the outcome of NMES. The timeline of treatment also varied widely between studies. Patients with synkinesis tend to improve for about 4 months following onset of FP, after which synkinesis may develop and worsen over 4‐8 months post‐paralysis.<xref rid="oto270231-bib-0006" ref-type="bibr">
+<sup>6</sup>
+</xref>, <xref rid="oto270231-bib-0023" ref-type="bibr">
+<sup>23</sup>
+</xref> With the current results, it is difficult to comment on whether NMES has an effect on long‐term recovery and stabilization of FP following the development of synkinesis after 4‐8 months. Most screened articles focused on overall facial recovery rather than on synkinesis as a specific sequela. Additional studies may consider using validated synkinesis‐specific scales such as the synkinesis assessment questionnaire.<xref rid="oto270231-bib-0047" ref-type="bibr">
+<sup>47</sup>
+</xref> Future research on this topic is crucial to understanding the impact of NMES on synkinesis specifically.</p></sec></sec><sec sec-type="conclusions" id="oto270231-sec-0170"><title>Conclusion</title><p>NMES is an adjunctive treatment being used for patients with FP, with evidence suggesting a benefit in overall facial function for patients without significant additional risk of synkinesis (e.g. partial facial weakness). Based on the available literature, there is still inadequate data looking at NMES on complete FP or chronic, nonsynkinetic FP. Additionally, the timeline, severity, and etiology of FP and NMES treatment parameters vary widely in the literature with no agreed‐upon guidelines. Further research could aim to standardize NMES treatment protocols as well as studying its use in a stratified patient group.</p></sec><sec id="oto270231-sec-0190"><title>Author Contributions</title><p>
+<bold>Hanel Eberly</bold>, conceptualization, data collection, data analysis, writing and editing of manuscript; <bold>Marly Aziz</bold>, data collection; <bold>Jeff Lorenz</bold>, data collection, data analysis, critical editing of the manuscript; <bold>Heather Schopper</bold>, conceptualization, supervision, critical editing of manuscript; <bold>Jessyka Lighthall</bold>, conceptualization, supervision, critical editing of manuscript.</p></sec><sec id="oto270231-sec-0200"><title>Disclosures</title><sec sec-type="COI-statement" id="oto270231-sec-0210"><title>Competing interests</title><p>None.</p></sec><sec id="oto270231-sec-0220"><title>Funding source</title><p>None.</p></sec></sec></body><back><ack id="oto270231-sec-0180"><title>Acknowledgments</title><p>We would like to thank Caia Hypatia for their tireless work, exceptional organization, and dedication to our project.</p></ack><ref-list content-type="cited-references" id="oto270231-bibl-0001"><title>References</title><ref id="oto270231-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="oto270231-cit-0001">
+<string-name name-style="western">
+<surname>Moroco</surname>
+<given-names>AE</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Daher</surname>
+<given-names>GS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>O'Connell Ferster</surname>
+<given-names>AP</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lighthall</surname>
+<given-names>JG</given-names>
+</string-name>. <article-title>Prevalence of body dysmorphic disorder in an otolaryngology‐head and neck surgery clinic</article-title>. <source>Ann Otol, Rhinol, Laryngol</source>. <year>2023</year>;<volume>132</volume>(<issue>7</issue>):<fpage>783</fpage>‐<lpage>789</lpage>. <pub-id pub-id-type="doi">10.1177/00034894221118772</pub-id>
+<pub-id pub-id-type="pmid">35962596</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="oto270231-cit-0002">
+<string-name name-style="western">
+<surname>Saadi</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Shokri</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Schaefer</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hollenbeak</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lighthall</surname>
+<given-names>JG</given-names>
+</string-name>. <article-title>Depression rates after facial paralysis</article-title>. <source>Ann Plast Surg</source>. <year>2019</year>;<volume>83</volume>(<issue>2</issue>):<fpage>190</fpage>‐<lpage>194</lpage>. <pub-id pub-id-type="doi">10.1097/SAP.0000000000001908</pub-id>
+<pub-id pub-id-type="pmid">31232802</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="oto270231-cit-0003">
+<string-name name-style="western">
+<surname>Vargo</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ding</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sacco</surname>
+<given-names>M</given-names>
+</string-name>, et al. <article-title>The psychological and psychosocial effects of facial paralysis: a review</article-title>. <source>J Plast Reconstruct Aesthet Surg</source>. <year>2023</year>;<volume>83</volume>:<fpage>423</fpage>‐<lpage>430</lpage>. <pub-id pub-id-type="doi">10.1016/j.bjps.2023.05.027</pub-id>
+<pub-id pub-id-type="pmid">37311285</pub-id></mixed-citation></ref><ref id="oto270231-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="oto270231-cit-0004">
+<string-name name-style="western">
+<surname>Manikandan</surname>
+<given-names>N</given-names>
+</string-name>. <article-title>Effect of facial neuromuscular re‐education on facial symmetry in patients with Bell's palsy: a randomized controlled trial</article-title>. <source>Clin Rehabil</source>. <year>2007</year>;<volume>21</volume>(<issue>4</issue>):<fpage>338</fpage>‐<lpage>343</lpage>. <pub-id pub-id-type="doi">10.1177/0269215507070790</pub-id>
+<pub-id pub-id-type="pmid">17613574</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="oto270231-cit-0005">
+<string-name name-style="western">
+<surname>Angeli</surname>
+<given-names>SI</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Chiossone</surname>
+<given-names>E</given-names>
+</string-name>. <article-title>Surgical treatment of the facial nerve in facial paralysis</article-title>. <source>Otolaryngol Clin North Am</source>. <year>1997</year>;<volume>30</volume>(<issue>5</issue>):<fpage>683</fpage>‐<lpage>700</lpage>.<pub-id pub-id-type="pmid">9295248</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="oto270231-cit-0006">
+<string-name name-style="western">
+<surname>Salles</surname>
+<given-names>AG</given-names>
+</string-name>, <string-name name-style="western">
+<surname>da Costa</surname>
+<given-names>EF</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ferreira</surname>
+<given-names>MC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>do Nascimento Remigio</surname>
+<given-names>AF</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Moraes</surname>
+<given-names>LB</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gemperli</surname>
+<given-names>R</given-names>
+</string-name>. <article-title>Epidemiologic overview of synkinesis in 353 patients with longstanding facial paralysis under treatment with botulinum toxin for 11 years</article-title>. <source>Plast Reconstr Surg</source>. <year>2015</year>;<volume>136</volume>(<issue>6</issue>):<fpage>1289</fpage>‐<lpage>1298</lpage>. <pub-id pub-id-type="doi">10.1097/PRS.0000000000001802</pub-id>
+<pub-id pub-id-type="pmid">26595022</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="oto270231-cit-0007">
+<string-name name-style="western">
+<surname>Peitersen</surname>
+<given-names>E</given-names>
+</string-name>. <article-title>The natural history of Bell's palsy</article-title>. <source>Am J Otol</source>. <year>1982</year>;<volume>4</volume>(<issue>2</issue>):<fpage>107</fpage>‐<lpage>111</lpage>.<pub-id pub-id-type="pmid">7148998</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="oto270231-cit-0008">
+<string-name name-style="western">
+<surname>Lake</surname>
+<given-names>DA</given-names>
+</string-name>. <article-title>Neuromuscular electrical stimulation: an overview and its application in the treatment of sports injuries</article-title>. <source>Sports Med</source>. <year>1992</year>;<volume>13</volume>(<issue>5</issue>):<fpage>320</fpage>‐<lpage>336</lpage>. <pub-id pub-id-type="doi">10.2165/00007256-199213050-00003</pub-id>
+<pub-id pub-id-type="pmid">1565927</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="oto270231-cit-0009">
+<string-name name-style="western">
+<surname>Brach</surname>
+<given-names>JS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>VanSwearingen</surname>
+<given-names>JM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lenert</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Johnson</surname>
+<given-names>PC</given-names>
+</string-name>. <article-title>Facial neuromuscular retraining for oral synkinesis</article-title>. <source>Plast Reconstr Surg</source>. <year>1997</year>;<volume>99</volume>(<issue>7</issue>):<fpage>1922</fpage>‐<lpage>1931</lpage>. discussion 1932‐1933 <pub-id pub-id-type="doi">10.1097/00006534-199706000-00017</pub-id>
+<pub-id pub-id-type="pmid">9180715</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="oto270231-cit-0010">
+<string-name name-style="western">
+<surname>Puls</surname>
+<given-names>WC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Jarvis</surname>
+<given-names>JC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ruck</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lehmann</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Guntinas‐Lichius</surname>
+<given-names>O</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Volk</surname>
+<given-names>GF</given-names>
+</string-name>. <article-title>Surface electrical stimulation for facial paralysis is not harmful</article-title>. <source>Muscle Nerve</source>. <year>2020</year>;<volume>61</volume>(<issue>3</issue>):<fpage>347</fpage>‐<lpage>353</lpage>. <pub-id pub-id-type="doi">10.1002/mus.26784</pub-id>
+<pub-id pub-id-type="pmid">31875972</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="oto270231-cit-0011">
+<string-name name-style="western">
+<surname>Wang</surname>
+<given-names>X</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Jiang</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zhou</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gu</surname>
+<given-names>Q</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Li</surname>
+<given-names>X</given-names>
+</string-name>. <article-title>Effectiveness of low‐frequency pulse electrical stimulation combined with dexamethasone in treating facial nerve paralysis and its impact on facial nerve function and electromyography</article-title>. <source>Altern Ther Health Med</source>. <year>2024</year>;<volume>30</volume>(<issue>12</issue>):<fpage>530</fpage>‐<lpage>537</lpage>.<pub-id pub-id-type="pmid">38581322</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="oto270231-cit-0012">
+<string-name name-style="western">
+<surname>Targan</surname>
+<given-names>RS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Alon</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kay</surname>
+<given-names>SL</given-names>
+</string-name>. <article-title>Effect of long‐term electrical stimulation on motor recovery and improvement of clinical residuals in patients with unresolved facial nerve palsy</article-title>. <source>Otolaryngol Head Neck Surg</source>. <year>2000</year>;<volume>122</volume>(<issue>2</issue>):<fpage>246</fpage>‐<lpage>252</lpage>. <pub-id pub-id-type="doi">10.1016/S0194-5998(00)70248-8</pub-id>
+<pub-id pub-id-type="pmid">10652399</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="oto270231-cit-0013">
+<string-name name-style="western">
+<surname>Marotta</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Demeco</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Inzitari</surname>
+<given-names>MT</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Caruso</surname>
+<given-names>MG</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ammendolia</surname>
+<given-names>A</given-names>
+</string-name>. <article-title>Neuromuscular electrical stimulation and shortwave diathermy in unrecovered Bell palsy: a randomized controlled study</article-title>. <source>Medicine</source>. <year>2020</year>;<volume>99</volume>(<issue>8</issue>):<elocation-id>e19152</elocation-id>. <pub-id pub-id-type="doi">10.1097/MD.0000000000019152</pub-id>
+<pub-id pub-id-type="pmid">32080092</pub-id>
+<pub-id pub-id-type="pmcid">PMC7034718</pub-id></mixed-citation></ref><ref id="oto270231-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="oto270231-cit-0014">
+<string-name name-style="western">
+<surname>Page</surname>
+<given-names>MJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>McKenzie</surname>
+<given-names>JE</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bossuyt</surname>
+<given-names>PM</given-names>
+</string-name>, et al. <article-title>The PRISMA 2020 statement: an updated guideline for reporting systematic reviews</article-title>. <source>BMJ</source>. <year>2021</year>;<volume>372</volume>:<elocation-id>n71</elocation-id>. <pub-id pub-id-type="doi">10.1136/bmj.n71</pub-id>
+<pub-id pub-id-type="pmid">33782057</pub-id>
+<pub-id pub-id-type="pmcid">PMC8005924</pub-id></mixed-citation></ref><ref id="oto270231-bib-0015"><label>15</label><mixed-citation publication-type="miscellaneous" id="oto270231-cit-0015">OCEBM Levels of Evidence Working Group. The Oxford Levels of Evidence 2. <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence" ext-link-type="uri">https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence</ext-link>
+</mixed-citation></ref><ref id="oto270231-bib-0016"><label>16</label><mixed-citation publication-type="miscellaneous" id="oto270231-cit-0016">
+<string-name name-style="western">
+<surname>Higgins</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Thomas</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Chandler</surname>
+<given-names>J</given-names>
+</string-name>, et al. Cochrane Handbook for Systematic Reviews of Interventions version 6.4 (updated August 2023). <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.training.cochrane.org/handbook" ext-link-type="uri">www.training.cochrane.org/handbook</ext-link>
+</mixed-citation></ref><ref id="oto270231-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="oto270231-cit-0017">
+<string-name name-style="western">
+<surname>Sterne</surname>
+<given-names>JA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hernán</surname>
+<given-names>MA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Reeves</surname>
+<given-names>BC</given-names>
+</string-name>, et al. <article-title>ROBINS‐I: a tool for assessing risk of bias in non‐randomised studies of interventions</article-title>. <source>BMJ</source>. <year>2016</year>;<volume>355</volume>:<elocation-id>i4919</elocation-id>. <pub-id pub-id-type="doi">10.1136/bmj.i4919</pub-id>
+<pub-id pub-id-type="pmid">27733354</pub-id>
+<pub-id pub-id-type="pmcid">PMC5062054</pub-id></mixed-citation></ref><ref id="oto270231-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="oto270231-cit-0018">
+<string-name name-style="western">
+<surname>Sterne</surname>
+<given-names>JAC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Savović</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Page</surname>
+<given-names>MJ</given-names>
+</string-name>, et al. <article-title>RoB 2: a revised tool for assessing risk of bias in randomised trials</article-title>. <source>BMJ</source>. <year>2019</year>;<volume>366</volume>:<elocation-id>l4898</elocation-id>. <pub-id pub-id-type="doi">10.1136/bmj.l4898</pub-id>
+<pub-id pub-id-type="pmid">31462531</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="oto270231-cit-0019">
+<string-name name-style="western">
+<surname>Di Pietro</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cameron</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Campana</surname>
+<given-names>V</given-names>
+</string-name>, et al. <article-title>Efficacy of adding selective electrical muscle stimulation to usual physical therapy for Bell's palsy: immediate and six‐month outcomes</article-title>. <source>Eur J Transl Myol</source>. <year>2023</year>;<volume>33</volume>(<issue>4</issue>):<elocation-id>11630</elocation-id>. <pub-id pub-id-type="doi">10.4081/ejtm.2023.11630</pub-id>
+<pub-id pub-id-type="pmid">37877154</pub-id>
+<pub-id pub-id-type="pmcid">PMC10811644</pub-id></mixed-citation></ref><ref id="oto270231-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="oto270231-cit-0020">
+<string-name name-style="western">
+<surname>Kim</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Choi</surname>
+<given-names>JY</given-names>
+</string-name>. <article-title>The effect of subthreshold continuous electrical stimulation on the facial function of patients with Bell's palsy</article-title>. <source>Acta Otolaryngol</source>. <year>2016</year>;<volume>136</volume>(<issue>1</issue>):<fpage>100</fpage>‐<lpage>105</lpage>. <pub-id pub-id-type="doi">10.3109/00016489.2015.1083121</pub-id>
+<pub-id pub-id-type="pmid">26399994</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="oto270231-cit-0021">
+<string-name name-style="western">
+<surname>Shokri</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Patel</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ziai</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Harounian</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lighthall</surname>
+<given-names>JG</given-names>
+</string-name>. <article-title>Facial synkinesis: a distressing sequela of facial palsy</article-title>. <source>Ear Nose Throat J</source>. <year>2024</year>;<volume>103</volume>(<issue>6</issue>):<fpage>NP382</fpage>‐<lpage>NP391</lpage>. <pub-id pub-id-type="doi">10.1177/01455613211054627</pub-id>
+<pub-id pub-id-type="pmid">34836457</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="oto270231-cit-0022">
+<string-name name-style="western">
+<surname>Placheta</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tzou</surname>
+<given-names>CJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hold</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pona</surname>
+<given-names>I</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Frey</surname>
+<given-names>M</given-names>
+</string-name>. <article-title>Facial synkinesia before and after surgical reanimation of the paralyzed face</article-title>. <source>Plast Reconstr Surg</source>. <year>2014</year>;<volume>133</volume>(<issue>6</issue>):<fpage>842</fpage>. <pub-id pub-id-type="doi">10.1097/PRS.0000000000000218</pub-id>
+<pub-id pub-id-type="pmid">24867744</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="oto270231-cit-0023">
+<string-name name-style="western">
+<surname>Çelik</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Forta</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Vural</surname>
+<given-names>Ç</given-names>
+</string-name>. <article-title>The development of synkinesis after facial nerve paralysis</article-title>. <source>Eur Neurol</source>. <year>2000</year>;<volume>43</volume>(<issue>3</issue>):<fpage>147</fpage>‐<lpage>151</lpage>. <pub-id pub-id-type="doi">10.1159/000008154</pub-id>
+<pub-id pub-id-type="pmid">10765054</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="oto270231-cit-0024">
+<string-name name-style="western">
+<surname>Owusu</surname>
+<given-names>JA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Stewart</surname>
+<given-names>CM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Boahene</surname>
+<given-names>K</given-names>
+</string-name>. <article-title>Facial nerve paralysis</article-title>. <source>Med Clin North Am</source>. <year>2018</year>;<volume>102</volume>(<issue>6</issue>):<fpage>1135</fpage>‐<lpage>1143</lpage>. <pub-id pub-id-type="doi">10.1016/j.mcna.2018.06.011</pub-id>
+<pub-id pub-id-type="pmid">30342614</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="oto270231-cit-0025">
+<string-name name-style="western">
+<surname>Efthimiou</surname>
+<given-names>TN</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hanel</surname>
+<given-names>PHP</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Korb</surname>
+<given-names>S</given-names>
+</string-name>. <article-title>Volunteers’ concerns about facial neuromuscular electrical stimulation</article-title>. <source>BMC Psychol</source>. <year>2022</year>;<volume>10</volume>(<issue>1</issue>):<fpage>117</fpage>. <pub-id pub-id-type="doi">10.1186/s40359-022-00827-3</pub-id>
+<pub-id pub-id-type="pmid">35526073</pub-id>
+<pub-id pub-id-type="pmcid">PMC9080168</pub-id></mixed-citation></ref><ref id="oto270231-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="oto270231-cit-0026">
+<string-name name-style="western">
+<surname>Efthimiou</surname>
+<given-names>TN</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Perusquía‐Hernández</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Elsenaar</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Mehu</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Korb</surname>
+<given-names>S</given-names>
+</string-name>. <article-title>Application of facial neuromuscular electrical stimulation (fNMES) in psychophysiological research: practical recommendations based on a systematic review of the literature</article-title>. <source>Behav Res Methods</source>. <year>2023</year>;<volume>56</volume>(<issue>4</issue>):<fpage>2941</fpage>‐<lpage>2976</lpage>. <pub-id pub-id-type="doi">10.3758/s13428-023-02262-7</pub-id>
+<pub-id pub-id-type="pmid">37864116</pub-id>
+<pub-id pub-id-type="pmcid">PMC11133044</pub-id></mixed-citation></ref><ref id="oto270231-bib-0027"><label>27</label><mixed-citation publication-type="miscellaneous" id="oto270231-cit-0027">
+<string-name name-style="western">
+<surname>Duchenne</surname>
+<given-names>G.</given-names>
+</string-name>
+<italic toggle="yes">Mécanisme de La Physionomie Humaine: Où, Analyse Électro‐Physiologique de l'expression Des Passions. J.‐B. Baillière</italic>; <year>1862</year>.</mixed-citation></ref><ref id="oto270231-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="oto270231-cit-0028">
+<string-name name-style="western">
+<surname>Mosforth</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Taverner</surname>
+<given-names>D</given-names>
+</string-name>. <article-title>Physiotherapy for Bell's palsy</article-title>. <source>BMJ</source>. <year>1958</year>;<volume>2</volume>(<issue>5097</issue>):<fpage>675</fpage>‐<lpage>677</lpage>. <pub-id pub-id-type="doi">10.1136/bmj.2.5097.675</pub-id>
+<pub-id pub-id-type="pmid">13572865</pub-id>
+<pub-id pub-id-type="pmcid">PMC2026410</pub-id></mixed-citation></ref><ref id="oto270231-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="oto270231-cit-0029">
+<string-name name-style="western">
+<surname>Shafshak</surname>
+<given-names>TS</given-names>
+</string-name>. <article-title>The treatment of facial palsy from the point of view of physical and rehabilitation medicine</article-title>. <source>Eura Medicophys</source>. <year>2006</year>;<volume>42</volume>(<issue>1</issue>):<fpage>41</fpage>‐<lpage>47</lpage>.<pub-id pub-id-type="pmid">16565685</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="oto270231-cit-0030">
+<string-name name-style="western">
+<surname>Munn</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cameron</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Loyo</surname>
+<given-names>M</given-names>
+</string-name>. <article-title>Trends in electric stimulation for facial paralysis: electronic survey of physical therapists in Oregon</article-title>. <source>Arch Physiother Rehabil</source>. <year>2020</year>;<volume>3</volume>:<fpage>001</fpage>‐<lpage>008</lpage>.</mixed-citation></ref><ref id="oto270231-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="oto270231-cit-0031">
+<string-name name-style="western">
+<surname>Cohen</surname>
+<given-names>SM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rosett</surname>
+<given-names>BE</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Shifrin</surname>
+<given-names>DA</given-names>
+</string-name>. <article-title>An analysis of independent variables affecting surgical outcomes in patients undergoing repair of maxillofacial trauma: an American College of Surgeons National Surgical Quality Improvement Program Study</article-title>. <source>J Craniofac Surg</source>. <year>2017</year>;<volume>28</volume>(<issue>3</issue>):<fpage>596</fpage>‐<lpage>599</lpage>. <pub-id pub-id-type="doi">10.1097/SCS.0000000000003545</pub-id>
+<pub-id pub-id-type="pmid">28468133</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="oto270231-cit-0032">
+<string-name name-style="western">
+<surname>Skouras</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Merkel</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Grosheva</surname>
+<given-names>M</given-names>
+</string-name>, et al. <article-title>Manual stimulation, but not acute electrical stimulation prior to reconstructive surgery, improves functional recovery after facial nerve injury in rats</article-title>. <source>Restor Neurol Neurosci</source>. <year>2009</year>;<volume>27</volume>(<issue>3</issue>):<fpage>237</fpage>‐<lpage>251</lpage>. <pub-id pub-id-type="doi">10.3233/RNN-2009-0474</pub-id>
+<pub-id pub-id-type="pmid">19531878</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="oto270231-cit-0033">
+<string-name name-style="western">
+<surname>Engström</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Berg</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Stjernquist‐Desatnik</surname>
+<given-names>A</given-names>
+</string-name>, et al. <article-title>Prednisolone and valaciclovir in Bell's palsy: a randomised, double‐blind, placebo‐controlled, multicentre trial</article-title>. <source>Lancet Neurol</source>. <year>2008</year>;<volume>7</volume>(<issue>11</issue>):<fpage>993</fpage>‐<lpage>1000</lpage>. <pub-id pub-id-type="doi">10.1016/s1474-4422(08)70221-7</pub-id>
+<pub-id pub-id-type="pmid">18849193</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="oto270231-cit-0034">
+<string-name name-style="western">
+<surname>Rail</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bhatia</surname>
+<given-names>SS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dragun</surname>
+<given-names>AJ</given-names>
+</string-name>, et al. <article-title>The natural progression of synkinesis</article-title>. <source>Plast Reconstr Surg</source>. <year>2026</year>;<volume>157</volume>:<fpage>86</fpage>. <pub-id pub-id-type="doi">10.1097/prs.0000000000012243</pub-id>
+<pub-id pub-id-type="pmid">40492635</pub-id></mixed-citation></ref><ref id="oto270231-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="oto270231-cit-0035">
+<string-name name-style="western">
+<surname>Zealear</surname>
+<given-names>DL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Mainthia</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Li</surname>
+<given-names>Y</given-names>
+</string-name>, et al. <article-title>Stimulation of denervated muscle promotes selective reinnervation, prevents synkinesis, and restores function</article-title>. <source>Laryngoscope</source>. <year>2014</year>;<volume>124</volume>(<issue>5</issue>):<fpage>E180</fpage>‐<lpage>E187</lpage>. <pub-id pub-id-type="doi">10.1002/lary.24454</pub-id>
+<pub-id pub-id-type="pmid">24254367</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="oto270231-cit-0036">
+<string-name name-style="western">
+<surname>Brushart</surname>
+<given-names>TM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gerber</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kessens</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Chen</surname>
+<given-names>YG</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Royall</surname>
+<given-names>RM</given-names>
+</string-name>. <article-title>Contributions of pathway and neuron to preferential motor reinnervation</article-title>. <source>J Neurosci</source>. <year>1998</year>;<volume>18</volume>(<issue>21</issue>):<fpage>8674</fpage>‐<lpage>8681</lpage>. <pub-id pub-id-type="doi">10.1523/JNEUROSCI.18-21-08674.1998</pub-id>
+<pub-id pub-id-type="pmid">9786974</pub-id>
+<pub-id pub-id-type="pmcid">PMC6793544</pub-id></mixed-citation></ref><ref id="oto270231-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="oto270231-cit-0037">
+<string-name name-style="western">
+<surname>Li</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wang</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Yin</surname>
+<given-names>X</given-names>
+</string-name>, et al. <article-title>Electroacupuncture with intermittent wave stimulation as rehabilitation approach for chronic Bell's palsy: a randomized controlled trial</article-title>. <source>Postgrad Med J</source>. <year>2024</year>;<volume>100</volume>(<issue>1181</issue>):<fpage>151</fpage>‐<lpage>158</lpage>. <pub-id pub-id-type="doi">10.1093/postmj/qgad126</pub-id>
+<pub-id pub-id-type="pmid">38134327</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="oto270231-cit-0038">
+<string-name name-style="western">
+<surname>Biglioli</surname>
+<given-names>F</given-names>
+</string-name>. <article-title>Facial reanimations: part II‐‐long‐standing paralyses</article-title>. <source>Br J Oral Maxillofac Surg</source>. <year>2015</year>;<volume>53</volume>(<issue>10</issue>):<fpage>907</fpage>‐<lpage>912</lpage>. <pub-id pub-id-type="doi">10.1016/j.bjoms.2015.07.001</pub-id>
+<pub-id pub-id-type="pmid">26194145</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="oto270231-cit-0039">
+<string-name name-style="western">
+<surname>Doucet</surname>
+<given-names>BM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lam</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Griffin</surname>
+<given-names>L</given-names>
+</string-name>. <article-title>Neuromuscular electrical stimulation for skeletal muscle function</article-title>. <source>Yale J Biol Med</source>. <year>2012</year>;<volume>85</volume>(<issue>2</issue>):<fpage>201</fpage>‐<lpage>215</lpage>.<pub-id pub-id-type="pmid">22737049</pub-id>
+<pub-id pub-id-type="pmcid">PMC3375668</pub-id></mixed-citation></ref><ref id="oto270231-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="oto270231-cit-0040">
+<string-name name-style="western">
+<surname>Diels</surname>
+<given-names>HJ</given-names>
+</string-name>. <article-title>Facial paralysis: is there a role for a therapist?</article-title>
+<source>Facial Plast Surg</source>. <year>2000</year>;<volume>16</volume>(<issue>4</issue>):<fpage>361</fpage>‐<lpage>364</lpage>. <pub-id pub-id-type="doi">10.1055/s-2000-15546</pub-id>
+<pub-id pub-id-type="pmid">11460303</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="oto270231-cit-0041">
+<string-name name-style="western">
+<surname>Burelo‐Peregrino</surname>
+<given-names>EG</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Salas‐Magaña</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Arias‐Vázquez</surname>
+<given-names>PI</given-names>
+</string-name>, et al. <article-title>Efficacy of electrotherapy in Bell's palsy treatment: a systematic review</article-title>. <source>J Back Musculoskeletal Rehabil</source>. <year>2020</year>;<volume>33</volume>(<issue>5</issue>):<fpage>865</fpage>‐<lpage>874</lpage>. <pub-id pub-id-type="doi">10.3233/BMR-171031</pub-id>
+<pub-id pub-id-type="pmid">32144972</pub-id></mixed-citation></ref><ref id="oto270231-bib-0042"><label>42</label><mixed-citation publication-type="journal" id="oto270231-cit-0042">
+<string-name name-style="western">
+<surname>Tuncay</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Borman</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Taşer</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ünlü</surname>
+<given-names>İ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Samim</surname>
+<given-names>E</given-names>
+</string-name>. <article-title>Role of electrical stimulation added to conventional therapy in patients with idiopathic facial (Bell) palsy</article-title>. <source>Am J Phys Med Rehabil</source>. <year>2015</year>;<volume>94</volume>(<issue>3</issue>):<fpage>222</fpage>‐<lpage>228</lpage>. <pub-id pub-id-type="doi">10.1097/PHM.0000000000000171</pub-id>
+<pub-id pub-id-type="pmid">25171666</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0043"><label>43</label><mixed-citation publication-type="journal" id="oto270231-cit-0043">
+<string-name name-style="western">
+<surname>Xiao</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>McGonagle</surname>
+<given-names>ER</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hadlock</surname>
+<given-names>TA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Heaton</surname>
+<given-names>JT</given-names>
+</string-name>. <article-title>Transcutaneous facial nerve frontal branch stimulation to restore dynamic elevation of the paralyzed eyebrow in synkinetic patients</article-title>. <source>Facial Plast Surg Aesthet Med</source>. Published online Apirl 28, <year>2025</year>. <pub-id pub-id-type="doi">10.1089/fpsam.2025.0015</pub-id>
+<pub-id pub-id-type="pmid">40293354</pub-id></mixed-citation></ref><ref id="oto270231-bib-0044"><label>44</label><mixed-citation publication-type="journal" id="oto270231-cit-0044">
+<string-name name-style="western">
+<surname>Neely</surname>
+<given-names>JG</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cherian</surname>
+<given-names>NG</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dickerson</surname>
+<given-names>CB</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Nedzelski</surname>
+<given-names>JM</given-names>
+</string-name>. <article-title>Sunnybrook facial grading system: reliability and criteria for grading</article-title>. <source>Laryngoscope</source>. <year>2010</year>;<volume>120</volume>(<issue>5</issue>):<fpage>1038</fpage>‐<lpage>1045</lpage>. <pub-id pub-id-type="doi">10.1002/lary.20868</pub-id>
+<pub-id pub-id-type="pmid">20422701</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0045"><label>45</label><mixed-citation publication-type="journal" id="oto270231-cit-0045">
+<string-name name-style="western">
+<surname>Ross</surname>
+<given-names>BG</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Fradet</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Nedzelski</surname>
+<given-names>JM</given-names>
+</string-name>. <article-title>Development of a sensitive clinical facial grading system</article-title>. <source>Otolaryngol Head Neck Surg</source>. <year>1996</year>;<volume>114</volume>(<issue>3</issue>):<fpage>380</fpage>‐<lpage>386</lpage>. <pub-id pub-id-type="doi">10.1016/S0194-59989670206-1</pub-id>
+<pub-id pub-id-type="pmid">8649870</pub-id>
+</mixed-citation></ref><ref id="oto270231-bib-0046"><label>46</label><mixed-citation publication-type="journal" id="oto270231-cit-0046">
+<string-name name-style="western">
+<surname>Banks</surname>
+<given-names>CA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bhama</surname>
+<given-names>PK</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Park</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hadlock</surname>
+<given-names>CR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hadlock</surname>
+<given-names>TA</given-names>
+</string-name>. <article-title>Clinician‐graded electronic facial paralysis assessment: the eFACE</article-title>. <source>Plast Reconstr Surg</source>. <year>2015</year>;<volume>136</volume>(<issue>2</issue>):<fpage>223e</fpage>‐<lpage>230e</lpage>. <pub-id pub-id-type="doi">10.1097/PRS.0000000000001447</pub-id>
+<pub-id pub-id-type="pmid">26218397</pub-id></mixed-citation></ref><ref id="oto270231-bib-0047"><label>47</label><mixed-citation publication-type="journal" id="oto270231-cit-0047">
+<string-name name-style="western">
+<surname>Mehta</surname>
+<given-names>RP</given-names>
+</string-name>, <string-name name-style="western">
+<surname>WernickRobinson</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hadlock</surname>
+<given-names>TA</given-names>
+</string-name>. <article-title>Validation of the synkinesis assessment questionnaire</article-title>. <source>Laryngoscope</source>. <year>2007</year>;<volume>117</volume>(<issue>5</issue>):<fpage>923</fpage>‐<lpage>926</lpage>. <pub-id pub-id-type="doi">10.1097/MLG.0b013e3180412460</pub-id>
+<pub-id pub-id-type="pmid">17473697</pub-id>
+</mixed-citation></ref></ref-list></back></article>

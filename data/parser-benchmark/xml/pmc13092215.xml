@@ -1,0 +1,672 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="hsr272406" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Health Sci Rep</journal-id><journal-id journal-id-type="iso-abbrev">Health Sci Rep</journal-id><journal-id journal-id-type="pmc-domain-id">3569</journal-id><journal-id journal-id-type="pmc-domain">hscirep</journal-id><journal-id journal-id-type="publisher-id">HSR2</journal-id><journal-title-group><journal-title>Health Science Reports</journal-title></journal-title-group><issn pub-type="epub">2398-8835</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13092215</article-id><article-id pub-id-type="pmcid-ver">PMC13092215.1</article-id><article-id pub-id-type="pmcaid">13092215</article-id><article-id pub-id-type="pmcaiid">13092215</article-id><article-id pub-id-type="pmid">42011275</article-id><article-id pub-id-type="doi">10.1002/hsr2.72406</article-id><article-id pub-id-type="publisher-id">HSR272406</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Systematic Review</subject></subj-group><subj-group subj-group-type="heading"><subject>Systematic Review</subject></subj-group></article-categories><title-group><article-title>Cyclooxygenase‐2 (COX‐2) as a Potential Prognostic Marker in Oral Squamous Cell Carcinoma: A Systematic Review and Meta‐Analysis</article-title></title-group><contrib-group><contrib id="hsr272406-cr-0001" contrib-type="author"><name name-style="western"><surname>Qasem</surname><given-names initials="HM">Hanan M.</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0008-3393-3559</contrib-id><xref rid="hsr272406-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="hsr272406-cr-0002" contrib-type="author"><name name-style="western"><surname>Odat</surname><given-names initials="RM">Ramez M.</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0008-3423-4055</contrib-id><xref rid="hsr272406-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="hsr272406-cr-0003" contrib-type="author"><name name-style="western"><surname>Alshwayyat</surname><given-names initials="S">Sakhr</given-names></name><xref rid="hsr272406-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref><xref rid="hsr272406-aff-0004" ref-type="aff">
+<sup>4</sup>
+</xref></contrib><contrib id="hsr272406-cr-0004" contrib-type="author"><name name-style="western"><surname>Younis</surname><given-names initials="OM">Osama M.</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0004-1027-554X</contrib-id><xref rid="hsr272406-aff-0005" ref-type="aff">
+<sup>5</sup>
+</xref></contrib><contrib id="hsr272406-cr-0005" contrib-type="author"><name name-style="western"><surname>Yasin</surname><given-names initials="JA">Jehad A.</given-names></name><xref rid="hsr272406-aff-0005" ref-type="aff">
+<sup>5</sup>
+</xref></contrib><contrib id="hsr272406-cr-0006" contrib-type="author"><name name-style="western"><surname>Hussein</surname><given-names initials="AM">Ayham Mohammad</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0006-3277-1549</contrib-id><xref rid="hsr272406-aff-0006" ref-type="aff">
+<sup>6</sup>
+</xref></contrib><contrib id="hsr272406-cr-0007" contrib-type="author"><name name-style="western"><surname>Hammadeh</surname><given-names initials="BM">Bara M.</given-names></name><xref rid="hsr272406-aff-0006" ref-type="aff">
+<sup>6</sup>
+</xref></contrib><contrib id="hsr272406-cr-0008" contrib-type="author"><name name-style="western"><surname>Ghlailat</surname><given-names initials="M">Majed</given-names></name><xref rid="hsr272406-aff-0005" ref-type="aff">
+<sup>5</sup>
+</xref></contrib><contrib id="hsr272406-cr-0009" contrib-type="author"><name name-style="western"><surname>Amayreh</surname><given-names initials="LA">Lujain Al</given-names></name><xref rid="hsr272406-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="hsr272406-cr-0010" contrib-type="author" corresp="yes"><name name-style="western"><surname>Yadav</surname><given-names initials="R">Rukesh</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-0282-0251</contrib-id><xref rid="hsr272406-aff-0007" ref-type="aff">
+<sup>7</sup>
+</xref><address><email>rukeshyadav46@gmail.com</email></address></contrib><contrib id="hsr272406-cr-0011" contrib-type="author"><name name-style="western"><surname>Nguyen</surname><given-names initials="D">Dang</given-names></name><xref rid="hsr272406-aff-0008" ref-type="aff">
+<sup>8</sup>
+</xref></contrib><contrib id="hsr272406-cr-0012" contrib-type="author"><name name-style="western"><surname>Jain</surname><given-names initials="H">Hritvik</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-5608-4299</contrib-id><xref rid="hsr272406-aff-0009" ref-type="aff">
+<sup>9</sup>
+</xref></contrib><contrib id="hsr272406-cr-0013" contrib-type="author"><name name-style="western"><surname>Kelkar</surname><given-names initials="R">Raveena</given-names></name><xref rid="hsr272406-aff-0010" ref-type="aff">
+<sup>10</sup>
+</xref></contrib></contrib-group><aff id="hsr272406-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Faculty of Dentistry</named-content>
+<institution>Jordan University of Science and Technology</institution>
+<city>Irbid</city>
+<country country="JO">Jordan</country>
+</aff><aff id="hsr272406-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Faculty of Medicine</named-content>
+<institution>Jordan University of Science and Technology</institution>
+<city>Irbid</city>
+<country country="JO">Jordan</country>
+</aff><aff id="hsr272406-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<institution>King Hussein Cancer Center</institution>
+<city>Amman</city>
+<country country="JO">Jordan</country>
+</aff><aff id="hsr272406-aff-0004">
+<label>
+<sup>4</sup>
+</label>
+<institution>Princess Basma Teaching Hospital</institution>
+<city>Irbid</city>
+<country country="JO">Jordan</country>
+</aff><aff id="hsr272406-aff-0005">
+<label>
+<sup>5</sup>
+</label>
+<named-content content-type="organisation-division">School of Medicine</named-content>
+<institution>The University of Jordan</institution>
+<city>Amman</city>
+<country country="JO">Jordan</country>
+</aff><aff id="hsr272406-aff-0006">
+<label>
+<sup>6</sup>
+</label>
+<named-content content-type="organisation-division">Faculty of Medicine</named-content>
+<institution>Al‐Balqa' Applied University</institution>
+<city>Salt</city>
+<country country="JO">Jordan</country>
+</aff><aff id="hsr272406-aff-0007">
+<label>
+<sup>7</sup>
+</label>
+<named-content content-type="organisation-division">Maharajgunj Medical Campus, Institute of Medicine</named-content>
+<institution>Tribhuvan University</institution>
+<city>Kirtipur</city>
+<named-content content-type="country-part">Kathmandu</named-content>
+<country country="NP">Nepal</country>
+</aff><aff id="hsr272406-aff-0008">
+<label>
+<sup>8</sup>
+</label>
+<named-content content-type="organisation-division">Harvard T.H. Chan School of Public Health</named-content>
+<institution>Harvard University</institution>
+<city>Boston</city>
+<named-content content-type="country-part">Massachusetts</named-content>
+<country country="US">USA</country>
+</aff><aff id="hsr272406-aff-0009">
+<label>
+<sup>9</sup>
+</label>
+<named-content content-type="organisation-division">Department of Internal Medicine</named-content>
+<institution>All India Institute of Medical Sciences (AIIMS)</institution>
+<city>Jodhpur</city>
+<country country="IN">India</country>
+</aff><aff id="hsr272406-aff-0010">
+<label>
+<sup>10</sup>
+</label>
+<named-content content-type="organisation-division">Department of Medicine</named-content>
+<institution>Wentworth‐Douglass Hospital, Mass General Brigham</institution>
+<city>Dover</city>
+<named-content content-type="country-part">New Hampshire</named-content>
+<country country="US">USA</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold> Rukesh Yadav (<email>rukeshyadav46@gmail.com</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>19</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>9</volume><issue seq="20">4</issue><issue-id pub-id-type="pmc-issue-id">510729</issue-id><issue-id pub-id-type="doi">10.1002/hsr2.v9.4</issue-id><elocation-id>e72406</elocation-id><history><date date-type="rev-recd"><day>19</day><month>11</month><year>2025</year></date><date date-type="received"><day>25</day><month>9</month><year>2024</year></date><date date-type="accepted"><day>09</day><month>4</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>19</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>20</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-21 09:25:15.350"><day>21</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Health Science Reports</italic> published by Wiley Periodicals LLC.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbynclicense">https://creativecommons.org/licenses/by-nc/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc/4.0/">http://creativecommons.org/licenses/by-nc/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited and is not used for commercial purposes.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="HSR2-9-e72406.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:HSR2-9-e72406.pdf"/><abstract><title>ABSTRACT</title><sec id="hsr272406-sec-0010"><title>Background and Aims</title><p>Oral squamous cell carcinoma (OSCC) is the predominant form of head and neck squamous cell carcinoma (HNSCC), accounting for most cancer‐related deaths due to metastasis and recurrence. COX‐2, an inflammatory biomarker encoded by prostaglandin‐endoperoxide synthase 2 (PTGS2) gene, has been shown to play a significant role in the prognosis of OSCC. Herein, we performed this meta‐analysis to evaluate COX‐2 as a potential therapeutic target in OSCC.</p></sec><sec id="hsr272406-sec-0020"><title>Methods</title><p>PubMed, Embase, Web of Science, and Scopus databases were searched from inception to April 2024, to identify studies with Immunohistochemistry (IHC)‐based quantification that measure the clinicopathological features and prognostic significance of COX‐2 in OSCC. The role of COX‐2 expression in OSCC was evaluated by pooled hazard ratios (HRs), odd ratios (ORs) and 95% confidence intervals (CIs). The meta‐analysis was performed using the Review Manager (RevMan) version 5.4.1.</p></sec><sec id="hsr272406-sec-0030"><title>Results</title><p>Ten studies were included in this review. High expression of COX‐2 was significantly associated with poor prognosis, with overall survival and progression‐free survival in patients with OSCC indicated by the pooled HR (HR 1.49, 95% Cl: 1.06–2.10) and (HR: 1.86, 95% CI: 1.21–2.87), respectively. Also, high COX‐2 expression was significantly associated with advanced T stage (T3/T4) and TNM stage (ll/lV), as shown by the pooled OR (OR: 2.91, 95% Cl: 1.52–5.55) and (OR: 2.68, 95% CI: 1.43–5.02), respectively. However, there was no significant association between lymph node metastasis and high expression of COX‐2 (pooled OR: 2.16, 95% Cl: 0.71–6.57).</p></sec><sec id="hsr272406-sec-0040"><title>Conclusion</title><p>In conclusion, the present evidence suggests a role of COX‐2 overexpression as a prognostic biomarker and in targeted therapy of OSCC patients. Further studies on the role of COX‐2 expression might provide a more profound insight into the mechanism of carcinogenesis in OSCC.</p></sec></abstract><kwd-group><kwd id="hsr272406-kwd-0001">COX‐2</kwd><kwd id="hsr272406-kwd-0002">head and neck</kwd><kwd id="hsr272406-kwd-0003">oral cancer</kwd><kwd id="hsr272406-kwd-0004">OSCC</kwd><kwd id="hsr272406-kwd-0005">survival</kwd></kwd-group><counts><fig-count count="3"/><table-count count="1"/><page-count count="10"/><word-count count="5017"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:19.04.2026</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation publication-type="journal" id="hsr272406-cit-0039">
+<string-name name-style="western">
+<given-names>H. M.</given-names>
+<surname>Qasem</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. M.</given-names>
+<surname>Odat</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Alshwayyat</surname>
+</string-name>, et al., “<article-title>Cyclooxygenase‐2 (COX‐2) as a Potential Prognostic Marker in Oral Squamous Cell Carcinoma: A Systematic Review and Meta‐Analysis</article-title>,” <source>Health Science Reports</source>
+<volume>9</volume> (<year>2026</year>): <elocation-id>e72406</elocation-id>, <pub-id pub-id-type="doi">10.1002/hsr2.72406</pub-id>.</mixed-citation>
+</p><fn-group><fn id="hsr272406-note-0001"><p>The authors, Hanan M. Qasem and Ramez M. Odat, contributed equally to this work and share first authorship.</p></fn></fn-group></notes></front><body><sec id="hsr272406-sec-0050"><label>1</label><title>Introduction</title><p>Oral squamous cell carcinoma (OSCC) continues to be a major worldwide health issue, accounting for most oral cancer cases and causing significant illness and death [<xref rid="hsr272406-bib-0001" ref-type="bibr">1</xref>]. Although there have been advancements in surgical methods, radiation therapy, and chemotherapy, the outlook for patients with OSCC has not much improved in recent decades [<xref rid="hsr272406-bib-0002" ref-type="bibr">2</xref>]. The lack of advancement emphasizes the importance of promptly identifying novel prognostic markers and therapeutic targets to improve early identification, provide more precise clinical outcomes, and develop superior treatment approaches for patients [<xref rid="hsr272406-bib-0003" ref-type="bibr">3</xref>].</p><p>Cyclooxygenase‐2 (COX‐2) is an inducible enzyme involved in the synthesis of prostaglandins, particularly prostaglandin E2 (PGE2), which enhances angiogenesis, cell proliferation, invasion, and immune evasion in OSCC [<xref rid="hsr272406-bib-0004" ref-type="bibr">4</xref>]. Overexpression of COX‐2 in OSCC has been linked to poor prognosis, increased tumor aggressiveness, and resistance to apoptosis, making it a potential prognostic biomarker and therapeutic target [<xref rid="hsr272406-bib-0005" ref-type="bibr">5</xref>]. Studies have demonstrated that COX‐2 upregulation in OSCC correlates with increased expression of vascular endothelial growth factor (VEGF), contributing to enhanced tumor vascularization and metastasis [<xref rid="hsr272406-bib-0006" ref-type="bibr">6</xref>]. Additionally, COX‐2 overexpression is associated with increased activation of the epithelial‐mesenchymal transition (EMT) pathway, leading to enhanced invasiveness of tumor cells [<xref rid="hsr272406-bib-0007" ref-type="bibr">7</xref>, <xref rid="hsr272406-bib-0008" ref-type="bibr">8</xref>]. Targeting COX‐2 with selective COX‐2 inhibitors (e.g., celecoxib) has shown promise in preclinical and clinical studies by reducing OSCC progression, inducing apoptosis, and enhancing the efficacy of radiotherapy and chemotherapy [<xref rid="hsr272406-bib-0009" ref-type="bibr">9</xref>]. Given its pivotal role in tumorigenesis, COX‐2 remains a key target for potential chemopreventive and therapeutic strategies in OSCC.</p><p>COX‐2 plays a crucial role in various biological processes, including the development of blood vessels, inflammation, and cancers [<xref rid="hsr272406-bib-0010" ref-type="bibr">10</xref>, <xref rid="hsr272406-bib-0011" ref-type="bibr">11</xref>]. Several types of cancer, such as esophageal, colorectal, breast, and OSCC, show an increased amount of COX‐2, even if it is usually expressed at low levels [<xref rid="hsr272406-bib-0012" ref-type="bibr">12</xref>, <xref rid="hsr272406-bib-0013" ref-type="bibr">13</xref>, <xref rid="hsr272406-bib-0014" ref-type="bibr">14</xref>, <xref rid="hsr272406-bib-0015" ref-type="bibr">15</xref>, <xref rid="hsr272406-bib-0016" ref-type="bibr">16</xref>, <xref rid="hsr272406-bib-0017" ref-type="bibr">17</xref>, <xref rid="hsr272406-bib-0018" ref-type="bibr">18</xref>]. Overexpression of this gene in OSCC is linked to a negative prognosis, heightened aggressiveness, and factors such as the spread of cancer cells to lymph nodes and the stage of the tumor [<xref rid="hsr272406-bib-0019" ref-type="bibr">19</xref>]. Moreover, the capacity of COX‐2 to impact blood circulation, cellular demise, and immunological reactions indicates its potential as both a prognostic indicator and a target for therapeutic intervention [<xref rid="hsr272406-bib-0020" ref-type="bibr">20</xref>]. However, conflicting data exist regarding the prognostic and therapeutic potential of COX‐2 in OSCC, necessitating a comprehensive systematic review and meta‐analysis to definitively assess its significance.</p><p>This systematic review and meta‐analysis would combine data from multiple studies to determine the value of COX‐2 expression as a prognostic marker and a potential therapeutic target. Understanding COX‐2's role in OSCC progression and treatment resistance could pave the way for novel therapeutic approaches, ultimately improving patient outcomes and advancing OSCC management.</p></sec><sec sec-type="methods" id="hsr272406-sec-0060"><label>2</label><title>Methods</title><p>The meta‐analysis was performed according to the PRISMA guidelines and the statement for reporting systematic reviews and meta‐analyses (Table <xref rid="hsr272406-suppl-0001" ref-type="supplementary-material">S1</xref>) [<xref rid="hsr272406-bib-0021" ref-type="bibr">21</xref>]. The review was registered with PROSPERO (CRD42024536402).</p><sec id="hsr272406-sec-0070"><label>2.1</label><title>Study Search and Eligibility</title><p>A search was conducted across the following medical databases: EMBASE, PubMed, Scopus, Web of Science, and Cochrane to identify studies examining COX‐2 prognostic significance until. The studies examined were published until August 2024. Search strategy terms: (“Cyclooxygenase 2” OR “COX‐2”) AND (“Oral Squamous Cell Carcinoma” OR “OSCC” OR “Oral Cancer” OR “Squamous Cell Carcinoma of the Oral Cavity” OR “Mouth Neoplasms” OR “Head and Neck Squamous Cell Carcinoma” OR “HNSCC” OR “Buccal Cancer” OR “Gingival Cancer” OR “Tongue Cancer” OR “Tongue Cancer” OR “Oropharyngeal Cancer”) AND (“Prognosis” OR “Prognostic Marker” OR “Survival” OR “Mortality” OR “Recurrence” OR “Disease‐Free Survival” OR “Overall Survival” OR “Progression‐Free Survival” OR “Biomarker” OR “Predictive Factor”). Also, we have checked the references of the included studies to ensure that we have included all the related articles.</p><p>The eligibility standards for our inclusion criteria were as follows: observational studies employing a case‐control, cohort, or cross‐sectional design, studies investigating the association between Cyclooxygenase‐2 (COX‐2) expression and survival outcomes (overall survival, disease‐free survival) in oral cancer, studies involving human participants, and studies employing immunohistochemistry methodology to assess COX‐2 expression. Studies were limited to the English language, focusing on human studies involving oral squamous cell carcinoma. Only articles that were published in peer‐reviewed international journals were included in our analysis, resulting in the identification of 10 relevant papers. In the studies that provide both univariate and multivariate HRs, we have prioritized the multivariate HR. This is because multivariate HR accounts for potential confounders and provides a more precise estimate of the true effect. Also, we have included tongue squamous cell carcinoma in the same analysis, since the tongue squamous cell carcinoma is part of oral squamous cell carcinoma.</p></sec><sec id="hsr272406-sec-0080"><label>2.2</label><title>Data Collection and Quality Assessment</title><p>Titles and abstracts were independently screened by two reviewers to identify studies that potentially meet the inclusion criteria. After choosing these potentially eligible studies their full texts were retrieved and independently assessed by two review team members. Any disagreements were resolved through discussion between the two reviewers and a third reviewer. Data have been extracted using a standardized form. We employed the Quality in Prognosis Studies (QUIPS) tool, recommended for quality assessment of prognostic studies. The QUIPS tool assesses various domains, including study participation, study attrition, prognostic factor measurement, outcome measurement, confounding and statistical analysis and reporting. Each domain was properly assessed for risk of bias, with an overall score reflecting the methodological quality of the study. This score was then classified as high, moderate, low, and no information studies. Studies that achieved a score suggestive of low risk of bias, typically above a predefined threshold, were considered to have a high‐quality methodology.</p></sec><sec id="hsr272406-sec-0090"><label>2.3</label><title>Meta‐Analysis</title><p>Data from the primary studies were extracted and analyzed using the review manager program. Proper guides were used in the conducting, analysis, and interpretation of the study [<xref rid="hsr272406-bib-0022" ref-type="bibr">22</xref>, <xref rid="hsr272406-bib-0023" ref-type="bibr">23</xref>, <xref rid="hsr272406-bib-0024" ref-type="bibr">24</xref>]. We assessed the association between COX‐2 expression and overall survival (OS) using hazard ratios (HR) and corresponding 95% confidence intervals (CIs). An HR greater than 1 indicated a worse prognosis among patients with COX‐2 overexpression. Also, we assessed the association between COX‐2 expression and other outcomes using odds ratio (OR) and corresponding 95%CI. Random‐effects was applied, following “DerSimonian” and Laird's method and Mantel–Haenszel's method, respectively. Assessment of statistical heterogeneity was performed using the <italic toggle="yes">I</italic>
+<sup>2</sup> value, with thresholds of 25%, 50%, and 75% representing low, moderate, and high heterogeneity, respectively. The reliability of the results was confirmed by sensitivity analysis and publication bias assessed by visual inspection of funnel plots. A significant level of <italic toggle="yes">p</italic> &lt; 0.05 was considered statistically significant along with the proper understanding to the 95%CI.</p></sec></sec><sec sec-type="results" id="hsr272406-sec-0100"><label>3</label><title>Results</title><sec id="hsr272406-sec-0110"><label>3.1</label><title>Search Results</title><p>Our initial search yielded a total of 263 papers from Medline (via PubMed), Embase, Cochrane, Scopus, Web of Science (WOS). Following duplicate removal, a total of 132 studies were filtered via title and abstract screening, leaving a total of 10 studies. The remaining 10 full texts were independently screened by the same reviewers. A total of 10 of the studies were deemed suitable as per our inclusion and exclusion criteria and were included in our analysis Figure <xref rid="hsr272406-fig-0001" ref-type="fig">1</xref>.</p><fig position="float" fig-type="Figure" id="hsr272406-fig-0001" orientation="portrait"><label>Figure 1</label><caption><p>Flow chart of the selection process.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="HSR2-9-e72406-g002.jpg"/></fig></sec><sec id="hsr272406-sec-0120"><label>3.2</label><title>Study Characteristics</title><p>Seven hundred and seventy‐six patients across 10 studies were included in the analysis [<xref rid="hsr272406-bib-0006" ref-type="bibr">6</xref>, <xref rid="hsr272406-bib-0025" ref-type="bibr">25</xref>, <xref rid="hsr272406-bib-0026" ref-type="bibr">26</xref>, <xref rid="hsr272406-bib-0027" ref-type="bibr">27</xref>, <xref rid="hsr272406-bib-0028" ref-type="bibr">28</xref>, <xref rid="hsr272406-bib-0029" ref-type="bibr">29</xref>, <xref rid="hsr272406-bib-0030" ref-type="bibr">30</xref>, <xref rid="hsr272406-bib-0031" ref-type="bibr">31</xref>, <xref rid="hsr272406-bib-0032" ref-type="bibr">32</xref>, <xref rid="hsr272406-bib-0033" ref-type="bibr">33</xref>]. Of the 776 patients, 448 were considered high expressors, and 319 were considered low expressors of COX‐2. Two of the included studies were conducted specifically in tongue squamous cell carcinoma, and eight studies in general oral squamous cell carcinoma. All studies detected COX2 expression in tissue samples utilizing immunohistochemistry, with most studies coming from Japan (<italic toggle="yes">n </italic>= 4), followed by Korea (<italic toggle="yes">n </italic>= 2), and then equal contributions from Sweden (<italic toggle="yes">n </italic>= 1), Iran (<italic toggle="yes">n </italic>= 1), Pakistan (<italic toggle="yes">n </italic>= 1), and India (<italic toggle="yes">n </italic>= 1). The study characteristics are summarized in Table <xref rid="hsr272406-tbl-0001" ref-type="table">1</xref>.</p><table-wrap position="float" id="hsr272406-tbl-0001" content-type="Table" orientation="portrait"><label>Table 1</label><caption><p>Characteristics of the included studies.</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="center" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" align="left" span="1"/><thead valign="bottom"><tr valign="bottom"><th rowspan="2" align="left" valign="bottom" colspan="1">Study</th><th rowspan="2" align="center" valign="bottom" colspan="1">Year</th><th rowspan="2" align="left" valign="bottom" colspan="1">Country</th><th rowspan="2" align="left" valign="bottom" colspan="1">Tumor type</th><th align="center" valign="bottom" rowspan="1" colspan="1">Number of participants</th><th colspan="2" style="border-bottom:solid 1px #000000" align="center" valign="bottom" rowspan="1">Cox 2</th><th align="center" valign="bottom" rowspan="1" colspan="1">Mean age (years)</th><th align="center" colspan="2" style="border-bottom:solid 1px #000000" valign="bottom" rowspan="1">Gender</th><th rowspan="2" align="center" valign="bottom" colspan="1">Folllow up (months)</th><th rowspan="2" align="left" valign="bottom" colspan="1">Detected method</th><th rowspan="2" align="center" valign="bottom" colspan="1">Conclusion</th></tr><tr style="border-bottom:solid 1px #000000"><th align="center" valign="bottom" rowspan="1" colspan="1">Case (control)</th><th align="center" valign="bottom" rowspan="1" colspan="1">High (<italic toggle="yes">n</italic>)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Low (<italic toggle="yes">n</italic>)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Mean (SD)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Males (<italic toggle="yes">n</italic>)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Females (<italic toggle="yes">n</italic>)</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Itoh</td><td align="center" valign="top" rowspan="1" colspan="1">2003</td><td align="left" valign="top" rowspan="1" colspan="1">Japan</td><td align="left" valign="top" rowspan="1" colspan="1">Oral squamous cell carcinoma</td><td align="center" valign="top" rowspan="1" colspan="1">72</td><td align="center" valign="top" rowspan="1" colspan="1">10</td><td align="center" valign="top" rowspan="1" colspan="1">62</td><td align="center" valign="top" rowspan="1" colspan="1">62.9 ± 13.0</td><td align="center" valign="top" rowspan="1" colspan="1">37</td><td align="center" valign="top" rowspan="1" colspan="1">35</td><td align="center" valign="top" rowspan="1" colspan="1">Median 58.5 (5–138)</td><td align="left" valign="top" rowspan="1" colspan="1">IHC</td><td align="left" valign="top" rowspan="1" colspan="1">In conclusion, our study provides evidence that COX‐2 is immunohistochemically expressed in SCCOCs and that COX‐2 overexpression can be a useful predictor for patient survival.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Cha</td><td align="center" valign="top" rowspan="1" colspan="1">2010</td><td align="left" valign="top" rowspan="1" colspan="1">South Korea</td><td align="left" valign="top" rowspan="1" colspan="1">Oral squamous cell carcinoma</td><td align="center" valign="top" rowspan="1" colspan="1">103</td><td align="center" valign="top" rowspan="1" colspan="1">43</td><td align="center" valign="top" rowspan="1" colspan="1">60</td><td align="center" valign="top" rowspan="1" colspan="1">&lt; 60 = 43, ≥ 60 = 60</td><td align="center" valign="top" rowspan="1" colspan="1">77</td><td align="center" valign="top" rowspan="1" colspan="1">26</td><td align="center" valign="top" rowspan="1" colspan="1">43 (range, 1–60).</td><td align="left" valign="top" rowspan="1" colspan="1">IHC</td><td align="left" valign="top" rowspan="1" colspan="1">Our results indicate that the cytoplasmic expression of HuR is associated with COX‐2 expression in OSCCs, and HuR can regulate COX‐2 expression in oral cancer cell lines.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Kim</td><td align="center" valign="top" rowspan="1" colspan="1">2011</td><td align="left" valign="top" rowspan="1" colspan="1">Korea</td><td align="left" valign="top" rowspan="1" colspan="1">Oral squamous cell carcinoma</td><td align="center" valign="top" rowspan="1" colspan="1">96</td><td align="center" valign="top" rowspan="1" colspan="1">37</td><td align="center" valign="top" rowspan="1" colspan="1">53</td><td align="center" valign="top" rowspan="1" colspan="1">&lt; 60 = 42, ≥ 60 = 54</td><td align="center" valign="top" rowspan="1" colspan="1">71</td><td align="center" valign="top" rowspan="1" colspan="1">25</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="left" valign="top" rowspan="1" colspan="1">IHC</td><td align="left" valign="top" rowspan="1" colspan="1">Survival in OSCC can be predicted more accurately by using biomarkers. The constructed nomogram predicted survival after treatment for an individual patient with OSCC, and it can be practically used as a tool to help decide which adjuvant treatment is most appropriate.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Ryott</td><td align="center" valign="top" rowspan="1" colspan="1">2011</td><td align="left" valign="top" rowspan="1" colspan="1">Sweden</td><td align="left" valign="top" rowspan="1" colspan="1">Oral tongue squamous cell carcinoma</td><td align="center" valign="top" rowspan="1" colspan="1">76</td><td align="center" valign="top" rowspan="1" colspan="1">54</td><td align="center" valign="top" rowspan="1" colspan="1">22</td><td align="center" valign="top" rowspan="1" colspan="1">20–39 = 10, 40–59 = 31, &gt; 60 = 35</td><td align="center" valign="top" rowspan="1" colspan="1">44</td><td align="center" valign="top" rowspan="1" colspan="1">32</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="left" valign="top" rowspan="1" colspan="1">IHC</td><td align="left" valign="top" rowspan="1" colspan="1">Cyclooxygenase‐2 expression has limited prognostic value in OTSCC.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Kono</td><td align="center" valign="top" rowspan="1" colspan="1">2013</td><td align="left" valign="top" rowspan="1" colspan="1">Japan</td><td align="left" valign="top" rowspan="1" colspan="1">Oral squamous cell carcinoma</td><td align="center" valign="top" rowspan="1" colspan="1">60</td><td align="center" valign="top" rowspan="1" colspan="1">40</td><td align="center" valign="top" rowspan="1" colspan="1">20</td><td align="center" valign="top" rowspan="1" colspan="1">Median 64.11 (range, 29–91 years)</td><td align="center" valign="top" rowspan="1" colspan="1">37</td><td align="center" valign="top" rowspan="1" colspan="1">23</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="left" valign="top" rowspan="1" colspan="1">IHC</td><td align="left" valign="top" rowspan="1" colspan="1">This study showed that VEGF‐C expression was upregulated by COX‐2 in OSCC. High VEGF‐C expression appears to promote peritumoral lymphangiogenesis. These data indicated that lymph node metastasis is promoted by COX‐2 and VEGF‐C in OSCC.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Morita</td><td align="center" valign="top" rowspan="1" colspan="1">2014</td><td align="left" valign="top" rowspan="1" colspan="1">Japan</td><td align="left" valign="top" rowspan="1" colspan="1">Oral tongue squamous cell carcinoma</td><td align="center" valign="top" rowspan="1" colspan="1">40</td><td align="center" valign="top" rowspan="1" colspan="1">18</td><td align="center" valign="top" rowspan="1" colspan="1">22</td><td align="center" valign="top" rowspan="1" colspan="1">67.2 ± 12.0</td><td align="center" valign="top" rowspan="1" colspan="1">26</td><td align="center" valign="top" rowspan="1" colspan="1">14</td><td align="center" valign="top" rowspan="1" colspan="1">Median 48 (7– 60).</td><td align="left" valign="top" rowspan="1" colspan="1">IHC</td><td align="left" valign="top" rowspan="1" colspan="1">Our retrospective study found a strong correlation between the coexpression of COX‐2 and VEGF‐C and the presence of lymphangiogenesis and lymph node metastasis in oral tongue carcinoma. Tongue tumors coexpressing COX‐2 and VEGF‐C showed increased lymphangiogenesis and lymph node metastases associated with poor survival. These results suggest that COX‐2 in conjunction with VEGF‐C would be a useful prognostic marker in patients with oral tongue cancer.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Byatnal</td><td align="center" valign="top" rowspan="1" colspan="1">2015</td><td align="left" valign="top" rowspan="1" colspan="1">India</td><td align="left" valign="top" rowspan="1" colspan="1">Oral squamous cell carcinoma</td><td align="center" valign="top" rowspan="1" colspan="1">75</td><td align="center" valign="top" rowspan="1" colspan="1">58</td><td align="center" valign="top" rowspan="1" colspan="1">17</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="left" valign="top" rowspan="1" colspan="1">IHC</td><td align="left" valign="top" rowspan="1" colspan="1">Expression of COX‐2 exhibited a significant relationship with invasive front tumor grade and lymph node metastasis. It was also appreciated to be closely associated with the recurrence of the tumor and the patient's survival.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Baghban</td><td align="center" valign="top" rowspan="1" colspan="1">2016</td><td align="left" valign="top" rowspan="1" colspan="1">Iran</td><td align="left" valign="top" rowspan="1" colspan="1">Oral squamous cell carcinoma</td><td align="center" valign="top" rowspan="1" colspan="1">57</td><td align="center" valign="top" rowspan="1" colspan="1">52</td><td align="center" valign="top" rowspan="1" colspan="1">5</td><td align="center" valign="top" rowspan="1" colspan="1">62.89 ± 14.16</td><td align="center" valign="top" rowspan="1" colspan="1">27</td><td align="center" valign="top" rowspan="1" colspan="1">30</td><td align="center" valign="top" rowspan="1" colspan="1">Mean 29 (10–85)</td><td align="left" valign="top" rowspan="1" colspan="1">IHC</td><td align="left" valign="top" rowspan="1" colspan="1">The significant correlation of VEGF expression with COX‐2 expression and MCD may represent the roles of COX‐2 and MCD in tumor angiogenesis by modulating VEGF production. However, VEGF, COX‐2, and MCD are not useful indicators to predict prognosis in OSCC. Nevertheless, the mode of invasion can be considered as an independent prognostic factor in OSCC patients.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Sano</td><td align="center" valign="top" rowspan="1" colspan="1">2017</td><td align="left" valign="top" rowspan="1" colspan="1">Japan</td><td align="left" valign="top" rowspan="1" colspan="1">Oral squamous cell carcinoma</td><td align="center" valign="top" rowspan="1" colspan="1">97</td><td align="center" valign="top" rowspan="1" colspan="1">81</td><td align="center" valign="top" rowspan="1" colspan="1">13</td><td align="center" valign="top" rowspan="1" colspan="1">67</td><td align="center" valign="top" rowspan="1" colspan="1">66</td><td align="center" valign="top" rowspan="1" colspan="1">28</td><td align="center" valign="top" rowspan="1" colspan="1">Mean 41.6 (3.0–107.6)</td><td align="left" valign="top" rowspan="1" colspan="1">IHC</td><td align="left" valign="top" rowspan="1" colspan="1">Pretreatment inflammatory markers are useful as prognostic factors in advanced OSCC. Our study suggests that local COX2 may be affected by systemic inflammation and that the prognostic impact of COX2 expression depends on host factors and tumor characteristics.</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Ali</td><td align="center" valign="top" rowspan="1" colspan="1">2018</td><td align="left" valign="top" rowspan="1" colspan="1">Pakistan</td><td align="left" valign="top" rowspan="1" colspan="1">Oral squamous cell carcinoma</td><td align="center" valign="top" rowspan="1" colspan="1">100</td><td align="center" valign="top" rowspan="1" colspan="1">55</td><td align="center" valign="top" rowspan="1" colspan="1">45</td><td align="center" valign="top" rowspan="1" colspan="1">52.73 ± 12.68</td><td align="center" valign="top" rowspan="1" colspan="1">57</td><td align="center" valign="top" rowspan="1" colspan="1">43</td><td align="center" valign="top" rowspan="1" colspan="1">N/A</td><td align="left" valign="top" rowspan="1" colspan="1">IHC</td><td align="left" valign="top" rowspan="1" colspan="1">Expression of cyclooxygenase‐2 is associated with poorer overall survival and higher rates of recurrence in oral squamous cell carcinoma patients.</td></tr></tbody></table><permissions><copyright-holder>John Wiley &amp; Sons, Ltd.</copyright-holder></permissions></table-wrap></sec><sec id="hsr272406-sec-0130"><label>3.3</label><title>COX2 and Survival</title><p>Our pooled survival analysis included a total of eight studies for OS and three studies for PFS. A statistically significant association between higher levels of COX2 and worse OS was evident (HR = 1.49 95% CI [1.06, 2.10]; <italic toggle="yes">I</italic>
+<sup>2</sup> = 21%, <italic toggle="yes">τ</italic>
+<sup>2 </sup>= 0.05, <italic toggle="yes">p</italic>= 0.02) (Figure <xref rid="hsr272406-fig-0002" ref-type="fig">2</xref>). Furthermore, increased levels of COX2 were also linked to worse PFS (HR = 1.86 95%CI [1.21,2.87]; <italic toggle="yes">I</italic>
+<sup>2</sup> = 3%, <italic toggle="yes">τ</italic>
+<sup>2 </sup>= 0.01, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="hsr272406-fig-0003" ref-type="fig">3</xref>). A random‐effects model was employed to deal with any heterogeneity present. No significant publication bias was present in the funnel plots (Figure <xref rid="hsr272406-suppl-0001" ref-type="supplementary-material">S1</xref>).</p><fig position="float" fig-type="Figure" id="hsr272406-fig-0002" orientation="portrait"><label>Figure 2</label><caption><p>Pooled meta‐analysis for the association between the expression of COX‐2 and overall survival.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="HSR2-9-e72406-g001.jpg"/></fig><fig position="float" fig-type="Figure" id="hsr272406-fig-0003" orientation="portrait"><label>Figure 3</label><caption><p>Pooled meta‐analysis for the association between the expression of COX‐2 and PFS.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="HSR2-9-e72406-g003.jpg"/></fig></sec><sec id="hsr272406-sec-0140"><label>3.4</label><title>COX2 and Tumor Stage</title><p>In terms of advanced staging, our analysis covered TNM staging, T staging, and lymph node metastasis. A significant harmful association between increased COX2 expression and worse T staging was discovered (OR = 2.91 95% CI [1.52,5.55]; <italic toggle="yes">I</italic>
+<sup>2</sup> = 0%, <italic toggle="yes">τ</italic>
+<sup>2</sup> = 0.00, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="hsr272406-suppl-0001" ref-type="supplementary-material">S2</xref>). Moreover, our pooled analysis also revealed that higher levels of COX2 correlate to worse TNM staging (OR = 2.68 95%CI [1.43, 5.02]; <italic toggle="yes">I</italic>
+<sup>2</sup> = 0%, <italic toggle="yes">τ</italic>
+<sup>2</sup> = 0.00, <italic toggle="yes">p</italic> &lt; 0.01) (Figure <xref rid="hsr272406-suppl-0001" ref-type="supplementary-material">S3</xref>). Lastly, an insignificant association between COX2 expression and increased lymph node metastasis was discovered (OR = 2.16 95%CI [0.71, 6.57]; <italic toggle="yes">I</italic>
+<sup>2</sup> = 68%, <italic toggle="yes">τ</italic>
+<sup>2</sup> = 0.65, <italic toggle="yes">p</italic> = 0.17) (Figure <xref rid="hsr272406-suppl-0001" ref-type="supplementary-material">S4</xref>). All funnel plots are shown in Figure <xref rid="hsr272406-suppl-0001" ref-type="supplementary-material">S1</xref>.</p></sec><sec id="hsr272406-sec-0150"><label>3.5</label><title>Quality Assessment</title><p>We performed a quality assessment for the 10 cohort studies. Following the QUIPS Quality Assessment Tool guidelines, five studies were considered of good quality, four were of moderate quality, and one was of low quality due to bias in participation. The details of the quality assessment are summarized in Figure <xref rid="hsr272406-suppl-0001" ref-type="supplementary-material">S5</xref>.</p></sec></sec><sec sec-type="discussion" id="hsr272406-sec-0160"><label>4</label><title>Discussion</title><p>COX‐2 significantly affects the prognosis and outcome of OSCC, and its expression is closely linked to tumor progression and patient survival. COX‐2 overexpression is associated with increased tumor aggressiveness, poor prognosis, and lower survival rates in patients with OSCC. Elevated COX‐2 levels in OSCC tissues enhance angiogenesis, immune evasion, and resistance to apoptosis, thus boosting tumor invasiveness. For example, Kekatpure et al. [<xref rid="hsr272406-bib-0034" ref-type="bibr">34</xref>] found that high intratumoral COX‐2 expression correlated with poorer outcomes in patients who had not received chemotherapy, whereas those with high COX‐2 post‐chemotherapy showed better prognosis, indicating a complex relationship between COX‐2 expression and therapeutic response. Additionally, COX‐2‐driven pathways, including their interactions with prostaglandin E2 (PGE2), suggest that COX‐2 inhibitors could serve as potential therapeutic options to improve OSCC outcomes by modulating these pathways [<xref rid="hsr272406-bib-0034" ref-type="bibr">34</xref>]. Our findings support these insights, showing a statistically significant association between higher COX‐2 levels and worse OS and PFS, indicating a negative impact of COX‐2 overexpression on OSCC prognosis.</p><p>Comparative studies have consistently shown a significant association between COX‐2 expression and survival outcomes in OSCC. Our pooled survival analysis, encompassing eight studies on OS and three on PFS, demonstrated a statistically significant association between higher COX‐2 levels and worse survival rates, suggesting that COX‐2 is a strong prognostic factor for poor survival in OSCC. Sano et al. [<xref rid="hsr272406-bib-0031" ref-type="bibr">31</xref>] examined the relationship between systemic inflammatory markers and COX‐2 expression and found that high neutrophil‐lymphocyte and platelet‐lymphocyte ratios indicated worse survival in OSCC patients with high COX‐2 expression, underscoring COX‐2's role in tumor biology and systemic inflammation [<xref rid="hsr272406-bib-0031" ref-type="bibr">31</xref>, <xref rid="hsr272406-bib-0035" ref-type="bibr">35</xref>]. This highlights the correlation between COX‐2 overexpression and advanced disease stages, and its potential utility in the staging and prognosis of OSCC.</p><p>Research has shown that elevated COX‐2 levels are associated with advanced tumor stages and poor survival rates in patients with OSCC. Our analysis found significant correlations between COX‐2 expression and worse T and TNM staging, highlighting its potential utility in OSCC staging. Byatnal et al. [<xref rid="hsr272406-bib-0032" ref-type="bibr">32</xref>] reported that COX‐2 overexpression was significantly associated with lymph node involvement, tumor recurrence, and poor patient survival, making it a valuable prognostic biomarker. These results underscore COX‐2's potential as a prognostic factor and therapeutic target, as COX‐2 inhibitors could improve survival by reducing tumor progression and treatment resistance [<xref rid="hsr272406-bib-0032" ref-type="bibr">32</xref>, <xref rid="hsr272406-bib-0035" ref-type="bibr">35</xref>]. Our pooled analysis supports the finding that increased COX‐2 levels correlate with worse TNM staging and advanced T staging, emphasizing its impact on OSCC progression and staging.</p><p>Targeting COX‐2 in OSCC is promising because of its role in promoting tumorigenesis, metastasis, and resistance to therapy. COX‐2 inhibitors, such as celecoxib, have shown potential in reducing tumor growth, especially when combined with other therapies. Studies have indicated that COX‐2 overexpression enhances cancer cell migration, invasion, and resistance to treatments such as radiation, underscoring its role in tumor progression. Rahman et al. [<xref rid="hsr272406-bib-0036" ref-type="bibr">36</xref>] found that inhibiting COX‐2 activity reduced cell migration in OSCC, and that lysophosphatidic acid (LPA) increased COX‐2 expression, suggesting that the LPA‐COX‐2 axis is a therapeutic target [<xref rid="hsr272406-bib-0036" ref-type="bibr">36</xref>, <xref rid="hsr272406-bib-0037" ref-type="bibr">37</xref>]. Our findings on the association between COX‐2 and poor PFS and OS further support the exploration of COX‐2 as a therapeutic target to improve treatment outcomes in OSCC.</p><p>The study of COX‐2 expression in OSCC faces several challenges, including methodological variability, limited sample sizes, and inconsistent data interpretation. Key issues involve different techniques such as immunohistochemistry and PCR, resulting in inconsistent findings [<xref rid="hsr272406-bib-0035" ref-type="bibr">35</xref>]. Additionally, the absence of large‐scale, long‐term prospective studies hinders the validation of COX‐2 as a reliable prognostic biomarker and therapeutic target for OSCC [<xref rid="hsr272406-bib-0032" ref-type="bibr">32</xref>]. Our analysis highlights the need for comprehensive and standardized research to conclusively determine COX‐2's role.</p><p>Future studies on COX‐2 as a therapeutic target for OSCC will likely aim to enhance its efficacy and reduce the side effects of COX‐2 inhibitors. Wang et al. [<xref rid="hsr272406-bib-0038" ref-type="bibr">38</xref>] investigated a novel near‐infrared (NIR) celecoxib‐based probe, which showed selective binding to COX‐2 overexpressing cancer cells, indicating its potential for bioimaging and targeted therapy. Balancing the benefits of COX‐2 inhibition while managing risks, particularly in long‐term treatment, remains challenging. These findings align with our findings on COX‐2's significant impact on disease progression and survival, underscoring the need for further exploration of COX‐2‐targeted therapies in OSCC.</p></sec><sec sec-type="conclusions" id="hsr272406-sec-0170"><label>5</label><title>Conclusion</title><p>In conclusion, this meta‐analysis demonstrates a strong association between elevated COX‐2 expression and worse survival outcomes, including overall survival and progression‐free survival, in oral squamous cell carcinoma (OSCC). COX‐2 overexpression also correlates with advanced tumor staging. These findings suggest COX‐2 as a significant prognostic biomarker in OSCC. Further large‐scale studies are needed to validate COX‐2's role in tumor progression and explore the efficacy of COX‐2 inhibitors in improving patient outcomes.</p></sec><sec id="hsr272406-sec-0180"><title>Author Contributions</title><p>Conceptualization by Hanan M. Qasem, Ramez M. Odat, Ayham Mohammad Hussein, Rukesh Yadav, Hritvik Jain, and Raveena Kelkar. Methodology by Hanan M. Qasem, Ramez M. Odat, Sakhr Alshwayyat, Majed Ghlailat, Lujain Al Amayreh, Rukesh Yadav, Hritvik Jain, and Raveena Kelkar. Software by Ramez M. Odat, Ayham Mohammad Hussein, Bara M. Hammadeh, Dang Nguyen, and Hritvik Jain. Data curation by Sakhr Alshwayyat, Osama M. Younis, Ayham Mohammad Hussein, and Bara M. Hammadeh. Investigation by Hanan M. Qasem, Jehad A. Yasin, Majed Ghlailat, Lujain Al Amayreh, Hritvik Jain, and Raveena Kelkar. Validation by Hanan M. Qasem, Ramez M. Odat, Jehad A. Yasin, Ayham Mohammad Hussein, Bara M. Hammadeh, Majed Ghlailat, and Raveena Kelkar. Formal analysis by Ramez M. Odat, Osama M. Younis, Jehad A. Yasin, Bara M. Hammadeh, Dang Nguyen, and Hritvik Jain. Supervision by Sakhr Alshwayyat, Osama M. Younis, and Bara M. Hammadeh. Visualization by Jehad A. Yasin, Rukesh Yadav, and Raveena Kelkar. Project administration by Ramez M. Odat, Sakhr Alshwayyat, Bara M. Hammadeh, and Dang Nguyen. Resources by Osama M. Younis and Jehad A. Yasin. Writing – original draft by Hanan M. Qasem, Ramez M. Odat, Sakhr Alshwayyat, Osama M. Younis, Jehad A. Yasin, Ayham Mohammad Hussein, Bara M. Hammadeh, Majed Ghlailat, Lujain Al Amayreh, Rukesh Yadav, Dang Nguyen, Hritvik Jain, and Raveena Kelkar. Writing – review and editing by Hanan M. Qasem, Ramez M. Odat, Sakhr Alshwayyat, Osama M. Younis, Jehad A. Yasin, Ayham Mohammad Hussein, Bara M. Hammadeh, Majed Ghlailat, Lujain Al Amayreh, Rukesh Yadav, Dang Nguyen, Hritvik Jain, and Raveena Kelkar.</p></sec><sec id="hsr272406-sec-0200"><title>Funding</title><p>The authors have nothing to report.</p></sec><sec id="hsr272406-sec-0210"><title>Ethics Statement</title><p>The authors have nothing to report.</p></sec><sec sec-type="COI-statement" id="hsr272406-sec-0220"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec id="hsr272406-sec-0250"><title>Transparency Statement</title><p>The corresponding author, Rukesh Yadav, affirms that this manuscript is an honest, accurate, and transparent account of the study being reported; that no important aspects of the study have been omitted; and that any discrepancies from the study as planned (and, if relevant, registered) have been explained.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="hsr272406-suppl-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>Supporting File</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="HSR2-9-e72406-s001.docx" position="float" orientation="portrait"/></supplementary-material></sec></body><back><ack id="hsr272406-sec-0190"><title>Acknowledgments</title><p>All authors have read and approved the final version of the manuscript. Rukesh Yadav had full access to all of the data in this study and takes complete responsibility for the integrity of the data and the accuracy of the data analysis.</p></ack><sec sec-type="data-availability" id="hsr272406-sec-0240"><title>Data Availability Statement</title><p>The data generated in this study are available upon request from the corresponding author.</p></sec><ref-list content-type="cited-references" id="hsr272406-bibl-0001"><title>References</title><ref id="hsr272406-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="hsr272406-cit-0001">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Reichal</surname>
+</string-name> and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Prethipa</surname>
+</string-name>, “<article-title>A Comprehensive Retrospective Institutional Study for Decoding Oral Squamous Cell Carcinoma</article-title>,” <source>Cureus</source>
+<volume>16</volume>, no. <issue>2</issue> (February <year>2024</year>): <elocation-id>e54001</elocation-id>.<pub-id pub-id-type="pmid">38476798</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.7759/cureus.54001</pub-id><pub-id pub-id-type="pmcid">PMC10928460</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="hsr272406-cit-0002">
+<string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Mohamad</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. D. E.</given-names>
+<surname>Glaun</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Prabhash</surname>
+</string-name>, et al., “<article-title>Current Treatment Strategies and Risk Stratification for Oral Carcinoma</article-title>,” <source>American Society of Clinical Oncology Educational Book</source>
+<volume>43</volume> (May <year>2023</year>): <elocation-id>e389810</elocation-id>.<pub-id pub-id-type="pmid">37200591</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1200/EDBK_389810</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="hsr272406-cit-0003">
+<string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Rai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Abdo</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D. K.</given-names>
+<surname>Agrawal</surname>
+</string-name>, “<article-title>Biomarkers for Early Detection, Prognosis, and Therapeutics of Esophageal Cancers</article-title>,” <source>International Journal of Molecular Sciences</source>
+<volume>24</volume>, no. <issue>4</issue> (February <year>2023</year>): <fpage>3316</fpage>.<pub-id pub-id-type="pmid">36834728</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/ijms24043316</pub-id><pub-id pub-id-type="pmcid">PMC9968115</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="hsr272406-cit-0004">
+<string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Pannone</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Bufo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. F.</given-names>
+<surname>Caiaffa</surname>
+</string-name>, et al., “<article-title>Cyclooxygenase‐2 Expression in Oral Squamous Cell Carcinoma</article-title>,” <source>International Journal of Immunopathology and Pharmacology</source>
+<volume>17</volume>, no. <issue>3</issue> (September <year>2004</year>): <fpage>273</fpage>–<lpage>282</lpage>.<pub-id pub-id-type="pmid">15461861</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/039463200401700307</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="hsr272406-cit-0005">
+<string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Sobolewski</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Cerella</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Dicato</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Ghibelli</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Diederich</surname>
+</string-name>, “<article-title>The Role of Cyclooxygenase‐2 in Cell Proliferation and Cell Death in Human Malignancies</article-title>,” <source>International Journal of Cell Biology</source>
+<volume>2010</volume> (<year>2010</year>): <fpage>1</fpage>–<lpage>21</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1155/2010/215158</pub-id><pub-id pub-id-type="pmcid">PMC2841246</pub-id><pub-id pub-id-type="pmid">20339581</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="hsr272406-cit-0006">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Morita</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Morita</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Hata</surname>
+</string-name>, et al., “<article-title>Cyclooxygenase‐2 Expression Is Associated With Vascular Endothelial Growth Factor‐C and Lymph Node Metastasis in Human Oral Tongue Cancer</article-title>,” <source>Oral Surgery, Oral Medicine, Oral Pathology and Oral Radiology</source>
+<volume>117</volume>, no. <issue>4</issue> (April <year>2014</year>): <fpage>502</fpage>–<lpage>510</lpage>.<pub-id pub-id-type="pmid">24560404</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.oooo.2013.12.410</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="hsr272406-cit-0007">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Santoro</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Bufo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Russo</surname>
+</string-name>, et al., “<article-title>Expression and Clinical Implication of Cyclooxygenase‐2 and E‐Cadherin in Oral Squamous Cell Carcinomas</article-title>,” <source>Cancer Biology &amp; Therapy</source>
+<volume>21</volume>, no. <issue>8</issue> (August <year>2020</year>): <fpage>667</fpage>–<lpage>674</lpage>.<pub-id pub-id-type="pmid">26218314</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/15384047.2015.1071741</pub-id><pub-id pub-id-type="pmcid">PMC7537792</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="hsr272406-cit-0008">
+<string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Gómez‐Valenzuela</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Escobar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Pérez‐Tomás</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>V. P.</given-names>
+<surname>Montecinos</surname>
+</string-name>, “<article-title>The Inflammatory Profile of the Tumor Microenvironment, Orchestrated by Cyclooxygenase‐2, Promotes Epithelial‐Mesenchymal Transition</article-title>,” <source>Frontiers in Oncology</source>
+<volume>11</volume> (June <year>2021</year>): <elocation-id>686792</elocation-id>.<pub-id pub-id-type="pmid">34178680</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fonc.2021.686792</pub-id><pub-id pub-id-type="pmcid">PMC8222670</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="hsr272406-cit-0009">
+<string-name name-style="western">
+<given-names>D. G.</given-names>
+<surname>Menter</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. L.</given-names>
+<surname>Schilsky</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R. N.</given-names>
+<surname>DuBois</surname>
+</string-name>, “<article-title>Cyclooxygenase‐2 and Cancer Treatment: Understanding the Risk Should Be Worth the Reward</article-title>,” <source>Clinical Cancer Research</source>
+<volume>16</volume>, no. <issue>5</issue> (March <year>2010</year>): <fpage>1384</fpage>–<lpage>1390</lpage>.<pub-id pub-id-type="pmid">20179228</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1158/1078-0432.CCR-09-0788</pub-id><pub-id pub-id-type="pmcid">PMC4307592</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="hsr272406-cit-0010">
+<string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Desai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Prickril</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Rasooly</surname>
+</string-name>, “<article-title>Mechanisms of Phytonutrient Modulation of Cyclooxygenase‐2 (COX‐2) and Inflammation Related to Cancer</article-title>,” <source>Nutrition and Cancer</source>
+<volume>70</volume>, no. <issue>3</issue> (April <year>2018</year>): <fpage>350</fpage>–<lpage>375</lpage>.<pub-id pub-id-type="pmid">29578814</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/01635581.2018.1446091</pub-id><pub-id pub-id-type="pmcid">PMC6309701</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="hsr272406-cit-0011">
+<string-name name-style="western">
+<given-names>C. S.</given-names>
+<surname>Williams</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Mann</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R. N.</given-names>
+<surname>DuBois</surname>
+</string-name>, “<article-title>The Role of Cyclooxygenases in Inflammation, Cancer, and Development</article-title>,” <source>Oncogene</source>
+<volume>18</volume>, no. <issue>55</issue> (December <year>1999</year>): <fpage>7908</fpage>–<lpage>7916</lpage>.<pub-id pub-id-type="pmid">10630643</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/sj.onc.1203286</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="hsr272406-cit-0012">
+<string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Bartchewsky</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Martini</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Masiero</surname>
+</string-name>, et al., “<article-title>Effect of <italic toggle="yes">Helicobacter pylori</italic> Infection on IL‐8, IL‐1β and COX‐2 Expression in Patients With Chronic Gastritis and Gastric Cancer</article-title>,” <source>Scandinavian Journal of Gastroenterology</source>
+<volume>44</volume>, no. <issue>2</issue> (<year>2009</year>): <fpage>153</fpage>–<lpage>161</lpage>.<pub-id pub-id-type="pmid">18985541</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/00365520802530853</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="hsr272406-cit-0013">
+<string-name name-style="western">
+<given-names>R. E.</given-names>
+<surname>Harris</surname>
+</string-name>, “<article-title>Cyclooxygenase‐2 (Cox‐2) Blockade in the Chemoprevention of Cancers of the Colon, Breast, Prostate, and Lung</article-title>,” <source>Inflammopharmacology</source>
+<volume>17</volume>, no. <issue>2</issue> (April <year>2009</year>): <fpage>55</fpage>–<lpage>67</lpage>.<pub-id pub-id-type="pmid">19340409</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10787-009-8049-8</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="hsr272406-cit-0014">
+<string-name name-style="western">
+<given-names>Y. Y.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. J.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y. K.</given-names>
+<surname>Kim</surname>
+</string-name>, et al., “<article-title>Anti‐Cancer Effects of Celecoxib in Head and Neck Carcinoma</article-title>,” <source>Molecules and Cells</source>
+<volume>29</volume>, no. <issue>2</issue> (February <year>2010</year>): <fpage>185</fpage>–<lpage>194</lpage>.<pub-id pub-id-type="pmid">20082220</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s10059-010-0026-y</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="hsr272406-cit-0015">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Looby</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. M.</given-names>
+<surname>Abdel‐Latif</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Athié‐Morales</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Duggan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Long</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Kelleher</surname>
+</string-name>, “<article-title>Deoxycholate Induces COX‐2 Expression via Erk1/2‐, p38‐MAPK and AP‐1‐Dependent Mechanisms in Esophageal Cancer Cells</article-title>,” <source>BMC Cancer</source>
+<volume>9</volume> (June <year>2009</year>): <fpage>190</fpage>.<pub-id pub-id-type="pmid">19534809</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/1471-2407-9-190</pub-id><pub-id pub-id-type="pmcid">PMC2704223</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="hsr272406-cit-0016">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Ratnasinghe</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Tangrea</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Roth</surname>
+</string-name>, et al., “<article-title>Expression of Cyclooxygenase‐2 in Human Squamous Cell Carcinoma of the Esophagus; an Immunohistochemical Survey</article-title>,” <source>Anticancer Research</source>
+<volume>19</volume>, no. <issue>1A</issue> (<year>1999</year>): <fpage>171</fpage>–<lpage>174</lpage>.<pub-id pub-id-type="pmid">10226539</pub-id>
+</mixed-citation></ref><ref id="hsr272406-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="hsr272406-cit-0017">
+<string-name name-style="western">
+<given-names>O. N.</given-names>
+<surname>Tucker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. J.</given-names>
+<surname>Dannenberg</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. K.</given-names>
+<surname>Yang</surname>
+</string-name>, et al., “<article-title>Cyclooxygenase‐2 Expression Is Up‐Regulated in Human Pancreatic Cancer</article-title>,” <source>Cancer Research</source>
+<volume>59</volume>, no. <issue>5</issue> (March <year>1999</year>): <fpage>987</fpage>–<lpage>990</lpage>.<pub-id pub-id-type="pmid">10070951</pub-id>
+</mixed-citation></ref><ref id="hsr272406-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="hsr272406-cit-0018">
+<string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. K. L.</given-names>
+<surname>Colby</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. C.</given-names>
+<surname>Rengel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Fischer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. K.</given-names>
+<surname>Clinton</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R. D.</given-names>
+<surname>Klein</surname>
+</string-name>, “<article-title>Overexpression of Cyclooxygenase‐2 (COX‐2) in the Mouse Urinary Bladder Induces the Expression of Immune‐ and Cell Proliferation‐Related Genes</article-title>,” <source>Molecular Carcinogenesis</source>
+<volume>48</volume>, no. <issue>1</issue> (January <year>2009</year>): <fpage>1</fpage>–<lpage>13</lpage>.<pub-id pub-id-type="pmid">18444251</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/mc.20449</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="hsr272406-cit-0019">
+<string-name name-style="western">
+<given-names>C. X.</given-names>
+<surname>Ping</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z. S.</given-names>
+<surname>Tao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W. H.</given-names>
+<surname>yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. X.</given-names>
+<surname>Jun</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Z. Y.</given-names>
+<surname>Yuan</surname>
+</string-name>, “<article-title>Relationship Between the Expression of Cyclooxygenase‐2 and Microvessel Density in Oral Squamnous Cell Carcinoma</article-title>,” <source>Hua Xi Kou Qiang Yi Xue Za Zhi</source>
+<volume>23</volume>, no. <issue>5</issue> (<year>2005</year>): <fpage>431</fpage>–<lpage>433</lpage>.<pub-id pub-id-type="pmid">16285555</pub-id>
+</mixed-citation></ref><ref id="hsr272406-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="hsr272406-cit-0020">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Hassan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Watari</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>AbuAlmaaty</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Ohba</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Sakuragi</surname>
+</string-name>, “<article-title>Apoptosis and Molecular Targeting Therapy in Cancer</article-title>,” <source>BioMed Research International</source>
+<volume>2014</volume> (<year>2014</year>): <elocation-id>150845</elocation-id>.<pub-id pub-id-type="pmid">25013758</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1155/2014/150845</pub-id><pub-id pub-id-type="pmcid">PMC4075070</pub-id><related-article xmlns:xlink="http://www.w3.org/1999/xlink" related-article-type="retraction-forward" ext-link-type="pmc" xlink:href="PMC7477615"/></mixed-citation></ref><ref id="hsr272406-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="hsr272406-cit-0021">
+<string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Page</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>McKenzie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. M.</given-names>
+<surname>Bossuyt</surname>
+</string-name>, et al., “<article-title>The PRISMA 2020 Statement: An Updated Guideline for Reporting Systematic Reviews</article-title>,” <source>BMJ</source>
+<volume>88</volume> (March <year>2021</year>): <fpage>n71</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/bmj.n71</pub-id><pub-id pub-id-type="pmcid">PMC8005924</pub-id><pub-id pub-id-type="pmid">33782057</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="hsr272406-cit-0022">
+<string-name name-style="western">
+<given-names>J. A. A.</given-names>
+<surname>Damen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. G. M.</given-names>
+<surname>Moons</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>van Smeden</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Hooft</surname>
+</string-name>, “<article-title>How to Conduct a Systematic Review and Meta‐Analysis of Prognostic Model Studies</article-title>,” <source>Clinical Microbiology and Infection</source>
+<volume>29</volume>, no. <issue>4</issue> (April <year>2023</year>): <fpage>434</fpage>–<lpage>440</lpage>.<pub-id pub-id-type="pmid">35934199</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cmi.2022.07.019</pub-id><pub-id pub-id-type="pmcid">PMC9351211</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="hsr272406-cit-0023">
+<string-name name-style="western">
+<given-names>R. D.</given-names>
+<surname>Riley</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. G. M.</given-names>
+<surname>Moons</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. I. E.</given-names>
+<surname>Snell</surname>
+</string-name>, et al., “<article-title>A Guide to Systematic Review and Meta‐Analysis of Prognostic Factor Studies</article-title>,” <source>BMJ</source>
+<volume>364</volume> (January <year>2019</year>): <fpage>k4597</fpage>.<pub-id pub-id-type="pmid">30700442</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/bmj.k4597</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="hsr272406-cit-0024">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Assel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Sjoberg</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Elders</surname>
+</string-name>, et al., “<article-title>Guidelines for Reporting of Statistics for Clinical Research in Urology</article-title>,” <source>European Urology</source>
+<volume>75</volume>, no. <issue>3</issue> (March <year>2019</year>): <fpage>358</fpage>–<lpage>367</lpage>.<pub-id pub-id-type="pmid">30580902</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.eururo.2018.12.014</pub-id><pub-id pub-id-type="pmcid">PMC6391870</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="hsr272406-cit-0025">
+<string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Adnan Ali</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Naeem</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Mirza</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Zahid</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. S.</given-names>
+<surname>Awan</surname>
+</string-name>, “<article-title>Significance of Immunohistochemical Overexpression of Cyclooxygenase‐2 in Overall and Disease‐Free Survival of Oral Squamous Cell Carcinoma Patients</article-title>,” <source>Journal of Laryngology &amp; Otology</source>
+<volume>132</volume>, no. <issue>12</issue> (December <year>2018</year>): <fpage>1102</fpage>–<lpage>1109</lpage>.<pub-id pub-id-type="pmid">30674365</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1017/S0022215118002207</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="hsr272406-cit-0026">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Akbarzadeh Baghban</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Taghavi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Shahla</surname>
+</string-name>, “<article-title>Combined Analysis of Vascular Endothelial Growth Factor Expression With Cyclooxygenase‐2 and Mast Cell Density in Oral Squamous Cell Carcinoma</article-title>,” <source>Pathobiology</source>
+<volume>84</volume>, no. <issue>2</issue> (February <year>2017</year>): <fpage>80</fpage>–<lpage>86</lpage>.<pub-id pub-id-type="pmid">27577989</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1159/000447778</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="hsr272406-cit-0027">
+<string-name name-style="western">
+<given-names>K. Y.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Cha</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Zhang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>I. H.</given-names>
+<surname>Cha</surname>
+</string-name>, “<article-title>Significance of Molecular Markers in Survival Prediction of Oral Squamous Cell Carcinoma</article-title>,” <source>Head &amp; Neck</source>
+<volume>34</volume>, no. <issue>7</issue> (July <year>2012</year>): <fpage>929</fpage>–<lpage>936</lpage>.<pub-id pub-id-type="pmid">22128038</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/hed.21856</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="hsr272406-cit-0028">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Itoh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Matsui</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Furuta</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Takano</surname>
+</string-name>, “<article-title>Immunohistochemical Study on Overexpression of cyclooxygenase‐2 in Squamous Cell Carcinoma of the Oral Cavity: Its Importance as a Prognostic Predictor</article-title>,” <source>Oral Oncology</source>
+<volume>39</volume>, no. <issue>8</issue> (December <year>2003</year>): <fpage>829</fpage>–<lpage>835</lpage>.<pub-id pub-id-type="pmid">13679206</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s1368-8375(03)00105-2</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="hsr272406-cit-0029">
+<string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Cha</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Li</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>I. H.</given-names>
+<surname>Cha</surname>
+</string-name>, “<article-title>Association Between Expression of Embryonic Lethal Abnormal Vision‐Like Protein HuR and Cyclooxygenase‐2 in Oral Squamous Cell Carcinoma</article-title>,” <source>Head &amp; Neck</source>
+<volume>33</volume>, no. <issue>5</issue> (May <year>2011</year>): <fpage>627</fpage>–<lpage>637</lpage>.<pub-id pub-id-type="pmid">20960565</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/hed.21507</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="hsr272406-cit-0030">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Ryott</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Marklund</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Wangsa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Elmberger</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Munck‐Wikland</surname>
+</string-name>, “<article-title>Cyclooxygenase‐2 Expression in Oral Tongue Squamous Cell Carcinoma</article-title>,” <source>Journal of Oral Pathology &amp; Medicine</source>
+<volume>40</volume>, no. <issue>5</issue> (May <year>2011</year>): <fpage>385</fpage>–<lpage>389</lpage>.<pub-id pub-id-type="pmid">21481000</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/j.1600-0714.2010.00992.x</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="hsr272406-cit-0031">
+<string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Sano</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Kogashiwa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Araki</surname>
+</string-name>, et al., “<article-title>Correlation of Inflammatory Markers, Survival, and COX2 Expression in Oral Cancer and Implications for Prognosis</article-title>,” <source>Otolaryngology–Head and Neck Surgery</source>
+<volume>158</volume>, no. <issue>4</issue> (April <year>2018</year>): <fpage>667</fpage>–<lpage>676</lpage>.<pub-id pub-id-type="pmid">29359615</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/0194599817745284</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="hsr272406-cit-0032">
+<string-name name-style="western">
+<given-names>A. A.</given-names>
+<surname>Byatnal</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Byatnal</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Sen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Guddattu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. C.</given-names>
+<surname>Solomon</surname>
+</string-name>, “<article-title>Cyclooxygenase‐2—An Imperative Prognostic Biomarker in Oral Squamous Cell Carcinoma—An Immunohistochemical Study</article-title>,” <source>Pathology &amp; Oncology Research</source>
+<volume>21</volume>, no. <issue>4</issue> (September <year>2015</year>): <fpage>1123</fpage>–<lpage>1131</lpage>.<pub-id pub-id-type="pmid">25962348</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s12253-015-9940-9</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="hsr272406-cit-0033">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Kono</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Watanabe</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Abukawa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>Hasegawa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Satomi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Chikazu</surname>
+</string-name>, “<article-title>Cyclo‐Oxygenase‐2 Expression Is Associated With Vascular Endothelial Growth Factor C Expression and Lymph Node Metastasis in Oral Squamous Cell Carcinoma</article-title>,” <source>Journal of Oral and Maxillofacial Surgery</source>
+<volume>71</volume>, no. <issue>10</issue> (October <year>2013</year>): <fpage>1694</fpage>–<lpage>1702</lpage>.<pub-id pub-id-type="pmid">23809761</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.joms.2013.04.015</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="hsr272406-cit-0034">
+<string-name name-style="western">
+<given-names>V. D.</given-names>
+<surname>Kekatpure</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Singh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Selvam</surname>
+</string-name>, et al., “<article-title>Factors Predicting Outcome After Salvage Treatment for Stage IV Oral Squamous Cell Carcinoma: Evidence of the Potential Importance of the Cyclooxygenase‐2‐Prostaglandin E2 Pathway</article-title>,” <source>Head &amp; Neck</source>
+<volume>37</volume>, no. <issue>8</issue> (<year>2015</year>): <fpage>1142</fpage>–<lpage>1149</lpage>.<pub-id pub-id-type="pmid">24771596</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/hed.23721</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="hsr272406-cit-0035">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Jia</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Guo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Ren</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Hu</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Xie</surname>
+</string-name>, “<article-title>Clinicopathological and Prognostic Significance of Cyclooxygenase‐2 Expression in Head and Neck Cancer: A Meta‐Analysis</article-title>,” <source>Oncotarget</source>
+<volume>7</volume>, no. <issue>30</issue> (<year>2016</year>): <fpage>47265</fpage>–<lpage>47277</lpage>.<pub-id pub-id-type="pmid">27323811</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.18632/oncotarget.10059</pub-id><pub-id pub-id-type="pmcid">PMC5216940</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="hsr272406-cit-0036">
+<string-name name-style="western">
+<given-names>M. A.</given-names>
+<surname>Rahman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. L.</given-names>
+<surname>Tan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. P.</given-names>
+<surname>Johnson</surname>
+</string-name>, et al., “<article-title>Deregulation of Lysophosphatidic Acid Metabolism in Oral Cancer Promotes Cell Migration via the Up‐Regulation of COX‐2</article-title>,” <source>PeerJ</source>
+<volume>8</volume> (<year>2020</year>): <elocation-id>e10328</elocation-id>.<pub-id pub-id-type="pmid">33240646</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.7717/peerj.10328</pub-id><pub-id pub-id-type="pmcid">PMC7666559</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="hsr272406-cit-0037">
+<string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Gao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T. H.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. P.</given-names>
+<surname>Chen</surname>
+</string-name>, et al., “<article-title>Targeting COX‐2 Potently Inhibits Proliferation of Cancer Cells In Vivo but Not In Vitro in Cutaneous Squamous Cell Carcinoma</article-title>,” <source>Translational Cancer Research</source>
+<volume>10</volume>, no. <issue>5</issue> (<year>2021</year>): <fpage>2219</fpage>–<lpage>2228</lpage>.<pub-id pub-id-type="pmid">35116540</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.21037/tcr-20-3527</pub-id><pub-id pub-id-type="pmcid">PMC8797700</pub-id></mixed-citation></ref><ref id="hsr272406-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="hsr272406-cit-0038">
+<string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Xie</surname>
+</string-name>, et al., “<article-title>Design and Synthesis of a Novel NIR Celecoxib‐Based Fluorescent Probe for Cyclooxygenase‐2 Targeted Bioimaging in Tumor Cells</article-title>,” <source>Molecules</source>
+<volume>25</volume>, no. <issue>18</issue> (<year>2020</year>): <fpage>4037</fpage>.<pub-id pub-id-type="pmid">32899627</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/molecules25184037</pub-id><pub-id pub-id-type="pmcid">PMC7570625</pub-id></mixed-citation></ref></ref-list></back></article>

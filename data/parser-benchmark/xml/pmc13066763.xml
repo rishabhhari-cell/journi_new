@@ -1,0 +1,959 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="ece373399" xml:lang="en" article-type="review-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Ecol Evol</journal-id><journal-id journal-id-type="iso-abbrev">Ecol Evol</journal-id><journal-id journal-id-type="pmc-domain-id">1740</journal-id><journal-id journal-id-type="pmc-domain">ece</journal-id><journal-id journal-id-type="publisher-id">ECE3</journal-id><journal-title-group><journal-title>Ecology and Evolution</journal-title></journal-title-group><issn pub-type="epub">2045-7758</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC13066763</article-id><article-id pub-id-type="pmcid-ver">PMC13066763.1</article-id><article-id pub-id-type="pmcaid">13066763</article-id><article-id pub-id-type="pmcaiid">13066763</article-id><article-id pub-id-type="pmid">41970339</article-id><article-id pub-id-type="doi">10.1002/ece3.73399</article-id><article-id pub-id-type="publisher-id">ECE373399</article-id><article-id pub-id-type="other">ECE-2025-10-02650.R1</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="article-subject-classification"><subject>Applied Ecology</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Seed Ecology</subject></subj-group><subj-group subj-group-type="overline"><subject>Review Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Review Article</subject></subj-group></article-categories><title-group><article-title>Tree Seedling‐Recruitment in Temperate and Subtropical Species: A Systematic Narrative Review of Biotic and Abiotic Modifiers, and Experimental Treatments</article-title></title-group><contrib-group><contrib id="ece373399-cr-0001" contrib-type="author" corresp="yes"><name name-style="western"><surname>Bürli</surname><given-names initials="S">Sarah</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-5774-1331</contrib-id><xref rid="ece373399-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="ece373399-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><address><email>sarah.buerli@uni-graz.at</email></address></contrib><contrib id="ece373399-cr-0002" contrib-type="author"><name name-style="western"><surname>Buckley</surname><given-names initials="HL">Hannah L.</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-4170-080X</contrib-id><xref rid="ece373399-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="ece373399-cr-0003" contrib-type="author"><name name-style="western"><surname>Case</surname><given-names initials="BS">Bradley S.</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-4360-335X</contrib-id><xref rid="ece373399-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib></contrib-group><aff id="ece373399-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">School of Science | Te Kura Putaiao</named-content>
+<institution>Auckland University of Technology</institution>
+<city>Auckland</city>
+<country country="NZ">New Zealand</country>
+</aff><aff id="ece373399-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Botanical Garden, Institute for Biology</named-content>
+<institution>University of Graz</institution>
+<city>Graz</city>
+<country country="AT">Austria</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold>
+<break/>
+Sarah Bürli (<email>sarah.buerli@uni-graz.at</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>10</day><month>4</month><year>2026</year></pub-date><pub-date pub-type="collection"><month>4</month><year>2026</year></pub-date><volume>16</volume><issue seq="1710">4</issue><issue-id pub-id-type="pmc-issue-id">510811</issue-id><issue-id pub-id-type="doi">10.1002/ece3.v16.4</issue-id><elocation-id>e73399</elocation-id><history><date date-type="rev-recd"><day>05</day><month>3</month><year>2026</year></date><date date-type="received"><day>22</day><month>10</month><year>2025</year></date><date date-type="accepted"><day>23</day><month>3</month><year>2026</year></date></history><pub-history><event event-type="pmc-release"><date><day>10</day><month>04</month><year>2026</year></date></event><event event-type="pmc-live"><date><day>11</day><month>04</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-04-13 15:25:13.833"><day>13</day><month>04</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2026 The Author(s). <italic toggle="yes">Ecology and Evolution</italic> published by British Ecological Society and John Wiley &amp; Sons Ltd.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="ECE3-16-e73399.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:ECE3-16-e73399.pdf"/><abstract><title>ABSTRACT</title><p>Tree seedling recruitment, encompassing germination and growth, is crucial for natural and artificial propagation. Recruitment depends on the interplay of biotic and abiotic modifiers and can be influenced by experimental treatments and nursery methodologies, such as seed priming techniques and seedling treatments, which affect the success of forest restoration and nursery operations. Despite extensive research, the effects of natural modifiers and treatments across species remain poorly understood. We conducted a systematic review of 91 peer‐reviewed articles to identify patterns and knowledge gaps on the effects of natural modifiers, seed priming, and seedling treatments on seedling recruitment. Our Scopus search focused on experimental studies of tree germination and seedling fitness in temperate and subtropical species. Starting with 266 articles, we critically appraised them for internal validity using two sets of criteria and independent evaluators. Data on tree responses of studies with internal validity were categorized and analyzed narratively. Most reviewed studies (60.5%) focused on abiotic modifiers. Seedling‐focused studies (66.6%) outnumbered seed‐focused ones (33.4%). Overall, 42.2% of the studies reported nonsignificant effects. Fertilization, temperature, precipitation, pollution, and light availability had mostly nonsignificant effects on seedling recruitment. Soil moisture, snow cover, and soil scarification had positive effects, while shading negatively impacted seedlings. Mixed biotic and abiotic modifiers showed inconclusive results. Mycorrhizal associations promoted recruitment, while competition had mixed effects. Seed stratification was more effective than scarification or chemical treatments in promoting germination. To advance understanding of tree recruitment processes, we recommend studies on seedling treatments, mycorrhizal associations, fertilization, warm stratification, scarification, and chemical treatment across species. Frequent nonsignificant results suggest reassessing ecological hypotheses, incorporating context‐specific variables, and adopting more robust experimental designs. A trait‐based approach seems essential for identifying broader patterns and enhancing conservation and restoration outcomes.</p></abstract><abstract abstract-type="graphical"><p>Our systematic review of 91 peer‐reviewed articles on tree recruitment highlights a research bias toward seedling‐focused studies and reveals a high prevalence of nonsignificant results. We recommend targeted experimental work on seedling treatments, mycorrhizal associations, fertilization, warm stratification, scarification, and chemical treatments across a wide range of species. A trait‐based approach is essential to uncover generalizable patterns and improve the effectiveness of ecological restoration and conservation efforts.<boxed-text position="anchor" content-type="graphic" id="ece373399-blkfxd-0001" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="ECE3-16-e73399-g005.jpg"/></boxed-text>
+</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="ece373399-kwd-0001">biotic and abiotic modifiers</kwd><kwd id="ece373399-kwd-0002">germination</kwd><kwd id="ece373399-kwd-0003">seed priming techniques</kwd><kwd id="ece373399-kwd-0004">seedling recruitment</kwd><kwd id="ece373399-kwd-0005">seedling survival and growth</kwd><kwd id="ece373399-kwd-0006">temperate and subtropical tree species</kwd></kwd-group><funding-group><award-group id="funding-0001"><funding-source>
+<institution-wrap><institution>New Zealand Forest Service|Te Uru Rākau</institution></institution-wrap>
+</funding-source><award-id>1BT‐01971‐AUT</award-id></award-group><award-group id="funding-0002"><funding-source>
+<institution-wrap><institution>New Zealand’s Biological Heritage National Science Challenge</institution></institution-wrap>
+</funding-source><award-id>2223‐44‐009</award-id></award-group></funding-group><counts><fig-count count="6"/><table-count count="4"/><page-count count="14"/><word-count count="10100"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>April 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.7.3 mode:remove_FC converted:10.04.2026</meta-value></custom-meta></custom-meta-group></article-meta></front><body id="ece373399-body-0001"><sec id="ece373399-sec-0001"><label>1</label><title>Introduction</title><p>Trees play an important role in global biodiversity, providing ecological, cultural, and economic benefits (Nilsson et al. <xref rid="ece373399-bib-0050" ref-type="bibr">2011</xref>). Seedling recruitment, which includes seed germination and early growth and establishment, is the primary means for both natural and artificial tree propagation (Berjak and Pammenter <xref rid="ece373399-bib-0005" ref-type="bibr">2004</xref>) and is crucial for genetic transmission, plant fitness, species persistence, and forest composition (Grime and Hillier <xref rid="ece373399-bib-0024" ref-type="bibr">1992</xref>). However, it can be a major bottleneck, impacting forest dynamics and distribution (Ibáñez et al. <xref rid="ece373399-bib-0029" ref-type="bibr">2007</xref>; Vanderwel et al. <xref rid="ece373399-bib-0072" ref-type="bibr">2013</xref>). Successful recruitment is especially important in restoration efforts, particularly for species with low survival rates in the wild. Consequently, research has focused on understanding the factors affecting seedling recruitment in both natural and controlled environments.</p><p>Seedling‐establishment success depends on the interplay of various ecological processes driven by biotic and abiotic natural modifiers, which can either enhance or filter seedling recruitment (Das and Biswas <xref rid="ece373399-bib-0016" ref-type="bibr">2022</xref>). Biotic modifiers include interactions among organisms, such as competition, herbivory, seed predation, microbial pathogenicity, and mutualistic symbiosis (e.g., Martin et al. <xref rid="ece373399-bib-0040" ref-type="bibr">2017</xref>; Yin et al. <xref rid="ece373399-bib-0084" ref-type="bibr">2023</xref>), while abiotic modifiers encompass factors like temperature, soil moisture, light availability, and soil physico‐chemistry (e.g., BassiriRad et al. <xref rid="ece373399-bib-0004" ref-type="bibr">2015</xref>; Galíndez et al. <xref rid="ece373399-bib-0020" ref-type="bibr">2019</xref>). Natural modifiers that exert both abiotic and biotic effects, hereafter referred to as mixed biotic‐abiotic modifiers, such as nurse species, influence seedling recruitment by both competing with seedlings and enhancing their microclimatic conditions (e.g., Dupuy and Chazdon <xref rid="ece373399-bib-0018" ref-type="bibr">2008</xref>).</p><p>In addition to natural modifiers, various experimental and artificial treatments have been developed to enhance seedling success in propagation and planting contexts (e.g., McConnaughay et al. <xref rid="ece373399-bib-0043" ref-type="bibr">1996</xref>; Connolly et al. <xref rid="ece373399-bib-0013" ref-type="bibr">2017</xref>; Galíndez et al. <xref rid="ece373399-bib-0020" ref-type="bibr">2019</xref>). These treatments fall into two main categories: seed priming techniques and seedling treatments. Seed priming is pre‐sowing treatments that activate physiological and biochemical processes in seeds, including enhanced enzyme activity, antioxidant accumulation, hormone modulation, and cellular repair (Rhaman <xref rid="ece373399-bib-0060" ref-type="bibr">2025</xref>), thereby improving germination rates and seedling vigor (Nawaz et al. <xref rid="ece373399-bib-0048" ref-type="bibr">2013</xref>; Waqas et al. <xref rid="ece373399-bib-0078" ref-type="bibr">2019</xref>). Seed priming encompasses traditional techniques such as stratification and scarification (e.g., Connolly et al. <xref rid="ece373399-bib-0013" ref-type="bibr">2017</xref>; Lacoretz et al. <xref rid="ece373399-bib-0034" ref-type="bibr">2022</xref>), but also more recent technological advances, including nano‐priming (Rhaman <xref rid="ece373399-bib-0060" ref-type="bibr">2025</xref>; Stefanello et al. <xref rid="ece373399-bib-0068" ref-type="bibr">2026</xref>). In contrast, seedling treatments, such as seedling transplantation (e.g., Velazco et al. <xref rid="ece373399-bib-0074" ref-type="bibr">2018</xref>), are applied to young plants after germination. Many of these techniques are commonly used in tree nurseries, botanical gardens, and conservation initiatives (Sisodia et al. <xref rid="ece373399-bib-0065" ref-type="bibr">2018</xref>; Iralu et al. <xref rid="ece373399-bib-0031" ref-type="bibr">2019</xref>; personal observations).</p><p>Understanding how natural modifiers affect tree recruitment and early fitness is key to predicting forest dynamics under global change (Canham and Murphy <xref rid="ece373399-bib-0008" ref-type="bibr">2016</xref>). Additionally, knowing how experimental treatments influence seedling recruitment is essential for improving forest restoration and nurseries' efficiency. Both abiotic and biotic modifiers impact recruitment in a species‐dependent way, such as fertilization and the inoculation of mycorrhizae or their removal by soil sterilization (e.g., Willis and Walters <xref rid="ece373399-bib-0081" ref-type="bibr">2018</xref>; Zhang et al. <xref rid="ece373399-bib-0085" ref-type="bibr">2019</xref>; Liang et al. <xref rid="ece373399-bib-0086" ref-type="bibr">2022</xref>; see also Crofts and Brown <xref rid="ece373399-bib-0014" ref-type="bibr">2020</xref>; Ibáñez et al. <xref rid="ece373399-bib-0030" ref-type="bibr">2022</xref>). Similarly certain experimental methods, such as cold and warm stratification, only affect specific species (e.g., Morgenson <xref rid="ece373399-bib-0045" ref-type="bibr">2000</xref>; Baskin et al. <xref rid="ece373399-bib-0002" ref-type="bibr">2002</xref>; Connolly et al. <xref rid="ece373399-bib-0013" ref-type="bibr">2017</xref>). Despite many studies, the consistency of these effects across species is still unclear (but see Iralu et al. <xref rid="ece373399-bib-0031" ref-type="bibr">2019</xref> for a review on seed germination in threatened species). Therefore, it is important to summarize what is known about the impacts of natural modifiers and experimental treatments on tree recruitment.</p><p>To synthesize the effects of biotic and abiotic modifiers, seed priming techniques, and seedling treatments across several tree species, we conducted a systematic narrative review of 91 studies. Our goals were to identify patterns in how these modifiers influence recruitment in tree species from temperate and subtropical biomes, and identify research gaps to set an agenda of required future investigations into recruitment processes. We asked and answered the following three research questions: (1) What effects do biotic and abiotic modifiers have on recruitment of tree seedlings? (2) What seed priming and seedling treatment techniques are most prevalent and what are their effects on seedling recruitment parameters? (3) What knowledge gaps remain, and what directions should future research take?</p></sec><sec sec-type="methods" id="ece373399-sec-0002"><label>2</label><title>Method</title><p>We searched the international literature for relevant, peer‐reviewed articles detailing primary experimental research on the effects of seed priming techniques, seedling treatments, and biotic and abiotic modifiers on seedling recruitment in tree species. Our focus was on species from temperate and subtropical biomes, which encompass a significant portion of the Earth's land surface between the Tropics (23°27′) and the polar circles (66°33′; Cui et al. <xref rid="ece373399-bib-0015" ref-type="bibr">2021</xref>). To structure our review scope, we developed and used the following PICO‐model (Slodowicz et al. <xref rid="ece373399-bib-0066" ref-type="bibr">2019</xref>): Population: Seeds and seedlings of tree species (excluding shrub and tall grass species, e.g., bamboos) from temperate and subtropical biomes; Intervention: Seed priming and/or seedling treatments, and biotic and/or abiotic modifiers modifying seed germination and seedling fitness and establishment; Comparator: Absence of treatment; natural or different levels of a modifier in the environment; Outcome: Changes in dormancy break, seed viability, germination (e.g., percentage) and/or seedling fitness traits (e.g., survival, performance, mass).</p><p>Using our PICO model as a framework and following the recommendations of the Collaboration for Environmental Evidence (CEE) Guidelines (Pullin et al. <xref rid="ece373399-bib-0056" ref-type="bibr">2018</xref>), we crafted a search string (Material <xref rid="ece373399-supitem-0001" ref-type="supplementary-material">S1</xref>) to identify relevant papers aligned with our review scope. The search query was refined through iterative adjustments in the Scopus database (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.scopus.com/" ext-link-type="uri">https://www.scopus.com/</ext-link>) and by incorporating keywords found in papers selected from earlier versions of the search string. Feedback from colleagues further enhanced the precision of the search. On August 15, 2023, our search in the Scopus database yielded a total of 266 papers (Material <xref rid="ece373399-supitem-0001" ref-type="supplementary-material">S2</xref>). After removing two duplicates, we reviewed the abstracts and applied the following inclusion criteria: studies (a) on tree species from temperate and subtropical biomes, (b) that tested the effects of at least one modifier or treatment, and (c) that included seed germination or dormancy, or seedling, germinant or juvenile establishment, performance, growth, fitness, or survival as response variables. As a result, 135 papers were excluded, leaving 131 for full‐text screening. Each paper was then thoroughly evaluated against the initial inclusion criteria, as well as four additional criteria: (a) availability of the full text in English (eight papers were excluded due to being published only in Chinese), (b) being empirical and experimental (excluding purely observational and modeling studies, reviews, and meta‐analyses), (c) having a sufficient sample size to support inferences (only one paper, Sánchez‐Gómez et al. <xref rid="ece373399-bib-0062" ref-type="bibr">2006</xref>, was excluded based on this criterion), and (d) including experimental controls with clearly reported levels, strength, duration, and concentration of treatments. In our review, a “paper” refers to a published article, while a “study” denotes a research experiment within a paper, allowing for one paper to encompass multiple studies. To ensure consistency in the selection process, a second evaluator independently appraised a subset of 25% of the retained papers (33 out of 131) for inclusion. Ultimately, 40 papers were excluded during full‐text screening, resulting in 91 papers included in our final analysis. All included papers were published between November 1961 and June 2023. From each included paper, we extracted a range of variables and information, including research aims, study types (experimental, observational, review, or meta‐analysis), reasons for exclusion, treatments and modifiers investigated along with their control treatments, levels (e.g., concentration) and effects, response variables examined, corresponding life stages (i.e., seed or seedling), reported co‐variables influencing treatment effects, interaction effects of treatments and modifiers, taxa studied, and study locations. This process resulted in 104 independent studies across the 91 research papers, from which we extracted 1126 observations. However, 12 observations were excluded from further analysis due to unclear reporting of the effects of treatments or modifiers on the response variables, leading to a final dataset of 1114 observations for analysis.</p><p>We defined “response variables” of interest prior to screening, based on their relevance to the review scope and their prevalence in the literature. We extracted data solely for the selected “response variables” (Table <xref rid="ece373399-tbl-0001" ref-type="table">1</xref>). This approach allows an efficient comparison across studies, but means our review does not encompass all response variables reported in the screened papers. Excluded response variables were biomass ratios of two plant compartments (but biomass ratios of a plant compartment compared to the whole plant were included), such as leaf:stem, stem:root, leaf:root, belowground:aboveground ratios (e.g., Lu et al. <xref rid="ece373399-bib-0038" ref-type="bibr">2018</xref>), and variables linked to plant respiration, leaf water potential, water use efficiency (WUE; e.g., Lu et al. <xref rid="ece373399-bib-0039" ref-type="bibr">2022</xref>), leaf size, SLA and leaf chlorophyll content (SPAD; e.g., Niu et al. <xref rid="ece373399-bib-0051" ref-type="bibr">2011</xref>).</p><table-wrap position="float" id="ece373399-tbl-0001" content-type="TABLE" orientation="portrait"><label>TABLE 1</label><caption><p>Response variable categories and the a priori defined response variables.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Response variable category</th><th align="center" valign="bottom" rowspan="1" colspan="1">Life stages</th><th align="center" valign="bottom" rowspan="1" colspan="1">Response variables</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Biomass ratio</td><td align="center" valign="top" rowspan="1" colspan="1">Seedling</td><td align="center" valign="top" rowspan="1" colspan="1">Leaf biomass % and ratio, stem biomass % and ratio, root biomass % and ratio—each related to total plant biomass</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Germination</td><td align="center" valign="top" rowspan="1" colspan="1">Seed</td><td align="center" valign="top" rowspan="1" colspan="1">Germination %, density, probability, proportion, and rate, viable seed %</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Germination time</td><td align="center" valign="top" rowspan="1" colspan="1">Seed</td><td align="center" valign="top" rowspan="1" colspan="1">Germination time</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Growth</td><td align="center" valign="top" rowspan="1" colspan="1">Seedling</td><td align="center" valign="top" rowspan="1" colspan="1">Above biomass, above biomass increment, leaf biomass, shoot biomass, stem biomass, root biomass, total plant biomass, height, height increment, stem diameter increment, diameter at breast level, basal diameter, root collar diameter, root diameter, radicle length, root length, growth rate, height growth rate, relative growth rate, relative height growth rate, relative biomass growth rate</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Phenology</td><td align="center" valign="top" rowspan="1" colspan="1">Seedling</td><td align="center" valign="top" rowspan="1" colspan="1">Time to budburst, time to leafout</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Survival</td><td align="center" valign="top" rowspan="1" colspan="1">Seedling</td><td align="center" valign="top" rowspan="1" colspan="1">Binary survival, survival %, density, probability, proportion, rate, and time</td></tr></tbody></table></table-wrap><p>For each study, we categorized the tested modifiers and treatments into specific “treatment categories.” Subsequently, these treatment categories were grouped into broader “study aim categories,” based on whether they focused on abiotic or biotic modifiers, seed or seedling treatments (Table <xref rid="ece373399-tbl-0002" ref-type="table">2</xref>). In total, we examined the effects of 54 treatment categories, organized into seven defined study aim categories, across the 104 studies included in our review (Figure <xref rid="ece373399-fig-0001" ref-type="fig">1</xref>; Table <xref rid="ece373399-tbl-0002" ref-type="table">2</xref>). Response variables were similarly organized into six broad categories, referred to as “response variable categories,” based on life stages (e.g., seed and seedling) and the type of response measured. For example, germination percentage and density were grouped together because improvements in both metrics indicate a higher number of germinants (Table <xref rid="ece373399-tbl-0001" ref-type="table">1</xref>). This categorization is a valuable method for inferring general patterns regarding the effects of various treatments or modifiers on a set of response variables.</p><table-wrap position="float" id="ece373399-tbl-0002" content-type="TABLE" orientation="portrait"><label>TABLE 2</label><caption><p>Study aim categories with their definition and the treatment categories included within each of them.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Study aim categories</th><th align="center" valign="bottom" rowspan="1" colspan="1">Definition</th><th align="center" valign="bottom" rowspan="1" colspan="1">Treatment categories</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Abiotic climatic modifiers</td><td align="center" valign="top" rowspan="1" colspan="1">Abiotic modifier associated with climatic variables</td><td align="center" valign="top" rowspan="1" colspan="1">Drought, elevation, flooding (e.g., duration), latitude, precipitation, seasonality, snow cover, soil moisture, temperature (increase), temperature + precipitation, temperature regime (<italic toggle="yes">n =</italic> 11; <italic toggle="yes">n</italic> studies = 27)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Abiotic environmental modifiers</td><td align="center" valign="top" rowspan="1" colspan="1">Abiotic modifiers not associated with climatic variables</td><td align="center" valign="top" rowspan="1" colspan="1">Distance to seashore, gap size in forest, light, light regime, plantation date, pollution, salinity, shading, soil scarification, time (e.g., since plantation), wind protection (<italic toggle="yes">n =</italic> 11; <italic toggle="yes">n</italic> studies = 43)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Biotic modifiers</td><td align="center" valign="top" rowspan="1" colspan="1">Biotic modifiers</td><td align="center" valign="top" rowspan="1" colspan="1">Animal introduction, competition (i.e., intra‐ and/or interspecific competition and plant density), herbivory (e.g., predation and defoliation, human‐made simulated herbivory), mycorrhiza (inoculation or removal), nitrogen‐fixing bacteria inoculation, pathogens inoculation, plant species richness (<italic toggle="yes">n =</italic> 7; <italic toggle="yes">n</italic> studies = 19)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Fertilization</td><td align="center" valign="top" rowspan="1" colspan="1">Amendment of soil for the purpose of enhancing seed/seedling conditions</td><td align="center" valign="top" rowspan="1" colspan="1">
+<p>Liming, N fertilization</p>
+<p>N‐P fertilization, N‐P‐K fertilization, P fertilization, total soil amendment (ash, biochar, or charcoal amendment) (<italic toggle="yes">n =</italic> 6; <italic toggle="yes">n</italic> studies = 25)</p>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Mixed biotic &amp; abiotic modifiers</td><td align="center" valign="top" rowspan="1" colspan="1">Modifier implying both biotic and abiotic processes</td><td align="center" valign="top" rowspan="1" colspan="1">Allelopathic molecule, canopy age, plant litter addition, nurse species, soil (origin and/or type and soil sterilization), understorey treatment (e.g., removal or control of understorey vegetation and/or weeds) (<italic toggle="yes">n =</italic> 7; <italic toggle="yes">n</italic> studies = 19)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Seed priming techniques</td><td align="center" valign="top" rowspan="1" colspan="1">Treatments of seeds before germination</td><td align="center" valign="top" rowspan="1" colspan="1">Fruit tissue removal, seed chemical treatment, seed moisture content, seed passage through animal gut, seed scarification, seed scarification + chemical treatment, seed sowing method (e.g., germination container type), seed storage (time and/or condition), seed stratification (<italic toggle="yes">n = 9</italic>; <italic toggle="yes">n</italic> studies = 20)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Seedling treatments</td><td align="center" valign="top" rowspan="1" colspan="1">Seedling treatments not covered by the other categories</td><td align="center" valign="top" rowspan="1" colspan="1">Pot coating, pot size, seedling size, seedling transplantation method (<italic toggle="yes">n =</italic> 4; <italic toggle="yes">n</italic> studies = 4)</td></tr></tbody></table><table-wrap-foot id="ece373399-ntgp-0001"><fn id="ece373399-note-0001"><p>
+<italic toggle="yes">Note:</italic> The number of treatment categories (<italic toggle="yes">n</italic>) and reviewed studies (<italic toggle="yes">n</italic> studies) per study aim categories are given in brackets in the treatment categories column.</p></fn></table-wrap-foot></table-wrap><fig position="float" fig-type="FIGURE" id="ece373399-fig-0001" orientation="portrait"><label>FIGURE 1</label><caption><p>Total number of reviewed studies, categorized by treatment category with colors representing different study aim categories.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="ECE3-16-e73399-g004.jpg"/></fig><p>After evaluating the feasibility of a quantitative meta‐analysis in accordance with the Cochrane Handbook for Systematic Reviews of Interventions (Chandler et al. <xref rid="ece373399-bib-0011" ref-type="bibr">2019</xref>), we determined that statistical pooling was not appropriate due to substantial methodological heterogeneity, weakly comparable outcomes, and insufficient numerical data for effect size calculation. Accordingly, we conducted a systematic narrative review (Littell et al. <xref rid="ece373399-bib-0036" ref-type="bibr">2008</xref>), enhancing analytical rigor by structuring the evidence into comparative tables and applying vote counting based on direction of effect (Chandler et al. <xref rid="ece373399-bib-0011" ref-type="bibr">2019</xref>). This approach provides a transparent, systematic synthesis while remaining aligned with the nature of the available evidence.</p><p>To conduct the vote counting based on effect direction (Chandler et al. <xref rid="ece373399-bib-0011" ref-type="bibr">2019</xref>), we standardized the treatment effects on response variables to be either “positive,” “variable,” “non‐significant,” or “negative.” The designation “variable” was used when the paper authors or our analysis found no clear trend. “Positive” and “negative” effects were defined based on the treatments' impact on the response variable, indicating an improvement or decline, respectively, compared to the control treatment. The designation “non‐significant” was applied when statistical analyses revealed no significant effect of the treatment on the response variable. Analyses and graphs were performed using R 4.1.2. (R Core Team <xref rid="ece373399-bib-0057" ref-type="bibr">2021</xref>) with the packages “ggplot2” and “dplyr” (Wickham <xref rid="ece373399-bib-0079" ref-type="bibr">2016</xref>; Wickham et al. <xref rid="ece373399-bib-0080" ref-type="bibr">2023</xref>).</p></sec><sec id="ece373399-sec-0003"><label>3</label><title>Summary of Reviewed Studies, Response Variables, and Treatment Effects</title><p>Six of the 54 treatment categories—shading, N‐fertilization, temperature, litter addition, mycorrhizae, and seed stratification—accounted for 37.7% of the total studies examined. Overall, the majority of studies (60.5%) concentrated on abiotic modifiers, encompassing climatic, environmental, and fertilization modifiers (Table <xref rid="ece373399-tbl-0002" ref-type="table">2</xref>). The largest portion of the observations (42.2%; <italic toggle="yes">n</italic> = 470) from the reviewed studies yielded nonsignificant effects. In comparison, 283 observations indicated negative effects, 260 indicated positive effects, and 101 indicated variable effects. This prevalence of nonsignificant effects was consistent across all study aim categories (Figure <xref rid="ece373399-fig-0002" ref-type="fig">2</xref>), except for abiotic environmental modifiers, where negative effects outnumbered nonsignificant ones by one.</p><fig position="float" fig-type="FIGURE" id="ece373399-fig-0002" orientation="portrait"><label>FIGURE 2</label><caption><p>Observation number by study aim category, with treatment effects represented by distinct colors: Negative effects in orange, nonsignificant effects in gray, positive effects in green, and variable effects in blue.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="ECE3-16-e73399-g003.jpg"/></fig><p>Reviewed studies were predominantly seedling‐focused (66.6%, <italic toggle="yes">n =</italic> 742 observations of 1114), with fewer studies focusing on seeds (33.4%, <italic toggle="yes">n =</italic> 372 observations of 1114; Figure <xref rid="ece373399-fig-0003" ref-type="fig">3</xref>). Unlike other categories of natural modifiers, where over 70% of observations focused on seedlings, studies on abiotic climatic modifiers displayed a more balanced distribution, with 40.5% of observations on seeds and 59.5% on seedlings. All studies investigating seedling treatment effects were exclusively conducted on seedlings, while studies on seed priming techniques targeted seeds with one notable exception investigating the effects of seed chemical treatment on seedling growth (Li et al. <xref rid="ece373399-bib-0035" ref-type="bibr">2017</xref>). This trend is reflected in the response variables evaluated in our review, with seedling growth and survival being two of the three most frequently examined response variables, in 37.9% and 25.3% of the studies, respectively (germination, germination time, seedling biomass ratio and phenology were investigated in 28.2%, 6.32%, 1.71%, and 0.57% of the studies, respectively).</p><fig position="float" fig-type="FIGURE" id="ece373399-fig-0003" orientation="portrait"><label>FIGURE 3</label><caption><p>Number of reviewed studies per study aim category on seeds (orange) and seedlings (green).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="ECE3-16-e73399-g001.jpg"/></fig><p>The predominant focus on seedlings largely stems from the understanding that numerous treatments, such as competition, presence of nurse species, gap sizes in forest canopies and fertilization, tend to have a greater impact on seedling establishment and growth compared to seed germination. Moreover, seedlings typically exhibit more visible and immediate responses to environmental factors, making their effects easier to measure and analyze. However, this emphasis on seedlings leaves important questions about the processes affecting seeds themselves. Gaining insights into how these modifiers influence seed viability and germination could enhance our understanding of plant population dynamics and community structure.</p></sec><sec id="ece373399-sec-0004"><label>4</label><title>What Effects Did Biotic and Abiotic Modifiers Have on Recruitment of Tree Seedlings?</title><sec id="ece373399-sec-0005"><label>4.1</label><title>Fertilization—No Consistent Recruitment Benefit From Fertilization Treatments</title><p>Nitrogen addition was the most common treatment, comprising 9.24% of all observations (<italic toggle="yes">n</italic> = 103 of 1114) and 55.38% of fertilization studies (<italic toggle="yes">n</italic> = 103 of 186) across 16 studies and 12 papers (Figure <xref rid="ece373399-fig-0004" ref-type="fig">4</xref>). This treatment showed a predominantly nonsignificant effect (51.5%). The rest of the observations were mainly positive (20.4% of the total observations; <italic toggle="yes">n</italic> = 53, 21, 15 and 14 observations with nonsignificant, positive, variable and negative effects, respectively). These positive effects of nitrogen fertilization align with the understanding that tree growth is frequently constrained by nitrogen availability (Rennenberg et al. <xref rid="ece373399-bib-0059" ref-type="bibr">1998</xref>; Nadelhoffer <xref rid="ece373399-bib-0047" ref-type="bibr">2000</xref>; Pretzsch et al. <xref rid="ece373399-bib-0055" ref-type="bibr">2014</xref>). However, the presence of negative effects of nitrogen fertilization indicates that nitrogen addition does not universally enhance seedling recruitment in temperate and subtropical trees. Adverse effects may arise from nutrient imbalances, soil acidification, or alterations in microbial and mycorrhizal communities that constrain seedling performance under certain conditions (Bobbink et al. <xref rid="ece373399-bib-0006" ref-type="bibr">2010</xref>). In addition, variation among experiments may partly explain contrasting outcomes, as these may depend on fertilizer dose and background seedbed fertility (Bobbink et al. <xref rid="ece373399-bib-0006" ref-type="bibr">2010</xref>).</p><fig position="float" fig-type="FIGURE" id="ece373399-fig-0004" orientation="portrait"><label>FIGURE 4</label><caption><p>Cross‐tabulation results for the 80 reviewed studies (across 69 papers) that investigated effects of 42 biotic and abiotic treatment categories (<italic toggle="yes">x</italic>‐axis) grouped in the five study aim categories (displayed as vertical panels; except seed priming technique and seeding treatment categories) tested on seed germination and germination time, seedling growth, growth ratio, and survival (<italic toggle="yes">y</italic>‐axis). The bubble size is proportional to the number of observations. Effects of treatment categories were classified (horizontal panels) as “positive” (green bubbles), “variable” (blue bubbles), “not significant” (gray bubbles), or “negative” (orange bubbles).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="ECE3-16-e73399-g002.jpg"/></fig></sec><sec id="ece373399-sec-0006"><label>4.2</label><title>Abiotic Climatic Modifiers—Limited Temperature and Precipitation Effects Compared to More Consistent Soil Moisture and Snow Cover Effects on Seedlings</title><p>Two categories of abiotic climatic modifiers, temperature and temperature regimes, were most prevalent across our reviewed papers (Figure <xref rid="ece373399-fig-0004" ref-type="fig">4</xref>, Table <xref rid="ece373399-tbl-0003" ref-type="table">3</xref>). Nearly half of the observations (46.9%) of the effects of temperature and temperature regime indicated nonsignificant effects (<italic toggle="yes">n</italic> = 53 of 113; for temperature: <italic toggle="yes">n</italic> = 25, 13, 9, and 5 observations with nonsignificant, negative, positive and variable effects, respectively; for temperature regime: <italic toggle="yes">n</italic> = 28, 20, and 13 observations with nonsignificant, negative and variable effects, respectively). Among the significant effects (<italic toggle="yes">n</italic> = 60), increased temperature and temperature‐regime modifications had often negative (<italic toggle="yes">n</italic> = 32) and variable (<italic toggle="yes">n</italic> = 18) effects on seed germination and germination time (n.b. negative effects on germination time mean a reduction of the germination time), seedling survival and growth of temperate and subtropical trees. Effects of precipitation were also largely nonsignificant (<italic toggle="yes">n</italic> = 15 of 29), particularly on seedling survival (<italic toggle="yes">n</italic> = 8 of 15).</p><table-wrap position="float" id="ece373399-tbl-0003" content-type="TABLE" orientation="portrait"><label>TABLE 3</label><caption><p>Treatment categories of abiotic climatic modifiers with their respective number of observations, studies, and papers.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Treatment categories of abiotic climatic modifiers</th><th align="center" valign="bottom" rowspan="1" colspan="1">No. observations</th><th align="center" valign="bottom" rowspan="1" colspan="1">No. studies</th><th align="center" valign="bottom" rowspan="1" colspan="1">No. papers</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Temperature regime</td><td align="center" valign="top" rowspan="1" colspan="1">61</td><td align="center" valign="top" rowspan="1" colspan="1">5</td><td align="center" valign="top" rowspan="1" colspan="1">5</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Temperature</td><td align="center" valign="top" rowspan="1" colspan="1">52</td><td align="center" valign="top" rowspan="1" colspan="1">11</td><td align="center" valign="top" rowspan="1" colspan="1">11</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Precipitation</td><td align="center" valign="top" rowspan="1" colspan="1">29</td><td align="center" valign="top" rowspan="1" colspan="1">3</td><td align="center" valign="top" rowspan="1" colspan="1">3</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Latitude</td><td align="center" valign="top" rowspan="1" colspan="1">20</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Soil moisture</td><td align="center" valign="top" rowspan="1" colspan="1">20</td><td align="center" valign="top" rowspan="1" colspan="1">3</td><td align="center" valign="top" rowspan="1" colspan="1">2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Snow cover</td><td align="center" valign="top" rowspan="1" colspan="1">19</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Flooding</td><td align="center" valign="top" rowspan="1" colspan="1">6</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Temperature &amp; precipitation</td><td align="center" valign="top" rowspan="1" colspan="1">6</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Drought</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Seasonality</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Elevation</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Total</td><td align="center" valign="top" rowspan="1" colspan="1">218</td><td align="center" valign="top" rowspan="1" colspan="1">31</td><td align="center" valign="top" rowspan="1" colspan="1">29</td></tr></tbody></table></table-wrap><p>The large proportion of nonsignificant effects found contrasts with the expectation that rising temperatures and increased drought, as resulting from climate change, diminish seedling recruitment (Niinemets <xref rid="ece373399-bib-0049" ref-type="bibr">2010</xref>). This expectation is based on the assumption that higher temperatures elevate evaporation and water stress, thereby increasing mortality risk and reducing establishment success in early life stages. Against this backdrop, the absence of consistent negative effects is notable. However, this pattern is unlikely to be an artifact of limited statistical power, as the studies examining these drivers were generally well‐designed. Instead, the prevalence of nonsignificant results may reflect the capacity of many temperate tree species to persist across a wide range of climatic conditions, as indicated by their broad geographic distributions (Savolainen et al. <xref rid="ece373399-bib-0063" ref-type="bibr">2007</xref>). Climatic variations within a tree's tolerable range may trigger phenotypic plasticity (Richter et al. <xref rid="ece373399-bib-0061" ref-type="bibr">2012</xref>), and thus may not have a noticeable short‐term effect on the response variables we reviewed. This would be rather promising, as phenotypic plasticity is believed to be crucial for the survival of tree species—particularly slow‐growing ones—under climate change (Grulke <xref rid="ece373399-bib-0025" ref-type="bibr">2010</xref>; Vitasse et al. <xref rid="ece373399-bib-0075" ref-type="bibr">2010</xref>).</p><p>In contrast to the preceding patterns, soil moisture and snow cover had relatively consistent positive effects on seedling recruitment (for soil moisture: <italic toggle="yes">n</italic> = 9, 2, 9 observations with nonsignificant, negative and positive effects, respectively; for snow cover: <italic toggle="yes">n</italic> = 7, 2, 10 observations with nonsignificant, negative and positive effects, respectively; Figure <xref rid="ece373399-fig-0004" ref-type="fig">4</xref>). These effects likely reflect reduced drought stress and enhanced protection from (frost) desiccation, supporting the view that water availability is a critical factor for seedling survival, particularly in harsh environments such as treeline ecotones (Körner <xref rid="ece373399-bib-0032" ref-type="bibr">2012</xref>). Nonetheless, these findings contrast with the expectation of more uniformly positive and fewer nonsignificant effects of moisture across the various seedling‐recruitment metrics evaluated for temperate and subtropical tree species. One possible explanation is that moisture may only enhance recruitment when it alleviates limiting conditions, whereas under already mesic conditions its additional effects remain marginal and therefore statistically undetectable.</p></sec><sec id="ece373399-sec-0007"><label>4.3</label><title>Abiotic Environmental Modifiers—Shading Reduces and Soil Scarification Enhances Seedlings, While Evidence for Pollution and Light Is Lacking</title><p>Among the abiotic environmental modifiers, shading was the most studied modifier, followed by pollution, light regime, light availability and soil scarification (Figure <xref rid="ece373399-fig-0004" ref-type="fig">4</xref>; Table <xref rid="ece373399-tbl-0004" ref-type="table">4</xref>). Effects of shading were generally detrimental to seed germination, seedling survival, and growth, with more than half of the observations reporting negative effects (<italic toggle="yes">n</italic> = 101 of 188; <italic toggle="yes">n</italic> = 101, 56, 33 and 2 observations had negative, nonsignificant, positive and variable effects, respectively). The predominantly negative effects of shading likely reflect light limitation during early recruitment stages, as reduced irradiance constrains photosynthetic carbon gain and can shift biomass allocation patterns, particularly in light‐demanding temperate species (e.g., Lu et al. <xref rid="ece373399-bib-0038" ref-type="bibr">2018</xref>). Comparisons among the reviewed experiments further suggest that responses to shading depended on the species' shade‐tolerance at the seedling stage and that moderate canopy cover can buffer seedlings against environmental stress, highlighting the context dependency of light effects across site conditions and species functional types (e.g., Lu et al. <xref rid="ece373399-bib-0038" ref-type="bibr">2018</xref>; McAlpine and Drake <xref rid="ece373399-bib-0042" ref-type="bibr">2003</xref>). Salinity had consistent, negative effects across all observations (<italic toggle="yes">n</italic> = 6), induced by osmotic stress and ion toxicity mechanisms, which impair water uptake, during germination and early seedling development (e.g., Aljasmi et al. <xref rid="ece373399-bib-0001" ref-type="bibr">2021</xref>). In contrast, the generally positive responses to soil scarification (<italic toggle="yes">n</italic> = 8 of 11, the three other observations were nonsignificant), a treatment disturbing the litter layer and understory vegetation to increase the availability of mineral soil and humus (Willis et al. <xref rid="ece373399-bib-0082" ref-type="bibr">2015</xref>), likely result from enhanced access to mineral soil, and reduced competition from understory vegetation, with some experiments reporting particularly strong benefits in small‐seeded species (Willis et al. <xref rid="ece373399-bib-0082" ref-type="bibr">2015</xref>; Clark and D'Amato <xref rid="ece373399-bib-0012" ref-type="bibr">2023</xref>).</p><table-wrap position="float" id="ece373399-tbl-0004" content-type="TABLE" orientation="portrait"><label>TABLE 4</label><caption><p>Treatment categories of abiotic environmental modifiers with their respective number of observations, studies, and papers.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Treatment categories of abiotic environmental modifiers</th><th align="center" valign="bottom" rowspan="1" colspan="1">No. observations</th><th align="center" valign="bottom" rowspan="1" colspan="1">No. studies</th><th align="center" valign="bottom" rowspan="1" colspan="1">No. papers</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">Shading</td><td align="center" valign="top" rowspan="1" colspan="1">192</td><td align="center" valign="top" rowspan="1" colspan="1">29</td><td align="center" valign="top" rowspan="1" colspan="1">23</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Pollution</td><td align="center" valign="top" rowspan="1" colspan="1">65</td><td align="center" valign="top" rowspan="1" colspan="1">6</td><td align="center" valign="top" rowspan="1" colspan="1">6</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Light regime</td><td align="center" valign="top" rowspan="1" colspan="1">24</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Light</td><td align="center" valign="top" rowspan="1" colspan="1">12</td><td align="center" valign="top" rowspan="1" colspan="1">4</td><td align="center" valign="top" rowspan="1" colspan="1">4</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Soil scarification</td><td align="center" valign="top" rowspan="1" colspan="1">11</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Forest‐gap size</td><td align="center" valign="top" rowspan="1" colspan="1">6</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Salinity</td><td align="center" valign="top" rowspan="1" colspan="1">6</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Wind protection</td><td align="center" valign="top" rowspan="1" colspan="1">6</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Distance to seashore</td><td align="center" valign="top" rowspan="1" colspan="1">4</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Plantation date</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Time since plantation</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Total</td><td align="center" valign="top" rowspan="1" colspan="1">326</td><td align="center" valign="top" rowspan="1" colspan="1">43</td><td align="center" valign="top" rowspan="1" colspan="1">39</td></tr></tbody></table></table-wrap><p>Pollution, including acid rain, extreme increase of nitrogen deposition, CO<sub>2</sub> and ozone concentration (Percy <xref rid="ece373399-bib-0054" ref-type="bibr">1986</xref>; McConnaughay et al. <xref rid="ece373399-bib-0043" ref-type="bibr">1996</xref>; Hättenschwiler and Körner <xref rid="ece373399-bib-0027" ref-type="bibr">2003</xref>; Niu et al. <xref rid="ece373399-bib-0051" ref-type="bibr">2011</xref>; BassiriRad et al. <xref rid="ece373399-bib-0004" ref-type="bibr">2015</xref>), had predominantly nonsignificant effects on seed germination and seedling growth and survival (<italic toggle="yes">n</italic> = 40 out of 65). Similarly, effects of light availability (Aljasmi et al. <xref rid="ece373399-bib-0001" ref-type="bibr">2021</xref>; Galíndez et al. <xref rid="ece373399-bib-0020" ref-type="bibr">2019</xref>; Hadi et al. <xref rid="ece373399-bib-0026" ref-type="bibr">2018</xref>; Velazco et al. <xref rid="ece373399-bib-0074" ref-type="bibr">2018</xref>) and light regime, such as red‐light pulses and increased far‐red light proportion (Lacoretz et al. <xref rid="ece373399-bib-0034" ref-type="bibr">2022</xref>; Xia et al. <xref rid="ece373399-bib-0083" ref-type="bibr">2016</xref>), were reported to be mainly nonsignificant on seed germination and germination time (for light‐increase effects: <italic toggle="yes">n</italic> = 8 nonsignificant observations of 11; for light‐regime effects: <italic toggle="yes">n</italic> = 14 nonsignificant observations of 24).</p></sec><sec id="ece373399-sec-0008"><label>4.4</label><title>Mixed Biotic and Abiotic Modifiers – Inconclusive Effects and Lack of Evidence on Seedling Recruitment</title><p>We defined mixed biotic and abiotic modifiers as any modifier of seed and/or seedling that implies both biotic and abiotic processes (Table <xref rid="ece373399-tbl-0002" ref-type="table">2</xref>). Among these modifiers, litter treatments, encompassing litter addition and litter‐depth increase (Table <xref rid="ece373399-tbl-0001" ref-type="table">1</xref>), received the most extensive scrutiny (<italic toggle="yes">n</italic> = 59 of 122), with 10 studies across eight papers. On seed germination and seedling growth, this treatment category mainly indicated nonsignificant and positive effects (35.2% and 31.5% of the observations, respectively; <italic toggle="yes">n</italic> = 8, 6, 3, and 2 observations with positive, nonsignificant, negative and variable effects on germination; <italic toggle="yes">n</italic> = 13, 9, 9, and 4 observations with nonsignificant, positive, variable and negative effects on growth; Figure <xref rid="ece373399-fig-0004" ref-type="fig">4</xref>). On seedling survival and germination time, no tendency in the effect of litter treatments could be identified due to data scarcity (for survival: <italic toggle="yes">n</italic> = 4 observations with mixed results; for germination time: <italic toggle="yes">n</italic> = 1 observation). Research has demonstrated that plant litter can positively influence tree seedling establishment by creating favorable microhabitats through humidity and nutrient availability enhancement, and light and soil temperature modification (Vázquez‐Yanes and Orozco‐Segovia <xref rid="ece373399-bib-0073" ref-type="bibr">1992</xref>; Facelli and Pickett <xref rid="ece373399-bib-0019" ref-type="bibr">1991</xref>; Martínez‐Garza et al. <xref rid="ece373399-bib-0041" ref-type="bibr">2005</xref>; Dupuy and Chazdon <xref rid="ece373399-bib-0018" ref-type="bibr">2008</xref>; Urretavizcaya and Defossé <xref rid="ece373399-bib-0071" ref-type="bibr">2013</xref>; Bürli et al. <xref rid="ece373399-bib-0007" ref-type="bibr">2026</xref>).</p><p>Conversely, litter addition can also alter negatively tree seedling recruitment through allelopathy (chemically mediated interference between co‐occurring species; Muller <xref rid="ece373399-bib-0046" ref-type="bibr">1965</xref>; Sujeeun and Thomas <xref rid="ece373399-bib-0069" ref-type="bibr">2023</xref>). In our review, however, there were only six observations (from two studies) on the effects of allelopathic molecules alone (and not on the effects of litter addition), which showed no clear pattern in relation to tree seedling recruitment (with two observations each reporting nonsignificant, negative, and variable effects). Lastly, we identified a significant data gap regarding the effects of nurse species, forest canopy age, soil (origin, type, and sterilization), and understory treatments on the early life stages of temperate and subtropical trees, with four or fewer studies investigating each of these factors. Given the importance of these modifiers for ecosystem restoration efforts (e.g., Padilla and Pugnaire <xref rid="ece373399-bib-0053" ref-type="bibr">2006</xref>), further research in these areas could lead to the development of more effective restoration strategies.</p></sec><sec id="ece373399-sec-0009"><label>4.5</label><title>Biotic Modifiers—Mycorrhizae Promote, While Competition Had Variable Effects on Seedling Recruitment</title><p>Mycorrhizae received the most attention among the seven biotic modifiers and their effects were examined on seedling growth and survival (<italic toggle="yes">n</italic> = 30 and 11; Figure <xref rid="ece373399-fig-0004" ref-type="fig">4</xref>). Although most observations indicated positive effects of mycorrhizae (<italic toggle="yes">n</italic> = 17 of 41), several nonsignificant (<italic toggle="yes">n</italic> = 12), and variable (<italic toggle="yes">n</italic> = 12) effects were also reported. Mycorrhizae are widely recognized for their importance in enhancing nutrient uptake and overall plant health (Martin et al. <xref rid="ece373399-bib-0040" ref-type="bibr">2017</xref>). However, studying their effects on seedling growth and survival is complex and this stems from multiple interacting variables: Firstly, the impact of mycorrhizae can be influenced by soil type and nutrient availability. For example, in nutrient‐rich soils, the benefits of mycorrhizal association may be less pronounced compared to nutrient‐poor environments where these fungi can play a crucial role in facilitating nutrient uptake (Hoeksema et al. <xref rid="ece373399-bib-0028" ref-type="bibr">2010</xref>). Secondly, different plant species exhibit varying degrees of dependency on mycorrhizal relationships. Some species may benefit significantly from these associations, while others may show minimal response (Gerdemann et al. <xref rid="ece373399-bib-0022" ref-type="bibr">1975</xref>; Siqueira and Saggin‐Júnior <xref rid="ece373399-bib-0064" ref-type="bibr">2001</xref>). Lastly, the effects of mycorrhizae can also vary depending on the specific types of mycorrhizae involved (e.g., arbuscular, ectomycorrhizal). Given that each type differs in their ecophysiology, effects on soil and interactions with host plants (Tedersoo and Bahram <xref rid="ece373399-bib-0070" ref-type="bibr">2019</xref>), diverse outcomes on seedling growth and survival is not surprising. Hence, the mixed mycorrhizal effects we found reflect the complexity of such experiments and highlight the need for further research to determine whether consistent patterns exist in the mycorrhizal effects on early establishment of temperate and subtropical tree species. To draw generalizable conclusions across species and ecosystems, broader experiments encompassing diverse plant traits, species, and habitats are essential.</p><p>Competition had mainly negative and nonsignificant effects reported on seedling growth and survival (on growth: <italic toggle="yes">n</italic> = 8, 7, and 6 observations with nonsignificant, negative and positive effects, respectively; on survival: <italic toggle="yes">n</italic> = 3 and 1 observations with nonsignificant and negative effects, respectively). However, six observations from two studies indicated positive effects of competition on seedling growth: Carswell et al. (<xref rid="ece373399-bib-0009" ref-type="bibr">2012</xref>) used root trenching to reduce belowground competition and found that it negatively affected seedling diameter (<italic toggle="yes">n</italic> = 3) but positively affected height (<italic toggle="yes">n</italic> = 3) in three species. Yin et al. (<xref rid="ece373399-bib-0084" ref-type="bibr">2023</xref>) observed contrasting responses of seedling density to conspecific seedling density: <italic toggle="yes">Tilia amurensis</italic> showed a positive response, while <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Fraxinus mandshurica</italic>
+</styled-content> responded negatively—likely due to differences in shade tolerance, biomass allocation, and mycorrhizal type. These findings highlight the complex and species‐specific effects of competition on seedling recruitment in temperate and subtropical trees. Such variability likely reflects differences in life‐history strategies and ecological traits (e.g., competitive ability; Grime <xref rid="ece373399-bib-0023" ref-type="bibr">1979</xref>), as well as unintended side effects of experimental methods. For example, root trenching may alter soil moisture (Carswell et al. <xref rid="ece373399-bib-0009" ref-type="bibr">2012</xref>), confounding competition effects. Future studies should aim to minimize such confounding factors through careful experimental design.</p></sec></sec><sec id="ece373399-sec-0010"><label>5</label><title>What Seed Priming and Seedling Treatment Techniques Were Most Prevalent and What Were Their Effects on Seedling Recruitment‐Parameters?</title><sec id="ece373399-sec-0011"><label>5.1</label><title>Seed Priming—Seed Stratification Improved Germination More Effectively Than Seed Scarification and Chemical Treatments</title><p>Nine categories of seed priming techniques were investigated on seed germination (20 studies from 18 papers) and seven of them were also investigated on germination time (six studies from five papers; Figure <xref rid="ece373399-fig-0005" ref-type="fig">5</xref>). Most observations (<italic toggle="yes">n</italic> = 94 of 124) were reported for three technique categories: seed chemical treatment, storage time and condition, and stratification.</p><fig position="float" fig-type="FIGURE" id="ece373399-fig-0005" orientation="portrait"><label>FIGURE 5</label><caption><p>Cross‐tabulation results for the 20 reviewed studies (across 18 papers) that investigated effects of nine treatment categories (<italic toggle="yes">x</italic>‐axis) tested on seed germination (orange bubbles) and germination time (green bubbles). The bubble size is proportional to the number of observations. Effects of treatment categories (<italic toggle="yes">y</italic>‐axis) were classified as “positive,” “variable,” “not significant,” or “negative.” “Passage through gut” refers to the seed treatment involving their passage through an animal's gut. “Scarif. &amp; chem. treatment” stands for scarification and chemical treatment.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-11" orientation="portrait" xlink:href="ECE3-16-e73399-g006.jpg"/></fig><p>Our review highlighted that seed stratification improved germination (<italic toggle="yes">n</italic> = 7 and 1 observations with positive and variable effects, respectively) and decreased germination time (<italic toggle="yes">n</italic> = 4 and 1 observations with negative and nonsignificant effects, respectively) in most observations. Stratification is a common seed priming technique used to break dormancy and promote germination in plant propagation from seeds, particularly in botanical and horticultural institutions (personal observations). Among the reviewed studies, stratification temperatures ranged from 4°C to 40°C. Species with physiological dormancy (i.e., species needing physiological changes for radicle emergence; Geneve <xref rid="ece373399-bib-0021" ref-type="bibr">2003</xref>), notably those from high elevations and latitudes, typically require cold, moist conditions to break dormancy and initiate germination (Milbau et al. <xref rid="ece373399-bib-0044" ref-type="bibr">2009</xref>; Körner <xref rid="ece373399-bib-0033" ref-type="bibr">2013</xref>). In contrast, some species require warm stratification (temperatures &gt; 15°C) to germinate (e.g., Baskin et al. <xref rid="ece373399-bib-0002" ref-type="bibr">2002</xref>; Geneve <xref rid="ece373399-bib-0021" ref-type="bibr">2003</xref>). While most studies we reviewed focused on cold stratification, only three experiments across two papers investigated warm stratification. This highlights that gaining insights into the effects of warm stratification is crucial for developing a comprehensive understanding of the stratification efficiency on tree species across the temperate and subtropical biomes.</p><p>Seed scarification, whether it is done chemically or mechanically, is another widely used practice to increase seed germination. It is recommended for species having a physical dormancy (i.e., seeds with anatomical structures preventing water uptake), such as species from the Fabaceae, Malvaceae, Cannaceae, Convolvulaceae and Elaeocarpaceae families (Baskin et al. <xref rid="ece373399-bib-0003" ref-type="bibr">2000</xref>; Iralu et al. <xref rid="ece373399-bib-0031" ref-type="bibr">2019</xref>). In the reviewed studies, scarification was however tested predominantly on other plant families. The variability in scarification effects we found (<italic toggle="yes">n</italic> = 2, 2, and 1 observations with nonsignificant, variable, and positive effects on germination, respectively) suggests its efficacy depends widely on species. Given its common use in seed priming (Baskin et al. <xref rid="ece373399-bib-0003" ref-type="bibr">2000</xref>), better understanding of its effects would enhance seed propagation efforts.</p><p>Although seed chemical treatments were the seed priming category that attracted the most interest, most observations (80.2%) indicated nonsignificant effects on seed germination and germination time (<italic toggle="yes">n</italic> = 33, 13 and 1 observations with nonsignificant, positive, and negative effects). We therefore recommend conducting further investigations to determine the conditions under which chemical treatments affect seed germination in plants from temperate and subtropical biomes. According to the current knowledge highlighted by our review, ecologists and plant practitioners may consider stratifying the seeds as an alternative seed priming technique to chemical treatment to enhance seed germination.</p><p>Seed storage prior to germination and high seed moisture level mainly decreased or had variable effects on seed germination (for seed storage: <italic toggle="yes">n</italic> = 9, 8, 2, and 1 observations with negative, variable, nonsignificant and positive effects, respectively; for seed moisture level: <italic toggle="yes">n =</italic> 3 and 3 observations with negative and nonsignificant effects, respectively). On germination time, seed storage had mixed results (for seed storage: <italic toggle="yes">n =</italic> 3 and 3 observations out of 6 with positive and variable effects, respectively; for seed moisture level: <italic toggle="yes">n =</italic> 3, 2, and 1 observation(s) out of 6 with positive, variable and negative effects, respectively). Aging pace has been shown to be significantly influenced by environmental and genetic factors, including storage temperature, seed moisture content, and overall seed quality (Walters <xref rid="ece373399-bib-0076" ref-type="bibr">1998</xref>; Walters et al. <xref rid="ece373399-bib-0077" ref-type="bibr">2005</xref>; Rajjou and Debeaujon <xref rid="ece373399-bib-0058" ref-type="bibr">2008</xref>; Iralu et al. <xref rid="ece373399-bib-0031" ref-type="bibr">2019</xref>). Our findings align with the understanding that prolonged seed storage or high seed moisture content accelerates seed aging, reducing germination.</p></sec><sec id="ece373399-sec-0012"><label>5.2</label><title>Seedling Treatments—Conclusions Hindered by Research Scarcity</title><p>Compared to seed priming techniques, our review found that seedling treatments have received relatively little research attention regarding their effects on seedling survival and growth. Effects of only four categories of seedling treatments were investigated: pot size in which seedlings were grown (McConnaughay et al. <xref rid="ece373399-bib-0043" ref-type="bibr">1996</xref>), pot coating with copper carbonate (CuCO<sub>3</sub>; Dunn et al. <xref rid="ece373399-bib-0017" ref-type="bibr">1997</xref>), seedling transplantation method (Velazco et al. <xref rid="ece373399-bib-0074" ref-type="bibr">2018</xref>), and seedling size (Osunkoya and Creese <xref rid="ece373399-bib-0052" ref-type="bibr">1997</xref>). Moreover, four studies in total, each one from a different paper, investigated the effects of these four seedling treatments on only two seedling traits: growth and survival. The limited number of reported observations on the effects of seedling treatments prevents us from drawing any conclusions about their impact on seedlings.</p></sec></sec><sec id="ece373399-sec-0013"><label>6</label><title>What Knowledge Gaps Remain, and What Directions Should Future Research Take?</title><p>Across the body of literature reviewed, nonsignificant effects of modifiers and treatments were frequently reported across the seed and seedling response‐categories investigated. We identified two potential causes of this outcome. First, the experimental designs of the reviewed studies may not have met the necessary requirements for adequate statistical power, and sample sizes might have been insufficient to detect significant effects (higher type II error rate due to low power). However, we consider this an unlikely primary cause, as we excluded studies with obviously inadequate sample sizes. It is possible, nonetheless, that there may still be a discrepancy between ecologically reasonable sample sizes, shaped by logistical constraints, such as seed collection, species diversity, and study complexity, and the sample sizes required for statistical robustness. Second, and perhaps most importantly, the inherently variable nature of ecological systems may result in a higher proportion of nonsignificant outcomes than typically expected. This contrasts with the prevailing assumption that modifiers will consistently yield measurable effects.</p><p>In addition to a high prevalence of nonsignificant effects, we observed substantial heterogeneity in the effects of modifiers and treatments on the seed and seedling response‐categories investigated. The strong context dependence of ecological processes (Catford et al. <xref rid="ece373399-bib-0010" ref-type="bibr">2022</xref>; Spake et al. <xref rid="ece373399-bib-0067" ref-type="bibr">2023</xref>) likely contributes to the heterogeneity observed within and across studies. This variability arises because ecological processes, such as seedling recruitment, are influenced by numerous local factors (e.g., soil type, microclimate, biotic interactions; Das and Biswas <xref rid="ece373399-bib-0016" ref-type="bibr">2022</xref>), which may not be consistently accounted for in studies. As a result, this complicates efforts to identify clear and generalizable patterns in the effects of modifiers and treatments. Taken together, the high proportion of nonsignificant results and the strong heterogeneity across studies point to a fundamental gap in our mechanistic understanding of the effects of biotic and abiotic modifiers and treatment on seedling recruitment. To fill this gap, we need to clarify how contextual factors shape ecological outcomes and identify the key drivers of variation in seedling recruitment. This requires to reassess ecological hypotheses and improve experimental designs to better capture the processes influencing seedling recruitment and incorporate context‐specific variables.</p><p>Beyond the heterogenous and nonsignificant effects, our systematic narrative review reveals substantial and systematic research gaps that constrain progress in understanding seedling recruitment‐dynamics. Several modifiers and experimental treatments remain markedly underrepresented in the literature. For instance, studies on liming and total soil amendment treatments, such as ashes, biochar and charcoal addition, are scarce, despite their increasing relevance in restoration and soil management. Likewise, several abiotic climatic modifiers, e.g., drought, flooding, elevation, latitude, and seasonality, and non‐climatic environmental modifiers, e.g., forest gap size, wind protection, distance to seashore, plantation date, and time since plantation, have been rarely investigated. Key biotic modifiers also remain largely unstudied. In particular, the effects of nitrogen‐fixing bacteria, antagonistic interactions with herbivores and pathogens, species richness, and animal introductions are poorly understood in the context of seedling recruitment. Similarly, seed priming techniques, including fruit tissue removal, seed passage through animal gut, combined scarification and chemical treatments, and sowing methods, and experimental seedling treatments are under‐explored. This research scarcity limits our ability to evaluate their effectiveness and to compare their outcomes across species from temperate and subtropical biomes.</p><p>With an average annual increase of approximately 6% (266 records identified on 15th August 2023 using our search query versus 307 on 18th February 2026), substantial time will be required before a sufficiently large and coherent body of evidence accumulates to support clear conclusions regarding the effects of the examined modifiers and treatments. To accelerate the advancement of our knowledge, future research should prioritize: (i) systematically testing under‐represented abiotic and biotic modifiers across environmental gradients. In this context, the following specific knowledge gaps have been highlighted: the role of mycorrhizal associations in seedling recruitment across diverse ecosystems, effects of fertilization across doses and species, stratification (particularly warm stratification), scarification and chemical treatments to evaluate their relative effectiveness in enhancing germination and seedling performance across a wide range of species, and experiments on interspecific and intraspecific competition with careful attention to controlling potential confounding factors. (ii) Future studies should explicitly incorporate context‐specific variables to capture the influence of local environmental conditions on modifier and treatment effects. (iii) Research should adopt experimental designs that facilitate cross‐study synthesis and improve the generalizability of findings.</p><p>Given that plant functional traits shape species' responses to both natural modifiers and experimental treatments, a trait‐based research approach holds promise for filling these knowledge gaps. Linking modifier and treatment effects to life‐history strategies and functional traits could help identify generalizable patterns and improve predictive capacity in ecology and conservation (Loureiro et al. <xref rid="ece373399-bib-0037" ref-type="bibr">2023</xref>). By integrating trait‐based approaches with context‐explicit experimental designs, future studies can move beyond isolated findings to achieve a more mechanistic and generalizable understanding of seedling recruitment. Advancing our knowledge of how modifiers and treatments influence seedling recruitment will ultimately improve seedling establishment and propagation in restoration contexts, which are essential for mitigating the impacts of climate change on biodiversity.</p></sec><sec id="ece373399-sec-0019"><title>Author Contributions</title><p>
+<bold>Sarah Bürli:</bold> conceptualization (equal), data curation (lead), formal analysis (lead), investigation (lead), methodology (equal), project administration (equal), visualization (lead), writing – original draft (lead), writing – review and editing (lead). <bold>Hannah L. Buckley:</bold> conceptualization (equal), data curation (equal), formal analysis (equal), funding acquisition (equal), investigation (equal), methodology (equal), project administration (equal), visualization (equal), writing – original draft (equal), writing – review and editing (equal). <bold>Bradley S. Case:</bold> conceptualization (equal), data curation (equal), formal analysis (equal), funding acquisition (equal), investigation (equal), methodology (equal), project administration (equal), visualization (equal), writing – original draft (equal), writing – review and editing (equal).</p></sec><sec id="ece373399-sec-0015"><title>Funding</title><p>This work was supported by grants from the New Zealand Forest Service|Te Uru Rākau (Contract No. 1BT‐01971‐AUT) and from New Zealand's Biological Heritage National Science Challenge (Contract No. 2223–44‐009).</p></sec><sec sec-type="COI-statement" id="ece373399-sec-0016"><title>Conflicts of Interest</title><p>The authors declare no conflicts of interest.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="ece373399-supitem-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Material S1.</bold> Search string for literature search in Scopus database done on the 15 August 2024.</p><p>
+<bold>Material S2</bold>. List of the 266 papers identified by our search string from the Scopus database (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.scopus.com" ext-link-type="uri">https://www.scopus.com</ext-link>) on the 15 August 2023.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ECE3-16-e73399-s001.docx" position="float" orientation="portrait"/></supplementary-material></sec></body><back><ack id="ece373399-sec-0014"><title>Acknowledgments</title><p>We thank the members of the Spatial Ecology Group of the Auckland University of Technology for their feedback on the search string used in this review. Open access publishing facilitated by Auckland University of Technology, as part of the Wiley ‐ Auckland University of Technology agreement via the Council of Australasian University Librarians.</p></ack><sec sec-type="data-availability" id="ece373399-sec-0018"><title>Data Availability Statement</title><p>Data are archived on the international open‐access repository DRYAD, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://doi.org/10.5061/dryad.j0zpc86wf" ext-link-type="uri" specific-use="dataset is-supplemented-by">https://doi.org/10.5061/dryad.j0zpc86wf</ext-link>.</p></sec><ref-list content-type="cited-references" id="ece373399-bibl-0001"><title>References</title><ref id="ece373399-bib-0001"><mixed-citation publication-type="journal" id="ece373399-cit-0001">
+<string-name name-style="western">
+<surname>Aljasmi</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>El‐Keblawy</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K. A.</given-names>
+<surname>Mosa</surname>
+</string-name>. <year>2021</year>. “<article-title>Abiotic Factors Controlling Germination of the Multipurpose Invasive <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Prosopis pallida</italic>
+</styled-content>: Towards Afforestation of Salt‐Affected Lands in the Subtropical Arid Arabian Desert</article-title>.” <source>Tropical Ecology</source>
+<volume>62</volume>, no. <issue>1</issue>: <fpage>116</fpage>–<lpage>125</lpage>. <pub-id pub-id-type="doi">10.1007/s42965-020-00124-3</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0002"><mixed-citation publication-type="journal" id="ece373399-cit-0002">
+<string-name name-style="western">
+<surname>Baskin</surname>, <given-names>C. C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>Zackrisson</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Baskin</surname>
+</string-name>. <year>2002</year>. “<article-title>Role of Warm Stratification in Promoting Germination of Seeds of <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Empetrum hermaphroditum</italic>
+</styled-content> (Empetraceae), a Circumboreal Species With a Stony Endocarp</article-title>.” <source>American Journal of Botany</source>
+<volume>89</volume>, no. <issue>3</issue>: <fpage>486</fpage>–<lpage>493</lpage>. <pub-id pub-id-type="doi">10.3732/ajb.89.3.486</pub-id>.<pub-id pub-id-type="pmid">21665646</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0003"><mixed-citation publication-type="journal" id="ece373399-cit-0003">
+<string-name name-style="western">
+<surname>Baskin</surname>, <given-names>J. M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C. C.</given-names>
+<surname>Baskin</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Li</surname>
+</string-name>. <year>2000</year>. “<article-title>Taxonomy, Anatomy and Evolution of Physical Dormancy in Seeds</article-title>.” <source>Plant Species Biology</source>
+<volume>15</volume>, no. <issue>2</issue>: <fpage>139</fpage>–<lpage>152</lpage>. <pub-id pub-id-type="doi">10.1046/j.1442-1984.2000.00034.x</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0004"><mixed-citation publication-type="journal" id="ece373399-cit-0004">
+<string-name name-style="western">
+<surname>BassiriRad</surname>, <given-names>H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. F.</given-names>
+<surname>Lussenhop</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. L.</given-names>
+<surname>Sehtiya</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K. K.</given-names>
+<surname>Borden</surname>
+</string-name>. <year>2015</year>. “<article-title>Nitrogen Deposition Potentially Contributes to Oak Regeneration Failure in the Midwestern Temperate Forests of the USA</article-title>.” <source>Oecologia</source>
+<volume>177</volume>, no. <issue>1</issue>: <fpage>53</fpage>–<lpage>63</lpage>. <pub-id pub-id-type="doi">10.1007/s00442-014-3119-z</pub-id>.<pub-id pub-id-type="pmid">25407618</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0005"><mixed-citation publication-type="book" id="ece373399-cit-0005">
+<string-name name-style="western">
+<surname>Berjak</surname>, <given-names>P.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>N. W.</given-names>
+<surname>Pammenter</surname>
+</string-name>. <year>2004</year>. “<part-title>Recalcitrant Seeds</part-title>.” In <source>Handbook of Seed Physiology, Application to Agriculture</source>, edited by <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>R. L.</given-names>
+<surname>Benech‐Arnold</surname>
+</string-name>
+</person-group> and <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>R. A.</given-names>
+<surname>Sánchez</surname>
+</string-name>
+</person-group>, <fpage>480</fpage>. <publisher-name>Haworth Press</publisher-name>.</mixed-citation></ref><ref id="ece373399-bib-0006"><mixed-citation publication-type="journal" id="ece373399-cit-0006">
+<string-name name-style="western">
+<surname>Bobbink</surname>, <given-names>R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Hicks</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Galloway</surname>
+</string-name>, et al. <year>2010</year>. “<article-title>Global Assessment of Nitrogen Deposition Effects on Terrestrial Plant Diversity: A Synthesis</article-title>.” <source>Ecological Applications</source>
+<volume>20</volume>, no. <issue>1</issue>: <fpage>30</fpage>–<lpage>59</lpage>. <pub-id pub-id-type="doi">10.1890/08-1140.1</pub-id>.<pub-id pub-id-type="pmid">20349829</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0007"><mixed-citation publication-type="journal" id="ece373399-cit-0007">
+<string-name name-style="western">
+<surname>Bürli</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L. A.</given-names>
+<surname>McClean</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. S.</given-names>
+<surname>Case</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>David Hall</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H. L.</given-names>
+<surname>Buckley</surname>
+</string-name>. <year>2026</year>. “<article-title>Differential Seedling Survival of Early‐Planted, Late‐Successional Trees: Results From Three Forest Restoration Experiments</article-title>.” <source>Ecological Solutions and Evidence</source>
+<volume>7</volume>: <elocation-id>e70207</elocation-id>. <pub-id pub-id-type="doi">10.1002/2688-8319.70207</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0008"><mixed-citation publication-type="journal" id="ece373399-cit-0008">
+<string-name name-style="western">
+<surname>Canham</surname>, <given-names>C. D.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Murphy</surname>
+</string-name>. <year>2016</year>. “<article-title>The Demography of Tree Species Response to Climate: Seedling Recruitment and Survival</article-title>.” <source>Ecosphere</source>
+<volume>7</volume>, no. <issue>8</issue>: <elocation-id>e01424</elocation-id>. <pub-id pub-id-type="doi">10.1002/ecs2.1424</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0009"><mixed-citation publication-type="journal" id="ece373399-cit-0009">
+<string-name name-style="western">
+<surname>Carswell</surname>, <given-names>F. E.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>Doherty</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. B.</given-names>
+<surname>Allen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. E.</given-names>
+<surname>Brignall‐Theyer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Richardson</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S. K.</given-names>
+<surname>Wiser</surname>
+</string-name>. <year>2012</year>. “<article-title>Quantification of the Effects of Aboveground and Belowground Competition on Growth of Seedlings in a Conifer‐Angiosperm Forest</article-title>.” <source>Forest Ecology and Management</source>
+<volume>269</volume>: <fpage>188</fpage>–<lpage>196</lpage>. <pub-id pub-id-type="doi">10.1016/j.foreco.2011.12.027</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0010"><mixed-citation publication-type="journal" id="ece373399-cit-0010">
+<string-name name-style="western">
+<surname>Catford</surname>, <given-names>J. A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. R.</given-names>
+<surname>Wilson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Pyšek</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. E.</given-names>
+<surname>Hulme</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R. P.</given-names>
+<surname>Duncan</surname>
+</string-name>. <year>2022</year>. “<article-title>Addressing Context Dependence in Ecology</article-title>.” <source>Trends in Ecology &amp; Evolution</source>
+<volume>37</volume>, no. <issue>2</issue>: <fpage>158</fpage>–<lpage>170</lpage>. <pub-id pub-id-type="doi">10.1016/j.tree.2021.09.007</pub-id>.<pub-id pub-id-type="pmid">34756764</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0011"><mixed-citation publication-type="book" id="ece373399-cit-0011">
+<string-name name-style="western">
+<surname>Chandler</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Cumpston</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Page</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>V. J. H. W.</given-names>
+<surname>Welch</surname>
+</string-name>. <year>2019</year>. <source>Cochrane Handbook for Systematic Reviews of Interventions</source>. Vol. <volume>4</volume>, <elocation-id>14651858</elocation-id>. <publisher-name>Wiley</publisher-name>.</mixed-citation></ref><ref id="ece373399-bib-0012"><mixed-citation publication-type="journal" id="ece373399-cit-0012">
+<string-name name-style="western">
+<surname>Clark</surname>, <given-names>P. W.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>A. W.</given-names>
+<surname>D'Amato</surname>
+</string-name>. <year>2023</year>. “<article-title>Seedbed Not Rescue Effect Buffer the Role of Extreme Precipitation on Temperate Forest Regeneration</article-title>.” <source>Ecology</source>
+<volume>104</volume>, no. <issue>3</issue>: <elocation-id>e3926</elocation-id>. <pub-id pub-id-type="doi">10.1002/ecy.3926</pub-id>.<pub-id pub-id-type="pmid">36415040</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0013"><mixed-citation publication-type="journal" id="ece373399-cit-0013">
+<string-name name-style="western">
+<surname>Connolly</surname>, <given-names>B. M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L. K.</given-names>
+<surname>Agnew</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. L.</given-names>
+<surname>Orrock</surname>
+</string-name>. <year>2017</year>. “<article-title>Interactive Effects of Contact Fungicide and Cold Stratification on the Germination Rate for Five Dominant Temperate Tree Species</article-title>.” <source>Forest Science</source>
+<volume>63</volume>, no. <issue>3</issue>: <fpage>303</fpage>–<lpage>309</lpage>. <pub-id pub-id-type="doi">10.5849/FS-2016-110R3</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0014"><mixed-citation publication-type="journal" id="ece373399-cit-0014">
+<string-name name-style="western">
+<surname>Crofts</surname>, <given-names>A. L.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>C. D.</given-names>
+<surname>Brown</surname>
+</string-name>. <year>2020</year>. “<article-title>The Importance of Biotic Filtering on Boreal Conifer Recruitment at Alpine Treeline</article-title>.” <source>Ecography</source>
+<volume>43</volume>, no. <issue>6</issue>: <fpage>914</fpage>–<lpage>929</lpage>. <pub-id pub-id-type="doi">10.1111/ecog.04899</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0015"><mixed-citation publication-type="journal" id="ece373399-cit-0015">
+<string-name name-style="western">
+<surname>Cui</surname>, <given-names>D.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Liang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Wang</surname>
+</string-name>. <year>2021</year>. “<article-title>Observed and Projected Changes in Global Climate Zones Based on Köppen Climate Classification</article-title>.” <source>WIREs Climate Change</source>
+<volume>12</volume>, no. <issue>3</issue>: <elocation-id>e701</elocation-id>. <pub-id pub-id-type="doi">10.1002/wcc.701</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0016"><mixed-citation publication-type="book" id="ece373399-cit-0016">
+<string-name name-style="western">
+<surname>Das</surname>, <given-names>R.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Biswas</surname>
+</string-name>. <year>2022</year>. “<part-title>Influence of Abiotic Stresses on Seed Production and Quality</part-title>.” In <source>Seed Biology Updates</source>, edited by <person-group person-group-type="editor">
+<string-name name-style="western">
+<given-names>J. C.</given-names>
+<surname>Jimenez‐Lopez</surname>
+</string-name>
+</person-group>. <publisher-name>IntechOpen</publisher-name>.</mixed-citation></ref><ref id="ece373399-bib-0017"><mixed-citation publication-type="journal" id="ece373399-cit-0017">
+<string-name name-style="western">
+<surname>Dunn</surname>, <given-names>G. M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. R.</given-names>
+<surname>Huth</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Lewty</surname>
+</string-name>. <year>1997</year>. “<article-title>Coating Nursery Containers With Copper Carbonate Improves Root Morphology of Five Native Australian Tree Species Used in Agroforestry Systems</article-title>.” <source>Agroforestry Systems</source>
+<volume>37</volume>, no. <issue>2</issue>: <fpage>143</fpage>–<lpage>155</lpage>. <pub-id pub-id-type="doi">10.1023/A:1005863707277</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0018"><mixed-citation publication-type="journal" id="ece373399-cit-0018">
+<string-name name-style="western">
+<surname>Dupuy</surname>, <given-names>J. M.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>R. L.</given-names>
+<surname>Chazdon</surname>
+</string-name>. <year>2008</year>. “<article-title>Interacting Effects of Canopy Gap, Understory Vegetation and Leaf Litter on Tree Seedling Recruitment and Composition in Tropical Secondary Forests</article-title>.” <source>Forest Ecology and Management</source>
+<volume>255</volume>, no. <issue>11</issue>: <fpage>3716</fpage>–<lpage>3725</lpage>. <pub-id pub-id-type="doi">10.1016/j.foreco.2008.03.021</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0019"><mixed-citation publication-type="journal" id="ece373399-cit-0019">
+<string-name name-style="western">
+<surname>Facelli</surname>, <given-names>J. M.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>S. T.</given-names>
+<surname>Pickett</surname>
+</string-name>. <year>1991</year>. “<article-title>Plant Litter: Its Dynamics and Effects on Plant Community Structure</article-title>.” <source>Botanical Review</source>
+<volume>57</volume>: <fpage>1</fpage>–<lpage>32</lpage>. <pub-id pub-id-type="doi">10.1007/BF02858763</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0020"><mixed-citation publication-type="journal" id="ece373399-cit-0020">
+<string-name name-style="western">
+<surname>Galíndez</surname>, <given-names>G.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Ledesma</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Álvarez</surname>
+</string-name>, et al. <year>2019</year>. “<article-title>Intraspecific Variation in Seed Germination and Storage Behaviour of Cordia Tree Species of Subtropical Montane Forests of Argentina: Implications for Ex Situ Conservation</article-title>.” <source>South African Journal of Botany</source>
+<volume>123</volume>: <fpage>393</fpage>–<lpage>399</lpage>. <pub-id pub-id-type="doi">10.1016/j.sajb.2019.03.029</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0021"><mixed-citation publication-type="journal" id="ece373399-cit-0021">
+<string-name name-style="western">
+<surname>Geneve</surname>, <given-names>R. L.</given-names>
+</string-name>
+<year>2003</year>. “<article-title>Impact of Temperature on Seed Dormancy</article-title>.” <source>HortScience</source>
+<volume>38</volume>, no. <issue>3</issue>: <fpage>336</fpage>–<lpage>341</lpage>.</mixed-citation></ref><ref id="ece373399-bib-0022"><mixed-citation publication-type="book" id="ece373399-cit-0022">
+<string-name name-style="western">
+<surname>Gerdemann</surname>, <given-names>D. W.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D. G.</given-names>
+<surname>Torrey</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D. T. C.</given-names>
+<surname>Clarkson</surname>
+</string-name>. <year>1975</year>. “<part-title>The Development and Function of Roots</part-title>.” In <source>Vesicular arbuscular mycorrhizae</source>, <fpage>575</fpage>–<lpage>591</lpage>. <publisher-name>Academic press</publisher-name>.</mixed-citation></ref><ref id="ece373399-bib-0023"><mixed-citation publication-type="journal" id="ece373399-cit-0023">
+<string-name name-style="western">
+<surname>Grime</surname>, <given-names>J. P.</given-names>
+</string-name>
+<year>1979</year>. “<article-title>Primary Strategies in Plants</article-title>.” <source>Transactions of the Botanical Society of Edinburgh</source>
+<volume>43</volume>, no. <issue>2</issue>: <fpage>151</fpage>–<lpage>160</lpage>. <pub-id pub-id-type="doi">10.1080/0374660790868534</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0024"><mixed-citation publication-type="book" id="ece373399-cit-0024">
+<string-name name-style="western">
+<surname>Grime</surname>, <given-names>J. P.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>S. H.</given-names>
+<surname>Hillier</surname>
+</string-name>. <year>1992</year>. “<part-title>The Contribution of Seedling Regeneration to the Structure and Dynamics of Plant Communities and Larger Units of Landscape</part-title>.” In <source>The Ecology of Regeneration in Plant Communities</source>, <fpage>349</fpage>–<lpage>364</lpage>. <publisher-name>CAB International</publisher-name>.</mixed-citation></ref><ref id="ece373399-bib-0025"><mixed-citation publication-type="journal" id="ece373399-cit-0025">
+<string-name name-style="western">
+<surname>Grulke</surname>, <given-names>N. E.</given-names>
+</string-name>
+<year>2010</year>. “<article-title>Plasticity in Physiological Traits in Conifers: Implications for Response to Climate Change in the Western US</article-title>.” <source>Environmental Pollution</source>
+<volume>158</volume>, no. <issue>6</issue>: <fpage>2032</fpage>–<lpage>2042</lpage>. <pub-id pub-id-type="doi">10.1016/j.envpol.2009.12.010</pub-id>.<pub-id pub-id-type="pmid">20056301</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0026"><mixed-citation publication-type="journal" id="ece373399-cit-0026">
+<string-name name-style="western">
+<surname>Hadi</surname>, <given-names>S. M. S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M. Z.</given-names>
+<surname>Ahmed</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Hameed</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. A.</given-names>
+<surname>Khan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Gul</surname>
+</string-name>. <year>2018</year>. “<article-title>Seed Germination and Seedling Growth Responses of Toothbrush Tree (<italic toggle="yes">Salvadora persica</italic> Linn.) to Different Interacting Abiotic Stresses</article-title>.” <source>Flora: Morphology, Distribution, Functional Ecology of Plants</source>
+<volume>243</volume>: <fpage>45</fpage>–<lpage>52</lpage>. <pub-id pub-id-type="doi">10.1016/j.flora.2018.04.002</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0027"><mixed-citation publication-type="journal" id="ece373399-cit-0027">
+<string-name name-style="western">
+<surname>Hättenschwiler</surname>, <given-names>S.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Körner</surname>
+</string-name>. <year>2003</year>. “<article-title>Does Elevated CO<sub>2</sub> Facilitate Naturalization of the Non‐Indigenous <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Prunus laurocerasus</italic>
+</styled-content> in Swiss Temperate Forests?</article-title>” <source>Functional Ecology</source>
+<volume>17</volume>, no. <issue>6</issue>: <fpage>778</fpage>–<lpage>785</lpage>. <pub-id pub-id-type="doi">10.1111/j.1365-2435.2003.00785.x</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0028"><mixed-citation publication-type="journal" id="ece373399-cit-0028">
+<string-name name-style="western">
+<surname>Hoeksema</surname>, <given-names>J. D.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>V. B.</given-names>
+<surname>Chaudhary</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. A.</given-names>
+<surname>Gehring</surname>
+</string-name>, et al. <year>2010</year>. “<article-title>A Meta‐Analysis of Context‐Dependency in Plant Response to Inoculation With Mycorrhizal Fungi</article-title>.” <source>Ecology Letters</source>
+<volume>13</volume>, no. <issue>3</issue>: <fpage>394</fpage>–<lpage>407</lpage>. <pub-id pub-id-type="doi">10.1111/j.1461-0248.2009.01430.x</pub-id>.<pub-id pub-id-type="pmid">20100237</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0029"><mixed-citation publication-type="journal" id="ece373399-cit-0029">
+<string-name name-style="western">
+<surname>Ibáñez</surname>, <given-names>I.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. S.</given-names>
+<surname>Clark</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>LaDeau</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. H. R.</given-names>
+<surname>Lambers</surname>
+</string-name>. <year>2007</year>. “<article-title>Exploiting Temporal Variability to Understand Tree Recruitment Response to Climate Change</article-title>.” <source>Ecological Monographs</source>
+<volume>77</volume>, no. <issue>2</issue>: <fpage>163</fpage>–<lpage>177</lpage>. <pub-id pub-id-type="doi">10.1890/06-1097</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0030"><mixed-citation publication-type="journal" id="ece373399-cit-0030">
+<string-name name-style="western">
+<surname>Ibáñez</surname>, <given-names>T. S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D. A.</given-names>
+<surname>Wardle</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Gundale</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. C.</given-names>
+<surname>Nilsson</surname>
+</string-name>. <year>2022</year>. “<article-title>Effects of Soil Abiotic and Biotic Factors on Tree Seedling Regeneration Following a Boreal Forest Wildfire</article-title>.” <source>Ecosystems</source>
+<volume>25</volume>, no. <issue>2</issue>: <fpage>471</fpage>–<lpage>487</lpage>. <pub-id pub-id-type="doi">10.1007/s10021-021-00666-0</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0031"><mixed-citation publication-type="journal" id="ece373399-cit-0031">
+<string-name name-style="western">
+<surname>Iralu</surname>, <given-names>V.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>H. S. A.</given-names>
+<surname>Barbhuyan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Upadhaya</surname>
+</string-name>. <year>2019</year>. “<article-title>Ecology of Seed Germination in Threatened Trees: A Review</article-title>.” <source>Energy, Ecology and Environment</source>
+<volume>4</volume>: <fpage>189</fpage>–<lpage>210</lpage>. <pub-id pub-id-type="doi">10.1007/s40974-019-00121-w</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0032"><mixed-citation publication-type="book" id="ece373399-cit-0032">
+<string-name name-style="western">
+<surname>Körner</surname>, <given-names>C.</given-names>
+</string-name>
+<year>2012</year>. <source>Alpine Treelines: Functional Ecology of the Global High Elevation Tree Limits</source>. <publisher-name>Springer</publisher-name>.</mixed-citation></ref><ref id="ece373399-bib-0033"><mixed-citation publication-type="book" id="ece373399-cit-0033">
+<string-name name-style="western">
+<surname>Körner</surname>, <given-names>C.</given-names>
+</string-name>
+<year>2013</year>. <source>Alpine Plant Life: Functional Plant Ecology of High Mountain Ecosystems</source>. <publisher-name>Springer</publisher-name>.</mixed-citation></ref><ref id="ece373399-bib-0034"><mixed-citation publication-type="journal" id="ece373399-cit-0034">
+<string-name name-style="western">
+<surname>Lacoretz</surname>, <given-names>M. V.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Malavert</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Madanes</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Cristiano</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P. M.</given-names>
+<surname>Tognetti</surname>
+</string-name>. <year>2022</year>. “<article-title>Seed Dormancy and Germination of Native and Invasive Alien Woody Species of an Endangered Temperate Forest in the Argentine Pampas</article-title>.” <source>Forest Ecology and Management</source>
+<volume>526</volume>: <elocation-id>120577</elocation-id>. <pub-id pub-id-type="doi">10.1016/j.foreco.2022.120577</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0035"><mixed-citation publication-type="journal" id="ece373399-cit-0035">
+<string-name name-style="western">
+<surname>Li</surname>, <given-names>K.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Dong</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Zhao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Chen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Xu</surname>
+</string-name>. <year>2017</year>. “<article-title>Effects of Cultivar and Ethanol Disinfection on Aseptic Germination of Loquat (<styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Eriobotrya japonica</italic>
+</styled-content>) Seeds</article-title>.” <source>HortScience</source>
+<volume>52</volume>, no. <issue>7</issue>: <fpage>941</fpage>–<lpage>945</lpage>. <pub-id pub-id-type="doi">10.21273/HORTSCI11979-17</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0086"><mixed-citation publication-type="journal" id="ece373399-cit-0086">
+<string-name name-style="western">
+<surname>Liang</surname>, <given-names>H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Wang</surname>
+</string-name>, et al. <year>2022</year>. “<article-title>Root development in Cunninghamia Lanceolata and Schima Superba Seedlings Expresses Contrasting Preferences to Nitrogen Forms</article-title>.” <source>Forests</source>
+<volume>13</volume>, no. <issue>12</issue>: <fpage>2085</fpage>.</mixed-citation></ref><ref id="ece373399-bib-0036"><mixed-citation publication-type="book" id="ece373399-cit-0036">
+<string-name name-style="western">
+<surname>Littell</surname>, <given-names>J. H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Corcoran</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Pillai</surname>
+</string-name>. <year>2008</year>. <source>Systematic Reviews and Meta‐Analysis</source>. <publisher-name>Oxford University Press</publisher-name>. <pub-id pub-id-type="doi">10.1093/acprof:oso/9780195326543.001.0001</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0037"><mixed-citation publication-type="journal" id="ece373399-cit-0037">
+<string-name name-style="western">
+<surname>Loureiro</surname>, <given-names>N.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Mantuano</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Manhães</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Sansevero</surname>
+</string-name>. <year>2023</year>. “<article-title>Use of the Trait‐Based Approach in Ecological Restoration Studies: A Global Review</article-title>.” <source>Trees</source>
+<volume>37</volume>, no. <issue>5</issue>: <fpage>1287</fpage>–<lpage>1297</lpage>. <pub-id pub-id-type="doi">10.1007/s00468-023-02439-9</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0038"><mixed-citation publication-type="journal" id="ece373399-cit-0038">
+<string-name name-style="western">
+<surname>Lu</surname>, <given-names>D.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>G. G.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Q.</given-names>
+<surname>Yan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Gao</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Zhu</surname>
+</string-name>. <year>2018</year>. “<article-title>Effects of Gap Size and Within‐Gap Position on Seedling Growth and Biomass Allocation: Is the Gap Partitioning Hypothesis Applicable to the Temperate Secondary Forest Ecosystems in Northeast China?</article-title>” <source>Forest Ecology and Management</source>
+<volume>429</volume>: <fpage>351</fpage>–<lpage>362</lpage>. <pub-id pub-id-type="doi">10.1016/j.foreco.2018.07.031</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0039"><mixed-citation publication-type="journal" id="ece373399-cit-0039">
+<string-name name-style="western">
+<surname>Lu</surname>, <given-names>R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Du</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Sun</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Yan</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Xia</surname>
+</string-name>. <year>2022</year>. “<article-title>Nocturnal Warming Accelerates Drought‐Induced Seedling Mortality of Two Evergreen Tree Species</article-title>.” <source>Tree Physiology</source>
+<volume>42</volume>, no. <issue>6</issue>: <fpage>1164</fpage>–<lpage>1176</lpage>. <pub-id pub-id-type="doi">10.1093/treephys/tpab168</pub-id>.<pub-id pub-id-type="pmid">34919711</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0040"><mixed-citation publication-type="journal" id="ece373399-cit-0040">
+<string-name name-style="western">
+<surname>Martin</surname>, <given-names>F. M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Uroz</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D. G.</given-names>
+<surname>Barker</surname>
+</string-name>. <year>2017</year>. “<article-title>Ancestral Alliances: Plant Mutualistic Symbioses With Fungi and Bacteria</article-title>.” <source>Science</source>
+<volume>356</volume>, no. <issue>6340</issue>: <elocation-id>eaad4501</elocation-id>. <pub-id pub-id-type="doi">10.1126/science.aad4501</pub-id>.<pub-id pub-id-type="pmid">28546156</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0041"><mixed-citation publication-type="journal" id="ece373399-cit-0041">
+<string-name name-style="western">
+<surname>Martínez‐Garza</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Pena</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Ricker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Campos</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>H. F.</given-names>
+<surname>Howe</surname>
+</string-name>. <year>2005</year>. “<article-title>Restoring Tropical Biodiversity: Leaf Traits Predict Growth and Survival of Late‐Successional Trees in Early‐Successional Environments</article-title>.” <source>Forest Ecology and Management</source>
+<volume>217</volume>, no. <issue>2–3</issue>: <fpage>365</fpage>–<lpage>379</lpage>. <pub-id pub-id-type="doi">10.1016/j.foreco.2005.07.001</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0042"><mixed-citation publication-type="journal" id="ece373399-cit-0042">
+<string-name name-style="western">
+<surname>McAlpine</surname>, <given-names>K. G.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>D. R.</given-names>
+<surname>Drake</surname>
+</string-name>. <year>2003</year>. “<article-title>The Effects of Small‐Scale Environmental Heterogeneity on Seed Germination in Experimental Treefall Gaps in New Zealand</article-title>.” <source>Plant Ecology</source>
+<volume>165</volume>, no. <issue>2</issue>: <fpage>207</fpage>–<lpage>215</lpage>. <pub-id pub-id-type="doi">10.1023/A:1022247707932</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0043"><mixed-citation publication-type="journal" id="ece373399-cit-0043">
+<string-name name-style="western">
+<surname>McConnaughay</surname>, <given-names>K. D. M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>S. L.</given-names>
+<surname>Bassow</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. M.</given-names>
+<surname>Berntson</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F. A.</given-names>
+<surname>Bazzaz</surname>
+</string-name>. <year>1996</year>. “<article-title>Leaf Senescence and Decline of End‐Of‐Season Gas Exchange in Five Temperate Deciduous Tree Species Grown in Elevated CO2 Concentrations</article-title>.” <source>Global Change Biology</source>
+<volume>2</volume>, no. <issue>1</issue>: <fpage>25</fpage>–<lpage>33</lpage>. <pub-id pub-id-type="doi">10.1111/j.1365-2486.1996.tb00046.x</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0044"><mixed-citation publication-type="journal" id="ece373399-cit-0044">
+<string-name name-style="western">
+<surname>Milbau</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>B. J.</given-names>
+<surname>Graae</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Shevtsova</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Nijs</surname>
+</string-name>. <year>2009</year>. “<article-title>Effects of a Warmer Climate on Seed Germination in the Subarctic</article-title>.” <source>Annals of Botany</source>
+<volume>104</volume>, no. <issue>2</issue>: <fpage>287</fpage>–<lpage>296</lpage>. <pub-id pub-id-type="doi">10.1093/aob/mcp117</pub-id>.<pub-id pub-id-type="pmid">19443459</pub-id>
+<pub-id pub-id-type="pmcid">PMC2710907</pub-id></mixed-citation></ref><ref id="ece373399-bib-0045"><mixed-citation publication-type="journal" id="ece373399-cit-0045">
+<string-name name-style="western">
+<surname>Morgenson</surname>, <given-names>G.</given-names>
+</string-name>
+<year>2000</year>. “<article-title>Effects of Cold Stratification, Warm‐Cold Stratification, and Acid Scarification on Seed Germination of 3 Crataegus Species</article-title>.” <source>Tree Planters' Notes</source>
+<volume>49</volume>, no. <issue>3</issue>: <fpage>72</fpage>–<lpage>74</lpage>.</mixed-citation></ref><ref id="ece373399-bib-0046"><mixed-citation publication-type="journal" id="ece373399-cit-0046">
+<string-name name-style="western">
+<surname>Muller</surname>, <given-names>C. H.</given-names>
+</string-name>
+<year>1965</year>. “<article-title>Inhibitory Terpenes Volatilized From Salvia Shrubs</article-title>.” <source>Bulletin of the Torrey Botanical Club</source>
+<volume>92</volume>: <fpage>38</fpage>–<lpage>45</lpage>. <pub-id pub-id-type="doi">10.2307/2483311</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0047"><mixed-citation publication-type="journal" id="ece373399-cit-0047">
+<string-name name-style="western">
+<surname>Nadelhoffer</surname>, <given-names>K. J.</given-names>
+</string-name>
+<year>2000</year>. “<article-title>The Potential Effects of Nitrogen Deposition on Fine‐Root Production in Forest Ecosystems</article-title>.” <source>New Phytologist</source>
+<volume>147</volume>, no. <issue>1</issue>: <fpage>131</fpage>–<lpage>139</lpage>. <pub-id pub-id-type="doi">10.1046/j.1469-8137.2000.00677.x</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0048"><mixed-citation publication-type="journal" id="ece373399-cit-0048">
+<string-name name-style="western">
+<surname>Nawaz</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Hussain</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Jabbar</surname>
+</string-name>, et al. <year>2013</year>. “<article-title>Seed Priming a Technique</article-title>.” <source>International Journal of Agriculture and Crop Sciences</source>
+<volume>6</volume>, no. <issue>20</issue>: <fpage>1373</fpage>.</mixed-citation></ref><ref id="ece373399-bib-0049"><mixed-citation publication-type="journal" id="ece373399-cit-0049">
+<string-name name-style="western">
+<surname>Niinemets</surname>, <given-names>Ü.</given-names>
+</string-name>
+<year>2010</year>. “<article-title>Responses of Forest Trees to Single and Multiple Environmental Stresses From Seedlings to Mature Plants: Past Stress History, Stress Interactions, Tolerance and Acclimation</article-title>.” <source>Forest Ecology and Management</source>
+<volume>260</volume>, no. <issue>10</issue>: <fpage>1623</fpage>–<lpage>1639</lpage>. <pub-id pub-id-type="doi">10.1016/j.foreco.2010.07.054</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0050"><mixed-citation publication-type="book" id="ece373399-cit-0050">
+<string-name name-style="western">
+<surname>Nilsson</surname>, <given-names>K.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Sangster</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C. C.</given-names>
+<surname>Konijnendijk</surname>
+</string-name>. <year>2011</year>. “<part-title>Forests, Trees and Human Health and Well‐Being: Introduction</part-title>.” In <source>Forests, Trees and Human Health</source>. <publisher-name>Springer</publisher-name>. <pub-id pub-id-type="doi">10.1007/978-90-481-9806-1_1</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0051"><mixed-citation publication-type="journal" id="ece373399-cit-0051">
+<string-name name-style="western">
+<surname>Niu</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Feng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Wang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Tian</surname>
+</string-name>. <year>2011</year>. “<article-title>Impact of Elevated O3 on Visible Foliar Symptom, Growth and Biomass of <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Cinnamomum camphora</italic>
+</styled-content> Seedlings Under Different Nitrogen Loads</article-title>.” <source>Journal of Environmental Monitoring</source>
+<volume>13</volume>, no. <issue>10</issue>: <fpage>2873</fpage>–<lpage>2879</lpage>. <pub-id pub-id-type="doi">10.1039/C1EM10305A</pub-id>.<pub-id pub-id-type="pmid">21853164</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0052"><mixed-citation publication-type="journal" id="ece373399-cit-0052">
+<string-name name-style="western">
+<surname>Osunkoya</surname>, <given-names>O. O.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>R. G.</given-names>
+<surname>Creese</surname>
+</string-name>. <year>1997</year>. “<article-title>Population Structure, Spatial Pattern and Seedling Establishment of the Grey Mangrove, <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Avicennia marina</italic>
+</styled-content> var. Australasica, in New Zealand</article-title>.” <source>Australian Journal of Botany</source>
+<volume>45</volume>, no. <issue>4</issue>: <fpage>707</fpage>–<lpage>725</lpage>. <pub-id pub-id-type="doi">10.1071/BT96070</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0053"><mixed-citation publication-type="journal" id="ece373399-cit-0053">
+<string-name name-style="western">
+<surname>Padilla</surname>, <given-names>F. M.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>F. I.</given-names>
+<surname>Pugnaire</surname>
+</string-name>. <year>2006</year>. “<article-title>The Role of Nurse Plants in the Restoration of Degraded Environments</article-title>.” <source>Frontiers in Ecology and the Environment</source>
+<volume>4</volume>, no. <issue>4</issue>: <fpage>196</fpage>–<lpage>202</lpage>. <pub-id pub-id-type="doi">10.1890/1540-9295(2006)004[0196:TRONPI]2.0.CO;2</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0054"><mixed-citation publication-type="journal" id="ece373399-cit-0054">
+<string-name name-style="western">
+<surname>Percy</surname>, <given-names>K.</given-names>
+</string-name>
+<year>1986</year>. “<article-title>The Effects of Simulated Acid Rain on Germinative Capacity, Growth and Morphology of Forest Tree Seedlings</article-title>.” <source>New Phytologist</source>
+<volume>104</volume>, no. <issue>3</issue>: <fpage>473</fpage>–<lpage>484</lpage>. <pub-id pub-id-type="doi">10.1111/j.1469-8137.1986.tb02914.x</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0055"><mixed-citation publication-type="journal" id="ece373399-cit-0055">
+<string-name name-style="western">
+<surname>Pretzsch</surname>, <given-names>H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Biber</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Schütze</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Uhl</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Rötzer</surname>
+</string-name>. <year>2014</year>. “<article-title>Forest Stand Growth Dynamics in Central Europe Have Accelerated Since 1870</article-title>.” <source>Nature Communications</source>
+<volume>5</volume>, no. <issue>1</issue>: <fpage>4967</fpage>. <pub-id pub-id-type="doi">10.1038/ncomms5967</pub-id>.<pub-id pub-id-type="pmcid">PMC4175583</pub-id><pub-id pub-id-type="pmid">25216297</pub-id></mixed-citation></ref><ref id="ece373399-bib-0056"><mixed-citation publication-type="book" id="ece373399-cit-0056">
+<string-name name-style="western">
+<surname>Pullin</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Frampton</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Livoreil</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Petrokofsky</surname>
+</string-name>. <year>2018</year>. <source>Guidelines and Standards for Evidence Synthesis in Environmental Management</source>. <publisher-name>Collaboration for Environmental Evidence (CEE)</publisher-name>. <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.environmentalevidence.org/information-for-authors" ext-link-type="uri">http://www.environmentalevidence.org/information‐for‐authors</ext-link>.</mixed-citation></ref><ref id="ece373399-bib-0057"><mixed-citation publication-type="book" id="ece373399-cit-0057">
+<collab collab-type="authors">R Core Team</collab>
+. <year>2021</year>. <source>R: A Language and Environment for Statistical Computing</source>. <publisher-name>R Foundation for Statistical Computing</publisher-name>. <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.r-project.org/" ext-link-type="uri">https://www.R‐project.org/</ext-link>.</mixed-citation></ref><ref id="ece373399-bib-0058"><mixed-citation publication-type="journal" id="ece373399-cit-0058">
+<string-name name-style="western">
+<surname>Rajjou</surname>, <given-names>L.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Debeaujon</surname>
+</string-name>. <year>2008</year>. “<article-title>Seed Longevity: Survival and Maintenance of High Germination Ability of Dry Seeds</article-title>.” <source>Comptes Rendus Biologies</source>
+<volume>331</volume>, no. <issue>10</issue>: <fpage>796</fpage>–<lpage>805</lpage>. <pub-id pub-id-type="doi">10.1016/j.crvi.2008.07.021</pub-id>.<pub-id pub-id-type="pmid">18926494</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0059"><mixed-citation publication-type="journal" id="ece373399-cit-0059">
+<string-name name-style="western">
+<surname>Rennenberg</surname>, <given-names>H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Kreutzer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Papen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Weber</surname>
+</string-name>. <year>1998</year>. “<article-title>Consequences of High Loads of Nitrogen for Spruce (<styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Picea abies</italic>
+</styled-content>) and Beech (<styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Fagus sylvatica</italic>
+</styled-content>) Forests</article-title>.” <source>New Phytologist</source>
+<volume>139</volume>, no. <issue>1</issue>: <fpage>71</fpage>–<lpage>86</lpage>. <pub-id pub-id-type="doi">10.1046/j.1469-8137.1998.00181.x</pub-id>.<pub-id pub-id-type="pmid">33863096</pub-id></mixed-citation></ref><ref id="ece373399-bib-0060"><mixed-citation publication-type="journal" id="ece373399-cit-0060">
+<string-name name-style="western">
+<surname>Rhaman</surname>, <given-names>M. S.</given-names>
+</string-name>
+<year>2025</year>. “<article-title>Seed Priming Before the Sprout: Revisiting an Established Technique for Stress‐Resilient Germination</article-title>.” <source>Seeds</source>
+<volume>4</volume>, no. <issue>3</issue>: <elocation-id>29</elocation-id>. <pub-id pub-id-type="doi">10.3390/seeds4030029</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0061"><mixed-citation publication-type="journal" id="ece373399-cit-0061">
+<string-name name-style="western">
+<surname>Richter</surname>, <given-names>S.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kipfer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Wohlgemuth</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Calderón Guerrero</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Ghazoul</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Moser</surname>
+</string-name>. <year>2012</year>. “<article-title>Phenotypic Plasticity Facilitates Resistance to Climate Change in a Highly Variable Environment</article-title>.” <source>Oecologia</source>
+<volume>169</volume>: <fpage>269</fpage>–<lpage>279</lpage>. <pub-id pub-id-type="doi">10.1007/s00442-011-2191-x</pub-id>.<pub-id pub-id-type="pmid">22081261</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0062"><mixed-citation publication-type="journal" id="ece373399-cit-0062">
+<string-name name-style="western">
+<surname>Sánchez‐Gómez</surname>, <given-names>D.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M. A.</given-names>
+<surname>Zavala</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Valladares</surname>
+</string-name>. <year>2006</year>. “<article-title>Seedling Survival Responses to Irradiance Are Differentially Influenced by Low‐Water Availability in Four Tree Species of the Iberian Cool Temperate‐Mediterranean Ecotone</article-title>.” <source>Acta Oecologica</source>
+<volume>30</volume>, no. <issue>3</issue>: <fpage>322</fpage>–<lpage>332</lpage>. <pub-id pub-id-type="doi">10.1016/j.actao.2006.05.005</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0063"><mixed-citation publication-type="journal" id="ece373399-cit-0063">
+<string-name name-style="western">
+<surname>Savolainen</surname>, <given-names>O.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Pyhäjärvi</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Knürr</surname>
+</string-name>. <year>2007</year>. “<article-title>Gene Flow and Local Adaptation in Trees</article-title>.” <source>Annual Review of Ecology, Evolution, and Systematics</source>
+<volume>38</volume>, no. <issue>1</issue>: <fpage>595</fpage>–<lpage>619</lpage>. <pub-id pub-id-type="doi">10.1146/annurev.ecolsys.38.091206.095646</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0064"><mixed-citation publication-type="journal" id="ece373399-cit-0064">
+<string-name name-style="western">
+<surname>Siqueira</surname>, <given-names>J. O.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>O. J.</given-names>
+<surname>Saggin‐Júnior</surname>
+</string-name>. <year>2001</year>. “<article-title>Dependency on Arbuscular Mycorrhizal Fungi and Responsiveness of Some Brazilian Native Woody Species</article-title>.” <source>Mycorrhiza</source>
+<volume>11</volume>: <fpage>245</fpage>–<lpage>255</lpage>. <pub-id pub-id-type="doi">10.1007/s005720100129</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0065"><mixed-citation publication-type="book" id="ece373399-cit-0065">
+<string-name name-style="western">
+<surname>Sisodia</surname>, <given-names>A.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Padhi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. K.</given-names>
+<surname>Pal</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Barman</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A. K.</given-names>
+<surname>Singh</surname>
+</string-name>. <year>2018</year>. “<part-title>Seed Priming on Germination, Growth and Flowering in Flowers and Ornamental Trees</part-title>.” In <source>Advances in Seed Priming</source>. <publisher-name>Springer</publisher-name>. <pub-id pub-id-type="doi">10.1007/978-981-13-0032-5_14</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0066"><mixed-citation publication-type="journal" id="ece373399-cit-0066">
+<string-name name-style="western">
+<surname>Slodowicz</surname>, <given-names>D.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>J. Y.</given-names>
+<surname>Humbert</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Arlettaz</surname>
+</string-name>. <year>2019</year>. “<article-title>The Relative Effectiveness of Seed Addition Methods for Restoring or Re‐Creating Species Rich Grasslands: A Systematic Review Protocol</article-title>.” <source>Environmental Evidence</source>
+<volume>8</volume>, no. <issue>1</issue>: <elocation-id>28</elocation-id>. <pub-id pub-id-type="doi">10.1186/s13750-019-0174-2</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0067"><mixed-citation publication-type="journal" id="ece373399-cit-0067">
+<string-name name-style="western">
+<surname>Spake</surname>, <given-names>R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>D. E.</given-names>
+<surname>Bowler</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. T.</given-names>
+<surname>Callaghan</surname>
+</string-name>, et al. <year>2023</year>. “<article-title>Understanding ‘It Depends’ in Ecology: A Guide to Hypothesising, Visualising and Interpreting Statistical Interactions</article-title>.” <source>Biological Reviews</source>
+<volume>98</volume>, no. <issue>4</issue>: <fpage>983</fpage>–<lpage>1002</lpage>. <pub-id pub-id-type="doi">10.1111/brv.12939</pub-id>.<pub-id pub-id-type="pmid">36859791</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0068"><mixed-citation publication-type="journal" id="ece373399-cit-0068">
+<string-name name-style="western">
+<surname>Stefanello</surname>, <given-names>R.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>R. T.</given-names>
+<surname>Puntel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Strazzabosco Dorneles</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. R. B.</given-names>
+<surname>Rhoden</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>U. R.</given-names>
+<surname>Nunes</surname>
+</string-name>. <year>2026</year>. “<article-title>Seed Priming With Graphene Oxide Improves Cadmium Stress Tolerance in Maize</article-title>.” <source>Journal of Toxicology and Environmental Health, Part A</source>
+<volume>1‐15</volume>: <fpage>1</fpage>–<lpage>15</lpage>. <pub-id pub-id-type="doi">10.1080/15287394.2025.2611420</pub-id>.<pub-id pub-id-type="pmid">41486432</pub-id></mixed-citation></ref><ref id="ece373399-bib-0069"><mixed-citation publication-type="journal" id="ece373399-cit-0069">
+<string-name name-style="western">
+<surname>Sujeeun</surname>, <given-names>L.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>S. C.</given-names>
+<surname>Thomas</surname>
+</string-name>. <year>2023</year>. “<article-title>Biochar Mitigates Allelopathic Effects in Temperate Trees</article-title>.” <source>Ecological Applications</source>
+<volume>33</volume>, no. <issue>4</issue>: <elocation-id>e2832</elocation-id>. <pub-id pub-id-type="doi">10.1002/eap.2832</pub-id>.<pub-id pub-id-type="pmid">36864680</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0070"><mixed-citation publication-type="journal" id="ece373399-cit-0070">
+<string-name name-style="western">
+<surname>Tedersoo</surname>, <given-names>L.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Bahram</surname>
+</string-name>. <year>2019</year>. “<article-title>Mycorrhizal Types Differ in Ecophysiology and Alter Plant Nutrition and Soil Processes</article-title>.” <source>Biological Reviews</source>
+<volume>94</volume>, no. <issue>5</issue>: <fpage>1857</fpage>–<lpage>1880</lpage>. <pub-id pub-id-type="doi">10.1111/brv.12538</pub-id>.<pub-id pub-id-type="pmid">31270944</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0071"><mixed-citation publication-type="journal" id="ece373399-cit-0071">
+<string-name name-style="western">
+<surname>Urretavizcaya</surname>, <given-names>M. F.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>G. E.</given-names>
+<surname>Defossé</surname>
+</string-name>. <year>2013</year>. “<article-title>Effects of Nurse Shrubs and Tree Shelters on the Survival and Growth of Two <styled-content style="fixed-case" toggle="no">
+<italic toggle="no">Austrocedrus chilensis</italic>
+</styled-content> Seedling Types in a Forest Restoration Trial in Semiarid Patagonia, Argentina</article-title>.” <source>Annals of Forest Science</source>
+<volume>70</volume>: <fpage>21</fpage>–<lpage>30</lpage>. <pub-id pub-id-type="doi">10.1007/s13595-012-0234-z</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0072"><mixed-citation publication-type="journal" id="ece373399-cit-0072">
+<string-name name-style="western">
+<surname>Vanderwel</surname>, <given-names>M. C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>V. S.</given-names>
+<surname>Lyutsarev</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D. W.</given-names>
+<surname>Purves</surname>
+</string-name>. <year>2013</year>. “<article-title>Climate‐Related Variation in Mortality and Recruitment Determine Regional Forest‐Type Distributions</article-title>.” <source>Global Ecology and Biogeography</source>
+<volume>22</volume>, no. <issue>11</issue>: <fpage>1192</fpage>–<lpage>1203</lpage>. <pub-id pub-id-type="doi">10.1111/geb.12081</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0073"><mixed-citation publication-type="journal" id="ece373399-cit-0073">
+<string-name name-style="western">
+<surname>Vázquez‐Yanes</surname>, <given-names>C.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Orozco‐Segovia</surname>
+</string-name>. <year>1992</year>. “<article-title>Effects of Litter From a Tropical Rainforest on Tree Seed Germination and Establishment Under Controlled Conditions</article-title>.” <source>Tree Physiology</source>
+<volume>11</volume>, no. <issue>4</issue>: <fpage>391</fpage>–<lpage>400</lpage>. <pub-id pub-id-type="doi">10.1093/treephys/11.4.391</pub-id>.<pub-id pub-id-type="pmid">14969944</pub-id>
+</mixed-citation></ref><ref id="ece373399-bib-0074"><mixed-citation publication-type="journal" id="ece373399-cit-0074">
+<string-name name-style="western">
+<surname>Velazco</surname>, <given-names>S. J. E.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C. T.</given-names>
+<surname>Blum</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P. M.</given-names>
+<surname>Hoffmann</surname>
+</string-name>. <year>2018</year>. “<article-title>Germination and Seedlings Development of the Threatened Species <italic toggle="yes">Quillaja brasiliensis</italic>
+</article-title>.” <source>Cerne</source>
+<volume>24</volume>, no. <issue>2</issue>: <fpage>90</fpage>–<lpage>97</lpage>. <pub-id pub-id-type="doi">10.1590/01047760201824022530</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0075"><mixed-citation publication-type="journal" id="ece373399-cit-0075">
+<string-name name-style="western">
+<surname>Vitasse</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>C. C.</given-names>
+<surname>Bresson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Kremer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Michalet</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Delzon</surname>
+</string-name>. <year>2010</year>. “<article-title>Quantifying Phenological Plasticity to Temperature in Two Temperate Tree Species</article-title>.” <source>Functional Ecology</source>
+<volume>24</volume>, no. <issue>6</issue>: <fpage>1211</fpage>–<lpage>1218</lpage>. <pub-id pub-id-type="doi">10.1111/j.1365-2435.2010.01748.x</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0076"><mixed-citation publication-type="journal" id="ece373399-cit-0076">
+<string-name name-style="western">
+<surname>Walters</surname>, <given-names>C.</given-names>
+</string-name>
+<year>1998</year>. “<article-title>Understanding the Mechanisms and Kinetics of Seed Aging</article-title>.” <source>Seed Science Research</source>
+<volume>8</volume>, no. <issue>2</issue>: <fpage>223</fpage>–<lpage>244</lpage>. <pub-id pub-id-type="doi">10.1017/S096025850000413X</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0077"><mixed-citation publication-type="journal" id="ece373399-cit-0077">
+<string-name name-style="western">
+<surname>Walters</surname>, <given-names>C.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>L. M.</given-names>
+<surname>Wheeler</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Grotenhuis</surname>
+</string-name>. <year>2005</year>. “<article-title>Longevity of Seeds Stored in a Genebank: Species Characteristics</article-title>.” <source>Seed Science Research</source>
+<volume>15</volume>, no. <issue>1</issue>: <fpage>1</fpage>–<lpage>20</lpage>. <pub-id pub-id-type="doi">10.1079/SSR2004195</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0078"><mixed-citation publication-type="book" id="ece373399-cit-0078">
+<string-name name-style="western">
+<surname>Waqas</surname>, <given-names>M.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>N. E.</given-names>
+<surname>Korres</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. D.</given-names>
+<surname>Khan</surname>
+</string-name>, et al. <year>2019</year>. “<part-title>Advances in the Concept and Methods of Seed Priming</part-title>.” In <source>Priming and Pretreatment of Seeds and Seedlings: Implication in Plant Stress Tolerance and Enhancing Productivity in Crop Plants</source>, <fpage>11</fpage>–<lpage>41</lpage>. <publisher-name>Springer Singapore</publisher-name>. <pub-id pub-id-type="doi">10.1007/978-981-13-8625-1_2</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0079"><mixed-citation publication-type="book" id="ece373399-cit-0079">
+<string-name name-style="western">
+<surname>Wickham</surname>, <given-names>H.</given-names>
+</string-name>
+<year>2016</year>. <source>Ggplot2: Elegant Graphics for Data Analysis. R Package Version 3.4.3</source>. <publisher-name>Springer International Publishing</publisher-name>. <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://cran.r-project.org/web/packages/ggplot2/index.html" ext-link-type="uri">https://cran.r‐project.org/web/packages/ggplot2/index.html</ext-link>.</mixed-citation></ref><ref id="ece373399-bib-0080"><mixed-citation publication-type="miscellaneous" id="ece373399-cit-0080">
+<string-name name-style="western">
+<surname>Wickham</surname>, <given-names>H.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>François</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Henry</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Müller</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Vaughan</surname>
+</string-name>. <year>2023</year>. <article-title>“dplyr: A Grammar of Data Manipulation. R Package Version 1.1.2.”</article-title>
+<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://github.com/tidyverse/dplyr" ext-link-type="uri">https://github.com/tidyverse/dplyr</ext-link>, <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://dplyr.tidyverse.org" ext-link-type="uri">https://dplyr.tidyverse.org</ext-link>.</mixed-citation></ref><ref id="ece373399-bib-0081"><mixed-citation publication-type="journal" id="ece373399-cit-0081">
+<string-name name-style="western">
+<surname>Willis</surname>, <given-names>J. L.</given-names>
+</string-name>, and <string-name name-style="western">
+<given-names>M. B.</given-names>
+<surname>Walters</surname>
+</string-name>. <year>2018</year>. “<article-title>Nutrition and Mycorrhizae Affect Interspecific Patterns of Seedling Growth on Coarse Wood and Mineral Soil Substrates</article-title>.” <source>Ecosphere</source>
+<volume>9</volume>, no. <issue>7</issue>: <elocation-id>e02350</elocation-id>. <pub-id pub-id-type="doi">10.1002/ecs2.2350</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0082"><mixed-citation publication-type="journal" id="ece373399-cit-0082">
+<string-name name-style="western">
+<surname>Willis</surname>, <given-names>J. L.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M. B.</given-names>
+<surname>Walters</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K. W.</given-names>
+<surname>Gottschalk</surname>
+</string-name>. <year>2015</year>. “<article-title>Scarification and Gap Size Have Interacting Effects on Northern Temperate Seedling Establishment</article-title>.” <source>Forest Ecology and Management</source>
+<volume>347</volume>: <fpage>237</fpage>–<lpage>247</lpage>. <pub-id pub-id-type="doi">10.1016/j.foreco.2015.02.026</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0083"><mixed-citation publication-type="journal" id="ece373399-cit-0083">
+<string-name name-style="western">
+<surname>Xia</surname>, <given-names>Q.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Ando</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Seiwa</surname>
+</string-name>. <year>2016</year>. “<article-title>Interaction of Seed Size With Light Quality and Temperature Regimes as Germination Cues in 10 Temperate Pioneer Tree Species</article-title>.” <source>Functional Ecology</source>
+<volume>30</volume>, no. <issue>6</issue>: <fpage>866</fpage>–<lpage>874</lpage>. <pub-id pub-id-type="doi">10.1111/1365-2435.12584</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0084"><mixed-citation publication-type="journal" id="ece373399-cit-0084">
+<string-name name-style="western">
+<surname>Yin</surname>, <given-names>J.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Lin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>De Lombaerde</surname>
+</string-name>, et al. <year>2023</year>. “<article-title>The Effects of Light, Conspecific Density and Soil Fungi on Seedling Growth of Temperate Tree Species</article-title>.” <source>Forest Ecology and Management</source>
+<volume>529</volume>: <elocation-id>120683</elocation-id>. <pub-id pub-id-type="doi">10.1016/j.foreco.2022.120683</pub-id>.</mixed-citation></ref><ref id="ece373399-bib-0085"><mixed-citation publication-type="journal" id="ece373399-cit-0085">
+<string-name name-style="western">
+<surname>Zhang</surname>, <given-names>Z.</given-names>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Mallik</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Huang</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Zhou</surname>
+</string-name>. <year>2019</year>. “<article-title>Effects of Arbuscular Mycorrhizal Fungi on Inoculated Seedling Growth and Rhizosphere Soil Aggregates</article-title>.” <source>Soil and Tillage Research</source>
+<volume>194</volume>: <elocation-id>104340</elocation-id>. <pub-id pub-id-type="doi">10.1016/j.still.2019.104340</pub-id>.</mixed-citation></ref></ref-list></back></article>
