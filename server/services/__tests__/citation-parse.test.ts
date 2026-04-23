@@ -46,4 +46,53 @@ describe("parseCitationsFromReferences — format-specific patterns", () => {
     );
     expect(result.citations[0].doi).toBe("10.9999/test.2021");
   });
+
+  // APA with no journal: should fall through to fallback, not match APA with empty journal
+  it("does not match APA pattern when journal is absent — uses fallback", () => {
+    const result = parseRawDocument(
+      makeRaw(["Smith, J. (2021). The Title."])
+    );
+    expect(result.citations).toHaveLength(1);
+    // Fallback preserves full raw line as title
+    expect(result.citations[0].title).toContain("Smith");
+    // APA match would produce an empty journal; we want either undefined or a real journal name
+    expect(result.citations[0].journal ?? "").toBe("");
+    // Format should be fallback, not APA, since there's no journal
+    expect(result.citations[0].metadata?.format).toBe("fallback");
+  });
+
+  // APA with proper journal: should still match correctly
+  it("matches APA with journal and produces correct journal field", () => {
+    const result = parseRawDocument(
+      makeRaw(["Smith, J., & Jones, A. (2021). The effects of X. Journal of Medicine, 45(3), 100-110."])
+    );
+    expect(result.citations[0].journal).toBeTruthy();
+    expect(result.citations[0].journal).not.toBe("");
+    expect(result.citations[0].metadata?.format).toBe("apa");
+  });
+
+  // Bracketed Vancouver: [5] Author. Title. Journal. Year;pages.
+  it("parses bracketed-number Vancouver reference (e.g. [5] Author...)", () => {
+    const result = parseRawDocument(
+      makeRaw(["[5] Jones A, Smith B. The Title. Nature. 2020;580:123-125."])
+    );
+    expect(result.citations).toHaveLength(1);
+    expect(result.citations[0].authors[0]).not.toBe("Unknown");
+    expect(result.citations[0].title).toBe("The Title");
+    expect(result.citations[0].journal).toBe("Nature");
+    expect(result.citations[0].year).toBe(2020);
+    expect(result.citations[0].metadata?.format).toBe("vancouver");
+  });
+
+  // Vancouver authors with "et al." should parse correctly
+  it("parses Vancouver citation with et al. in authors", () => {
+    const result = parseRawDocument(
+      makeRaw(["1. Smith J et al. The Title Here. J Med. 2021;5:10."])
+    );
+    expect(result.citations).toHaveLength(1);
+    // Should not be empty authors
+    expect(result.citations[0].authors[0]).not.toBe("Unknown");
+    // Title should not contain the author text
+    expect(result.citations[0].title).not.toContain("Smith J et al");
+  });
 });

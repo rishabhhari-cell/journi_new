@@ -62,7 +62,7 @@ export interface DocxXmlSection {
 export type PreambleLineType = "author" | "institution" | "other";
 
 const INSTITUTION_KEYWORDS = /university|institute|department|hospital|college|school|center|centre|faculty|laboratory/i;
-const SUPERSCRIPT_DIGITS = /^[¹²³⁴⁵⁶⁷⁸⁹0-9]+[.\s]/;
+const SUPERSCRIPT_DIGITS = /^[¹²³⁴⁵⁶⁷⁸⁹]+|^\d+(?=[A-Z])/;
 
 export function classifyPreambleLine(line: string): PreambleLineType {
   const trimmed = line.trim();
@@ -82,7 +82,10 @@ export function classifyPreambleLine(line: string): PreambleLineType {
       const words = token.trim().split(/\s+/);
       return words.length >= 1 && words.length <= 4 && /^[A-Z]/.test(words[0]);
     });
+    // Multiple comma-separated tokens: classic author list
     if (looksLikeNames && tokens.length >= 2) return "author";
+    // Single token: only treat as author if it has 2+ words (e.g. "Alice Smith", "Jones AB")
+    if (looksLikeNames && tokens.length === 1 && stripped.split(/\s+/).length >= 2) return "author";
   }
 
   return "other";

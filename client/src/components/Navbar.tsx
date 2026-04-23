@@ -496,81 +496,28 @@ export default function Navbar() {
               );
             })
           ) : (
-            /* Public route links with sections */
+            /* Public route links */
             <>
-              <Link
-                href="/features"
-                onClick={(e) => {
-                  e.preventDefault();
-                  navigateToPageTop("/features");
-                }}
-                className={cn(
-                  "px-3 py-2.5 text-sm font-medium rounded-md transition-colors",
-                  location.startsWith("/features")
-                    ? "text-[#685FB4] font-bold bg-[#685FB4]/12"
-                    : "text-muted-foreground hover:text-foreground hover:bg-accent",
-                )}
-              >
-                Features
-              </Link>
-              <span className="px-3 pt-1 pb-0.5 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
-                Feature Sections
-              </span>
-              {featureItems.map((item) => (
+              {[
+                { label: "Features", href: "/features" },
+                { label: "Pricing", href: "/pricing" },
+                { label: "About", href: "/about" },
+              ].map((item) => (
                 <Link
-                  key={item.title}
+                  key={item.href}
                   href={item.href}
-                  onClick={closeMobile}
-                  className="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigateToPageTop(item.href);
+                  }}
+                  className={cn(
+                    "px-3 py-2.5 text-sm font-medium rounded-md transition-colors",
+                    location.startsWith(item.href)
+                      ? "text-[#685FB4] font-bold bg-[#685FB4]/12"
+                      : "text-muted-foreground hover:text-foreground hover:bg-accent",
+                  )}
                 >
-                  <item.icon className="size-4 text-journi-green" />
-                  {item.title}
-                </Link>
-              ))}
-
-              <Link
-                href="/pricing"
-                onClick={(e) => {
-                  e.preventDefault();
-                  navigateToPageTop("/pricing");
-                }}
-                className={cn(
-                  "px-3 py-2.5 text-sm font-medium rounded-md transition-colors",
-                  location.startsWith("/pricing")
-                    ? "text-[#685FB4] font-bold bg-[#685FB4]/12"
-                    : "text-muted-foreground hover:text-foreground hover:bg-accent",
-                )}
-              >
-                Pricing
-              </Link>
-
-              <Link
-                href="/about"
-                onClick={(e) => {
-                  e.preventDefault();
-                  navigateToPageTop("/about");
-                }}
-                className={cn(
-                  "px-3 py-2.5 text-sm font-medium rounded-md transition-colors",
-                  location.startsWith("/about")
-                    ? "text-[#685FB4] font-bold bg-[#685FB4]/12"
-                    : "text-muted-foreground hover:text-foreground hover:bg-accent",
-                )}
-              >
-                About
-              </Link>
-              <span className="px-3 pt-3 pb-0.5 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
-                About Sections
-              </span>
-              {aboutItems.map((item) => (
-                <Link
-                  key={item.title}
-                  href={item.href}
-                  onClick={closeMobile}
-                  className="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                >
-                  <item.icon className="size-4 text-journi-green" />
-                  {item.title}
+                  {item.label}
                 </Link>
               ))}
             </>

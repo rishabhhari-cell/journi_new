@@ -568,7 +568,7 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     }
   };
 
-  const applyImportedResult = (result: ImportDocumentResult) => {
+  const applyImportedResult = (result: ImportDocumentResult, skipSections = false) => {
     // This should never happen now due to fallback in document-io.ts, but handle gracefully
     if (!result.sections.length) {
       toast.error('No content found in the file. The file may be empty or corrupted.');
@@ -593,97 +593,107 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
       );
     }
 
-    const existingSections = [...manuscript.sections];
-    const contentSections = existingSections.filter((s) => normalizeSectionMatchKey(s.title) !== 'title');
-    const isManuscriptCurrentlyEmpty = contentSections.every((s) => isPlaceholderSectionContent(s.content));
+    if (!skipSections) {
+      const existingSections = [...manuscript.sections];
+      const contentSections = existingSections.filter((s) => normalizeSectionMatchKey(s.title) !== 'title');
+      const isManuscriptCurrentlyEmpty = contentSections.every((s) => isPlaceholderSectionContent(s.content));
 
-    // If manuscript is empty, directly replace with imported sections (preserves structure)
-    if (isManuscriptCurrentlyEmpty) {
-      const importedSections: DocumentSection[] = result.sections.map((s, i) => ({
-        id: `imported-${Date.now()}-${i}`,
-        title: normalizePlainImportedText(s.title || `Section ${i + 1}`, { trim: true }) || `Section ${i + 1}`,
-        content: normalizeImportedHtml(s.content || '<p></p>'),
-        status: 'draft' as const,
-        order: i,
-        lastEditedBy: 'Imported',
-        lastEditedAt: new Date(),
-      }));
-      replaceSections(importedSections);
-      toast.success(`Imported ${result.sections.length} section(s) from ${result.fileName}`);
+      // If manuscript is empty, directly replace with imported sections (preserves structure)
+      if (isManuscriptCurrentlyEmpty) {
+        const importedSections: DocumentSection[] = result.sections.map((s, i) => ({
+          id: `imported-${Date.now()}-${i}`,
+          title: normalizePlainImportedText(s.title || `Section ${i + 1}`, { trim: true }) || `Section ${i + 1}`,
+          content: normalizeImportedHtml(s.content || '<p></p>'),
+          status: 'draft' as const,
+          order: i,
+          lastEditedBy: 'Imported',
+          lastEditedAt: new Date(),
+        }));
+        replaceSections(importedSections);
+        toast.success(`Imported ${result.sections.length} section(s) from ${result.fileName}`);
 
-      if (result.citations.length > 0) {
-        toast.success(`${result.citations.length} citation(s) imported`);
+        if (result.citations.length > 0) {
+          toast.success(`${result.citations.length} citation(s) imported`);
+        }
+
+        const warnings = nonBlockingImportWarnings(result);
+        if (warnings.length > 0) toast.warning(warnings[0].message);
+        return;
       }
 
-      const warnings = nonBlockingImportWarnings(result);
-      if (warnings.length > 0) toast.warning(warnings[0].message);
-      return;
-    }
+      // Manuscript has content - do section matching
+      let matchedCount = 0;
+      let addedCount = 0;
+      const unmatchedImported: Partial<DocumentSection>[] = [];
+      const findMatchingSection = (title: string) => {
+        const trimmedTitle = title.trim().toLowerCase();
+        const exact = existingSections.find((s) => s.title.trim().toLowerCase() === trimmedTitle);
+        if (exact) return exact;
 
-    // Manuscript has content - do section matching
-    let matchedCount = 0;
-    let addedCount = 0;
-    const unmatchedImported: Partial<DocumentSection>[] = [];
-    const findMatchingSection = (title: string) => {
-      const trimmedTitle = title.trim().toLowerCase();
-      const exact = existingSections.find((s) => s.title.trim().toLowerCase() === trimmedTitle);
-      if (exact) return exact;
+        const importedKey = normalizeSectionMatchKey(title);
+        return existingSections.find((s) => normalizeSectionMatchKey(s.title) === importedKey);
+      };
 
-      const importedKey = normalizeSectionMatchKey(title);
-      return existingSections.find((s) => normalizeSectionMatchKey(s.title) === importedKey);
-    };
+      for (const imported of result.sections) {
+        const normalizedImportedTitle = normalizePlainImportedText(imported.title || '', { trim: true });
+        const importedTitle = normalizedImportedTitle.toLowerCase();
+        const match = findMatchingSection(normalizedImportedTitle);
 
-    for (const imported of result.sections) {
-      const normalizedImportedTitle = normalizePlainImportedText(imported.title || '', { trim: true });
-      const importedTitle = normalizedImportedTitle.toLowerCase();
-      const match = findMatchingSection(normalizedImportedTitle);
+        if (match) {
+          updateSectionContent(match.id, normalizeImportedHtml(imported.content || '<p></p>'));
+          matchedCount++;
+        } else {
+          const genericTitles = ['content', 'untitled section'];
+          const isGeneric = genericTitles.includes(importedTitle);
 
-      if (match) {
-        updateSectionContent(match.id, normalizeImportedHtml(imported.content || '<p></p>'));
-        matchedCount++;
-      } else {
-        const genericTitles = ['content', 'untitled section'];
-        const isGeneric = genericTitles.includes(importedTitle);
-
-        if (isGeneric && result.sections.length === 1) {
-          const activeS = getSectionByTitle(activeSection);
-          if (activeS) {
-            updateSectionContent(activeS.id, normalizeImportedHtml(imported.content || '<p></p>'));
-            matchedCount++;
+          if (isGeneric && result.sections.length === 1) {
+            const activeS = getSectionByTitle(activeSection);
+            if (activeS) {
+              updateSectionContent(activeS.id, normalizeImportedHtml(imported.content || '<p></p>'));
+              matchedCount++;
+            } else {
+              unmatchedImported.push(imported);
+            }
           } else {
             unmatchedImported.push(imported);
           }
-        } else {
-          unmatchedImported.push(imported);
         }
       }
+
+      if (unmatchedImported.length > 0) {
+        const newSections: DocumentSection[] = [
+          ...existingSections,
+          ...unmatchedImported.map((s, i) => ({
+            id: `imported-${Date.now()}-${i}`,
+            title: normalizePlainImportedText(s.title || `Imported Section ${i + 1}`, { trim: true }) || `Imported Section ${i + 1}`,
+            content: normalizeImportedHtml(s.content || '<p></p>'),
+            status: 'draft' as const,
+            order: existingSections.length + i,
+            lastEditedBy: 'Imported',
+            lastEditedAt: new Date(),
+          })),
+        ];
+        replaceSections(newSections);
+        addedCount = unmatchedImported.length;
+      }
+
+      const parts: string[] = [];
+      if (matchedCount > 0) parts.push(`${matchedCount} section(s) updated`);
+      if (addedCount > 0) parts.push(`${addedCount} new section(s) added`);
+      if (result.citations.length > 0) parts.push(`${result.citations.length} citation(s) imported`);
+      toast.success(`Imported: ${parts.join(', ') || 'content loaded'}`);
+
+      const warnings = nonBlockingImportWarnings(result);
+      if (warnings.length > 0) toast.warning(warnings[0].message);
+    } else {
+      // Sections already applied via initialSections in createManuscript
+      const parts: string[] = [`${result.sections.length} section(s) imported`];
+      if (result.citations.length > 0) parts.push(`${result.citations.length} citation(s) imported`);
+      toast.success(`Imported: ${parts.join(', ')}`);
+
+      const warnings = nonBlockingImportWarnings(result);
+      if (warnings.length > 0) toast.warning(warnings[0].message);
     }
-
-    if (unmatchedImported.length > 0) {
-      const newSections: DocumentSection[] = [
-        ...existingSections,
-        ...unmatchedImported.map((s, i) => ({
-          id: `imported-${Date.now()}-${i}`,
-          title: normalizePlainImportedText(s.title || `Imported Section ${i + 1}`, { trim: true }) || `Imported Section ${i + 1}`,
-          content: normalizeImportedHtml(s.content || '<p></p>'),
-          status: 'draft' as const,
-          order: existingSections.length + i,
-          lastEditedBy: 'Imported',
-          lastEditedAt: new Date(),
-        })),
-      ];
-      replaceSections(newSections);
-      addedCount = unmatchedImported.length;
-    }
-
-    const parts: string[] = [];
-    if (matchedCount > 0) parts.push(`${matchedCount} section(s) updated`);
-    if (addedCount > 0) parts.push(`${addedCount} new section(s) added`);
-    if (result.citations.length > 0) parts.push(`${result.citations.length} citation(s) imported`);
-    toast.success(`Imported: ${parts.join(', ') || 'content loaded'}`);
-
-    const warnings = nonBlockingImportWarnings(result);
-    if (warnings.length > 0) toast.warning(warnings[0].message);
 
     // Render parsed figures into "Figures and Tables" section (non-review path only)
     if (!result.review.required && result.review.figures.length > 0) {
@@ -1024,9 +1034,6 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
     setShowDocSwitcher(false);
 
     if (result.action === 'import' && result.file) {
-      // Parse the file first, then create the manuscript and apply content.
-      // This avoids a race condition where createManuscript fires an async backend
-      // call in the background and the import session ends up using a stale optimistic ID.
       setIsImporting(true);
       try {
         const ext = result.file.name.split('.').pop()?.toLowerCase();
@@ -1036,8 +1043,23 @@ const [isCitationDialogOpen, setIsCitationDialogOpen] = useState(false);
         else importResult = await importImage(result.file);
 
         const derivedTitle = importResult.title || result.title;
-        await createManuscript(derivedTitle, result.type);
-        applyImportedResult(importResult);
+
+        // Build sections from the import result before creating the manuscript so
+        // they are available in the same state update — prevents the stale-closure
+        // race where applyImportedResult sees the *previous* manuscript's sections.
+        const initialSections: DocumentSection[] = importResult.sections.map((s, i) => ({
+          id: `imported-${Date.now()}-${i}`,
+          title: normalizePlainImportedText(s.title || `Section ${i + 1}`, { trim: true }) || `Section ${i + 1}`,
+          content: normalizeImportedHtml(s.content || '<p></p>'),
+          status: 'draft' as const,
+          order: i,
+          lastEditedBy: 'Imported',
+          lastEditedAt: new Date(),
+        }));
+
+        await createManuscript(derivedTitle, result.type, initialSections.length > 0 ? initialSections : undefined);
+        // Sections already applied atomically via initialSections; skip section logic.
+        applyImportedResult(importResult, /* skipSections */ initialSections.length > 0);
 
         // Persist authors/institutions as project metadata
         if (importResult.authors.length > 0 || importResult.institutions.length > 0) {

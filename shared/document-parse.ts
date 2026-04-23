@@ -72,6 +72,8 @@ export interface ParsedFigure {
   bbox?: ParsedBoundingBox;
   confidence: number;
   diagnostics: ParseDiagnostic[];
+  /** PDF XObject ID or DOCX rel ID — used to deduplicate figures extracted via multiple paths. */
+  objId?: string;
 }
 
 export interface ParsedTable {
@@ -259,7 +261,7 @@ function parseCitationsFromReferences(lines: string[]): ParsedCitation[] {
     // ── Vancouver / numbered: [1] ... or 1. ... or 1) ...
     // Author list ends before first ". [A-Z][a-z]" that isn't an initial
     const vancouverMatch = raw.match(
-      /^(?:\[?\d+\]?[.)]\s*)([^.]+(?:\.[A-Z]\b[^.]*)*)\.\s+(.+?)\.\s+([^.]+?)\.\s*(?:\d{4}|;)/
+      /^(?:\[\d+\]\s+|\[?\d+\]?[.)]\s*)([^.]+(?:\.[A-Z]\b[^.]*)*)\.\s+(.+?)\.\s+([^.]+?)\.\s*(?:\d{4}|;)/
     );
     if (vancouverMatch) {
       const authorRaw = vancouverMatch[1];

@@ -13,6 +13,12 @@ export interface ParseUploadInput {
   buffer: Buffer;
 }
 
+/** Extracts the figure number from a caption string, e.g. "Figure 3. ..." → 3. Returns null if no number found. */
+export function extractFigureNumber(text: string): number | null {
+  const m = text.match(/^fig(?:ure)?\.?\s*(\d+)/i);
+  return m ? Number(m[1]) : null;
+}
+
 const HTML_ENTITY_MAP: Record<string, string> = {
   amp: "&",
   lt: "<",
@@ -391,6 +397,73 @@ function createFigurePlaceholderData(label: string): string {
   return `data:image/svg+xml;base64,${Buffer.from(svg, "utf8").toString("base64")}`;
 }
 
+/**
+ * Returns true when a bbox qualifies as a figure (not a decorative rule or icon).
+ * Checks: each dimension must be ≥6% of the page size (min 24pt), AND area ≥ 1800 sq-pt.
+ */
+export function isFigureSized(width: number, height: number, pageWidth: number, pageHeight: number): boolean {
+  const minW = Math.max(24, pageWidth * 0.06);
+  const minH = Math.max(24, pageHeight * 0.06);
+  return width >= minW && height >= minH && width * height >= 1800;
+}
+
+export function deduplicateFiguresByObjId(figures: ParsedFigure[]): ParsedFigure[] {
+  const seenObjIds = new Set<string>();
+  return figures.filter((fig) => {
+    if (fig.objId === undefined) return true;
+    if (seenObjIds.has(fig.objId)) return false;
+    seenObjIds.add(fig.objId);
+    return true;
+  });
+}
+
+/**
+ * Returns a bbox derived from the current PDF transform matrix.
+ * If that bbox fails the figure size check (e.g. identity matrix → 1×1 box),
+ * falls back to using the raw image pixel dimensions as width/height.
+ */
+export function bboxFromTransformOrImageFallback(
+  matrix: number[],
+  imgWidth: number,
+  imgHeight: number,
+  pageWidth: number,
+  pageHeight: number,
+): ParsedBoundingBox {
+  const fromMatrix = bboxFromTransform(matrix);
+  if (isFigureSized(fromMatrix.width, fromMatrix.height, pageWidth, pageHeight)) {
+    return fromMatrix;
+  }
+  return { x: fromMatrix.x, y: fromMatrix.y, width: imgWidth, height: imgHeight };
+}
+
+/** Extracts figure captions from Mammoth HTML in document order. Ignores table captions. */
+export function extractDocxCaptionsFromHtml(html: string): Array<{ figureNumber: number; text: string }> {
+  const results: Array<{ figureNumber: number; text: string }> = [];
+  // Match both <p>...</p> and <figcaption>...</figcaption>
+  for (const match of html.matchAll(/<(?:p|figcaption)[^>]*>([\s\S]*?)<\/(?:p|figcaption)>/gi)) {
+    const inner = match[1].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+    const figNum = extractFigureNumber(inner);
+    if (figNum !== null) {
+      results.push({ figureNumber: figNum, text: inner });
+    }
+  }
+  return results;
+}
+
+/** Extracts all relationship IDs referenced by drawing elements in document XML (DrawingML, VML, chart). */
+export function extractDocxDrawingRelIds(documentXml: string): string[] {
+  const seen = new Set<string>();
+  const results: string[] = [];
+  for (const match of documentXml.matchAll(/<(?:a:blip|c:chart|v:imagedata)\b[^>]*r:(?:embed|id)="([^"]+)"/g)) {
+    const id = match[1];
+    if (!seen.has(id)) {
+      seen.add(id);
+      results.push(id);
+    }
+  }
+  return results;
+}
+
 async function extractDocxFigures(
   buffer: Buffer,
   relsPath = "word/_rels/document.xml.rels",
@@ -415,9 +488,7 @@ async function extractDocxFigures(
     relMap.set(String(rel.Id), { target: String(rel.Target), type: String(rel.Type ?? "") });
   }
 
-  const drawingRefs = Array.from(
-    documentXml.matchAll(/<(?:a:blip|c:chart)\b[^>]*r:(?:embed|id)="([^"]+)"/g),
-  ).map((match) => match[1]);
+  const drawingRefs = extractDocxDrawingRelIds(documentXml);
 
   let figureCount = 0;
   for (const relId of drawingRefs) {
@@ -435,6 +506,7 @@ async function extractDocxFigures(
         page: 1,
         confidence: 0.99,
         diagnostics: [],
+        objId: relId,
       });
       continue;
     }
@@ -453,7 +525,9 @@ async function extractDocxFigures(
         });
         continue;
       }
-      figures.push(createDocxChartFigure(spec, `docx-figure-${++figureCount}`));
+      const chartFig = createDocxChartFigure(spec, `docx-figure-${++figureCount}`);
+      chartFig.objId = relId;
+      figures.push(chartFig);
     }
   }
 
@@ -499,14 +573,15 @@ function bboxFromTransform(matrix: number[]): ParsedBoundingBox {
   };
 }
 
-function normalizePdfImageBytes(imgData: any, imageKind: Record<string, number>): Uint8Array {
+export function normalizePdfImageBytes(imgData: any, imageKind: Record<string, number>): Uint8Array {
   const width = Number(imgData?.width || 0);
   const height = Number(imgData?.height || 0);
   const source = imgData?.data instanceof Uint8Array ? imgData.data : new Uint8Array(imgData?.data || []);
   const rgba = new Uint8Array(width * height * 4);
 
   if (imgData?.kind === imageKind.RGBA_32BPP) {
-    return source;
+    rgba.set(source.subarray(0, rgba.length));
+    return rgba;
   }
 
   if (imgData?.kind === imageKind.RGB_24BPP) {
@@ -781,8 +856,6 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
     const operatorList = await page.getOperatorList();
     const stack: number[][] = [];
     let currentTransform = [1, 0, 0, 1, 0, 0];
-    const minFigureWidth = Math.max(24, viewport.width * 0.06);
-    const minFigureHeight = Math.max(24, viewport.height * 0.06);
 
     for (let opIndex = 0; opIndex < operatorList.fnArray.length; opIndex += 1) {
       const fn = operatorList.fnArray[opIndex];
@@ -808,7 +881,7 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
         if (xobjId) {
           const xobjImages = await extractImagesFromXObject(page, xobjId, currentTransform, 0);
           for (const { imageData, bbox } of xobjImages) {
-            if (bbox.width < minFigureWidth || bbox.height < minFigureHeight) continue;
+            if (!isFigureSized(bbox.width, bbox.height, viewport.width, viewport.height)) continue;
             const dataUrl = await pdfImageDataToDataUrl(imageData, (pdfjs as any).ImageKind);
             if (!dataUrl) {
               diagnostics.push({
@@ -825,6 +898,7 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
               bbox,
               confidence: 0.92,
               diagnostics: [],
+              objId: `xobj-${xobjId}-${figures.length}`,
             });
           }
         }
@@ -838,11 +912,6 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
 
       if (!isImageOp) continue;
 
-      const bbox = bboxFromTransform(currentTransform);
-      if (bbox.width < minFigureWidth || bbox.height < minFigureHeight) {
-        continue;
-      }
-
       let imageData: any = null;
       let imageId = `pdf-figure-${pageNum}-${opIndex}`;
 
@@ -852,6 +921,18 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
         const objId = String(args[0]);
         imageId = objId;
         imageData = await waitForPdfObject(page.objs as any, objId);
+      }
+
+      // Use image pixel dimensions as fallback when transform matrix is identity/tiny
+      const bbox = bboxFromTransformOrImageFallback(
+        currentTransform,
+        Number(imageData?.width ?? 0),
+        Number(imageData?.height ?? 0),
+        viewport.width,
+        viewport.height,
+      );
+      if (!isFigureSized(bbox.width, bbox.height, viewport.width, viewport.height)) {
+        continue;
       }
 
       const dataUrl = await pdfImageDataToDataUrl(imageData, (pdfjs as any).ImageKind);
@@ -871,25 +952,35 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
         bbox,
         confidence: 0.95,
         diagnostics: [],
+        objId: imageId,
       });
     }
 
     const captionBlocks = blocks.filter((block) => block.page === pageNum && block.type === "caption");
     const usedCaptionIds = new Set<string>();
-    for (const figure of figures.filter((item) => item.page === pageNum)) {
-      const match = captionBlocks
+    const pageFigures = figures.filter((item) => item.page === pageNum);
+    for (let fi = 0; fi < pageFigures.length; fi++) {
+      const figure = pageFigures[fi];
+      // Sequential figure number across the whole document (1-based)
+      const figureSeqNum = figures.indexOf(figure) + 1;
+
+      const candidates = captionBlocks
         .filter((block) => !usedCaptionIds.has(block.id))
         .map((block) => {
           const sameColumnPenalty = figure.bbox ? Math.abs((block.bbox?.x || 0) - figure.bbox.x) : 0;
           const verticalDelta = figure.bbox ? Math.abs((block.bbox?.y || 0) - figure.bbox.y) : 0;
           const isBelow = figure.bbox && block.bbox ? block.bbox.y <= figure.bbox.y : true;
+          const captionNum = extractFigureNumber(block.text);
+          // Number mismatch: strongly penalise captions whose explicit number conflicts
+          const numberMismatchPenalty = captionNum !== null && captionNum !== figureSeqNum ? 500 : 0;
           return {
             block,
-            score: verticalDelta + sameColumnPenalty + (isBelow ? 0 : 120),
+            score: verticalDelta + sameColumnPenalty + (isBelow ? 0 : 120) + numberMismatchPenalty,
           };
         })
-        .sort((a, b) => a.score - b.score)[0];
+        .sort((a, b) => a.score - b.score);
 
+      const match = candidates[0];
       if (match && match.score < Math.max(viewport.height * 0.35, 220)) {
         figure.caption = match.block.text;
         usedCaptionIds.add(match.block.id);
@@ -897,10 +988,12 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
     }
   }
 
+  const dedupedFigures = deduplicateFiguresByObjId(figures);
+
   return {
     text: normalizeText(pagesText.join("\n\n")),
     blocks,
-    figures,
+    figures: dedupedFigures,
     tables,
     diagnostics,
   };
@@ -1046,6 +1139,14 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
     // Append reference lines from footnotes/endnotes found by XML walker
     const xmlReferenceLines = xmlResult.referenceLines;
 
+    // Link captions to DOCX figures by figure number, in document order
+    const docxCaptions = extractDocxCaptionsFromHtml(result.value);
+    const captionByNumber = new Map(docxCaptions.map((c) => [c.figureNumber, c.text]));
+    const linkedDocxFigures = extractedFigures.figures.map((fig, idx) => ({
+      ...fig,
+      caption: captionByNumber.get(idx + 1) ?? fig.caption,
+    }));
+
     const rawDocx: RawParsedDocument = {
       fileTitle,
       format: "docx",
@@ -1058,7 +1159,7 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
         ...extractedFigures.diagnostics,
         ...xmlResult.diagnostics,
       ],
-      figures: extractedFigures.figures,
+      figures: linkedDocxFigures,
       references: [
         ...extractReferencesFromOupHtml(result.value),
         ...xmlReferenceLines,

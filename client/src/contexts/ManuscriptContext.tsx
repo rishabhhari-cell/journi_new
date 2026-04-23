@@ -277,7 +277,7 @@ interface ManuscriptContextType {
   activeManuscriptId: string;
   manuscript: Manuscript;
   setActiveManuscriptId: (id: string) => void;
-  createManuscript: (title: string, type: ManuscriptType) => Promise<string>;
+  createManuscript: (title: string, type: ManuscriptType, initialSections?: DocumentSection[]) => Promise<string>;
   deleteManuscript: (id: string) => void;
   manuscriptTypeLabels: Record<ManuscriptType, string>;
   activeSection: string;
@@ -631,19 +631,25 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
     setManuscripts((prev) => prev.map((doc) => (doc.id === activeManuscriptId ? updater(doc) : doc)));
   }, [activeManuscriptId]);
 
-  const createManuscript = useCallback(async (title: string, type: ManuscriptType): Promise<string> => {
+  const createManuscript = useCallback(async (title: string, type: ManuscriptType, initialSections?: DocumentSection[]): Promise<string> => {
     const projectId = activeProject?.id ?? 'mvp-project';
     const optimistic = createEmptyManuscript(projectId, title, type);
+    // Apply caller-supplied sections immediately so import content is visible
+    // in the same render cycle as the new manuscript — avoids stale-closure race.
+    if (initialSections && initialSections.length > 0) {
+      optimistic.sections = initialSections;
+    }
     setManuscripts((prev) => [...prev, optimistic]);
     setActiveManuscriptId(optimistic.id);
 
     if (backendMode && activeProject?.id) {
       try {
+        const sectionsToSend = optimistic.sections;
         const created = await createManuscriptApi({
           projectId: activeProject.id,
           title,
           type,
-          sections: optimistic.sections.map((section) => ({
+          sections: sectionsToSend.map((section) => ({
             title: section.title,
             contentHtml: section.content,
             status: section.status,
@@ -653,7 +659,7 @@ export function ManuscriptProvider({ children }: ManuscriptProviderProps) {
         setManuscripts((prev) =>
           prev.map((doc) =>
             doc.id === optimistic.id
-              ? { ...mapped, comments: doc.comments, citations: doc.citations }
+              ? { ...mapped, sections: doc.sections, comments: doc.comments, citations: doc.citations }
               : doc,
           ),
         );

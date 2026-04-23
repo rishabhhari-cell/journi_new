@@ -54,4 +54,28 @@ describe("classifyPreambleLine", () => {
   it("does not classify abstract heading as author or institution", () => {
     expect(classifyPreambleLine("Abstract")).toBe("other");
   });
+
+  // Single-author lines (no comma): a paper with one author should still be classified
+  it("classifies a single author name as author", () => {
+    expect(classifyPreambleLine("Jones AB")).toBe("author");
+  });
+
+  it("classifies single author with full first name as author", () => {
+    expect(classifyPreambleLine("Alice Smith")).toBe("author");
+  });
+
+  it("classifies single author with superscript as author", () => {
+    expect(classifyPreambleLine("Jones AB¹")).toBe("author");
+  });
+
+  // Plain-digit affiliation markers (e.g. "1Mayo Clinic, Rochester, MN")
+  // These lack institution keywords but have a plain leading digit
+  it("classifies plain-digit-prefixed affiliation without keyword as institution", () => {
+    // "Mayo Clinic" has no institution keyword; the leading "1" is the only signal
+    expect(classifyPreambleLine("1Mayo Clinic, Rochester, MN")).toBe("institution");
+  });
+
+  it("classifies plain-digit-prefixed affiliation with two-digit number as institution", () => {
+    expect(classifyPreambleLine("12St. Jude Medical Center, Memphis, TN")).toBe("institution");
+  });
 });
