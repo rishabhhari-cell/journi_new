@@ -96,11 +96,11 @@ function mapCommittedSection(section: {
   status: 'complete' | 'active' | 'draft' | 'pending';
   sort_order: number;
   last_edited_by?: string | null;
+  last_edited_by_name?: string | null;
   last_edited_at?: string | null;
 }): DocumentSection {
-  // last_edited_by can be a UUID, 'Imported', 'Format Check', or a user name
-  // UUIDs are 36 chars with hyphens (e.g., "550e8400-e29b-41d4-a716-446655440000")
   const isUuid = section.last_edited_by && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(section.last_edited_by);
+  const displayName = section.last_edited_by_name ?? (isUuid ? undefined : (section.last_edited_by ?? undefined));
 
   return {
     id: section.id,
@@ -108,7 +108,7 @@ function mapCommittedSection(section: {
     content: section.content_html || '<p></p>',
     status: section.status,
     order: section.sort_order,
-    lastEditedBy: isUuid ? 'Unknown' : (section.last_edited_by ?? undefined),
+    lastEditedBy: displayName,
     lastEditedAt: section.last_edited_at ? new Date(section.last_edited_at) : undefined,
   };
 }

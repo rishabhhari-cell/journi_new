@@ -97,6 +97,7 @@ export interface ApiManuscriptSection {
   status: 'complete' | 'active' | 'draft' | 'pending';
   sort_order: number;
   last_edited_by: string | null;
+  last_edited_by_name: string | null;
   last_edited_at: string | null;
   created_at: string;
   updated_at: string;

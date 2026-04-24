@@ -17,6 +17,8 @@
     "benchmark:render-docx": "tsx server/scripts/render-parser-docx.ts",
     "benchmark:run": "tsx server/scripts/run-parser-benchmark.ts",
     "benchmark:review-pack": "tsx server/scripts/build-review-pack.ts",
+    "benchmark:worker:fetch-render": "tsx server/scripts/worker-fetch-render.ts",
+    "benchmark:worker:run": "tsx server/scripts/worker-run-benchmark.ts",
     "format": "prettier --write .",
     "test": "vitest run",
     "test:watch": "vitest"

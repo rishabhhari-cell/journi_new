@@ -200,7 +200,7 @@ function mapBackendManuscript(apiManuscript: ApiManuscript, projectId: string): 
       content: section.content_html || '<p></p>',
       status: section.status,
       order: section.sort_order,
-      lastEditedBy: section.last_edited_by ?? undefined,
+      lastEditedBy: section.last_edited_by_name ?? (section.last_edited_by && !/^[0-9a-f-]{36}$/i.test(section.last_edited_by) ? section.last_edited_by : undefined),
       lastEditedAt: section.last_edited_at ? new Date(section.last_edited_at) : undefined,
     }));
 
