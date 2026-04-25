@@ -108,6 +108,12 @@ function collectParagraphText(secNode: unknown): string {
     }
   }
 
+  // Recurse into nested <sec> nodes — JATS allows sections nested arbitrarily deep
+  for (const subSec of ensureArray(node.sec)) {
+    const subText = collectParagraphText(subSec);
+    if (subText) pieces.push(subText);
+  }
+
   return pieces.join("\n\n").trim();
 }
 
