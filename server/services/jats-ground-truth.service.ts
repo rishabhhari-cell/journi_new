@@ -108,9 +108,28 @@ function collectParagraphText(secNode: unknown): string {
     }
   }
 
-  // Recurse into nested <sec> nodes — JATS allows sections nested arbitrarily deep
+  return pieces.join("\n\n").trim();
+}
+
+function collectAllDescendantText(secNode: unknown): string {
+  if (secNode == null || typeof secNode !== "object") return "";
+  const node = secNode as Record<string, unknown>;
+  const pieces: string[] = [];
+
+  for (const paragraph of ensureArray(node.p)) {
+    const text = normalizeWhitespace(textFromNode(paragraph));
+    if (text) pieces.push(text);
+  }
+
+  for (const list of ensureArray(node.list)) {
+    for (const item of ensureArray((list as Record<string, unknown>).listItem)) {
+      const text = normalizeWhitespace(textFromNode(item));
+      if (text) pieces.push(text);
+    }
+  }
+
   for (const subSec of ensureArray(node.sec)) {
-    const subText = collectParagraphText(subSec);
+    const subText = collectAllDescendantText(subSec);
     if (subText) pieces.push(subText);
   }
 
@@ -122,7 +141,9 @@ function collectSections(secNodes: unknown, sections: GroundTruthSection[], orde
     if (!sec || typeof sec !== "object") continue;
     const secNode = sec as Record<string, unknown>;
     const sourceTitle = normalizeWhitespace(textFromNode(secNode.title)) || "Content";
-    const text = collectParagraphText(secNode);
+    // Use direct-children text; fall back to all-descendant text if section has no direct paragraphs
+    const directText = collectParagraphText(secNode);
+    const text = directText || collectAllDescendantText(secNode);
     sections.push({
       sourceTitle,
       canonicalTitle: canonicalTitleFor(sourceTitle),
