@@ -12,6 +12,12 @@ export const XML_DIR = `${PARSER_BENCHMARK_ROOT}/xml`;
 export const PDF_DIR = `${PARSER_BENCHMARK_ROOT}/pdf`;
 export const DOCX_DIR = `${PARSER_BENCHMARK_ROOT}/docx`;
 export const REVIEW_PACK_DIR = `${PARSER_BENCHMARK_ROOT}/review-pack`;
+export const DISCOVERY_PROGRESS_PATH = `${PARSER_BENCHMARK_ROOT}/discovery-progress.json`;
+export const WORKER_STATE_DIR = `${PARSER_BENCHMARK_ROOT}/worker-state`;
+export const FETCH_RENDER_READY_DIR = `${WORKER_STATE_DIR}/fetch-render-ready`;
+export const FETCH_RENDER_LOCK_DIR = `${WORKER_STATE_DIR}/fetch-render-locks`;
+export const RUN_DONE_DIR = `${WORKER_STATE_DIR}/run-done`;
+export const RUN_LOCK_DIR = `${WORKER_STATE_DIR}/run-locks`;
 
 export const PUBLISHER_BUCKETS: PublisherBucket[] = [
   "springer_nature",
@@ -64,17 +70,17 @@ export const PUBLISHER_PATTERNS: Record<PublisherBucket, RegExp[]> = {
 };
 
 export const STUDY_BUCKET_TARGETS: Record<StudyDesignBucket, number> = {
-  systematic_review_meta_analysis: 150,
-  review_non_systematic: 150,
-  rct_or_interventional_trial: 250,
-  observational_cohort_case_control_cross_sectional: 300,
+  systematic_review_meta_analysis: 200,
+  review_non_systematic: 200,
+  rct_or_interventional_trial: 200,
+  observational_cohort_case_control_cross_sectional: 200,
   case_report_or_case_series: 100,
-  other_primary_research: 50,
+  other_primary_research: 100,
 };
 
-export const DISCOVERY_OVERSAMPLE_MULTIPLIER = 1.4;
+export const DISCOVERY_OVERSAMPLE_MULTIPLIER = 1.5;
 export const REQUIRED_JOURNALS_PER_PUBLISHER = 10;
-export const MAX_ARTICLES_PER_JOURNAL = 150;
+export const MAX_ARTICLES_PER_JOURNAL = 100;
 export const DEFAULT_DISCOVERY_BATCH_SIZE = 200;
 export const DEFAULT_DOWNLOAD_CONCURRENCY = 8;
 export const DEFAULT_PARSE_CONCURRENCY = 4;

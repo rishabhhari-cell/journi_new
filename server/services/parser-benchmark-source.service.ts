@@ -7,9 +7,11 @@ const PMC_ID_CONVERTER = "https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/";
 const PMC_OA_SERVICE = "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi";
 const PMC_AWS_BUCKET_URL = "https://pmc-oa-opendata.s3.amazonaws.com/";
 const PMC_ID_CONVERTER_MAX_IDS = 180;
+const PUBMED_EFETCH_MAX_IDS = 50;
 const SOURCE_FETCH_RETRIES = 4;
-const EUTILS_MIN_INTERVAL_MS = 450;
+const EUTILS_MIN_INTERVAL_MS = process.env.NCBI_API_KEY ? 100 : 450;
 const ENABLE_ELINK_FALLBACK = process.env.BENCHMARK_ENABLE_ELINK_FALLBACK === "true";
+const PMC_AWS_VERSION_GUESSES = [1, 2, 3];
 
 let lastEutilsRequestAt = 0;
 
@@ -85,7 +87,12 @@ async function fetchText(url: string): Promise<string> {
   const normalizedUrl = normalizeNcbiDownloadUrl(url);
   return runWithRetry(`text request ${url}`, async () => {
     await throttleEutils(normalizedUrl);
-    const response = await fetch(normalizedUrl, {
+    const ncbiApiKey = process.env.NCBI_API_KEY;
+    const urlWithKey =
+      ncbiApiKey && normalizedUrl.startsWith(EUTILS_BASE)
+        ? `${normalizedUrl}${normalizedUrl.includes("?") ? "&" : "?"}api_key=${ncbiApiKey}`
+        : normalizedUrl;
+    const response = await fetch(urlWithKey, {
       headers: {
         Accept: "application/xml, text/xml, application/json, text/plain",
         "User-Agent": "Journi Parser Benchmark/1.0",
@@ -121,6 +128,30 @@ async function fetchBuffer(url: string): Promise<Buffer> {
     }
 
     return buffer;
+  });
+}
+
+async function urlExists(url: string): Promise<boolean> {
+  const normalizedUrl = normalizeNcbiDownloadUrl(url);
+  return runWithRetry(`head request ${url}`, async () => {
+    await throttleEutils(normalizedUrl);
+    const response = await fetch(normalizedUrl, {
+      method: "HEAD",
+      headers: {
+        "User-Agent": "Journi Parser Benchmark/1.0",
+      },
+      signal: AbortSignal.timeout(30_000),
+    });
+
+    if (response.status === 404) {
+      return false;
+    }
+
+    if (!response.ok) {
+      throw new Error(`Request failed (${response.status}) for ${normalizedUrl}`);
+    }
+
+    return true;
   });
 }
 
@@ -177,51 +208,59 @@ export async function searchPubmedIds(query: string, retstart = 0, retmax = 200)
 
 export async function fetchPubmedArticles(pmids: string[]): Promise<PubmedArticleRecord[]> {
   if (pmids.length === 0) return [];
+  const records: PubmedArticleRecord[] = [];
 
-  const url = new URL(`${EUTILS_BASE}/efetch.fcgi`);
-  url.searchParams.set("db", "pubmed");
-  url.searchParams.set("id", pmids.join(","));
-  url.searchParams.set("retmode", "xml");
+  for (let index = 0; index < pmids.length; index += PUBMED_EFETCH_MAX_IDS) {
+    const chunk = pmids.slice(index, index + PUBMED_EFETCH_MAX_IDS);
+    const url = new URL(`${EUTILS_BASE}/efetch.fcgi`);
+    url.searchParams.set("db", "pubmed");
+    url.searchParams.set("id", chunk.join(","));
+    url.searchParams.set("retmode", "xml");
 
-  const xml = await fetchText(url.toString());
-  const parsed = xmlParser.parse(xml) as {
-    PubmedArticleSet?: {
-      PubmedArticle?: unknown | unknown[];
+    const xml = await fetchText(url.toString());
+    const parsed = xmlParser.parse(xml) as {
+      PubmedArticleSet?: {
+        PubmedArticle?: unknown | unknown[];
+      };
     };
-  };
 
-  return ensureArray(parsed.PubmedArticleSet?.PubmedArticle).map((articleNode) => {
-    const article = articleNode as Record<string, unknown>;
-    const medlineCitation = article.MedlineCitation as Record<string, unknown>;
-    const articleMeta = medlineCitation.Article as Record<string, unknown>;
-    const pubmedData = article.PubmedData as Record<string, unknown>;
-    const articleIds = ensureArray((pubmedData.ArticleIdList as Record<string, unknown> | undefined)?.ArticleId);
-    const doiNode = articleIds.find((item) => typeof item === "object" && (item as Record<string, unknown>).IdType === "doi");
-    const pmcNode = articleIds.find((item) => typeof item === "object" && String((item as Record<string, unknown>).IdType ?? "").toLowerCase() === "pmc");
-    const title = normalizeText(textFromNode(articleMeta.ArticleTitle));
-    const abstractText = normalizeText(textFromNode((articleMeta.Abstract as Record<string, unknown> | undefined)?.AbstractText));
-    const journal = normalizeText(textFromNode((articleMeta.Journal as Record<string, unknown> | undefined)?.Title)) || undefined;
-    const publicationTypesRaw = ensureArray((articleMeta.PublicationTypeList as Record<string, unknown> | undefined)?.PublicationType)
-      .map((item) => normalizeText(textFromNode(item)))
-      .filter(Boolean);
-    const yearText =
-      normalizeText(textFromNode((((articleMeta.Journal as Record<string, unknown> | undefined)?.JournalIssue as Record<string, unknown> | undefined)?.PubDate as Record<string, unknown> | undefined)?.Year)) ||
-      normalizeText(textFromNode((((articleMeta.Journal as Record<string, unknown> | undefined)?.JournalIssue as Record<string, unknown> | undefined)?.PubDate as Record<string, unknown> | undefined)?.MedlineDate)).match(/\b(19|20)\d{2}\b/)?.[0] ||
-      "";
-    const publicationYear = /^\d{4}$/.test(yearText) ? Number(yearText) : undefined;
+    const chunkRecords = ensureArray(parsed.PubmedArticleSet?.PubmedArticle).map((articleNode) => {
+      const article = articleNode as Record<string, unknown>;
+      const medlineCitation = article.MedlineCitation as Record<string, unknown>;
+      const articleMeta = medlineCitation.Article as Record<string, unknown>;
+      const pubmedData = article.PubmedData as Record<string, unknown>;
+      const articleIds = ensureArray((pubmedData.ArticleIdList as Record<string, unknown> | undefined)?.ArticleId);
+      const doiNode = articleIds.find((item) => typeof item === "object" && (item as Record<string, unknown>).IdType === "doi");
+      const pmcNode = articleIds.find((item) => typeof item === "object" && String((item as Record<string, unknown>).IdType ?? "").toLowerCase() === "pmc");
+      const title = normalizeText(textFromNode(articleMeta.ArticleTitle));
+      const abstractText = normalizeText(textFromNode((articleMeta.Abstract as Record<string, unknown> | undefined)?.AbstractText));
+      const journal = normalizeText(textFromNode((articleMeta.Journal as Record<string, unknown> | undefined)?.Title)) || undefined;
+      const publicationTypesRaw = ensureArray((articleMeta.PublicationTypeList as Record<string, unknown> | undefined)?.PublicationType)
+        .map((item) => normalizeText(textFromNode(item)))
+        .filter(Boolean);
+      const yearText =
+        normalizeText(textFromNode((((articleMeta.Journal as Record<string, unknown> | undefined)?.JournalIssue as Record<string, unknown> | undefined)?.PubDate as Record<string, unknown> | undefined)?.Year)) ||
+        normalizeText(textFromNode((((articleMeta.Journal as Record<string, unknown> | undefined)?.JournalIssue as Record<string, unknown> | undefined)?.PubDate as Record<string, unknown> | undefined)?.MedlineDate)).match(/\b(19|20)\d{2}\b/)?.[0] ||
+        "";
+      const publicationYear = /^\d{4}$/.test(yearText) ? Number(yearText) : undefined;
 
-    return {
-      pmid: normalizeText(textFromNode(medlineCitation.PMID)),
-      pmcid: normalizePmcid(normalizeText(textFromNode(pmcNode))) || undefined,
-      title,
-      abstractText,
-      journal,
-      publicationYear,
-      publicationTypesRaw,
-      isRetracted: publicationTypesRaw.some((type) => type.toLowerCase().includes("retracted publication")),
-      doi: normalizeText(textFromNode(doiNode)) || undefined,
-    };
-  }).filter((record) => record.pmid);
+      return {
+        pmid: normalizeText(textFromNode(medlineCitation.PMID)),
+        pmcid: normalizePmcid(normalizeText(textFromNode(pmcNode))) || undefined,
+        title,
+        abstractText,
+        journal,
+        publicationYear,
+        publicationTypesRaw,
+        isRetracted: publicationTypesRaw.some((type) => type.toLowerCase().includes("retracted publication")),
+        doi: normalizeText(textFromNode(doiNode)) || undefined,
+      };
+    }).filter((record) => record.pmid);
+
+    records.push(...chunkRecords);
+  }
+
+  return records;
 }
 
 export async function fetchPmcidMap(pmids: string[]): Promise<Map<string, string>> {
@@ -312,6 +351,22 @@ interface PmcAwsArticleObjects {
 export async function resolvePmcAwsArticleObjects(pmcid: string): Promise<PmcAwsArticleObjects | undefined> {
   const normalizedPmcid = normalizePmcid(pmcid);
   if (!normalizedPmcid) return undefined;
+
+  for (const version of PMC_AWS_VERSION_GUESSES) {
+    const prefix = `${normalizedPmcid}.${version}/`;
+    const xmlUrl = `${PMC_AWS_BUCKET_URL}${prefix}${normalizedPmcid}.${version}.xml`;
+    if (await urlExists(xmlUrl)) {
+      const pdfUrl = `${PMC_AWS_BUCKET_URL}${prefix}${normalizedPmcid}.${version}.pdf`;
+      const jsonUrl = `${PMC_AWS_BUCKET_URL}${prefix}${normalizedPmcid}.${version}.json`;
+      return {
+        prefix,
+        version,
+        xmlUrl,
+        pdfUrl,
+        jsonUrl,
+      };
+    }
+  }
 
   const versionPrefixes = await listPmcAwsVersionPrefixes(normalizedPmcid);
   for (const prefix of versionPrefixes) {
