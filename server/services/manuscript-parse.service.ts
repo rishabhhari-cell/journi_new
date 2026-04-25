@@ -12,6 +12,7 @@ export interface ParseUploadInput {
   mimeType?: string;
   buffer: Buffer;
   disableLlmFallback?: boolean;
+  forceLlm?: boolean;
 }
 
 /** Extracts the figure number from a caption string, e.g. "Figure 3. ..." → 3. Returns null if no number found. */
@@ -80,6 +81,7 @@ async function extractPdfText(buffer: Buffer): Promise<string> {
     useWorkerFetch: false,
     isEvalSupported: false,
     disableFontFace: true,
+    verbosity: (pdfjs as any).VerbosityLevel?.ERRORS ?? 0,
   });
 
   const pdf = await loadingTask.promise;
@@ -713,6 +715,7 @@ async function extractPdfPayload(buffer: Buffer): Promise<ExtractedPdfPayload> {
     useWorkerFetch: false,
     isEvalSupported: false,
     disableFontFace: true,
+    verbosity: (pdfjs as any).VerbosityLevel?.ERRORS ?? 0,
   });
 
   const pdf = await loadingTask.promise;
@@ -1184,7 +1187,7 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
     });
 
     let llmParsed: RawParsedDocument["llmParsed"] | undefined;
-    if (!input.disableLlmFallback && confidenceScore < 0.85) {
+    if (!input.disableLlmFallback && (input.forceLlm || confidenceScore < 0.85)) {
       try {
         if (textResult.value.trim().length > 0) {
           llmParsed = await parseDocumentWithLLM(textResult.value);
@@ -1208,6 +1211,7 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
 
     const finalRawDocx: RawParsedDocument = {
       ...rawDocx,
+      diagnostics: [...(rawDocx.diagnostics ?? []), ...diagnostics],
       llmParsed: mergedSections
         ? { sections: mergedSections, citations: llmParsed?.citations ?? [] }
         : undefined,
@@ -1305,7 +1309,7 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
       });
 
       let llmParsed: RawParsedDocument["llmParsed"] | undefined;
-      if (!input.disableLlmFallback && pdfConfidenceScore < 0.85 && payload.text.trim().length > 0) {
+      if (!input.disableLlmFallback && (input.forceLlm || pdfConfidenceScore < 0.85) && payload.text.trim().length > 0) {
         try {
           llmParsed = await parseDocumentWithLLM(payload.text);
           diagnostics.push({
