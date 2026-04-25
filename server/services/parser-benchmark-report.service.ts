@@ -4,12 +4,17 @@ import type {
   BenchmarkSummaryRow,
   CorpusManifestRow,
   ParserBenchmarkResultRecord,
+  ParserBenchmarkRunMode,
   PublisherBucket,
   StudyDesignBucket,
 } from "./parser-benchmark.types";
 import type { ResultEnvelope } from "./parser-benchmark-artifacts.service";
 import { REPORTS_DIR, RESULTS_DIR } from "./parser-benchmark.constants";
-import { appendJsonl, ensureDir, readJson, writeCsv, writeJson } from "./parser-benchmark.utils";
+import { ensureDir, readJson, writeCsv, writeJson, writeJsonl } from "./parser-benchmark.utils";
+
+function avg(arr: number[]): number {
+  return arr.length > 0 ? arr.reduce((a, b) => a + b, 0) / arr.length : 0;
+}
 
 export interface FailureLogEntry {
   pmid: string;
@@ -17,7 +22,7 @@ export interface FailureLogEntry {
   publisherBucket?: PublisherBucket;
   studyDesignBucket?: StudyDesignBucket;
   format: "pdf" | "docx";
-  mode: string;
+  mode: ParserBenchmarkRunMode;
   overallScore: number;
   hardFailureReasons: string[];
   diagnosticCodes: string[];
@@ -42,9 +47,8 @@ export interface FailureLogEntry {
 }
 
 export async function writeFailureLog(envelopes: ResultEnvelope[]): Promise<void> {
-  await ensureDir(REPORTS_DIR);
   const logPath = path.join(REPORTS_DIR, "failures.jsonl");
-  await fs.writeFile(logPath, "", "utf8");
+  const entries: FailureLogEntry[] = [];
 
   for (const { row, result } of envelopes) {
     if (result.scores.overall >= 0.95) continue;
@@ -85,8 +89,10 @@ export async function writeFailureLog(envelopes: ResultEnvelope[]): Promise<void
       resultPath: result.rawResultPath,
     };
 
-    await appendJsonl(logPath, entry);
+    entries.push(entry);
   }
+
+  await writeJsonl(logPath, entries);
 }
 
 export async function writeSectionAccuracyReport(envelopes: ResultEnvelope[]): Promise<void> {
@@ -109,7 +115,6 @@ export async function writeSectionAccuracyReport(envelopes: ResultEnvelope[]): P
   const rows: Array<Record<string, unknown>> = [];
   for (const [key, data] of buckets.entries()) {
     const [canonicalTitle, format, mode] = key.split("|");
-    const avg = (arr: number[]) => arr.length > 0 ? arr.reduce((a, b) => a + b, 0) / arr.length : 0;
     rows.push({
       canonicalTitle,
       format,
@@ -146,7 +151,6 @@ export async function writeAggregateReport(envelopes: ResultEnvelope[]): Promise
   const summaryRows: BenchmarkSummaryRow[] = [];
   for (const [key, results] of grouped.entries()) {
     const [publisherBucket, studyDesignBucket, format, mode] = key.split("|");
-    const avg = (arr: number[]) => arr.length > 0 ? arr.reduce((a, b) => a + b, 0) / arr.length : 0;
     summaryRows.push({
       publisherBucket: publisherBucket as PublisherBucket,
       studyDesignBucket: studyDesignBucket as StudyDesignBucket,
@@ -209,7 +213,9 @@ export async function writeCorpusCompletionReport(
     completeRows: complete,
     partialRows: partialResult,
     noResultRows: noResult,
-    completionPct: ((complete / selectedRows.length) * 100).toFixed(1),
+    completionPct: selectedRows.length > 0
+      ? ((complete / selectedRows.length) * 100).toFixed(1)
+      : "0.0",
   };
 
   await writeJson(path.join(REPORTS_DIR, "corpus-completion.json"), report);
@@ -217,7 +223,13 @@ export async function writeCorpusCompletionReport(
 }
 
 export async function readResultEnvelopes(): Promise<ResultEnvelope[]> {
-  const entries = await fs.readdir(RESULTS_DIR, { withFileTypes: true });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let entries: any[];
+  try {
+    entries = await fs.readdir(RESULTS_DIR, { withFileTypes: true });
+  } catch {
+    return [];
+  }
   const output: ResultEnvelope[] = [];
 
   for (const entry of entries) {
