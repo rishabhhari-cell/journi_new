@@ -237,7 +237,9 @@ export async function readResultEnvelopes(): Promise<ResultEnvelope[]> {
     if (!entry.isFile() || !entry.name.endsWith(".json")) continue;
     try {
       const envelope = await readJson<ResultEnvelope>(path.join(RESULTS_DIR, entry.name));
-      if (envelope?.row && envelope?.result) output.push(envelope);
+      if (!envelope?.row || !envelope?.result) continue;
+      // Strip large debug fields (raw, parsed, truth) — reports only need row + result
+      output.push({ row: envelope.row, result: envelope.result });
     } catch {
       // skip corrupted result files
     }
