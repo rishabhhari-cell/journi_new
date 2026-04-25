@@ -75,6 +75,7 @@ interface PipelineStats {
 }
 
 function printStats(stats: PipelineStats, phase: string): void {
+  // resultsReady counts individual result files (2 formats × N modes per row), so no /${stats.total} denominator
   console.log(
     `[pipeline:${phase}] ` +
     `xml=${stats.xmlReady}/${stats.total} ` +
@@ -83,7 +84,7 @@ function printStats(stats: PipelineStats, phase: string): void {
     `(fail=${stats.pdfFailed} missing=${stats.pdfMissing}) | ` +
     `truth=${stats.truthReady}/${stats.total} ` +
     `(fail=${stats.renderFailed}) | ` +
-    `results=${stats.resultsReady} ` +
+    `result_files=${stats.resultsReady} ` +
     `(fail=${stats.resultsFailed} skip=${stats.skipped})`
   );
 }
@@ -154,6 +155,7 @@ async function renderPhase(rows: CorpusManifestRow[], stats: PipelineStats): Pro
 
     if (!(await fileExists(xmlPath))) {
       done++;
+      if (done % PROGRESS_EVERY === 0 || done === rows.length) printStats(stats, "render");
       return;
     }
 
@@ -263,6 +265,7 @@ async function benchmarkPhase(rows: CorpusManifestRow[], stats: PipelineStats): 
       const truthPath = getTruthPath(row);
       if (!(await fileExists(truthPath))) {
         done++;
+        if (done % PROGRESS_EVERY === 0 || done === rows.length) printStats(stats, `benchmark:${mode}`);
         return;
       }
 
@@ -271,6 +274,7 @@ async function benchmarkPhase(rows: CorpusManifestRow[], stats: PipelineStats): 
         truth = await readJson<JatsGroundTruth>(truthPath);
       } catch {
         done++;
+        if (done % PROGRESS_EVERY === 0 || done === rows.length) printStats(stats, `benchmark:${mode}`);
         return;
       }
 
@@ -301,6 +305,8 @@ async function main(): Promise<void> {
 
   const limitRows = process.env.BENCHMARK_LIMIT_ROWS ? Number(process.env.BENCHMARK_LIMIT_ROWS) : undefined;
   const rowsToProcess = limitRows ? selectedRows.slice(0, limitRows) : selectedRows;
+  if (limitRows) console.log(`[pipeline] Limiting to ${rowsToProcess.length} rows (BENCHMARK_LIMIT_ROWS=${limitRows})`);
+  // Note: readResultEnvelopes() reads all results in RESULTS_DIR, not scoped to rowsToProcess — aggregate reports reflect all prior runs
 
   const stats: PipelineStats = {
     total: rowsToProcess.length,

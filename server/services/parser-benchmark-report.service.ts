@@ -47,6 +47,7 @@ export interface FailureLogEntry {
 }
 
 export async function writeFailureLog(envelopes: ResultEnvelope[]): Promise<void> {
+  await ensureDir(REPORTS_DIR);
   const logPath = path.join(REPORTS_DIR, "failures.jsonl");
   const entries: FailureLogEntry[] = [];
 

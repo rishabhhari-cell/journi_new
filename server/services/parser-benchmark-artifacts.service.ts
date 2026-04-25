@@ -12,6 +12,7 @@ import type {
   ParserBenchmarkRunMode,
 } from "./parser-benchmark.types";
 import type { ParsedManuscript, RawParsedDocument } from "@shared/document-parse";
+import type { JatsGroundTruth } from "./parser-benchmark.types";
 import { slugify } from "./parser-benchmark.utils";
 
 export function getRowArtifactKey(row: Pick<CorpusManifestRow, "pmcid" | "pmid">): string {
@@ -46,6 +47,6 @@ export interface ResultEnvelope {
   row: CorpusManifestRow;
   raw?: RawParsedDocument;
   parsed?: ParsedManuscript;
-  truth?: unknown;
+  truth?: JatsGroundTruth;
   result: ParserBenchmarkResultRecord;
 }
