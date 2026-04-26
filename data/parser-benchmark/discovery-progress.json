@@ -1,22 +1,7 @@
 {
   "studyBuckets": {
     "systematic_review_meta_analysis": {
-      "retstart": 5000
-    },
-    "review_non_systematic": {
-      "retstart": 5000
-    },
-    "rct_or_interventional_trial": {
-      "retstart": 5000
-    },
-    "observational_cohort_case_control_cross_sectional": {
-      "retstart": 5000
-    },
-    "case_report_or_case_series": {
-      "retstart": 5000
-    },
-    "other_primary_research": {
-      "retstart": 5000
+      "retstart": 9999
     }
   }
 }

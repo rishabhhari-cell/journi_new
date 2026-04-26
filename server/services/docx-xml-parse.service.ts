@@ -68,24 +68,34 @@ export function classifyPreambleLine(line: string): PreambleLineType {
   const trimmed = line.trim();
   if (!trimmed || trimmed.length > 200) return "other";
 
+  // Reject lines that are clearly not preamble author/institution content
+  if (/https?:\/\/|doi\.org|10\.\d{4,}/i.test(trimmed)) return "other";
+  if (/correspondence:|email:|@|©|\bDOI\b|\bISSN\b|\bpages?\b/i.test(trimmed)) return "other";
+  // Reject if it ends with sentence punctuation suggesting body text
+  if (/[.!?]$/.test(trimmed) && trimmed.split(/\s+/).length > 6) return "other";
+
   // Institution: keyword match OR starts with superscript/digit affiliation marker
   if (INSTITUTION_KEYWORDS.test(trimmed)) return "institution";
   if (SUPERSCRIPT_DIGITS.test(trimmed)) return "institution";
 
   // Strip superscript suffixes (e.g. "Smith J¹" → "Smith J") before name check
-  const stripped = trimmed.replace(/[¹²³⁴⁵⁶⁷⁸⁹]+/g, "").trim();
+  const stripped = trimmed.replace(/[¹²³⁴⁵⁶⁷⁸⁹⁰]+/g, "").trim();
 
   // Author: short line, comma-separated tokens that look like names (1–4 words, starts uppercase)
   if (stripped.length <= 120 && !/[.!?]$/.test(stripped)) {
     const tokens = stripped.split(/,\s*/);
     const looksLikeNames = tokens.every((token) => {
       const words = token.trim().split(/\s+/);
-      return words.length >= 1 && words.length <= 4 && /^[A-Z]/.test(words[0]);
+      if (words.length < 1 || words.length > 5) return false;
+      // Must start with a capital letter and not be an all-caps abbreviation >4 chars (likely an acronym/journal)
+      if (!/^[A-Z]/.test(words[0])) return false;
+      if (words[0].length > 4 && /^[A-Z]+$/.test(words[0])) return false;
+      return true;
     });
     // Multiple comma-separated tokens: classic author list
     if (looksLikeNames && tokens.length >= 2) return "author";
     // Single token: only treat as author if it has 2+ words (e.g. "Alice Smith", "Jones AB")
-    if (looksLikeNames && tokens.length === 1 && stripped.split(/\s+/).length >= 2) return "author";
+    if (looksLikeNames && tokens.length === 1 && stripped.split(/\s+/).length >= 2 && stripped.split(/\s+/).length <= 4) return "author";
   }
 
   return "other";

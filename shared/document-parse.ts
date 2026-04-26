@@ -164,13 +164,13 @@ const CANONICAL_ALIASES: Array<[string, RegExp]> = [
   ["Title",               /^(title|title page|cover page|front matter)$/i],
   ["Abstract",            /^(abstract|summary|synopsis|overview|executive summary|precis)$/i],
   ["Introduction",        /^(introduction|background|rationale|background and context|motivation|problem statement|literature review|related work|prior work|related literature)$/i],
-  ["Search Strategy",     /^(search strategy|sources of data|method|methods|methodology|materials and methods|materials and methods|study design|research design|experimental design|data collection|data sources|objectives|protocol|search methods|inclusion criteria|eligibility criteria|participants|subjects)$/i],
-  ["Results & Synthesis", /^(results|results and synthesis|results and synthesis|findings|key findings|outcomes|empirical results|statistical analysis|quantitative results|qualitative results|case results)$/i],
+  ["Search Strategy",     /^(search strategy|sources of data|method|methods|methodology|materials and methods|study design|research design|experimental design|data collection|data sources|objectives|protocol|search methods|inclusion criteria|eligibility criteria|participants|subjects|design|procedures?|statistical (analysis|analyses|methods?)|study selection|data extraction|data (and|&) synthesis|data synthesis|quality assessment|risk of bias( assessment)?|literature search|recruitment|sample( size)?|study population|study characteristics|covariates?|interventions?|measures?|instruments?|setting (and )?participants|outcomes?( measures?)?|efficacy( results?)?|quantitative (data|findings?|results?)|qualitative (data|findings?|results?))$/i],
+  ["Results & Synthesis", /^(results|results (and|&) synthesis|findings|key findings|outcomes|empirical results|statistical analysis|quantitative results|qualitative results|case results|descriptive results|results (and|&) discussion)$/i],
   ["Discussion",          /^(discussion|drawbacks|analysis|interpretation|implications|key takeaways|strengths and weaknesses|critique|evaluation|commentary|reflection)$/i],
   ["Limitations",         /^(limitations|constraints|study limitations|weaknesses|strengths and limitations|limitations and future work)$/i],
   ["Conclusions",         /^(conclusion|conclusions|final remarks|summary and conclusions|closing remarks|recommendations|future work|future directions|conclusion and future work)$/i],
   ["References",          /^(references|bibliography|cited works|sources|literature cited|further reading|citations|works cited)$/i],
-  ["Acknowledgements",    /^(acknowledgements|acknowledgments|acknowledgement|acknowledgment|funding|funding sources|financial disclosure|conflicts of interest|author contributions)$/i],
+  ["Acknowledgements",    /^(acknowledgements?|acknowledgments?|funding( (sources?|information))?|financial disclosure|conflicts? of interest|author contributions?|ethics (statement|approval|committee|consideration)|ethical (considerations?|approval|statement)|consent( (statement|to participate|for publication))?|patient consent( (statement|for publication))?|data (and code )?availability( statement)?|credit authorship contribution statement|declaration of competing interest|transparency and openness|informed consent|availability of data and materials)$/i],
   ["Figures and Tables",  /^(figures?( and | & )tables?|tables?( and | & )figures?|figures|tables)$/i],
   ["Appendix",            /^(appendix|appendices|supplementary|supplemental|supplementary material|supplementary materials|supplementary data|additional information)$/i],
 ];
@@ -191,13 +191,13 @@ export function normalizeSectionMatchKey(title: string): string {
   if (/^(title|title page|cover page|front matter)$/.test(cleaned)) return "title";
   if (/^(abstract|summary|synopsis|overview|executive summary|precis)$/.test(cleaned)) return "abstract";
   if (/^(introduction|background|rationale|motivation|problem statement|literature review|related work|prior work|related literature)$/.test(cleaned)) return "introduction";
-  if (/^(methods?|methodology|materials (and|&) methods|search strategy|sources of data|study design|research design|experimental design|data collection|data sources|objectives|protocol|search methods|inclusion criteria|eligibility criteria|participants|subjects)$/.test(cleaned)) return "methods";
-  if (/^(results|results (and|&) synthesis|findings|key findings|outcomes|empirical results|statistical analysis|quantitative results|qualitative results|case results)$/.test(cleaned)) return "results";
+  if (/^(methods?|methodology|materials (and|&) methods|search strategy|sources of data|study design|research design|experimental design|data collection|data sources|objectives|protocol|search methods|inclusion criteria|eligibility criteria|participants|subjects|design|procedures?|statistical (analysis|analyses|methods?)|study selection|data extraction|data (and|&) synthesis|data synthesis|quality assessment|risk of bias|risk of bias assessment|literature search|recruitment|sample( size)?|study population|study characteristics|covariates?|interventions?|measures?|instruments?|setting (and )?participants|study design and (participants?|population)|outcomes?( measures?)?|statistical analyses|efficacy|efficacy results|quantitative (data|findings?|results?)|qualitative (data|findings?|results?))$/.test(cleaned)) return "methods";
+  if (/^(results|results (and|&) synthesis|findings|key findings|outcomes|empirical results|statistical analysis|quantitative results|qualitative results|case results|descriptive results|results (and|&) discussion)$/.test(cleaned)) return "results";
   if (/^(discussion|drawbacks|analysis|interpretation|implications|key takeaways|strengths and weaknesses|critique|evaluation|commentary|reflection)$/.test(cleaned)) return "discussion";
   if (/^(limitations|constraints|study limitations|weaknesses|strengths and limitations|limitations and future work)$/.test(cleaned)) return "limitations";
   if (/^(conclusion|conclusions|final remarks|summary and conclusions|closing remarks|recommendations|future work|future directions|conclusion and future work)$/.test(cleaned)) return "conclusions";
   if (/^(references|bibliography|cited works|sources|literature cited|further reading|citations|works cited)$/.test(cleaned)) return "references";
-  if (/^(acknowledgements|acknowledgments|acknowledgement|acknowledgment|funding|funding sources|financial disclosure|conflicts of interest|author contributions)$/.test(cleaned)) return "acknowledgements";
+  if (/^(acknowledgements?|acknowledgments?|funding( (sources?|information))?|financial disclosure|conflicts? of interest|author contributions?|ethics (statement|approval|committee|consideration)|ethical (considerations?|approval|statement)|consent( (statement|to participate|for publication))?|patient consent( (statement|for publication))?|data (and code )?availability( statement)?|credit authorship contribution statement|declaration of competing interest|transparency and openness|informed consent|availability of data and materials)$/.test(cleaned)) return "acknowledgements";
   if (/^(figures?( and | & )tables?|tables?( and | & )figures?|figures|tables)$/.test(cleaned)) return "figures_and_tables";
   if (/^(appendix|appendices|supplementary|supplemental|supplementary material|supplementary materials|supplementary data|additional information)$/.test(cleaned)) return "appendix";
   return cleaned;
@@ -567,13 +567,20 @@ function parseSectionsFromText(text: string): IntermediateSection[] {
   const headingCandidates = new Set(
     [
       ...CANONICAL_ORDER,
-      "methods",
-      "methodology",
-      "sources of data",
-      "benefits",
-      "drawbacks",
-      "summary",
-      "content",
+      "methods", "methodology", "materials and methods", "sources of data",
+      "benefits", "drawbacks", "summary", "content",
+      "design", "procedure", "procedures", "statistical analysis", "statistical analyses",
+      "statistical methods", "study selection", "data extraction", "data synthesis",
+      "data and synthesis", "quality assessment", "risk of bias", "risk of bias assessment",
+      "literature search", "recruitment", "sample", "sample size", "study population",
+      "study characteristics", "covariates", "covariate", "intervention", "interventions",
+      "measures", "instruments", "setting and participants", "outcomes", "outcome measures",
+      "efficacy", "efficacy results", "quantitative data", "qualitative data",
+      "ethics statement", "ethical considerations", "ethical approval", "consent",
+      "patient consent", "informed consent", "funding information",
+      "declaration of competing interest", "credit authorship contribution statement",
+      "availability of data and materials", "data availability",
+      "transparency and openness", "descriptive results",
     ].map((value) => value.toLowerCase()),
   );
 
@@ -770,6 +777,9 @@ function isLikelySectionHeading(text: string): boolean {
   for (const [, matcher] of CANONICAL_ALIASES) {
     if (matcher.test(normalized)) return true;
   }
+  // Use normalizeSectionMatchKey to catch all known aliases (Design, Procedure, etc.)
+  const key = normalizeSectionMatchKey(trimmed);
+  if (key !== "content" && key !== normalized) return true;
   // ALL-CAPS heading
   if (/^[A-Z][A-Z0-9\s&/-]{2,}$/.test(trimmed)) return true;
   // Strip numbered prefix and test remainder
@@ -779,6 +789,8 @@ function isLikelySectionHeading(text: string): boolean {
     for (const [, matcher] of CANONICAL_ALIASES) {
       if (matcher.test(strippedNorm)) return true;
     }
+    const strippedKey = normalizeSectionMatchKey(stripped);
+    if (strippedKey !== "content" && strippedKey !== strippedNorm) return true;
     if (/^[A-Z][A-Z0-9\s&/-]{2,}$/.test(stripped)) return true;
   }
   return false;

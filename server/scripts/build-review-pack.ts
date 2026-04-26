@@ -3,28 +3,21 @@ loadEnv();
 
 import path from "path";
 import {
-  MANIFEST_PATH,
   REPORTS_DIR,
+  RESULTS_DIR,
   REVIEW_PACK_DIR,
 } from "../services/parser-benchmark.constants";
 import type { CorpusManifestRow, ParserBenchmarkResultRecord, ParserBenchmarkRunMode } from "../services/parser-benchmark.types";
-import { ensureDir, readJsonl, writeCsv, writeJson } from "../services/parser-benchmark.utils";
+import { ensureDir, readJson, writeCsv, writeJson } from "../services/parser-benchmark.utils";
+import type { ResultEnvelope } from "../services/parser-benchmark-artifacts.service";
 
 const REVIEW_MODE = (process.env.BENCHMARK_REVIEW_MODE ?? "parser_plus_llm") as ParserBenchmarkRunMode;
 
 async function main() {
   await ensureDir(REVIEW_PACK_DIR);
-  const manifest = await readJsonl<CorpusManifestRow>(MANIFEST_PATH);
-
-  const resultRows = manifest
-    .filter((row) => row.selected)
-    .flatMap((row) => {
-      const candidates: Array<{ row: CorpusManifestRow; format: "pdf" | "docx"; result: ParserBenchmarkResultRecord | undefined }> = [
-        { row, format: "pdf", result: REVIEW_MODE === "parser_only" ? row.parserOnlyPdf : row.parserPlusLlmPdf },
-        { row, format: "docx", result: REVIEW_MODE === "parser_only" ? row.parserOnlyDocx : row.parserPlusLlmDocx },
-      ];
-      return candidates.filter((candidate): candidate is { row: CorpusManifestRow; format: "pdf" | "docx"; result: ParserBenchmarkResultRecord } => Boolean(candidate.result));
-    });
+  const resultRows = (await readResultEnvelopes())
+    .filter((entry) => entry.result.mode === REVIEW_MODE)
+    .map((entry) => ({ row: entry.row, format: entry.result.format, result: entry.result }));
 
   const worstOverall = [...resultRows]
     .sort((a, b) => a.result.scores.overall - b.result.scores.overall)
@@ -93,6 +86,21 @@ function dedupeByKey<T>(items: T[], keyFn: (item: T) => string): T[] {
     seen.add(key);
     output.push(item);
   }
+  return output;
+}
+
+async function readResultEnvelopes(): Promise<ResultEnvelope[]> {
+  const fs = await import("fs/promises");
+  const entries = await fs.readdir(RESULTS_DIR, { withFileTypes: true });
+  const output: ResultEnvelope[] = [];
+
+  for (const entry of entries) {
+    if (!entry.isFile() || !entry.name.endsWith(".json")) continue;
+    const envelope = await readJson<ResultEnvelope>(path.join(RESULTS_DIR, entry.name));
+    if (!envelope?.row || !envelope?.result) continue;
+    output.push(envelope);
+  }
+
   return output;
 }
 

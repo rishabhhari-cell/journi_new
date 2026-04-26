@@ -34,8 +34,7 @@ async function main() {
       const available = manifest.filter((row) =>
         row.publisherBucket === publisherBucket &&
         row.studyDesignBucket === studyDesignBucket &&
-        row.xml.status === "ready" &&
-        (row.pdf.status === "ready" || row.pdf.sourceUrl),
+        Boolean(row.pmcid),
       ).length;
       const selectedCount = selected.filter((row) =>
         row.publisherBucket === publisherBucket &&
@@ -81,8 +80,7 @@ function lockSelection(rows: CorpusManifestRow[]): CorpusManifestRow[] {
         .filter((row) =>
           row.publisherBucket === publisherBucket &&
           row.studyDesignBucket === studyDesignBucket &&
-          row.xml.status === "ready" &&
-          (row.pdf.status === "ready" || row.pdf.sourceUrl) &&
+          Boolean(row.pmcid) &&
           !selectedPmids.has(row.pmid),
         )
         .sort(compareRowsForSelection);
@@ -105,8 +103,7 @@ function lockSelection(rows: CorpusManifestRow[]): CorpusManifestRow[] {
       const fillCandidates = nextRows
         .filter((row) =>
           row.publisherBucket === publisherBucket &&
-          row.xml.status === "ready" &&
-          (row.pdf.status === "ready" || row.pdf.sourceUrl) &&
+          Boolean(row.pmcid) &&
           !selectedPmids.has(row.pmid),
         )
         .sort(compareRowsForSelection);

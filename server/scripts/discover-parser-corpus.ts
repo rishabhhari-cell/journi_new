@@ -2,9 +2,11 @@ import { config as loadEnv } from "dotenv";
 loadEnv();
 
 import { promises as fs } from "fs";
+import { fileURLToPath } from "url";
 import path from "path";
 import {
   DEFAULT_DISCOVERY_BATCH_SIZE,
+  DISCOVERY_PROGRESS_PATH,
   DISCOVERY_OVERSAMPLE_MULTIPLIER,
   MANIFEST_PATH,
   PDF_DIR,
@@ -14,22 +16,23 @@ import {
   STUDY_DESIGN_BUCKETS,
   XML_DIR,
 } from "../services/parser-benchmark.constants";
-import { extractJatsGroundTruth } from "../services/jats-ground-truth.service";
 import {
   buildPubmedDiscoveryQuery,
-  fetchPmcXmlByPmcid,
   fetchPmcidMap,
   fetchPubmedArticles,
-  resolvePmcAwsArticleObjects,
-  resolvePmcPdfUrl,
   searchPubmedIds,
 } from "../services/parser-benchmark-source.service";
 import type { CorpusManifestRow } from "../services/parser-benchmark.types";
 import { matchPublisherBucket, normalizePublicationTypes } from "../services/publication-type-normalize.service";
-import { ensureDir, readJsonl, sha256Buffer, slugify, writeJsonl } from "../services/parser-benchmark.utils";
+import { ensureDir, fileExists, readJson, readJsonl, slugify, writeJson, writeJsonl } from "../services/parser-benchmark.utils";
 
 const MAX_RESULTS_PER_STUDY_BUCKET = Number(process.env.BENCHMARK_DISCOVERY_MAX_RESULTS ?? 5000);
-const XML_FETCH_CONCURRENCY = Number(process.env.BENCHMARK_XML_DISCOVERY_CONCURRENCY ?? 1);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const SCIMAGO_CSV_PATH = path.join(__dirname, "data", "scimago.csv");
+
+interface DiscoveryProgressState {
+  studyBuckets: Partial<Record<string, { retstart: number }>>;
+}
 
 function makeArtifactPath(rootDir: string, basename: string, ext: string): string {
   return path.join(rootDir, `${slugify(basename)}.${ext}`);
@@ -41,6 +44,9 @@ async function main() {
 
   const manifest = await readJsonl<CorpusManifestRow>(MANIFEST_PATH);
   const manifestByPmid = new Map(manifest.map((row) => [row.pmid, row]));
+  const publisherByJournalTitle = await loadScimagoPublisherMap();
+  const progress = await readDiscoveryProgress();
+  console.log(`Loaded ${publisherByJournalTitle.size} local journal publisher mappings.`);
 
   for (const studyBucket of STUDY_DESIGN_BUCKETS) {
     const requiredPerPublisher = Math.ceil(STUDY_BUCKET_TARGETS[studyBucket] * DISCOVERY_OVERSAMPLE_MULTIPLIER);
@@ -48,7 +54,10 @@ async function main() {
     console.log(`Discovering ${studyBucket} candidates with query: ${query}`);
     let discoveredForBucket = 0;
 
-    let retstart = 0;
+    let retstart = progress.studyBuckets[studyBucket]?.retstart ?? 0;
+    if (retstart > 0) {
+      console.log(`Resuming ${studyBucket} from PubMed offset ${retstart}.`);
+    }
     while (retstart < MAX_RESULTS_PER_STUDY_BUCKET) {
       const counts = countRowsByPublisherAndStudy(Array.from(manifestByPmid.values()), studyBucket);
       if (PUBLISHER_BUCKETS.every((publisher) => (counts.get(publisher) ?? 0) >= requiredPerPublisher)) {
@@ -64,8 +73,14 @@ async function main() {
         break;
       }
       retstart += ids.length;
+      progress.studyBuckets[studyBucket] = { retstart };
 
       const articles = await fetchPubmedArticles(ids);
+      let addedThisPage = 0;
+      let skippedExisting = 0;
+      let skippedRetracted = 0;
+      let skippedNoPmcid = 0;
+      let skippedPublisher = 0;
       const pmcidMap = new Map(
         articles
           .filter((article) => article.pmcid)
@@ -84,98 +99,83 @@ async function main() {
         `${studyBucket}: fetched ${articles.length} PubMed articles, ${articles.filter((article) => article.pmcid).length} had direct PMCID values, ${pmcidMap.size} total had PMCID mappings in this page.`,
       );
 
-      for (let index = 0; index < articles.length; index += XML_FETCH_CONCURRENCY) {
-        const slice = articles.slice(index, index + XML_FETCH_CONCURRENCY);
-        await Promise.all(
-          slice.map(async (article) => {
-            if (manifestByPmid.has(article.pmid)) return;
-            if (article.isRetracted) return;
+      for (const article of articles) {
+        if (manifestByPmid.has(article.pmid)) {
+          skippedExisting += 1;
+          continue;
+        }
+        if (article.isRetracted) {
+          skippedRetracted += 1;
+          continue;
+        }
 
-            const pmcid = pmcidMap.get(article.pmid);
-            if (!pmcid) return;
+        const pmcid = pmcidMap.get(article.pmid);
+        if (!pmcid) {
+          skippedNoPmcid += 1;
+          continue;
+        }
 
-            try {
-              const xml = await fetchPmcXmlByPmcid(pmcid);
-              const truth = extractJatsGroundTruth(xml);
-              const publisherMatch = matchPublisherBucket(truth.publisherName, article.journal);
-              if (!publisherMatch.bucket) return;
+        const publisherRaw = findPublisherForJournal(article.journal, publisherByJournalTitle);
+        const publisherMatch = matchPublisherBucket(publisherRaw, article.journal);
+        if (!publisherMatch.bucket) {
+          skippedPublisher += 1;
+          continue;
+        }
 
-              const normalizedStudy = normalizePublicationTypes(
-                article.publicationTypesRaw,
-                article.title,
-                article.abstractText,
-              );
-              const xmlPath = makeArtifactPath(XML_DIR, pmcid, "xml");
-              await fs.writeFile(xmlPath, xml, "utf8");
-              const xmlBuffer = Buffer.from(xml, "utf8");
-
-              let pdfUrl: string | undefined;
-              try {
-                pdfUrl = (await resolvePmcAwsArticleObjects(pmcid))?.pdfUrl ?? await resolvePmcPdfUrl(pmcid);
-              } catch (error) {
-                pdfUrl = undefined;
-                console.warn(`PDF URL lookup failed for ${pmcid}: ${(error as Error).message}`);
-              }
-
-              const row: CorpusManifestRow = {
-                pmid: article.pmid,
-                pmcid,
-                doi: article.doi ?? truth.doi,
-                title: article.title || truth.title,
-                abstractText: article.abstractText || truth.abstractText,
-                journal: article.journal || truth.journal,
-                publisherRaw: truth.publisherName,
-                publisherBucket: publisherMatch.bucket,
-                publisherConfidence: publisherMatch.confidence,
-                publicationYear: article.publicationYear,
-                publicationTypesRaw: article.publicationTypesRaw,
-                studyDesignBucket: normalizedStudy.bucket,
-                studyDesignConfidence: normalizedStudy.confidence,
-                isRetracted: article.isRetracted,
-                licenseCode: undefined,
-                xmlUrl: `pmc-efetch:${pmcid}`,
-                pdfUrl,
-                sourceQuery: query,
-                notes: [...normalizedStudy.reasons],
-                selected: false,
-                xml: {
-                  status: "ready",
-                  path: xmlPath,
-                  sha256: sha256Buffer(xmlBuffer),
-                  sourceUrl: `pmc-efetch:${pmcid}`,
-                  bytes: xmlBuffer.byteLength,
-                },
-                pdf: {
-                  status: pdfUrl ? "pending" : "missing",
-                  path: pdfUrl ? makeArtifactPath(PDF_DIR, pmcid, "pdf") : undefined,
-                  sourceUrl: pdfUrl,
-                },
-                docx: { status: "pending" },
-                truth: { status: "pending" },
-              };
-
-              manifestByPmid.set(article.pmid, row);
-              discoveredForBucket += 1;
-              console.log(`Discovered ${article.pmid} (${publisherMatch.bucket}, ${normalizedStudy.bucket})`);
-            } catch (error) {
-              const message = (error as Error).message;
-              if (
-                message.includes("JATS XML did not contain an article root node") ||
-                message.includes("<eFetchResult>") ||
-                message.includes("PMC OA archive did not contain")
-              ) {
-                console.log(`Skipped PMID ${article.pmid}: no usable JATS XML source.`);
-              } else {
-                console.warn(`Discovery failed for PMID ${article.pmid}: ${message}`);
-              }
-            }
-          }),
+        const normalizedStudy = normalizePublicationTypes(
+          article.publicationTypesRaw,
+          article.title,
+          article.abstractText,
         );
+
+        const row: CorpusManifestRow = {
+          pmid: article.pmid,
+          pmcid,
+          doi: article.doi,
+          title: article.title,
+          abstractText: article.abstractText,
+          journal: article.journal,
+          publisherRaw: publisherRaw ?? article.journal,
+          publisherBucket: publisherMatch.bucket,
+          publisherConfidence: publisherMatch.confidence,
+          publicationYear: article.publicationYear,
+          publicationTypesRaw: article.publicationTypesRaw,
+          studyDesignBucket: normalizedStudy.bucket,
+          studyDesignConfidence: normalizedStudy.confidence,
+          isRetracted: article.isRetracted,
+          licenseCode: undefined,
+          xmlUrl: `pmc:${pmcid}`,
+          pdfUrl: undefined,
+          sourceQuery: query,
+          notes: [...normalizedStudy.reasons],
+          selected: false,
+          xml: {
+            status: "pending",
+            path: makeArtifactPath(XML_DIR, pmcid, "xml"),
+            sourceUrl: `pmc:${pmcid}`,
+          },
+          pdf: {
+            status: "pending",
+            path: makeArtifactPath(PDF_DIR, pmcid, "pdf"),
+          },
+          docx: { status: "pending" },
+          truth: { status: "pending" },
+        };
+
+        manifestByPmid.set(article.pmid, row);
+        discoveredForBucket += 1;
+        addedThisPage += 1;
       }
 
       await writeJsonl(MANIFEST_PATH, Array.from(manifestByPmid.values()));
+      await writeJson(DISCOVERY_PROGRESS_PATH, progress);
+      const bucketTotal = Array.from(manifestByPmid.values()).filter((row) => row.studyDesignBucket === studyBucket).length;
+      console.log(
+        `${studyBucket}: added ${addedThisPage} rows this page; bucket total ${bucketTotal}; skips existing=${skippedExisting}, retracted=${skippedRetracted}, noPmcid=${skippedNoPmcid}, publisher=${skippedPublisher}.`,
+      );
     }
 
+    await writeJson(DISCOVERY_PROGRESS_PATH, progress);
     console.log(`Finished ${studyBucket}: discovered ${discoveredForBucket} rows this run.`);
   }
 
@@ -190,6 +190,91 @@ function countRowsByPublisherAndStudy(rows: CorpusManifestRow[], studyBucket: st
     counts.set(row.publisherBucket, (counts.get(row.publisherBucket) ?? 0) + 1);
   }
   return counts;
+}
+
+async function loadScimagoPublisherMap(): Promise<Map<string, string>> {
+  const raw = await fs.readFile(SCIMAGO_CSV_PATH, "utf8");
+  const lines = raw.replace(/^\uFEFF/, "").split(/\r?\n/).filter(Boolean);
+  const header = splitSemicolonCsv(lines[0]);
+  const titleIndex = header.findIndex((column) => column === "Title");
+  const publisherIndex = header.findIndex((column) => column === "Publisher");
+  const map = new Map<string, string>();
+
+  for (const line of lines.slice(1)) {
+    const columns = splitSemicolonCsv(line);
+    const title = columns[titleIndex];
+    const publisher = columns[publisherIndex];
+    if (!title || !publisher) continue;
+    const key = normalizeJournalKey(title);
+    if (!key || map.has(key)) continue;
+    map.set(key, publisher);
+  }
+
+  return map;
+}
+
+function splitSemicolonCsv(line: string): string[] {
+  const result: string[] = [];
+  let current = "";
+  let inQuotes = false;
+
+  for (let index = 0; index < line.length; index += 1) {
+    const char = line[index];
+    if (char === "\"") {
+      const next = line[index + 1];
+      if (inQuotes && next === "\"") {
+        current += "\"";
+        index += 1;
+      } else {
+        inQuotes = !inQuotes;
+      }
+      continue;
+    }
+
+    if (char === ";" && !inQuotes) {
+      result.push(current.trim());
+      current = "";
+      continue;
+    }
+
+    current += char;
+  }
+
+  result.push(current.trim());
+  return result;
+}
+
+function normalizeJournalKey(value: string | undefined): string {
+  if (!value) return "";
+  return value
+    .toLowerCase()
+    .replace(/^the\s+/i, "")
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "")
+    .trim();
+}
+
+function findPublisherForJournal(
+  journal: string | undefined,
+  publisherByJournalTitle: Map<string, string>,
+): string | undefined {
+  if (!journal) return undefined;
+  return publisherByJournalTitle.get(normalizeJournalKey(journal));
+}
+
+async function readDiscoveryProgress(): Promise<DiscoveryProgressState> {
+  if (!(await fileExists(DISCOVERY_PROGRESS_PATH))) {
+    return { studyBuckets: {} };
+  }
+
+  try {
+    const value = await readJson<DiscoveryProgressState>(DISCOVERY_PROGRESS_PATH);
+    return {
+      studyBuckets: value.studyBuckets ?? {},
+    };
+  } catch {
+    return { studyBuckets: {} };
+  }
 }
 
 main().catch((error) => {

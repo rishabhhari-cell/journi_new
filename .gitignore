@@ -110,3 +110,12 @@ temp/
 
 # Local codex/claude nested repos should never be tracked
 .claude/skills/agent-skills/
+
+# Parser benchmark corpus and generated artifacts (re-fetchable/re-generatable)
+data/parser-benchmark/xml/
+data/parser-benchmark/docx/
+data/parser-benchmark/pdf/
+data/parser-benchmark/results/
+data/parser-benchmark/reports/
+data/parser-benchmark/review-pack/
+data/parser-benchmark/truth/

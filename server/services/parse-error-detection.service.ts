@@ -41,16 +41,25 @@ export function runDeterministicErrorChecks(manuscript: ParsedManuscript): Parse
 
     const plainText = section.content.replace(/<[^>]+>/g, " ").trim();
 
-    // Truncated text: content ends without sentence-ending punctuation
-    if (
-      plainText.length > 20 &&
-      !/[.!?)\]'"]$/.test(plainText)
-    ) {
-      diagnostics.push({
-        level: "error",
-        code: "TRUNCATED_TEXT",
-        message: `Section "${section.title}" appears to end mid-sentence — text may have been cut off during import.`,
-      });
+    // Truncated text: content ends mid-word (no word boundary) suggesting hard cut-off.
+    // Use a narrow signal: ends with a letter that's not a known sentence terminal,
+    // AND the last "word" is short (not a URL, number, abbreviation, or parenthetical).
+    if (plainText.length > 20) {
+      const lastWord = plainText.split(/\s+/).pop() ?? "";
+      const endsAbruptly =
+        /[a-z]$/i.test(plainText) &&          // ends in a letter
+        lastWord.length >= 3 &&               // not a short abbreviation
+        lastWord.length <= 20 &&              // not a URL fragment
+        !/[.!?,;:\-]/.test(lastWord) &&       // no punctuation within the last word
+        !/^\d/.test(lastWord) &&              // not a number
+        !/^(et|al|vs|cf|eg|ie|fig|pp|vol|no|ed|eds|rev|suppl)\.?$/i.test(lastWord); // not common abbrev
+      if (endsAbruptly) {
+        diagnostics.push({
+          level: "warning",
+          code: "TRUNCATED_TEXT",
+          message: `Section "${section.title}" appears to end mid-sentence — text may have been cut off during import.`,
+        });
+      }
     }
 
     // Garbled encoding: Unicode replacement character

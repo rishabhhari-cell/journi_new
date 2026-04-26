@@ -1128,7 +1128,9 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
       const htmlParts: string[] = [];
       for (const section of xmlResult.sections) {
         if (section.title !== "Content") {
-          htmlParts.push(`<h2>${escapeHtml(section.title)}</h2>`);
+          // Do NOT escapeHtml the title — & in "Results & Synthesis" must stay as & so
+          // normalizeHeading / normalizeSectionMatchKey can match it correctly.
+          htmlParts.push(`<h2>${section.title}</h2>`);
         }
         for (const para of section.paragraphTexts) {
           htmlParts.push(`<p>${escapeHtml(para)}</p>`);
@@ -1253,22 +1255,29 @@ export async function parseUploadedDocument(input: ParseUploadInput): Promise<Ra
     try {
       const payload = await extractPdfPayload(input.buffer);
 
-      // Extract authors and institutions from first-page text blocks
+      // Extract authors and institutions from first-page text blocks.
+      // Strategy: scan page-1 blocks between the title and the first body heading.
+      // Only accept lines that look like author name lists — short, comma-separated
+      // name-like tokens, no sentence punctuation, no URLs/DOIs.
       const pdfAuthors: string[] = [];
       const pdfInstitutions: string[] = [];
-      let pastTitle = false;
-      let pastFirstHeading = false;
-      for (const block of (payload.blocks ?? []).filter((b) => b.page === 1)) {
-        if (pastFirstHeading) break;
-        if (!pastTitle && block.isLargeFont) { pastTitle = true; continue; }
-        if (!pastTitle) continue;
-        if (/^(abstract|introduction|background|methods)/i.test(block.text.trim())) {
-          pastFirstHeading = true;
-          break;
+      {
+        const page1Blocks = (payload.blocks ?? []).filter((b) => b.page === 1);
+        let titleIdx = page1Blocks.findIndex((b) => b.isLargeFont);
+        if (titleIdx === -1) titleIdx = 0;
+        const firstHeadingIdx = page1Blocks.findIndex(
+          (b, i) => i > titleIdx &&
+            /^(abstract|introduction|background|methods|search strategy|study design)/i.test(b.text.trim()),
+        );
+        const preamble = page1Blocks.slice(
+          titleIdx + 1,
+          firstHeadingIdx === -1 ? Math.min(titleIdx + 25, page1Blocks.length) : firstHeadingIdx,
+        );
+        for (const block of preamble) {
+          const kind = classifyPreambleLine(block.text);
+          if (kind === "author") pdfAuthors.push(block.text.replace(/[¹²³⁴⁵⁶⁷⁸⁹⁰]+/g, "").trim());
+          else if (kind === "institution") pdfInstitutions.push(block.text.trim());
         }
-        const kind = classifyPreambleLine(block.text);
-        if (kind === "author") pdfAuthors.push(block.text.replace(/[¹²³⁴⁵⁶⁷⁸⁹]+/g, "").trim());
-        else if (kind === "institution") pdfInstitutions.push(block.text.trim());
       }
 
       if (!payload.text) {

@@ -259,7 +259,10 @@ manuscriptsRouter.post("/import-sessions/:sessionId/commit", async (req, res, ne
     }
 
     const context = await assertManuscriptAccess(authReq.auth.userId, existing.manuscriptId, true);
-    const committed = await commitImportSession(req.params.sessionId);
+    const [committed, { data: editorProfile }] = await Promise.all([
+      commitImportSession(req.params.sessionId),
+      supabaseAdmin.from("profiles").select("full_name").eq("id", authReq.auth.userId).maybeSingle(),
+    ]);
 
     await writeAuditEvent({
       organizationId: context.access.organizationId,
@@ -273,7 +276,16 @@ manuscriptsRouter.post("/import-sessions/:sessionId/commit", async (req, res, ne
       },
     });
 
-    res.json({ data: committed });
+    const editorName = editorProfile?.full_name ?? null;
+    const enrichedCommitted = {
+      ...committed,
+      sections: (committed.sections as any[]).map((s) => ({
+        ...s,
+        last_edited_by_name: s.last_edited_by === authReq.auth.userId ? editorName : null,
+      })),
+    };
+
+    res.json({ data: enrichedCommitted });
 
     // Fire-and-forget: embed abstract + compute word count after commit.
     // Runs after response is sent — never blocks the commit.
@@ -332,7 +344,38 @@ manuscriptsRouter.get("/", async (req, res, next) => {
       throw new HttpError(500, error.message, "MANUSCRIPT_LIST_FAILED");
     }
 
-    res.json({ data: data ?? [] });
+    const manuscripts = data ?? [];
+
+    // Resolve last_edited_by UUIDs to display names in one batch query
+    const editorIds = new Set<string>();
+    for (const m of manuscripts) {
+      for (const s of (m.manuscript_sections ?? []) as any[]) {
+        if (s.last_edited_by && /^[0-9a-f-]{36}$/i.test(s.last_edited_by)) {
+          editorIds.add(s.last_edited_by);
+        }
+      }
+    }
+
+    const nameById = new Map<string, string>();
+    if (editorIds.size > 0) {
+      const { data: profiles } = await supabaseAdmin
+        .from("profiles")
+        .select("id, full_name")
+        .in("id", [...editorIds]);
+      for (const p of profiles ?? []) {
+        if (p.full_name) nameById.set(p.id, p.full_name);
+      }
+    }
+
+    const enriched = manuscripts.map((m) => ({
+      ...m,
+      manuscript_sections: ((m.manuscript_sections ?? []) as any[]).map((s) => ({
+        ...s,
+        last_edited_by_name: s.last_edited_by ? (nameById.get(s.last_edited_by) ?? null) : null,
+      })),
+    }));
+
+    res.json({ data: enriched });
   } catch (error) {
     next(error);
   }

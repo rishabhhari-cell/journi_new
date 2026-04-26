@@ -289,10 +289,11 @@ async function benchmarkPhase(rows: CorpusManifestRow[], stats: PipelineStats): 
 
 // ── Main ─────────────────────────────────────────────────────────────────────
 async function main(): Promise<void> {
+  const { REPORTS_DIR } = await import("../services/parser-benchmark.constants");
   await Promise.all([
     ensureDir(XML_DIR), ensureDir(PDF_DIR),
     ensureDir(DOCX_DIR), ensureDir(TRUTH_DIR),
-    ensureDir(RESULTS_DIR),
+    ensureDir(RESULTS_DIR), ensureDir(REPORTS_DIR),
   ]);
 
   if (MODES.includes("parser_plus_llm") && !process.env.MODAL_LLM_URL) {
